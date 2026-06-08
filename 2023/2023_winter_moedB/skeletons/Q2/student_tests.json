@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "example_found_mixed_blocks",
+      "input": "5\n1 5 2 10 8\n10\n",
+      "output": "3"
+    },
+    {
+      "name": "example_same_power_block",
+      "input": "3\n8 24 72\n72\n",
+      "output": "2"
+    },
+    {
+      "name": "example_empty_array",
+      "input": "0\n72\n",
+      "output": "-1"
+    },
+    {
+      "name": "public_absent_nonempty",
+      "input": "7\n1 3 5 2 6 4 8\n7\n",
+      "output": "-1"
+    }
+  ]
+}

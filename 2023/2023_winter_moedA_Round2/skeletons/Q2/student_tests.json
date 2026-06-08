@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "sample_small_cap_three",
+      "input": "3\n3 9 4\n10\n",
+      "output": "3"
+    },
+    {
+      "name": "sample_exact_max",
+      "input": "3\n5 3 2\n10\n",
+      "output": "5"
+    },
+    {
+      "name": "sample_target_too_small",
+      "input": "6\n2 5 2 5 0 0\n2\n",
+      "output": "0"
+    }
+  ]
+}

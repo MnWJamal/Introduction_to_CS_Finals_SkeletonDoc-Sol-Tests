@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "example_roey_wins",
+      "input": "3\n4 roey\n6 shaked\n4 yoav\n5\n4 elik\n5 belik\n4 bili\n4 bili\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "public_single_player",
+      "input": "1\n4 solo\n1\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "public_every_word_boom",
+      "input": "4\n1 a\n1 b\n1 c\n1 d\n1\n5 Boom!\n",
+      "output": "3"
+    },
+    {
+      "name": "public_multiple_booms",
+      "input": "5\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n4\n3 one\n5 Boom!\n3 two\n5 Boom!\n",
+      "output": "2"
+    }
+  ]
+}

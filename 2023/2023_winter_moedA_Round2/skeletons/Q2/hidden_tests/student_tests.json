@@ -1,0 +1,2494 @@
+{
+  "tests": [
+    {
+      "name": "edge_single_zero_target_zero",
+      "input": "1\n0\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_single_zero_large_target",
+      "input": "1\n0\n999\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_single_one_target_zero",
+      "input": "1\n1\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_single_one_target_one",
+      "input": "1\n1\n1\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_single_large_under",
+      "input": "1\n100\n99\n",
+      "output": "99"
+    },
+    {
+      "name": "edge_single_large_exact",
+      "input": "1\n100\n100\n",
+      "output": "100"
+    },
+    {
+      "name": "edge_single_large_over",
+      "input": "1\n100\n1000\n",
+      "output": "100"
+    },
+    {
+      "name": "edge_all_zeros",
+      "input": "4\n0 0 0 0\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_all_zeros_large_target",
+      "input": "4\n0 0 0 0\n12345\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_target_zero_positive",
+      "input": "4\n1 2 3 4\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_target_one_many_positive",
+      "input": "4\n1 2 3 4\n1\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_target_less_than_first_nonzero_sum",
+      "input": "3\n5 6 7\n2\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_all_equal_exact",
+      "input": "4\n5 5 5 5\n20\n",
+      "output": "5"
+    },
+    {
+      "name": "edge_all_equal_below",
+      "input": "4\n5 5 5 5\n19\n",
+      "output": "4"
+    },
+    {
+      "name": "edge_all_equal_half",
+      "input": "4\n5 5 5 5\n10\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_all_equal_zero",
+      "input": "4\n5 5 5 5\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_duplicates_and_zero",
+      "input": "5\n0 5 5 10 10\n22\n",
+      "output": "6"
+    },
+    {
+      "name": "edge_duplicates_gap",
+      "input": "4\n1 1 100 100\n150\n",
+      "output": "74"
+    },
+    {
+      "name": "edge_unsorted_small",
+      "input": "3\n9 3 4\n10\n",
+      "output": "3"
+    },
+    {
+      "name": "edge_unsorted_with_zero",
+      "input": "5\n0 10 2 5 0\n6\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_target_total_sum",
+      "input": "4\n4 1 7 3\n15\n",
+      "output": "7"
+    },
+    {
+      "name": "edge_target_over_total_sum",
+      "input": "4\n4 1 7 3\n999\n",
+      "output": "7"
+    },
+    {
+      "name": "edge_large_unsigned_target",
+      "input": "3\n1000 2000 3000\n4000000000\n",
+      "output": "3000"
+    },
+    {
+      "name": "edge_many_ones_target_three",
+      "input": "5\n1 1 1 1 1\n3\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_many_ones_target_five",
+      "input": "5\n1 1 1 1 1\n5\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_many_ones_target_six",
+      "input": "5\n1 1 1 1 1\n6\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_1",
+      "input": "6\n0 1 2 3 4 5\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_2",
+      "input": "6\n0 1 2 3 4 5\n1\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_3",
+      "input": "6\n0 1 2 3 4 5\n2\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_4",
+      "input": "6\n0 1 2 3 4 5\n3\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_5",
+      "input": "6\n0 1 2 3 4 5\n5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_6",
+      "input": "6\n0 1 2 3 4 5\n7\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_7",
+      "input": "6\n0 1 2 3 4 5\n14\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_8",
+      "input": "6\n0 1 2 3 4 5\n15\n",
+      "output": "5"
+    },
+    {
+      "name": "systematic_9",
+      "input": "6\n0 1 2 3 4 5\n16\n",
+      "output": "5"
+    },
+    {
+      "name": "systematic_10",
+      "input": "10\n1 2 3 4 5 6 7 8 9 10\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_11",
+      "input": "10\n1 2 3 4 5 6 7 8 9 10\n1\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_12",
+      "input": "10\n1 2 3 4 5 6 7 8 9 10\n2\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_13",
+      "input": "10\n1 2 3 4 5 6 7 8 9 10\n3\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_14",
+      "input": "10\n1 2 3 4 5 6 7 8 9 10\n10\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_15",
+      "input": "10\n1 2 3 4 5 6 7 8 9 10\n13\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_16",
+      "input": "10\n1 2 3 4 5 6 7 8 9 10\n27\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_17",
+      "input": "10\n1 2 3 4 5 6 7 8 9 10\n50\n",
+      "output": "7"
+    },
+    {
+      "name": "systematic_18",
+      "input": "10\n1 2 3 4 5 6 7 8 9 10\n54\n",
+      "output": "9"
+    },
+    {
+      "name": "systematic_19",
+      "input": "10\n1 2 3 4 5 6 7 8 9 10\n55\n",
+      "output": "10"
+    },
+    {
+      "name": "systematic_20",
+      "input": "10\n1 2 3 4 5 6 7 8 9 10\n56\n",
+      "output": "10"
+    },
+    {
+      "name": "systematic_21",
+      "input": "5\n10 1 10 1 10\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_22",
+      "input": "5\n10 1 10 1 10\n1\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_23",
+      "input": "5\n10 1 10 1 10\n2\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_24",
+      "input": "5\n10 1 10 1 10\n3\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_25",
+      "input": "5\n10 1 10 1 10\n8\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_26",
+      "input": "5\n10 1 10 1 10\n10\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_27",
+      "input": "5\n10 1 10 1 10\n16\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_28",
+      "input": "5\n10 1 10 1 10\n25\n",
+      "output": "7"
+    },
+    {
+      "name": "systematic_29",
+      "input": "5\n10 1 10 1 10\n31\n",
+      "output": "9"
+    },
+    {
+      "name": "systematic_30",
+      "input": "5\n10 1 10 1 10\n32\n",
+      "output": "10"
+    },
+    {
+      "name": "systematic_31",
+      "input": "5\n10 1 10 1 10\n33\n",
+      "output": "10"
+    },
+    {
+      "name": "systematic_32",
+      "input": "5\n2 5 9 17 33\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_33",
+      "input": "5\n2 5 9 17 33\n1\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_34",
+      "input": "5\n2 5 9 17 33\n2\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_35",
+      "input": "5\n2 5 9 17 33\n3\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_36",
+      "input": "5\n2 5 9 17 33\n16\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_37",
+      "input": "5\n2 5 9 17 33\n33\n",
+      "output": "8"
+    },
+    {
+      "name": "systematic_38",
+      "input": "5\n2 5 9 17 33\n65\n",
+      "output": "32"
+    },
+    {
+      "name": "systematic_39",
+      "input": "5\n2 5 9 17 33\n66\n",
+      "output": "33"
+    },
+    {
+      "name": "systematic_40",
+      "input": "5\n2 5 9 17 33\n67\n",
+      "output": "33"
+    },
+    {
+      "name": "systematic_41",
+      "input": "5\n2 5 9 17 33\n82\n",
+      "output": "33"
+    },
+    {
+      "name": "systematic_42",
+      "input": "6\n100 1 50 2 25 3\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_43",
+      "input": "6\n100 1 50 2 25 3\n1\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_44",
+      "input": "6\n100 1 50 2 25 3\n2\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_45",
+      "input": "6\n100 1 50 2 25 3\n3\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_46",
+      "input": "6\n100 1 50 2 25 3\n45\n",
+      "output": "13"
+    },
+    {
+      "name": "systematic_47",
+      "input": "6\n100 1 50 2 25 3\n90\n",
+      "output": "29"
+    },
+    {
+      "name": "systematic_48",
+      "input": "6\n100 1 50 2 25 3\n100\n",
+      "output": "34"
+    },
+    {
+      "name": "systematic_49",
+      "input": "6\n100 1 50 2 25 3\n180\n",
+      "output": "99"
+    },
+    {
+      "name": "systematic_50",
+      "input": "6\n100 1 50 2 25 3\n181\n",
+      "output": "100"
+    },
+    {
+      "name": "systematic_51",
+      "input": "6\n100 1 50 2 25 3\n182\n",
+      "output": "100"
+    },
+    {
+      "name": "systematic_52",
+      "input": "6\n100 1 50 2 25 3\n300\n",
+      "output": "100"
+    },
+    {
+      "name": "pattern_53",
+      "input": "1\n7\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_54",
+      "input": "1\n7\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_55",
+      "input": "1\n7\n1\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_56",
+      "input": "1\n7\n2\n",
+      "output": "2"
+    },
+    {
+      "name": "pattern_57",
+      "input": "1\n7\n3\n",
+      "output": "3"
+    },
+    {
+      "name": "pattern_58",
+      "input": "1\n7\n3\n",
+      "output": "3"
+    },
+    {
+      "name": "pattern_59",
+      "input": "1\n7\n7\n",
+      "output": "7"
+    },
+    {
+      "name": "pattern_60",
+      "input": "1\n7\n17\n",
+      "output": "7"
+    },
+    {
+      "name": "pattern_61",
+      "input": "2\n7 11\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_62",
+      "input": "2\n7 11\n1\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_63",
+      "input": "2\n7 11\n2\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_64",
+      "input": "2\n7 11\n6\n",
+      "output": "3"
+    },
+    {
+      "name": "pattern_65",
+      "input": "2\n7 11\n9\n",
+      "output": "4"
+    },
+    {
+      "name": "pattern_66",
+      "input": "2\n7 11\n11\n",
+      "output": "5"
+    },
+    {
+      "name": "pattern_67",
+      "input": "2\n7 11\n18\n",
+      "output": "11"
+    },
+    {
+      "name": "pattern_68",
+      "input": "2\n7 11\n28\n",
+      "output": "11"
+    },
+    {
+      "name": "pattern_69",
+      "input": "3\n7 11 17\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_70",
+      "input": "3\n7 11 17\n1\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_71",
+      "input": "3\n7 11 17\n3\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_72",
+      "input": "3\n7 11 17\n11\n",
+      "output": "3"
+    },
+    {
+      "name": "pattern_73",
+      "input": "3\n7 11 17\n17\n",
+      "output": "5"
+    },
+    {
+      "name": "pattern_74",
+      "input": "3\n7 11 17\n25\n",
+      "output": "9"
+    },
+    {
+      "name": "pattern_75",
+      "input": "3\n7 11 17\n35\n",
+      "output": "17"
+    },
+    {
+      "name": "pattern_76",
+      "input": "3\n7 11 17\n45\n",
+      "output": "17"
+    },
+    {
+      "name": "pattern_77",
+      "input": "4\n7 11 17 25\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_78",
+      "input": "4\n7 11 17 25\n2\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_79",
+      "input": "4\n7 11 17 25\n4\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_80",
+      "input": "4\n7 11 17 25\n20\n",
+      "output": "5"
+    },
+    {
+      "name": "pattern_81",
+      "input": "4\n7 11 17 25\n30\n",
+      "output": "7"
+    },
+    {
+      "name": "pattern_82",
+      "input": "4\n7 11 17 25\n50\n",
+      "output": "16"
+    },
+    {
+      "name": "pattern_83",
+      "input": "4\n7 11 17 25\n60\n",
+      "output": "25"
+    },
+    {
+      "name": "pattern_84",
+      "input": "4\n7 11 17 25\n70\n",
+      "output": "25"
+    },
+    {
+      "name": "pattern_85",
+      "input": "5\n7 11 17 25 4\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_86",
+      "input": "5\n7 11 17 25 4\n2\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_87",
+      "input": "5\n7 11 17 25 4\n5\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_88",
+      "input": "5\n7 11 17 25 4\n21\n",
+      "output": "4"
+    },
+    {
+      "name": "pattern_89",
+      "input": "5\n7 11 17 25 4\n32\n",
+      "output": "7"
+    },
+    {
+      "name": "pattern_90",
+      "input": "5\n7 11 17 25 4\n62\n",
+      "output": "23"
+    },
+    {
+      "name": "pattern_91",
+      "input": "5\n7 11 17 25 4\n64\n",
+      "output": "25"
+    },
+    {
+      "name": "pattern_92",
+      "input": "5\n7 11 17 25 4\n74\n",
+      "output": "25"
+    },
+    {
+      "name": "pattern_93",
+      "input": "6\n7 11 17 25 4 16\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_94",
+      "input": "6\n7 11 17 25 4 16\n3\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_95",
+      "input": "6\n7 11 17 25 4 16\n6\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_96",
+      "input": "6\n7 11 17 25 4 16\n26\n",
+      "output": "4"
+    },
+    {
+      "name": "pattern_97",
+      "input": "6\n7 11 17 25 4 16\n40\n",
+      "output": "7"
+    },
+    {
+      "name": "pattern_98",
+      "input": "6\n7 11 17 25 4 16\n75\n",
+      "output": "20"
+    },
+    {
+      "name": "pattern_99",
+      "input": "6\n7 11 17 25 4 16\n80\n",
+      "output": "25"
+    },
+    {
+      "name": "pattern_100",
+      "input": "6\n7 11 17 25 4 16\n90\n",
+      "output": "25"
+    },
+    {
+      "name": "pattern_101",
+      "input": "7\n7 11 17 25 4 16 30\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_102",
+      "input": "7\n7 11 17 25 4 16 30\n3\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_103",
+      "input": "7\n7 11 17 25 4 16 30\n7\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_104",
+      "input": "7\n7 11 17 25 4 16 30\n36\n",
+      "output": "5"
+    },
+    {
+      "name": "pattern_105",
+      "input": "7\n7 11 17 25 4 16 30\n55\n",
+      "output": "8"
+    },
+    {
+      "name": "pattern_106",
+      "input": "7\n7 11 17 25 4 16 30\n105\n",
+      "output": "25"
+    },
+    {
+      "name": "pattern_107",
+      "input": "7\n7 11 17 25 4 16 30\n110\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_108",
+      "input": "7\n7 11 17 25 4 16 30\n120\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_109",
+      "input": "8\n7 11 17 25 4 16 30 15\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_110",
+      "input": "8\n7 11 17 25 4 16 30 15\n4\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_111",
+      "input": "8\n7 11 17 25 4 16 30 15\n8\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_112",
+      "input": "8\n7 11 17 25 4 16 30 15\n41\n",
+      "output": "5"
+    },
+    {
+      "name": "pattern_113",
+      "input": "8\n7 11 17 25 4 16 30 15\n62\n",
+      "output": "8"
+    },
+    {
+      "name": "pattern_114",
+      "input": "8\n7 11 17 25 4 16 30 15\n120\n",
+      "output": "25"
+    },
+    {
+      "name": "pattern_115",
+      "input": "8\n7 11 17 25 4 16 30 15\n125\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_116",
+      "input": "8\n7 11 17 25 4 16 30 15\n135\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_117",
+      "input": "9\n7 11 17 25 4 16 30 15 2\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_118",
+      "input": "9\n7 11 17 25 4 16 30 15 2\n4\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_119",
+      "input": "9\n7 11 17 25 4 16 30 15 2\n9\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_120",
+      "input": "9\n7 11 17 25 4 16 30 15 2\n42\n",
+      "output": "5"
+    },
+    {
+      "name": "pattern_121",
+      "input": "9\n7 11 17 25 4 16 30 15 2\n63\n",
+      "output": "8"
+    },
+    {
+      "name": "pattern_122",
+      "input": "9\n7 11 17 25 4 16 30 15 2\n135\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_123",
+      "input": "9\n7 11 17 25 4 16 30 15 2\n127\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_124",
+      "input": "9\n7 11 17 25 4 16 30 15 2\n137\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_125",
+      "input": "10\n7 11 17 25 4 16 30 15 2 22\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_126",
+      "input": "10\n7 11 17 25 4 16 30 15 2 22\n5\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_127",
+      "input": "10\n7 11 17 25 4 16 30 15 2 22\n10\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_128",
+      "input": "10\n7 11 17 25 4 16 30 15 2 22\n49\n",
+      "output": "5"
+    },
+    {
+      "name": "pattern_129",
+      "input": "10\n7 11 17 25 4 16 30 15 2 22\n74\n",
+      "output": "8"
+    },
+    {
+      "name": "pattern_130",
+      "input": "10\n7 11 17 25 4 16 30 15 2 22\n150\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_131",
+      "input": "10\n7 11 17 25 4 16 30 15 2 22\n149\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_132",
+      "input": "10\n7 11 17 25 4 16 30 15 2 22\n159\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_133",
+      "input": "11\n7 11 17 25 4 16 30 15 2 22 13\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_134",
+      "input": "11\n7 11 17 25 4 16 30 15 2 22 13\n5\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_135",
+      "input": "11\n7 11 17 25 4 16 30 15 2 22 13\n11\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_136",
+      "input": "11\n7 11 17 25 4 16 30 15 2 22 13\n54\n",
+      "output": "5"
+    },
+    {
+      "name": "pattern_137",
+      "input": "11\n7 11 17 25 4 16 30 15 2 22 13\n81\n",
+      "output": "8"
+    },
+    {
+      "name": "pattern_138",
+      "input": "11\n7 11 17 25 4 16 30 15 2 22 13\n165\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_139",
+      "input": "11\n7 11 17 25 4 16 30 15 2 22 13\n162\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_140",
+      "input": "11\n7 11 17 25 4 16 30 15 2 22 13\n172\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_141",
+      "input": "12\n7 11 17 25 4 16 30 15 2 22 13 6\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_142",
+      "input": "12\n7 11 17 25 4 16 30 15 2 22 13 6\n6\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_143",
+      "input": "12\n7 11 17 25 4 16 30 15 2 22 13 6\n12\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_144",
+      "input": "12\n7 11 17 25 4 16 30 15 2 22 13 6\n56\n",
+      "output": "5"
+    },
+    {
+      "name": "pattern_145",
+      "input": "12\n7 11 17 25 4 16 30 15 2 22 13 6\n84\n",
+      "output": "8"
+    },
+    {
+      "name": "pattern_146",
+      "input": "12\n7 11 17 25 4 16 30 15 2 22 13 6\n180\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_147",
+      "input": "12\n7 11 17 25 4 16 30 15 2 22 13 6\n168\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_148",
+      "input": "12\n7 11 17 25 4 16 30 15 2 22 13 6\n178\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_149",
+      "input": "13\n7 11 17 25 4 16 30 15 2 22 13 6 1\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_150",
+      "input": "13\n7 11 17 25 4 16 30 15 2 22 13 6 1\n6\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_151",
+      "input": "13\n7 11 17 25 4 16 30 15 2 22 13 6 1\n13\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_152",
+      "input": "13\n7 11 17 25 4 16 30 15 2 22 13 6 1\n56\n",
+      "output": "4"
+    },
+    {
+      "name": "pattern_153",
+      "input": "13\n7 11 17 25 4 16 30 15 2 22 13 6 1\n84\n",
+      "output": "8"
+    },
+    {
+      "name": "pattern_154",
+      "input": "13\n7 11 17 25 4 16 30 15 2 22 13 6 1\n195\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_155",
+      "input": "13\n7 11 17 25 4 16 30 15 2 22 13 6 1\n169\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_156",
+      "input": "13\n7 11 17 25 4 16 30 15 2 22 13 6 1\n179\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_157",
+      "input": "14\n7 11 17 25 4 16 30 15 2 22 13 6 1 29\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_158",
+      "input": "14\n7 11 17 25 4 16 30 15 2 22 13 6 1 29\n7\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_159",
+      "input": "14\n7 11 17 25 4 16 30 15 2 22 13 6 1 29\n14\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_160",
+      "input": "14\n7 11 17 25 4 16 30 15 2 22 13 6 1 29\n66\n",
+      "output": "5"
+    },
+    {
+      "name": "pattern_161",
+      "input": "14\n7 11 17 25 4 16 30 15 2 22 13 6 1 29\n99\n",
+      "output": "8"
+    },
+    {
+      "name": "pattern_162",
+      "input": "14\n7 11 17 25 4 16 30 15 2 22 13 6 1 29\n210\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_163",
+      "input": "14\n7 11 17 25 4 16 30 15 2 22 13 6 1 29\n198\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_164",
+      "input": "14\n7 11 17 25 4 16 30 15 2 22 13 6 1 29\n208\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_165",
+      "input": "15\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_166",
+      "input": "15\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28\n7\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_167",
+      "input": "15\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28\n15\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_168",
+      "input": "15\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28\n75\n",
+      "output": "5"
+    },
+    {
+      "name": "pattern_169",
+      "input": "15\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28\n113\n",
+      "output": "9"
+    },
+    {
+      "name": "pattern_170",
+      "input": "15\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28\n225\n",
+      "output": "29"
+    },
+    {
+      "name": "pattern_171",
+      "input": "15\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28\n226\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_172",
+      "input": "15\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28\n236\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_173",
+      "input": "16\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_174",
+      "input": "16\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29\n8\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_175",
+      "input": "16\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29\n16\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_176",
+      "input": "16\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29\n85\n",
+      "output": "6"
+    },
+    {
+      "name": "pattern_177",
+      "input": "16\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29\n127\n",
+      "output": "9"
+    },
+    {
+      "name": "pattern_178",
+      "input": "16\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29\n240\n",
+      "output": "25"
+    },
+    {
+      "name": "pattern_179",
+      "input": "16\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29\n255\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_180",
+      "input": "16\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29\n265\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_181",
+      "input": "17\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_182",
+      "input": "17\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1\n8\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_183",
+      "input": "17\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1\n17\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_184",
+      "input": "17\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1\n85\n",
+      "output": "5"
+    },
+    {
+      "name": "pattern_185",
+      "input": "17\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1\n128\n",
+      "output": "9"
+    },
+    {
+      "name": "pattern_186",
+      "input": "17\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1\n255\n",
+      "output": "29"
+    },
+    {
+      "name": "pattern_187",
+      "input": "17\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1\n256\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_188",
+      "input": "17\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1\n266\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_189",
+      "input": "18\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_190",
+      "input": "18\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6\n9\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_191",
+      "input": "18\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6\n18\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_192",
+      "input": "18\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6\n87\n",
+      "output": "5"
+    },
+    {
+      "name": "pattern_193",
+      "input": "18\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6\n131\n",
+      "output": "9"
+    },
+    {
+      "name": "pattern_194",
+      "input": "18\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6\n270\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_195",
+      "input": "18\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6\n262\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_196",
+      "input": "18\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6\n272\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_197",
+      "input": "19\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_198",
+      "input": "19\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13\n9\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_199",
+      "input": "19\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13\n19\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_200",
+      "input": "19\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13\n91\n",
+      "output": "5"
+    },
+    {
+      "name": "pattern_201",
+      "input": "19\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13\n137\n",
+      "output": "9"
+    },
+    {
+      "name": "pattern_202",
+      "input": "19\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13\n285\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_203",
+      "input": "19\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13\n275\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_204",
+      "input": "19\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13\n285\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_205",
+      "input": "20\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_206",
+      "input": "20\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22\n10\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_207",
+      "input": "20\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22\n20\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_208",
+      "input": "20\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22\n99\n",
+      "output": "5"
+    },
+    {
+      "name": "pattern_209",
+      "input": "20\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22\n148\n",
+      "output": "9"
+    },
+    {
+      "name": "pattern_210",
+      "input": "20\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22\n300\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_211",
+      "input": "20\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22\n297\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_212",
+      "input": "20\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22\n307\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_213",
+      "input": "21\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_214",
+      "input": "21\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2\n10\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_215",
+      "input": "21\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2\n21\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_216",
+      "input": "21\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2\n99\n",
+      "output": "5"
+    },
+    {
+      "name": "pattern_217",
+      "input": "21\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2\n149\n",
+      "output": "9"
+    },
+    {
+      "name": "pattern_218",
+      "input": "21\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2\n315\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_219",
+      "input": "21\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2\n299\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_220",
+      "input": "21\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2\n309\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_221",
+      "input": "22\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_222",
+      "input": "22\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15\n11\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_223",
+      "input": "22\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15\n22\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_224",
+      "input": "22\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15\n104\n",
+      "output": "5"
+    },
+    {
+      "name": "pattern_225",
+      "input": "22\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15\n157\n",
+      "output": "9"
+    },
+    {
+      "name": "pattern_226",
+      "input": "22\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15\n330\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_227",
+      "input": "22\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15\n314\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_228",
+      "input": "22\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15\n324\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_229",
+      "input": "23\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_230",
+      "input": "23\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30\n11\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_231",
+      "input": "23\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30\n23\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_232",
+      "input": "23\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30\n114\n",
+      "output": "5"
+    },
+    {
+      "name": "pattern_233",
+      "input": "23\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30\n172\n",
+      "output": "9"
+    },
+    {
+      "name": "pattern_234",
+      "input": "23\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30\n345\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_235",
+      "input": "23\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30\n344\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_236",
+      "input": "23\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30\n354\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_237",
+      "input": "24\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30 16\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_238",
+      "input": "24\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30 16\n12\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_239",
+      "input": "24\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30 16\n24\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_240",
+      "input": "24\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30 16\n120\n",
+      "output": "5"
+    },
+    {
+      "name": "pattern_241",
+      "input": "24\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30 16\n180\n",
+      "output": "9"
+    },
+    {
+      "name": "pattern_242",
+      "input": "24\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30 16\n360\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_243",
+      "input": "24\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30 16\n360\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_244",
+      "input": "24\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30 16\n370\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_245",
+      "input": "25\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30 16 4\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_246",
+      "input": "25\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30 16 4\n12\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_247",
+      "input": "25\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30 16 4\n25\n",
+      "output": "1"
+    },
+    {
+      "name": "pattern_248",
+      "input": "25\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30 16 4\n121\n",
+      "output": "5"
+    },
+    {
+      "name": "pattern_249",
+      "input": "25\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30 16 4\n182\n",
+      "output": "9"
+    },
+    {
+      "name": "pattern_250",
+      "input": "25\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30 16 4\n375\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_251",
+      "input": "25\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30 16 4\n364\n",
+      "output": "30"
+    },
+    {
+      "name": "pattern_252",
+      "input": "25\n7 11 17 25 4 16 30 15 2 22 13 6 1 29 28 29 1 6 13 22 2 15 30 16 4\n374\n",
+      "output": "30"
+    },
+    {
+      "name": "random_1",
+      "input": "2\n36 124\n159\n",
+      "output": "123"
+    },
+    {
+      "name": "random_2",
+      "input": "40\n35 194 7 37 121 118 159 84 134 138 194 46 148 183 61 44 92 0 62 41 38 6 49 10 3 162 34 38 129 197 154 76 110 133 45 124 154 195 199 38\n3791\n",
+      "output": "198"
+    },
+    {
+      "name": "random_3",
+      "input": "56\n88 85 29 17 25 182 17 109 83 182 101 122 50 15 121 131 91 151 8 138 122 169 13 46 26 192 94 14 139 195 131 168 166 95 174 97 199 147 98 9 32 94 161 138 175 104 190 139 100 182 47 25 21 200 187 199\n5636\n",
+      "output": "157"
+    },
+    {
+      "name": "random_4",
+      "input": "8\n6 135 197 35 52 155 173 174\n671\n",
+      "output": "115"
+    },
+    {
+      "name": "random_5",
+      "input": "25\n144 119 1 158 193 81 100 65 106 138 105 33 185 56 164 172 127 27 138 169 125 82 195 80 68\n2831\n",
+      "output": "195"
+    },
+    {
+      "name": "random_6",
+      "input": "16\n117 59 15 122 56 14 126 110 142 103 83 51 160 22 116 12\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_7",
+      "input": "27\n132 120 200 20 14 49 170 30 145 118 40 171 85 61 108 26 11 143 8 10 15 120 150 72 87 66 25\n5392\n",
+      "output": "200"
+    },
+    {
+      "name": "random_8",
+      "input": "46\n199 133 4 140 45 33 103 96 2 136 95 124 200 6 187 114 47 95 169 172 81 60 29 167 14 71 22 74 82 155 69 163 20 16 144 168 82 160 59 126 105 80 99 64 82 175\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_9",
+      "input": "60\n84 52 177 127 105 139 24 182 46 17 17 40 161 50 38 90 30 89 167 90 139 164 57 142 83 172 4 120 107 106 69 55 174 128 134 68 101 175 88 198 50 103 128 170 66 102 33 131 80 28 186 133 173 154 13 33 60 179 43 83\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_10",
+      "input": "10\n29 148 123 49 105 71 119 42 187 165\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_11",
+      "input": "16\n40 21 139 7 6 179 194 185 155 7 35 73 6 69 111 27\n1280\n",
+      "output": "194"
+    },
+    {
+      "name": "random_12",
+      "input": "34\n55 100 125 106 8 78 146 10 180 8 157 50 189 17 14 165 70 45 79 178 117 29 138 169 20 131 183 42 70 86 116 188 63 36\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_13",
+      "input": "48\n121 41 159 89 157 125 116 18 33 86 81 160 112 48 9 177 116 149 122 154 144 74 198 51 68 133 22 46 143 157 24 44 21 22 80 126 104 43 76 194 62 117 154 108 65 127 94 27\n508\n",
+      "output": "10"
+    },
+    {
+      "name": "random_14",
+      "input": "17\n154 93 113 69 89 92 93 161 17 51 107 55 74 111 90 150 13\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_15",
+      "input": "5\n141 79 116 47 127\n510\n",
+      "output": "141"
+    },
+    {
+      "name": "random_16",
+      "input": "45\n73 9 59 189 78 4 132 80 31 172 183 6 30 136 107 174 167 159 107 167 91 173 165 74 84 72 59 101 75 165 163 102 133 133 106 173 100 43 191 158 68 199 150 59 81\n4980\n",
+      "output": "198"
+    },
+    {
+      "name": "random_17",
+      "input": "22\n111 17 45 151 178 93 121 131 37 154 103 84 192 147 144 22 117 158 142 165 167 107\n494\n",
+      "output": "22"
+    },
+    {
+      "name": "random_18",
+      "input": "27\n198 64 149 78 144 198 82 43 11 63 54 70 72 198 138 151 139 28 106 153 124 72 184 178 196 108 133\n147\n",
+      "output": "5"
+    },
+    {
+      "name": "random_19",
+      "input": "4\n69 89 94 16\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_20",
+      "input": "44\n143 9 171 59 19 172 5 143 200 116 173 20 29 164 187 89 154 128 11 30 72 73 83 67 145 76 191 168 9 68 112 139 55 13 154 10 98 80 186 33 185 75 41 157\n2498\n",
+      "output": "72"
+    },
+    {
+      "name": "random_21",
+      "input": "40\n10 173 119 168 92 196 15 60 163 93 178 104 82 73 200 155 49 107 17 121 200 50 86 97 2 187 149 57 169 143 181 200 50 17 61 146 4 42 195 191\n1466\n",
+      "output": "41"
+    },
+    {
+      "name": "random_22",
+      "input": "26\n180 122 79 87 38 114 51 96 170 18 32 95 153 117 54 153 156 36 123 38 98 59 0 178 193 4\n4091\n",
+      "output": "193"
+    },
+    {
+      "name": "random_23",
+      "input": "47\n62 184 77 135 87 180 130 101 76 50 63 88 55 144 92 96 112 29 180 169 90 54 107 140 12 52 43 58 127 170 165 164 7 113 11 198 82 181 171 55 94 161 111 111 1 92 40\n4719\n",
+      "output": "197"
+    },
+    {
+      "name": "random_24",
+      "input": "39\n199 59 65 27 97 184 80 8 110 186 41 143 19 77 144 21 102 61 30 149 78 164 65 40 134 144 175 90 89 61 114 183 6 168 184 126 78 70 161\n3931\n",
+      "output": "198"
+    },
+    {
+      "name": "random_25",
+      "input": "56\n123 51 10 137 143 90 70 50 98 192 87 101 95 56 75 22 137 39 177 66 7 125 115 123 54 68 73 78 40 31 142 101 87 184 104 109 180 96 45 164 10 76 121 53 43 169 9 172 197 189 32 123 39 68 151 173\n5369\n",
+      "output": "196"
+    },
+    {
+      "name": "random_26",
+      "input": "8\n9 145 66 141 98 37 1 126\n615\n",
+      "output": "139"
+    },
+    {
+      "name": "random_27",
+      "input": "27\n1 117 141 144 184 59 140 167 95 33 151 98 36 179 57 105 90 20 77 174 14 176 89 63 130 6 58\n2604\n",
+      "output": "184"
+    },
+    {
+      "name": "random_28",
+      "input": "42\n110 29 66 60 103 191 182 131 121 119 89 110 78 175 145 103 163 199 23 71 148 65 35 109 0 134 161 191 106 126 111 35 60 101 196 24 131 194 188 69 160 145\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_29",
+      "input": "56\n114 101 113 127 86 154 62 175 55 8 24 87 36 27 61 63 26 138 97 15 72 102 129 164 18 125 163 192 134 47 31 114 174 9 137 146 86 182 111 157 177 41 25 194 197 147 15 180 74 132 18 183 156 156 184 115\n3149\n",
+      "output": "67"
+    },
+    {
+      "name": "random_30",
+      "input": "42\n1 15 76 109 181 49 171 159 96 172 96 21 106 23 46 7 16 165 94 86 168 75 152 68 180 186 31 5 70 158 159 27 38 0 47 198 51 113 120 137 200 137\n3760\n",
+      "output": "154"
+    },
+    {
+      "name": "random_31",
+      "input": "41\n74 96 43 11 116 100 131 191 11 157 131 48 194 161 48 29 168 2 62 50 106 138 185 89 149 175 149 189 88 147 134 2 176 72 182 90 83 112 112 190 190\n5422\n",
+      "output": "194"
+    },
+    {
+      "name": "random_32",
+      "input": "48\n75 79 105 158 95 62 47 71 91 99 68 10 120 177 22 193 92 1 77 187 142 45 59 186 145 24 146 85 48 67 119 12 86 49 59 148 98 28 164 66 119 179 87 192 92 184 142 151\n4064\n",
+      "output": "120"
+    },
+    {
+      "name": "random_33",
+      "input": "10\n65 158 21 102 168 195 83 134 62 117\n1154\n",
+      "output": "195"
+    },
+    {
+      "name": "random_34",
+      "input": "28\n190 136 139 82 124 43 161 42 132 200 142 152 87 71 127 144 94 44 10 23 199 94 169 147 165 86 192 73\n2589\n",
+      "output": "115"
+    },
+    {
+      "name": "random_35",
+      "input": "50\n16 76 8 128 45 3 14 196 134 62 85 44 193 28 38 10 93 19 89 102 121 158 138 132 48 141 140 143 32 41 84 139 101 44 192 165 197 74 11 151 185 194 143 112 154 95 179 29 129 199\n5054\n",
+      "output": "199"
+    },
+    {
+      "name": "random_36",
+      "input": "26\n56 27 117 175 7 2 125 73 80 168 157 155 66 119 4 95 177 154 164 170 1 32 71 69 71 132\n2467\n",
+      "output": "177"
+    },
+    {
+      "name": "random_37",
+      "input": "16\n160 108 174 22 154 16 113 125 29 144 147 102 144 196 198 181\n2012\n",
+      "output": "197"
+    },
+    {
+      "name": "random_38",
+      "input": "29\n169 61 84 131 194 156 143 119 163 38 109 73 150 191 67 3 102 58 56 139 199 10 47 8 68 98 78 149 162\n3024\n",
+      "output": "198"
+    },
+    {
+      "name": "random_39",
+      "input": "13\n55 39 56 2 192 67 156 91 170 135 66 72 140\n1241\n",
+      "output": "192"
+    },
+    {
+      "name": "random_40",
+      "input": "53\n32 46 41 85 8 93 5 171 28 178 197 54 110 88 109 181 137 30 162 56 158 197 182 121 98 104 58 15 129 36 12 90 20 47 59 77 44 129 63 125 40 25 98 10 0 124 156 117 190 5 178 87 100\n1475\n",
+      "output": "31"
+    },
+    {
+      "name": "random_41",
+      "input": "52\n21 177 88 197 114 103 39 112 58 52 61 100 106 79 82 102 113 69 169 101 187 35 150 64 115 69 147 74 188 105 11 199 41 180 49 31 175 124 67 31 178 62 113 199 159 44 21 52 197 137 113 20\n9993\n",
+      "output": "199"
+    },
+    {
+      "name": "random_42",
+      "input": "11\n175 125 93 157 130 104 12 43 73 29 151\n331\n",
+      "output": "32"
+    },
+    {
+      "name": "random_43",
+      "input": "57\n169 57 164 77 72 136 15 189 187 193 73 56 89 153 28 76 182 75 15 132 86 19 99 186 156 130 159 58 169 139 31 98 164 70 59 58 93 130 151 184 32 43 115 50 60 87 13 141 14 167 8 196 167 42 148 144 160\n5963\n",
+      "output": "195"
+    },
+    {
+      "name": "random_44",
+      "input": "18\n3 92 33 132 152 80 176 100 160 105 6 60 107 159 115 14 188 160\n372\n",
+      "output": "23"
+    },
+    {
+      "name": "random_45",
+      "input": "60\n8 52 88 71 40 144 122 194 25 144 127 190 8 1 99 162 144 22 113 73 47 49 131 167 57 138 90 21 61 142 43 106 108 161 81 38 197 114 46 74 44 175 121 194 37 88 119 150 98 11 165 178 144 164 101 95 34 16 11 143\n5786\n",
+      "output": "197"
+    },
+    {
+      "name": "random_46",
+      "input": "38\n156 178 134 47 125 141 53 55 38 73 89 174 140 22 92 123 130 195 200 35 100 59 175 126 66 22 190 58 19 139 120 137 32 199 186 189 139 112\n1613\n",
+      "output": "45"
+    },
+    {
+      "name": "random_47",
+      "input": "44\n88 116 163 138 55 128 52 110 17 88 45 135 37 193 85 114 21 39 189 116 154 45 200 60 50 41 160 155 62 160 165 151 129 131 71 111 152 129 43 189 200 116 146 163\n4911\n",
+      "output": "199"
+    },
+    {
+      "name": "random_48",
+      "input": "19\n55 154 84 152 15 182 181 135 0 129 50 196 130 31 22 122 182 133 55\n1500\n",
+      "output": "108"
+    },
+    {
+      "name": "random_49",
+      "input": "20\n42 136 28 67 138 70 161 158 68 164 97 56 129 70 142 165 78 18 180 37\n2655\n",
+      "output": "180"
+    },
+    {
+      "name": "random_50",
+      "input": "38\n3 186 129 94 183 168 21 4 68 113 55 152 169 25 29 98 11 158 34 163 128 19 188 86 26 14 185 26 169 118 45 150 184 83 120 152 68 137\n3761\n",
+      "output": "188"
+    },
+    {
+      "name": "random_51",
+      "input": "37\n37 29 83 187 76 114 40 53 125 7 77 68 53 21 185 158 68 88 94 165 111 63 20 73 93 153 59 58 17 146 26 159 69 107 129 88 177\n5381\n",
+      "output": "187"
+    },
+    {
+      "name": "random_52",
+      "input": "39\n60 46 194 111 197 163 170 167 82 75 128 121 29 148 78 17 65 43 60 79 55 200 166 14 165 183 14 158 195 88 69 139 8 62 11 151 85 178 192\n1679\n",
+      "output": "48"
+    },
+    {
+      "name": "random_53",
+      "input": "9\n128 50 165 114 47 53 192 153 15\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_54",
+      "input": "15\n194 79 176 10 187 21 75 109 132 148 121 9 96 132 63\n2890\n",
+      "output": "194"
+    },
+    {
+      "name": "random_55",
+      "input": "13\n123 0 5 185 125 4 6 120 155 9 48 179 190\n1082\n",
+      "output": "162"
+    },
+    {
+      "name": "random_56",
+      "input": "49\n18 164 72 33 107 154 146 5 99 136 15 127 11 24 101 167 160 54 173 75 16 191 21 195 117 194 31 5 99 128 199 5 121 88 74 195 164 16 112 190 12 49 69 10 33 157 24 100 57\n4513\n",
+      "output": "199"
+    },
+    {
+      "name": "random_57",
+      "input": "19\n121 185 72 133 137 90 27 31 6 180 122 22 119 75 157 199 170 165 200\n2211\n",
+      "output": "200"
+    },
+    {
+      "name": "random_58",
+      "input": "45\n119 148 145 10 4 55 190 27 184 17 139 93 68 87 117 185 169 136 38 31 71 172 103 165 47 173 22 27 166 198 89 14 82 5 99 163 61 187 146 143 48 129 129 151 164\n4716\n",
+      "output": "198"
+    },
+    {
+      "name": "random_59",
+      "input": "27\n17 141 53 174 73 42 16 154 154 31 150 79 189 9 161 52 188 143 129 101 109 75 142 180 67 174 68\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_60",
+      "input": "19\n38 175 115 177 132 127 137 131 84 4 55 139 112 60 129 68 182 174 15\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_61",
+      "input": "8\n23 31 123 130 71 71 88 53\n605\n",
+      "output": "130"
+    },
+    {
+      "name": "random_62",
+      "input": "22\n100 38 165 72 44 24 157 140 12 145 67 16 151 134 49 92 73 187 43 46 58 173\n3396\n",
+      "output": "187"
+    },
+    {
+      "name": "random_63",
+      "input": "58\n51 103 196 32 155 130 126 152 169 194 189 144 19 108 78 153 160 44 180 106 33 108 106 23 30 184 90 60 158 164 89 10 88 166 196 73 108 91 68 75 88 145 145 74 8 67 99 148 20 113 65 3 94 70 45 47 143 57\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_64",
+      "input": "27\n46 141 127 55 7 146 149 83 179 117 174 171 161 117 14 142 175 31 90 173 49 80 107 18 135 55 197\n5088\n",
+      "output": "197"
+    },
+    {
+      "name": "random_65",
+      "input": "39\n138 14 191 88 81 101 11 7 192 81 136 163 140 118 157 148 116 52 79 102 92 128 101 196 69 110 50 132 127 145 121 93 55 190 127 180 30 122 167\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_66",
+      "input": "27\n176 153 166 181 97 167 188 43 140 26 18 141 86 72 113 146 82 38 115 20 185 172 90 145 42 183 139\n3802\n",
+      "output": "188"
+    },
+    {
+      "name": "random_67",
+      "input": "41\n71 133 40 176 176 53 113 117 110 153 7 17 21 189 148 48 38 109 139 135 63 0 179 43 31 179 197 174 177 65 101 188 62 182 156 171 8 109 89 66 82\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_68",
+      "input": "26\n14 95 84 131 186 164 30 157 178 91 9 154 125 26 171 67 197 6 184 84 153 78 85 32 122 74\n2697\n",
+      "output": "197"
+    },
+    {
+      "name": "random_69",
+      "input": "26\n94 36 87 7 54 60 138 74 51 137 160 127 181 6 96 116 107 158 182 53 176 193 124 48 99 155\n1044\n",
+      "output": "43"
+    },
+    {
+      "name": "random_70",
+      "input": "39\n169 129 190 120 114 121 166 20 35 60 84 155 111 42 166 192 110 158 130 195 186 3 151 106 36 114 80 156 158 66 52 3 188 65 112 64 137 154 121\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_71",
+      "input": "51\n198 50 96 180 136 38 69 138 125 180 41 2 161 72 1 70 78 32 164 20 159 70 67 144 80 64 43 156 95 42 24 195 53 95 20 17 124 89 88 87 183 4 184 140 91 37 43 180 18 177 120\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_72",
+      "input": "38\n66 19 118 60 89 175 12 91 34 177 108 92 158 142 166 94 163 178 194 44 104 137 19 77 70 109 41 118 128 7 117 96 85 72 96 190 73 95\n1868\n",
+      "output": "54"
+    },
+    {
+      "name": "random_73",
+      "input": "42\n37 55 43 95 99 76 199 80 125 45 163 80 185 87 173 121 134 71 20 178 37 8 66 92 174 8 48 84 126 14 135 73 154 186 191 128 55 183 116 98 84 86\n4212\n",
+      "output": "199"
+    },
+    {
+      "name": "random_74",
+      "input": "24\n54 113 146 44 80 64 171 184 49 7 88 1 144 8 48 153 154 76 200 80 32 195 14 153\n1047\n",
+      "output": "52"
+    },
+    {
+      "name": "random_75",
+      "input": "12\n135 2 168 33 149 176 68 60 154 183 48 109\n1285\n",
+      "output": "183"
+    },
+    {
+      "name": "random_76",
+      "input": "29\n62 4 92 35 144 75 158 60 15 129 109 160 3 46 59 118 49 101 187 141 149 138 187 173 21 147 138 191 14\n4813\n",
+      "output": "191"
+    },
+    {
+      "name": "random_77",
+      "input": "2\n118 184\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_78",
+      "input": "16\n57 97 173 16 16 138 176 88 3 97 181 191 90 77 177 52\n468\n",
+      "output": "33"
+    },
+    {
+      "name": "random_79",
+      "input": "38\n36 23 177 129 23 155 175 175 97 143 135 3 73 42 130 82 44 82 35 184 19 174 125 85 112 188 162 174 148 109 71 148 196 194 11 43 127 78\n4106\n",
+      "output": "195"
+    },
+    {
+      "name": "random_80",
+      "input": "37\n115 26 26 19 178 129 85 2 65 94 191 163 88 11 116 198 96 103 104 142 77 78 108 78 196 128 133 7 60 139 135 83 56 188 84 16 15\n5681\n",
+      "output": "198"
+    },
+    {
+      "name": "random_81",
+      "input": "56\n169 70 188 13 153 12 147 83 152 90 200 171 72 78 75 123 84 135 172 196 150 122 186 73 39 18 35 19 138 9 61 94 180 79 146 195 91 40 190 68 5 165 122 66 198 113 67 149 48 66 172 20 185 130 58 159\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_82",
+      "input": "11\n192 15 188 20 192 53 74 9 42 138 84\n1007\n",
+      "output": "192"
+    },
+    {
+      "name": "random_83",
+      "input": "42\n82 79 45 99 157 82 70 141 68 35 54 16 50 125 44 94 92 113 5 35 120 163 53 48 20 76 167 34 57 158 10 137 174 187 138 1 26 123 65 56 90 48\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_84",
+      "input": "20\n117 178 184 131 133 12 72 86 85 98 108 112 23 37 119 156 160 141 48 8\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_85",
+      "input": "59\n66 111 189 45 5 193 91 124 141 181 189 76 70 184 125 110 61 80 62 133 156 37 125 140 0 134 180 95 83 11 68 192 154 170 149 152 56 178 111 124 12 186 50 77 65 167 155 121 3 122 42 86 189 31 48 135 116 6 32\n7807\n",
+      "output": "193"
+    },
+    {
+      "name": "random_86",
+      "input": "25\n134 119 174 102 35 116 51 169 20 46 119 93 46 168 41 14 97 80 155 154 36 101 136 183 24\n2413\n",
+      "output": "183"
+    },
+    {
+      "name": "random_87",
+      "input": "58\n62 196 147 75 35 166 96 170 15 198 184 2 124 153 111 171 82 193 49 108 4 66 161 102 149 101 163 163 28 27 119 199 191 185 139 95 113 28 124 140 42 28 87 137 73 58 143 191 139 133 194 123 18 188 187 143 94 86\n6697\n",
+      "output": "198"
+    },
+    {
+      "name": "random_88",
+      "input": "55\n93 97 37 21 8 21 24 70 148 173 61 146 81 72 138 24 155 131 122 26 196 155 200 193 53 51 137 108 171 38 168 84 126 122 134 148 34 55 159 97 109 143 167 35 108 161 198 18 93 197 132 74 152 187 149\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_89",
+      "input": "17\n167 47 114 15 0 183 170 89 196 112 167 44 56 66 40 53 172\n1723\n",
+      "output": "196"
+    },
+    {
+      "name": "random_90",
+      "input": "40\n86 171 156 87 147 200 62 94 125 85 132 4 16 147 107 190 16 141 1 9 82 96 103 110 50 195 185 78 190 193 151 185 40 149 106 20 14 46 151 119\n747\n",
+      "output": "20"
+    },
+    {
+      "name": "random_91",
+      "input": "55\n10 91 116 94 41 126 68 157 196 123 64 156 68 179 99 47 15 90 195 0 147 191 111 7 24 106 144 66 46 76 72 61 127 110 162 130 5 51 185 184 23 127 6 3 1 161 139 45 138 53 167 195 118 161 9\n4684\n",
+      "output": "132"
+    },
+    {
+      "name": "random_92",
+      "input": "7\n99 36 190 148 60 86 78\n879\n",
+      "output": "190"
+    },
+    {
+      "name": "random_93",
+      "input": "18\n2 159 137 52 146 158 30 100 21 94 194 92 31 189 43 39 110 93\n1059\n",
+      "output": "76"
+    },
+    {
+      "name": "random_94",
+      "input": "2\n152 117\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_95",
+      "input": "33\n183 34 167 4 185 177 85 23 51 23 128 156 200 20 196 34 168 182 128 53 104 105 98 45 184 41 138 41 25 179 130 59 110\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_96",
+      "input": "59\n32 11 179 46 98 42 42 119 12 177 106 21 42 163 171 89 117 126 191 57 140 105 88 91 18 99 30 72 90 99 22 18 102 165 31 151 96 101 127 104 185 146 176 15 166 157 137 92 45 158 64 78 20 143 2 133 198 135 134\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_97",
+      "input": "48\n171 76 14 23 69 124 8 45 32 184 28 25 103 79 116 124 41 57 36 30 194 198 150 84 105 98 199 154 24 3 145 177 199 56 14 168 124 29 76 55 148 9 64 52 133 166 26 102\n4336\n",
+      "output": "198"
+    },
+    {
+      "name": "random_98",
+      "input": "37\n111 102 185 9 113 123 109 149 54 0 15 184 102 184 45 73 148 121 67 173 169 56 121 187 53 129 171 102 35 192 110 62 22 59 76 110 167\n3153\n",
+      "output": "111"
+    },
+    {
+      "name": "random_99",
+      "input": "25\n0 181 5 101 162 64 27 163 95 56 92 38 33 192 61 95 19 84 90 77 146 0 105 157 170\n57\n",
+      "output": "2"
+    },
+    {
+      "name": "random_100",
+      "input": "60\n121 30 146 63 14 192 75 117 174 185 75 174 75 0 196 120 24 84 144 1 40 117 174 182 145 139 57 172 151 77 6 0 175 70 12 60 37 31 50 82 101 95 160 3 190 188 103 175 67 138 180 182 85 132 196 196 81 81 142 45\n6327\n",
+      "output": "196"
+    },
+    {
+      "name": "random_101",
+      "input": "16\n6 79 87 43 120 62 189 106 121 140 64 90 26 198 18 96\n1444\n",
+      "output": "197"
+    },
+    {
+      "name": "random_102",
+      "input": "60\n20 93 160 6 173 88 154 157 110 199 191 118 189 83 190 93 58 66 129 45 193 172 163 69 189 30 48 19 182 19 43 35 106 199 80 76 13 80 32 115 135 155 57 117 27 30 70 22 166 86 43 135 66 31 145 134 161 191 49 143\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_103",
+      "input": "14\n3 13 21 193 187 166 145 6 8 176 13 111 6 50\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_104",
+      "input": "36\n113 137 2 58 135 22 47 100 2 12 99 74 194 115 136 176 180 107 140 135 77 8 4 146 181 134 82 114 107 164 28 121 98 159 152 83\n1318\n",
+      "output": "42"
+    },
+    {
+      "name": "random_105",
+      "input": "31\n0 112 9 65 3 5 99 46 84 43 190 2 137 46 183 111 2 174 6 98 81 190 125 36 199 98 107 32 158 58 193\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_106",
+      "input": "38\n85 147 187 42 11 146 27 95 106 135 44 94 88 47 152 106 1 191 14 178 162 94 24 102 12 178 185 55 191 25 58 20 71 181 196 53 21 38\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_107",
+      "input": "28\n52 200 163 37 173 13 97 105 74 134 75 59 95 27 64 70 79 74 92 36 51 39 13 166 112 126 31 176\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_108",
+      "input": "20\n4 97 67 108 112 49 24 79 114 93 134 191 190 196 32 126 7 74 32 136\n1865\n",
+      "output": "196"
+    },
+    {
+      "name": "random_109",
+      "input": "52\n124 139 37 110 39 103 88 63 168 112 186 193 80 52 33 121 194 129 161 0 117 169 163 84 84 181 59 104 27 73 44 168 90 138 131 133 96 127 139 15 69 69 183 114 122 100 70 186 66 198 162 89\n5701\n",
+      "output": "197"
+    },
+    {
+      "name": "random_110",
+      "input": "13\n8 9 91 189 14 102 152 117 173 106 33 34 78\n131\n",
+      "output": "10"
+    },
+    {
+      "name": "random_111",
+      "input": "49\n28 111 58 137 32 70 186 58 121 28 98 126 119 18 48 33 14 150 5 85 40 47 109 92 59 200 4 73 74 68 65 162 38 122 16 33 149 177 110 95 3 47 4 188 86 170 135 65 33\n1984\n",
+      "output": "48"
+    },
+    {
+      "name": "random_112",
+      "input": "50\n135 200 63 138 52 152 88 159 1 181 160 62 190 57 176 118 15 200 57 144 153 1 161 142 200 94 172 150 91 43 114 34 125 94 129 123 188 45 181 143 136 69 158 89 99 49 79 154 110 19\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_113",
+      "input": "44\n56 142 159 92 137 8 49 23 46 146 48 160 149 14 124 136 109 66 158 141 79 127 142 74 146 126 38 100 54 155 59 6 50 47 165 74 16 196 31 68 151 23 27 167\n4084\n",
+      "output": "196"
+    },
+    {
+      "name": "random_114",
+      "input": "5\n108 177 112 117 79\n254\n",
+      "output": "50"
+    },
+    {
+      "name": "random_115",
+      "input": "28\n148 178 56 121 129 80 183 116 94 104 12 151 193 145 46 26 21 113 179 121 69 194 158 76 44 195 161 185\n1582\n",
+      "output": "62"
+    },
+    {
+      "name": "random_116",
+      "input": "32\n143 152 30 3 68 79 130 81 151 4 42 179 104 90 98 150 2 49 179 118 34 95 96 188 137 87 52 188 88 49 99 12\n2976\n",
+      "output": "187"
+    },
+    {
+      "name": "random_117",
+      "input": "51\n155 77 144 159 178 5 67 146 169 130 131 150 147 110 26 37 107 54 189 169 192 128 19 78 86 32 98 103 176 94 164 188 70 94 44 151 145 52 105 157 168 73 113 30 113 114 196 177 112 200 17\n5839\n",
+      "output": "200"
+    },
+    {
+      "name": "random_118",
+      "input": "31\n131 140 71 162 60 155 151 132 170 119 93 128 44 52 88 54 12 136 130 141 149 96 133 63 135 42 126 180 121 78 20\n2280\n",
+      "output": "84"
+    },
+    {
+      "name": "random_119",
+      "input": "10\n42 2 52 51 138 106 27 167 69 7\n1595\n",
+      "output": "167"
+    },
+    {
+      "name": "random_120",
+      "input": "58\n84 115 161 139 6 18 135 132 99 25 125 195 14 151 98 6 80 176 147 110 30 92 0 190 163 176 64 125 65 111 45 181 5 111 197 112 200 74 183 190 29 45 143 11 23 94 128 13 57 7 5 37 195 36 111 173 35 182\n5654\n",
+      "output": "200"
+    },
+    {
+      "name": "random_121",
+      "input": "56\n143 189 184 188 83 171 116 87 14 101 76 74 191 85 193 117 62 78 137 6 71 99 177 187 174 5 124 59 36 131 113 69 146 15 79 50 153 6 189 41 183 114 85 67 174 80 120 108 177 171 137 135 22 134 3 155\n6084\n",
+      "output": "193"
+    },
+    {
+      "name": "random_122",
+      "input": "41\n18 6 110 5 137 50 27 181 110 27 198 99 119 25 191 28 183 27 28 160 57 24 28 76 18 20 164 154 32 153 76 119 158 173 134 122 3 164 68 19 68\n6447\n",
+      "output": "198"
+    },
+    {
+      "name": "random_123",
+      "input": "51\n4 145 175 160 84 146 47 45 135 150 44 177 24 51 61 113 115 164 182 107 144 195 86 175 0 142 68 90 176 64 157 66 38 113 197 139 188 21 45 62 96 178 80 183 76 155 9 56 59 145 144\n5475\n",
+      "output": "196"
+    },
+    {
+      "name": "random_124",
+      "input": "58\n180 31 152 42 76 195 168 100 47 116 107 104 189 92 43 58 57 25 106 79 151 173 7 60 86 87 189 27 9 155 58 145 196 124 81 36 140 40 178 120 6 29 161 133 98 36 169 139 81 93 35 84 148 41 157 190 78 70\n5776\n",
+      "output": "195"
+    },
+    {
+      "name": "random_125",
+      "input": "59\n185 92 123 125 172 66 82 161 149 18 181 75 86 189 17 105 90 156 7 84 27 17 146 4 153 77 65 160 51 38 83 57 177 41 44 5 106 89 61 102 110 128 103 18 170 81 15 183 120 41 148 76 59 154 44 0 161 122 13\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_126",
+      "input": "9\n85 150 187 3 182 156 153 97 9\n808\n",
+      "output": "122"
+    },
+    {
+      "name": "random_127",
+      "input": "49\n5 45 100 132 54 95 23 30 189 149 71 106 37 53 150 52 186 28 118 177 63 165 94 77 35 54 92 199 111 8 185 10 96 123 36 108 71 168 127 67 89 132 179 176 102 20 140 164 194\n4884\n",
+      "output": "198"
+    },
+    {
+      "name": "random_128",
+      "input": "41\n21 177 73 157 171 100 129 121 100 102 149 91 125 4 86 105 9 49 186 163 62 98 196 200 121 184 139 126 186 167 41 183 32 44 124 156 107 158 49 117 1\n5730\n",
+      "output": "200"
+    },
+    {
+      "name": "random_129",
+      "input": "39\n77 137 156 36 138 126 110 141 20 51 92 143 157 132 110 101 73 141 161 189 155 197 154 115 60 162 159 0 80 82 4 186 35 179 177 141 183 182 68\n4635\n",
+      "output": "197"
+    },
+    {
+      "name": "random_130",
+      "input": "38\n28 13 73 190 187 189 109 164 146 183 136 12 123 171 36 39 42 31 116 27 25 123 48 137 11 56 35 71 134 82 53 10 129 155 128 102 17 176\n1502\n",
+      "output": "47"
+    },
+    {
+      "name": "random_131",
+      "input": "26\n63 3 177 146 118 153 145 118 143 159 113 42 127 172 11 73 140 130 164 190 143 95 5 124 116 7\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_132",
+      "input": "50\n87 24 117 125 145 199 74 36 40 77 10 49 198 56 145 9 18 58 4 95 184 177 187 100 170 177 75 122 189 46 158 105 170 77 198 117 120 174 123 97 15 101 48 92 182 82 137 20 24 171\n5203\n",
+      "output": "198"
+    },
+    {
+      "name": "random_133",
+      "input": "22\n133 112 36 33 195 22 56 55 39 184 195 11 117 45 38 107 34 6 193 11 113 13\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_134",
+      "input": "26\n23 195 186 83 168 45 153 4 34 71 107 92 108 48 98 6 39 124 189 116 84 63 176 53 73 184\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_135",
+      "input": "13\n112 125 140 74 118 47 65 11 143 176 15 74 131\n130\n",
+      "output": "10"
+    },
+    {
+      "name": "random_136",
+      "input": "19\n187 114 72 65 169 53 1 173 157 3 50 146 119 176 98 30 126 16 113\n953\n",
+      "output": "61"
+    },
+    {
+      "name": "random_137",
+      "input": "10\n59 80 142 146 38 182 29 182 142 117\n415\n",
+      "output": "43"
+    },
+    {
+      "name": "random_138",
+      "input": "27\n111 75 88 22 130 56 110 126 117 36 65 3 88 143 111 183 57 144 122 118 13 20 103 63 110 85 181\n2480\n",
+      "output": "183"
+    },
+    {
+      "name": "random_139",
+      "input": "2\n137 193\n372\n",
+      "output": "193"
+    },
+    {
+      "name": "random_140",
+      "input": "28\n164 81 23 15 124 162 78 41 3 193 108 9 18 121 78 23 140 187 104 135 109 0 150 104 117 73 163 57\n2579\n",
+      "output": "192"
+    },
+    {
+      "name": "random_141",
+      "input": "18\n144 74 58 86 79 0 137 180 198 87 37 55 180 20 161 56 200 77\n675\n",
+      "output": "41"
+    },
+    {
+      "name": "random_142",
+      "input": "59\n45 186 33 174 133 115 101 138 98 81 14 37 111 115 57 131 115 21 68 8 99 188 135 167 197 62 128 130 76 27 29 164 150 8 68 74 61 78 146 160 160 118 115 79 143 35 67 41 37 135 64 138 28 85 91 155 120 71 0\n5609\n",
+      "output": "196"
+    },
+    {
+      "name": "random_143",
+      "input": "41\n94 41 75 183 179 87 21 136 2 103 135 182 72 185 27 56 109 163 38 200 103 153 6 133 178 88 2 0 198 51 167 6 117 95 24 163 153 24 184 117 35\n1752\n",
+      "output": "52"
+    },
+    {
+      "name": "random_144",
+      "input": "56\n33 35 97 153 12 155 92 32 135 185 133 171 172 108 150 32 58 133 37 145 195 9 59 102 118 145 175 89 93 69 24 115 0 126 94 114 122 133 93 184 119 159 46 107 29 180 164 8 12 116 160 108 39 73 147 110\n5703\n",
+      "output": "194"
+    },
+    {
+      "name": "random_145",
+      "input": "46\n101 76 101 85 165 67 152 73 37 192 150 103 22 159 167 174 137 85 74 183 11 3 120 171 114 131 57 32 27 182 73 70 166 181 166 155 19 164 177 120 187 53 113 119 103 15\n6004\n",
+      "output": "192"
+    },
+    {
+      "name": "random_146",
+      "input": "42\n185 63 94 145 36 32 197 160 15 118 37 18 38 187 95 168 37 176 11 67 39 31 84 128 161 56 1 133 10 133 156 176 69 4 85 175 190 167 130 42 135 61\n3986\n",
+      "output": "175"
+    },
+    {
+      "name": "random_147",
+      "input": "12\n44 174 101 53 159 1 188 76 110 122 77 139\n1077\n",
+      "output": "123"
+    },
+    {
+      "name": "random_148",
+      "input": "59\n176 119 59 163 146 17 94 82 92 50 161 139 126 178 189 180 40 179 18 18 119 19 135 60 120 121 25 13 129 7 152 110 106 130 87 83 58 16 19 53 96 183 2 155 1 162 152 180 59 117 192 61 160 131 126 158 135 145 32\n10770\n",
+      "output": "192"
+    },
+    {
+      "name": "random_149",
+      "input": "52\n106 84 28 54 117 166 14 171 54 6 26 108 68 153 22 183 56 75 1 13 95 175 172 167 7 200 125 88 119 142 27 88 63 177 115 107 87 32 101 165 99 13 49 41 65 174 176 134 135 4 180 147\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_150",
+      "input": "58\n31 179 61 140 59 183 21 170 135 186 4 100 179 139 42 23 90 40 54 9 200 172 122 111 196 190 191 172 110 136 49 80 146 75 145 26 62 22 96 23 4 173 150 156 193 193 181 148 53 151 9 11 160 119 101 100 175 152\n4761\n",
+      "output": "109"
+    },
+    {
+      "name": "random_151",
+      "input": "26\n132 181 75 157 24 190 37 155 194 104 114 171 83 94 22 126 148 70 178 34 59 37 51 156 72 110\n2774\n",
+      "output": "194"
+    },
+    {
+      "name": "random_152",
+      "input": "31\n147 116 96 194 165 49 145 117 144 65 97 188 147 28 86 141 63 35 12 188 82 184 166 43 133 26 143 193 192 198 177\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_153",
+      "input": "2\n164 46\n119\n",
+      "output": "73"
+    },
+    {
+      "name": "random_154",
+      "input": "42\n23 111 65 188 22 104 123 155 133 133 170 155 27 39 122 175 24 102 81 145 61 157 100 77 192 76 142 78 31 87 64 160 106 39 64 95 54 32 105 39 110 53\n4019\n",
+      "output": "192"
+    },
+    {
+      "name": "random_155",
+      "input": "46\n20 125 121 23 172 191 115 129 76 12 53 21 84 165 36 4 29 136 124 150 176 195 59 133 84 160 194 175 41 73 60 189 178 184 147 3 77 161 38 48 17 46 55 176 169 123\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_156",
+      "input": "11\n9 165 105 74 159 180 116 193 90 174 74\n541\n",
+      "output": "53"
+    },
+    {
+      "name": "random_157",
+      "input": "15\n44 154 69 18 22 112 35 99 194 164 164 131 64 98 121\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_158",
+      "input": "43\n160 1 185 134 120 49 168 39 107 141 30 169 181 187 42 94 16 17 52 40 49 12 180 128 188 35 58 198 69 100 180 29 122 73 146 123 106 160 69 72 99 51 30\n5971\n",
+      "output": "198"
+    },
+    {
+      "name": "random_159",
+      "input": "2\n50 163\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_160",
+      "input": "51\n67 182 144 2 7 120 20 197 98 98 75 127 127 139 1 188 158 31 51 152 95 22 39 164 97 15 110 177 106 151 169 66 17 15 23 16 93 165 51 83 47 65 136 123 154 79 150 173 179 54 16\n516\n",
+      "output": "10"
+    },
+    {
+      "name": "random_161",
+      "input": "26\n193 4 90 131 147 173 162 41 97 97 192 167 143 149 126 124 130 168 63 129 151 66 81 159 9 178\n3170\n",
+      "output": "193"
+    },
+    {
+      "name": "random_162",
+      "input": "47\n31 140 5 100 155 136 100 37 71 179 146 105 21 5 91 16 124 68 196 132 103 200 136 67 63 171 62 31 90 162 190 97 90 200 132 9 110 160 198 7 124 91 6 14 67 167 178\n4783\n",
+      "output": "200"
+    },
+    {
+      "name": "random_163",
+      "input": "19\n94 3 93 109 142 49 15 55 167 92 186 195 60 11 44 64 44 150 38\n1610\n",
+      "output": "194"
+    },
+    {
+      "name": "random_164",
+      "input": "40\n163 169 101 3 108 199 127 15 20 25 61 3 196 161 29 33 16 85 21 132 192 108 199 78 49 93 10 112 102 51 190 156 136 112 26 67 185 81 178 66\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_165",
+      "input": "5\n136 196 134 84 83\n482\n",
+      "output": "105"
+    },
+    {
+      "name": "random_166",
+      "input": "7\n185 96 97 120 104 129 117\n787\n",
+      "output": "126"
+    },
+    {
+      "name": "random_167",
+      "input": "35\n118 44 85 142 141 57 111 40 42 122 154 70 97 109 173 187 136 9 33 180 80 72 97 199 133 6 30 116 133 188 33 41 30 145 7\n1518\n",
+      "output": "50"
+    },
+    {
+      "name": "random_168",
+      "input": "38\n138 152 26 31 50 31 40 157 197 154 143 50 157 23 165 189 54 187 52 133 22 52 48 2 0 82 103 93 191 5 92 173 175 129 39 176 35 100\n5625\n",
+      "output": "197"
+    },
+    {
+      "name": "random_169",
+      "input": "24\n159 124 183 62 80 1 146 56 19 43 113 42 164 173 151 10 32 182 175 36 75 71 54 50\n2200\n",
+      "output": "182"
+    },
+    {
+      "name": "random_170",
+      "input": "8\n164 156 176 168 16 108 94 137\n965\n",
+      "output": "152"
+    },
+    {
+      "name": "random_171",
+      "input": "9\n111 120 191 144 200 145 93 142 96\n588\n",
+      "output": "65"
+    },
+    {
+      "name": "random_172",
+      "input": "34\n60 78 189 139 147 3 196 143 142 12 115 53 196 74 141 88 143 85 3 108 130 79 48 109 21 38 61 139 9 160 176 56 169 191\n2548\n",
+      "output": "98"
+    },
+    {
+      "name": "random_173",
+      "input": "37\n197 152 131 9 41 42 127 88 145 166 69 150 117 124 163 123 60 176 175 154 155 98 56 199 88 90 199 15 10 100 7 43 56 154 103 119 52\n3953\n",
+      "output": "199"
+    },
+    {
+      "name": "random_174",
+      "input": "59\n132 162 6 70 4 71 160 178 21 185 23 4 95 149 155 133 85 146 66 135 152 47 29 152 145 115 94 192 45 135 121 131 75 117 177 39 65 121 193 174 60 113 148 71 172 52 152 54 140 88 106 194 91 178 61 41 126 144 55\n6344\n",
+      "output": "193"
+    },
+    {
+      "name": "random_175",
+      "input": "38\n118 69 98 144 184 51 114 61 66 163 26 67 78 171 158 141 117 85 200 32 199 33 138 87 197 102 72 26 7 36 109 144 89 66 40 0 20 10\n2106\n",
+      "output": "68"
+    },
+    {
+      "name": "random_176",
+      "input": "52\n156 20 158 102 65 83 186 171 50 124 190 106 117 68 126 117 178 90 190 170 100 139 94 20 117 165 195 105 105 67 36 164 132 125 33 191 35 94 168 47 47 61 9 118 131 90 13 192 76 143 187 197\n5862\n",
+      "output": "196"
+    },
+    {
+      "name": "random_177",
+      "input": "54\n101 117 140 159 10 122 71 95 74 32 0 32 142 117 153 39 129 157 134 27 11 14 146 29 68 42 45 11 21 191 32 48 164 17 52 136 50 28 33 13 59 39 182 137 28 7 170 184 182 133 1 145 44 149\n4462\n",
+      "output": "191"
+    },
+    {
+      "name": "random_178",
+      "input": "44\n43 117 109 78 173 56 146 14 152 37 110 142 12 183 76 163 6 179 132 14 19 16 6 76 14 200 39 84 8 139 43 119 167 26 163 29 178 200 137 103 35 118 47 5\n3913\n",
+      "output": "200"
+    },
+    {
+      "name": "random_179",
+      "input": "4\n132 100 120 55\n407\n",
+      "output": "132"
+    },
+    {
+      "name": "random_180",
+      "input": "57\n57 138 61 2 113 49 122 89 115 68 125 10 71 31 53 27 115 162 27 17 67 162 75 189 114 112 170 98 175 30 150 104 139 153 177 157 109 21 1 33 143 101 101 138 39 162 143 90 78 74 130 179 189 190 107 5 150\n5706\n",
+      "output": "189"
+    },
+    {
+      "name": "random_181",
+      "input": "28\n150 188 2 169 129 32 44 194 178 95 111 195 29 125 104 162 20 172 140 159 161 138 12 25 26 78 86 85\n3008\n",
+      "output": "194"
+    },
+    {
+      "name": "random_182",
+      "input": "4\n156 74 115 137\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_183",
+      "input": "26\n168 116 143 46 88 6 152 66 135 157 148 99 81 125 107 139 24 159 168 141 158 141 12 123 89 193\n3444\n",
+      "output": "193"
+    },
+    {
+      "name": "random_184",
+      "input": "18\n191 82 58 8 80 191 198 99 22 42 56 152 107 24 178 42 166 31\n1726\n",
+      "output": "197"
+    },
+    {
+      "name": "random_185",
+      "input": "22\n18 17 11 58 61 78 71 52 157 170 19 38 87 29 57 118 113 6 191 29 115 90\n1584\n",
+      "output": "190"
+    },
+    {
+      "name": "random_186",
+      "input": "30\n3 31 188 86 152 34 158 136 29 83 148 70 113 190 186 90 13 76 110 5 70 148 75 195 157 165 78 182 178 133\n2661\n",
+      "output": "121"
+    },
+    {
+      "name": "random_187",
+      "input": "38\n79 175 173 85 123 59 136 84 40 95 162 129 164 65 48 8 51 35 81 88 140 67 136 186 62 47 131 172 12 124 31 174 24 126 80 7 176 115\n2111\n",
+      "output": "64"
+    },
+    {
+      "name": "random_188",
+      "input": "1\n105\n104\n",
+      "output": "104"
+    },
+    {
+      "name": "random_189",
+      "input": "47\n171 21 95 74 55 173 7 170 78 116 74 116 2 6 107 73 18 191 191 84 91 5 120 136 87 165 168 51 180 17 67 112 49 141 168 30 8 18 118 190 184 43 104 50 99 152 82\n4456\n",
+      "output": "190"
+    },
+    {
+      "name": "random_190",
+      "input": "59\n164 111 49 61 186 93 93 54 185 10 167 187 70 104 95 168 187 69 151 84 77 141 44 81 25 12 22 42 160 161 148 112 99 95 150 48 82 157 127 103 104 154 118 3 196 157 26 119 184 55 86 53 77 48 10 70 71 131 0\n7718\n",
+      "output": "196"
+    },
+    {
+      "name": "random_191",
+      "input": "9\n37 143 145 95 91 70 2 131 99\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_192",
+      "input": "30\n79 149 28 112 149 185 62 131 73 149 187 0 118 88 115 70 36 88 89 182 37 150 1 165 106 36 120 145 136 194\n3180\n",
+      "output": "194"
+    },
+    {
+      "name": "random_193",
+      "input": "31\n76 0 46 171 125 125 193 79 189 168 122 63 108 166 78 74 128 49 24 23 181 165 147 44 28 41 1 187 28 187 20\n15\n",
+      "output": "0"
+    },
+    {
+      "name": "random_194",
+      "input": "18\n166 146 152 20 197 106 89 39 171 158 52 98 168 171 146 180 142 199\n2900\n",
+      "output": "199"
+    },
+    {
+      "name": "random_195",
+      "input": "59\n92 160 167 131 113 2 86 71 50 49 13 128 199 157 102 93 159 174 162 32 45 12 30 62 168 132 92 159 93 176 165 57 137 95 191 43 185 174 31 102 31 25 45 36 103 50 11 46 35 4 182 116 29 168 111 7 173 28 150\n762\n",
+      "output": "13"
+    },
+    {
+      "name": "random_196",
+      "input": "11\n175 142 109 41 30 86 9 64 4 164 96\n920\n",
+      "output": "175"
+    },
+    {
+      "name": "random_197",
+      "input": "47\n97 194 195 0 58 61 160 100 130 31 174 194 116 70 14 144 139 54 169 158 93 23 76 13 60 46 32 84 110 121 159 150 43 130 166 72 109 64 179 197 50 194 138 10 82 62 117\n4838\n",
+      "output": "197"
+    },
+    {
+      "name": "random_198",
+      "input": "15\n59 94 108 122 81 146 162 170 118 163 47 46 194 33 110\n976\n",
+      "output": "71"
+    },
+    {
+      "name": "random_199",
+      "input": "48\n37 5 35 30 49 62 165 85 54 19 13 48 90 129 56 14 92 197 72 120 176 15 40 68 75 20 51 187 107 16 56 46 23 180 128 76 168 85 123 137 32 11 10 145 86 135 81 41\n6660\n",
+      "output": "197"
+    },
+    {
+      "name": "random_200",
+      "input": "34\n96 111 17 70 57 200 122 88 99 78 119 1 96 28 0 188 138 109 134 194 197 148 138 10 136 103 57 174 51 79 72 130 81 23\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_201",
+      "input": "19\n171 112 190 93 154 15 182 189 195 18 139 25 6 121 117 109 75 188 5\n2096\n",
+      "output": "188"
+    },
+    {
+      "name": "random_202",
+      "input": "59\n194 157 10 156 90 175 138 13 108 194 2 53 96 3 152 79 192 176 173 74 79 79 33 149 17 41 137 171 66 66 116 39 24 8 105 146 78 111 199 106 188 97 6 156 158 180 186 29 133 36 101 162 107 60 132 120 16 2 185\n68\n",
+      "output": "1"
+    },
+    {
+      "name": "random_203",
+      "input": "21\n137 200 26 171 137 25 124 183 72 194 118 59 167 64 12 102 170 60 158 27 44\n2250\n",
+      "output": "200"
+    },
+    {
+      "name": "random_204",
+      "input": "32\n58 56 109 188 163 193 18 107 2 194 117 119 136 127 135 125 79 17 70 81 176 77 87 56 9 16 169 153 43 40 27 200\n1604\n",
+      "output": "60"
+    },
+    {
+      "name": "random_205",
+      "input": "24\n132 143 50 174 167 78 129 3 33 109 37 192 40 159 129 60 43 195 65 130 119 20 143 74\n2423\n",
+      "output": "194"
+    },
+    {
+      "name": "random_206",
+      "input": "41\n76 186 51 107 149 188 162 17 129 35 65 65 98 108 22 19 151 187 178 149 80 56 70 120 192 69 166 131 77 106 93 22 199 93 179 83 12 121 61 71 69\n308\n",
+      "output": "7"
+    },
+    {
+      "name": "random_207",
+      "input": "48\n183 116 9 77 148 81 181 95 146 28 150 44 10 146 47 97 75 126 111 171 141 97 146 110 191 128 17 57 54 55 162 78 70 25 51 71 35 181 174 129 164 176 162 85 89 192 122 44\n4723\n",
+      "output": "147"
+    },
+    {
+      "name": "random_208",
+      "input": "42\n199 92 15 108 192 59 104 7 11 99 156 111 91 107 2 54 117 125 15 160 102 2 183 181 70 63 50 131 15 69 86 182 144 31 184 2 113 11 13 48 183 81\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "random_209",
+      "input": "49\n193 188 10 139 39 39 58 117 10 132 44 18 189 71 103 150 13 46 128 166 154 91 38 75 27 158 48 31 66 121 152 167 11 197 77 117 91 114 183 4 56 124 48 176 170 47 24 63 135\n4588\n",
+      "output": "184"
+    },
+    {
+      "name": "random_210",
+      "input": "58\n57 130 49 89 78 30 193 171 156 154 163 171 166 111 54 149 59 126 65 17 135 162 139 41 120 119 127 89 61 80 67 143 66 109 141 11 46 65 134 184 84 146 72 162 82 20 43 123 96 86 25 135 58 184 6 13 128 44\n1619\n",
+      "output": "29"
+    },
+    {
+      "name": "random_211",
+      "input": "49\n152 162 6 61 145 163 78 48 66 119 188 87 61 179 197 30 198 56 51 162 61 48 190 100 111 100 4 3 59 193 6 127 90 167 18 140 131 184 102 67 160 194 133 3 14 187 104 187 85\n5177\n",
+      "output": "198"
+    },
+    {
+      "name": "random_212",
+      "input": "32\n106 138 81 136 18 96 196 45 92 30 143 33 64 157 81 32 196 60 165 104 77 50 28 174 113 153 180 197 21 105 33 104\n4905\n",
+      "output": "197"
+    },
+    {
+      "name": "random_213",
+      "input": "52\n13 5 138 193 179 13 10 26 193 98 122 76 131 32 153 98 115 12 69 155 86 62 192 11 10 61 129 162 174 63 86 28 120 114 50 194 13 92 150 63 92 104 87 83 194 142 134 2 57 57 188 60\n4891\n",
+      "output": "194"
+    },
+    {
+      "name": "random_214",
+      "input": "37\n90 24 200 170 200 170 51 185 51 183 150 156 151 120 68 142 131 179 131 198 112 98 2 3 131 23 64 71 88 135 89 79 193 174 135 135 143\n4425\n",
+      "output": "200"
+    },
+    {
+      "name": "random_215",
+      "input": "56\n163 50 38 168 124 95 109 164 75 21 46 149 133 184 194 90 175 146 127 43 78 35 40 49 77 1 49 50 90 186 39 134 117 45 107 10 135 154 99 93 166 130 102 87 20 93 96 46 165 56 161 200 84 155 0 30\n5472\n",
+      "output": "199"
+    },
+    {
+      "name": "random_216",
+      "input": "54\n169 152 40 18 92 178 17 10 29 154 7 196 86 138 93 127 19 151 77 173 149 91 113 14 3 103 35 130 48 92 96 135 34 2 16 43 179 40 126 167 62 79 95 173 111 74 102 150 97 82 148 173 46 111\n5045\n",
+      "output": "196"
+    },
+    {
+      "name": "random_217",
+      "input": "28\n50 121 35 113 141 70 4 73 10 56 32 136 64 27 182 139 100 161 13 185 193 25 146 41 151 26 43 20\n881\n",
+      "output": "36"
+    },
+    {
+      "name": "random_218",
+      "input": "27\n142 189 55 81 176 2 51 6 118 193 104 19 119 98 101 109 89 169 142 196 119 52 144 97 169 141 111\n248\n",
+      "output": "9"
+    },
+    {
+      "name": "random_219",
+      "input": "12\n63 71 46 31 124 28 131 161 39 176 3 79\n951\n",
+      "output": "175"
+    },
+    {
+      "name": "random_220",
+      "input": "21\n5 1 21 179 44 183 105 63 114 121 50 108 158 64 129 148 178 37 87 5 41\n445\n",
+      "output": "24"
+    }
+  ]
+}

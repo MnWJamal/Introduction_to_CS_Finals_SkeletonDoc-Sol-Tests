@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "sample_full_window",
+      "input": "bacda\nabcd\n",
+      "output": "1"
+    },
+    {
+      "name": "sample_three_windows",
+      "input": "acdabbba\nab\n",
+      "output": "3"
+    },
+    {
+      "name": "extra_single_missing",
+      "input": "abc\nab\n",
+      "output": "1"
+    }
+  ]
+}

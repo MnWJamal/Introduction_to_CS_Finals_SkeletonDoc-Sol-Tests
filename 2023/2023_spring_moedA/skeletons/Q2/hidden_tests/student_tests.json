@@ -1,0 +1,504 @@
+{
+  "tests": [
+    {
+      "name": "edge_unique_jump_01_n2_i1",
+      "input": "2\na\nbc\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_unique_jump_02_n2_i1",
+      "input": "2\nabcdefghijklmnopqrstuvwxyzabc\nbcdefghijklmnopqrstuvwxyzabcde\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_unique_jump_03_n3_i1",
+      "input": "3\na\nbcd\ncd\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_unique_jump_04_n3_i2",
+      "input": "3\nab\nb\ncde\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_unique_jump_05_n4_i1",
+      "input": "4\na\nbcde\ncde\nde\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_unique_jump_06_n4_i2",
+      "input": "4\nabc\nbc\ncdefg\ndefg\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_unique_jump_07_n4_i3",
+      "input": "4\nabc\nbc\nc\ndefg\n",
+      "output": "3"
+    },
+    {
+      "name": "edge_unique_jump_08_n5_i1",
+      "input": "5\na\nbcdef\ncdef\ndef\nef\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_unique_jump_09_n5_i2",
+      "input": "5\nabcd\nbcd\ncdefghi\ndefghi\nefghi\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_unique_jump_10_n5_i3",
+      "input": "5\nabcd\nbcd\ncd\ndefghi\nefghi\n",
+      "output": "3"
+    },
+    {
+      "name": "edge_unique_jump_11_n5_i4",
+      "input": "5\nabcd\nbcd\ncd\nd\nefghi\n",
+      "output": "4"
+    },
+    {
+      "name": "edge_unique_jump_12_n6_i1",
+      "input": "6\na\nbcdefg\ncdefg\ndefg\nefg\nfg\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_unique_jump_13_n6_i2",
+      "input": "6\nabcde\nbcde\ncdefghijk\ndefghijk\nefghijk\nfghijk\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_unique_jump_14_n6_i3",
+      "input": "6\nabcde\nbcde\ncde\ndefghijk\nefghijk\nfghijk\n",
+      "output": "3"
+    },
+    {
+      "name": "edge_unique_jump_15_n6_i4",
+      "input": "6\nabcde\nbcde\ncde\nde\nefghijk\nfghijk\n",
+      "output": "4"
+    },
+    {
+      "name": "edge_unique_jump_16_n6_i5",
+      "input": "6\nabcde\nbcde\ncde\nde\ne\nfghijk\n",
+      "output": "5"
+    },
+    {
+      "name": "edge_unique_jump_17_n7_i1",
+      "input": "7\na\nbcdefgh\ncdefgh\ndefgh\nefgh\nfgh\ngh\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_unique_jump_18_n7_i2",
+      "input": "7\nabcdef\nbcdef\ncdefghijklm\ndefghijklm\nefghijklm\nfghijklm\nghijklm\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_unique_jump_19_n7_i3",
+      "input": "7\nabcdef\nbcdef\ncdef\ndefghijklm\nefghijklm\nfghijklm\nghijklm\n",
+      "output": "3"
+    },
+    {
+      "name": "edge_unique_jump_20_n7_i4",
+      "input": "7\nabcdef\nbcdef\ncdef\ndef\nefghijklm\nfghijklm\nghijklm\n",
+      "output": "4"
+    },
+    {
+      "name": "edge_unique_jump_21_n7_i5",
+      "input": "7\nabcdef\nbcdef\ncdef\ndef\nef\nfghijklm\nghijklm\n",
+      "output": "5"
+    },
+    {
+      "name": "edge_unique_jump_22_n7_i6",
+      "input": "7\nabcdef\nbcdef\ncdef\ndef\nef\nf\nghijklm\n",
+      "output": "6"
+    },
+    {
+      "name": "edge_unique_jump_23_n8_i1",
+      "input": "8\na\nbcdefghi\ncdefghi\ndefghi\nefghi\nfghi\nghi\nhi\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_unique_jump_24_n8_i2",
+      "input": "8\nabcdefg\nbcdefg\ncdefghijklmno\ndefghijklmno\nefghijklmno\nfghijklmno\nghijklmno\nhijklmno\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_unique_jump_25_n8_i3",
+      "input": "8\nabcdefg\nbcdefg\ncdefg\ndefghijklmno\nefghijklmno\nfghijklmno\nghijklmno\nhijklmno\n",
+      "output": "3"
+    },
+    {
+      "name": "edge_unique_jump_26_n8_i4",
+      "input": "8\nabcdefg\nbcdefg\ncdefg\ndefg\nefghijklmno\nfghijklmno\nghijklmno\nhijklmno\n",
+      "output": "4"
+    },
+    {
+      "name": "edge_unique_jump_27_n8_i5",
+      "input": "8\nabcdefg\nbcdefg\ncdefg\ndefg\nefg\nfghijklmno\nghijklmno\nhijklmno\n",
+      "output": "5"
+    },
+    {
+      "name": "edge_unique_jump_28_n8_i6",
+      "input": "8\nabcdefg\nbcdefg\ncdefg\ndefg\nefg\nfg\nghijklmno\nhijklmno\n",
+      "output": "6"
+    },
+    {
+      "name": "edge_unique_jump_29_n8_i7",
+      "input": "8\nabcdefg\nbcdefg\ncdefg\ndefg\nefg\nfg\ng\nhijklmno\n",
+      "output": "7"
+    },
+    {
+      "name": "edge_unique_jump_30_n9_i1",
+      "input": "9\na\nbcdefghij\ncdefghij\ndefghij\nefghij\nfghij\nghij\nhij\nij\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_unique_jump_31_n9_i2",
+      "input": "9\nabcdefgh\nbcdefgh\ncdefghijklmnopq\ndefghijklmnopq\nefghijklmnopq\nfghijklmnopq\nghijklmnopq\nhijklmnopq\nijklmnopq\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_unique_jump_32_n9_i3",
+      "input": "9\nabcdefgh\nbcdefgh\ncdefgh\ndefghijklmnopq\nefghijklmnopq\nfghijklmnopq\nghijklmnopq\nhijklmnopq\nijklmnopq\n",
+      "output": "3"
+    },
+    {
+      "name": "edge_unique_jump_33_n9_i4",
+      "input": "9\nabcdefgh\nbcdefgh\ncdefgh\ndefgh\nefghijklmnopq\nfghijklmnopq\nghijklmnopq\nhijklmnopq\nijklmnopq\n",
+      "output": "4"
+    },
+    {
+      "name": "edge_unique_jump_34_n9_i5",
+      "input": "9\nabcdefgh\nbcdefgh\ncdefgh\ndefgh\nefgh\nfghijklmnopq\nghijklmnopq\nhijklmnopq\nijklmnopq\n",
+      "output": "5"
+    },
+    {
+      "name": "edge_unique_jump_35_n9_i6",
+      "input": "9\nabcdefgh\nbcdefgh\ncdefgh\ndefgh\nefgh\nfgh\nghijklmnopq\nhijklmnopq\nijklmnopq\n",
+      "output": "6"
+    },
+    {
+      "name": "edge_unique_jump_36_n9_i7",
+      "input": "9\nabcdefgh\nbcdefgh\ncdefgh\ndefgh\nefgh\nfgh\ngh\nhijklmnopq\nijklmnopq\n",
+      "output": "7"
+    },
+    {
+      "name": "edge_unique_jump_37_n9_i8",
+      "input": "9\nabcdefgh\nbcdefgh\ncdefgh\ndefgh\nefgh\nfgh\ngh\nh\nijklmnopq\n",
+      "output": "8"
+    },
+    {
+      "name": "edge_unique_jump_38_n10_i1",
+      "input": "10\na\nbcdefghijk\ncdefghijk\ndefghijk\nefghijk\nfghijk\nghijk\nhijk\nijk\njk\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_unique_jump_39_n10_i5",
+      "input": "10\nabcdefghi\nbcdefghi\ncdefghi\ndefghi\nefghi\nfghijklmnopqrs\nghijklmnopqrs\nhijklmnopqrs\nijklmnopqrs\njklmnopqrs\n",
+      "output": "5"
+    },
+    {
+      "name": "edge_unique_jump_40_n10_i9",
+      "input": "10\nabcdefghi\nbcdefghi\ncdefghi\ndefghi\nefghi\nfghi\nghi\nhi\ni\njklmnopqrs\n",
+      "output": "9"
+    },
+    {
+      "name": "edge_unique_jump_41_n12_i1",
+      "input": "12\na\nbcdefghijklm\ncdefghijklm\ndefghijklm\nefghijklm\nfghijklm\nghijklm\nhijklm\nijklm\njklm\nklm\nlm\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_unique_jump_42_n12_i6",
+      "input": "12\nabcdefghij\nbcdefghij\ncdefghij\ndefghij\nefghij\nfghij\nghijklmnopqrstuv\nhijklmnopqrstuv\nijklmnopqrstuv\njklmnopqrstuv\nklmnopqrstuv\nlmnopqrstuv\n",
+      "output": "6"
+    },
+    {
+      "name": "edge_unique_jump_43_n12_i11",
+      "input": "12\nabcdefghij\nbcdefghij\ncdefghij\ndefghij\nefghij\nfghij\nghij\nhij\nij\nj\nk\nlmnopqrstuv\n",
+      "output": "11"
+    },
+    {
+      "name": "edge_unique_jump_44_n15_i1",
+      "input": "15\na\nbcdefghijklmnop\ncdefghijklmnop\ndefghijklmnop\nefghijklmnop\nfghijklmnop\nghijklmnop\nhijklmnop\nijklmnop\njklmnop\nklmnop\nlmnop\nmnop\nnop\nop\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_unique_jump_45_n15_i7",
+      "input": "15\nabcdefghij\nbcdefghij\ncdefghij\ndefghij\nefghij\nfghij\nghij\nhijklmnopqrstuvwxy\nijklmnopqrstuvwxy\njklmnopqrstuvwxy\nklmnopqrstuvwxy\nlmnopqrstuvwxy\nmnopqrstuvwxy\nnopqrstuvwxy\nopqrstuvwxy\n",
+      "output": "7"
+    },
+    {
+      "name": "edge_unique_jump_46_n15_i14",
+      "input": "15\nabcdefghij\nbcdefghij\ncdefghij\ndefghij\nefghij\nfghij\nghij\nhij\nij\nj\nk\nl\nm\nn\nopqrstuvwxy\n",
+      "output": "14"
+    },
+    {
+      "name": "edge_unique_jump_47_n20_i1",
+      "input": "20\na\nbcdefghijklmnopqrstu\ncdefghijklmnopqrstu\ndefghijklmnopqrstu\nefghijklmnopqrstu\nfghijklmnopqrstu\nghijklmnopqrstu\nhijklmnopqrstu\nijklmnopqrstu\njklmnopqrstu\nklmnopqrstu\nlmnopqrstu\nmnopqrstu\nnopqrstu\nopqrstu\npqrstu\nqrstu\nrstu\nstu\ntu\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_unique_jump_48_n20_i10",
+      "input": "20\nabcdefghij\nbcdefghij\ncdefghij\ndefghij\nefghij\nfghij\nghij\nhij\nij\nj\nklmnopqrstuvwxyzabcd\nlmnopqrstuvwxyzabcd\nmnopqrstuvwxyzabcd\nnopqrstuvwxyzabcd\nopqrstuvwxyzabcd\npqrstuvwxyzabcd\nqrstuvwxyzabcd\nrstuvwxyzabcd\nstuvwxyzabcd\ntuvwxyzabcd\n",
+      "output": "10"
+    },
+    {
+      "name": "edge_unique_jump_49_n20_i19",
+      "input": "20\nabcdefghij\nbcdefghij\ncdefghij\ndefghij\nefghij\nfghij\nghij\nhij\nij\nj\nk\nl\nm\nn\no\np\nq\nr\ns\ntuvwxyzabcd\n",
+      "output": "19"
+    },
+    {
+      "name": "edge_unique_jump_50_n30_i1",
+      "input": "30\na\nbcdefghijklmnopqrstuvwxyzabcde\ncdefghijklmnopqrstuvwxyzabcde\ndefghijklmnopqrstuvwxyzabcde\nefghijklmnopqrstuvwxyzabcde\nfghijklmnopqrstuvwxyzabcde\nghijklmnopqrstuvwxyzabcde\nhijklmnopqrstuvwxyzabcde\nijklmnopqrstuvwxyzabcde\njklmnopqrstuvwxyzabcde\nklmnopqrstuvwxyzabcde\nlmnopqrstuvwxyzabcde\nmnopqrstuvwxyzabcde\nnopqrstuvwxyzabcde\nopqrstuvwxyzabcde\npqrstuvwxyzabcde\nqrstuvwxyzabcde\nrstuvwxyzabcde\nstuvwxyzabcde\ntuvwxyzabcde\nuvwxyzabcde\nvwxyzabcde\nwxyzabcde\nxyzabcde\nyzabcde\nzabcde\nabcde\nbcde\ncde\nde\n",
+      "output": "1"
+    },
+    {
+      "name": "random_unique_jump_01_n14_i12",
+      "input": "14\nabcdefghijklmno\nbcdefghijklmno\ncdefghijklmno\ndefghijklmno\nefghijklmno\nfghijklmno\nghijklmno\nhijklmno\nijklmno\njklmno\nklmno\nlmno\nmnopqrstuvwxyzabc\nnopqrstuvwxyzabc\n",
+      "output": "12"
+    },
+    {
+      "name": "random_unique_jump_02_n29_i13",
+      "input": "29\nabcdef\nbcdef\ncdef\ndef\nef\nf\ng\nh\ni\nj\nk\nl\nm\nnopqrstuvwxyzabcdefghi\nopqrstuvwxyzabcdefghi\npqrstuvwxyzabcdefghi\nqrstuvwxyzabcdefghi\nrstuvwxyzabcdefghi\nstuvwxyzabcdefghi\ntuvwxyzabcdefghi\nuvwxyzabcdefghi\nvwxyzabcdefghi\nwxyzabcdefghi\nxyzabcdefghi\nyzabcdefghi\nzabcdefghi\nabcdefghi\nbcdefghi\ncdefghi\n",
+      "output": "13"
+    },
+    {
+      "name": "random_unique_jump_03_n21_i19",
+      "input": "21\nabcdefghijk\nbcdefghijk\ncdefghijk\ndefghijk\nefghijk\nfghijk\nghijk\nhijk\nijk\njk\nk\nl\nm\nn\no\np\nq\nr\ns\ntuvwxyzabcdef\nuvwxyzabcdef\n",
+      "output": "19"
+    },
+    {
+      "name": "random_unique_jump_04_n22_i4",
+      "input": "22\nab\nb\nc\nd\nefghijklmnopqrstuvwx\nfghijklmnopqrstuvwx\nghijklmnopqrstuvwx\nhijklmnopqrstuvwx\nijklmnopqrstuvwx\njklmnopqrstuvwx\nklmnopqrstuvwx\nlmnopqrstuvwx\nmnopqrstuvwx\nnopqrstuvwx\nopqrstuvwx\npqrstuvwx\nqrstuvwx\nrstuvwx\nstuvwx\ntuvwx\nuvwx\nvwx\n",
+      "output": "4"
+    },
+    {
+      "name": "random_unique_jump_05_n22_i10",
+      "input": "22\nabcdefghijklmnopqr\nbcdefghijklmnopqr\ncdefghijklmnopqr\ndefghijklmnopqr\nefghijklmnopqr\nfghijklmnopqr\nghijklmnopqr\nhijklmnopqr\nijklmnopqr\njklmnopqr\nklmnopqrstuvwxyzabcdefghijklmn\nlmnopqrstuvwxyzabcdefghijklmn\nmnopqrstuvwxyzabcdefghijklmn\nnopqrstuvwxyzabcdefghijklmn\nopqrstuvwxyzabcdefghijklmn\npqrstuvwxyzabcdefghijklmn\nqrstuvwxyzabcdefghijklmn\nrstuvwxyzabcdefghijklmn\nstuvwxyzabcdefghijklmn\ntuvwxyzabcdefghijklmn\nuvwxyzabcdefghijklmn\nvwxyzabcdefghijklmn\n",
+      "output": "10"
+    },
+    {
+      "name": "random_unique_jump_06_n24_i17",
+      "input": "24\nabcdefghij\nbcdefghij\ncdefghij\ndefghij\nefghij\nfghij\nghij\nhij\nij\nj\nk\nl\nm\nn\no\np\nq\nrstuvwxyzabcdefgh\nstuvwxyzabcdefgh\ntuvwxyzabcdefgh\nuvwxyzabcdefgh\nvwxyzabcdefgh\nwxyzabcdefgh\nxyzabcdefgh\n",
+      "output": "17"
+    },
+    {
+      "name": "random_unique_jump_07_n7_i2",
+      "input": "7\nabcdef\nbcdef\ncdefghijklm\ndefghijklm\nefghijklm\nfghijklm\nghijklm\n",
+      "output": "2"
+    },
+    {
+      "name": "random_unique_jump_08_n22_i1",
+      "input": "22\nabcd\nbcdefghijklmnopqrstuvwxyz\ncdefghijklmnopqrstuvwxyz\ndefghijklmnopqrstuvwxyz\nefghijklmnopqrstuvwxyz\nfghijklmnopqrstuvwxyz\nghijklmnopqrstuvwxyz\nhijklmnopqrstuvwxyz\nijklmnopqrstuvwxyz\njklmnopqrstuvwxyz\nklmnopqrstuvwxyz\nlmnopqrstuvwxyz\nmnopqrstuvwxyz\nnopqrstuvwxyz\nopqrstuvwxyz\npqrstuvwxyz\nqrstuvwxyz\nrstuvwxyz\nstuvwxyz\ntuvwxyz\nuvwxyz\nvwxyz\n",
+      "output": "1"
+    },
+    {
+      "name": "random_unique_jump_09_n13_i2",
+      "input": "13\nabcde\nbcde\ncdefghijklmnopqr\ndefghijklmnopqr\nefghijklmnopqr\nfghijklmnopqr\nghijklmnopqr\nhijklmnopqr\nijklmnopqr\njklmnopqr\nklmnopqr\nlmnopqr\nmnopqr\n",
+      "output": "2"
+    },
+    {
+      "name": "random_unique_jump_10_n24_i2",
+      "input": "24\nabcd\nbcd\ncdefghijklmnopqrstuvwxyzab\ndefghijklmnopqrstuvwxyzab\nefghijklmnopqrstuvwxyzab\nfghijklmnopqrstuvwxyzab\nghijklmnopqrstuvwxyzab\nhijklmnopqrstuvwxyzab\nijklmnopqrstuvwxyzab\njklmnopqrstuvwxyzab\nklmnopqrstuvwxyzab\nlmnopqrstuvwxyzab\nmnopqrstuvwxyzab\nnopqrstuvwxyzab\nopqrstuvwxyzab\npqrstuvwxyzab\nqrstuvwxyzab\nrstuvwxyzab\nstuvwxyzab\ntuvwxyzab\nuvwxyzab\nvwxyzab\nwxyzab\nxyzab\n",
+      "output": "2"
+    },
+    {
+      "name": "random_unique_jump_11_n6_i4",
+      "input": "6\nabcdefghijklmno\nbcdefghijklmno\ncdefghijklmno\ndefghijklmno\nefghijklmnopqrstu\nfghijklmnopqrstu\n",
+      "output": "4"
+    },
+    {
+      "name": "random_unique_jump_12_n19_i11",
+      "input": "19\nabcdefghijklmnopq\nbcdefghijklmnopq\ncdefghijklmnopq\ndefghijklmnopq\nefghijklmnopq\nfghijklmnopq\nghijklmnopq\nhijklmnopq\nijklmnopq\njklmnopq\nklmnopq\nlmnopqrstuvwxyzabcdefghij\nmnopqrstuvwxyzabcdefghij\nnopqrstuvwxyzabcdefghij\nopqrstuvwxyzabcdefghij\npqrstuvwxyzabcdefghij\nqrstuvwxyzabcdefghij\nrstuvwxyzabcdefghij\nstuvwxyzabcdefghij\n",
+      "output": "11"
+    },
+    {
+      "name": "random_unique_jump_13_n4_i1",
+      "input": "4\nabcdefghijklmnopqr\nbcdefghijklmnopqrstuv\ncdefghijklmnopqrstuv\ndefghijklmnopqrstuv\n",
+      "output": "1"
+    },
+    {
+      "name": "random_unique_jump_14_n16_i8",
+      "input": "16\na\nb\nc\nd\ne\nf\ng\nh\nijklmnopq\njklmnopq\nklmnopq\nlmnopq\nmnopq\nnopq\nopq\npq\n",
+      "output": "8"
+    },
+    {
+      "name": "random_unique_jump_15_n27_i4",
+      "input": "27\nabcde\nbcde\ncde\nde\nefghijklmnopqrstuvwxyzabcdef\nfghijklmnopqrstuvwxyzabcdef\nghijklmnopqrstuvwxyzabcdef\nhijklmnopqrstuvwxyzabcdef\nijklmnopqrstuvwxyzabcdef\njklmnopqrstuvwxyzabcdef\nklmnopqrstuvwxyzabcdef\nlmnopqrstuvwxyzabcdef\nmnopqrstuvwxyzabcdef\nnopqrstuvwxyzabcdef\nopqrstuvwxyzabcdef\npqrstuvwxyzabcdef\nqrstuvwxyzabcdef\nrstuvwxyzabcdef\nstuvwxyzabcdef\ntuvwxyzabcdef\nuvwxyzabcdef\nvwxyzabcdef\nwxyzabcdef\nxyzabcdef\nyzabcdef\nzabcdef\nabcdef\n",
+      "output": "4"
+    },
+    {
+      "name": "random_unique_jump_16_n9_i2",
+      "input": "9\nabcdefghijklmnopqrs\nbcdefghijklmnopqrs\ncdefghijklmnopqrstuvwxyzab\ndefghijklmnopqrstuvwxyzab\nefghijklmnopqrstuvwxyzab\nfghijklmnopqrstuvwxyzab\nghijklmnopqrstuvwxyzab\nhijklmnopqrstuvwxyzab\nijklmnopqrstuvwxyzab\n",
+      "output": "2"
+    },
+    {
+      "name": "random_unique_jump_17_n4_i1",
+      "input": "4\nabcde\nbcdefghi\ncdefghi\ndefghi\n",
+      "output": "1"
+    },
+    {
+      "name": "random_unique_jump_18_n14_i8",
+      "input": "14\nabcdefghijklmnopqrstu\nbcdefghijklmnopqrstu\ncdefghijklmnopqrstu\ndefghijklmnopqrstu\nefghijklmnopqrstu\nfghijklmnopqrstu\nghijklmnopqrstu\nhijklmnopqrstu\nijklmnopqrstuvwxyzabcdefghi\njklmnopqrstuvwxyzabcdefghi\nklmnopqrstuvwxyzabcdefghi\nlmnopqrstuvwxyzabcdefghi\nmnopqrstuvwxyzabcdefghi\nnopqrstuvwxyzabcdefghi\n",
+      "output": "8"
+    },
+    {
+      "name": "random_unique_jump_19_n8_i5",
+      "input": "8\nabcdefghijklmnopqrstu\nbcdefghijklmnopqrstu\ncdefghijklmnopqrstu\ndefghijklmnopqrstu\nefghijklmnopqrstu\nfghijklmnopqrstuvwxyzabc\nghijklmnopqrstuvwxyzabc\nhijklmnopqrstuvwxyzabc\n",
+      "output": "5"
+    },
+    {
+      "name": "random_unique_jump_20_n7_i5",
+      "input": "7\nabcdefg\nbcdefg\ncdefg\ndefg\nefg\nfghijklmn\nghijklmn\n",
+      "output": "5"
+    },
+    {
+      "name": "random_unique_jump_21_n30_i10",
+      "input": "30\nabcde\nbcde\ncde\nde\ne\nf\ng\nh\ni\nj\nklmnopqrstuvwxyzabcdefghi\nlmnopqrstuvwxyzabcdefghi\nmnopqrstuvwxyzabcdefghi\nnopqrstuvwxyzabcdefghi\nopqrstuvwxyzabcdefghi\npqrstuvwxyzabcdefghi\nqrstuvwxyzabcdefghi\nrstuvwxyzabcdefghi\nstuvwxyzabcdefghi\ntuvwxyzabcdefghi\nuvwxyzabcdefghi\nvwxyzabcdefghi\nwxyzabcdefghi\nxyzabcdefghi\nyzabcdefghi\nzabcdefghi\nabcdefghi\nbcdefghi\ncdefghi\ndefghi\n",
+      "output": "10"
+    },
+    {
+      "name": "random_unique_jump_22_n28_i21",
+      "input": "28\nabcdefghijklmnopqrstuvw\nbcdefghijklmnopqrstuvw\ncdefghijklmnopqrstuvw\ndefghijklmnopqrstuvw\nefghijklmnopqrstuvw\nfghijklmnopqrstuvw\nghijklmnopqrstuvw\nhijklmnopqrstuvw\nijklmnopqrstuvw\njklmnopqrstuvw\nklmnopqrstuvw\nlmnopqrstuvw\nmnopqrstuvw\nnopqrstuvw\nopqrstuvw\npqrstuvw\nqrstuvw\nrstuvw\nstuvw\ntuvw\nuvw\nvwxyzabcdefghijklmnopqrstuvwxy\nwxyzabcdefghijklmnopqrstuvwxy\nxyzabcdefghijklmnopqrstuvwxy\nyzabcdefghijklmnopqrstuvwxy\nzabcdefghijklmnopqrstuvwxy\nabcdefghijklmnopqrstuvwxy\nbcdefghijklmnopqrstuvwxy\n",
+      "output": "21"
+    },
+    {
+      "name": "random_unique_jump_23_n5_i1",
+      "input": "5\nabcdefghijkl\nbcdefghijklmnopq\ncdefghijklmnopq\ndefghijklmnopq\nefghijklmnopq\n",
+      "output": "1"
+    },
+    {
+      "name": "random_unique_jump_24_n17_i5",
+      "input": "17\nabcdefghij\nbcdefghij\ncdefghij\ndefghij\nefghij\nfghijklmnopqrstuvwxyza\nghijklmnopqrstuvwxyza\nhijklmnopqrstuvwxyza\nijklmnopqrstuvwxyza\njklmnopqrstuvwxyza\nklmnopqrstuvwxyza\nlmnopqrstuvwxyza\nmnopqrstuvwxyza\nnopqrstuvwxyza\nopqrstuvwxyza\npqrstuvwxyza\nqrstuvwxyza\n",
+      "output": "5"
+    },
+    {
+      "name": "random_unique_jump_25_n4_i3",
+      "input": "4\nabcdefghijklmnopqrstuvwxyzabc\nbcdefghijklmnopqrstuvwxyzabc\ncdefghijklmnopqrstuvwxyzabc\ndefghijklmnopqrstuvwxyzabcdefg\n",
+      "output": "3"
+    },
+    {
+      "name": "random_unique_jump_26_n29_i13",
+      "input": "29\nabcdefghij\nbcdefghij\ncdefghij\ndefghij\nefghij\nfghij\nghij\nhij\nij\nj\nk\nl\nm\nnopqrstuvwxyzabcdefghijklm\nopqrstuvwxyzabcdefghijklm\npqrstuvwxyzabcdefghijklm\nqrstuvwxyzabcdefghijklm\nrstuvwxyzabcdefghijklm\nstuvwxyzabcdefghijklm\ntuvwxyzabcdefghijklm\nuvwxyzabcdefghijklm\nvwxyzabcdefghijklm\nwxyzabcdefghijklm\nxyzabcdefghijklm\nyzabcdefghijklm\nzabcdefghijklm\nabcdefghijklm\nbcdefghijklm\ncdefghijklm\n",
+      "output": "13"
+    },
+    {
+      "name": "random_unique_jump_27_n23_i11",
+      "input": "23\nabcdefghi\nbcdefghi\ncdefghi\ndefghi\nefghi\nfghi\nghi\nhi\ni\nj\nk\nlmnopqrstuvwxyzabcdef\nmnopqrstuvwxyzabcdef\nnopqrstuvwxyzabcdef\nopqrstuvwxyzabcdef\npqrstuvwxyzabcdef\nqrstuvwxyzabcdef\nrstuvwxyzabcdef\nstuvwxyzabcdef\ntuvwxyzabcdef\nuvwxyzabcdef\nvwxyzabcdef\nwxyzabcdef\n",
+      "output": "11"
+    },
+    {
+      "name": "random_unique_jump_28_n12_i5",
+      "input": "12\nabcde\nbcde\ncde\nde\ne\nfghijklmnopq\nghijklmnopq\nhijklmnopq\nijklmnopq\njklmnopq\nklmnopq\nlmnopq\n",
+      "output": "5"
+    },
+    {
+      "name": "random_unique_jump_29_n7_i6",
+      "input": "7\nabcdefghijklmno\nbcdefghijklmno\ncdefghijklmno\ndefghijklmno\nefghijklmno\nfghijklmno\nghijklmnopqrstuv\n",
+      "output": "6"
+    },
+    {
+      "name": "random_unique_jump_30_n4_i3",
+      "input": "4\nabcdefghijkl\nbcdefghijkl\ncdefghijkl\ndefghijklmnop\n",
+      "output": "3"
+    },
+    {
+      "name": "random_unique_jump_31_n19_i8",
+      "input": "19\nabcde\nbcde\ncde\nde\ne\nf\ng\nh\nijklmnopqrstuvwx\njklmnopqrstuvwx\nklmnopqrstuvwx\nlmnopqrstuvwx\nmnopqrstuvwx\nnopqrstuvwx\nopqrstuvwx\npqrstuvwx\nqrstuvwx\nrstuvwx\nstuvwx\n",
+      "output": "8"
+    },
+    {
+      "name": "random_unique_jump_32_n18_i12",
+      "input": "18\nabcdefghijklmnopqr\nbcdefghijklmnopqr\ncdefghijklmnopqr\ndefghijklmnopqr\nefghijklmnopqr\nfghijklmnopqr\nghijklmnopqr\nhijklmnopqr\nijklmnopqr\njklmnopqr\nklmnopqr\nlmnopqr\nmnopqrstuvwxyzabcdefghij\nnopqrstuvwxyzabcdefghij\nopqrstuvwxyzabcdefghij\npqrstuvwxyzabcdefghij\nqrstuvwxyzabcdefghij\nrstuvwxyzabcdefghij\n",
+      "output": "12"
+    },
+    {
+      "name": "random_unique_jump_33_n22_i4",
+      "input": "22\na\nb\nc\nd\nefghijklmnopqrstuvw\nfghijklmnopqrstuvw\nghijklmnopqrstuvw\nhijklmnopqrstuvw\nijklmnopqrstuvw\njklmnopqrstuvw\nklmnopqrstuvw\nlmnopqrstuvw\nmnopqrstuvw\nnopqrstuvw\nopqrstuvw\npqrstuvw\nqrstuvw\nrstuvw\nstuvw\ntuvw\nuvw\nvw\n",
+      "output": "4"
+    },
+    {
+      "name": "random_unique_jump_34_n10_i3",
+      "input": "10\na\nb\nc\ndefghijk\nefghijk\nfghijk\nghijk\nhijk\nijk\njk\n",
+      "output": "3"
+    },
+    {
+      "name": "random_unique_jump_35_n11_i3",
+      "input": "11\nabcdefg\nbcdefg\ncdefg\ndefghijklmnopqr\nefghijklmnopqr\nfghijklmnopqr\nghijklmnopqr\nhijklmnopqr\nijklmnopqr\njklmnopqr\nklmnopqr\n",
+      "output": "3"
+    },
+    {
+      "name": "random_unique_jump_36_n7_i6",
+      "input": "7\nabcdefghijklmnopqrstuvwxyz\nbcdefghijklmnopqrstuvwxyz\ncdefghijklmnopqrstuvwxyz\ndefghijklmnopqrstuvwxyz\nefghijklmnopqrstuvwxyz\nfghijklmnopqrstuvwxyz\nghijklmnopqrstuvwxyzabcdefg\n",
+      "output": "6"
+    },
+    {
+      "name": "random_unique_jump_37_n10_i7",
+      "input": "10\nabcdefghijklmnopq\nbcdefghijklmnopq\ncdefghijklmnopq\ndefghijklmnopq\nefghijklmnopq\nfghijklmnopq\nghijklmnopq\nhijklmnopqrstuvwxyza\nijklmnopqrstuvwxyza\njklmnopqrstuvwxyza\n",
+      "output": "7"
+    },
+    {
+      "name": "random_unique_jump_38_n24_i4",
+      "input": "24\nabcdefg\nbcdefg\ncdefg\ndefg\nefghijklmnopqrstuvwxyzabcde\nfghijklmnopqrstuvwxyzabcde\nghijklmnopqrstuvwxyzabcde\nhijklmnopqrstuvwxyzabcde\nijklmnopqrstuvwxyzabcde\njklmnopqrstuvwxyzabcde\nklmnopqrstuvwxyzabcde\nlmnopqrstuvwxyzabcde\nmnopqrstuvwxyzabcde\nnopqrstuvwxyzabcde\nopqrstuvwxyzabcde\npqrstuvwxyzabcde\nqrstuvwxyzabcde\nrstuvwxyzabcde\nstuvwxyzabcde\ntuvwxyzabcde\nuvwxyzabcde\nvwxyzabcde\nwxyzabcde\nxyzabcde\n",
+      "output": "4"
+    },
+    {
+      "name": "random_unique_jump_39_n26_i24",
+      "input": "26\nabcdefghijklmnop\nbcdefghijklmnop\ncdefghijklmnop\ndefghijklmnop\nefghijklmnop\nfghijklmnop\nghijklmnop\nhijklmnop\nijklmnop\njklmnop\nklmnop\nlmnop\nmnop\nnop\nop\np\nq\nr\ns\nt\nu\nv\nw\nx\nyzabcdefghijklmnop\nzabcdefghijklmnop\n",
+      "output": "24"
+    },
+    {
+      "name": "random_unique_jump_40_n24_i14",
+      "input": "24\nabc\nbc\nc\nd\ne\nf\ng\nh\ni\nj\nk\nl\nm\nn\nopqrstuvwxyza\npqrstuvwxyza\nqrstuvwxyza\nrstuvwxyza\nstuvwxyza\ntuvwxyza\nuvwxyza\nvwxyza\nwxyza\nxyza\n",
+      "output": "14"
+    },
+    {
+      "name": "random_unique_jump_41_n27_i24",
+      "input": "27\nabcdefghijklmnopqrstu\nbcdefghijklmnopqrstu\ncdefghijklmnopqrstu\ndefghijklmnopqrstu\nefghijklmnopqrstu\nfghijklmnopqrstu\nghijklmnopqrstu\nhijklmnopqrstu\nijklmnopqrstu\njklmnopqrstu\nklmnopqrstu\nlmnopqrstu\nmnopqrstu\nnopqrstu\nopqrstu\npqrstu\nqrstu\nrstu\nstu\ntu\nu\nv\nw\nx\nyzabcdefghijklmnopqrstuv\nzabcdefghijklmnopqrstuv\nabcdefghijklmnopqrstuv\n",
+      "output": "24"
+    },
+    {
+      "name": "random_unique_jump_42_n29_i28",
+      "input": "29\nabcdefghijk\nbcdefghijk\ncdefghijk\ndefghijk\nefghijk\nfghijk\nghijk\nhijk\nijk\njk\nk\nl\nm\nn\no\np\nq\nr\ns\nt\nu\nv\nw\nx\ny\nz\na\nb\ncdefghijklmn\n",
+      "output": "28"
+    },
+    {
+      "name": "random_unique_jump_43_n26_i11",
+      "input": "26\nab\nb\nc\nd\ne\nf\ng\nh\ni\nj\nk\nlmnopqrstuvwxyzab\nmnopqrstuvwxyzab\nnopqrstuvwxyzab\nopqrstuvwxyzab\npqrstuvwxyzab\nqrstuvwxyzab\nrstuvwxyzab\nstuvwxyzab\ntuvwxyzab\nuvwxyzab\nvwxyzab\nwxyzab\nxyzab\nyzab\nzab\n",
+      "output": "11"
+    },
+    {
+      "name": "random_unique_jump_44_n4_i2",
+      "input": "4\nabcdefghijklmnop\nbcdefghijklmnop\ncdefghijklmnopqrst\ndefghijklmnopqrst\n",
+      "output": "2"
+    },
+    {
+      "name": "random_unique_jump_45_n17_i3",
+      "input": "17\nabcdefghijklm\nbcdefghijklm\ncdefghijklm\ndefghijklmnopqrstuvwxyzabcd\nefghijklmnopqrstuvwxyzabcd\nfghijklmnopqrstuvwxyzabcd\nghijklmnopqrstuvwxyzabcd\nhijklmnopqrstuvwxyzabcd\nijklmnopqrstuvwxyzabcd\njklmnopqrstuvwxyzabcd\nklmnopqrstuvwxyzabcd\nlmnopqrstuvwxyzabcd\nmnopqrstuvwxyzabcd\nnopqrstuvwxyzabcd\nopqrstuvwxyzabcd\npqrstuvwxyzabcd\nqrstuvwxyzabcd\n",
+      "output": "3"
+    },
+    {
+      "name": "random_unique_jump_46_n30_i8",
+      "input": "30\na\nb\nc\nd\ne\nf\ng\nh\nijklmnopqrstuvwxyzabcde\njklmnopqrstuvwxyzabcde\nklmnopqrstuvwxyzabcde\nlmnopqrstuvwxyzabcde\nmnopqrstuvwxyzabcde\nnopqrstuvwxyzabcde\nopqrstuvwxyzabcde\npqrstuvwxyzabcde\nqrstuvwxyzabcde\nrstuvwxyzabcde\nstuvwxyzabcde\ntuvwxyzabcde\nuvwxyzabcde\nvwxyzabcde\nwxyzabcde\nxyzabcde\nyzabcde\nzabcde\nabcde\nbcde\ncde\nde\n",
+      "output": "8"
+    },
+    {
+      "name": "random_unique_jump_47_n15_i14",
+      "input": "15\nabcdefghijklmnopqrst\nbcdefghijklmnopqrst\ncdefghijklmnopqrst\ndefghijklmnopqrst\nefghijklmnopqrst\nfghijklmnopqrst\nghijklmnopqrst\nhijklmnopqrst\nijklmnopqrst\njklmnopqrst\nklmnopqrst\nlmnopqrst\nmnopqrst\nnopqrst\nopqrstuvwxyzabcdefghi\n",
+      "output": "14"
+    },
+    {
+      "name": "random_unique_jump_48_n20_i7",
+      "input": "20\nabcdefghijkl\nbcdefghijkl\ncdefghijkl\ndefghijkl\nefghijkl\nfghijkl\nghijkl\nhijklmnopqrstuvwxyzabcdef\nijklmnopqrstuvwxyzabcdef\njklmnopqrstuvwxyzabcdef\nklmnopqrstuvwxyzabcdef\nlmnopqrstuvwxyzabcdef\nmnopqrstuvwxyzabcdef\nnopqrstuvwxyzabcdef\nopqrstuvwxyzabcdef\npqrstuvwxyzabcdef\nqrstuvwxyzabcdef\nrstuvwxyzabcdef\nstuvwxyzabcdef\ntuvwxyzabcdef\n",
+      "output": "7"
+    },
+    {
+      "name": "random_unique_jump_49_n29_i2",
+      "input": "29\na\nb\ncdefghijklmnopqrstuvwxyzabcd\ndefghijklmnopqrstuvwxyzabcd\nefghijklmnopqrstuvwxyzabcd\nfghijklmnopqrstuvwxyzabcd\nghijklmnopqrstuvwxyzabcd\nhijklmnopqrstuvwxyzabcd\nijklmnopqrstuvwxyzabcd\njklmnopqrstuvwxyzabcd\nklmnopqrstuvwxyzabcd\nlmnopqrstuvwxyzabcd\nmnopqrstuvwxyzabcd\nnopqrstuvwxyzabcd\nopqrstuvwxyzabcd\npqrstuvwxyzabcd\nqrstuvwxyzabcd\nrstuvwxyzabcd\nstuvwxyzabcd\ntuvwxyzabcd\nuvwxyzabcd\nvwxyzabcd\nwxyzabcd\nxyzabcd\nyzabcd\nzabcd\nabcd\nbcd\ncd\n",
+      "output": "2"
+    },
+    {
+      "name": "random_unique_jump_50_n5_i1",
+      "input": "5\nabcdefghijklmnopqrstuv\nbcdefghijklmnopqrstuvwxyza\ncdefghijklmnopqrstuvwxyza\ndefghijklmnopqrstuvwxyza\nefghijklmnopqrstuvwxyza\n",
+      "output": "1"
+    }
+  ]
+}

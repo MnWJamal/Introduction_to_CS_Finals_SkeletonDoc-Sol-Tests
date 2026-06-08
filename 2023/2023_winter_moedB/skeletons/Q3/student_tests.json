@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "example_three_squares",
+      "input": "1 -3 3 4\n4 0 4 0\n-1 0 -1 -2\n0 0 4 0\n1\n",
+      "output": "3"
+    },
+    {
+      "name": "public_all_zero_target_zero",
+      "input": "0 0 0 0\n0 0 0 0\n0 0 0 0\n0 0 0 0\n0\n",
+      "output": "30"
+    },
+    {
+      "name": "public_no_match_positive",
+      "input": "1 2 3 4\n5 6 7 8\n9 10 11 12\n13 14 15 16\n1000\n",
+      "output": "0"
+    }
+  ]
+}

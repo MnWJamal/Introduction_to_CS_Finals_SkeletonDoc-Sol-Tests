@@ -1,0 +1,2689 @@
+{
+  "tests": [
+    {
+      "name": "edge_single_boom_only",
+      "input": "1\n4 solo\n1\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_single_boom_late",
+      "input": "1\n5 alone\n3\n1 a\n1 b\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_two_boom_first",
+      "input": "2\n2 aa\n2 bb\n3\n5 Boom!\n1 x\n1 y\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_two_boom_last",
+      "input": "2\n2 aa\n2 bb\n3\n1 x\n1 y\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_three_every_boom",
+      "input": "3\n2 p0\n2 p1\n2 p2\n1\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_three_exam_words",
+      "input": "3\n4 roey\n6 shaked\n4 yoav\n5\n4 elik\n5 belik\n4 bili\n4 bili\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_four_first_and_last_boom",
+      "input": "4\n2 p0\n2 p1\n2 p2\n2 p3\n4\n5 Boom!\n1 a\n1 b\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_five_consecutive_booms",
+      "input": "5\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n4\n1 x\n5 Boom!\n5 Boom!\n5 Boom!\n",
+      "output": "4"
+    },
+    {
+      "name": "edge_six_long_no_boom_until_end",
+      "input": "6\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n6\n1 a\n1 b\n1 c\n1 d\n1 e\n5 Boom!\n",
+      "output": "3"
+    },
+    {
+      "name": "edge_many_players_short_song",
+      "input": "9\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2\n4 skip\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_booms_separated",
+      "input": "6\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n7\n1 a\n5 Boom!\n1 b\n1 c\n5 Boom!\n1 d\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n1_k1_b0",
+      "input": "1\n2 p0\n1\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n1_k2_b0",
+      "input": "1\n2 p0\n2\n5 Boom!\n2 w1\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n1_k2_b1",
+      "input": "1\n2 p0\n2\n2 w0\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n1_k3_b0",
+      "input": "1\n2 p0\n3\n5 Boom!\n2 w1\n2 w2\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n1_k3_b1",
+      "input": "1\n2 p0\n3\n2 w0\n5 Boom!\n2 w2\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n1_k3_b2",
+      "input": "1\n2 p0\n3\n2 w0\n2 w1\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n1_k4_b0",
+      "input": "1\n2 p0\n4\n5 Boom!\n2 w1\n2 w2\n2 w3\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n1_k4_b2",
+      "input": "1\n2 p0\n4\n2 w0\n2 w1\n5 Boom!\n2 w3\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n1_k4_b3",
+      "input": "1\n2 p0\n4\n2 w0\n2 w1\n2 w2\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n1_k5_b0",
+      "input": "1\n2 p0\n5\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n1_k5_b2",
+      "input": "1\n2 p0\n5\n2 w0\n2 w1\n5 Boom!\n2 w3\n2 w4\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n1_k5_b4",
+      "input": "1\n2 p0\n5\n2 w0\n2 w1\n2 w2\n2 w3\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n1_k6_b0",
+      "input": "1\n2 p0\n6\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n1_k6_b3",
+      "input": "1\n2 p0\n6\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n1_k6_b5",
+      "input": "1\n2 p0\n6\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n1_k7_b0",
+      "input": "1\n2 p0\n7\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n2 w6\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n1_k7_b3",
+      "input": "1\n2 p0\n7\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n2 w6\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n1_k7_b6",
+      "input": "1\n2 p0\n7\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n2_k1_b0",
+      "input": "2\n2 p0\n2 p1\n1\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n2_k2_b0",
+      "input": "2\n2 p0\n2 p1\n2\n5 Boom!\n2 w1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n2_k2_b1",
+      "input": "2\n2 p0\n2 p1\n2\n2 w0\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n2_k3_b0",
+      "input": "2\n2 p0\n2 p1\n3\n5 Boom!\n2 w1\n2 w2\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n2_k3_b1",
+      "input": "2\n2 p0\n2 p1\n3\n2 w0\n5 Boom!\n2 w2\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n2_k3_b2",
+      "input": "2\n2 p0\n2 p1\n3\n2 w0\n2 w1\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n2_k4_b0",
+      "input": "2\n2 p0\n2 p1\n4\n5 Boom!\n2 w1\n2 w2\n2 w3\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n2_k4_b2",
+      "input": "2\n2 p0\n2 p1\n4\n2 w0\n2 w1\n5 Boom!\n2 w3\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n2_k4_b3",
+      "input": "2\n2 p0\n2 p1\n4\n2 w0\n2 w1\n2 w2\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n2_k5_b0",
+      "input": "2\n2 p0\n2 p1\n5\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n2_k5_b2",
+      "input": "2\n2 p0\n2 p1\n5\n2 w0\n2 w1\n5 Boom!\n2 w3\n2 w4\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n2_k5_b4",
+      "input": "2\n2 p0\n2 p1\n5\n2 w0\n2 w1\n2 w2\n2 w3\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n2_k6_b0",
+      "input": "2\n2 p0\n2 p1\n6\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n2_k6_b3",
+      "input": "2\n2 p0\n2 p1\n6\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n2_k6_b5",
+      "input": "2\n2 p0\n2 p1\n6\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n2_k7_b0",
+      "input": "2\n2 p0\n2 p1\n7\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n2 w6\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n2_k7_b3",
+      "input": "2\n2 p0\n2 p1\n7\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n2 w6\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n2_k7_b6",
+      "input": "2\n2 p0\n2 p1\n7\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n3_k1_b0",
+      "input": "3\n2 p0\n2 p1\n2 p2\n1\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n3_k2_b0",
+      "input": "3\n2 p0\n2 p1\n2 p2\n2\n5 Boom!\n2 w1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n3_k2_b1",
+      "input": "3\n2 p0\n2 p1\n2 p2\n2\n2 w0\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n3_k3_b0",
+      "input": "3\n2 p0\n2 p1\n2 p2\n3\n5 Boom!\n2 w1\n2 w2\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n3_k3_b1",
+      "input": "3\n2 p0\n2 p1\n2 p2\n3\n2 w0\n5 Boom!\n2 w2\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n3_k3_b2",
+      "input": "3\n2 p0\n2 p1\n2 p2\n3\n2 w0\n2 w1\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n3_k4_b0",
+      "input": "3\n2 p0\n2 p1\n2 p2\n4\n5 Boom!\n2 w1\n2 w2\n2 w3\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n3_k4_b2",
+      "input": "3\n2 p0\n2 p1\n2 p2\n4\n2 w0\n2 w1\n5 Boom!\n2 w3\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n3_k4_b3",
+      "input": "3\n2 p0\n2 p1\n2 p2\n4\n2 w0\n2 w1\n2 w2\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n3_k5_b0",
+      "input": "3\n2 p0\n2 p1\n2 p2\n5\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n3_k5_b2",
+      "input": "3\n2 p0\n2 p1\n2 p2\n5\n2 w0\n2 w1\n5 Boom!\n2 w3\n2 w4\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n3_k5_b4",
+      "input": "3\n2 p0\n2 p1\n2 p2\n5\n2 w0\n2 w1\n2 w2\n2 w3\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n3_k6_b0",
+      "input": "3\n2 p0\n2 p1\n2 p2\n6\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n3_k6_b3",
+      "input": "3\n2 p0\n2 p1\n2 p2\n6\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n3_k6_b5",
+      "input": "3\n2 p0\n2 p1\n2 p2\n6\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n3_k7_b0",
+      "input": "3\n2 p0\n2 p1\n2 p2\n7\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n2 w6\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n3_k7_b3",
+      "input": "3\n2 p0\n2 p1\n2 p2\n7\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n2 w6\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n3_k7_b6",
+      "input": "3\n2 p0\n2 p1\n2 p2\n7\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n4_k1_b0",
+      "input": "4\n2 p0\n2 p1\n2 p2\n2 p3\n1\n5 Boom!\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_n4_k2_b0",
+      "input": "4\n2 p0\n2 p1\n2 p2\n2 p3\n2\n5 Boom!\n2 w1\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_n4_k2_b1",
+      "input": "4\n2 p0\n2 p1\n2 p2\n2 p3\n2\n2 w0\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n4_k3_b0",
+      "input": "4\n2 p0\n2 p1\n2 p2\n2 p3\n3\n5 Boom!\n2 w1\n2 w2\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n4_k3_b1",
+      "input": "4\n2 p0\n2 p1\n2 p2\n2 p3\n3\n2 w0\n5 Boom!\n2 w2\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_n4_k3_b2",
+      "input": "4\n2 p0\n2 p1\n2 p2\n2 p3\n3\n2 w0\n2 w1\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n4_k4_b0",
+      "input": "4\n2 p0\n2 p1\n2 p2\n2 p3\n4\n5 Boom!\n2 w1\n2 w2\n2 w3\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n4_k4_b2",
+      "input": "4\n2 p0\n2 p1\n2 p2\n2 p3\n4\n2 w0\n2 w1\n5 Boom!\n2 w3\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n4_k4_b3",
+      "input": "4\n2 p0\n2 p1\n2 p2\n2 p3\n4\n2 w0\n2 w1\n2 w2\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n4_k5_b0",
+      "input": "4\n2 p0\n2 p1\n2 p2\n2 p3\n5\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n4_k5_b2",
+      "input": "4\n2 p0\n2 p1\n2 p2\n2 p3\n5\n2 w0\n2 w1\n5 Boom!\n2 w3\n2 w4\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_n4_k5_b4",
+      "input": "4\n2 p0\n2 p1\n2 p2\n2 p3\n5\n2 w0\n2 w1\n2 w2\n2 w3\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n4_k6_b0",
+      "input": "4\n2 p0\n2 p1\n2 p2\n2 p3\n6\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n4_k6_b3",
+      "input": "4\n2 p0\n2 p1\n2 p2\n2 p3\n6\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n4_k6_b5",
+      "input": "4\n2 p0\n2 p1\n2 p2\n2 p3\n6\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n4_k7_b0",
+      "input": "4\n2 p0\n2 p1\n2 p2\n2 p3\n7\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n2 w6\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_n4_k7_b3",
+      "input": "4\n2 p0\n2 p1\n2 p2\n2 p3\n7\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n2 w6\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n4_k7_b6",
+      "input": "4\n2 p0\n2 p1\n2 p2\n2 p3\n7\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n5_k1_b0",
+      "input": "5\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n1\n5 Boom!\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_n5_k2_b0",
+      "input": "5\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2\n5 Boom!\n2 w1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n5_k2_b1",
+      "input": "5\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2\n2 w0\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n5_k3_b0",
+      "input": "5\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n3\n5 Boom!\n2 w1\n2 w2\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n5_k3_b1",
+      "input": "5\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n3\n2 w0\n5 Boom!\n2 w2\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n5_k3_b2",
+      "input": "5\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n3\n2 w0\n2 w1\n5 Boom!\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_n5_k4_b0",
+      "input": "5\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n4\n5 Boom!\n2 w1\n2 w2\n2 w3\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n5_k4_b2",
+      "input": "5\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n4\n2 w0\n2 w1\n5 Boom!\n2 w3\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_n5_k4_b3",
+      "input": "5\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n4\n2 w0\n2 w1\n2 w2\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n5_k5_b0",
+      "input": "5\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n5\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n5_k5_b2",
+      "input": "5\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n5\n2 w0\n2 w1\n5 Boom!\n2 w3\n2 w4\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_n5_k5_b4",
+      "input": "5\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n5\n2 w0\n2 w1\n2 w2\n2 w3\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n5_k6_b0",
+      "input": "5\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n6\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_n5_k6_b3",
+      "input": "5\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n6\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n5_k6_b5",
+      "input": "5\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n6\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n5 Boom!\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_n5_k7_b0",
+      "input": "5\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n7\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n2 w6\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n5_k7_b3",
+      "input": "5\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n7\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n2 w6\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n5_k7_b6",
+      "input": "5\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n7\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n5 Boom!\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_n6_k1_b0",
+      "input": "6\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n1\n5 Boom!\n",
+      "output": "5"
+    },
+    {
+      "name": "systematic_n6_k2_b0",
+      "input": "6\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2\n5 Boom!\n2 w1\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_n6_k2_b1",
+      "input": "6\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2\n2 w0\n5 Boom!\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_n6_k3_b0",
+      "input": "6\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n3\n5 Boom!\n2 w1\n2 w2\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_n6_k3_b1",
+      "input": "6\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n3\n2 w0\n5 Boom!\n2 w2\n",
+      "output": "5"
+    },
+    {
+      "name": "systematic_n6_k3_b2",
+      "input": "6\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n3\n2 w0\n2 w1\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n6_k4_b0",
+      "input": "6\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n4\n5 Boom!\n2 w1\n2 w2\n2 w3\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n6_k4_b2",
+      "input": "6\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n4\n2 w0\n2 w1\n5 Boom!\n2 w3\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_n6_k4_b3",
+      "input": "6\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n4\n2 w0\n2 w1\n2 w2\n5 Boom!\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_n6_k5_b0",
+      "input": "6\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n5\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n6_k5_b2",
+      "input": "6\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n5\n2 w0\n2 w1\n5 Boom!\n2 w3\n2 w4\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_n6_k5_b4",
+      "input": "6\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n5\n2 w0\n2 w1\n2 w2\n2 w3\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n6_k6_b0",
+      "input": "6\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n6\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_n6_k6_b3",
+      "input": "6\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n6\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n6_k6_b5",
+      "input": "6\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n6\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n5 Boom!\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_n6_k7_b0",
+      "input": "6\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n7\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n2 w6\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_n6_k7_b3",
+      "input": "6\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n7\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n2 w6\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n6_k7_b6",
+      "input": "6\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n7\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n5 Boom!\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_n7_k1_b0",
+      "input": "7\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n1\n5 Boom!\n",
+      "output": "6"
+    },
+    {
+      "name": "systematic_n7_k2_b0",
+      "input": "7\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2\n5 Boom!\n2 w1\n",
+      "output": "5"
+    },
+    {
+      "name": "systematic_n7_k2_b1",
+      "input": "7\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2\n2 w0\n5 Boom!\n",
+      "output": "6"
+    },
+    {
+      "name": "systematic_n7_k3_b0",
+      "input": "7\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n3\n5 Boom!\n2 w1\n2 w2\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n7_k3_b1",
+      "input": "7\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n3\n2 w0\n5 Boom!\n2 w2\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n7_k3_b2",
+      "input": "7\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n3\n2 w0\n2 w1\n5 Boom!\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_n7_k4_b0",
+      "input": "7\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n4\n5 Boom!\n2 w1\n2 w2\n2 w3\n",
+      "output": "5"
+    },
+    {
+      "name": "systematic_n7_k4_b2",
+      "input": "7\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n4\n2 w0\n2 w1\n5 Boom!\n2 w3\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n7_k4_b3",
+      "input": "7\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n4\n2 w0\n2 w1\n2 w2\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n7_k5_b0",
+      "input": "7\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n5\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n7_k5_b2",
+      "input": "7\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n5\n2 w0\n2 w1\n5 Boom!\n2 w3\n2 w4\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_n7_k5_b4",
+      "input": "7\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n5\n2 w0\n2 w1\n2 w2\n2 w3\n5 Boom!\n",
+      "output": "5"
+    },
+    {
+      "name": "systematic_n7_k6_b0",
+      "input": "7\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n6\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_n7_k6_b3",
+      "input": "7\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n6\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n7_k6_b5",
+      "input": "7\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n6\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n7_k7_b0",
+      "input": "7\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n7\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n2 w6\n",
+      "output": "5"
+    },
+    {
+      "name": "systematic_n7_k7_b3",
+      "input": "7\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n7\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n2 w6\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n7_k7_b6",
+      "input": "7\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n7\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n5 Boom!\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_n8_k1_b0",
+      "input": "8\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n1\n5 Boom!\n",
+      "output": "7"
+    },
+    {
+      "name": "systematic_n8_k2_b0",
+      "input": "8\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2\n5 Boom!\n2 w1\n",
+      "output": "7"
+    },
+    {
+      "name": "systematic_n8_k2_b1",
+      "input": "8\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2\n2 w0\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n8_k3_b0",
+      "input": "8\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n3\n5 Boom!\n2 w1\n2 w2\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_n8_k3_b1",
+      "input": "8\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n3\n2 w0\n5 Boom!\n2 w2\n",
+      "output": "5"
+    },
+    {
+      "name": "systematic_n8_k3_b2",
+      "input": "8\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n3\n2 w0\n2 w1\n5 Boom!\n",
+      "output": "6"
+    },
+    {
+      "name": "systematic_n8_k4_b0",
+      "input": "8\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n4\n5 Boom!\n2 w1\n2 w2\n2 w3\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n8_k4_b2",
+      "input": "8\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n4\n2 w0\n2 w1\n5 Boom!\n2 w3\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_n8_k4_b3",
+      "input": "8\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n4\n2 w0\n2 w1\n2 w2\n5 Boom!\n",
+      "output": "5"
+    },
+    {
+      "name": "systematic_n8_k5_b0",
+      "input": "8\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n5\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n",
+      "output": "6"
+    },
+    {
+      "name": "systematic_n8_k5_b2",
+      "input": "8\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n5\n2 w0\n2 w1\n5 Boom!\n2 w3\n2 w4\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n8_k5_b4",
+      "input": "8\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n5\n2 w0\n2 w1\n2 w2\n2 w3\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n8_k6_b0",
+      "input": "8\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n6\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_n8_k6_b3",
+      "input": "8\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n6\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n",
+      "output": "6"
+    },
+    {
+      "name": "systematic_n8_k6_b5",
+      "input": "8\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n6\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n8_k7_b0",
+      "input": "8\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n7\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n2 w6\n",
+      "output": "5"
+    },
+    {
+      "name": "systematic_n8_k7_b3",
+      "input": "8\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n7\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n2 w6\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n8_k7_b6",
+      "input": "8\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n7\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n5 Boom!\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_n9_k1_b0",
+      "input": "9\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n1\n5 Boom!\n",
+      "output": "8"
+    },
+    {
+      "name": "systematic_n9_k2_b0",
+      "input": "9\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2\n5 Boom!\n2 w1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n9_k2_b1",
+      "input": "9\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2\n2 w0\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n9_k3_b0",
+      "input": "9\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n3\n5 Boom!\n2 w1\n2 w2\n",
+      "output": "7"
+    },
+    {
+      "name": "systematic_n9_k3_b1",
+      "input": "9\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n3\n2 w0\n5 Boom!\n2 w2\n",
+      "output": "8"
+    },
+    {
+      "name": "systematic_n9_k3_b2",
+      "input": "9\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n3\n2 w0\n2 w1\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n9_k4_b0",
+      "input": "9\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n4\n5 Boom!\n2 w1\n2 w2\n2 w3\n",
+      "output": "6"
+    },
+    {
+      "name": "systematic_n9_k4_b2",
+      "input": "9\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n4\n2 w0\n2 w1\n5 Boom!\n2 w3\n",
+      "output": "8"
+    },
+    {
+      "name": "systematic_n9_k4_b3",
+      "input": "9\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n4\n2 w0\n2 w1\n2 w2\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n9_k5_b0",
+      "input": "9\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n5\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_n9_k5_b2",
+      "input": "9\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n5\n2 w0\n2 w1\n5 Boom!\n2 w3\n2 w4\n",
+      "output": "5"
+    },
+    {
+      "name": "systematic_n9_k5_b4",
+      "input": "9\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n5\n2 w0\n2 w1\n2 w2\n2 w3\n5 Boom!\n",
+      "output": "7"
+    },
+    {
+      "name": "systematic_n9_k6_b0",
+      "input": "9\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n6\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n9_k6_b3",
+      "input": "9\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n6\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_n9_k6_b5",
+      "input": "9\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n6\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n5 Boom!\n",
+      "output": "6"
+    },
+    {
+      "name": "systematic_n9_k7_b0",
+      "input": "9\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n7\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n2 w6\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_n9_k7_b3",
+      "input": "9\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n7\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n2 w6\n",
+      "output": "7"
+    },
+    {
+      "name": "systematic_n9_k7_b6",
+      "input": "9\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n7\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n10_k1_b0",
+      "input": "10\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n1\n5 Boom!\n",
+      "output": "9"
+    },
+    {
+      "name": "systematic_n10_k2_b0",
+      "input": "10\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n2\n5 Boom!\n2 w1\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_n10_k2_b1",
+      "input": "10\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n2\n2 w0\n5 Boom!\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_n10_k3_b0",
+      "input": "10\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3\n5 Boom!\n2 w1\n2 w2\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n10_k3_b1",
+      "input": "10\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3\n2 w0\n5 Boom!\n2 w2\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n10_k3_b2",
+      "input": "10\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3\n2 w0\n2 w1\n5 Boom!\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_n10_k4_b0",
+      "input": "10\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n4\n5 Boom!\n2 w1\n2 w2\n2 w3\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n10_k4_b2",
+      "input": "10\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n4\n2 w0\n2 w1\n5 Boom!\n2 w3\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_n10_k4_b3",
+      "input": "10\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n4\n2 w0\n2 w1\n2 w2\n5 Boom!\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_n10_k5_b0",
+      "input": "10\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n5\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n",
+      "output": "8"
+    },
+    {
+      "name": "systematic_n10_k5_b2",
+      "input": "10\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n5\n2 w0\n2 w1\n5 Boom!\n2 w3\n2 w4\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n10_k5_b4",
+      "input": "10\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n5\n2 w0\n2 w1\n2 w2\n2 w3\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n10_k6_b0",
+      "input": "10\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n6\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n",
+      "output": "7"
+    },
+    {
+      "name": "systematic_n10_k6_b3",
+      "input": "10\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n6\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n10_k6_b5",
+      "input": "10\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n6\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n10_k7_b0",
+      "input": "10\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n7\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n2 w6\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n10_k7_b3",
+      "input": "10\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n7\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n2 w6\n",
+      "output": "5"
+    },
+    {
+      "name": "systematic_n10_k7_b6",
+      "input": "10\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n7\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n5 Boom!\n",
+      "output": "8"
+    },
+    {
+      "name": "systematic_n11_k1_b0",
+      "input": "11\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n1\n5 Boom!\n",
+      "output": "10"
+    },
+    {
+      "name": "systematic_n11_k2_b0",
+      "input": "11\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n2\n5 Boom!\n2 w1\n",
+      "output": "5"
+    },
+    {
+      "name": "systematic_n11_k2_b1",
+      "input": "11\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n2\n2 w0\n5 Boom!\n",
+      "output": "6"
+    },
+    {
+      "name": "systematic_n11_k3_b0",
+      "input": "11\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n3\n5 Boom!\n2 w1\n2 w2\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_n11_k3_b1",
+      "input": "11\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n3\n2 w0\n5 Boom!\n2 w2\n",
+      "output": "5"
+    },
+    {
+      "name": "systematic_n11_k3_b2",
+      "input": "11\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n3\n2 w0\n2 w1\n5 Boom!\n",
+      "output": "6"
+    },
+    {
+      "name": "systematic_n11_k4_b0",
+      "input": "11\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n4\n5 Boom!\n2 w1\n2 w2\n2 w3\n",
+      "output": "5"
+    },
+    {
+      "name": "systematic_n11_k4_b2",
+      "input": "11\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n4\n2 w0\n2 w1\n5 Boom!\n2 w3\n",
+      "output": "7"
+    },
+    {
+      "name": "systematic_n11_k4_b3",
+      "input": "11\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n4\n2 w0\n2 w1\n2 w2\n5 Boom!\n",
+      "output": "8"
+    },
+    {
+      "name": "systematic_n11_k5_b0",
+      "input": "11\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n5\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_n11_k5_b2",
+      "input": "11\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n5\n2 w0\n2 w1\n5 Boom!\n2 w3\n2 w4\n",
+      "output": "5"
+    },
+    {
+      "name": "systematic_n11_k5_b4",
+      "input": "11\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n5\n2 w0\n2 w1\n2 w2\n2 w3\n5 Boom!\n",
+      "output": "7"
+    },
+    {
+      "name": "systematic_n11_k6_b0",
+      "input": "11\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n6\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_n11_k6_b3",
+      "input": "11\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n6\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n",
+      "output": "6"
+    },
+    {
+      "name": "systematic_n11_k6_b5",
+      "input": "11\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n6\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n5 Boom!\n",
+      "output": "8"
+    },
+    {
+      "name": "systematic_n11_k7_b0",
+      "input": "11\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n7\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n2 w6\n",
+      "output": "9"
+    },
+    {
+      "name": "systematic_n11_k7_b3",
+      "input": "11\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n7\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n2 w6\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_n11_k7_b6",
+      "input": "11\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n7\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n5 Boom!\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_n12_k1_b0",
+      "input": "12\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n3 p11\n1\n5 Boom!\n",
+      "output": "11"
+    },
+    {
+      "name": "systematic_n12_k2_b0",
+      "input": "12\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n3 p11\n2\n5 Boom!\n2 w1\n",
+      "output": "7"
+    },
+    {
+      "name": "systematic_n12_k2_b1",
+      "input": "12\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n3 p11\n2\n2 w0\n5 Boom!\n",
+      "output": "8"
+    },
+    {
+      "name": "systematic_n12_k3_b0",
+      "input": "12\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n3 p11\n3\n5 Boom!\n2 w1\n2 w2\n",
+      "output": "7"
+    },
+    {
+      "name": "systematic_n12_k3_b1",
+      "input": "12\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n3 p11\n3\n2 w0\n5 Boom!\n2 w2\n",
+      "output": "8"
+    },
+    {
+      "name": "systematic_n12_k3_b2",
+      "input": "12\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n3 p11\n3\n2 w0\n2 w1\n5 Boom!\n",
+      "output": "9"
+    },
+    {
+      "name": "systematic_n12_k4_b0",
+      "input": "12\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n3 p11\n4\n5 Boom!\n2 w1\n2 w2\n2 w3\n",
+      "output": "9"
+    },
+    {
+      "name": "systematic_n12_k4_b2",
+      "input": "12\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n3 p11\n4\n2 w0\n2 w1\n5 Boom!\n2 w3\n",
+      "output": "11"
+    },
+    {
+      "name": "systematic_n12_k4_b3",
+      "input": "12\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n3 p11\n4\n2 w0\n2 w1\n2 w2\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n12_k5_b0",
+      "input": "12\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n3 p11\n5\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n",
+      "output": "8"
+    },
+    {
+      "name": "systematic_n12_k5_b2",
+      "input": "12\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n3 p11\n5\n2 w0\n2 w1\n5 Boom!\n2 w3\n2 w4\n",
+      "output": "10"
+    },
+    {
+      "name": "systematic_n12_k5_b4",
+      "input": "12\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n3 p11\n5\n2 w0\n2 w1\n2 w2\n2 w3\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n12_k6_b0",
+      "input": "12\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n3 p11\n6\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n",
+      "output": "9"
+    },
+    {
+      "name": "systematic_n12_k6_b3",
+      "input": "12\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n3 p11\n6\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_n12_k6_b5",
+      "input": "12\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n3 p11\n6\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_n12_k7_b0",
+      "input": "12\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n3 p11\n7\n5 Boom!\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n2 w6\n",
+      "output": "5"
+    },
+    {
+      "name": "systematic_n12_k7_b3",
+      "input": "12\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n3 p11\n7\n2 w0\n2 w1\n2 w2\n5 Boom!\n2 w4\n2 w5\n2 w6\n",
+      "output": "8"
+    },
+    {
+      "name": "systematic_n12_k7_b6",
+      "input": "12\n2 p0\n2 p1\n2 p2\n2 p3\n2 p4\n2 p5\n2 p6\n2 p7\n2 p8\n2 p9\n3 p10\n3 p11\n7\n2 w0\n2 w1\n2 w2\n2 w3\n2 w4\n2 w5\n5 Boom!\n",
+      "output": "11"
+    },
+    {
+      "name": "multiboom_n2_set0",
+      "input": "2\n2 x0\n2 x1\n2\n5 Boom!\n1 a\n",
+      "output": "1"
+    },
+    {
+      "name": "multiboom_n2_set1",
+      "input": "2\n2 x0\n2 x1\n2\n1 a\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "multiboom_n2_set2",
+      "input": "2\n2 x0\n2 x1\n3\n5 Boom!\n1 a\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "multiboom_n2_set3",
+      "input": "2\n2 x0\n2 x1\n4\n1 a\n1 b\n5 Boom!\n1 c\n",
+      "output": "1"
+    },
+    {
+      "name": "multiboom_n2_set4",
+      "input": "2\n2 x0\n2 x1\n5\n1 a\n5 Boom!\n1 b\n5 Boom!\n1 c\n",
+      "output": "0"
+    },
+    {
+      "name": "multiboom_n3_set0",
+      "input": "3\n2 x0\n2 x1\n2 x2\n2\n5 Boom!\n1 a\n",
+      "output": "1"
+    },
+    {
+      "name": "multiboom_n3_set1",
+      "input": "3\n2 x0\n2 x1\n2 x2\n2\n1 a\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "multiboom_n3_set2",
+      "input": "3\n2 x0\n2 x1\n2 x2\n3\n5 Boom!\n1 a\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "multiboom_n3_set3",
+      "input": "3\n2 x0\n2 x1\n2 x2\n4\n1 a\n1 b\n5 Boom!\n1 c\n",
+      "output": "0"
+    },
+    {
+      "name": "multiboom_n3_set4",
+      "input": "3\n2 x0\n2 x1\n2 x2\n5\n1 a\n5 Boom!\n1 b\n5 Boom!\n1 c\n",
+      "output": "2"
+    },
+    {
+      "name": "multiboom_n4_set0",
+      "input": "4\n2 x0\n2 x1\n2 x2\n2 x3\n2\n5 Boom!\n1 a\n",
+      "output": "3"
+    },
+    {
+      "name": "multiboom_n4_set1",
+      "input": "4\n2 x0\n2 x1\n2 x2\n2 x3\n2\n1 a\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "multiboom_n4_set2",
+      "input": "4\n2 x0\n2 x1\n2 x2\n2 x3\n3\n5 Boom!\n1 a\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "multiboom_n4_set3",
+      "input": "4\n2 x0\n2 x1\n2 x2\n2 x3\n4\n1 a\n1 b\n5 Boom!\n1 c\n",
+      "output": "0"
+    },
+    {
+      "name": "multiboom_n4_set4",
+      "input": "4\n2 x0\n2 x1\n2 x2\n2 x3\n5\n1 a\n5 Boom!\n1 b\n5 Boom!\n1 c\n",
+      "output": "2"
+    },
+    {
+      "name": "multiboom_n5_set0",
+      "input": "5\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2\n5 Boom!\n1 a\n",
+      "output": "1"
+    },
+    {
+      "name": "multiboom_n5_set1",
+      "input": "5\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2\n1 a\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "multiboom_n5_set2",
+      "input": "5\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n3\n5 Boom!\n1 a\n5 Boom!\n",
+      "output": "4"
+    },
+    {
+      "name": "multiboom_n5_set3",
+      "input": "5\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n4\n1 a\n1 b\n5 Boom!\n1 c\n",
+      "output": "4"
+    },
+    {
+      "name": "multiboom_n5_set4",
+      "input": "5\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n5\n1 a\n5 Boom!\n1 b\n5 Boom!\n1 c\n",
+      "output": "4"
+    },
+    {
+      "name": "multiboom_n6_set0",
+      "input": "6\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2\n5 Boom!\n1 a\n",
+      "output": "3"
+    },
+    {
+      "name": "multiboom_n6_set1",
+      "input": "6\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2\n1 a\n5 Boom!\n",
+      "output": "4"
+    },
+    {
+      "name": "multiboom_n6_set2",
+      "input": "6\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n3\n5 Boom!\n1 a\n5 Boom!\n",
+      "output": "4"
+    },
+    {
+      "name": "multiboom_n6_set3",
+      "input": "6\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n4\n1 a\n1 b\n5 Boom!\n1 c\n",
+      "output": "3"
+    },
+    {
+      "name": "multiboom_n6_set4",
+      "input": "6\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n5\n1 a\n5 Boom!\n1 b\n5 Boom!\n1 c\n",
+      "output": "2"
+    },
+    {
+      "name": "multiboom_n7_set0",
+      "input": "7\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2\n5 Boom!\n1 a\n",
+      "output": "5"
+    },
+    {
+      "name": "multiboom_n7_set1",
+      "input": "7\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2\n1 a\n5 Boom!\n",
+      "output": "6"
+    },
+    {
+      "name": "multiboom_n7_set2",
+      "input": "7\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n3\n5 Boom!\n1 a\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "multiboom_n7_set3",
+      "input": "7\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n4\n1 a\n1 b\n5 Boom!\n1 c\n",
+      "output": "0"
+    },
+    {
+      "name": "multiboom_n7_set4",
+      "input": "7\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n5\n1 a\n5 Boom!\n1 b\n5 Boom!\n1 c\n",
+      "output": "4"
+    },
+    {
+      "name": "multiboom_n8_set0",
+      "input": "8\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2\n5 Boom!\n1 a\n",
+      "output": "7"
+    },
+    {
+      "name": "multiboom_n8_set1",
+      "input": "8\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2\n1 a\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "multiboom_n8_set2",
+      "input": "8\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n3\n5 Boom!\n1 a\n5 Boom!\n",
+      "output": "7"
+    },
+    {
+      "name": "multiboom_n8_set3",
+      "input": "8\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n4\n1 a\n1 b\n5 Boom!\n1 c\n",
+      "output": "4"
+    },
+    {
+      "name": "multiboom_n8_set4",
+      "input": "8\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n5\n1 a\n5 Boom!\n1 b\n5 Boom!\n1 c\n",
+      "output": "7"
+    },
+    {
+      "name": "multiboom_n9_set0",
+      "input": "9\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n2\n5 Boom!\n1 a\n",
+      "output": "1"
+    },
+    {
+      "name": "multiboom_n9_set1",
+      "input": "9\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n2\n1 a\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "multiboom_n9_set2",
+      "input": "9\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n3\n5 Boom!\n1 a\n5 Boom!\n",
+      "output": "4"
+    },
+    {
+      "name": "multiboom_n9_set3",
+      "input": "9\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n4\n1 a\n1 b\n5 Boom!\n1 c\n",
+      "output": "8"
+    },
+    {
+      "name": "multiboom_n9_set4",
+      "input": "9\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n5\n1 a\n5 Boom!\n1 b\n5 Boom!\n1 c\n",
+      "output": "0"
+    },
+    {
+      "name": "multiboom_n10_set0",
+      "input": "10\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n2 x9\n2\n5 Boom!\n1 a\n",
+      "output": "3"
+    },
+    {
+      "name": "multiboom_n10_set1",
+      "input": "10\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n2 x9\n2\n1 a\n5 Boom!\n",
+      "output": "4"
+    },
+    {
+      "name": "multiboom_n10_set2",
+      "input": "10\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n2 x9\n3\n5 Boom!\n1 a\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "multiboom_n10_set3",
+      "input": "10\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n2 x9\n4\n1 a\n1 b\n5 Boom!\n1 c\n",
+      "output": "3"
+    },
+    {
+      "name": "multiboom_n10_set4",
+      "input": "10\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n2 x9\n5\n1 a\n5 Boom!\n1 b\n5 Boom!\n1 c\n",
+      "output": "4"
+    },
+    {
+      "name": "multiboom_n11_set0",
+      "input": "11\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n2 x9\n3 x10\n2\n5 Boom!\n1 a\n",
+      "output": "5"
+    },
+    {
+      "name": "multiboom_n11_set1",
+      "input": "11\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n2 x9\n3 x10\n2\n1 a\n5 Boom!\n",
+      "output": "6"
+    },
+    {
+      "name": "multiboom_n11_set2",
+      "input": "11\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n2 x9\n3 x10\n3\n5 Boom!\n1 a\n5 Boom!\n",
+      "output": "7"
+    },
+    {
+      "name": "multiboom_n11_set3",
+      "input": "11\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n2 x9\n3 x10\n4\n1 a\n1 b\n5 Boom!\n1 c\n",
+      "output": "7"
+    },
+    {
+      "name": "multiboom_n11_set4",
+      "input": "11\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n2 x9\n3 x10\n5\n1 a\n5 Boom!\n1 b\n5 Boom!\n1 c\n",
+      "output": "5"
+    },
+    {
+      "name": "multiboom_n12_set0",
+      "input": "12\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n2 x9\n3 x10\n3 x11\n2\n5 Boom!\n1 a\n",
+      "output": "7"
+    },
+    {
+      "name": "multiboom_n12_set1",
+      "input": "12\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n2 x9\n3 x10\n3 x11\n2\n1 a\n5 Boom!\n",
+      "output": "8"
+    },
+    {
+      "name": "multiboom_n12_set2",
+      "input": "12\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n2 x9\n3 x10\n3 x11\n3\n5 Boom!\n1 a\n5 Boom!\n",
+      "output": "4"
+    },
+    {
+      "name": "multiboom_n12_set3",
+      "input": "12\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n2 x9\n3 x10\n3 x11\n4\n1 a\n1 b\n5 Boom!\n1 c\n",
+      "output": "11"
+    },
+    {
+      "name": "multiboom_n12_set4",
+      "input": "12\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n2 x9\n3 x10\n3 x11\n5\n1 a\n5 Boom!\n1 b\n5 Boom!\n1 c\n",
+      "output": "9"
+    },
+    {
+      "name": "multiboom_n13_set0",
+      "input": "13\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n2 x9\n3 x10\n3 x11\n3 x12\n2\n5 Boom!\n1 a\n",
+      "output": "9"
+    },
+    {
+      "name": "multiboom_n13_set1",
+      "input": "13\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n2 x9\n3 x10\n3 x11\n3 x12\n2\n1 a\n5 Boom!\n",
+      "output": "10"
+    },
+    {
+      "name": "multiboom_n13_set2",
+      "input": "13\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n2 x9\n3 x10\n3 x11\n3 x12\n3\n5 Boom!\n1 a\n5 Boom!\n",
+      "output": "10"
+    },
+    {
+      "name": "multiboom_n13_set3",
+      "input": "13\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n2 x9\n3 x10\n3 x11\n3 x12\n4\n1 a\n1 b\n5 Boom!\n1 c\n",
+      "output": "3"
+    },
+    {
+      "name": "multiboom_n13_set4",
+      "input": "13\n2 x0\n2 x1\n2 x2\n2 x3\n2 x4\n2 x5\n2 x6\n2 x7\n2 x8\n2 x9\n3 x10\n3 x11\n3 x12\n5\n1 a\n5 Boom!\n1 b\n5 Boom!\n1 c\n",
+      "output": "10"
+    },
+    {
+      "name": "random_001_n10_k1",
+      "input": "10\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n1\n5 Boom!\n",
+      "output": "9"
+    },
+    {
+      "name": "random_002_n5_k1",
+      "input": "5\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n1\n5 Boom!\n",
+      "output": "4"
+    },
+    {
+      "name": "random_003_n1_k10",
+      "input": "1\n7 player0\n10\n6 belik0\n5 Boom!\n6 belik9\n6 gamma9\n5 bili7\n4 two4\n5 Boom!\n5 bili0\n4 one3\n4 two4\n",
+      "output": "0"
+    },
+    {
+      "name": "random_004_n5_k5",
+      "input": "5\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n5\n4 one6\n3 go9\n5 blue7\n5 Boom!\n5 skip4\n",
+      "output": "0"
+    },
+    {
+      "name": "random_005_n3_k10",
+      "input": "3\n7 player0\n7 player1\n7 player2\n10\n6 delta4\n6 gamma4\n5 Boom!\n4 one8\n6 gamma3\n5 bili0\n5 elik0\n4 red3\n3 go0\n3 go5\n",
+      "output": "0"
+    },
+    {
+      "name": "random_006_n20_k6",
+      "input": "20\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8 player15\n8 player16\n8 player17\n8 player18\n8 player19\n6\n5 Boom!\n4 one7\n6 delta5\n5 blue6\n5 blue1\n5 skip6\n",
+      "output": "14"
+    },
+    {
+      "name": "random_007_n10_k4",
+      "input": "10\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n4\n6 belik4\n6 delta0\n5 Boom!\n6 alpha5\n",
+      "output": "3"
+    },
+    {
+      "name": "random_008_n1_k8",
+      "input": "1\n7 player0\n8\n5 bili0\n3 go8\n5 Boom!\n5 blue4\n5 blue8\n5 Boom!\n4 one0\n3 go9\n",
+      "output": "0"
+    },
+    {
+      "name": "random_009_n8_k8",
+      "input": "8\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n8\n4 two4\n4 two6\n5 Boom!\n6 alpha6\n6 alpha0\n5 Boom!\n3 go5\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "random_010_n4_k7",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n7\n5 blue1\n6 alpha7\n6 delta7\n5 Boom!\n6 belik7\n5 Boom!\n6 belik6\n",
+      "output": "0"
+    },
+    {
+      "name": "random_011_n10_k5",
+      "input": "10\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n5\n4 red9\n5 Boom!\n5 Boom!\n5 Boom!\n3 go7\n",
+      "output": "0"
+    },
+    {
+      "name": "random_012_n1_k4",
+      "input": "1\n7 player0\n4\n5 Boom!\n5 Boom!\n3 go8\n4 two1\n",
+      "output": "0"
+    },
+    {
+      "name": "random_013_n12_k5",
+      "input": "12\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n5\n6 alpha7\n6 delta1\n5 Boom!\n6 gamma3\n3 go9\n",
+      "output": "10"
+    },
+    {
+      "name": "random_014_n8_k4",
+      "input": "8\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n4\n5 Boom!\n5 blue4\n6 belik0\n5 elik0\n",
+      "output": "2"
+    },
+    {
+      "name": "random_015_n10_k3",
+      "input": "10\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n3\n3 go4\n5 Boom!\n5 bili2\n",
+      "output": "2"
+    },
+    {
+      "name": "random_016_n10_k7",
+      "input": "10\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n7\n6 gamma9\n5 Boom!\n4 two8\n6 three2\n6 three1\n5 elik6\n5 Boom!\n",
+      "output": "9"
+    },
+    {
+      "name": "random_017_n3_k7",
+      "input": "3\n7 player0\n7 player1\n7 player2\n7\n5 Boom!\n5 beta7\n5 bili8\n5 Boom!\n4 one3\n5 elik2\n5 bili5\n",
+      "output": "2"
+    },
+    {
+      "name": "random_018_n2_k4",
+      "input": "2\n7 player0\n7 player1\n4\n5 Boom!\n4 one9\n5 Boom!\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "random_019_n12_k1",
+      "input": "12\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n1\n5 Boom!\n",
+      "output": "11"
+    },
+    {
+      "name": "random_020_n12_k6",
+      "input": "12\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n6\n6 delta2\n6 gamma4\n5 Boom!\n5 blue0\n3 go5\n4 one4\n",
+      "output": "11"
+    },
+    {
+      "name": "random_021_n6_k3",
+      "input": "6\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n3\n3 go1\n5 blue9\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "random_022_n15_k4",
+      "input": "15\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n4\n6 three4\n5 skip3\n5 Boom!\n6 three4\n",
+      "output": "11"
+    },
+    {
+      "name": "random_023_n2_k3",
+      "input": "2\n7 player0\n7 player1\n3\n5 Boom!\n6 belik4\n4 two8\n",
+      "output": "1"
+    },
+    {
+      "name": "random_024_n2_k4",
+      "input": "2\n7 player0\n7 player1\n4\n4 red4\n4 red0\n5 Boom!\n4 one1\n",
+      "output": "1"
+    },
+    {
+      "name": "random_025_n15_k2",
+      "input": "15\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n2\n6 alpha5\n5 Boom!\n",
+      "output": "14"
+    },
+    {
+      "name": "random_026_n1_k5",
+      "input": "1\n7 player0\n5\n5 Boom!\n5 blue1\n5 elik5\n6 delta3\n6 gamma7\n",
+      "output": "0"
+    },
+    {
+      "name": "random_027_n20_k5",
+      "input": "20\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8 player15\n8 player16\n8 player17\n8 player18\n8 player19\n5\n3 go8\n5 elik2\n5 elik3\n5 bili2\n5 Boom!\n",
+      "output": "6"
+    },
+    {
+      "name": "random_028_n10_k8",
+      "input": "10\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8\n5 Boom!\n5 Boom!\n6 three0\n5 blue9\n5 Boom!\n6 gamma9\n6 belik9\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "random_029_n10_k8",
+      "input": "10\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8\n5 Boom!\n5 elik7\n5 blue2\n5 Boom!\n4 red7\n5 blue4\n6 gamma4\n4 one1\n",
+      "output": "1"
+    },
+    {
+      "name": "random_030_n6_k5",
+      "input": "6\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n5\n6 gamma5\n5 Boom!\n6 alpha4\n5 elik8\n6 alpha9\n",
+      "output": "3"
+    },
+    {
+      "name": "random_031_n7_k1",
+      "input": "7\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n1\n5 Boom!\n",
+      "output": "6"
+    },
+    {
+      "name": "random_032_n20_k10",
+      "input": "20\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8 player15\n8 player16\n8 player17\n8 player18\n8 player19\n10\n6 alpha6\n4 one5\n6 three9\n6 belik5\n6 belik1\n5 beta2\n5 Boom!\n5 elik5\n6 delta1\n6 belik3\n",
+      "output": "19"
+    },
+    {
+      "name": "random_033_n2_k5",
+      "input": "2\n7 player0\n7 player1\n5\n6 delta5\n5 elik0\n5 Boom!\n4 one3\n5 blue8\n",
+      "output": "1"
+    },
+    {
+      "name": "random_034_n2_k2",
+      "input": "2\n7 player0\n7 player1\n2\n6 belik1\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "random_035_n7_k1",
+      "input": "7\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n1\n5 Boom!\n",
+      "output": "6"
+    },
+    {
+      "name": "random_036_n1_k4",
+      "input": "1\n7 player0\n4\n5 blue4\n5 Boom!\n6 three2\n5 blue1\n",
+      "output": "0"
+    },
+    {
+      "name": "random_037_n12_k8",
+      "input": "12\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8\n4 two7\n4 one6\n6 delta6\n5 Boom!\n6 gamma9\n4 one5\n4 two8\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "random_038_n10_k4",
+      "input": "10\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n4\n4 red3\n5 blue6\n5 Boom!\n6 three0\n",
+      "output": "3"
+    },
+    {
+      "name": "random_039_n5_k6",
+      "input": "5\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n6\n5 Boom!\n5 Boom!\n6 three6\n5 skip7\n5 Boom!\n6 belik1\n",
+      "output": "2"
+    },
+    {
+      "name": "random_040_n4_k1",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n1\n5 Boom!\n",
+      "output": "3"
+    },
+    {
+      "name": "random_041_n4_k6",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n6\n6 gamma4\n6 three9\n5 blue3\n6 delta1\n5 Boom!\n6 belik4\n",
+      "output": "1"
+    },
+    {
+      "name": "random_042_n1_k1",
+      "input": "1\n7 player0\n1\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "random_043_n12_k6",
+      "input": "12\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n6\n5 blue8\n5 elik4\n5 Boom!\n5 Boom!\n5 blue1\n6 gamma5\n",
+      "output": "11"
+    },
+    {
+      "name": "random_044_n12_k5",
+      "input": "12\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n5\n5 blue3\n5 bili5\n6 belik4\n5 Boom!\n4 red5\n",
+      "output": "11"
+    },
+    {
+      "name": "random_045_n8_k4",
+      "input": "8\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n4\n5 Boom!\n3 go0\n5 skip9\n5 beta0\n",
+      "output": "2"
+    },
+    {
+      "name": "random_046_n15_k10",
+      "input": "15\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n10\n5 bili8\n5 Boom!\n5 bili0\n5 blue7\n6 gamma3\n5 skip5\n4 two4\n5 Boom!\n5 elik5\n5 elik8\n",
+      "output": "14"
+    },
+    {
+      "name": "random_047_n2_k5",
+      "input": "2\n7 player0\n7 player1\n5\n5 Boom!\n5 beta0\n5 skip5\n5 beta4\n4 red2\n",
+      "output": "1"
+    },
+    {
+      "name": "random_048_n4_k7",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n7\n4 two2\n5 beta3\n6 gamma5\n6 three9\n5 Boom!\n6 three8\n6 gamma2\n",
+      "output": "3"
+    },
+    {
+      "name": "random_049_n7_k2",
+      "input": "7\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n2\n5 Boom!\n6 delta1\n",
+      "output": "5"
+    },
+    {
+      "name": "random_050_n6_k7",
+      "input": "6\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7\n6 belik1\n5 bili0\n5 Boom!\n4 two6\n5 blue5\n5 beta7\n6 gamma9\n",
+      "output": "0"
+    },
+    {
+      "name": "random_051_n20_k3",
+      "input": "20\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8 player15\n8 player16\n8 player17\n8 player18\n8 player19\n3\n5 elik3\n5 skip2\n5 Boom!\n",
+      "output": "19"
+    },
+    {
+      "name": "random_052_n12_k2",
+      "input": "12\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n2\n5 skip1\n5 Boom!\n",
+      "output": "8"
+    },
+    {
+      "name": "random_053_n3_k7",
+      "input": "3\n7 player0\n7 player1\n7 player2\n7\n5 skip8\n4 one4\n4 red2\n6 delta1\n6 three8\n5 blue8\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "random_054_n12_k1",
+      "input": "12\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n1\n5 Boom!\n",
+      "output": "11"
+    },
+    {
+      "name": "random_055_n6_k10",
+      "input": "6\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n10\n5 blue2\n5 elik9\n6 three4\n5 beta2\n6 alpha5\n4 one4\n5 Boom!\n3 go0\n4 one6\n6 gamma4\n",
+      "output": "4"
+    },
+    {
+      "name": "random_056_n15_k3",
+      "input": "15\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n3\n6 belik9\n5 Boom!\n4 red9\n",
+      "output": "3"
+    },
+    {
+      "name": "random_057_n2_k2",
+      "input": "2\n7 player0\n7 player1\n2\n6 alpha7\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "random_058_n2_k8",
+      "input": "2\n7 player0\n7 player1\n8\n5 Boom!\n6 belik2\n6 gamma4\n6 delta5\n6 three4\n5 skip5\n4 one2\n5 elik6\n",
+      "output": "1"
+    },
+    {
+      "name": "random_059_n8_k7",
+      "input": "8\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7\n5 bili6\n5 blue8\n6 alpha4\n5 beta3\n5 Boom!\n5 beta0\n5 skip0\n",
+      "output": "1"
+    },
+    {
+      "name": "random_060_n12_k6",
+      "input": "12\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n6\n6 delta4\n6 delta5\n5 beta2\n5 Boom!\n5 Boom!\n5 blue7\n",
+      "output": "0"
+    },
+    {
+      "name": "random_061_n5_k2",
+      "input": "5\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n2\n5 Boom!\n4 one1\n",
+      "output": "1"
+    },
+    {
+      "name": "random_062_n5_k6",
+      "input": "5\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n6\n5 Boom!\n4 red0\n4 one7\n4 red4\n6 alpha9\n5 bili9\n",
+      "output": "3"
+    },
+    {
+      "name": "random_063_n6_k10",
+      "input": "6\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n10\n5 Boom!\n4 red0\n6 alpha7\n5 beta1\n4 one9\n4 one0\n5 blue1\n3 go6\n6 alpha1\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "random_064_n6_k6",
+      "input": "6\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n6\n5 skip6\n6 gamma7\n6 delta0\n3 go4\n6 delta1\n5 Boom!\n",
+      "output": "3"
+    },
+    {
+      "name": "random_065_n12_k3",
+      "input": "12\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n3\n5 Boom!\n5 skip0\n5 bili5\n",
+      "output": "7"
+    },
+    {
+      "name": "random_066_n8_k5",
+      "input": "8\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n5\n5 skip0\n5 skip7\n4 one1\n5 Boom!\n6 delta1\n",
+      "output": "1"
+    },
+    {
+      "name": "random_067_n15_k2",
+      "input": "15\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n2\n5 bili1\n5 Boom!\n",
+      "output": "14"
+    },
+    {
+      "name": "random_068_n2_k6",
+      "input": "2\n7 player0\n7 player1\n6\n6 alpha2\n4 red5\n3 go2\n5 Boom!\n5 skip6\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "random_069_n6_k8",
+      "input": "6\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n8\n5 Boom!\n4 red3\n5 elik4\n5 skip1\n5 beta3\n6 belik8\n5 Boom!\n4 one5\n",
+      "output": "4"
+    },
+    {
+      "name": "random_070_n12_k4",
+      "input": "12\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n4\n6 gamma8\n5 Boom!\n3 go3\n4 two9\n",
+      "output": "10"
+    },
+    {
+      "name": "random_071_n20_k6",
+      "input": "20\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8 player15\n8 player16\n8 player17\n8 player18\n8 player19\n6\n5 beta5\n5 bili2\n5 Boom!\n4 red5\n5 Boom!\n5 Boom!\n",
+      "output": "9"
+    },
+    {
+      "name": "random_072_n3_k1",
+      "input": "3\n7 player0\n7 player1\n7 player2\n1\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "random_073_n12_k6",
+      "input": "12\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n6\n4 two5\n5 elik1\n4 one9\n3 go8\n6 gamma6\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "random_074_n8_k4",
+      "input": "8\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n4\n5 Boom!\n6 alpha9\n5 Boom!\n5 Boom!\n",
+      "output": "5"
+    },
+    {
+      "name": "random_075_n4_k10",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n10\n6 gamma8\n5 Boom!\n5 elik9\n5 Boom!\n6 delta4\n5 beta6\n5 skip9\n3 go3\n4 two3\n6 delta8\n",
+      "output": "0"
+    },
+    {
+      "name": "random_076_n6_k3",
+      "input": "6\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n3\n6 three7\n5 Boom!\n6 delta3\n",
+      "output": "5"
+    },
+    {
+      "name": "random_077_n1_k10",
+      "input": "1\n7 player0\n10\n5 elik6\n4 two7\n6 alpha1\n5 Boom!\n6 gamma2\n5 Boom!\n6 delta0\n6 three8\n6 alpha3\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "random_078_n2_k2",
+      "input": "2\n7 player0\n7 player1\n2\n5 Boom!\n5 elik7\n",
+      "output": "1"
+    },
+    {
+      "name": "random_079_n12_k4",
+      "input": "12\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n4\n5 elik4\n5 Boom!\n6 gamma9\n5 beta0\n",
+      "output": "10"
+    },
+    {
+      "name": "random_080_n7_k7",
+      "input": "7\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7\n4 red0\n5 skip6\n6 three5\n6 delta2\n4 red2\n5 Boom!\n6 delta4\n",
+      "output": "3"
+    },
+    {
+      "name": "random_081_n2_k2",
+      "input": "2\n7 player0\n7 player1\n2\n4 two9\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "random_082_n4_k2",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n2\n5 Boom!\n6 alpha1\n",
+      "output": "3"
+    },
+    {
+      "name": "random_083_n6_k7",
+      "input": "6\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7\n6 gamma9\n5 skip9\n3 go1\n5 Boom!\n5 elik6\n5 Boom!\n5 blue5\n",
+      "output": "1"
+    },
+    {
+      "name": "random_084_n20_k7",
+      "input": "20\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8 player15\n8 player16\n8 player17\n8 player18\n8 player19\n7\n4 two0\n4 red6\n5 skip8\n4 one9\n5 Boom!\n5 Boom!\n6 gamma1\n",
+      "output": "0"
+    },
+    {
+      "name": "random_085_n7_k3",
+      "input": "7\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n3\n5 skip4\n5 Boom!\n5 Boom!\n",
+      "output": "6"
+    },
+    {
+      "name": "random_086_n4_k2",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n2\n5 Boom!\n5 elik3\n",
+      "output": "3"
+    },
+    {
+      "name": "random_087_n3_k5",
+      "input": "3\n7 player0\n7 player1\n7 player2\n5\n5 beta2\n5 Boom!\n4 two8\n3 go1\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "random_088_n1_k6",
+      "input": "1\n7 player0\n6\n6 belik6\n6 gamma1\n5 bili3\n5 beta3\n5 Boom!\n6 alpha7\n",
+      "output": "0"
+    },
+    {
+      "name": "random_089_n5_k1",
+      "input": "5\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n1\n5 Boom!\n",
+      "output": "4"
+    },
+    {
+      "name": "random_090_n4_k3",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n3\n5 blue4\n5 Boom!\n5 bili6\n",
+      "output": "3"
+    },
+    {
+      "name": "random_091_n15_k6",
+      "input": "15\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n6\n5 Boom!\n4 two0\n5 bili5\n4 one8\n5 Boom!\n5 Boom!\n",
+      "output": "9"
+    },
+    {
+      "name": "random_092_n4_k2",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n2\n6 three4\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "random_093_n20_k6",
+      "input": "20\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8 player15\n8 player16\n8 player17\n8 player18\n8 player19\n6\n5 elik8\n5 blue6\n6 alpha4\n5 elik6\n5 elik5\n5 Boom!\n",
+      "output": "19"
+    },
+    {
+      "name": "random_094_n15_k10",
+      "input": "15\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n10\n6 belik6\n5 skip3\n6 belik1\n4 red2\n6 gamma5\n6 three6\n3 go0\n5 elik1\n5 Boom!\n4 red0\n",
+      "output": "5"
+    },
+    {
+      "name": "random_095_n2_k8",
+      "input": "2\n7 player0\n7 player1\n8\n5 elik0\n5 Boom!\n5 skip0\n3 go9\n5 elik0\n5 skip2\n5 blue4\n5 beta6\n",
+      "output": "0"
+    },
+    {
+      "name": "random_096_n8_k10",
+      "input": "8\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n10\n5 Boom!\n4 two1\n4 red8\n5 Boom!\n6 belik5\n5 bili7\n6 alpha3\n5 blue1\n5 skip2\n4 red7\n",
+      "output": "1"
+    },
+    {
+      "name": "random_097_n5_k5",
+      "input": "5\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n5\n5 Boom!\n5 beta8\n6 alpha2\n3 go7\n5 bili6\n",
+      "output": "2"
+    },
+    {
+      "name": "random_098_n15_k5",
+      "input": "15\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n5\n5 blue1\n5 skip8\n6 gamma6\n5 Boom!\n5 skip5\n",
+      "output": "14"
+    },
+    {
+      "name": "random_099_n6_k8",
+      "input": "6\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n8\n6 alpha2\n5 blue5\n4 red8\n4 one6\n5 elik9\n5 Boom!\n5 Boom!\n5 bili7\n",
+      "output": "2"
+    },
+    {
+      "name": "random_100_n8_k5",
+      "input": "8\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n5\n4 two1\n6 three7\n4 two4\n6 three4\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "random_101_n4_k7",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n7\n5 bili0\n6 gamma5\n6 alpha4\n5 Boom!\n6 gamma0\n6 gamma2\n4 one1\n",
+      "output": "2"
+    },
+    {
+      "name": "random_102_n10_k8",
+      "input": "10\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8\n5 Boom!\n5 beta4\n5 skip4\n5 beta0\n4 red1\n6 alpha5\n5 bili2\n5 beta6\n",
+      "output": "3"
+    },
+    {
+      "name": "random_103_n20_k1",
+      "input": "20\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8 player15\n8 player16\n8 player17\n8 player18\n8 player19\n1\n5 Boom!\n",
+      "output": "19"
+    },
+    {
+      "name": "random_104_n10_k1",
+      "input": "10\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n1\n5 Boom!\n",
+      "output": "9"
+    },
+    {
+      "name": "random_105_n12_k10",
+      "input": "12\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n10\n6 three1\n5 Boom!\n4 two7\n5 bili6\n5 bili7\n5 skip6\n4 two6\n3 go5\n6 gamma2\n5 Boom!\n",
+      "output": "10"
+    },
+    {
+      "name": "random_106_n15_k6",
+      "input": "15\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n6\n4 red6\n6 gamma7\n5 bili5\n6 three7\n5 bili3\n5 Boom!\n",
+      "output": "6"
+    },
+    {
+      "name": "random_107_n7_k10",
+      "input": "7\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n10\n6 belik7\n5 bili2\n5 Boom!\n5 bili5\n5 beta7\n4 red9\n3 go5\n5 Boom!\n5 skip8\n6 gamma5\n",
+      "output": "3"
+    },
+    {
+      "name": "random_108_n3_k5",
+      "input": "3\n7 player0\n7 player1\n7 player2\n5\n5 Boom!\n5 beta5\n3 go6\n4 two8\n4 red2\n",
+      "output": "2"
+    },
+    {
+      "name": "random_109_n8_k7",
+      "input": "8\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7\n6 delta5\n5 blue0\n5 Boom!\n4 red1\n6 belik4\n4 two1\n5 skip7\n",
+      "output": "7"
+    },
+    {
+      "name": "random_110_n20_k6",
+      "input": "20\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8 player15\n8 player16\n8 player17\n8 player18\n8 player19\n6\n4 two6\n5 Boom!\n4 red8\n5 Boom!\n3 go1\n5 elik3\n",
+      "output": "4"
+    },
+    {
+      "name": "random_111_n4_k6",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n6\n5 Boom!\n3 go3\n6 alpha0\n5 Boom!\n6 belik2\n6 belik0\n",
+      "output": "2"
+    },
+    {
+      "name": "random_112_n4_k6",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n6\n4 one4\n6 belik2\n5 Boom!\n3 go8\n4 red6\n6 delta0\n",
+      "output": "3"
+    },
+    {
+      "name": "random_113_n12_k1",
+      "input": "12\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n1\n5 Boom!\n",
+      "output": "11"
+    },
+    {
+      "name": "random_114_n15_k8",
+      "input": "15\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8\n6 gamma2\n4 one6\n5 blue0\n6 three5\n5 beta3\n6 gamma9\n5 Boom!\n4 red4\n",
+      "output": "13"
+    },
+    {
+      "name": "random_115_n10_k7",
+      "input": "10\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n7\n6 gamma7\n5 Boom!\n5 beta0\n5 Boom!\n5 bili9\n6 gamma3\n4 two2\n",
+      "output": "5"
+    },
+    {
+      "name": "random_116_n10_k7",
+      "input": "10\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n7\n5 Boom!\n5 Boom!\n4 two9\n5 blue5\n5 Boom!\n6 three7\n5 skip9\n",
+      "output": "6"
+    },
+    {
+      "name": "random_117_n20_k8",
+      "input": "20\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8 player15\n8 player16\n8 player17\n8 player18\n8 player19\n8\n4 two8\n5 blue2\n6 delta6\n6 belik9\n5 Boom!\n6 belik2\n5 beta7\n6 belik8\n",
+      "output": "17"
+    },
+    {
+      "name": "random_118_n15_k5",
+      "input": "15\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n5\n5 Boom!\n5 skip1\n6 three7\n6 gamma0\n6 gamma0\n",
+      "output": "11"
+    },
+    {
+      "name": "random_119_n4_k8",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n8\n6 alpha0\n4 two8\n6 alpha5\n5 beta0\n5 Boom!\n3 go7\n5 blue0\n6 three1\n",
+      "output": "3"
+    },
+    {
+      "name": "random_120_n4_k6",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n6\n5 Boom!\n5 skip9\n5 bili2\n5 elik8\n6 alpha6\n4 two8\n",
+      "output": "1"
+    },
+    {
+      "name": "random_121_n3_k10",
+      "input": "3\n7 player0\n7 player1\n7 player2\n10\n5 blue0\n3 go9\n5 Boom!\n5 Boom!\n4 one4\n4 one8\n4 two2\n5 Boom!\n5 Boom!\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "random_122_n8_k10",
+      "input": "8\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n10\n5 skip7\n6 alpha6\n4 two4\n5 Boom!\n6 three7\n6 delta4\n5 blue2\n6 three1\n5 beta3\n5 beta5\n",
+      "output": "0"
+    },
+    {
+      "name": "random_123_n4_k8",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n8\n4 one1\n4 one8\n5 blue6\n5 Boom!\n4 red3\n6 belik0\n4 red5\n6 belik7\n",
+      "output": "2"
+    },
+    {
+      "name": "random_124_n8_k7",
+      "input": "8\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7\n6 alpha9\n6 gamma8\n5 beta5\n5 skip4\n3 go9\n5 bili4\n5 Boom!\n",
+      "output": "3"
+    },
+    {
+      "name": "random_125_n4_k6",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n6\n5 bili7\n5 Boom!\n5 bili1\n5 Boom!\n5 Boom!\n4 one0\n",
+      "output": "2"
+    },
+    {
+      "name": "random_126_n6_k1",
+      "input": "6\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n1\n5 Boom!\n",
+      "output": "5"
+    },
+    {
+      "name": "random_127_n20_k10",
+      "input": "20\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8 player15\n8 player16\n8 player17\n8 player18\n8 player19\n10\n4 two0\n6 belik4\n3 go7\n4 red7\n6 belik1\n5 elik8\n6 alpha3\n6 belik9\n5 Boom!\n6 belik9\n",
+      "output": "1"
+    },
+    {
+      "name": "random_128_n12_k5",
+      "input": "12\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n5\n5 Boom!\n5 bili8\n6 delta3\n5 Boom!\n6 belik4\n",
+      "output": "7"
+    },
+    {
+      "name": "random_129_n7_k1",
+      "input": "7\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n1\n5 Boom!\n",
+      "output": "6"
+    },
+    {
+      "name": "random_130_n2_k8",
+      "input": "2\n7 player0\n7 player1\n8\n5 Boom!\n6 delta5\n6 three4\n5 Boom!\n5 Boom!\n5 bili4\n5 Boom!\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "random_131_n6_k10",
+      "input": "6\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n10\n5 bili4\n4 one7\n4 one1\n6 alpha3\n5 skip4\n4 one2\n5 Boom!\n5 elik3\n6 delta0\n5 elik6\n",
+      "output": "4"
+    },
+    {
+      "name": "random_132_n6_k5",
+      "input": "6\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n5\n6 belik4\n5 elik5\n5 Boom!\n3 go6\n4 red9\n",
+      "output": "4"
+    },
+    {
+      "name": "random_133_n12_k7",
+      "input": "12\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n7\n5 beta1\n6 alpha9\n4 one7\n6 three0\n4 red4\n4 red3\n5 Boom!\n",
+      "output": "11"
+    },
+    {
+      "name": "random_134_n2_k3",
+      "input": "2\n7 player0\n7 player1\n3\n5 skip1\n5 bili5\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "random_135_n10_k5",
+      "input": "10\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n5\n3 go9\n5 blue1\n5 Boom!\n5 bili7\n5 Boom!\n",
+      "output": "5"
+    },
+    {
+      "name": "random_136_n1_k6",
+      "input": "1\n7 player0\n6\n5 Boom!\n5 elik2\n6 belik1\n5 bili0\n5 Boom!\n3 go2\n",
+      "output": "0"
+    },
+    {
+      "name": "random_137_n20_k2",
+      "input": "20\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8 player15\n8 player16\n8 player17\n8 player18\n8 player19\n2\n5 Boom!\n6 alpha1\n",
+      "output": "7"
+    },
+    {
+      "name": "random_138_n7_k1",
+      "input": "7\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n1\n5 Boom!\n",
+      "output": "6"
+    },
+    {
+      "name": "random_139_n3_k3",
+      "input": "3\n7 player0\n7 player1\n7 player2\n3\n5 bili3\n3 go1\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "random_140_n8_k10",
+      "input": "8\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n10\n5 Boom!\n5 Boom!\n4 two9\n5 Boom!\n4 one7\n5 Boom!\n5 Boom!\n6 belik7\n6 belik1\n4 red2\n",
+      "output": "4"
+    },
+    {
+      "name": "random_141_n10_k4",
+      "input": "10\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n4\n5 Boom!\n4 one8\n6 belik6\n6 gamma4\n",
+      "output": "1"
+    },
+    {
+      "name": "random_142_n12_k4",
+      "input": "12\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n4\n4 two9\n5 bili8\n5 skip7\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "random_143_n3_k2",
+      "input": "3\n7 player0\n7 player1\n7 player2\n2\n6 delta6\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "random_144_n20_k10",
+      "input": "20\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8 player15\n8 player16\n8 player17\n8 player18\n8 player19\n10\n6 three1\n4 two1\n5 Boom!\n5 Boom!\n5 Boom!\n6 three6\n5 beta9\n5 beta1\n5 blue6\n3 go6\n",
+      "output": "9"
+    },
+    {
+      "name": "random_145_n8_k6",
+      "input": "8\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n6\n6 delta2\n5 Boom!\n4 one0\n5 blue7\n5 skip9\n4 one2\n",
+      "output": "4"
+    },
+    {
+      "name": "random_146_n5_k5",
+      "input": "5\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n5\n6 gamma5\n6 three5\n5 beta9\n5 Boom!\n5 elik2\n",
+      "output": "0"
+    },
+    {
+      "name": "random_147_n3_k3",
+      "input": "3\n7 player0\n7 player1\n7 player2\n3\n5 Boom!\n6 belik0\n6 alpha2\n",
+      "output": "2"
+    },
+    {
+      "name": "random_148_n8_k10",
+      "input": "8\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n10\n5 blue6\n6 delta1\n5 Boom!\n5 beta2\n5 elik7\n5 elik0\n5 Boom!\n6 gamma8\n5 elik8\n4 red8\n",
+      "output": "1"
+    },
+    {
+      "name": "random_149_n15_k5",
+      "input": "15\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n5\n6 three1\n6 gamma2\n5 Boom!\n5 Boom!\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "random_150_n6_k3",
+      "input": "6\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n3\n5 bili5\n5 Boom!\n5 skip8\n",
+      "output": "5"
+    },
+    {
+      "name": "random_151_n7_k5",
+      "input": "7\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n5\n4 two7\n5 Boom!\n5 blue9\n6 belik4\n5 Boom!\n",
+      "output": "5"
+    },
+    {
+      "name": "random_152_n3_k2",
+      "input": "3\n7 player0\n7 player1\n7 player2\n2\n6 delta8\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "random_153_n3_k5",
+      "input": "3\n7 player0\n7 player1\n7 player2\n5\n6 alpha6\n3 go1\n5 elik0\n6 gamma4\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "random_154_n20_k6",
+      "input": "20\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8 player15\n8 player16\n8 player17\n8 player18\n8 player19\n6\n6 alpha6\n6 gamma8\n5 Boom!\n5 elik5\n5 Boom!\n6 three8\n",
+      "output": "5"
+    },
+    {
+      "name": "random_155_n4_k10",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n10\n5 Boom!\n5 Boom!\n6 three0\n3 go2\n6 belik5\n6 belik3\n6 belik3\n6 gamma3\n5 Boom!\n5 Boom!\n",
+      "output": "3"
+    },
+    {
+      "name": "random_156_n20_k1",
+      "input": "20\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8 player15\n8 player16\n8 player17\n8 player18\n8 player19\n1\n5 Boom!\n",
+      "output": "19"
+    },
+    {
+      "name": "random_157_n10_k7",
+      "input": "10\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n7\n3 go0\n5 Boom!\n3 go1\n6 gamma5\n6 three6\n4 one8\n6 delta1\n",
+      "output": "3"
+    },
+    {
+      "name": "random_158_n20_k7",
+      "input": "20\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8 player15\n8 player16\n8 player17\n8 player18\n8 player19\n7\n5 Boom!\n5 Boom!\n6 gamma2\n6 gamma0\n5 skip2\n5 elik4\n4 two7\n",
+      "output": "16"
+    },
+    {
+      "name": "random_159_n10_k10",
+      "input": "10\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n10\n5 Boom!\n5 blue2\n6 belik1\n5 elik0\n3 go9\n5 beta0\n6 alpha9\n6 delta0\n5 blue6\n5 beta2\n",
+      "output": "8"
+    },
+    {
+      "name": "random_160_n4_k1",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n1\n5 Boom!\n",
+      "output": "3"
+    },
+    {
+      "name": "random_161_n6_k7",
+      "input": "6\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7\n5 Boom!\n4 two5\n5 Boom!\n4 red2\n5 Boom!\n5 Boom!\n5 Boom!\n",
+      "output": "3"
+    },
+    {
+      "name": "random_162_n2_k2",
+      "input": "2\n7 player0\n7 player1\n2\n5 Boom!\n5 beta8\n",
+      "output": "1"
+    },
+    {
+      "name": "random_163_n5_k5",
+      "input": "5\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n5\n5 elik7\n3 go0\n5 Boom!\n3 go1\n5 bili6\n",
+      "output": "4"
+    },
+    {
+      "name": "random_164_n15_k5",
+      "input": "15\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n5\n5 skip8\n6 three2\n6 gamma7\n5 Boom!\n6 alpha1\n",
+      "output": "14"
+    },
+    {
+      "name": "random_165_n6_k10",
+      "input": "6\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n10\n4 red5\n5 elik6\n5 Boom!\n5 Boom!\n5 bili5\n6 belik1\n5 Boom!\n6 three8\n6 three6\n6 alpha0\n",
+      "output": "4"
+    },
+    {
+      "name": "random_166_n20_k3",
+      "input": "20\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8 player15\n8 player16\n8 player17\n8 player18\n8 player19\n3\n5 Boom!\n3 go4\n5 beta5\n",
+      "output": "17"
+    },
+    {
+      "name": "random_167_n4_k5",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n5\n6 belik3\n5 Boom!\n3 go7\n5 elik8\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "random_168_n20_k2",
+      "input": "20\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8 player15\n8 player16\n8 player17\n8 player18\n8 player19\n2\n5 Boom!\n6 alpha6\n",
+      "output": "7"
+    },
+    {
+      "name": "random_169_n15_k1",
+      "input": "15\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n1\n5 Boom!\n",
+      "output": "14"
+    },
+    {
+      "name": "random_170_n6_k2",
+      "input": "6\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n2\n5 Boom!\n6 alpha8\n",
+      "output": "3"
+    },
+    {
+      "name": "random_171_n4_k3",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n3\n5 blue3\n6 gamma3\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "random_172_n8_k10",
+      "input": "8\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n10\n6 delta6\n5 skip2\n5 Boom!\n6 gamma1\n5 Boom!\n5 elik8\n4 two2\n5 bili4\n4 two5\n5 beta6\n",
+      "output": "5"
+    },
+    {
+      "name": "random_173_n1_k8",
+      "input": "1\n7 player0\n8\n5 elik7\n6 gamma1\n4 red3\n5 Boom!\n6 gamma7\n5 Boom!\n6 three4\n4 red4\n",
+      "output": "0"
+    },
+    {
+      "name": "random_174_n7_k7",
+      "input": "7\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7\n5 skip9\n5 Boom!\n5 bili0\n5 elik9\n5 blue5\n4 one9\n5 blue0\n",
+      "output": "6"
+    },
+    {
+      "name": "random_175_n15_k10",
+      "input": "15\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n10\n4 one2\n4 red4\n5 Boom!\n5 Boom!\n4 one8\n5 blue0\n5 blue3\n5 skip6\n5 elik0\n6 alpha5\n",
+      "output": "5"
+    },
+    {
+      "name": "random_176_n6_k2",
+      "input": "6\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n2\n5 Boom!\n5 skip8\n",
+      "output": "3"
+    },
+    {
+      "name": "random_177_n3_k3",
+      "input": "3\n7 player0\n7 player1\n7 player2\n3\n6 belik6\n5 Boom!\n5 elik8\n",
+      "output": "0"
+    },
+    {
+      "name": "random_178_n3_k10",
+      "input": "3\n7 player0\n7 player1\n7 player2\n10\n5 bili2\n4 two8\n4 one4\n5 beta3\n5 Boom!\n5 bili6\n6 delta5\n6 alpha6\n6 delta6\n3 go3\n",
+      "output": "2"
+    },
+    {
+      "name": "random_179_n20_k2",
+      "input": "20\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8 player15\n8 player16\n8 player17\n8 player18\n8 player19\n2\n5 Boom!\n5 Boom!\n",
+      "output": "19"
+    },
+    {
+      "name": "random_180_n4_k3",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n3\n5 Boom!\n5 elik3\n5 beta9\n",
+      "output": "2"
+    },
+    {
+      "name": "random_181_n1_k4",
+      "input": "1\n7 player0\n4\n4 red7\n5 Boom!\n3 go6\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "random_182_n8_k2",
+      "input": "8\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n2\n6 gamma9\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "random_183_n3_k7",
+      "input": "3\n7 player0\n7 player1\n7 player2\n7\n5 Boom!\n3 go9\n5 skip9\n6 alpha5\n6 alpha4\n3 go6\n5 bili1\n",
+      "output": "2"
+    },
+    {
+      "name": "random_184_n2_k5",
+      "input": "2\n7 player0\n7 player1\n5\n5 Boom!\n4 one4\n5 Boom!\n6 three7\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "random_185_n7_k7",
+      "input": "7\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7\n5 Boom!\n4 red0\n6 alpha9\n6 belik8\n5 Boom!\n4 two6\n5 elik7\n",
+      "output": "2"
+    },
+    {
+      "name": "random_186_n15_k10",
+      "input": "15\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n10\n4 two9\n5 bili9\n5 Boom!\n6 gamma3\n3 go9\n5 Boom!\n3 go4\n5 bili6\n4 two3\n5 Boom!\n",
+      "output": "11"
+    },
+    {
+      "name": "random_187_n5_k4",
+      "input": "5\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n4\n5 Boom!\n5 Boom!\n6 gamma7\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "random_188_n8_k2",
+      "input": "8\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n2\n5 Boom!\n6 delta7\n",
+      "output": "7"
+    },
+    {
+      "name": "random_189_n4_k10",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n10\n5 Boom!\n5 elik4\n5 Boom!\n5 beta7\n6 delta2\n6 belik6\n6 alpha4\n6 gamma3\n4 one6\n4 red0\n",
+      "output": "3"
+    },
+    {
+      "name": "random_190_n12_k10",
+      "input": "12\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n10\n5 beta4\n5 Boom!\n6 alpha7\n4 two3\n4 two0\n5 elik5\n5 elik8\n6 three4\n5 Boom!\n6 three4\n",
+      "output": "2"
+    },
+    {
+      "name": "random_191_n20_k5",
+      "input": "20\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8 player15\n8 player16\n8 player17\n8 player18\n8 player19\n5\n4 one3\n4 red0\n5 Boom!\n4 one5\n4 one4\n",
+      "output": "4"
+    },
+    {
+      "name": "random_192_n3_k3",
+      "input": "3\n7 player0\n7 player1\n7 player2\n3\n4 two2\n6 gamma4\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "random_193_n5_k10",
+      "input": "5\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n10\n3 go6\n5 bili9\n4 red0\n5 Boom!\n5 blue2\n5 Boom!\n4 red1\n5 Boom!\n6 gamma6\n5 Boom!\n",
+      "output": "4"
+    },
+    {
+      "name": "random_194_n15_k3",
+      "input": "15\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n3\n6 alpha6\n5 Boom!\n6 gamma0\n",
+      "output": "3"
+    },
+    {
+      "name": "random_195_n6_k7",
+      "input": "6\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7\n6 gamma9\n6 gamma0\n5 Boom!\n6 delta7\n6 three4\n5 Boom!\n6 alpha2\n",
+      "output": "0"
+    },
+    {
+      "name": "random_196_n1_k10",
+      "input": "1\n7 player0\n10\n6 gamma6\n5 Boom!\n5 Boom!\n5 Boom!\n5 Boom!\n5 Boom!\n5 skip8\n6 alpha8\n5 beta3\n4 one4\n",
+      "output": "0"
+    },
+    {
+      "name": "random_197_n12_k5",
+      "input": "12\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n5\n5 Boom!\n6 delta7\n5 bili7\n5 skip3\n5 bili3\n",
+      "output": "8"
+    },
+    {
+      "name": "random_198_n1_k5",
+      "input": "1\n7 player0\n5\n4 one6\n6 delta4\n6 three0\n5 Boom!\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "random_199_n15_k4",
+      "input": "15\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n4\n5 beta2\n5 Boom!\n4 two7\n4 red7\n",
+      "output": "10"
+    },
+    {
+      "name": "random_200_n7_k2",
+      "input": "7\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n2\n6 alpha6\n5 Boom!\n",
+      "output": "6"
+    },
+    {
+      "name": "random_201_n6_k4",
+      "input": "6\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n4\n5 bili7\n6 gamma7\n5 Boom!\n5 blue1\n",
+      "output": "3"
+    },
+    {
+      "name": "random_202_n7_k8",
+      "input": "7\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n8\n4 two5\n5 Boom!\n5 Boom!\n6 delta7\n5 Boom!\n4 one8\n4 one2\n4 one3\n",
+      "output": "0"
+    },
+    {
+      "name": "random_203_n1_k2",
+      "input": "1\n7 player0\n2\n5 Boom!\n5 blue3\n",
+      "output": "0"
+    },
+    {
+      "name": "random_204_n6_k5",
+      "input": "6\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n5\n4 two7\n5 elik2\n5 beta3\n5 Boom!\n6 three6\n",
+      "output": "5"
+    },
+    {
+      "name": "random_205_n4_k7",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n7\n6 three9\n4 red2\n6 belik9\n5 Boom!\n4 two2\n5 Boom!\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "random_206_n10_k2",
+      "input": "10\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n2\n5 Boom!\n6 delta4\n",
+      "output": "3"
+    },
+    {
+      "name": "random_207_n2_k10",
+      "input": "2\n7 player0\n7 player1\n10\n4 red8\n4 one3\n5 Boom!\n5 elik0\n5 Boom!\n5 Boom!\n6 alpha4\n5 Boom!\n4 two1\n4 two2\n",
+      "output": "1"
+    },
+    {
+      "name": "random_208_n1_k3",
+      "input": "1\n7 player0\n3\n4 one6\n6 delta7\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "random_209_n1_k4",
+      "input": "1\n7 player0\n4\n5 skip0\n5 beta4\n4 one1\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "random_210_n5_k1",
+      "input": "5\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n1\n5 Boom!\n",
+      "output": "4"
+    },
+    {
+      "name": "random_211_n1_k8",
+      "input": "1\n7 player0\n8\n4 two3\n4 two2\n6 delta3\n5 Boom!\n4 red1\n5 Boom!\n5 beta9\n5 skip7\n",
+      "output": "0"
+    },
+    {
+      "name": "random_212_n4_k2",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n2\n5 Boom!\n6 alpha8\n",
+      "output": "3"
+    },
+    {
+      "name": "random_213_n2_k6",
+      "input": "2\n7 player0\n7 player1\n6\n5 Boom!\n6 three6\n6 gamma5\n4 one8\n4 red3\n4 red6\n",
+      "output": "1"
+    },
+    {
+      "name": "random_214_n10_k6",
+      "input": "10\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n6\n5 Boom!\n3 go9\n5 Boom!\n6 belik7\n4 one3\n6 belik2\n",
+      "output": "3"
+    },
+    {
+      "name": "random_215_n5_k6",
+      "input": "5\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n6\n6 three2\n5 blue2\n4 one4\n6 alpha2\n5 Boom!\n5 beta6\n",
+      "output": "2"
+    },
+    {
+      "name": "random_216_n4_k8",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n8\n6 three4\n5 bili2\n5 Boom!\n5 Boom!\n5 elik5\n4 one3\n5 skip2\n6 delta2\n",
+      "output": "1"
+    },
+    {
+      "name": "random_217_n12_k6",
+      "input": "12\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n6\n5 Boom!\n5 skip1\n5 bili8\n5 elik0\n6 alpha0\n5 beta8\n",
+      "output": "9"
+    },
+    {
+      "name": "random_218_n5_k3",
+      "input": "5\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n3\n3 go1\n5 Boom!\n4 red4\n",
+      "output": "2"
+    },
+    {
+      "name": "random_219_n12_k4",
+      "input": "12\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n4\n6 three2\n5 bili0\n5 Boom!\n5 Boom!\n",
+      "output": "9"
+    },
+    {
+      "name": "random_220_n7_k3",
+      "input": "7\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n3\n5 skip5\n5 Boom!\n3 go7\n",
+      "output": "2"
+    },
+    {
+      "name": "random_221_n15_k2",
+      "input": "15\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n2\n5 Boom!\n6 alpha4\n",
+      "output": "13"
+    },
+    {
+      "name": "random_222_n2_k3",
+      "input": "2\n7 player0\n7 player1\n3\n5 bili6\n5 beta1\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "random_223_n8_k5",
+      "input": "8\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n5\n5 elik2\n5 elik4\n6 belik6\n6 belik5\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "random_224_n20_k4",
+      "input": "20\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8 player15\n8 player16\n8 player17\n8 player18\n8 player19\n4\n5 Boom!\n5 Boom!\n3 go6\n5 beta0\n",
+      "output": "7"
+    },
+    {
+      "name": "random_225_n5_k1",
+      "input": "5\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n1\n5 Boom!\n",
+      "output": "4"
+    },
+    {
+      "name": "random_226_n3_k8",
+      "input": "3\n7 player0\n7 player1\n7 player2\n8\n4 one8\n5 blue5\n5 elik1\n5 blue7\n5 Boom!\n6 three0\n5 elik6\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "random_227_n3_k8",
+      "input": "3\n7 player0\n7 player1\n7 player2\n8\n5 Boom!\n5 Boom!\n4 two0\n5 bili7\n4 two0\n5 Boom!\n5 blue6\n6 delta2\n",
+      "output": "2"
+    },
+    {
+      "name": "random_228_n20_k5",
+      "input": "20\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8 player15\n8 player16\n8 player17\n8 player18\n8 player19\n5\n3 go7\n4 two3\n6 three4\n5 Boom!\n5 bili7\n",
+      "output": "5"
+    },
+    {
+      "name": "random_229_n1_k8",
+      "input": "1\n7 player0\n8\n3 go9\n5 blue2\n6 delta4\n5 Boom!\n4 one4\n6 alpha0\n3 go1\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "random_230_n6_k7",
+      "input": "6\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7\n4 red4\n6 alpha0\n4 two1\n3 go3\n5 Boom!\n4 red0\n6 alpha5\n",
+      "output": "2"
+    },
+    {
+      "name": "random_231_n4_k7",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n7\n5 Boom!\n6 three9\n5 beta2\n5 Boom!\n5 skip7\n6 alpha5\n5 beta3\n",
+      "output": "1"
+    },
+    {
+      "name": "random_232_n10_k3",
+      "input": "10\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n3\n6 delta8\n6 delta9\n5 Boom!\n",
+      "output": "3"
+    },
+    {
+      "name": "random_233_n8_k5",
+      "input": "8\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n5\n5 skip1\n5 bili6\n4 two8\n5 Boom!\n5 elik8\n",
+      "output": "1"
+    },
+    {
+      "name": "random_234_n7_k2",
+      "input": "7\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n2\n5 Boom!\n5 elik4\n",
+      "output": "5"
+    },
+    {
+      "name": "random_235_n5_k2",
+      "input": "5\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n2\n5 skip3\n5 Boom!\n",
+      "output": "2"
+    },
+    {
+      "name": "random_236_n2_k7",
+      "input": "2\n7 player0\n7 player1\n7\n5 Boom!\n3 go3\n6 alpha6\n5 elik6\n4 one4\n6 belik5\n5 Boom!\n",
+      "output": "1"
+    },
+    {
+      "name": "random_237_n5_k7",
+      "input": "5\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7\n5 beta9\n6 gamma3\n5 skip6\n5 Boom!\n5 elik4\n5 bili2\n5 Boom!\n",
+      "output": "0"
+    },
+    {
+      "name": "random_238_n3_k10",
+      "input": "3\n7 player0\n7 player1\n7 player2\n10\n5 blue9\n5 skip6\n5 skip6\n6 delta6\n6 three9\n4 red0\n5 elik1\n6 alpha5\n5 Boom!\n6 alpha3\n",
+      "output": "0"
+    },
+    {
+      "name": "random_239_n20_k1",
+      "input": "20\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n8 player10\n8 player11\n8 player12\n8 player13\n8 player14\n8 player15\n8 player16\n8 player17\n8 player18\n8 player19\n1\n5 Boom!\n",
+      "output": "19"
+    },
+    {
+      "name": "random_240_n1_k10",
+      "input": "1\n7 player0\n10\n6 delta4\n6 gamma3\n6 delta7\n6 gamma6\n4 two4\n3 go4\n5 Boom!\n4 two9\n5 skip4\n5 skip1\n",
+      "output": "0"
+    },
+    {
+      "name": "random_241_n4_k5",
+      "input": "4\n7 player0\n7 player1\n7 player2\n7 player3\n5\n4 one7\n6 alpha0\n5 Boom!\n6 belik6\n6 three8\n",
+      "output": "3"
+    },
+    {
+      "name": "random_242_n7_k2",
+      "input": "7\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n2\n5 Boom!\n4 two3\n",
+      "output": "5"
+    },
+    {
+      "name": "random_243_n10_k5",
+      "input": "10\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n5\n6 alpha7\n5 blue5\n5 Boom!\n3 go5\n5 skip9\n",
+      "output": "0"
+    },
+    {
+      "name": "random_244_n3_k10",
+      "input": "3\n7 player0\n7 player1\n7 player2\n10\n4 one5\n4 one5\n5 Boom!\n5 bili8\n6 delta0\n5 Boom!\n5 beta2\n5 Boom!\n4 one4\n5 blue6\n",
+      "output": "1"
+    },
+    {
+      "name": "random_245_n3_k5",
+      "input": "3\n7 player0\n7 player1\n7 player2\n5\n5 bili5\n5 beta7\n5 Boom!\n6 alpha9\n3 go6\n",
+      "output": "1"
+    },
+    {
+      "name": "random_246_n8_k3",
+      "input": "8\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n3\n6 belik1\n5 Boom!\n4 one8\n",
+      "output": "5"
+    },
+    {
+      "name": "random_247_n8_k5",
+      "input": "8\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n5\n5 skip4\n5 Boom!\n4 red6\n6 delta1\n4 two1\n",
+      "output": "7"
+    },
+    {
+      "name": "random_248_n2_k3",
+      "input": "2\n7 player0\n7 player1\n3\n5 Boom!\n6 delta3\n6 alpha6\n",
+      "output": "1"
+    },
+    {
+      "name": "random_249_n7_k10",
+      "input": "7\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n10\n4 two8\n4 two5\n5 Boom!\n5 Boom!\n5 Boom!\n6 gamma2\n5 Boom!\n5 Boom!\n4 one0\n4 one6\n",
+      "output": "5"
+    },
+    {
+      "name": "random_250_n10_k5",
+      "input": "10\n7 player0\n7 player1\n7 player2\n7 player3\n7 player4\n7 player5\n7 player6\n7 player7\n7 player8\n7 player9\n5\n5 beta5\n5 Boom!\n4 two1\n5 elik3\n5 blue3\n",
+      "output": "9"
+    }
+  ]
+}
