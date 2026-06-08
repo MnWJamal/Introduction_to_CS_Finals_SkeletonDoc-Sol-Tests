@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "sample_one_name",
+      "input": "1\nalice\n",
+      "output": "alice\n"
+    },
+    {
+      "name": "sample_two_names",
+      "input": "2\nalice\nbob\n",
+      "output": "alice\nbob\n"
+    },
+    {
+      "name": "sample_four_names",
+      "input": "4\ndana\nomer\nnoa\nlior\n",
+      "output": "dana\nomer\nnoa\nlior\n"
+    }
+  ]
+}

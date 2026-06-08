@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "sample_cheapest_path",
+      "input": "0 200 300\n50 0 25\n150 0 0\n",
+      "output": "175"
+    },
+    {
+      "name": "sample_no_path",
+      "input": "0 200 0\n0 0 0\n0 100 0\n",
+      "output": "0"
+    },
+    {
+      "name": "sample_simple_chain",
+      "input": "0 1 0\n0 0 2\n0 0 0\n",
+      "output": "3"
+    }
+  ]
+}

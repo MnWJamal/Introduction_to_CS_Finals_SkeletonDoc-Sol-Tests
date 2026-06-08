@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "sample_h2_tun_2",
+      "input": "11\nH2$$$tUn$$2\n",
+      "output": "H2+tUn*2"
+    },
+    {
+      "name": "sample_single_and_double",
+      "input": "10\no$m$o7$$ab\n",
+      "output": "o$m$o7*ab"
+    },
+    {
+      "name": "sample_long_dollars",
+      "input": "10\ndf$$$$$$$x\n",
+      "output": "df+x"
+    }
+  ]
+}

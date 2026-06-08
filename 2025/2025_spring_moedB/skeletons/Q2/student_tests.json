@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "example_abcdeabaa_ab",
+      "input": "9\nabcdeabaa\n2\nab\n",
+      "output": "3"
+    },
+    {
+      "name": "example_livejumpingveil_evil",
+      "input": "15\nlivejumpingveil\n4\nevil\n",
+      "output": "2"
+    },
+    {
+      "name": "example_abaaba_aba",
+      "input": "6\nabaaba\n3\naba\n",
+      "output": "4"
+    },
+    {
+      "name": "example_mostcutedog_shihtzu",
+      "input": "11\nmostcutedog\n7\nshihtzu\n",
+      "output": "0"
+    }
+  ]
+}

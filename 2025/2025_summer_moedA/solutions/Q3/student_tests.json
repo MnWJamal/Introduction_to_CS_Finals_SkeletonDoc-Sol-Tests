@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "sample_dbcae",
+      "input": "5\ndbcae\n",
+      "output": "2\nabcde"
+    },
+    {
+      "name": "sample_zxzyw",
+      "input": "5\nzxzyw\n",
+      "output": "3\nzzyxw"
+    },
+    {
+      "name": "sample_abcd",
+      "input": "4\nabcd\n",
+      "output": "0\nabcd"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "sample_from_exam",
+      "input": "9\n5 8 6 2 5 4 8 3 2\n",
+      "output": "30"
+    },
+    {
+      "name": "simple_middle_best",
+      "input": "4\n3 1 4 2\n",
+      "output": "6"
+    },
+    {
+      "name": "simple_last_best",
+      "input": "5\n2 5 1 2 4\n",
+      "output": "8"
+    }
+  ]
+}

@@ -1,0 +1,904 @@
+{
+  "tests": [
+    {
+      "name": "edge_single_string",
+      "input": "1\n3\nabc\n",
+      "output": "abc"
+    },
+    {
+      "name": "edge_two_already_sorted",
+      "input": "2\n1\nb\n2\nae\n",
+      "output": "b\nae"
+    },
+    {
+      "name": "edge_two_need_swap",
+      "input": "2\n2\nae\n1\nb\n",
+      "output": "b\nae"
+    },
+    {
+      "name": "edge_no_vowels_tie_length",
+      "input": "4\n1\nb\n2\ncr\n3\ndgt\n4\nfghj\n",
+      "output": "b\ncr\ndgt\nfghj"
+    },
+    {
+      "name": "edge_all_vowels_tie_length",
+      "input": "5\n1\na\n2\nAE\n3\niou\n4\naeio\n5\nAEIOU\n",
+      "output": "a\nAE\niou\naeio\nAEIOU"
+    },
+    {
+      "name": "edge_uppercase_vowels",
+      "input": "5\n4\nBCDF\n1\nA\n3\nEel\n6\nOCEANs\n8\nqueueXYZ\n",
+      "output": "BCDF\nA\nEel\nOCEANs\nqueueXYZ"
+    },
+    {
+      "name": "edge_digits_zero_vowels",
+      "input": "5\n1\n7\n2\nb2\n3\nc34\n4\nd567\n5\nf8901\n",
+      "output": "7\nb2\nc34\nd567\nf8901"
+    },
+    {
+      "name": "edge_digits_and_vowels",
+      "input": "5\n2\na1\n3\nb22\n4\nE333\n5\nx4444\n7\noo55555\n",
+      "output": "b22\nx4444\na1\nE333\noo55555"
+    },
+    {
+      "name": "edge_same_vowel_count_lengths",
+      "input": "4\n2\nba\n4\nable\n6\ntable1\n9\nvariable9\n",
+      "output": "ba\nable\ntable1\nvariable9"
+    },
+    {
+      "name": "edge_mixed_case",
+      "input": "5\n1\nZ\n2\nab\n3\nAEi\n4\ncdFg\n5\nuUuUu\n",
+      "output": "Z\ncdFg\nab\nAEi\nuUuUu"
+    },
+    {
+      "name": "edge_reverse_order",
+      "input": "5\n8\naeiouXYZ\n6\naeioXY\n4\naeiX\n2\nae\n1\nb\n",
+      "output": "b\nae\naeiX\naeioXY\naeiouXYZ"
+    },
+    {
+      "name": "edge_many_zero_then_vowels",
+      "input": "6\n1\nr\n2\nth\n4\nbcdf\n5\nqueue\n8\nskyline1\n9\nAEIOUxyz9\n",
+      "output": "r\nth\nbcdf\nskyline1\nqueue\nAEIOUxyz9"
+    },
+    {
+      "name": "edge_shorter_wins_tie",
+      "input": "4\n5\nabcdE\n2\nab\n9\nabcdeFghi\n7\nbcdfghj\n",
+      "output": "bcdfghj\nab\nabcdE\nabcdeFghi"
+    },
+    {
+      "name": "edge_vowel_counts_0_to_5",
+      "input": "6\n1\nb\n2\nab\n4\nabec\n6\nabicod\n8\naeiobcdf\n9\naeiouzzzz\n",
+      "output": "b\nab\nabec\nabicod\naeiobcdf\naeiouzzzz"
+    },
+    {
+      "name": "edge_longer_not_stress",
+      "input": "5\n8\nTechnion\n10\nEE234117xy\n7\nrhythms\n15\nIntroduction2CS\n9\nvOwEls123\n",
+      "output": "rhythms\nvOwEls123\nEE234117xy\nTechnion\nIntroduction2CS"
+    },
+    {
+      "name": "edge_all_counts_mixed_lengths",
+      "input": "6\n3\nHnM\n4\nMeTA\n5\ntesla\n7\n3APPLeS\n6\nGOOGLe\n8\nAMAZONas\n",
+      "output": "HnM\nMeTA\ntesla\n3APPLeS\nGOOGLe\nAMAZONas"
+    },
+    {
+      "name": "edge_one_digit_strings",
+      "input": "5\n1\n1\n2\na2\n3\nB34\n4\nu567\n5\nxyz90\n",
+      "output": "1\nB34\nxyz90\na2\nu567"
+    },
+    {
+      "name": "edge_nonstable_required",
+      "input": "5\n6\nzzzzzz\n2\nae\n3\nio9\n5\nbcdfg\n1\nU\n",
+      "output": "bcdfg\nzzzzzz\nU\nae\nio9"
+    },
+    {
+      "name": "edge_tie_between_three",
+      "input": "5\n5\nalpha\n2\nby\n6\ncrypts\n7\norange7\n3\nICE\n",
+      "output": "by\ncrypts\nICE\nalpha\norange7"
+    },
+    {
+      "name": "edge_caps_and_digits",
+      "input": "5\n2\nX1\n3\nA22\n6\nBCD333\n8\neFgH4444\n9\nIOU555555\n",
+      "output": "X1\nBCD333\nA22\neFgH4444\nIOU555555"
+    },
+    {
+      "name": "systematic_size_1",
+      "input": "1\n2\nb0\n",
+      "output": "b0"
+    },
+    {
+      "name": "systematic_size_2",
+      "input": "2\n2\nb0\n4\nabc1\n",
+      "output": "b0\nabc1"
+    },
+    {
+      "name": "systematic_size_3",
+      "input": "3\n4\nabc1\n6\naebcd2\n2\nb0\n",
+      "output": "b0\nabc1\naebcd2"
+    },
+    {
+      "name": "systematic_size_4",
+      "input": "4\n6\naebcd2\n2\nb0\n8\naeibcde3\n4\nabc1\n",
+      "output": "b0\nabc1\naebcd2\naeibcde3"
+    },
+    {
+      "name": "systematic_size_5",
+      "input": "5\n10\naeiobcdef4\n8\naeibcde3\n2\nb0\n4\nabc1\n6\naebcd2\n",
+      "output": "b0\nabc1\naebcd2\naeibcde3\naeiobcdef4"
+    },
+    {
+      "name": "systematic_size_6",
+      "input": "6\n6\naebcd2\n10\naeiobcdef4\n8\naeibcde3\n4\nabc1\n12\naeioubcdefg5\n2\nb0\n",
+      "output": "b0\nabc1\naebcd2\naeibcde3\naeiobcdef4\naeioubcdefg5"
+    },
+    {
+      "name": "systematic_size_7",
+      "input": "7\n10\naeiobcdef4\n14\naeiouAbcdefgh6\n12\naeioubcdefg5\n2\nb0\n8\naeibcde3\n4\nabc1\n6\naebcd2\n",
+      "output": "b0\nabc1\naebcd2\naeibcde3\naeiobcdef4\naeioubcdefg5\naeiouAbcdefgh6"
+    },
+    {
+      "name": "systematic_size_8",
+      "input": "8\n14\naeiouAbcdefgh6\n10\naeiobcdef4\n4\nabc1\n2\nb0\n8\naeibcde3\n16\naeiouAEbcdefghi7\n12\naeioubcdefg5\n6\naebcd2\n",
+      "output": "b0\nabc1\naebcd2\naeibcde3\naeiobcdef4\naeioubcdefg5\naeiouAbcdefgh6\naeiouAEbcdefghi7"
+    },
+    {
+      "name": "systematic_size_9",
+      "input": "9\n18\naeiouAEIbcdefghij8\n14\naeiouAbcdefgh6\n4\nabc1\n12\naeioubcdefg5\n2\nb0\n10\naeiobcdef4\n16\naeiouAEbcdefghi7\n6\naebcd2\n8\naeibcde3\n",
+      "output": "b0\nabc1\naebcd2\naeibcde3\naeiobcdef4\naeioubcdefg5\naeiouAbcdefgh6\naeiouAEbcdefghi7\naeiouAEIbcdefghij8"
+    },
+    {
+      "name": "systematic_size_10",
+      "input": "10\n12\naeioubcdefg5\n4\nabc1\n14\naeiouAbcdefgh6\n6\naebcd2\n2\nb0\n16\naeiouAEbcdefghi7\n18\naeiouAEIbcdefghij8\n8\naeibcde3\n10\naeiobcdef4\n20\naeiouAEIObcdefghijk9\n",
+      "output": "b0\nabc1\naebcd2\naeibcde3\naeiobcdef4\naeioubcdefg5\naeiouAbcdefgh6\naeiouAEbcdefghi7\naeiouAEIbcdefghij8\naeiouAEIObcdefghijk9"
+    },
+    {
+      "name": "systematic_size_11",
+      "input": "11\n8\naeibcde3\n13\nbcdefghijkl10\n4\nabc1\n20\naeiouAEIObcdefghijk9\n18\naeiouAEIbcdefghij8\n10\naeiobcdef4\n14\naeiouAbcdefgh6\n6\naebcd2\n2\nb0\n12\naeioubcdefg5\n16\naeiouAEbcdefghi7\n",
+      "output": "b0\nabc1\naebcd2\nbcdefghijkl10\naeibcde3\naeiobcdef4\naeioubcdefg5\naeiouAbcdefgh6\naeiouAEbcdefghi7\naeiouAEIbcdefghij8\naeiouAEIObcdefghijk9"
+    },
+    {
+      "name": "systematic_size_12",
+      "input": "12\n15\nabcdefghijklm11\n6\naebcd2\n20\naeiouAEIObcdefghijk9\n13\nbcdefghijkl10\n12\naeioubcdefg5\n2\nb0\n4\nabc1\n18\naeiouAEIbcdefghij8\n8\naeibcde3\n16\naeiouAEbcdefghi7\n14\naeiouAbcdefgh6\n10\naeiobcdef4\n",
+      "output": "b0\nabc1\naebcd2\nbcdefghijkl10\nabcdefghijklm11\naeibcde3\naeiobcdef4\naeioubcdefg5\naeiouAbcdefgh6\naeiouAEbcdefghi7\naeiouAEIbcdefghij8\naeiouAEIObcdefghijk9"
+    },
+    {
+      "name": "systematic_size_13",
+      "input": "13\n10\naeiobcdef4\n4\nabc1\n17\naebcdefghijklmn12\n13\nbcdefghijkl10\n20\naeiouAEIObcdefghijk9\n16\naeiouAEbcdefghi7\n6\naebcd2\n2\nb0\n14\naeiouAbcdefgh6\n8\naeibcde3\n15\nabcdefghijklm11\n18\naeiouAEIbcdefghij8\n12\naeioubcdefg5\n",
+      "output": "b0\nabc1\naebcd2\nbcdefghijkl10\nabcdefghijklm11\naeibcde3\naebcdefghijklmn12\naeiobcdef4\naeioubcdefg5\naeiouAbcdefgh6\naeiouAEbcdefghi7\naeiouAEIbcdefghij8\naeiouAEIObcdefghijk9"
+    },
+    {
+      "name": "systematic_size_14",
+      "input": "14\n16\naeiouAEbcdefghi7\n10\naeiobcdef4\n19\naeibcdefghijklmno13\n12\naeioubcdefg5\n6\naebcd2\n2\nb0\n13\nbcdefghijkl10\n8\naeibcde3\n15\nabcdefghijklm11\n18\naeiouAEIbcdefghij8\n4\nabc1\n20\naeiouAEIObcdefghijk9\n14\naeiouAbcdefgh6\n17\naebcdefghijklmn12\n",
+      "output": "b0\nabc1\naebcd2\nbcdefghijkl10\nabcdefghijklm11\naeibcde3\naebcdefghijklmn12\naeiobcdef4\naeioubcdefg5\naeibcdefghijklmno13\naeiouAbcdefgh6\naeiouAEbcdefghi7\naeiouAEIbcdefghij8\naeiouAEIObcdefghijk9"
+    },
+    {
+      "name": "systematic_size_15",
+      "input": "15\n20\naeiouAEIObcdefghijk9\n6\naebcd2\n4\nabc1\n18\naeiouAEIbcdefghij8\n15\nabcdefghijklm11\n13\nbcdefghijkl10\n10\naeiobcdef4\n19\naeibcdefghijklmno13\n8\naeibcde3\n16\naeiouAEbcdefghi7\n17\naebcdefghijklmn12\n21\naeiobcdefghijklmnop14\n12\naeioubcdefg5\n14\naeiouAbcdefgh6\n2\nb0\n",
+      "output": "b0\nabc1\naebcd2\nbcdefghijkl10\nabcdefghijklm11\naeibcde3\naebcdefghijklmn12\naeiobcdef4\naeioubcdefg5\naeibcdefghijklmno13\naeiouAbcdefgh6\naeiobcdefghijklmnop14\naeiouAEbcdefghi7\naeiouAEIbcdefghij8\naeiouAEIObcdefghijk9"
+    },
+    {
+      "name": "systematic_size_16",
+      "input": "16\n12\naeioubcdefg5\n19\naeibcdefghijklmno13\n4\nabc1\n15\nabcdefghijklm11\n2\nb0\n6\naebcd2\n14\naeiouAbcdefgh6\n17\naebcdefghijklmn12\n21\naeiobcdefghijklmnop14\n10\naeiobcdef4\n8\naeibcde3\n23\naeioubcdefghijklmnopq15\n20\naeiouAEIObcdefghijk9\n13\nbcdefghijkl10\n18\naeiouAEIbcdefghij8\n16\naeiouAEbcdefghi7\n",
+      "output": "b0\nabc1\naebcd2\nbcdefghijkl10\nabcdefghijklm11\naeibcde3\naebcdefghijklmn12\naeiobcdef4\naeioubcdefg5\naeibcdefghijklmno13\naeiouAbcdefgh6\naeiobcdefghijklmnop14\naeioubcdefghijklmnopq15\naeiouAEbcdefghi7\naeiouAEIbcdefghij8\naeiouAEIObcdefghijk9"
+    },
+    {
+      "name": "systematic_size_17",
+      "input": "17\n23\naeioubcdefghijklmnopq15\n2\nb0\n15\nabcdefghijklm11\n19\naeibcdefghijklmno13\n21\naeiobcdefghijklmnop14\n6\naebcd2\n12\naeioubcdefg5\n14\naeiouAbcdefgh6\n8\naeibcde3\n17\naebcdefghijklmn12\n13\nbcdefghijkl10\n20\naeiouAEIObcdefghijk9\n10\naeiobcdef4\n18\naeiouAEIbcdefghij8\n25\naeiouAbcdefghijklmnopqr16\n16\naeiouAEbcdefghi7\n4\nabc1\n",
+      "output": "b0\nabc1\naebcd2\nbcdefghijkl10\nabcdefghijklm11\naeibcde3\naebcdefghijklmn12\naeiobcdef4\naeioubcdefg5\naeibcdefghijklmno13\naeiouAbcdefgh6\naeiobcdefghijklmnop14\naeioubcdefghijklmnopq15\naeiouAEbcdefghi7\naeiouAbcdefghijklmnopqr16\naeiouAEIbcdefghij8\naeiouAEIObcdefghijk9"
+    },
+    {
+      "name": "systematic_size_18",
+      "input": "18\n13\nbcdefghijkl10\n12\naeioubcdefg5\n4\nabc1\n16\naeiouAEbcdefghi7\n2\nb0\n20\naeiouAEIObcdefghijk9\n25\naeiouAbcdefghijklmnopqr16\n23\naeioubcdefghijklmnopq15\n27\naeiouAEbcdefghijklmnopqrs17\n18\naeiouAEIbcdefghij8\n21\naeiobcdefghijklmnop14\n17\naebcdefghijklmn12\n19\naeibcdefghijklmno13\n15\nabcdefghijklm11\n14\naeiouAbcdefgh6\n6\naebcd2\n8\naeibcde3\n10\naeiobcdef4\n",
+      "output": "b0\nabc1\naebcd2\nbcdefghijkl10\nabcdefghijklm11\naeibcde3\naebcdefghijklmn12\naeiobcdef4\naeioubcdefg5\naeibcdefghijklmno13\naeiouAbcdefgh6\naeiobcdefghijklmnop14\naeioubcdefghijklmnopq15\naeiouAEbcdefghi7\naeiouAbcdefghijklmnopqr16\naeiouAEIbcdefghij8\naeiouAEbcdefghijklmnopqrs17\naeiouAEIObcdefghijk9"
+    },
+    {
+      "name": "systematic_size_19",
+      "input": "19\n15\nabcdefghijklm11\n13\nbcdefghijkl10\n17\naebcdefghijklmn12\n20\naeiouAEIObcdefghijk9\n27\naeiouAEbcdefghijklmnopqrs17\n21\naeiobcdefghijklmnop14\n4\nabc1\n8\naeibcde3\n23\naeioubcdefghijklmnopq15\n19\naeibcdefghijklmno13\n16\naeiouAEbcdefghi7\n10\naeiobcdef4\n12\naeioubcdefg5\n25\naeiouAbcdefghijklmnopqr16\n2\nb0\n29\naeiouAEIbcdefghijklmnopqrst18\n14\naeiouAbcdefgh6\n18\naeiouAEIbcdefghij8\n6\naebcd2\n",
+      "output": "b0\nabc1\naebcd2\nbcdefghijkl10\nabcdefghijklm11\naeibcde3\naebcdefghijklmn12\naeiobcdef4\naeioubcdefg5\naeibcdefghijklmno13\naeiouAbcdefgh6\naeiobcdefghijklmnop14\naeioubcdefghijklmnopq15\naeiouAEbcdefghi7\naeiouAbcdefghijklmnopqr16\naeiouAEIbcdefghij8\naeiouAEbcdefghijklmnopqrs17\naeiouAEIObcdefghijk9\naeiouAEIbcdefghijklmnopqrst18"
+    },
+    {
+      "name": "systematic_size_20",
+      "input": "20\n6\naebcd2\n2\nb0\n29\naeiouAEIbcdefghijklmnopqrst18\n17\naebcdefghijklmn12\n18\naeiouAEIbcdefghij8\n8\naeibcde3\n16\naeiouAEbcdefghi7\n19\naeibcdefghijklmno13\n20\naeiouAEIObcdefghijk9\n23\naeioubcdefghijklmnopq15\n14\naeiouAbcdefgh6\n4\nabc1\n15\nabcdefghijklm11\n13\nbcdefghijkl10\n10\naeiobcdef4\n21\naeiobcdefghijklmnop14\n31\naeiouAEIObcdefghijklmnopqrstu19\n25\naeiouAbcdefghijklmnopqr16\n12\naeioubcdefg5\n27\naeiouAEbcdefghijklmnopqrs17\n",
+      "output": "b0\nabc1\naebcd2\nbcdefghijkl10\nabcdefghijklm11\naeibcde3\naebcdefghijklmn12\naeiobcdef4\naeioubcdefg5\naeibcdefghijklmno13\naeiouAbcdefgh6\naeiobcdefghijklmnop14\naeioubcdefghijklmnopq15\naeiouAEbcdefghi7\naeiouAbcdefghijklmnopqr16\naeiouAEIbcdefghij8\naeiouAEbcdefghijklmnopqrs17\naeiouAEIObcdefghijk9\naeiouAEIbcdefghijklmnopqrst18\naeiouAEIObcdefghijklmnopqrstu19"
+    },
+    {
+      "name": "systematic_size_21",
+      "input": "21\n24\nbcdefghijklmnopqrstub20x\n8\naeibcde3\n23\naeioubcdefghijklmnopq15\n18\naeiouAEIbcdefghij8\n12\naeioubcdefg5\n17\naebcdefghijklmn12\n21\naeiobcdefghijklmnop14\n4\nabc1\n20\naeiouAEIObcdefghijk9\n10\naeiobcdef4\n14\naeiouAbcdefgh6\n27\naeiouAEbcdefghijklmnopqrs17\n31\naeiouAEIObcdefghijklmnopqrstu19\n25\naeiouAbcdefghijklmnopqr16\n19\naeibcdefghijklmno13\n2\nb0\n29\naeiouAEIbcdefghijklmnopqrst18\n16\naeiouAEbcdefghi7\n15\nabcdefghijklm11\n6\naebcd2\n13\nbcdefghijkl10\n",
+      "output": "b0\nabc1\naebcd2\nbcdefghijkl10\nabcdefghijklm11\naeibcde3\naebcdefghijklmn12\nbcdefghijklmnopqrstub20x\naeiobcdef4\naeioubcdefg5\naeibcdefghijklmno13\naeiouAbcdefgh6\naeiobcdefghijklmnop14\naeioubcdefghijklmnopq15\naeiouAEbcdefghi7\naeiouAbcdefghijklmnopqr16\naeiouAEIbcdefghij8\naeiouAEbcdefghijklmnopqrs17\naeiouAEIObcdefghijk9\naeiouAEIbcdefghijklmnopqrst18\naeiouAEIObcdefghijklmnopqrstu19"
+    },
+    {
+      "name": "systematic_size_22",
+      "input": "22\n29\naeiouAEIbcdefghijklmnopqrst18\n23\naeioubcdefghijklmnopq15\n25\naeiouAbcdefghijklmnopqr16\n15\nabcdefghijklm11\n4\nabc1\n18\naeiouAEIbcdefghij8\n19\naeibcdefghijklmno13\n27\naeiouAEbcdefghijklmnopqrs17\n31\naeiouAEIObcdefghijklmnopqrstu19\n6\naebcd2\n13\nbcdefghijkl10\n2\nb0\n17\naebcdefghijklmn12\n20\naeiouAEIObcdefghijk9\n16\naeiouAEbcdefghi7\n12\naeioubcdefg5\n21\naeiobcdefghijklmnop14\n24\nbcdefghijklmnopqrstub20x\n8\naeibcde3\n26\nabcdefghijklmnopqrstubc21x\n14\naeiouAbcdefgh6\n10\naeiobcdef4\n",
+      "output": "b0\nabc1\naebcd2\nbcdefghijkl10\nabcdefghijklm11\naeibcde3\naebcdefghijklmn12\nbcdefghijklmnopqrstub20x\naeiobcdef4\nabcdefghijklmnopqrstubc21x\naeioubcdefg5\naeibcdefghijklmno13\naeiouAbcdefgh6\naeiobcdefghijklmnop14\naeioubcdefghijklmnopq15\naeiouAEbcdefghi7\naeiouAbcdefghijklmnopqr16\naeiouAEIbcdefghij8\naeiouAEbcdefghijklmnopqrs17\naeiouAEIObcdefghijk9\naeiouAEIbcdefghijklmnopqrst18\naeiouAEIObcdefghijklmnopqrstu19"
+    },
+    {
+      "name": "systematic_size_23",
+      "input": "23\n20\naeiouAEIObcdefghijk9\n6\naebcd2\n8\naeibcde3\n26\nabcdefghijklmnopqrstubc21x\n25\naeiouAbcdefghijklmnopqr16\n19\naeibcdefghijklmno13\n28\naebcdefghijklmnopqrstubcd22x\n16\naeiouAEbcdefghi7\n15\nabcdefghijklm11\n14\naeiouAbcdefgh6\n23\naeioubcdefghijklmnopq15\n13\nbcdefghijkl10\n2\nb0\n27\naeiouAEbcdefghijklmnopqrs17\n12\naeioubcdefg5\n10\naeiobcdef4\n31\naeiouAEIObcdefghijklmnopqrstu19\n24\nbcdefghijklmnopqrstub20x\n18\naeiouAEIbcdefghij8\n21\naeiobcdefghijklmnop14\n29\naeiouAEIbcdefghijklmnopqrst18\n4\nabc1\n17\naebcdefghijklmn12\n",
+      "output": "b0\nabc1\naebcd2\nbcdefghijkl10\nabcdefghijklm11\naeibcde3\naebcdefghijklmn12\nbcdefghijklmnopqrstub20x\naeiobcdef4\nabcdefghijklmnopqrstubc21x\naeioubcdefg5\naeibcdefghijklmno13\naebcdefghijklmnopqrstubcd22x\naeiouAbcdefgh6\naeiobcdefghijklmnop14\naeioubcdefghijklmnopq15\naeiouAEbcdefghi7\naeiouAbcdefghijklmnopqr16\naeiouAEIbcdefghij8\naeiouAEbcdefghijklmnopqrs17\naeiouAEIObcdefghijk9\naeiouAEIbcdefghijklmnopqrst18\naeiouAEIObcdefghijklmnopqrstu19"
+    },
+    {
+      "name": "systematic_size_24",
+      "input": "24\n19\naeibcdefghijklmno13\n18\naeiouAEIbcdefghij8\n8\naeibcde3\n6\naebcd2\n17\naebcdefghijklmn12\n23\naeioubcdefghijklmnopq15\n26\nabcdefghijklmnopqrstubc21x\n25\naeiouAbcdefghijklmnopqr16\n28\naebcdefghijklmnopqrstubcd22x\n10\naeiobcdef4\n12\naeioubcdefg5\n4\nabc1\n21\naeiobcdefghijklmnop14\n29\naeiouAEIbcdefghijklmnopqrst18\n2\nb0\n24\nbcdefghijklmnopqrstub20x\n13\nbcdefghijkl10\n16\naeiouAEbcdefghi7\n14\naeiouAbcdefgh6\n20\naeiouAEIObcdefghijk9\n15\nabcdefghijklm11\n27\naeiouAEbcdefghijklmnopqrs17\n30\naeibcdefghijklmnopqrstubcde23x\n31\naeiouAEIObcdefghijklmnopqrstu19\n",
+      "output": "b0\nabc1\naebcd2\nbcdefghijkl10\nabcdefghijklm11\naeibcde3\naebcdefghijklmn12\nbcdefghijklmnopqrstub20x\naeiobcdef4\nabcdefghijklmnopqrstubc21x\naeioubcdefg5\naeibcdefghijklmno13\naebcdefghijklmnopqrstubcd22x\naeiouAbcdefgh6\naeiobcdefghijklmnop14\naeioubcdefghijklmnopq15\naeibcdefghijklmnopqrstubcde23x\naeiouAEbcdefghi7\naeiouAbcdefghijklmnopqr16\naeiouAEIbcdefghij8\naeiouAEbcdefghijklmnopqrs17\naeiouAEIObcdefghijk9\naeiouAEIbcdefghijklmnopqrst18\naeiouAEIObcdefghijklmnopqrstu19"
+    },
+    {
+      "name": "systematic_size_25",
+      "input": "25\n8\naeibcde3\n32\naeiobcdefghijklmnopqrstubcdef24x\n12\naeioubcdefg5\n26\nabcdefghijklmnopqrstubc21x\n14\naeiouAbcdefgh6\n4\nabc1\n25\naeiouAbcdefghijklmnopqr16\n23\naeioubcdefghijklmnopq15\n24\nbcdefghijklmnopqrstub20x\n31\naeiouAEIObcdefghijklmnopqrstu19\n20\naeiouAEIObcdefghijk9\n10\naeiobcdef4\n30\naeibcdefghijklmnopqrstubcde23x\n2\nb0\n21\naeiobcdefghijklmnop14\n13\nbcdefghijkl10\n16\naeiouAEbcdefghi7\n15\nabcdefghijklm11\n18\naeiouAEIbcdefghij8\n19\naeibcdefghijklmno13\n6\naebcd2\n27\naeiouAEbcdefghijklmnopqrs17\n28\naebcdefghijklmnopqrstubcd22x\n17\naebcdefghijklmn12\n29\naeiouAEIbcdefghijklmnopqrst18\n",
+      "output": "b0\nabc1\naebcd2\nbcdefghijkl10\nabcdefghijklm11\naeibcde3\naebcdefghijklmn12\nbcdefghijklmnopqrstub20x\naeiobcdef4\nabcdefghijklmnopqrstubc21x\naeioubcdefg5\naeibcdefghijklmno13\naebcdefghijklmnopqrstubcd22x\naeiouAbcdefgh6\naeiobcdefghijklmnop14\naeioubcdefghijklmnopq15\naeibcdefghijklmnopqrstubcde23x\naeiouAEbcdefghi7\naeiouAbcdefghijklmnopqr16\naeiobcdefghijklmnopqrstubcdef24x\naeiouAEIbcdefghij8\naeiouAEbcdefghijklmnopqrs17\naeiouAEIObcdefghijk9\naeiouAEIbcdefghijklmnopqrst18\naeiouAEIObcdefghijklmnopqrstu19"
+    },
+    {
+      "name": "systematic_size_26",
+      "input": "26\n30\naeibcdefghijklmnopqrstubcde23x\n29\naeiouAEIbcdefghijklmnopqrst18\n8\naeibcde3\n13\nbcdefghijkl10\n18\naeiouAEIbcdefghij8\n33\naeioubcdefghijklmnopqrstubcdefg25\n4\nabc1\n17\naebcdefghijklmn12\n26\nabcdefghijklmnopqrstubc21x\n27\naeiouAEbcdefghijklmnopqrs17\n14\naeiouAbcdefgh6\n6\naebcd2\n23\naeioubcdefghijklmnopq15\n15\nabcdefghijklm11\n21\naeiobcdefghijklmnop14\n32\naeiobcdefghijklmnopqrstubcdef24x\n19\naeibcdefghijklmno13\n2\nb0\n25\naeiouAbcdefghijklmnopqr16\n10\naeiobcdef4\n16\naeiouAEbcdefghi7\n12\naeioubcdefg5\n28\naebcdefghijklmnopqrstubcd22x\n24\nbcdefghijklmnopqrstub20x\n31\naeiouAEIObcdefghijklmnopqrstu19\n20\naeiouAEIObcdefghijk9\n",
+      "output": "b0\nabc1\naebcd2\nbcdefghijkl10\nabcdefghijklm11\naeibcde3\naebcdefghijklmn12\nbcdefghijklmnopqrstub20x\naeiobcdef4\nabcdefghijklmnopqrstubc21x\naeioubcdefg5\naeibcdefghijklmno13\naebcdefghijklmnopqrstubcd22x\naeiouAbcdefgh6\naeiobcdefghijklmnop14\naeioubcdefghijklmnopq15\naeibcdefghijklmnopqrstubcde23x\naeiouAEbcdefghi7\naeiouAbcdefghijklmnopqr16\naeiobcdefghijklmnopqrstubcdef24x\naeiouAEIbcdefghij8\naeiouAEbcdefghijklmnopqrs17\naeioubcdefghijklmnopqrstubcdefg25\naeiouAEIObcdefghijk9\naeiouAEIbcdefghijklmnopqrst18\naeiouAEIObcdefghijklmnopqrstu19"
+    },
+    {
+      "name": "systematic_size_27",
+      "input": "27\n27\naeiouAEbcdefghijklmnopqrs17\n8\naeibcde3\n10\naeiobcdef4\n12\naeioubcdefg5\n15\nabcdefghijklm11\n29\naeiouAEIbcdefghijklmnopqrst18\n20\naeiouAEIObcdefghijk9\n18\naeiouAEIbcdefghij8\n28\naebcdefghijklmnopqrstubcd22x\n24\nbcdefghijklmnopqrstub20x\n17\naebcdefghijklmn12\n32\naeiobcdefghijklmnopqrstubcdef24x\n26\nabcdefghijklmnopqrstubc21x\n2\nb0\n4\nabc1\n23\naeioubcdefghijklmnopq15\n6\naebcd2\n21\naeiobcdefghijklmnop14\n35\naeiouAbcdefghijklmnopqrstubcdefgh26\n25\naeiouAbcdefghijklmnopqr16\n14\naeiouAbcdefgh6\n33\naeioubcdefghijklmnopqrstubcdefg25\n16\naeiouAEbcdefghi7\n13\nbcdefghijkl10\n30\naeibcdefghijklmnopqrstubcde23x\n19\naeibcdefghijklmno13\n31\naeiouAEIObcdefghijklmnopqrstu19\n",
+      "output": "b0\nabc1\naebcd2\nbcdefghijkl10\nabcdefghijklm11\naeibcde3\naebcdefghijklmn12\nbcdefghijklmnopqrstub20x\naeiobcdef4\nabcdefghijklmnopqrstubc21x\naeioubcdefg5\naeibcdefghijklmno13\naebcdefghijklmnopqrstubcd22x\naeiouAbcdefgh6\naeiobcdefghijklmnop14\naeioubcdefghijklmnopq15\naeibcdefghijklmnopqrstubcde23x\naeiouAEbcdefghi7\naeiouAbcdefghijklmnopqr16\naeiobcdefghijklmnopqrstubcdef24x\naeiouAEIbcdefghij8\naeiouAEbcdefghijklmnopqrs17\naeioubcdefghijklmnopqrstubcdefg25\naeiouAEIObcdefghijk9\naeiouAEIbcdefghijklmnopqrst18\naeiouAbcdefghijklmnopqrstubcdefgh26\naeiouAEIObcdefghijklmnopqrstu19"
+    },
+    {
+      "name": "systematic_size_28",
+      "input": "28\n28\naebcdefghijklmnopqrstubcd22x\n16\naeiouAEbcdefghi7\n18\naeiouAEIbcdefghij8\n10\naeiobcdef4\n12\naeioubcdefg5\n15\nabcdefghijklm11\n20\naeiouAEIObcdefghijk9\n4\nabc1\n23\naeioubcdefghijklmnopq15\n17\naebcdefghijklmn12\n29\naeiouAEIbcdefghijklmnopqrst18\n32\naeiobcdefghijklmnopqrstubcdef24x\n31\naeiouAEIObcdefghijklmnopqrstu19\n6\naebcd2\n37\naeiouAEbcdefghijklmnopqrstubcdefghi27\n19\naeibcdefghijklmno13\n13\nbcdefghijkl10\n14\naeiouAbcdefgh6\n30\naeibcdefghijklmnopqrstubcde23x\n33\naeioubcdefghijklmnopqrstubcdefg25\n27\naeiouAEbcdefghijklmnopqrs17\n8\naeibcde3\n25\naeiouAbcdefghijklmnopqr16\n35\naeiouAbcdefghijklmnopqrstubcdefgh26\n21\naeiobcdefghijklmnop14\n26\nabcdefghijklmnopqrstubc21x\n24\nbcdefghijklmnopqrstub20x\n2\nb0\n",
+      "output": "b0\nabc1\naebcd2\nbcdefghijkl10\nabcdefghijklm11\naeibcde3\naebcdefghijklmn12\nbcdefghijklmnopqrstub20x\naeiobcdef4\nabcdefghijklmnopqrstubc21x\naeioubcdefg5\naeibcdefghijklmno13\naebcdefghijklmnopqrstubcd22x\naeiouAbcdefgh6\naeiobcdefghijklmnop14\naeioubcdefghijklmnopq15\naeibcdefghijklmnopqrstubcde23x\naeiouAEbcdefghi7\naeiouAbcdefghijklmnopqr16\naeiobcdefghijklmnopqrstubcdef24x\naeiouAEIbcdefghij8\naeiouAEbcdefghijklmnopqrs17\naeioubcdefghijklmnopqrstubcdefg25\naeiouAEIObcdefghijk9\naeiouAEIbcdefghijklmnopqrst18\naeiouAbcdefghijklmnopqrstubcdefgh26\naeiouAEIObcdefghijklmnopqrstu19\naeiouAEbcdefghijklmnopqrstubcdefghi27"
+    },
+    {
+      "name": "systematic_size_29",
+      "input": "29\n10\naeiobcdef4\n26\nabcdefghijklmnopqrstubc21x\n27\naeiouAEbcdefghijklmnopqrs17\n39\naeiouAEIbcdefghijklmnopqrstubcdefghij28\n23\naeioubcdefghijklmnopq15\n30\naeibcdefghijklmnopqrstubcde23x\n31\naeiouAEIObcdefghijklmnopqrstu19\n18\naeiouAEIbcdefghij8\n6\naebcd2\n32\naeiobcdefghijklmnopqrstubcdef24x\n14\naeiouAbcdefgh6\n13\nbcdefghijkl10\n8\naeibcde3\n35\naeiouAbcdefghijklmnopqrstubcdefgh26\n17\naebcdefghijklmn12\n24\nbcdefghijklmnopqrstub20x\n2\nb0\n20\naeiouAEIObcdefghijk9\n37\naeiouAEbcdefghijklmnopqrstubcdefghi27\n29\naeiouAEIbcdefghijklmnopqrst18\n25\naeiouAbcdefghijklmnopqr16\n21\naeiobcdefghijklmnop14\n19\naeibcdefghijklmno13\n15\nabcdefghijklm11\n16\naeiouAEbcdefghi7\n4\nabc1\n28\naebcdefghijklmnopqrstubcd22x\n12\naeioubcdefg5\n33\naeioubcdefghijklmnopqrstubcdefg25\n",
+      "output": "b0\nabc1\naebcd2\nbcdefghijkl10\nabcdefghijklm11\naeibcde3\naebcdefghijklmn12\nbcdefghijklmnopqrstub20x\naeiobcdef4\nabcdefghijklmnopqrstubc21x\naeioubcdefg5\naeibcdefghijklmno13\naebcdefghijklmnopqrstubcd22x\naeiouAbcdefgh6\naeiobcdefghijklmnop14\naeioubcdefghijklmnopq15\naeibcdefghijklmnopqrstubcde23x\naeiouAEbcdefghi7\naeiouAbcdefghijklmnopqr16\naeiobcdefghijklmnopqrstubcdef24x\naeiouAEIbcdefghij8\naeiouAEbcdefghijklmnopqrs17\naeioubcdefghijklmnopqrstubcdefg25\naeiouAEIObcdefghijk9\naeiouAEIbcdefghijklmnopqrst18\naeiouAbcdefghijklmnopqrstubcdefgh26\naeiouAEIObcdefghijklmnopqrstu19\naeiouAEbcdefghijklmnopqrstubcdefghi27\naeiouAEIbcdefghijklmnopqrstubcdefghij28"
+    },
+    {
+      "name": "systematic_size_30",
+      "input": "30\n29\naeiouAEIbcdefghijklmnopqrst18\n26\nabcdefghijklmnopqrstubc21x\n25\naeiouAbcdefghijklmnopqr16\n41\naeiouAEIObcdefghijklmnopqrstubcdefghijk29\n19\naeibcdefghijklmno13\n17\naebcdefghijklmn12\n12\naeioubcdefg5\n16\naeiouAEbcdefghi7\n32\naeiobcdefghijklmnopqrstubcdef24x\n23\naeioubcdefghijklmnopq15\n20\naeiouAEIObcdefghijk9\n18\naeiouAEIbcdefghij8\n28\naebcdefghijklmnopqrstubcd22x\n6\naebcd2\n27\naeiouAEbcdefghijklmnopqrs17\n2\nb0\n24\nbcdefghijklmnopqrstub20x\n30\naeibcdefghijklmnopqrstubcde23x\n39\naeiouAEIbcdefghijklmnopqrstubcdefghij28\n37\naeiouAEbcdefghijklmnopqrstubcdefghi27\n21\naeiobcdefghijklmnop14\n4\nabc1\n13\nbcdefghijkl10\n10\naeiobcdef4\n33\naeioubcdefghijklmnopqrstubcdefg25\n15\nabcdefghijklm11\n31\naeiouAEIObcdefghijklmnopqrstu19\n14\naeiouAbcdefgh6\n35\naeiouAbcdefghijklmnopqrstubcdefgh26\n8\naeibcde3\n",
+      "output": "b0\nabc1\naebcd2\nbcdefghijkl10\nabcdefghijklm11\naeibcde3\naebcdefghijklmn12\nbcdefghijklmnopqrstub20x\naeiobcdef4\nabcdefghijklmnopqrstubc21x\naeioubcdefg5\naeibcdefghijklmno13\naebcdefghijklmnopqrstubcd22x\naeiouAbcdefgh6\naeiobcdefghijklmnop14\naeioubcdefghijklmnopq15\naeibcdefghijklmnopqrstubcde23x\naeiouAEbcdefghi7\naeiouAbcdefghijklmnopqr16\naeiobcdefghijklmnopqrstubcdef24x\naeiouAEIbcdefghij8\naeiouAEbcdefghijklmnopqrs17\naeioubcdefghijklmnopqrstubcdefg25\naeiouAEIObcdefghijk9\naeiouAEIbcdefghijklmnopqrst18\naeiouAbcdefghijklmnopqrstubcdefgh26\naeiouAEIObcdefghijklmnopqrstu19\naeiouAEbcdefghijklmnopqrstubcdefghi27\naeiouAEIbcdefghijklmnopqrstubcdefghij28\naeiouAEIObcdefghijklmnopqrstubcdefghijk29"
+    },
+    {
+      "name": "random_case_1",
+      "input": "3\n4\nTnpE\n22\nA4akxnXEZhLB9Jz5Xxnmpd\n2\nQ3\n",
+      "output": "Q3\nTnpE\nA4akxnXEZhLB9Jz5Xxnmpd"
+    },
+    {
+      "name": "random_case_2",
+      "input": "10\n1\nj\n32\nfVOHBIEl13COs5R2BdQCuc5M71uJKjq1\n22\n68tfnNhg9l2RnVr4Brv98f\n24\nzEa3yVta4aGyDAZOYXQIG0Ne\n15\nVhcBN2UnMznUVZR\n17\n2B6k6rgDGoZkz1TpQ\n5\n5tcc2\n12\nl5mNHvplBnSS\n6\nTjO9yE\n18\nV3tKoMlFaLU7W7vRg3\n",
+      "output": "j\n5tcc2\nl5mNHvplBnSS\n68tfnNhg9l2RnVr4Brv98f\n2B6k6rgDGoZkz1TpQ\nTjO9yE\nVhcBN2UnMznUVZR\nV3tKoMlFaLU7W7vRg3\nfVOHBIEl13COs5R2BdQCuc5M71uJKjq1\nzEa3yVta4aGyDAZOYXQIG0Ne"
+    },
+    {
+      "name": "random_case_3",
+      "input": "13\n28\nZqRV4or413yqcXe4uSx96tJj7YT0\n22\nfussUdRRj5bH7W7aLifszt\n3\nIHw\n5\ncZJ8L\n17\nPaeJqqecHKiEvTMqp\n33\nwC9NZ4ONoR8Q9lQ8eHT9niNinv1be8L4D\n12\ny1dP914Qp2zW\n16\nNZ7eybkBUAy9Dcmx\n10\nuytYh3LbA4\n1\nP\n20\nWhDhpgbfWrsL9leSE44o\n4\nSPu2\n6\nbktQkc\n",
+      "output": "P\ncZJ8L\nbktQkc\ny1dP914Qp2zW\nIHw\nSPu2\nuytYh3LbA4\nNZ7eybkBUAy9Dcmx\nWhDhpgbfWrsL9leSE44o\nZqRV4or413yqcXe4uSx96tJj7YT0\nfussUdRRj5bH7W7aLifszt\nPaeJqqecHKiEvTMqp\nwC9NZ4ONoR8Q9lQ8eHT9niNinv1be8L4D"
+    },
+    {
+      "name": "random_case_4",
+      "input": "4\n11\nGnnou1XmC8j\n23\nzCkfHRhgHH5VMGcsFSYYqLH\n20\nEq53dFybX5nPFNq5T5zQ\n6\nXtInJM\n",
+      "output": "zCkfHRhgHH5VMGcsFSYYqLH\nXtInJM\nEq53dFybX5nPFNq5T5zQ\nGnnou1XmC8j"
+    },
+    {
+      "name": "random_case_5",
+      "input": "3\n1\nT\n6\nWfvSK4\n25\nCHG2tVZqCmOCtOsHCCaGBh8sv\n",
+      "output": "T\nWfvSK4\nCHG2tVZqCmOCtOsHCCaGBh8sv"
+    },
+    {
+      "name": "random_case_6",
+      "input": "9\n26\ne3rJvvJVOSidRKyXSxjCqLnEuE\n25\nXx242sDmBsDdh43qPzOc6mo3A\n27\nDLq8sjldGIGZTtCJVCYYhEkdlI1\n30\natDQtvGhxWs0vaowhroY1Ij8mbLTvD\n8\nrcQKaWJe\n15\ngAeRmKCtGKefD1j\n9\nMxa2BOp0s\n23\nNtJ1NAmgdLOkGDtSJaawbhY\n2\n9f\n",
+      "output": "9f\nrcQKaWJe\nMxa2BOp0s\ngAeRmKCtGKefD1j\nXx242sDmBsDdh43qPzOc6mo3A\nDLq8sjldGIGZTtCJVCYYhEkdlI1\nNtJ1NAmgdLOkGDtSJaawbhY\natDQtvGhxWs0vaowhroY1Ij8mbLTvD\ne3rJvvJVOSidRKyXSxjCqLnEuE"
+    },
+    {
+      "name": "random_case_7",
+      "input": "7\n13\nP9gd077xfI3ji\n19\nOPgz8GYJPS8WYxSkoWm\n9\n6QE48vmrw\n27\ncXEjYEBtviNX25KmusJacMkRsrn\n18\nFhPOuLQcW3RrhVmb3p\n15\nt6bpLvmWIY3VzEE\n7\n908ZVpH\n",
+      "output": "908ZVpH\n6QE48vmrw\nP9gd077xfI3ji\nFhPOuLQcW3RrhVmb3p\nOPgz8GYJPS8WYxSkoWm\nt6bpLvmWIY3VzEE\ncXEjYEBtviNX25KmusJacMkRsrn"
+    },
+    {
+      "name": "random_case_8",
+      "input": "14\n18\nF5A4jsWbm25lIwk7gP\n17\nxtkjINdwxgdAANDnq\n1\nk\n32\ntkcPqexNhNdfIEMSdYkayrhJwRPls2dw\n16\nRxOWsPFn7yktWNpX\n7\nskWwmUo\n24\nZkxQAbLMlvSXU3VmFhhY8JiP\n19\nEHm5R4pR6is84orgMsw\n21\n4Jwy09thP4FQbLmQUHgJk\n23\nMMCPeunBweXVZU5sU5z7HEx\n22\nif8jt6NnvvXdWdRXV3y8KX\n12\n5FkMcPAVTAEl\n6\nSk7RkL\n27\nSkLLrV2M5REmWUnYPAg8o7Vpawj\n",
+      "output": "k\nSk7RkL\nRxOWsPFn7yktWNpX\n4Jwy09thP4FQbLmQUHgJk\nif8jt6NnvvXdWdRXV3y8KX\nskWwmUo\nF5A4jsWbm25lIwk7gP\n5FkMcPAVTAEl\nxtkjINdwxgdAANDnq\nEHm5R4pR6is84orgMsw\nZkxQAbLMlvSXU3VmFhhY8JiP\ntkcPqexNhNdfIEMSdYkayrhJwRPls2dw\nSkLLrV2M5REmWUnYPAg8o7Vpawj\nMMCPeunBweXVZU5sU5z7HEx"
+    },
+    {
+      "name": "random_case_9",
+      "input": "2\n25\n49jkLGlCk68p70FAzHV2wCqg6\n7\nfarwv1U\n",
+      "output": "49jkLGlCk68p70FAzHV2wCqg6\nfarwv1U"
+    },
+    {
+      "name": "random_case_10",
+      "input": "7\n34\nFr4BIpx1Nfk1vVIOXPsdcBiiDA8f1PCqXH\n21\nO8PLI5QN1trCBCgv8uWA7\n6\nQ6HhPf\n26\nqJxn1JpGJebRwjmEKU8tshlryi\n13\ndrNy0spfo7dPF\n28\nYaJSbKdxDyqLVKNAynz3k5NwUdTx\n33\nfr4vssEhHsQAJ8qO1yjs7prd1GFNTaIz0\n",
+      "output": "Q6HhPf\ndrNy0spfo7dPF\nYaJSbKdxDyqLVKNAynz3k5NwUdTx\nO8PLI5QN1trCBCgv8uWA7\nqJxn1JpGJebRwjmEKU8tshlryi\nfr4vssEhHsQAJ8qO1yjs7prd1GFNTaIz0\nFr4BIpx1Nfk1vVIOXPsdcBiiDA8f1PCqXH"
+    },
+    {
+      "name": "random_case_11",
+      "input": "10\n6\nBeOnse\n19\nCPxYEFRsoo4hyZXBGMT\n18\nkGF9p5oXoyAuETrzQX\n26\nmYmCXbzU6BHqhe7M1FsxPA2spg\n25\n2Uc8uXsEYFaLNJT4N9GfOMyyz\n1\ne\n10\nPTQRlWhiAr\n13\n33fsvsiiGbtjD\n28\nqLf0ORsS6HfDwFKQ5NtzpUl2hGon\n22\nulUJUN5hNSuaXjEzo3kAxq\n",
+      "output": "e\nPTQRlWhiAr\n33fsvsiiGbtjD\nBeOnse\nCPxYEFRsoo4hyZXBGMT\nmYmCXbzU6BHqhe7M1FsxPA2spg\nqLf0ORsS6HfDwFKQ5NtzpUl2hGon\nkGF9p5oXoyAuETrzQX\n2Uc8uXsEYFaLNJT4N9GfOMyyz\nulUJUN5hNSuaXjEzo3kAxq"
+    },
+    {
+      "name": "random_case_12",
+      "input": "2\n33\ny0EriGiFyWIzbwTPjLeX6Zw5Tda6A1Ovr\n1\nb\n",
+      "output": "b\ny0EriGiFyWIzbwTPjLeX6Zw5Tda6A1Ovr"
+    },
+    {
+      "name": "random_case_13",
+      "input": "12\n25\nI3dkH4yIM5XEnk7WambudKpFo\n16\nvxotYGYHLeCyiA1B\n11\nr6d9KWVf4eP\n13\nkx1OVIZbwDCsc\n23\nnehzuFcngIvPIgNBb6yAMSp\n3\nZwr\n20\nNkTB0nDLoKlo5F7TcY3X\n9\n65f8c8zQZ\n28\nPP55op774DOQ2IytfCyihlokIoY8\n18\nXhCyiu17LG2UWPdj1c\n10\n0cVFxC9MHO\n2\nWo\n",
+      "output": "Zwr\n65f8c8zQZ\nWo\n0cVFxC9MHO\nr6d9KWVf4eP\nkx1OVIZbwDCsc\nNkTB0nDLoKlo5F7TcY3X\nXhCyiu17LG2UWPdj1c\nvxotYGYHLeCyiA1B\nnehzuFcngIvPIgNBb6yAMSp\nI3dkH4yIM5XEnk7WambudKpFo\nPP55op774DOQ2IytfCyihlokIoY8"
+    },
+    {
+      "name": "random_case_14",
+      "input": "7\n32\nYTgPmf3xDSqbdPckz6EtuQ4ydvuX2R5z\n7\nKfpz8fv\n6\nu44LnF\n24\nur6OdD4fjJbjSgtCi9ahA1nS\n29\nHNpTvd0CdEdfTDpODm59nuur9LFDM\n10\nEx41SA4NAz\n8\np4mKZqev\n",
+      "output": "Kfpz8fv\nu44LnF\np4mKZqev\nEx41SA4NAz\nYTgPmf3xDSqbdPckz6EtuQ4ydvuX2R5z\nHNpTvd0CdEdfTDpODm59nuur9LFDM\nur6OdD4fjJbjSgtCi9ahA1nS"
+    },
+    {
+      "name": "random_case_15",
+      "input": "4\n29\nQDX1ePIx54ng8MexWrXcKFyXUURaf\n2\nc5\n24\nXJgfUlxHMMlY4dd6TnOp5ugf\n8\ndTnNO8ER\n",
+      "output": "c5\ndTnNO8ER\nXJgfUlxHMMlY4dd6TnOp5ugf\nQDX1ePIx54ng8MexWrXcKFyXUURaf"
+    },
+    {
+      "name": "random_case_16",
+      "input": "6\n1\nJ\n18\n0YRGT4INBD7kx7szfg\n16\nXt7VRcxXzyKKbLBB\n34\neD4cQfelpl1QWZQVIcsVnquPpldynASGsV\n4\n7rnD\n22\nwp9O9CuRdDY9cEAto3KUlU\n",
+      "output": "J\n7rnD\nXt7VRcxXzyKKbLBB\n0YRGT4INBD7kx7szfg\neD4cQfelpl1QWZQVIcsVnquPpldynASGsV\nwp9O9CuRdDY9cEAto3KUlU"
+    },
+    {
+      "name": "random_case_17",
+      "input": "10\n31\nFZSPJ4IHzXkCLPRc76yjdkCm3oClIqL\n7\ncHrHC04\n25\njvStOgoUPL5qLuPACWjZcIZvH\n30\nBf31kwff3grfzKNHRxwPcjHHgQllaH\n26\nYtWz0jxjEOljE4fZgnatlKUu6v\n34\nLdPguShEiIav3jfmu1wnabDzdEJTzJIeBs\n16\n91ThhyO4ZqkNe1qO\n23\nB6G7adXFLDA7pIy2lJceJcK\n29\nQOuIzlZGwDA7pFarhZ1ezNiQZWRVB\n32\nHwskvIHvN7UHHrMCc0TITXkCYa3xiqiL\n",
+      "output": "cHrHC04\nBf31kwff3grfzKNHRxwPcjHHgQllaH\n91ThhyO4ZqkNe1qO\nFZSPJ4IHzXkCLPRc76yjdkCm3oClIqL\nB6G7adXFLDA7pIy2lJceJcK\njvStOgoUPL5qLuPACWjZcIZvH\nYtWz0jxjEOljE4fZgnatlKUu6v\nHwskvIHvN7UHHrMCc0TITXkCYa3xiqiL\nQOuIzlZGwDA7pFarhZ1ezNiQZWRVB\nLdPguShEiIav3jfmu1wnabDzdEJTzJIeBs"
+    },
+    {
+      "name": "random_case_18",
+      "input": "9\n16\nPFvQj49sTnUxlRM1\n12\ngj8OgjQijC4t\n26\nxfGntQqvfeERNqGWhvI9A0WXjn\n14\nivuheJh7gkdFZZ\n7\nDGyOUbm\n25\nEHCAj0cIoAqbTzC35DvwqVIiL\n28\nDvU5kbt9YFx8jlCsbMeQsiyHsw8J\n18\n3m48gWMNIQacOz5Ydr\n34\nFFTNHGSNEvh3ONmU7VIXxmSZOvHjm3OzwI\n",
+      "output": "PFvQj49sTnUxlRM1\nDGyOUbm\ngj8OgjQijC4t\nivuheJh7gkdFZZ\n3m48gWMNIQacOz5Ydr\nDvU5kbt9YFx8jlCsbMeQsiyHsw8J\nxfGntQqvfeERNqGWhvI9A0WXjn\nEHCAj0cIoAqbTzC35DvwqVIiL\nFFTNHGSNEvh3ONmU7VIXxmSZOvHjm3OzwI"
+    },
+    {
+      "name": "random_case_19",
+      "input": "14\n17\ncmQNm15P55WjcI2QZ\n27\no4QaGj82Bk5CJki11uvhE8iDxu5\n3\nNEA\n7\n1BQtvDs\n8\npBIUVk4d\n23\nsOOnzrYtJWcklCesLtbQswy\n31\n6DpmLNPdezFFGfsmYth6eMStIrDFM0R\n29\n4JMPZW9AUOhTvr1IKM9G8I0DJG3PC\n4\nUVOo\n28\nMgSPQCiFCVOAkextiP7jCF0CUpAT\n21\nLTxLbi9RQQKY1dRE2l68k\n9\n5Xg5TkAM4\n15\nXB0NCC9JBIUMYTn\n26\nlGB00e8JngwiQHd9ghTbB4uqAH\n",
+      "output": "1BQtvDs\n5Xg5TkAM4\ncmQNm15P55WjcI2QZ\nNEA\npBIUVk4d\nXB0NCC9JBIUMYTn\nLTxLbi9RQQKY1dRE2l68k\nUVOo\nsOOnzrYtJWcklCesLtbQswy\n6DpmLNPdezFFGfsmYth6eMStIrDFM0R\nlGB00e8JngwiQHd9ghTbB4uqAH\n4JMPZW9AUOhTvr1IKM9G8I0DJG3PC\no4QaGj82Bk5CJki11uvhE8iDxu5\nMgSPQCiFCVOAkextiP7jCF0CUpAT"
+    },
+    {
+      "name": "random_case_20",
+      "input": "8\n2\nOQ\n21\n9VipEXSX4m5t9IGWUIVvO\n6\nINnfZX\n30\nKmvDWlyzUK6ZLcer5yImh7nx3YIOr5\n27\noCuYYMMlAL3WMMnkNLmuAL6ReM2\n5\npaiiT\n13\nxOR0QEaUiajes\n29\nybdxPngc17ensDUmpJFSoHKAh8XG2\n",
+      "output": "OQ\nINnfZX\npaiiT\nybdxPngc17ensDUmpJFSoHKAh8XG2\nKmvDWlyzUK6ZLcer5yImh7nx3YIOr5\n9VipEXSX4m5t9IGWUIVvO\noCuYYMMlAL3WMMnkNLmuAL6ReM2\nxOR0QEaUiajes"
+    },
+    {
+      "name": "random_case_21",
+      "input": "8\n19\nosYgmzsiuLtwmn3VLnH\n25\nLp18gssCknJDGhv98JAjFosow\n1\nv\n18\nfYRwJcgHE15QvLydbf\n28\nT5lNxVl4yXjHBo6umatX0v4vFkvS\n15\nIS9GEw15fWyS69E\n2\nQe\n5\nbQEyo\n",
+      "output": "v\nQe\nfYRwJcgHE15QvLydbf\nbQEyo\nIS9GEw15fWyS69E\nosYgmzsiuLtwmn3VLnH\nLp18gssCknJDGhv98JAjFosow\nT5lNxVl4yXjHBo6umatX0v4vFkvS"
+    },
+    {
+      "name": "random_case_22",
+      "input": "11\n5\n7MnLO\n4\nPOgr\n3\nLpc\n18\nZ2xVed5SGFGIrvwjwH\n6\nQz4XtQ\n19\nI8LEz6zPRR2nlB5RJpO\n32\ncGgJUqJGjFHZ2ifqvx7RZcmnmjLb0364\n25\nhJa3TdroCLXRCwYAvL1ixtv58\n9\nX1VBeqJv3\n7\nl6idtvk\n24\nlGF7B2x1hnSjgw3KgwDilf5o\n",
+      "output": "Lpc\nQz4XtQ\nPOgr\n7MnLO\nl6idtvk\nX1VBeqJv3\nZ2xVed5SGFGIrvwjwH\nlGF7B2x1hnSjgw3KgwDilf5o\ncGgJUqJGjFHZ2ifqvx7RZcmnmjLb0364\nI8LEz6zPRR2nlB5RJpO\nhJa3TdroCLXRCwYAvL1ixtv58"
+    },
+    {
+      "name": "random_case_23",
+      "input": "12\n11\nOlJCFPOKHaO\n30\noayHuJpd8TK4t5b9jO9HQJxGwCAm25\n6\nrfHYYg\n12\nOGvIbljSpbxv\n29\nxr1c8N7PybmIQkbWH90mmuUM4ViQ3\n10\nCPSfuYjeRj\n9\nfyb4V8Cbm\n26\nxStpMiwWaESPKnXSNPoq2TqzVh\n7\n57l5uG4\n17\nSXK5zVhs5nZoLAWf9\n16\nh3MFNzjL00rcqmXb\n19\n4NDiSUeRGMe5OtURrup\n",
+      "output": "rfHYYg\nfyb4V8Cbm\nh3MFNzjL00rcqmXb\n57l5uG4\nCPSfuYjeRj\nOGvIbljSpbxv\nSXK5zVhs5nZoLAWf9\nOlJCFPOKHaO\nxStpMiwWaESPKnXSNPoq2TqzVh\nxr1c8N7PybmIQkbWH90mmuUM4ViQ3\noayHuJpd8TK4t5b9jO9HQJxGwCAm25\n4NDiSUeRGMe5OtURrup"
+    },
+    {
+      "name": "random_case_24",
+      "input": "2\n19\nJdR9rmbwjYaEZNTUCgo\n1\n7\n",
+      "output": "7\nJdR9rmbwjYaEZNTUCgo"
+    },
+    {
+      "name": "random_case_25",
+      "input": "13\n19\nkwu5ddZy9incGRpBPaj\n21\ndGqy0JUCLIeWQPt3FwQAV\n28\nLFnnevJBxzT2ZCrvamVCpZ3cpHEB\n18\nwCzKSaMsftIr8rdLlC\n9\nXeY5LwafW\n27\nlnTjaTPC3soLg3g3yXAG4J05ab8\n12\nV3MqW4t3iwhq\n34\nGNg8Mi7s5JojFnSFlKUBu5NUgZQYKAMP6h\n30\nCwEoy7WmGDnZs6F3hNxtanrFYkhCpd\n29\nilhk77mYtrHKNuPRM2ppGzLfgTXxw\n4\nU5Nr\n8\n7tymxefE\n20\n5W3YzLH3ebwWHommRlUh\n",
+      "output": "U5Nr\nV3MqW4t3iwhq\n7tymxefE\nXeY5LwafW\nwCzKSaMsftIr8rdLlC\nilhk77mYtrHKNuPRM2ppGzLfgTXxw\nkwu5ddZy9incGRpBPaj\n5W3YzLH3ebwWHommRlUh\nLFnnevJBxzT2ZCrvamVCpZ3cpHEB\nCwEoy7WmGDnZs6F3hNxtanrFYkhCpd\ndGqy0JUCLIeWQPt3FwQAV\nlnTjaTPC3soLg3g3yXAG4J05ab8\nGNg8Mi7s5JojFnSFlKUBu5NUgZQYKAMP6h"
+    },
+    {
+      "name": "random_case_26",
+      "input": "11\n20\nPcjjZM3S9teb1u5wtKU6\n3\nlX3\n21\nkIfrDnow0MlZ6OMCLKmGR\n34\nsThTPcli4Ms1GpmUBllek9OdtKUPiTP4I0\n9\nfwNViA1X4\n26\nIdPIlRKFg2jmq0YKq5u1HFr1hk\n1\nE\n22\nojeA0c0dMq2RvSGEePdS7z\n5\nbHHiu\n6\nuY8SMT\n19\nzaZGhfqAw4esst0WoIf\n",
+      "output": "lX3\nE\nuY8SMT\nbHHiu\nfwNViA1X4\nPcjjZM3S9teb1u5wtKU6\nkIfrDnow0MlZ6OMCLKmGR\nIdPIlRKFg2jmq0YKq5u1HFr1hk\nzaZGhfqAw4esst0WoIf\nojeA0c0dMq2RvSGEePdS7z\nsThTPcli4Ms1GpmUBllek9OdtKUPiTP4I0"
+    },
+    {
+      "name": "random_case_27",
+      "input": "13\n15\ndPMl2Z2I6YIaF9m\n29\nd9f3yvzTFGJ1vm8cNmPJkLEyI0sPN\n20\nzL7moxTfqBcbdlWGHdD2\n1\n9\n5\ntAODb\n2\nyq\n34\nwmEpfl2FM86x4Bke8fYoMKbTckTsUnO4kQ\n30\n9mEaczZy1bDSMQ5xpUCxuCTZRtMK2q\n22\nsOqBOsfHHY1eX6IcnhfEpg\n19\nhRaKwEmjsqfPzHTSfil\n4\nLCHD\n12\nkuy85NhqaryP\n7\nE7eX8nn\n",
+      "output": "9\nyq\nLCHD\nzL7moxTfqBcbdlWGHdD2\ntAODb\nE7eX8nn\nkuy85NhqaryP\nd9f3yvzTFGJ1vm8cNmPJkLEyI0sPN\ndPMl2Z2I6YIaF9m\nhRaKwEmjsqfPzHTSfil\n9mEaczZy1bDSMQ5xpUCxuCTZRtMK2q\nsOqBOsfHHY1eX6IcnhfEpg\nwmEpfl2FM86x4Bke8fYoMKbTckTsUnO4kQ"
+    },
+    {
+      "name": "random_case_28",
+      "input": "7\n6\nqyr1jm\n10\nl6qdDuNjXY\n22\nhQjS9L1wjkhNUhaiK9xBgo\n32\nrfn1YQ4PSYoWbY7bqZic674u93ozuYkZ\n8\n3ucFTJF0\n25\nTXg1XnLqyV41s4uFmRgflsuVG\n16\nstUgoAXSBxRuoWlL\n",
+      "output": "qyr1jm\n3ucFTJF0\nl6qdDuNjXY\nTXg1XnLqyV41s4uFmRgflsuVG\nhQjS9L1wjkhNUhaiK9xBgo\nstUgoAXSBxRuoWlL\nrfn1YQ4PSYoWbY7bqZic674u93ozuYkZ"
+    },
+    {
+      "name": "random_case_29",
+      "input": "10\n7\nytjvZRK\n4\ng3Bi\n5\n9iSPC\n24\n130JJZiC3knVdG0bipd35uvO\n13\nH8BDyh2F2nsWw\n21\noSmrXW2MzOuvoFWKud9kP\n26\n1d6z3ugJdbrNmo9RqgoYwpiybY\n18\nQ24nXiA7Me1Rb0zOwT\n9\npw8mfnS76\n31\nVWMMtob36xHS4nhTdXVtEJuJMiXu9Vi\n",
+      "output": "ytjvZRK\npw8mfnS76\nH8BDyh2F2nsWw\ng3Bi\n9iSPC\nQ24nXiA7Me1Rb0zOwT\n130JJZiC3knVdG0bipd35uvO\n1d6z3ugJdbrNmo9RqgoYwpiybY\noSmrXW2MzOuvoFWKud9kP\nVWMMtob36xHS4nhTdXVtEJuJMiXu9Vi"
+    },
+    {
+      "name": "random_case_30",
+      "input": "10\n6\nKCk6ad\n14\nRZiv0gWhzxID7p\n27\ndcmMCUh8nLIcwd0DpUpCoTuFpTs\n15\nahTxIUpT96vZHeZ\n34\n6qVnRRM1gSgjV7oUAheAe1kuaAW7QvcbqK\n18\nmg32InAVjybGuuHG2S\n17\nDqGDECwo22fRQ5QrS\n3\nrWw\n5\nroy6i\n29\nnlDTxAk1yu7uaZT2Xw2VBvkt6p3wS\n",
+      "output": "rWw\nKCk6ad\nroy6i\nRZiv0gWhzxID7p\nDqGDECwo22fRQ5QrS\nahTxIUpT96vZHeZ\nmg32InAVjybGuuHG2S\nnlDTxAk1yu7uaZT2Xw2VBvkt6p3wS\ndcmMCUh8nLIcwd0DpUpCoTuFpTs\n6qVnRRM1gSgjV7oUAheAe1kuaAW7QvcbqK"
+    },
+    {
+      "name": "random_case_31",
+      "input": "11\n23\ngKbcog2zkBLG1cyVBEzSCl6\n16\nVodqsHyidsLF5JdD\n6\n8EmRuY\n31\nQifr3B3HBvYwocwWyVq3Zq8V6ibgHpz\n12\nzVisAnEgpi1T\n18\nc1l4WvtAD12jYYH7hr\n19\nAyCDA09bfpB9oTwHIaC\n20\nx25p4wO2Pn234cJzZ68B\n30\nsOhooCavSuzTzPC5GnKvjjk6mgp1J3\n7\nE57YBFa\n21\nAhFcfoZQYVjoanM0K2hip\n",
+      "output": "c1l4WvtAD12jYYH7hr\nx25p4wO2Pn234cJzZ68B\n8EmRuY\nE57YBFa\nVodqsHyidsLF5JdD\ngKbcog2zkBLG1cyVBEzSCl6\nQifr3B3HBvYwocwWyVq3Zq8V6ibgHpz\nzVisAnEgpi1T\nAyCDA09bfpB9oTwHIaC\nAhFcfoZQYVjoanM0K2hip\nsOhooCavSuzTzPC5GnKvjjk6mgp1J3"
+    },
+    {
+      "name": "random_case_32",
+      "input": "8\n7\neBaS8ih\n13\nGHgIceTHzqyds\n3\ncKl\n12\nYo9n3jYLcGIJ\n18\nohpNJJEpoF2r6zUGZs\n22\noPtHjgCwBx8pTRFc05AUUf\n32\n7dVgteO1Y0wuMV9FZlQt7LpvhZM459pS\n20\nSUCJt5cyApYmKXPljMqg\n",
+      "output": "cKl\nYo9n3jYLcGIJ\nGHgIceTHzqyds\nSUCJt5cyApYmKXPljMqg\neBaS8ih\n7dVgteO1Y0wuMV9FZlQt7LpvhZM459pS\nohpNJJEpoF2r6zUGZs\noPtHjgCwBx8pTRFc05AUUf"
+    },
+    {
+      "name": "random_case_33",
+      "input": "11\n19\nesgUAugbn9NsOdwJyBJ\n1\n5\n4\nvDQp\n6\n71030O\n25\nlwjtj77kJAtP3kipTqhEaYGIg\n17\nKBMzyU1Va2ftnw2e2\n29\nYjmLTK4EpC7OPNefQZSwz0RcXOoo1\n24\nKuqYV7Rqyfq4O0BdNqbKdda2\n23\ntD8TKmTWpfbTrVdyXBPDUs9\n27\ny6UnKIanuYrhbRy8RorAOReonUS\n22\nSIbfsb6MY7dleK5WJ2e9co\n",
+      "output": "5\nvDQp\n71030O\ntD8TKmTWpfbTrVdyXBPDUs9\nKBMzyU1Va2ftnw2e2\nKuqYV7Rqyfq4O0BdNqbKdda2\nSIbfsb6MY7dleK5WJ2e9co\nesgUAugbn9NsOdwJyBJ\nlwjtj77kJAtP3kipTqhEaYGIg\nYjmLTK4EpC7OPNefQZSwz0RcXOoo1\ny6UnKIanuYrhbRy8RorAOReonUS"
+    },
+    {
+      "name": "random_case_34",
+      "input": "12\n24\n6eqedVgF0lanvqHVpXiEXO4x\n2\nkV\n21\n0CNXqqaeAVM9X3QJ2hf73\n28\njFoDpcgqBNwxdNffcL61HhmRwulo\n8\nWimtDWBu\n9\nowNpWOIfV\n29\n1zeEgPHAKBPxy3TYZFJ5hRMy2diPX\n34\nlf9Wug7NvYpN1YZhY0LBUC9U2aSd0RgjMZ\n17\nMdohm8ACj7AfnFX3o\n22\nS4i4U12sZyLRGUjbCGFZLi\n7\nEg5cVqR\n30\nngRcFM2KOi9JXJJk0tHfKZpfy2xtM5\n",
+      "output": "kV\nEg5cVqR\nWimtDWBu\nngRcFM2KOi9JXJJk0tHfKZpfy2xtM5\nowNpWOIfV\n0CNXqqaeAVM9X3QJ2hf73\njFoDpcgqBNwxdNffcL61HhmRwulo\nMdohm8ACj7AfnFX3o\nS4i4U12sZyLRGUjbCGFZLi\n1zeEgPHAKBPxy3TYZFJ5hRMy2diPX\nlf9Wug7NvYpN1YZhY0LBUC9U2aSd0RgjMZ\n6eqedVgF0lanvqHVpXiEXO4x"
+    },
+    {
+      "name": "random_case_35",
+      "input": "11\n32\nu7a94yjdSvqSTfEjhkrZbpZIBzh18qbF\n26\nslCMjIlj2rUBUbqux1XwNJrbwd\n17\nDtJ3p1l9lA2e6Rn4g\n19\nygRHym9wTG3W1tCgioN\n11\nfDBf9Na7drS\n25\nWLeCFcpYRIMaBxLyLiAx4P4eP\n29\nSYVbamXuHfBqQCppBcyAGZuvLCgli\n4\n3SHj\n16\nnnGuCc1nyLhssHi1\n1\nD\n24\nR5RhHQowjLuTI2jlYxvGZgqf\n",
+      "output": "D\n3SHj\nfDBf9Na7drS\nnnGuCc1nyLhssHi1\nDtJ3p1l9lA2e6Rn4g\nygRHym9wTG3W1tCgioN\nR5RhHQowjLuTI2jlYxvGZgqf\nslCMjIlj2rUBUbqux1XwNJrbwd\nu7a94yjdSvqSTfEjhkrZbpZIBzh18qbF\nSYVbamXuHfBqQCppBcyAGZuvLCgli\nWLeCFcpYRIMaBxLyLiAx4P4eP"
+    },
+    {
+      "name": "random_case_36",
+      "input": "10\n9\nH4GdduWKr\n23\nsFzKRlF0ht4vU9QMDA8dWoT\n32\nl7eQYi8ARnWc9mnZGIZG3S2JfpyHFSCL\n25\nY7tXdYYCNAhOT9XGFs5XLzsnX\n3\nwBL\n4\nNawX\n27\nmoPyZqaGsm3h8jCiNCUS9YP0MQQ\n14\nAOCw5gI871cK02\n2\nKc\n24\nIKvgzEDDxx729nIA4vPrZo0u\n",
+      "output": "Kc\nwBL\nNawX\nH4GdduWKr\nY7tXdYYCNAhOT9XGFs5XLzsnX\nAOCw5gI871cK02\nsFzKRlF0ht4vU9QMDA8dWoT\nmoPyZqaGsm3h8jCiNCUS9YP0MQQ\nl7eQYi8ARnWc9mnZGIZG3S2JfpyHFSCL\nIKvgzEDDxx729nIA4vPrZo0u"
+    },
+    {
+      "name": "random_case_37",
+      "input": "14\n13\nFj5UG95pBDwVx\n21\ngZSnU2rObYkmfUQgsJPko\n2\n3l\n23\n11wSNuw3Wy3lShAW6rV0Juw\n30\np8DuDOtxK3s9MXRGLRkgG6beJNJy3I\n14\nT9PuxoicmPd3LA\n15\neHt3YzkEEMZBbAx\n10\n7zeOXSl1TE\n17\nXiW97irbpteG8sYs8\n26\nkMKfs1vfPKhMM1j61LA7jh6ReA\n12\nahHYTqnBAAdO\n4\ne8FW\n18\nRFthTG6IHpNgYU0mC2\n33\n71xDdGgGEgPAYw8Lit5KW64wgrLChN00I\n",
+      "output": "3l\ne8FW\nFj5UG95pBDwVx\nRFthTG6IHpNgYU0mC2\n7zeOXSl1TE\nXiW97irbpteG8sYs8\n11wSNuw3Wy3lShAW6rV0Juw\nkMKfs1vfPKhMM1j61LA7jh6ReA\nahHYTqnBAAdO\nT9PuxoicmPd3LA\neHt3YzkEEMZBbAx\ngZSnU2rObYkmfUQgsJPko\np8DuDOtxK3s9MXRGLRkgG6beJNJy3I\n71xDdGgGEgPAYw8Lit5KW64wgrLChN00I"
+    },
+    {
+      "name": "random_case_38",
+      "input": "13\n11\nc3AXPbY8Ijs\n3\nHWg\n27\nzUSKnMpdk7j866GAjzYgZxroBtl\n30\nwu9oe38o2POnCxhMuAvqHFS5foB2ar\n19\n7HfAjC3WKbt9PYtfsgf\n6\n72ZCpI\n7\nv1YgeFy\n31\nj0jc0XMLP99GVEZfIaSZVo0gT59ApWN\n9\nWoN15J03X\n32\nyblKwxekbuC1m2ViX1hNFAZhImKJ5OPo\n17\nS6iQ3DHUTAeFNQF16\n20\nNk3DrwcBy5q3VN3EmCuV\n23\nl2aTJnhyh8ceegZEsSby1J0\n",
+      "output": "HWg\n72ZCpI\nv1YgeFy\nWoN15J03X\n7HfAjC3WKbt9PYtfsgf\nc3AXPbY8Ijs\nNk3DrwcBy5q3VN3EmCuV\nzUSKnMpdk7j866GAjzYgZxroBtl\nS6iQ3DHUTAeFNQF16\nl2aTJnhyh8ceegZEsSby1J0\nj0jc0XMLP99GVEZfIaSZVo0gT59ApWN\nyblKwxekbuC1m2ViX1hNFAZhImKJ5OPo\nwu9oe38o2POnCxhMuAvqHFS5foB2ar"
+    },
+    {
+      "name": "random_case_39",
+      "input": "9\n10\nwyEcvo5qWL\n27\nvqvDwRPyTBFHBl3rGDU8iO3KdGV\n15\n4FriMYf8k1AW0oP\n14\nDRQQXJsSXCZVU2\n32\nfh0JQsqLMgzTAs3x0bDjkb01TQEeyFo7\n19\nJDBcSDkQotlLamRqBRA\n5\nnLVmE\n25\n6vWHl4pqY3q25nYImhURIMvgv\n30\nDEtNPj6GCjGAvtHsVzByOqek049UE1\n",
+      "output": "nLVmE\nDRQQXJsSXCZVU2\nwyEcvo5qWL\n4FriMYf8k1AW0oP\nJDBcSDkQotlLamRqBRA\n6vWHl4pqY3q25nYImhURIMvgv\nvqvDwRPyTBFHBl3rGDU8iO3KdGV\nfh0JQsqLMgzTAs3x0bDjkb01TQEeyFo7\nDEtNPj6GCjGAvtHsVzByOqek049UE1"
+    },
+    {
+      "name": "random_case_40",
+      "input": "9\n30\nGZmQltjhJcIgC3hme7JcpXdTkjpKET\n26\nG29pcsIVomdB24mSz3rNN9tGaF\n10\nmRTQkfiZ0b\n9\npmjc52Ia7\n3\nvaI\n25\nCR97fZWcHR8C44XatBiZQ5cI3\n11\nC00CYBPTWav\n14\ncSSCSwR27UYmTQ\n31\nwgK43uwdsgiuICgj6SMhYGHRkeIe7TH\n",
+      "output": "mRTQkfiZ0b\nC00CYBPTWav\ncSSCSwR27UYmTQ\nvaI\npmjc52Ia7\nCR97fZWcHR8C44XatBiZQ5cI3\nG29pcsIVomdB24mSz3rNN9tGaF\nGZmQltjhJcIgC3hme7JcpXdTkjpKET\nwgK43uwdsgiuICgj6SMhYGHRkeIe7TH"
+    },
+    {
+      "name": "random_case_41",
+      "input": "7\n31\n0DPFTiKyc6vYyFhtjeD6oloEFLNcvyM\n20\nROntGyKjLFNhjThhq4Qf\n11\nSsoWVQAjTs5\n29\nVP54T9qQ5S9Bjr1rF5YL32bH6haSs\n16\ng7824hnlaRZvI66g\n34\nWAJjcL4EFPIWFW0pZYRG6xcf4xxpJLqqqN\n1\nN\n",
+      "output": "N\nROntGyKjLFNhjThhq4Qf\nVP54T9qQ5S9Bjr1rF5YL32bH6haSs\nSsoWVQAjTs5\ng7824hnlaRZvI66g\nWAJjcL4EFPIWFW0pZYRG6xcf4xxpJLqqqN\n0DPFTiKyc6vYyFhtjeD6oloEFLNcvyM"
+    },
+    {
+      "name": "random_case_42",
+      "input": "12\n22\nxZURudIE7cKL0suOm4sgWo\n10\n7COolV2ZFJ\n30\n0YWrKq53LiYAIkPNNItvtt7aYx5ms0\n18\nnfQpkr9VNo1TowSxsp\n6\nekJXlB\n32\ngQs5PToshFPiN5xDBhcFoFCjDvGzCcxG\n15\nDd5dIeqmWXaNopD\n31\nn5WEX6wxbCSWLbe6LncqVUfCpbdneWp\n2\nE5\n20\n0DcO9jrkoASQGlaYTu4e\n9\nL9pDvpHVP\n12\nlof8lgXTu2Qu\n",
+      "output": "L9pDvpHVP\nE5\nekJXlB\n7COolV2ZFJ\nnfQpkr9VNo1TowSxsp\nlof8lgXTu2Qu\ngQs5PToshFPiN5xDBhcFoFCjDvGzCcxG\nDd5dIeqmWXaNopD\nn5WEX6wxbCSWLbe6LncqVUfCpbdneWp\n0YWrKq53LiYAIkPNNItvtt7aYx5ms0\n0DcO9jrkoASQGlaYTu4e\nxZURudIE7cKL0suOm4sgWo"
+    },
+    {
+      "name": "random_case_43",
+      "input": "3\n10\nisfD2ynasc\n20\nXMAQ4VQCYw6L5TY22Bq9\n9\nXoRptxXB2\n",
+      "output": "XoRptxXB2\nXMAQ4VQCYw6L5TY22Bq9\nisfD2ynasc"
+    },
+    {
+      "name": "random_case_44",
+      "input": "10\n24\neZ0x2ZStp2RFaHIB83Ugkd2A\n1\n7\n28\nj5SxtvJ91SMtMUjMuQEkre5MaMU3\n34\niX907ll7OmjHnV9Ex9uVMwVCniab1VBa3M\n2\nI1\n8\nfVBpEU0W\n14\nLHcYiiAkV5t7fz\n13\nvXaI0rbTPJTkM\n30\nMakjCcKPblGZ9uCMFJb4AGvPki7A6s\n19\neFoPztRs80ZFIM9WmuW\n",
+      "output": "7\nI1\nfVBpEU0W\nvXaI0rbTPJTkM\nLHcYiiAkV5t7fz\neFoPztRs80ZFIM9WmuW\neZ0x2ZStp2RFaHIB83Ugkd2A\nMakjCcKPblGZ9uCMFJb4AGvPki7A6s\nj5SxtvJ91SMtMUjMuQEkre5MaMU3\niX907ll7OmjHnV9Ex9uVMwVCniab1VBa3M"
+    },
+    {
+      "name": "random_case_45",
+      "input": "9\n20\nXo2xkQv4JPQeIlGruM8J\n27\nsJf246MmJ70HG8Hcr2csaJn7zV9\n22\n3eC8wnWljIjlHxF9PYzJUX\n15\nbXiG7GI9Y1FSFBm\n24\nxQsN76R24UAB8v3u6AvktKZo\n7\n7j12oG5\n11\n7WiYnHneuYV\n1\nD\n19\nkZceq1h6aWnOs06cMW0\n",
+      "output": "D\n7j12oG5\nsJf246MmJ70HG8Hcr2csaJn7zV9\nbXiG7GI9Y1FSFBm\n7WiYnHneuYV\nkZceq1h6aWnOs06cMW0\n3eC8wnWljIjlHxF9PYzJUX\nXo2xkQv4JPQeIlGruM8J\nxQsN76R24UAB8v3u6AvktKZo"
+    },
+    {
+      "name": "random_case_46",
+      "input": "13\n13\nFpKuebYjMTE4W\n15\nNjBh1vAIFOPGvqc\n6\nuHp5rN\n26\n7hIt6bpocUkwWOxna06LqGA3hF\n33\nKTIqkWc6sY7gdIuJf8VZaBbbWgiOQF7BE\n9\ncX3Z4Wy3K\n4\nMCyW\n24\nMhFFTulWelX5xek5tlNUnXZI\n31\nOQHVl0jf54PlRvjbKWoPQmaCkyggYnN\n10\nCSCb97ZsV8\n23\nNcYoWFWe59FkOdfYW8yMYsB\n12\nnk0mDpvfxGLQ\n30\n6xbouy0eyYYmARnBSsrTHmFxjicexq\n",
+      "output": "MCyW\ncX3Z4Wy3K\nCSCb97ZsV8\nnk0mDpvfxGLQ\nuHp5rN\nFpKuebYjMTE4W\nNjBh1vAIFOPGvqc\nNcYoWFWe59FkOdfYW8yMYsB\nOQHVl0jf54PlRvjbKWoPQmaCkyggYnN\nMhFFTulWelX5xek5tlNUnXZI\n7hIt6bpocUkwWOxna06LqGA3hF\n6xbouy0eyYYmARnBSsrTHmFxjicexq\nKTIqkWc6sY7gdIuJf8VZaBbbWgiOQF7BE"
+    },
+    {
+      "name": "random_case_47",
+      "input": "6\n1\n3\n29\nFlySqmXG7bCEzIwYEZJ8VOHoHxCOp\n5\n64rIV\n27\nrpKHeKTj7fDYh43qQibD2Q54qq1\n34\nOFjeAj7kitOSMvUEN7XdjnAIkZRbgkQYKs\n3\nCNW\n",
+      "output": "3\nCNW\n64rIV\nrpKHeKTj7fDYh43qQibD2Q54qq1\nFlySqmXG7bCEzIwYEZJ8VOHoHxCOp\nOFjeAj7kitOSMvUEN7XdjnAIkZRbgkQYKs"
+    },
+    {
+      "name": "random_case_48",
+      "input": "13\n19\nSybOWQGf3AinfU8fvYJ\n7\nXdlXHev\n20\ndbozq0rVaJNo2coLBHxh\n11\nHVp8WGbZYuf\n26\nlHCTTyrDTfkFzj7A2t7KLx6uKL\n12\ntuLV7LNvabeq\n30\ncCzI1GHYdk427FEfkgQvv2DMHU6YQe\n31\nHlaQeBzbOyYmp86aGE17fmEvmOr4ckR\n2\n8q\n5\nLiFTe\n27\nhAqXFKqHxlYrZbKwSILUVmvc11n\n17\nKMKTK4m6MJrsgiFli\n34\nyo0vMflwLu6GzXynYs8TBn3kugM3kZuRMo\n",
+      "output": "8q\nXdlXHev\nHVp8WGbZYuf\nLiFTe\nKMKTK4m6MJrsgiFli\nlHCTTyrDTfkFzj7A2t7KLx6uKL\ntuLV7LNvabeq\nhAqXFKqHxlYrZbKwSILUVmvc11n\nSybOWQGf3AinfU8fvYJ\ndbozq0rVaJNo2coLBHxh\ncCzI1GHYdk427FEfkgQvv2DMHU6YQe\nyo0vMflwLu6GzXynYs8TBn3kugM3kZuRMo\nHlaQeBzbOyYmp86aGE17fmEvmOr4ckR"
+    },
+    {
+      "name": "random_case_49",
+      "input": "8\n19\nwO0mBbQOTocDt2IE0aZ\n7\n97lDt1U\n12\nZ0s7DWAah8LG\n34\nyqTBU41g015ZfrStjKas7e1OojDxRIkPCa\n25\nobH0wWu2IugZECTDCgWS8WI2U\n28\nq4wQr5zBkjAXI4sEKRdBSFf1Smfp\n13\nWpTNFptpEqOei\n2\nn4\n",
+      "output": "n4\n97lDt1U\nZ0s7DWAah8LG\nq4wQr5zBkjAXI4sEKRdBSFf1Smfp\nWpTNFptpEqOei\nwO0mBbQOTocDt2IE0aZ\nobH0wWu2IugZECTDCgWS8WI2U\nyqTBU41g015ZfrStjKas7e1OojDxRIkPCa"
+    },
+    {
+      "name": "random_case_50",
+      "input": "7\n19\njmoadYpFXZKAaBFBHxW\n11\nydS8hbCozFo\n14\nCR4S4gaCBI5r2K\n10\nQtkOX9Lgjj\n4\nl3tE\n32\nzelVUOBE12AmIyFzlZu9jYdXvEdq36UL\n5\nwUhVS\n",
+      "output": "l3tE\nwUhVS\nQtkOX9Lgjj\nydS8hbCozFo\nCR4S4gaCBI5r2K\njmoadYpFXZKAaBFBHxW\nzelVUOBE12AmIyFzlZu9jYdXvEdq36UL"
+    },
+    {
+      "name": "random_case_51",
+      "input": "14\n30\nSTJc6idAYBg1AXgPQozVuXZYhX7c8k\n6\nw6HUqh\n14\njQWKgaNgTvBPXZ\n5\nmw2EX\n4\nhz4x\n32\njmrMeqiW7d3A65AppwE5RRHDhdFAVDkZ\n18\nmEiX96G0FALRmb0FDw\n20\n9Kjf78oVG94QAW2AxC8X\n7\neNITUlM\n33\ngzjuNoR1FMSGB9fVy6MaLPJT6rDsnIoel\n13\nKbZ9NZdqjqVsE\n26\n0cJhRmzfPqPbQTgwrl2itOvX7Z\n23\nYMDIzrSH3yy383Zg5NudFsh\n24\n9cuswGciOtXOIj5VlnO1nqUA\n",
+      "output": "hz4x\nmw2EX\nw6HUqh\nKbZ9NZdqjqVsE\njQWKgaNgTvBPXZ\nYMDIzrSH3yy383Zg5NudFsh\n0cJhRmzfPqPbQTgwrl2itOvX7Z\neNITUlM\nmEiX96G0FALRmb0FDw\n9Kjf78oVG94QAW2AxC8X\nSTJc6idAYBg1AXgPQozVuXZYhX7c8k\njmrMeqiW7d3A65AppwE5RRHDhdFAVDkZ\ngzjuNoR1FMSGB9fVy6MaLPJT6rDsnIoel\n9cuswGciOtXOIj5VlnO1nqUA"
+    },
+    {
+      "name": "random_case_52",
+      "input": "6\n32\nO1U6ZAlOpfiZ37bcuihzsb7q1T8X5nH9\n25\nwEBQGvO4nPCd6jf40aa9pX4zx\n29\nO1TPMtMP8ig6i2dBxKHEGzFHIOM8K\n14\nHfsaoW53hDmWab\n16\nT6ifymyQLuzeHXgF\n28\nAOrHk1DSKCvqJABxMzXiMfJA05B4\n",
+      "output": "HfsaoW53hDmWab\nT6ifymyQLuzeHXgF\nwEBQGvO4nPCd6jf40aa9pX4zx\nAOrHk1DSKCvqJABxMzXiMfJA05B4\nO1TPMtMP8ig6i2dBxKHEGzFHIOM8K\nO1U6ZAlOpfiZ37bcuihzsb7q1T8X5nH9"
+    },
+    {
+      "name": "random_case_53",
+      "input": "9\n25\nsBkf7mIRdQU9HgQ4eXVlLHwHz\n22\nWCM4CSZ5lGXLvyXv4Oo3L1\n5\nHKHao\n13\nUJ1NkrVVKtH5W\n3\nPd9\n11\naIyRLuw71d9\n12\naetYjcnGHXJB\n9\nctNt8hhOl\n31\nT1fbMYcP7q16WKkkGUJnGgFvT6CGqss\n",
+      "output": "Pd9\nctNt8hhOl\nUJ1NkrVVKtH5W\nT1fbMYcP7q16WKkkGUJnGgFvT6CGqss\nHKHao\naetYjcnGHXJB\nWCM4CSZ5lGXLvyXv4Oo3L1\naIyRLuw71d9\nsBkf7mIRdQU9HgQ4eXVlLHwHz"
+    },
+    {
+      "name": "random_case_54",
+      "input": "3\n2\nvq\n23\ncADTlehIYUBykZ9ptfoOymD\n16\ngsOsSeMVVb4l99vx\n",
+      "output": "vq\ngsOsSeMVVb4l99vx\ncADTlehIYUBykZ9ptfoOymD"
+    },
+    {
+      "name": "random_case_55",
+      "input": "14\n7\neVGNAA6\n17\n7jEPF1ScLhVOxrFdj\n9\n5SLiY0pYL\n20\nWPB7YxYdYTKlmtBxeJPp\n28\nCxsRvjO2vuTMwnqYxXJlUU6zQAcm\n26\n2NXA3Zzu3GFfJvhnjzuuxFUlu7\n5\nAl75L\n1\nT\n2\nw8\n19\nNDVLF3bGnhcooqy7fVI\n27\n8GmI3arQpl22zl8LhClaKGWkG17\n6\nE34cMc\n3\nWTJ\n32\nydIMye8uAA7q5maKSPA9ILmX60N99lK7\n",
+      "output": "T\nw8\nWTJ\nAl75L\nE34cMc\n5SLiY0pYL\nWPB7YxYdYTKlmtBxeJPp\n7jEPF1ScLhVOxrFdj\neVGNAA6\nNDVLF3bGnhcooqy7fVI\n8GmI3arQpl22zl8LhClaKGWkG17\nCxsRvjO2vuTMwnqYxXJlUU6zQAcm\n2NXA3Zzu3GFfJvhnjzuuxFUlu7\nydIMye8uAA7q5maKSPA9ILmX60N99lK7"
+    },
+    {
+      "name": "random_case_56",
+      "input": "2\n6\ngRaH47\n24\nDDBPLs8fM8Bqu8PDhrZHafeT\n",
+      "output": "gRaH47\nDDBPLs8fM8Bqu8PDhrZHafeT"
+    },
+    {
+      "name": "random_case_57",
+      "input": "13\n5\nDlaJr\n3\n0P7\n27\nEMoFhHnmO33ahMpLQtkjvyqojo7\n25\nhLKqVO90LPdnjEBXMNup239qi\n14\nViQnpcjT1yhtmR\n19\nk2lO8GECc63hoI740L6\n1\no\n26\nMcoFJeorX3i1hEx64XujqNMpMz\n24\n05aBBKWkuoPBdjROw4QrxVmU\n16\nCvpVsn8nTFTEY8HW\n13\noigIkvuTF6YHl\n15\nBrcG1uHD5q0nCNl\n7\nTZd9F4z\n",
+      "output": "0P7\nTZd9F4z\no\nDlaJr\nViQnpcjT1yhtmR\nBrcG1uHD5q0nCNl\nCvpVsn8nTFTEY8HW\noigIkvuTF6YHl\nk2lO8GECc63hoI740L6\nhLKqVO90LPdnjEBXMNup239qi\n05aBBKWkuoPBdjROw4QrxVmU\nMcoFJeorX3i1hEx64XujqNMpMz\nEMoFhHnmO33ahMpLQtkjvyqojo7"
+    },
+    {
+      "name": "random_case_58",
+      "input": "4\n22\nrHbrFU2M76bGsOhsF5vorQ\n25\nHPshjkNTQTt77CoDxPpFdhLcN\n27\n0DzUsc012XTLPgfWyQbFN0MPjtd\n32\nKEewEIX5peqhgamjRRkoCisxw36aAuMr\n",
+      "output": "HPshjkNTQTt77CoDxPpFdhLcN\n0DzUsc012XTLPgfWyQbFN0MPjtd\nrHbrFU2M76bGsOhsF5vorQ\nKEewEIX5peqhgamjRRkoCisxw36aAuMr"
+    },
+    {
+      "name": "random_case_59",
+      "input": "7\n8\ncITF5YKI\n22\noKAJGzRQKS3auud1FZN8aM\n5\n7kl7C\n30\n6rUV39YHwo2tEPyb22kHlNdJxVYSOk\n9\ntD9BRc8vO\n24\nlYUY7h1qwl0uhdp88mkQ3uW8\n29\nnCwHxoNr72VzupnHN6v4U3EhThrk9\n",
+      "output": "7kl7C\ntD9BRc8vO\ncITF5YKI\nlYUY7h1qwl0uhdp88mkQ3uW8\nnCwHxoNr72VzupnHN6v4U3EhThrk9\n6rUV39YHwo2tEPyb22kHlNdJxVYSOk\noKAJGzRQKS3auud1FZN8aM"
+    },
+    {
+      "name": "random_case_60",
+      "input": "5\n32\no1hE0dpkYl5LPovVWWn8EboPMfGJhHOJ\n15\nA1ah7F9bZV87mTU\n30\n1SyHZeLb8EMVnIuOQwvw4eO6nsL1n4\n26\nQBGtAZKgIF0NGHf4AhyjLQR4Bm\n13\ndJrZNq9UJ0SZe\n",
+      "output": "dJrZNq9UJ0SZe\nA1ah7F9bZV87mTU\nQBGtAZKgIF0NGHf4AhyjLQR4Bm\no1hE0dpkYl5LPovVWWn8EboPMfGJhHOJ\n1SyHZeLb8EMVnIuOQwvw4eO6nsL1n4"
+    },
+    {
+      "name": "random_case_61",
+      "input": "13\n8\nGaEtCByc\n30\njFNMK5mv3o5VuaDQnYdPCFHnHDy5oG\n29\nM1q2EGTVSzhTIpfGcfaURX5yeIMQB\n7\nWRuDNlj\n16\nu4T3UeDbWIXv8GHM\n14\n2igOK1vzmoF6uc\n23\nQdNmmOs2DSGJA1AnipnUzhf\n24\nKhehUtMTIdx7UvlbwCcsA4Dh\n31\nT9tQVfeXxFlZJKWGVcn7IF8UYU6bAzy\n22\n2jjF7ZEtMrtchWqQwhCA92\n3\nqK5\n25\n62mtZEmBkDq16HAkfkvoQ4UoZ\n21\nQQWs0lCkBE5VK4oRBRxdq\n",
+      "output": "qK5\nWRuDNlj\nGaEtCByc\nQQWs0lCkBE5VK4oRBRxdq\n2jjF7ZEtMrtchWqQwhCA92\n2igOK1vzmoF6uc\nu4T3UeDbWIXv8GHM\njFNMK5mv3o5VuaDQnYdPCFHnHDy5oG\nQdNmmOs2DSGJA1AnipnUzhf\nKhehUtMTIdx7UvlbwCcsA4Dh\n62mtZEmBkDq16HAkfkvoQ4UoZ\nT9tQVfeXxFlZJKWGVcn7IF8UYU6bAzy\nM1q2EGTVSzhTIpfGcfaURX5yeIMQB"
+    },
+    {
+      "name": "random_case_62",
+      "input": "4\n33\nkEFDYaETUl4NL0ggJ4UseHK3ZqcM0ed4a\n3\nI8K\n2\nVw\n6\nmbVDDb\n",
+      "output": "Vw\nmbVDDb\nI8K\nkEFDYaETUl4NL0ggJ4UseHK3ZqcM0ed4a"
+    },
+    {
+      "name": "random_case_63",
+      "input": "4\n27\nzyeVE5I1ZWNGZaRSxlIGPZdbWDg\n31\ncXPgxiIBrvQ1fwi67O3nuN1ZJgzzJC7\n19\nsx1Y8QpaiiDNgQo8D5a\n9\nHCzuzONGT\n",
+      "output": "HCzuzONGT\nsx1Y8QpaiiDNgQo8D5a\nzyeVE5I1ZWNGZaRSxlIGPZdbWDg\ncXPgxiIBrvQ1fwi67O3nuN1ZJgzzJC7"
+    },
+    {
+      "name": "random_case_64",
+      "input": "9\n31\ngguHQtLs5JjFHqIr30sRIVtWdKBZRZr\n6\nD6RBDN\n33\nH34pgpcvWrPeU9dfxAOg1glzuKxfxxp3a\n5\nNk2Vk\n3\nHm8\n22\nhwufhUAC1PocZQa8yQ1ReJ\n23\n5WloACMajw96XI7Ydz9mUIJ\n11\npMC2rEmA1bu\n10\nFY1laIpZBT\n",
+      "output": "Hm8\nNk2Vk\nD6RBDN\nFY1laIpZBT\npMC2rEmA1bu\ngguHQtLs5JjFHqIr30sRIVtWdKBZRZr\nhwufhUAC1PocZQa8yQ1ReJ\n5WloACMajw96XI7Ydz9mUIJ\nH34pgpcvWrPeU9dfxAOg1glzuKxfxxp3a"
+    },
+    {
+      "name": "random_case_65",
+      "input": "8\n4\nmz0V\n19\nd037qpiT4YTGqZQmTTq\n18\np8M5BmfHngsUEGafy9\n11\nM98L6v9UFgp\n7\nXo2h2PZ\n26\njZoiqPK2fyqpINbWEDYpsnwohO\n30\n6G67gLi6nL321kDA1s70Ze8e7VnnCw\n12\n4yCzj9OzoHb8\n",
+      "output": "mz0V\nXo2h2PZ\nM98L6v9UFgp\nd037qpiT4YTGqZQmTTq\n4yCzj9OzoHb8\np8M5BmfHngsUEGafy9\n6G67gLi6nL321kDA1s70Ze8e7VnnCw\njZoiqPK2fyqpINbWEDYpsnwohO"
+    },
+    {
+      "name": "random_case_66",
+      "input": "13\n16\nYlcxLGGv4vg9kVTE\n27\nMCV5L0IqBoK7EWS7MSmzuaS0Tt3\n12\nLoPGUcMzogrq\n4\nNN6U\n10\n35na2hAo8K\n25\nfpaDIm30OyhFXTwsDkK7B8tjE\n23\nmUSLPu1mi01iW3wrPHIqxSI\n34\nfAT10HIGhLOcznFeqeZaexlQzMeylBGA0c\n21\nyQZlLmLLaiEQRUc9QbDCb\n30\nW9BsiPZfB2XIuvbAIwQ6XcIbxYKQmS\n14\nUKRWEWAN9SjMac\n13\nlqmo0UUl0LV1O\n24\nMIKGYefJQmn3Rzk6ynou6OkG\n",
+      "output": "NN6U\nYlcxLGGv4vg9kVTE\n35na2hAo8K\nLoPGUcMzogrq\nlqmo0UUl0LV1O\nUKRWEWAN9SjMac\nyQZlLmLLaiEQRUc9QbDCb\nfpaDIm30OyhFXTwsDkK7B8tjE\nMIKGYefJQmn3Rzk6ynou6OkG\nMCV5L0IqBoK7EWS7MSmzuaS0Tt3\nmUSLPu1mi01iW3wrPHIqxSI\nW9BsiPZfB2XIuvbAIwQ6XcIbxYKQmS\nfAT10HIGhLOcznFeqeZaexlQzMeylBGA0c"
+    },
+    {
+      "name": "random_case_67",
+      "input": "6\n6\nxPuF4g\n32\narId7X7o9J2rqlTFJq1hYCxUL8s2iCOT\n18\nAIYxBjrDD86VK2XrH6\n13\nDP9ED8qFp7hKE\n16\nCebnmRramewDqkJs\n4\n2cXM\n",
+      "output": "2cXM\nxPuF4g\nDP9ED8qFp7hKE\nAIYxBjrDD86VK2XrH6\nCebnmRramewDqkJs\narId7X7o9J2rqlTFJq1hYCxUL8s2iCOT"
+    },
+    {
+      "name": "random_case_68",
+      "input": "11\n12\nBMjYoxy2f7XW\n10\ntewi7zkErF\n30\nkaVfZ28kgNMQ8vh7WN7KPtdHAqGOKr\n20\nfHaBlQe99iiFAx80SMwp\n3\nyMn\n9\njmIiwYDnc\n7\nfzIBw8p\n14\ngmeEn5CYREvbaK\n23\nZQQMRvTzHdGh6gPt4vfhkx1\n25\nx5NNWNcL2Xgg4JFpjYAJWWei9\n21\nZKJgZWHFr8MA6FpLcDNwZ\n",
+      "output": "yMn\nZQQMRvTzHdGh6gPt4vfhkx1\nfzIBw8p\nBMjYoxy2f7XW\nZKJgZWHFr8MA6FpLcDNwZ\njmIiwYDnc\ntewi7zkErF\nx5NNWNcL2Xgg4JFpjYAJWWei9\nkaVfZ28kgNMQ8vh7WN7KPtdHAqGOKr\ngmeEn5CYREvbaK\nfHaBlQe99iiFAx80SMwp"
+    },
+    {
+      "name": "random_case_69",
+      "input": "7\n26\nLGKAfCHAv4rOeGzttQYeMGVJLu\n5\nGeFlX\n16\nJH2ETLL8r2g5zQOp\n14\nqrtPLQWdwFBeGT\n15\nTrVRuPyWJeuDM1y\n1\nD\n6\nHoULoW\n",
+      "output": "D\nGeFlX\nqrtPLQWdwFBeGT\nJH2ETLL8r2g5zQOp\nHoULoW\nTrVRuPyWJeuDM1y\nLGKAfCHAv4rOeGzttQYeMGVJLu"
+    },
+    {
+      "name": "random_case_70",
+      "input": "11\n33\nHeqPBYbwepfZCZF4VwzZraVk6OnT1hFzs\n31\n4uP5wpDXkZSaEqhESq2e5SfxKlHemuB\n14\nYUNmOgEmLSqj84\n24\nAa88fFfsoem6fX7hmR0sZ3DZ\n34\nPwYugRysUFIbGVtb8gAmdKKlrm52n1FEaT\n1\nP\n18\nH2Wscih6yD8a0gHOIt\n32\nNHBHZhqfRoq01mnVukBqxG5sAw17jXRk\n23\nOpVAmTV3uJ3mS0HWLZrgtZF\n16\n6nbUChw68Sa7VtVE\n13\nYOndS7gw5xqiR\n",
+      "output": "P\nYOndS7gw5xqiR\nYUNmOgEmLSqj84\n6nbUChw68Sa7VtVE\nOpVAmTV3uJ3mS0HWLZrgtZF\nNHBHZhqfRoq01mnVukBqxG5sAw17jXRk\nH2Wscih6yD8a0gHOIt\nAa88fFfsoem6fX7hmR0sZ3DZ\nHeqPBYbwepfZCZF4VwzZraVk6OnT1hFzs\nPwYugRysUFIbGVtb8gAmdKKlrm52n1FEaT\n4uP5wpDXkZSaEqhESq2e5SfxKlHemuB"
+    },
+    {
+      "name": "random_case_71",
+      "input": "14\n5\nKDT2T\n9\nZpOpaKXcN\n3\nejP\n24\naCIyL9PxmYuejyBrOHl9BJVM\n10\nxtuFzjD9RN\n26\nsL808DNpcbU0G0aL7DW6Wl5GPv\n34\nLYJ0EOqfCRD6IDLiBQ50IcqMlXqTDyHLZm\n31\nsn0mzs3jCMbHK3OqhSacJmsEBpNfmBX\n7\nwuzgXhl\n29\nCXFFpXg1lu7OF6LdEin8gBRJ6oGF0\n16\nUBJGW6usNtJbndEz\n11\n666YGTZHfsC\n17\nSQmOe4BkC4X9Oe29p\n33\nW4JZfuT3c8qy1AaqAgioVNORbShlS7v2L\n",
+      "output": "KDT2T\n666YGTZHfsC\nejP\nwuzgXhl\nxtuFzjD9RN\nZpOpaKXcN\nsL808DNpcbU0G0aL7DW6Wl5GPv\nUBJGW6usNtJbndEz\nsn0mzs3jCMbHK3OqhSacJmsEBpNfmBX\nSQmOe4BkC4X9Oe29p\naCIyL9PxmYuejyBrOHl9BJVM\nCXFFpXg1lu7OF6LdEin8gBRJ6oGF0\nLYJ0EOqfCRD6IDLiBQ50IcqMlXqTDyHLZm\nW4JZfuT3c8qy1AaqAgioVNORbShlS7v2L"
+    },
+    {
+      "name": "random_case_72",
+      "input": "6\n10\nsr5GPRjiRC\n5\nesxc7\n21\n2DmFVGU9LB2CMz9YhxoAP\n9\nLEdbq1srH\n14\n8IOhuEadyRODm4\n16\nbCyERvIBgkTeQs3A\n",
+      "output": "esxc7\nLEdbq1srH\nsr5GPRjiRC\n2DmFVGU9LB2CMz9YhxoAP\nbCyERvIBgkTeQs3A\n8IOhuEadyRODm4"
+    },
+    {
+      "name": "random_case_73",
+      "input": "10\n8\nUUkDw1pW\n14\nOPtfCtumhiqNzl\n32\n91iUeOTlfF1Wf0ajwMPrXjkbFX5js4on\n29\nxt2dbgDbg5ayP4ZeRZyj7qqEtDcCp\n10\nujAiT1kCeo\n6\n59qJN5\n12\nQZlxvyaQp711\n13\nmItxe7JzF4DCv\n1\n1\n3\niHf\n",
+      "output": "1\n59qJN5\niHf\nQZlxvyaQp711\nUUkDw1pW\nmItxe7JzF4DCv\nOPtfCtumhiqNzl\nxt2dbgDbg5ayP4ZeRZyj7qqEtDcCp\nujAiT1kCeo\n91iUeOTlfF1Wf0ajwMPrXjkbFX5js4on"
+    },
+    {
+      "name": "random_case_74",
+      "input": "3\n5\nmgkt7\n15\ngWbbmeBB3URFJ3s\n23\nyP4hgBWd2Urut8HM171QdlX\n",
+      "output": "mgkt7\ngWbbmeBB3URFJ3s\nyP4hgBWd2Urut8HM171QdlX"
+    },
+    {
+      "name": "random_case_75",
+      "input": "7\n12\nsF7kAZWtDWrJ\n19\nOQGmmS3XoGEvkOVEcTt\n6\nJhzLfP\n24\nKdy5yC80D5A7mjschA57hw6S\n7\npfx5Noo\n31\nEpRJoVUWO4pv7KxoYmLpEwc3jgZ0zkM\n26\nSo9S6S4OlV21YVGZwL32BuTzlL\n",
+      "output": "JhzLfP\nsF7kAZWtDWrJ\npfx5Noo\nKdy5yC80D5A7mjschA57hw6S\nSo9S6S4OlV21YVGZwL32BuTzlL\nOQGmmS3XoGEvkOVEcTt\nEpRJoVUWO4pv7KxoYmLpEwc3jgZ0zkM"
+    },
+    {
+      "name": "random_case_76",
+      "input": "9\n8\nLzN4ZWft\n29\nIa8dAGQuMl7TSZ4oELmH5rJPJUWoG\n31\nGVYiTQ7kpjWAtUHbCza5YyOdLe31nF0\n14\nKzNoS0YVqu0f7D\n6\nihD17T\n30\nnbo9wpOwj60bQJOB3tbzlCZTe1aPMV\n17\n01kfl3jkFeHlASOXn\n1\nF\n15\nLVoWry2FfhoL229\n",
+      "output": "F\nLzN4ZWft\nihD17T\nKzNoS0YVqu0f7D\nLVoWry2FfhoL229\n01kfl3jkFeHlASOXn\nnbo9wpOwj60bQJOB3tbzlCZTe1aPMV\nGVYiTQ7kpjWAtUHbCza5YyOdLe31nF0\nIa8dAGQuMl7TSZ4oELmH5rJPJUWoG"
+    },
+    {
+      "name": "random_case_77",
+      "input": "5\n4\nmDHw\n8\n0NCeIIdo\n26\n0MlTpF8LpFjNttIgwhbfjvDeiv\n28\nV9l5tnZFOc9NNJ0j3opfsXdAaRi9\n15\nPvG8abkpSUm48QC\n",
+      "output": "mDHw\nPvG8abkpSUm48QC\n0MlTpF8LpFjNttIgwhbfjvDeiv\n0NCeIIdo\nV9l5tnZFOc9NNJ0j3opfsXdAaRi9"
+    },
+    {
+      "name": "random_case_78",
+      "input": "5\n9\ndxti41gcm\n29\nKuc5BFJgeB5E70AR8KXO6TnS4224S\n27\n8bjpUWFsDX4quwNTi5i5zSzX3gh\n26\nkkn4CUMcCpqWkxMQRPoU8G1KlC\n15\nmbqH5EY0XEeHrRC\n",
+      "output": "dxti41gcm\nmbqH5EY0XEeHrRC\nkkn4CUMcCpqWkxMQRPoU8G1KlC\n8bjpUWFsDX4quwNTi5i5zSzX3gh\nKuc5BFJgeB5E70AR8KXO6TnS4224S"
+    },
+    {
+      "name": "random_case_79",
+      "input": "13\n3\nUt0\n7\nGEklnqr\n11\nv7Gc3mTD459\n10\nPqIi6k1qN8\n21\nXgxnYSFmT923AEKvwwXBs\n34\nvBvFGCU2pPdv84IcxQu7DVRU5MQLHPpza3\n2\nP3\n32\nlp1rUnBgDbmdtctFY8E0RTF9ELbAiSak\n17\nAsUy8gMbzekqUxpcs\n15\nt7v5wOOzHWiBAeQ\n24\ncRgx7ys7TiTxS6bFxybGxV8j\n16\nqurWU9xt2YFSfB91\n6\npz1nKw\n",
+      "output": "P3\npz1nKw\nv7Gc3mTD459\nUt0\nGEklnqr\ncRgx7ys7TiTxS6bFxybGxV8j\nPqIi6k1qN8\nqurWU9xt2YFSfB91\nXgxnYSFmT923AEKvwwXBs\nAsUy8gMbzekqUxpcs\nt7v5wOOzHWiBAeQ\nvBvFGCU2pPdv84IcxQu7DVRU5MQLHPpza3\nlp1rUnBgDbmdtctFY8E0RTF9ELbAiSak"
+    },
+    {
+      "name": "random_case_80",
+      "input": "4\n9\nm0WrvznEG\n13\na3zBTfe9CKBKO\n7\nDtiw4w6\n5\neABzT\n",
+      "output": "Dtiw4w6\nm0WrvznEG\neABzT\na3zBTfe9CKBKO"
+    },
+    {
+      "name": "random_case_81",
+      "input": "8\n10\nuUKcW9wBXE\n26\nix8Tlh35Hwy0bEmU64XEEWCxKz\n11\nzlIugSHCAnI\n33\nAFzAvYM6xJK1heztz8YRs8zFftSRSTYkm\n28\nyBaLbOibFfGevmEgH7g9ctfAAhsl\n30\nDx3lKyGuLeFgSgzpojcdjVb46gldyp\n16\nCLxr6nYXQdjbkvTE\n1\nf\n",
+      "output": "f\nCLxr6nYXQdjbkvTE\nuUKcW9wBXE\nDx3lKyGuLeFgSgzpojcdjVb46gldyp\nAFzAvYM6xJK1heztz8YRs8zFftSRSTYkm\nzlIugSHCAnI\nix8Tlh35Hwy0bEmU64XEEWCxKz\nyBaLbOibFfGevmEgH7g9ctfAAhsl"
+    },
+    {
+      "name": "random_case_82",
+      "input": "6\n30\nKUlDP9KWNQblEJZ2F6WdFyODFlxl7d\n26\nEYSndcOrXQ47AzXLtT44M7bxep\n2\nU9\n32\n6E5oFZ1bnxMuxidAyHsXrMoTk8Lv3fPl\n20\n3PFJ4okiwZinMurYZQGK\n12\npm9T1e9hnG9r\n",
+      "output": "U9\npm9T1e9hnG9r\nKUlDP9KWNQblEJZ2F6WdFyODFlxl7d\n3PFJ4okiwZinMurYZQGK\nEYSndcOrXQ47AzXLtT44M7bxep\n6E5oFZ1bnxMuxidAyHsXrMoTk8Lv3fPl"
+    },
+    {
+      "name": "random_case_83",
+      "input": "5\n9\n8DQECiaOn\n19\nG4MQztOdCzYtgF2sGGZ\n33\nHgscnWJmE8Wpv6va444UEqk8GEPnrN6uO\n29\ndAPYmoBJMrltzbnofX1G59DlLoXxs\n15\nvCeObqbTyC8f2uT\n",
+      "output": "G4MQztOdCzYtgF2sGGZ\nvCeObqbTyC8f2uT\n8DQECiaOn\ndAPYmoBJMrltzbnofX1G59DlLoXxs\nHgscnWJmE8Wpv6va444UEqk8GEPnrN6uO"
+    },
+    {
+      "name": "random_case_84",
+      "input": "13\n20\nd3eOPXXJAckgzeWElOb9\n7\nD3lhiPU\n27\ng6NOqffVBVq2u7NWT5lmr15WukP\n19\nLIaoncXy1VwkAaG2MmN\n28\nqVs6LuML0mItCIrknoK0mV71ea93\n30\nAkFMdAIiB2bmR0guhBTDr3WGCqwcWl\n14\nlUh2zuUkfivl2C\n29\nYBzePWgpaVI68KNOJQQ69Ak8BhKpA\n16\nAbH2QEhGDJNIk6DY\n21\nP6niDlNODwYVVBGHd2hZY\n18\nlbwmrdft83aHgesy5Q\n26\nP6walBrf0hFTkB9fqO8Olwt4bG\n12\nNPP10HBK8L3A\n",
+      "output": "NPP10HBK8L3A\nD3lhiPU\nlbwmrdft83aHgesy5Q\nP6niDlNODwYVVBGHd2hZY\nAbH2QEhGDJNIk6DY\nP6walBrf0hFTkB9fqO8Olwt4bG\ng6NOqffVBVq2u7NWT5lmr15WukP\nlUh2zuUkfivl2C\nLIaoncXy1VwkAaG2MmN\nAkFMdAIiB2bmR0guhBTDr3WGCqwcWl\nd3eOPXXJAckgzeWElOb9\nqVs6LuML0mItCIrknoK0mV71ea93\nYBzePWgpaVI68KNOJQQ69Ak8BhKpA"
+    },
+    {
+      "name": "random_case_85",
+      "input": "13\n7\n5Zd8yqT\n34\nq1IGIfbo9GRysJuv4t6PdWE3BrRxDoWkaX\n9\nd8Wzs2n1P\n3\nHKN\n20\nVtl0LojJ9Zfe7RdyGgrv\n31\n6tnAGLx09frwXeeRxpeq3OegI8PcFuF\n17\ndje3horERC9d6cWEI\n30\nZR8F2WWeo10xqs8PJAx9pUnYT0PAnM\n16\nxNEeydeWNRhQ5kbA\n26\n0K4b8RaNPLROWwDIOPngclGcoa\n1\no\n22\nFISHsImz5caWE0bUOO411O\n2\n7H\n",
+      "output": "7H\nHKN\n5Zd8yqT\nd8Wzs2n1P\no\nVtl0LojJ9Zfe7RdyGgrv\nxNEeydeWNRhQ5kbA\ndje3horERC9d6cWEI\nZR8F2WWeo10xqs8PJAx9pUnYT0PAnM\n0K4b8RaNPLROWwDIOPngclGcoa\nq1IGIfbo9GRysJuv4t6PdWE3BrRxDoWkaX\nFISHsImz5caWE0bUOO411O\n6tnAGLx09frwXeeRxpeq3OegI8PcFuF"
+    },
+    {
+      "name": "random_case_86",
+      "input": "3\n26\n570EaaTQpKYdcUrQMVCyhcTc37\n15\nhN9BocCluIQKC8J\n33\nhl7YzucG9UPmrAIBDtAx15FwFyFTK4j8u\n",
+      "output": "hN9BocCluIQKC8J\n570EaaTQpKYdcUrQMVCyhcTc37\nhl7YzucG9UPmrAIBDtAx15FwFyFTK4j8u"
+    },
+    {
+      "name": "random_case_87",
+      "input": "10\n24\nnGe99g7mRN6RXQVBg4OVpHlP\n17\n9yiRccNw5gSBYnVYL\n8\nJtOcTIp6\n5\n71tOj\n15\n4MfeVhPX3iAKYEU\n32\nzjzW9iFUzXTPrmMvMEjeOGWeCyYJtzZY\n12\nQ0mHAOterzWb\n20\nJKOzWEEbiXl23rWuif0V\n9\nsw9L4nXWG\n1\n9\n",
+      "output": "9\nsw9L4nXWG\n71tOj\n9yiRccNw5gSBYnVYL\nJtOcTIp6\nnGe99g7mRN6RXQVBg4OVpHlP\nQ0mHAOterzWb\n4MfeVhPX3iAKYEU\nJKOzWEEbiXl23rWuif0V\nzjzW9iFUzXTPrmMvMEjeOGWeCyYJtzZY"
+    },
+    {
+      "name": "random_case_88",
+      "input": "9\n10\nBYcFNafWMM\n33\n2hLbPSZ5X9ZnInvBVT2MWRg6HoiMOFzl3\n9\nqXrV4qJFC\n7\nlaMT5rU\n27\n39SPI6m98Fx6D9aS8LJR6FJ8Yyi\n30\nka14uPuBSQMgbvxzbUYjlQyISGiT8K\n2\nsP\n25\nIFlEHzsOo086Zmrp62Dj1eGMQ\n5\nkrBSh\n",
+      "output": "sP\nkrBSh\nqXrV4qJFC\nBYcFNafWMM\nlaMT5rU\n39SPI6m98Fx6D9aS8LJR6FJ8Yyi\n2hLbPSZ5X9ZnInvBVT2MWRg6HoiMOFzl3\nIFlEHzsOo086Zmrp62Dj1eGMQ\nka14uPuBSQMgbvxzbUYjlQyISGiT8K"
+    },
+    {
+      "name": "random_case_89",
+      "input": "13\n25\n54rB9CG8HTmaKF4Ef5UOpCzrO\n10\nmlOWe95abp\n20\nsF7zINjedbBYBN9VJta9\n27\n8azAlFT91FiPf0SCdoK9UxA1Vzu\n9\nYHDTcyiJ3\n7\nU0QK6Bh\n24\nqNJs3mEcLSAR5WwzhyyoKsNR\n21\nL8mTTpzyVN9Wet2XbZfWB\n14\nO9cqYIOfKOeoAJ\n13\nRVEjjV8sgtQCZ\n30\nn2dJYfgXMOzL7GAMg0fCNXihAliITf\n31\nRDVboEASg7Ad6Avfy31vZUWVecWZfxI\n28\nS8MJYVgc3GGKQDlDjK9z0UAfEXVa\n",
+      "output": "U0QK6Bh\nYHDTcyiJ3\nRVEjjV8sgtQCZ\nL8mTTpzyVN9Wet2XbZfWB\nmlOWe95abp\nsF7zINjedbBYBN9VJta9\nqNJs3mEcLSAR5WwzhyyoKsNR\nS8MJYVgc3GGKQDlDjK9z0UAfEXVa\n54rB9CG8HTmaKF4Ef5UOpCzrO\nn2dJYfgXMOzL7GAMg0fCNXihAliITf\nO9cqYIOfKOeoAJ\n8azAlFT91FiPf0SCdoK9UxA1Vzu\nRDVboEASg7Ad6Avfy31vZUWVecWZfxI"
+    },
+    {
+      "name": "random_case_90",
+      "input": "8\n33\nDvGOP8E1kBkTrbrqfcS6EJ1EMmwJ47DxF\n7\n2HsxbU6\n2\nJN\n12\nbzdadpwx4cl7\n1\nu\n30\nZARB8SYAgBmrIp40o2jtHxVmyRZFmH\n16\nuYi3bWiPWv4TNVb6\n10\naznigL6Loz\n",
+      "output": "JN\nu\n2HsxbU6\nbzdadpwx4cl7\naznigL6Loz\nuYi3bWiPWv4TNVb6\nZARB8SYAgBmrIp40o2jtHxVmyRZFmH\nDvGOP8E1kBkTrbrqfcS6EJ1EMmwJ47DxF"
+    },
+    {
+      "name": "random_case_91",
+      "input": "8\n13\nkO8jREzkpgJmK\n20\nkeTDF3I6kmGu5FCaJSkC\n29\nNk2YN8z3upgob56JCyzg7vHG0G2KG\n22\nL6P1S5BmiOyNCMf7BcAuKU\n25\nZ3Yo85jvcVFgGfbjGcKzNwZrY\n9\nzrfYC6LSM\n8\nSd9uxwoH\n26\nm2eXEcAPQlU32QjiCY2ak6Lo0c\n",
+      "output": "zrfYC6LSM\nZ3Yo85jvcVFgGfbjGcKzNwZrY\nSd9uxwoH\nkO8jREzkpgJmK\nNk2YN8z3upgob56JCyzg7vHG0G2KG\nkeTDF3I6kmGu5FCaJSkC\nL6P1S5BmiOyNCMf7BcAuKU\nm2eXEcAPQlU32QjiCY2ak6Lo0c"
+    },
+    {
+      "name": "random_case_92",
+      "input": "3\n8\n2XTtxJPH\n34\nNS0DlbV5yAP1oxBIcuNfoGzljUIfBjaoAz\n6\niiQzcu\n",
+      "output": "2XTtxJPH\niiQzcu\nNS0DlbV5yAP1oxBIcuNfoGzljUIfBjaoAz"
+    },
+    {
+      "name": "random_case_93",
+      "input": "4\n9\n3QOQgpC7C\n12\nfcjvaLY8UJ1k\n3\nO3B\n22\nU8FzYPcnE0t9ZUQQWVxY8J\n",
+      "output": "O3B\n3QOQgpC7C\nfcjvaLY8UJ1k\nU8FzYPcnE0t9ZUQQWVxY8J"
+    },
+    {
+      "name": "random_case_94",
+      "input": "10\n18\nVTKzgj6hfbEbrTjBzQ\n11\ntbAaqFs5MP9\n28\nKfwgDtcygBgIc4aeKrji3KSwecd0\n26\nrX7FXsoXW7T6mbuynl6faq4KWy\n20\nwqk0UodkaOJreKsuGrPU\n4\nUFGf\n22\nWoYK56QxBGJwPClV5XZ6IL\n6\ncLS77A\n16\nNnxj7QiVAuWAfCtt\n32\nF7HmtmsZ1x1URlWk1z0vLh76AWdXakOz\n",
+      "output": "UFGf\ncLS77A\nVTKzgj6hfbEbrTjBzQ\ntbAaqFs5MP9\nWoYK56QxBGJwPClV5XZ6IL\nrX7FXsoXW7T6mbuynl6faq4KWy\nNnxj7QiVAuWAfCtt\nF7HmtmsZ1x1URlWk1z0vLh76AWdXakOz\nKfwgDtcygBgIc4aeKrji3KSwecd0\nwqk0UodkaOJreKsuGrPU"
+    },
+    {
+      "name": "random_case_95",
+      "input": "9\n15\nMXkH5KZGXO2zJLp\n22\nm1LhVIHum2Q3JmmJosqXcy\n7\nAInJLxx\n33\nLaJTK47Nuo8of10kKLuXegPexXeT5atBj\n28\nXU5X02rsRJZcxdjOLkaWuX1s4VTx\n9\nm74dS9HBu\n18\nDP7HaKHDe6NpEX13B1\n2\nsA\n11\nn0jjpPd1AZ8\n",
+      "output": "sA\nm74dS9HBu\nn0jjpPd1AZ8\nMXkH5KZGXO2zJLp\nAInJLxx\nDP7HaKHDe6NpEX13B1\nm1LhVIHum2Q3JmmJosqXcy\nXU5X02rsRJZcxdjOLkaWuX1s4VTx\nLaJTK47Nuo8of10kKLuXegPexXeT5atBj"
+    },
+    {
+      "name": "random_case_96",
+      "input": "5\n2\nWR\n12\n1fdQkKnyaNgR\n22\nn54FGRWJIzA9AYzAv2RYm5\n26\n6kTiLQ0xK85Y1kIkhc81f7sqKD\n3\n54c\n",
+      "output": "WR\n54c\n1fdQkKnyaNgR\n6kTiLQ0xK85Y1kIkhc81f7sqKD\nn54FGRWJIzA9AYzAv2RYm5"
+    },
+    {
+      "name": "random_case_97",
+      "input": "9\n1\n1\n7\nKSTYohX\n22\nwRmNUANx8YxRYmvhMgCWAk\n30\npJlPzcqMbBymieg7adzRtPwM8GhhXH\n6\nw9pDQY\n24\nPWMUERwiblRYQcePAjxpTpNu\n12\n7D4qWz2iaDIv\n21\nWOCJaRuOqPrmvS4IGSDq1\n31\n99AxSfBc36A7BdX597QKCfawSeniwwO\n",
+      "output": "1\nw9pDQY\nKSTYohX\n7D4qWz2iaDIv\nwRmNUANx8YxRYmvhMgCWAk\npJlPzcqMbBymieg7adzRtPwM8GhhXH\nWOCJaRuOqPrmvS4IGSDq1\nPWMUERwiblRYQcePAjxpTpNu\n99AxSfBc36A7BdX597QKCfawSeniwwO"
+    },
+    {
+      "name": "random_case_98",
+      "input": "6\n22\nNdfKAF9pu2T67dNUJcUNjY\n1\nn\n25\nDXjQDIKFOBD8E5iuJKuHJJTZa\n31\n10gjRbXQqcDoy6dr88hNfFu8m0EUrR9\n17\nco2KVeLhI6amrI7Fl\n6\n784zte\n",
+      "output": "n\n784zte\nNdfKAF9pu2T67dNUJcUNjY\n10gjRbXQqcDoy6dr88hNfFu8m0EUrR9\nco2KVeLhI6amrI7Fl\nDXjQDIKFOBD8E5iuJKuHJJTZa"
+    },
+    {
+      "name": "random_case_99",
+      "input": "9\n33\n0tVK85BBV3SLflsPFLEFKcTiPEmOl1ux4\n30\n7IRzBcwWwWVUNqozfTk4O2u1iMZd4C\n32\n8K0r9BbCHeuyR739G6gRTLlgSw2ZgOeW\n27\nbvzOIahaCGQZNcgTSWkPowYbdKY\n5\nVrf31\n16\njRO5GcQxVGNCfOht\n13\n394ZbBl219H8Q\n12\n6R2zkEKfeCGZ\n7\n70Ep6g6\n",
+      "output": "Vrf31\n394ZbBl219H8Q\n70Ep6g6\n6R2zkEKfeCGZ\njRO5GcQxVGNCfOht\n8K0r9BbCHeuyR739G6gRTLlgSw2ZgOeW\nbvzOIahaCGQZNcgTSWkPowYbdKY\n0tVK85BBV3SLflsPFLEFKcTiPEmOl1ux4\n7IRzBcwWwWVUNqozfTk4O2u1iMZd4C"
+    },
+    {
+      "name": "random_case_100",
+      "input": "10\n19\n83ekTDSy7vLEXv8FYD9\n3\npwV\n18\nzhzZQE1tpeS1F4md36\n20\nvVBUXsBBmrXkXddDJ9Cq\n30\nxCSsXM27UuVpJG2kvBpt549LV7S6i8\n25\nuNsZOq4LVw5v4uLP4gZCDcNKu\n4\nJM6r\n22\nPRfmMuluYKHdf57dGx01kW\n8\nA2deSj5V\n2\nvv\n",
+      "output": "vv\npwV\nJM6r\nvVBUXsBBmrXkXddDJ9Cq\nA2deSj5V\nzhzZQE1tpeS1F4md36\n83ekTDSy7vLEXv8FYD9\nPRfmMuluYKHdf57dGx01kW\nxCSsXM27UuVpJG2kvBpt549LV7S6i8\nuNsZOq4LVw5v4uLP4gZCDcNKu"
+    },
+    {
+      "name": "random_case_101",
+      "input": "14\n22\nLNGFgiovUOhJg22suyoKrj\n29\nkmrId9MoIgNgtQMcKG5917DsiJgdQ\n8\npdFJx3GA\n9\nOjnD5tzPI\n25\nEigXsgI2XX83IHg7DsP6UiDAT\n34\n3MN4c3YkMZUKzSw48MSyAyUayJyHu9Cd1l\n2\nUU\n5\nB9BRC\n17\nKAa1N2y0N9O9xuMq4\n18\nf5k8otO6mItTwxbIFA\n27\ngAmMACeK0KXZ0TnP39hLiPQlSYD\n33\n6RKRzCLhxEyDk1W2QaIkm633CqX60NTUR\n12\nRzmfArTBkoDj\n23\nTZKLKecjcSm4gOdfFAHMfl7\n",
+      "output": "B9BRC\npdFJx3GA\nUU\nOjnD5tzPI\nRzmfArTBkoDj\nTZKLKecjcSm4gOdfFAHMfl7\nKAa1N2y0N9O9xuMq4\ngAmMACeK0KXZ0TnP39hLiPQlSYD\nkmrId9MoIgNgtQMcKG5917DsiJgdQ\n6RKRzCLhxEyDk1W2QaIkm633CqX60NTUR\nf5k8otO6mItTwxbIFA\n3MN4c3YkMZUKzSw48MSyAyUayJyHu9Cd1l\nLNGFgiovUOhJg22suyoKrj\nEigXsgI2XX83IHg7DsP6UiDAT"
+    },
+    {
+      "name": "random_case_102",
+      "input": "11\n9\nnt7xs5LIZ\n6\naKr5d7\n1\n6\n26\n73fXL6Hee2K4G2vNwvWZt32ZS7\n31\nZON4wxfvVppfATl5DE23Mi6Vv1YRT2z\n4\nZdg0\n32\nHRWiU9u4IANNReIIdIcWDSa4cNeJD39y\n19\ncC5HQ3ZHnQU4CtsQzOW\n28\nGQYx4l6mrBVP9DPTlIPs3PaSo7Jx\n5\nN8IIk\n27\nuAVZW4jPX3YDzvzp88ME7bCRp3L\n",
+      "output": "6\nZdg0\naKr5d7\nnt7xs5LIZ\nN8IIk\ncC5HQ3ZHnQU4CtsQzOW\n73fXL6Hee2K4G2vNwvWZt32ZS7\nuAVZW4jPX3YDzvzp88ME7bCRp3L\nGQYx4l6mrBVP9DPTlIPs3PaSo7Jx\nZON4wxfvVppfATl5DE23Mi6Vv1YRT2z\nHRWiU9u4IANNReIIdIcWDSa4cNeJD39y"
+    },
+    {
+      "name": "random_case_103",
+      "input": "5\n25\nijePnNk0FSA5vmvvID1MjvU4S\n13\ngcrTBmrHtRHnv\n18\nS074tDjGCbnGaRaqO4\n4\nvj39\n26\n9aM8zlnFNExda5WFNQxe9VzWTE\n",
+      "output": "vj39\ngcrTBmrHtRHnv\nS074tDjGCbnGaRaqO4\nijePnNk0FSA5vmvvID1MjvU4S\n9aM8zlnFNExda5WFNQxe9VzWTE"
+    },
+    {
+      "name": "random_case_104",
+      "input": "13\n6\nO4CtzO\n19\nCy6LItoqJMIQIsKdt3j\n24\nuLNGcIhpKumTpYep78G8jcYt\n13\nXkftskpc7uziU\n3\nBAm\n17\nSXaPcCnGMn6W7LmRZ\n26\nftTqgVXTKbmpzYXHGAWpZal8dg\n28\nt7r4pudBQRc3ejXP7DUH5l10c82M\n9\ns36bYc1Nj\n4\nkZ1a\n15\nOaE8Dwg9IyhtF28\n11\nQTMs265et13\n20\n8SQhL8PztUjZifElE1R2\n",
+      "output": "s36bYc1Nj\nBAm\nkZ1a\nQTMs265et13\nSXaPcCnGMn6W7LmRZ\nO4CtzO\nftTqgVXTKbmpzYXHGAWpZal8dg\nXkftskpc7uziU\nt7r4pudBQRc3ejXP7DUH5l10c82M\nOaE8Dwg9IyhtF28\nCy6LItoqJMIQIsKdt3j\n8SQhL8PztUjZifElE1R2\nuLNGcIhpKumTpYep78G8jcYt"
+    },
+    {
+      "name": "random_case_105",
+      "input": "7\n4\n9nLA\n22\nu7AbzoxrR87VVa1dlD5XHE\n34\nQQldMUD5UdrBLjQH3EkXNNk5IUvTLzU5xk\n25\nZFOk5PDcUaIx2N3aNKX2Kulh7\n19\nFSc40lrBEvohFoTh8hy\n21\n7Rp1fi2MHLzo8hzph5FEd\n9\n1HfGhTTZR\n",
+      "output": "1HfGhTTZR\n9nLA\nFSc40lrBEvohFoTh8hy\n7Rp1fi2MHLzo8hzph5FEd\nu7AbzoxrR87VVa1dlD5XHE\nZFOk5PDcUaIx2N3aNKX2Kulh7\nQQldMUD5UdrBLjQH3EkXNNk5IUvTLzU5xk"
+    },
+    {
+      "name": "random_case_106",
+      "input": "10\n19\nt6daoAH4JQfiF3c8YcD\n34\nsyJ51dD4GJCip9fsMVgtgK2vizJxWeqKBe\n11\nMvyqCF3eriw\n21\nLYpjhlPr8yQrTLONEyCTa\n27\n5CsT5mOCycM5THUbSmsdKxWgmt6\n18\njE1KLiG6ggZosTEucl\n16\n8Ox9sKCxhRNKLDha\n9\ngffwSCtur\n22\nO2SGNJZqCWFTy99dVBTtox\n24\ny9DHELwNbfTv1iHmawv0wHQ8\n",
+      "output": "gffwSCtur\nMvyqCF3eriw\n8Ox9sKCxhRNKLDha\nO2SGNJZqCWFTy99dVBTtox\n5CsT5mOCycM5THUbSmsdKxWgmt6\nLYpjhlPr8yQrTLONEyCTa\ny9DHELwNbfTv1iHmawv0wHQ8\nt6daoAH4JQfiF3c8YcD\nsyJ51dD4GJCip9fsMVgtgK2vizJxWeqKBe\njE1KLiG6ggZosTEucl"
+    },
+    {
+      "name": "random_case_107",
+      "input": "2\n23\nlNnWHlAMVp0Y1YBnzeJHeXP\n27\nHBUze7j0q8AODYWRYhVVwxSamMS\n",
+      "output": "lNnWHlAMVp0Y1YBnzeJHeXP\nHBUze7j0q8AODYWRYhVVwxSamMS"
+    },
+    {
+      "name": "random_case_108",
+      "input": "10\n12\nyS38kHslOvZJ\n8\nnbEuKT5Z\n20\ng0FasCbf1vk7S2BiVSgF\n22\nurQCg0wVLmYOgyoAZmr2d8\n31\nk2XcGSLjEregqlgDSdCPGJw3PS8lBMe\n4\nQy7v\n34\nlbl6qyUJLutp6asaLLVbovvEiDvmWSu0hB\n2\nah\n3\nIKD\n19\nMJTBT6dQadIdEmmYtdK\n",
+      "output": "Qy7v\nah\nIKD\nyS38kHslOvZJ\nnbEuKT5Z\ng0FasCbf1vk7S2BiVSgF\nMJTBT6dQadIdEmmYtdK\nk2XcGSLjEregqlgDSdCPGJw3PS8lBMe\nurQCg0wVLmYOgyoAZmr2d8\nlbl6qyUJLutp6asaLLVbovvEiDvmWSu0hB"
+    },
+    {
+      "name": "random_case_109",
+      "input": "6\n25\nIKR7z41tN1OBYN5zjDAmGBqji\n26\nYMgjxkOaQX7zLLAhu3IrMl96av\n33\niHGsqxSVUxB1o4UUcabZHBHNb0iCTfpot\n20\nluNemE5l3kHWmJK2rjwz\n19\nJrVUa8dVjpf71Y41dEq\n30\nIUhlmVj31huWMi7QV2q0jTen0fjnrV\n",
+      "output": "JrVUa8dVjpf71Y41dEq\nluNemE5l3kHWmJK2rjwz\nIKR7z41tN1OBYN5zjDAmGBqji\nIUhlmVj31huWMi7QV2q0jTen0fjnrV\nYMgjxkOaQX7zLLAhu3IrMl96av\niHGsqxSVUxB1o4UUcabZHBHNb0iCTfpot"
+    },
+    {
+      "name": "random_case_110",
+      "input": "4\n27\niar1g3sHHFPBFjR0Z0H2RflNI9D\n33\noGC606MJJB8SUOElQ9TPhtpgQ9KFT3sKL\n17\nqyIfJVMRQIW39smBW\n2\nKL\n",
+      "output": "KL\nqyIfJVMRQIW39smBW\niar1g3sHHFPBFjR0Z0H2RflNI9D\noGC606MJJB8SUOElQ9TPhtpgQ9KFT3sKL"
+    },
+    {
+      "name": "random_case_111",
+      "input": "6\n2\nm5\n6\nGov3xh\n28\nCyGbTs3h9bTwwDWJaYHoogNtzbtP\n34\nNCJPDIk7Uy4zkxJXFQ9uvB2qjzc22y7y0P\n31\nKRDQjOgiHorPpK6W2ywx0aAVCwer7xK\n11\nNMT4pkVv8Ft\n",
+      "output": "m5\nNMT4pkVv8Ft\nGov3xh\nCyGbTs3h9bTwwDWJaYHoogNtzbtP\nNCJPDIk7Uy4zkxJXFQ9uvB2qjzc22y7y0P\nKRDQjOgiHorPpK6W2ywx0aAVCwer7xK"
+    },
+    {
+      "name": "random_case_112",
+      "input": "11\n18\nogJ2fO4Mie7oLw4II1\n25\nkXi8oSBRZ56wNCvgDwatDXDaR\n26\nsfH7DxI7n29G1xc6GNNzGM9wPw\n7\n3wbRfAU\n11\n9UifBdLI8Sf\n6\nmPTdjl\n29\nOnkMoATcNRgLvkbWemMMfkazff7yE\n16\nd3HYZNHSRTqeTXiW\n8\nipJgGEPi\n23\nEn5ZI5ZPO9wjDM0cF7pogNs\n3\nzLS\n",
+      "output": "zLS\nmPTdjl\nsfH7DxI7n29G1xc6GNNzGM9wPw\n3wbRfAU\nd3HYZNHSRTqeTXiW\nipJgGEPi\n9UifBdLI8Sf\nEn5ZI5ZPO9wjDM0cF7pogNs\nkXi8oSBRZ56wNCvgDwatDXDaR\nOnkMoATcNRgLvkbWemMMfkazff7yE\nogJ2fO4Mie7oLw4II1"
+    },
+    {
+      "name": "random_case_113",
+      "input": "3\n12\nTSYWBA5usdoB\n15\nICqubayn4d4cVyh\n19\nOYJYeHqOEqKc7LkEh2K\n",
+      "output": "TSYWBA5usdoB\nICqubayn4d4cVyh\nOYJYeHqOEqKc7LkEh2K"
+    },
+    {
+      "name": "random_case_114",
+      "input": "11\n20\nazehq05NyuI8gyCxwiBA\n10\n2WpTnzZI6r\n12\n4TmHleue5Nv1\n34\njZata6ljDYW9Vq5Mu4772ZTFnVeNi2IUKq\n11\njdXH2bg88wd\n32\njC3Cei7TvHuUeaie7ANAr9krAa3mP2Np\n8\nWjH9bhwV\n28\n8FCGCLhlMB9rthebdvVsf95WAN9t\n19\nXd4A2KC1CP4ZQw50FgJ\n29\nrQ4n3HEwhrrWZH8AayHO2wjhjelh5\n5\n5A5kS\n",
+      "output": "WjH9bhwV\njdXH2bg88wd\n5A5kS\n2WpTnzZI6r\nXd4A2KC1CP4ZQw50FgJ\n8FCGCLhlMB9rthebdvVsf95WAN9t\n4TmHleue5Nv1\nrQ4n3HEwhrrWZH8AayHO2wjhjelh5\nazehq05NyuI8gyCxwiBA\njZata6ljDYW9Vq5Mu4772ZTFnVeNi2IUKq\njC3Cei7TvHuUeaie7ANAr9krAa3mP2Np"
+    },
+    {
+      "name": "random_case_115",
+      "input": "12\n17\nBx3bc2FJi6IR2VCLX\n18\nMPnocSZNgooxQPOdlA\n33\nNTw9HiodmcTUp9Y1TiNnj8NRXWVqTlCyk\n31\n4kyHoMsXpploqoq4bCLgMuBIRfBYPBV\n10\nXGSeUvj14J\n32\nT4mj1ebcigypZQtXBmPz3ImGF79gq1B4\n34\nSm5n7CpUaBzAJMAsuif5UlerSjwKi9xGp7\n4\nJpEY\n25\nOhUGn7mtk1J9OPNdfJfmoDam9\n12\nhxN2Yw5qHqgd\n20\nohgxf7MVCDXUwVl6URS2\n13\nZLeUXVq0FyV10\n",
+      "output": "hxN2Yw5qHqgd\nJpEY\nXGSeUvj14J\nZLeUXVq0FyV10\nBx3bc2FJi6IR2VCLX\nohgxf7MVCDXUwVl6URS2\nT4mj1ebcigypZQtXBmPz3ImGF79gq1B4\nNTw9HiodmcTUp9Y1TiNnj8NRXWVqTlCyk\nMPnocSZNgooxQPOdlA\nOhUGn7mtk1J9OPNdfJfmoDam9\n4kyHoMsXpploqoq4bCLgMuBIRfBYPBV\nSm5n7CpUaBzAJMAsuif5UlerSjwKi9xGp7"
+    },
+    {
+      "name": "random_case_116",
+      "input": "13\n10\nvKGCNEGyAf\n14\nx3SBchdu1LOIRl\n26\n9oWtpNoI1oQDiMc2e7smFyQ7nW\n24\n7EyijIphCpkKqhtzWDFPYwiX\n13\nDj3LuaC0eIcGV\n18\n3N3tJOLzD5c7ksOSVm\n2\nct\n15\ngyrJnyZVX3V4BWc\n31\nO3PDBTZmdtqndU1PxOfvloF5fykHLcM\n33\nSmu9x5H3E0GKfal1Xu4YENpFBkIaQgc2P\n30\nJnssvKWmDqxZIKjtmXmodTw0l6eKgV\n17\nuhm4BpDhPZakTKeL3\n7\noaJTC3A\n",
+      "output": "ct\ngyrJnyZVX3V4BWc\nvKGCNEGyAf\n3N3tJOLzD5c7ksOSVm\noaJTC3A\nx3SBchdu1LOIRl\nuhm4BpDhPZakTKeL3\nJnssvKWmDqxZIKjtmXmodTw0l6eKgV\nDj3LuaC0eIcGV\n7EyijIphCpkKqhtzWDFPYwiX\nO3PDBTZmdtqndU1PxOfvloF5fykHLcM\n9oWtpNoI1oQDiMc2e7smFyQ7nW\nSmu9x5H3E0GKfal1Xu4YENpFBkIaQgc2P"
+    },
+    {
+      "name": "random_case_117",
+      "input": "5\n16\nnLOx0jraogplk8fF\n14\nzBjcox6yg07eVW\n30\nG5Hee4mTmPf1rxqg1VSiBuaC8kHZ5p\n1\n7\n25\nJ5VKhauoWdDBSRAPbORmWzQwu\n",
+      "output": "7\nzBjcox6yg07eVW\nnLOx0jraogplk8fF\nG5Hee4mTmPf1rxqg1VSiBuaC8kHZ5p\nJ5VKhauoWdDBSRAPbORmWzQwu"
+    },
+    {
+      "name": "random_case_118",
+      "input": "6\n17\npDrenHJyYHQDd6T21\n24\nxITYz38ZMlmOYzKVKm0NAj6P\n20\nS6NaXYloKoaA3gfO2Wik\n3\n5Sc\n23\nRqBh4VfVD7v6RKQTzZsxVu5\n4\nYfPV\n",
+      "output": "5Sc\nYfPV\npDrenHJyYHQDd6T21\nRqBh4VfVD7v6RKQTzZsxVu5\nxITYz38ZMlmOYzKVKm0NAj6P\nS6NaXYloKoaA3gfO2Wik"
+    },
+    {
+      "name": "random_case_119",
+      "input": "7\n11\n523wLsuNk5f\n2\nSK\n33\nlLL8RmHldNmxvpjwoZAyddJzsUKAOv9DT\n27\nOdcjFIdtwYIqnJidf8USBeR4z3W\n34\nSupfs4eizBVVMHRqH6Ty0oTOOP7KZnreSv\n10\n872P2A3AR5\n13\nnbJf4gApZInqB\n",
+      "output": "SK\n523wLsuNk5f\n872P2A3AR5\nnbJf4gApZInqB\nlLL8RmHldNmxvpjwoZAyddJzsUKAOv9DT\nOdcjFIdtwYIqnJidf8USBeR4z3W\nSupfs4eizBVVMHRqH6Ty0oTOOP7KZnreSv"
+    },
+    {
+      "name": "random_case_120",
+      "input": "10\n9\nT3eb0O9UK\n1\nX\n19\nmZsITOwuZEm6H5IENgm\n23\nzVWIxXH2uzKZ5xVWGf1PGKj\n4\nywuC\n8\nFm2IqJSH\n25\n6hVJZ5WS3U2gJO8ecLJplWQmu\n32\nEtKqmX7pMUjud3ioYQFnUmqix0ZeGppi\n20\nC5AnsO7M0Fkp4qwsDjfR\n31\nm6uUPMrxScjhczinnSZu2Fdt3mjvwZz\n",
+      "output": "X\nywuC\nFm2IqJSH\nC5AnsO7M0Fkp4qwsDjfR\nzVWIxXH2uzKZ5xVWGf1PGKj\nT3eb0O9UK\n6hVJZ5WS3U2gJO8ecLJplWQmu\nm6uUPMrxScjhczinnSZu2Fdt3mjvwZz\nmZsITOwuZEm6H5IENgm\nEtKqmX7pMUjud3ioYQFnUmqix0ZeGppi"
+    },
+    {
+      "name": "random_case_121",
+      "input": "5\n34\nepC6Du5Tx14aBI1gramh3EhlK28SPAT966\n21\nLvYGw4gRbFL0qN31bXea8\n9\nDISu7C6ho\n27\n6Dk8PzzfnCRKtQNMbsZUJc84Lqy\n25\nyyWTMnygip4bVDVk4lHwuuwtx\n",
+      "output": "6Dk8PzzfnCRKtQNMbsZUJc84Lqy\nLvYGw4gRbFL0qN31bXea8\nDISu7C6ho\nyyWTMnygip4bVDVk4lHwuuwtx\nepC6Du5Tx14aBI1gramh3EhlK28SPAT966"
+    },
+    {
+      "name": "random_case_122",
+      "input": "8\n29\nkJSdwvnMRny1IfIscejroDa7hgKec\n32\n8qwQp8XQkZB4OZEJt3wEv4JA4f7RNDyI\n28\nSixWtY2va29senNEv0K5wXughR0h\n34\nJf65RVjFkveHFP4gtAKlyBJW2wlcuv4ASL\n26\ntT62luzUluT7XZHqRAqlxHovwE\n27\nG5ziYLgGlsEKEll173m3UG94Dxk\n20\nxlvwZFPqCdtubdPTou8W\n31\ngwMTY4ZE1F1ree6Hhrct3r3kdQtyqM6\n",
+      "output": "xlvwZFPqCdtubdPTou8W\ngwMTY4ZE1F1ree6Hhrct3r3kdQtyqM6\nG5ziYLgGlsEKEll173m3UG94Dxk\nJf65RVjFkveHFP4gtAKlyBJW2wlcuv4ASL\nSixWtY2va29senNEv0K5wXughR0h\n8qwQp8XQkZB4OZEJt3wEv4JA4f7RNDyI\ntT62luzUluT7XZHqRAqlxHovwE\nkJSdwvnMRny1IfIscejroDa7hgKec"
+    },
+    {
+      "name": "random_case_123",
+      "input": "3\n12\nnz8pkk4PR8Zk\n29\n0nkeTanpxCVcSC5nCjNfyOJQ2rilA\n2\nq0\n",
+      "output": "q0\nnz8pkk4PR8Zk\n0nkeTanpxCVcSC5nCjNfyOJQ2rilA"
+    },
+    {
+      "name": "random_case_124",
+      "input": "3\n21\nisJS1rBALXCGvLsT4JJyX\n9\njRXoOYMpD\n6\ndbRBiO\n",
+      "output": "dbRBiO\njRXoOYMpD\nisJS1rBALXCGvLsT4JJyX"
+    },
+    {
+      "name": "random_case_125",
+      "input": "11\n23\nDBFSjzFbVkLY3Nfspv2DYus\n12\nzesgFb2wYGQJ\n10\nl29R7cblqX\n30\n8KTMqesdzojbKe6VNnwIDO8WC8eeCc\n29\nRZUN7yqUxD6AjG5J7SyA3tU3LlIVy\n21\n1dScrsxjkBZhMTiopxLoR\n20\ntcHFnZxWEZj8fwANZ3ai\n8\nk1uFyq69\n3\nLBL\n27\nZjO0T4NI96k33168kbBZ8gi93Px\n2\ndi\n",
+      "output": "LBL\nl29R7cblqX\ndi\nk1uFyq69\nzesgFb2wYGQJ\nDBFSjzFbVkLY3Nfspv2DYus\n1dScrsxjkBZhMTiopxLoR\nZjO0T4NI96k33168kbBZ8gi93Px\ntcHFnZxWEZj8fwANZ3ai\nRZUN7yqUxD6AjG5J7SyA3tU3LlIVy\n8KTMqesdzojbKe6VNnwIDO8WC8eeCc"
+    },
+    {
+      "name": "random_case_126",
+      "input": "12\n3\nkjg\n14\nW0oVAgPyA9QF68\n10\ndgzCRWaW0r\n17\nfOOcP6K5P5IEqcBiP\n29\nsuZKRn6s5WJpm2ASzvBSGi0F5NZuA\n4\nB3Xe\n16\nG7ZmVIKV9vrehwX6\n9\nG9wf966fZ\n25\n7EN59y6IWVmMsvdb1TmdYU8An\n1\ns\n2\nYe\n21\noIJjBkwZQHPNs5PuJRvgV\n",
+      "output": "s\nkjg\nG9wf966fZ\nYe\nB3Xe\ndgzCRWaW0r\nG7ZmVIKV9vrehwX6\nW0oVAgPyA9QF68\noIJjBkwZQHPNs5PuJRvgV\n7EN59y6IWVmMsvdb1TmdYU8An\nfOOcP6K5P5IEqcBiP\nsuZKRn6s5WJpm2ASzvBSGi0F5NZuA"
+    },
+    {
+      "name": "random_case_127",
+      "input": "13\n29\nVxwSmurbNrH0Yb8kf7qgipKIhd8n7\n34\nWjNCsThGZcBKrHAn3zH4qmQVtcK1IgpKR3\n7\n9xWR5DV\n18\nDeIEzY3vxP3JJ75728\n30\ntHeyRDxQqGmaJJnTd5fRJSnv5GQqzT\n27\njs0Co9hmR57Nk7sHWSzcJ55vrpy\n17\nnA2H4Lp4DS2AGCE0S\n20\nDI0jqpLBajwT0pdWn4sU\n23\n5aM1m1fUduqwHkF49t6OGIk\n6\nUyvETk\n33\nEzYlggRd52keYvzAQ2Gy7AGOaIgRLxpKZ\n3\naOn\n2\nCT\n",
+      "output": "CT\n9xWR5DV\njs0Co9hmR57Nk7sHWSzcJ55vrpy\naOn\nUyvETk\ntHeyRDxQqGmaJJnTd5fRJSnv5GQqzT\nWjNCsThGZcBKrHAn3zH4qmQVtcK1IgpKR3\nnA2H4Lp4DS2AGCE0S\nDeIEzY3vxP3JJ75728\nDI0jqpLBajwT0pdWn4sU\nVxwSmurbNrH0Yb8kf7qgipKIhd8n7\n5aM1m1fUduqwHkF49t6OGIk\nEzYlggRd52keYvzAQ2Gy7AGOaIgRLxpKZ"
+    },
+    {
+      "name": "random_case_128",
+      "input": "6\n25\ngX3w646tS4RYh0msyir5PkCXT\n26\nX5E2OJmqHSNwZkhAZDygW7VelK\n4\n3yph\n16\niO5uOxTh7H0T6Bmi\n32\nnvGJUTT2UrR1h2kJm1eEuDP2ZQOYWrRF\n5\n7an2e\n",
+      "output": "3yph\ngX3w646tS4RYh0msyir5PkCXT\n7an2e\nX5E2OJmqHSNwZkhAZDygW7VelK\niO5uOxTh7H0T6Bmi\nnvGJUTT2UrR1h2kJm1eEuDP2ZQOYWrRF"
+    },
+    {
+      "name": "random_case_129",
+      "input": "2\n6\n5d2u9q\n31\nU5st48P3o9rzMx9iNtye1Moqvq5QM2w\n",
+      "output": "5d2u9q\nU5st48P3o9rzMx9iNtye1Moqvq5QM2w"
+    },
+    {
+      "name": "random_case_130",
+      "input": "13\n11\nv3HCAcFCCkp\n30\n0SgiZkdAiUVgAI8GaJl2BXOB5gfrhp\n1\nm\n18\n2rJOkJUI6Y5X1huA9d\n9\n8Dc3qa1E9\n2\nyE\n27\n4XhFKEv6W1vXjy1S7KDZ57sIX0l\n6\nlPoNUi\n29\n8xpztiXuF1woTlA3kx2Dhfh0uvJ3z\n32\nP1BrIWzmvQsdg2ZQMDhkdYgPq10tcQ1y\n26\n5yR66LyMc1w4HelLYEAvcw7WcA\n7\nHDfGsg8\n22\nSmpE69ZHAinBewJSoNbYRm\n",
+      "output": "m\nHDfGsg8\nyE\nv3HCAcFCCkp\nP1BrIWzmvQsdg2ZQMDhkdYgPq10tcQ1y\n8Dc3qa1E9\n4XhFKEv6W1vXjy1S7KDZ57sIX0l\nlPoNUi\n5yR66LyMc1w4HelLYEAvcw7WcA\n2rJOkJUI6Y5X1huA9d\nSmpE69ZHAinBewJSoNbYRm\n8xpztiXuF1woTlA3kx2Dhfh0uvJ3z\n0SgiZkdAiUVgAI8GaJl2BXOB5gfrhp"
+    }
+  ]
+}

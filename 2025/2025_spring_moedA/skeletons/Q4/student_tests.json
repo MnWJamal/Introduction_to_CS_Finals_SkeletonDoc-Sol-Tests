@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "sample_fruits",
+      "input": "4\n2\nhi\n6\nbanana\n5\napple\n7\noranges\n",
+      "output": "hi\napple\nbanana\noranges"
+    },
+    {
+      "name": "sample_animals",
+      "input": "5\n3\nCAT\n4\ndogs\n9\nfireflies\n5\npants\n7\nspidErS\n",
+      "output": "CAT\ndogs\npants\nspidErS\nfireflies"
+    },
+    {
+      "name": "sample_companies",
+      "input": "6\n8\nAMAZONas\n5\ntesla\n7\n3APPLeS\n4\nMeTA\n6\nGOOGLe\n3\nHnM\n",
+      "output": "HnM\nMeTA\ntesla\n3APPLeS\nGOOGLe\nAMAZONas"
+    }
+  ]
+}

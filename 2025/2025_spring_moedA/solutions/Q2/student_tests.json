@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "sample_first_table",
+      "input": "5\n1.0 2.0 3.1 4.2 10.0\n2 3.5\n",
+      "output": "1.1"
+    },
+    {
+      "name": "sample_negative_values",
+      "input": "5\n-10.0 -8.2 -6.1 -4.3 -2.0\n3 -5.0\n",
+      "output": "4.8"
+    },
+    {
+      "name": "sample_x_equals_member",
+      "input": "5\n1.0 2.0 3.0 4.2 5.3\n2 3.0\n",
+      "output": "1.0"
+    },
+    {
+      "name": "sample_k_one",
+      "input": "7\n1.0 2.0 3.0 4.0 5.0 6.5 7.7\n1 4.2\n",
+      "output": "0.2"
+    }
+  ]
+}
