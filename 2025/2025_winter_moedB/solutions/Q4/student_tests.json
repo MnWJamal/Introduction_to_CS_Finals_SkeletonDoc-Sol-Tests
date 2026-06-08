@@ -1,0 +1,654 @@
+{
+  "tests": [
+    {
+      "name": "edge_given_example",
+      "input": "REEDE\nEDEEE\nEUELD\nEEEEE\nEEEEE\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_top_then_down_zero",
+      "input": "REEED\nEEEEE\nEEEEE\nEEEEE\nEEEEE\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_top_then_down_one_turn",
+      "input": "REEEL\nEEEEE\nEEEEE\nEEEEE\nEEEEE\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_down_then_right_zero",
+      "input": "DEEEE\nEEEEE\nEEEEE\nEEEEE\nREEEE\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_down_then_right_one_turn",
+      "input": "DEEEE\nEEEEE\nEEEEE\nEEEEE\nLEEEE\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_all_empty_after_start_impossible",
+      "input": "REEEE\nEEEEE\nEEEEE\nEEEEE\nEEEEE\n",
+      "output": "-1"
+    },
+    {
+      "name": "edge_start_wrong_but_fixable",
+      "input": "DEEEE\nEEEEE\nEEEEE\nEEEEE\nEEEED\n",
+      "output": "-1"
+    },
+    {
+      "name": "edge_start_wall_but_fixable",
+      "input": "UEEED\nEEEEE\nEEEEE\nEEEEE\nEEEEE\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_start_left_but_fixable",
+      "input": "LEEED\nEEEEE\nEEEEE\nEEEEE\nEEEEE\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_two_turns_zero",
+      "input": "REEED\nEEEEE\nEEEEE\nEEEEE\nREEEE\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_two_turns_one",
+      "input": "REEEL\nEEEEE\nEEEEE\nEEEEE\nREEEE\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_two_turns_two",
+      "input": "LEEEL\nEEEEE\nEEEEE\nEEEEE\nREEEE\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_bottom_turn_wrong",
+      "input": "DEEEE\nEEEEE\nEEEEE\nEEEEE\nUEEEE\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_all_cranes_r",
+      "input": "RRRRR\nRRRRR\nRRRRR\nRRRRR\nRRRRR\n",
+      "output": "4"
+    },
+    {
+      "name": "edge_all_cranes_d",
+      "input": "DDDDD\nDDDDD\nDDDDD\nDDDDD\nDDDDD\n",
+      "output": "4"
+    },
+    {
+      "name": "edge_all_cranes_l",
+      "input": "LLLLL\nLLLLL\nLLLLL\nLLLLL\nLLLLL\n",
+      "output": "8"
+    },
+    {
+      "name": "edge_all_cranes_u",
+      "input": "UUUUU\nUUUUU\nUUUUU\nUUUUU\nUUUUU\n",
+      "output": "8"
+    },
+    {
+      "name": "edge_snake_zero",
+      "input": "RDDDD\nRRRRD\nDDDLD\nDLLLL\nRRRRR\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_snake_one",
+      "input": "LDDDD\nRRRRD\nDDDLD\nDLLLL\nRRRRR\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_snake_many_wrong",
+      "input": "LDDDD\nLLLLD\nUUULD\nDUUUU\nLRRRR\n",
+      "output": "4"
+    },
+    {
+      "name": "edge_corner_cranes_only_zero",
+      "input": "REEED\nEEEEE\nEEEEE\nEEEEE\nREEEE\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_corner_cranes_only_fail",
+      "input": "REEEE\nEEEEE\nEEEEE\nEEEEE\nREEEE\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_middle_crane_turn_zero",
+      "input": "REEEE\nEEEDE\nEEEEE\nEEEEE\nEEEER\n",
+      "output": "-1"
+    },
+    {
+      "name": "edge_middle_crane_turn_one",
+      "input": "REEEE\nEEELE\nEEEEE\nEEEEE\nEEEER\n",
+      "output": "-1"
+    },
+    {
+      "name": "edge_loop_present_exit_possible",
+      "input": "RDEEE\nUREEE\nEDEEE\nEREEE\nEEEER\n",
+      "output": "-1"
+    },
+    {
+      "name": "edge_loop_present_need_change",
+      "input": "RDEEE\nULEEE\nEDEEE\nEREEE\nEEEER\n",
+      "output": "-1"
+    },
+    {
+      "name": "edge_dense_mixed_one",
+      "input": "RDLUD\nEERDE\nULEDE\nRDELE\nURRRL\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_dense_mixed_two",
+      "input": "DLRUD\nRERDE\nULEDE\nRDELE\nURRRL\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_unreachable_due_empty_corridor",
+      "input": "REEEE\nEEEER\nEEEEE\nEEEEL\nEEEEU\n",
+      "output": "-1"
+    },
+    {
+      "name": "edge_detour_with_cranes",
+      "input": "RERED\nDEDEE\nRELER\nEUEDE\nRRRRE\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_dest_is_crane_reached_zero",
+      "input": "REEED\nEEEEE\nEEEEE\nEEEEE\nEEEER\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_dest_is_crane_reached_one",
+      "input": "LEEEE\nEEEEE\nEEEEE\nEEEEE\nEEEER\n",
+      "output": "-1"
+    },
+    {
+      "name": "edge_crossing_empty_directions",
+      "input": "RERED\nEEEEE\nDERER\nEEEEE\nREEEE\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_need_start_and_late_change",
+      "input": "DEEEE\nEEEEE\nEEEEE\nEEEEE\nUEEER\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_need_three_changes",
+      "input": "LREEL\nEEEEE\nEEEEE\nEEEEE\nUEEER\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_no_crane_at_needed_corner",
+      "input": "REEEE\nEEEEE\nEEEEE\nEEEEE\nEEEER\n",
+      "output": "-1"
+    },
+    {
+      "name": "edge_turn_at_column_three",
+      "input": "REEDR\nEEEEE\nEEEEE\nEEEEE\nEEEEE\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_turn_at_column_three_wrong",
+      "input": "REEUR\nEEEEE\nEEEEE\nEEEEE\nEEEEE\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_bottom_row_to_dest",
+      "input": "DEEEE\nEEEEE\nEEEEE\nEEEEE\nREEEE\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_bottom_row_wrong_start",
+      "input": "REEEE\nEEEEE\nEEEEE\nEEEEE\nREEEE\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_left_wall_trap",
+      "input": "LEEEE\nEEEEE\nEEEEE\nEEEEE\nEEEEE\n",
+      "output": "-1"
+    },
+    {
+      "name": "edge_up_wall_trap",
+      "input": "UEEEE\nEEEEE\nEEEEE\nEEEEE\nEEEEE\n",
+      "output": "-1"
+    },
+    {
+      "name": "edge_down_wall_trap_but_change",
+      "input": "DEEEE\nEEEEE\nEEEEE\nEEEEE\nDEEEE\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_many_empty_one_crane_missing",
+      "input": "REDEE\nEEEEE\nEEEEE\nEEEEE\nEEEEE\n",
+      "output": "-1"
+    },
+    {
+      "name": "edge_many_empty_two_cranes",
+      "input": "REDEE\nEEERD\nEEEEE\nEEEEE\nEEEEE\n",
+      "output": "-1"
+    },
+    {
+      "name": "edge_long_spiral",
+      "input": "RREDD\nUUEED\nRREED\nDEEEL\nRRRRR\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_spiral_wrong_one",
+      "input": "LREDD\nUUEED\nRREED\nDEEEL\nRRRRR\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_alternating_cranes",
+      "input": "RDRDR\nULULU\nRDRDR\nULULU\nRDRDR\n",
+      "output": "4"
+    },
+    {
+      "name": "edge_checker_empty_cranes",
+      "input": "RERED\nEUELE\nDEDER\nEUELE\nRERER\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_checker_start_wrong",
+      "input": "LERED\nEUELE\nDEDER\nEUELE\nRERER\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_min_zero_with_internal_wrong_offpath",
+      "input": "REEED\nUDLRU\nLRULR\nDULRD\nEEEER\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_min_one_with_internal_wrong_onpath",
+      "input": "REEEL\nUDLRU\nLRULR\nDULRD\nEEEER\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_path_1_zero",
+      "input": "REEED\nEEEEE\nEEEEE\nEEEEE\nEEEEE\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_path_1_one",
+      "input": "LEEED\nEEEEE\nEEEEE\nEEEEE\nEEEEE\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_path_1_two",
+      "input": "LEEEL\nEEEEE\nEEEEE\nEEEEE\nEEEEE\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_path_2_zero",
+      "input": "DEEEE\nEEEEE\nEEEEE\nEEEEE\nREEEE\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_path_2_one",
+      "input": "REEEE\nEEEEE\nEEEEE\nEEEEE\nREEEE\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_path_2_two",
+      "input": "REEEE\nEEEEE\nEEEEE\nEEEEE\nUEEEE\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_path_3_zero",
+      "input": "RDEEE\nEEEEE\nEREDE\nEEEEE\nEEERE\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_path_3_one",
+      "input": "LDEEE\nEEEEE\nEREDE\nEEEEE\nEEERE\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_path_3_two",
+      "input": "LDEEE\nEEEEE\nERUDE\nEEEEE\nEEERE\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_path_4_zero",
+      "input": "DEEEE\nREDEE\nEEEEE\nEERED\nEEEEE\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_path_4_one",
+      "input": "REEEE\nREDEE\nEEEEE\nEERED\nEEEEE\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_path_4_two",
+      "input": "REEEE\nREDEE\nEELEE\nEERED\nEEEEE\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_path_5_zero",
+      "input": "REDEE\nEEEEE\nEDLEE\nEEEEE\nEREEE\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_path_5_one",
+      "input": "DEDEE\nEEEEE\nEDLEE\nEEEEE\nEREEE\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_path_5_two",
+      "input": "DEDEE\nEEEEE\nELLEE\nEEEEE\nEREEE\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_path_6_zero",
+      "input": "DEEEE\nEERDE\nREUEE\nEEERD\nEEEEE\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_path_6_one",
+      "input": "UEEEE\nEERDE\nREUEE\nEEERD\nEEEEE\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_path_6_two",
+      "input": "UEEEE\nEEUDE\nREUEE\nEEERD\nEEEEE\n",
+      "output": "2"
+    },
+    {
+      "name": "random_1",
+      "input": "REDDE\nEREDR\nELRLE\nRELER\nRRREU\n",
+      "output": "2"
+    },
+    {
+      "name": "random_2",
+      "input": "DREER\nEEEEE\nEREEE\nREEEE\nREEEE\n",
+      "output": "1"
+    },
+    {
+      "name": "random_3",
+      "input": "DERLE\nDLERE\nEUEEE\nERURD\nULRRE\n",
+      "output": "2"
+    },
+    {
+      "name": "random_4",
+      "input": "REEED\nEEEEE\nDUEEU\nEEELE\nEEEED\n",
+      "output": "1"
+    },
+    {
+      "name": "random_5",
+      "input": "URUEE\nEREEE\nUEEEU\nLEEED\nELERE\n",
+      "output": "3"
+    },
+    {
+      "name": "random_6",
+      "input": "LELRE\nRDEEE\nEEELE\nEEEEE\nEEDEE\n",
+      "output": "3"
+    },
+    {
+      "name": "random_7",
+      "input": "RUURE\nDEDDL\nREERL\nUDLLE\nEDRRE\n",
+      "output": "2"
+    },
+    {
+      "name": "random_8",
+      "input": "UERDE\nEEEEE\nEDREE\nEEULE\nELEEE\n",
+      "output": "3"
+    },
+    {
+      "name": "random_9",
+      "input": "REDLE\nDREUU\nRDLDD\nUERER\nRULRR\n",
+      "output": "1"
+    },
+    {
+      "name": "random_10",
+      "input": "DEDEE\nEERLL\nEEEDE\nUEDEE\nEEEEE\n",
+      "output": "3"
+    },
+    {
+      "name": "random_11",
+      "input": "RDLED\nEULER\nUEDDE\nERERE\nRLEER\n",
+      "output": "3"
+    },
+    {
+      "name": "random_12",
+      "input": "UEEEE\nEEEEE\nEUDEE\nEEEEE\nUEEEE\n",
+      "output": "2"
+    },
+    {
+      "name": "random_13",
+      "input": "RRLDD\nLUDEE\nERRRE\nDEDER\nDREEU\n",
+      "output": "3"
+    },
+    {
+      "name": "random_14",
+      "input": "UEEEE\nEEEDD\nEUEEE\nEELRE\nELELE\n",
+      "output": "-1"
+    },
+    {
+      "name": "random_15",
+      "input": "RELLE\nRUURE\nEEERE\nLURLL\nLLEEU\n",
+      "output": "4"
+    },
+    {
+      "name": "random_16",
+      "input": "LEDEE\nDREEE\nUEEEE\nEEEEE\nEEDEE\n",
+      "output": "2"
+    },
+    {
+      "name": "random_17",
+      "input": "ULEED\nLDLUE\nLEELU\nDERDE\nEEDUE\n",
+      "output": "3"
+    },
+    {
+      "name": "random_18",
+      "input": "REUEE\nEEELE\nREEUE\nEEEEE\nEREEL\n",
+      "output": "-1"
+    },
+    {
+      "name": "random_19",
+      "input": "UELLD\nUEEEE\nRRDRE\nEERLL\nLUEEE\n",
+      "output": "4"
+    },
+    {
+      "name": "random_20",
+      "input": "UUEEE\nEDEEE\nEEEEE\nDEEEE\nEERRE\n",
+      "output": "-1"
+    },
+    {
+      "name": "random_21",
+      "input": "UEEEU\nELEEE\nURDEE\nEDEEE\nEDDLE\n",
+      "output": "2"
+    },
+    {
+      "name": "random_22",
+      "input": "RRERE\nUEEEE\nEEEEE\nEEEEE\nLDLEE\n",
+      "output": "3"
+    },
+    {
+      "name": "random_23",
+      "input": "LDLER\nREEUE\nULUEE\nDRREE\nEEUER\n",
+      "output": "4"
+    },
+    {
+      "name": "random_24",
+      "input": "UUEEE\nEEEEE\nEEEEE\nEEEEE\nEEEER\n",
+      "output": "-1"
+    },
+    {
+      "name": "random_25",
+      "input": "DRREE\nDRUDD\nLEDRE\nEEELR\nEEEUE\n",
+      "output": "4"
+    },
+    {
+      "name": "random_26",
+      "input": "LEEUE\nUEDEE\nEEEUE\nEEEEL\nEDEEE\n",
+      "output": "-1"
+    },
+    {
+      "name": "random_27",
+      "input": "ULELD\nEREDE\nLELEU\nDUDRU\nEDDDD\n",
+      "output": "3"
+    },
+    {
+      "name": "random_28",
+      "input": "UEEER\nEEEEE\nEEUER\nEEEEE\nEEEEE\n",
+      "output": "3"
+    },
+    {
+      "name": "random_29",
+      "input": "LRURE\nEEREU\nEEEEU\nEEERE\nUEEEE\n",
+      "output": "2"
+    },
+    {
+      "name": "random_30",
+      "input": "DEEUL\nEEEER\nEEEEE\nEEEEE\nEUEUE\n",
+      "output": "3"
+    },
+    {
+      "name": "random_31",
+      "input": "DEEUE\nLEULR\nELREL\nDREDL\nEEREU\n",
+      "output": "3"
+    },
+    {
+      "name": "random_32",
+      "input": "DEEDE\nDRLEU\nEEEEE\nEEEEE\nEEEUU\n",
+      "output": "2"
+    },
+    {
+      "name": "random_33",
+      "input": "RDEEL\nELREE\nLEEUE\nELRDU\nEEEEU\n",
+      "output": "3"
+    },
+    {
+      "name": "random_34",
+      "input": "UEEEE\nEEEED\nEEELE\nELDEE\nEEEED\n",
+      "output": "-1"
+    },
+    {
+      "name": "random_35",
+      "input": "RLEEE\nRREUL\nEUULE\nDEERR\nEDEUL\n",
+      "output": "4"
+    },
+    {
+      "name": "random_36",
+      "input": "UEEEE\nEEEEE\nEEUEE\nEEEEE\nEEEUE\n",
+      "output": "-1"
+    },
+    {
+      "name": "random_37",
+      "input": "DURER\nDELRR\nUEDEE\nEEDED\nEDERL\n",
+      "output": "2"
+    },
+    {
+      "name": "random_38",
+      "input": "UEEEE\nEREEE\nDUEEE\nEEEEE\nEEEDR\n",
+      "output": "-1"
+    },
+    {
+      "name": "random_39",
+      "input": "DLEEL\nULEEE\nDEURU\nEDEUL\nEEERR\n",
+      "output": "4"
+    },
+    {
+      "name": "random_40",
+      "input": "REEEL\nUEEEE\nEEEEE\nDEEEE\nEEEEE\n",
+      "output": "1"
+    },
+    {
+      "name": "random_41",
+      "input": "UEERD\nUEEUE\nRERDD\nEDREE\nLEREU\n",
+      "output": "1"
+    },
+    {
+      "name": "random_42",
+      "input": "RRLEE\nEEUER\nEEEEE\nEERED\nEEEEE\n",
+      "output": "2"
+    },
+    {
+      "name": "random_43",
+      "input": "RLEEE\nDUEDE\nLUELE\nREEUE\nEDERR\n",
+      "output": "3"
+    },
+    {
+      "name": "random_44",
+      "input": "LDUDE\nELEEE\nUREEE\nEEEEE\nREEEE\n",
+      "output": "2"
+    },
+    {
+      "name": "random_45",
+      "input": "UREEU\nLELEE\nEDEEL\nLREEE\nEUELE\n",
+      "output": "3"
+    },
+    {
+      "name": "random_46",
+      "input": "LUUEE\nEEEEE\nEEEEE\nEEDEE\nEEEEE\n",
+      "output": "-1"
+    },
+    {
+      "name": "random_47",
+      "input": "DREED\nELREE\nEDEUD\nEEERE\nEELUE\n",
+      "output": "1"
+    },
+    {
+      "name": "random_48",
+      "input": "UEERE\nEEUEE\nEEEEE\nULEEE\nEEEEE\n",
+      "output": "-1"
+    },
+    {
+      "name": "random_49",
+      "input": "LDEER\nEREEU\nUERLL\nDRURL\nDEEEE\n",
+      "output": "3"
+    },
+    {
+      "name": "random_50",
+      "input": "REEED\nEEEEE\nEEEEE\nEEUEE\nUEEUE\n",
+      "output": "0"
+    },
+    {
+      "name": "random_51",
+      "input": "DEEDU\nDEELR\nRUEDL\nEREEE\nLUERD\n",
+      "output": "1"
+    },
+    {
+      "name": "random_52",
+      "input": "LELEE\nEEEUE\nDEEEE\nEREEE\nEEEEE\n",
+      "output": "-1"
+    },
+    {
+      "name": "random_53",
+      "input": "UEEUR\nEERRE\nULEDE\nDEEEE\nRRREU\n",
+      "output": "2"
+    },
+    {
+      "name": "random_54",
+      "input": "UEEEE\nEELEL\nUEEEE\nLDEEE\nEEEEE\n",
+      "output": "-1"
+    },
+    {
+      "name": "random_55",
+      "input": "LDDUU\nREEER\nDEEEE\nEEEEL\nEELRE\n",
+      "output": "3"
+    },
+    {
+      "name": "random_56",
+      "input": "LUEEE\nDEEDE\nDDEEE\nEULER\nEEEED\n",
+      "output": "5"
+    },
+    {
+      "name": "random_57",
+      "input": "LERLR\nEEEEE\nLEDEU\nLEEUD\nLELUE\n",
+      "output": "3"
+    },
+    {
+      "name": "random_58",
+      "input": "LEUEE\nEEEEL\nEEEEE\nEDEEE\nEEEEE\n",
+      "output": "-1"
+    },
+    {
+      "name": "random_59",
+      "input": "LRLEL\nDLURE\nDLRUE\nELERL\nEUEUD\n",
+      "output": "4"
+    },
+    {
+      "name": "random_60",
+      "input": "UDEEL\nEUEUE\nEEEEE\nEEEEE\nEEEEE\n",
+      "output": "3"
+    }
+  ]
+}

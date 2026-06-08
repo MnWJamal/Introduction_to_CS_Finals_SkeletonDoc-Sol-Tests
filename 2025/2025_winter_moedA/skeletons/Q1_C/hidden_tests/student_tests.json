@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "edge_one",
+      "input": "1\n",
+      "output": "Enter number:\nHere are the divisors of 1:\n1 "
+    },
+    {
+      "name": "edge_square_thirty_six",
+      "input": "36\n",
+      "output": "Enter number:\nHere are the divisors of 36:\n1 2 3 4 6 9 12 18 36 "
+    },
+    {
+      "name": "edge_prime_ninety_seven",
+      "input": "97\n",
+      "output": "Enter number:\nHere are the divisors of 97:\n1 97 "
+    }
+  ]
+}

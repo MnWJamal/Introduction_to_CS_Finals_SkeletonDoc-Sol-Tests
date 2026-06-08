@@ -1,0 +1,904 @@
+{
+  "tests": [
+    {
+      "name": "edge_single_short",
+      "input": "1\n1 a\n1\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_single_max_len",
+      "input": "1\n10 abcdefghij\n1\n",
+      "output": "10"
+    },
+    {
+      "name": "edge_two_words_one_line",
+      "input": "2\n2 ab\n3 cde\n1\n",
+      "output": "5"
+    },
+    {
+      "name": "edge_two_words_two_lines",
+      "input": "2\n2 ab\n3 cde\n2\n",
+      "output": "3"
+    },
+    {
+      "name": "edge_m_equals_n",
+      "input": "4\n5 alpha\n1 b\n5 gamma\n2 dd\n4\n",
+      "output": "5"
+    },
+    {
+      "name": "edge_m_greater_than_n",
+      "input": "4\n5 alpha\n1 b\n5 gamma\n2 dd\n10\n",
+      "output": "5"
+    },
+    {
+      "name": "edge_all_tens_m1",
+      "input": "5\n10 abcdefghij\n10 abcdefghij\n10 abcdefghij\n10 abcdefghij\n10 abcdefghij\n1\n",
+      "output": "50"
+    },
+    {
+      "name": "edge_all_tens_m5",
+      "input": "5\n10 abcdefghij\n10 abcdefghij\n10 abcdefghij\n10 abcdefghij\n10 abcdefghij\n5\n",
+      "output": "10"
+    },
+    {
+      "name": "edge_balanced_exact",
+      "input": "4\n2 aa\n2 bb\n2 cc\n2 dd\n2\n",
+      "output": "4"
+    },
+    {
+      "name": "edge_unbalanced_long_middle",
+      "input": "4\n1 a\n10 bbbbbbbbbb\n2 cc\n3 ddd\n2\n",
+      "output": "11"
+    },
+    {
+      "name": "edge_many_small_one_line",
+      "input": "20\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1\n",
+      "output": "20"
+    },
+    {
+      "name": "edge_many_small_many_lines",
+      "input": "20\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n1 a\n20\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_alternating_lengths",
+      "input": "6\n1 t\n10 tuvwxyzabc\n1 t\n10 tuvwxyzabc\n1 t\n10 tuvwxyzabc\n3\n",
+      "output": "11"
+    },
+    {
+      "name": "edge_exact_capacity_pairs",
+      "input": "6\n4 tuvw\n6 tuvwxy\n4 tuvw\n6 tuvwxy\n4 tuvw\n6 tuvwxy\n3\n",
+      "output": "10"
+    },
+    {
+      "name": "edge_capacity_not_average",
+      "input": "5\n9 tuvwxyzab\n1 t\n1 t\n1 t\n9 tuvwxyzab\n2\n",
+      "output": "11"
+    },
+    {
+      "name": "edge_long_tail",
+      "input": "5\n2 tu\n2 tu\n2 tu\n2 tu\n10 tuvwxyzabc\n2\n",
+      "output": "10"
+    },
+    {
+      "name": "edge_long_head",
+      "input": "5\n10 tuvwxyzabc\n2 tu\n2 tu\n2 tu\n2 tu\n2\n",
+      "output": "10"
+    },
+    {
+      "name": "edge_m_one_varied",
+      "input": "10\n1 t\n2 tu\n3 tuv\n4 tuvw\n5 tuvwx\n6 tuvwxy\n7 tuvwxyz\n8 tuvwxyza\n9 tuvwxyzab\n10 tuvwxyzabc\n1\n",
+      "output": "55"
+    },
+    {
+      "name": "edge_m_n_varied",
+      "input": "10\n1 t\n2 tu\n3 tuv\n4 tuvw\n5 tuvwx\n6 tuvwxy\n7 tuvwxyz\n8 tuvwxyza\n9 tuvwxyzab\n10 tuvwxyzabc\n10\n",
+      "output": "10"
+    },
+    {
+      "name": "edge_three_lines_needed",
+      "input": "5\n5 tuvwx\n5 tuvwx\n5 tuvwx\n5 tuvwx\n5 tuvwx\n3\n",
+      "output": "10"
+    },
+    {
+      "name": "systematic_n2_m1",
+      "input": "2\n1 t\n4 uvwx\n1\n",
+      "output": "5"
+    },
+    {
+      "name": "systematic_n2_m2",
+      "input": "2\n1 t\n4 uvwx\n2\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_n3_m1",
+      "input": "3\n1 t\n4 uvwx\n7 vwxyzab\n1\n",
+      "output": "12"
+    },
+    {
+      "name": "systematic_n3_m2",
+      "input": "3\n1 t\n4 uvwx\n7 vwxyzab\n2\n",
+      "output": "7"
+    },
+    {
+      "name": "systematic_n3_m3",
+      "input": "3\n1 t\n4 uvwx\n7 vwxyzab\n3\n",
+      "output": "7"
+    },
+    {
+      "name": "systematic_n4_m1",
+      "input": "4\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n1\n",
+      "output": "22"
+    },
+    {
+      "name": "systematic_n4_m2",
+      "input": "4\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n2\n",
+      "output": "12"
+    },
+    {
+      "name": "systematic_n4_m4",
+      "input": "4\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n4\n",
+      "output": "10"
+    },
+    {
+      "name": "systematic_n5_m1",
+      "input": "5\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n1\n",
+      "output": "25"
+    },
+    {
+      "name": "systematic_n5_m2",
+      "input": "5\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n2\n",
+      "output": "13"
+    },
+    {
+      "name": "systematic_n5_m5",
+      "input": "5\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n5\n",
+      "output": "10"
+    },
+    {
+      "name": "systematic_n6_m1",
+      "input": "6\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n1\n",
+      "output": "31"
+    },
+    {
+      "name": "systematic_n6_m2",
+      "input": "6\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n2\n",
+      "output": "19"
+    },
+    {
+      "name": "systematic_n6_m3",
+      "input": "6\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n3\n",
+      "output": "12"
+    },
+    {
+      "name": "systematic_n6_m6",
+      "input": "6\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n6\n",
+      "output": "10"
+    },
+    {
+      "name": "systematic_n7_m1",
+      "input": "7\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n1\n",
+      "output": "40"
+    },
+    {
+      "name": "systematic_n7_m2",
+      "input": "7\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2\n",
+      "output": "22"
+    },
+    {
+      "name": "systematic_n7_m3",
+      "input": "7\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n3\n",
+      "output": "15"
+    },
+    {
+      "name": "systematic_n7_m7",
+      "input": "7\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n7\n",
+      "output": "10"
+    },
+    {
+      "name": "systematic_n8_m1",
+      "input": "8\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n1\n",
+      "output": "42"
+    },
+    {
+      "name": "systematic_n8_m2",
+      "input": "8\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n2\n",
+      "output": "22"
+    },
+    {
+      "name": "systematic_n8_m4",
+      "input": "8\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n4\n",
+      "output": "12"
+    },
+    {
+      "name": "systematic_n8_m8",
+      "input": "8\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n8\n",
+      "output": "10"
+    },
+    {
+      "name": "systematic_n9_m1",
+      "input": "9\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n1\n",
+      "output": "47"
+    },
+    {
+      "name": "systematic_n9_m2",
+      "input": "9\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n2\n",
+      "output": "25"
+    },
+    {
+      "name": "systematic_n9_m3",
+      "input": "9\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n3\n",
+      "output": "19"
+    },
+    {
+      "name": "systematic_n9_m4",
+      "input": "9\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n4\n",
+      "output": "15"
+    },
+    {
+      "name": "systematic_n9_m9",
+      "input": "9\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n9\n",
+      "output": "10"
+    },
+    {
+      "name": "systematic_n10_m1",
+      "input": "10\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n1\n",
+      "output": "55"
+    },
+    {
+      "name": "systematic_n10_m2",
+      "input": "10\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n2\n",
+      "output": "30"
+    },
+    {
+      "name": "systematic_n10_m3",
+      "input": "10\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n3\n",
+      "output": "22"
+    },
+    {
+      "name": "systematic_n10_m5",
+      "input": "10\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n5\n",
+      "output": "13"
+    },
+    {
+      "name": "systematic_n10_m10",
+      "input": "10\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n10\n",
+      "output": "10"
+    },
+    {
+      "name": "systematic_n11_m1",
+      "input": "11\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n1 d\n1\n",
+      "output": "56"
+    },
+    {
+      "name": "systematic_n11_m2",
+      "input": "11\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n1 d\n2\n",
+      "output": "31"
+    },
+    {
+      "name": "systematic_n11_m3",
+      "input": "11\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n1 d\n3\n",
+      "output": "22"
+    },
+    {
+      "name": "systematic_n11_m5",
+      "input": "11\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n1 d\n5\n",
+      "output": "14"
+    },
+    {
+      "name": "systematic_n11_m11",
+      "input": "11\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n1 d\n11\n",
+      "output": "10"
+    },
+    {
+      "name": "systematic_n12_m1",
+      "input": "12\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n1 d\n4 efgh\n1\n",
+      "output": "60"
+    },
+    {
+      "name": "systematic_n12_m2",
+      "input": "12\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n1 d\n4 efgh\n2\n",
+      "output": "31"
+    },
+    {
+      "name": "systematic_n12_m4",
+      "input": "12\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n1 d\n4 efgh\n4\n",
+      "output": "18"
+    },
+    {
+      "name": "systematic_n12_m6",
+      "input": "12\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n1 d\n4 efgh\n6\n",
+      "output": "13"
+    },
+    {
+      "name": "systematic_n12_m12",
+      "input": "12\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n1 d\n4 efgh\n12\n",
+      "output": "10"
+    },
+    {
+      "name": "systematic_n13_m1",
+      "input": "13\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n1 d\n4 efgh\n7 fghijkl\n1\n",
+      "output": "67"
+    },
+    {
+      "name": "systematic_n13_m2",
+      "input": "13\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n1 d\n4 efgh\n7 fghijkl\n2\n",
+      "output": "36"
+    },
+    {
+      "name": "systematic_n13_m4",
+      "input": "13\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n1 d\n4 efgh\n7 fghijkl\n4\n",
+      "output": "20"
+    },
+    {
+      "name": "systematic_n13_m6",
+      "input": "13\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n1 d\n4 efgh\n7 fghijkl\n6\n",
+      "output": "13"
+    },
+    {
+      "name": "systematic_n13_m13",
+      "input": "13\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n1 d\n4 efgh\n7 fghijkl\n13\n",
+      "output": "10"
+    },
+    {
+      "name": "systematic_n14_m1",
+      "input": "14\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n1 d\n4 efgh\n7 fghijkl\n10 ghijklmnop\n1\n",
+      "output": "77"
+    },
+    {
+      "name": "systematic_n14_m2",
+      "input": "14\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n1 d\n4 efgh\n7 fghijkl\n10 ghijklmnop\n2\n",
+      "output": "40"
+    },
+    {
+      "name": "systematic_n14_m4",
+      "input": "14\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n1 d\n4 efgh\n7 fghijkl\n10 ghijklmnop\n4\n",
+      "output": "22"
+    },
+    {
+      "name": "systematic_n14_m7",
+      "input": "14\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n1 d\n4 efgh\n7 fghijkl\n10 ghijklmnop\n7\n",
+      "output": "13"
+    },
+    {
+      "name": "systematic_n14_m14",
+      "input": "14\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n1 d\n4 efgh\n7 fghijkl\n10 ghijklmnop\n14\n",
+      "output": "10"
+    },
+    {
+      "name": "systematic_n15_m1",
+      "input": "15\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n1 d\n4 efgh\n7 fghijkl\n10 ghijklmnop\n3 hij\n1\n",
+      "output": "80"
+    },
+    {
+      "name": "systematic_n15_m2",
+      "input": "15\n1 t\n4 uvwx\n7 vwxyzab\n10 wxyzabcdef\n3 xyz\n6 yzabcd\n9 zabcdefgh\n2 ab\n5 bcdef\n8 cdefghij\n1 d\n4 efgh\n7 fghijkl\n10 ghijklmnop\n3 hij\n2\n",
+      "output": "40"
+    },
+    {
+      "name": "random_76_n13_m5",
+      "input": "13\n5 gpjra\n5 lakld\n8 sqcikaio\n9 qnvsfdcch\n5 atdmn\n1 t\n10 xkowrfbwbz\n1 j\n6 iugmrk\n9 rlbmlilkb\n1 y\n2 kc\n3 nfn\n5\n",
+      "output": "17"
+    },
+    {
+      "name": "random_77_n15_m19",
+      "input": "15\n4 cfuv\n2 um\n5 sbvdq\n1 e\n3 xuj\n4 hdez\n10 ebalfzurqg\n6 gldqxh\n9 iewmehqks\n7 vwyrjft\n5 lbbfu\n5 avjgt\n5 ydrru\n8 iraaxczq\n4 spmg\n19\n",
+      "output": "10"
+    },
+    {
+      "name": "random_78_n48_m16",
+      "input": "48\n1 l\n6 olqful\n2 uq\n7 ixodrnq\n10 kywquajruz\n2 tp\n10 hanubfyrmt\n2 zx\n6 vipzvc\n2 xs\n4 efnv\n1 g\n7 omigiiv\n2 kp\n8 htbbcesp\n10 bkelclsxhb\n7 kncncmi\n10 tfdzcqeauv\n4 kuya\n10 bvgvvcuwkj\n10 qxuvbrxggu\n8 doepjjrn\n8 zzuoxziz\n1 v\n5 qayph\n6 diinny\n4 qbyn\n4 coiv\n2 mt\n1 b\n10 bpprdiuenw\n9 mnwcyjiyb\n4 cbqe\n3 jko\n6 crwfdd\n2 gh\n10 ncclyrmsup\n10 ojzzkptzkw\n1 n\n2 ml\n4 pmqi\n4 frdx\n4 idbp\n5 vekhr\n3 rjx\n9 okwgqvocl\n4 lkkk\n10 efuwymdndy\n16\n",
+      "output": "20"
+    },
+    {
+      "name": "random_79_n1_m4",
+      "input": "1\n2 kx\n4\n",
+      "output": "2"
+    },
+    {
+      "name": "random_80_n49_m43",
+      "input": "49\n7 wvdjmmi\n5 igxys\n9 vcqfeujql\n8 dbxzdwlt\n9 ybddhulfo\n6 ozhufv\n7 kgstxjc\n7 fwxbghy\n3 ypp\n2 at\n6 klpldy\n1 p\n9 itjgfqnmb\n5 qghfu\n10 dduavpjjvx\n2 iy\n4 gznq\n1 l\n3 ooq\n10 uzovnikwuw\n4 bnbb\n2 gs\n5 lsbve\n4 xztf\n6 vomuzj\n2 su\n8 ewcfpxsm\n5 liwfk\n5 quslb\n2 qy\n10 kcriqkwecj\n4 upvk\n8 nigzgpjv\n9 hcznfibzi\n6 qbouop\n6 vvmxod\n3 grs\n10 fdefosaeoe\n10 pdsrmgvwmt\n2 qh\n8 qrsxbzpn\n1 d\n8 thtkyjpo\n1 d\n5 bdtje\n5 meevp\n6 ahkepu\n2 bl\n9 mobmorkxi\n43\n",
+      "output": "10"
+    },
+    {
+      "name": "random_81_n53_m8",
+      "input": "53\n9 zjkppwoot\n10 pfggxjmdek\n7 wgugemu\n7 cpwohdq\n10 defsxvjvqd\n2 ls\n3 tjo\n6 rnitkp\n9 miibyzrjc\n10 gsadgcaaod\n3 zds\n7 bgoxixg\n2 bd\n10 kqotyuzdbh\n7 ifonshs\n2 rj\n7 uccaehi\n8 ygljryzu\n4 eenv\n8 pqvtqlln\n7 fwldjyq\n10 nwzmaqwiof\n3 jcs\n7 awboauy\n7 cynyazm\n1 h\n8 wkvorzpb\n7 xxsylfv\n2 ol\n2 st\n2 yh\n2 xc\n2 em\n7 nehblhh\n4 ohxk\n9 xovoajcjg\n10 pxmwpojadc\n4 wfqb\n10 kzidfbmkhn\n5 eksod\n6 exkrba\n4 xwzl\n7 mqgnncm\n4 xmcz\n2 hg\n7 jgydpeb\n10 wmjduxufua\n4 innj\n2 bk\n6 thyhfz\n2 br\n9 povvfgzfk\n6 gulqvw\n8\n",
+      "output": "43"
+    },
+    {
+      "name": "random_82_n55_m10",
+      "input": "55\n8 numwjgzx\n4 wvow\n5 qwxsl\n10 zksrrlqqhp\n9 yhjzrnlyx\n4 sfxj\n6 aulspc\n4 fwfu\n3 jvu\n5 rxgbr\n1 h\n3 ysx\n3 asx\n3 skb\n4 mnwg\n2 fr\n6 pdbzjg\n2 hm\n4 iwos\n3 bgv\n1 j\n10 amlyadcvjn\n2 uo\n3 zfp\n1 z\n10 licmrhbrjv\n7 cmwhcey\n7 fisnbmx\n2 rz\n5 imfct\n2 hl\n8 xvkmlpqx\n1 f\n5 ejurj\n9 ijkycjjfi\n2 da\n10 vritlvgjdp\n3 wkf\n3 btm\n2 gw\n4 qscz\n10 ezoqrrdwca\n1 r\n5 mtnru\n7 kphazzc\n4 lpln\n3 xhd\n8 rtazjkts\n7 xbdejev\n7 pcrxqbm\n7 jsxjzzt\n5 onggs\n7 nljuwny\n5 oicmv\n5 gmzqq\n10\n",
+      "output": "29"
+    },
+    {
+      "name": "random_83_n11_m13",
+      "input": "11\n1 g\n8 zkixvgtd\n8 veegktff\n2 hs\n5 puzps\n8 nlcaydua\n8 eukjsfuf\n9 qcgqyvahj\n2 bd\n9 zcrrykfxf\n10 ynmzatsdto\n13\n",
+      "output": "10"
+    },
+    {
+      "name": "random_84_n37_m19",
+      "input": "37\n10 gkapsytvrf\n7 wyvbcdu\n6 kdgcal\n9 ykylawczd\n2 ca\n9 dgzvodixa\n3 ehg\n4 oekv\n8 shbbnlga\n2 ig\n9 goybpejzq\n8 osbpelzm\n8 wygrrygr\n2 vn\n9 zyfzjdejs\n10 rbpocyjzhq\n4 dhsb\n8 ftyvdmbb\n5 wzomj\n10 dlvytgzamz\n6 pmnycx\n9 kcsbzsaqx\n8 bpocnfwh\n1 z\n6 nhntuf\n9 iwsjwhjag\n5 eqnod\n9 iwysyvqbz\n6 nqsnna\n3 den\n5 wepza\n2 hb\n10 cyhybxozvo\n5 szgxs\n6 lfsirf\n9 btcfrngzu\n1 x\n19\n",
+      "output": "16"
+    },
+    {
+      "name": "random_85_n59_m12",
+      "input": "59\n5 etjvo\n7 yfkwmih\n6 zbwcfy\n9 rrodkuspg\n5 sjpgn\n7 yfexbxt\n1 r\n9 ysagbdzfl\n5 ohlgs\n8 dvwoayuf\n9 cgievixjo\n8 esazxgxr\n10 enuoupnlxo\n3 gds\n3 nsx\n10 idlkydclsc\n6 qdlknz\n5 begge\n6 ptckhx\n2 zv\n8 ugklnawk\n10 ibetqklacq\n10 plzzpbdxaq\n8 yncwyrsx\n9 xeeirpoju\n1 d\n9 uktoghdhh\n1 w\n5 krcmk\n2 zv\n1 m\n10 pwknonnnmd\n6 epyrmk\n9 srbgxkopl\n3 orl\n2 bi\n5 llnfr\n3 iyl\n8 znxuhmgl\n1 w\n5 mvviz\n2 wo\n1 n\n1 b\n4 hqko\n5 ezala\n6 fqjxpb\n10 vugvdyzuzq\n9 xxpohazrm\n3 zkw\n10 vheiasnjgg\n7 kizufbm\n6 aqgydv\n8 mfyokypk\n7 jfaahjm\n2 jz\n5 sphqb\n6 bykqml\n3 tjs\n12\n",
+      "output": "31"
+    },
+    {
+      "name": "random_86_n11_m12",
+      "input": "11\n2 oj\n4 ixov\n1 l\n5 sojhj\n4 yarq\n1 e\n2 uk\n1 f\n5 sbyll\n7 yqltusw\n7 ztcaoqf\n12\n",
+      "output": "7"
+    },
+    {
+      "name": "random_87_n23_m19",
+      "input": "23\n4 cuwc\n2 hc\n10 lwgunkyuxo\n3 pkv\n1 b\n10 veovzclqjy\n6 jjqmcu\n4 btyl\n2 kt\n3 gay\n2 kn\n9 ueohvxjny\n5 kaawf\n4 nhfe\n5 mtmnn\n8 voslnhbe\n10 hgdirbteyf\n1 k\n5 jysvc\n10 wosqctgwtg\n4 jjiy\n3 blq\n5 pxgxk\n19\n",
+      "output": "10"
+    },
+    {
+      "name": "random_88_n41_m31",
+      "input": "41\n6 ncuzhx\n2 ta\n10 xvkolnndnc\n6 emyqri\n3 jft\n6 utllvc\n6 yyycux\n9 bmgejtxpc\n8 livmduay\n3 vzz\n8 cmhetrph\n8 uruwzorj\n4 qgbk\n2 oe\n8 kedzyhxa\n4 hsce\n5 ihrbx\n4 nelj\n2 mb\n8 ehyhcneq\n10 frpvuuupya\n6 nmgapj\n2 ii\n6 kttgxj\n1 g\n9 qlxjubaii\n5 xqxya\n5 rzspy\n2 fs\n8 uyhouqro\n4 apmx\n3 jbi\n7 ofsgans\n1 k\n5 nsrep\n2 hf\n9 bqiztlrsb\n7 timajvz\n7 mbsbilw\n1 q\n1 c\n31\n",
+      "output": "10"
+    },
+    {
+      "name": "random_89_n50_m17",
+      "input": "50\n2 sa\n6 tvcksm\n8 edoyscjk\n2 dr\n7 ydvbdut\n9 xhznukjrd\n3 nwr\n5 qpmej\n5 twzfk\n9 ukoosbwui\n4 vjhp\n1 q\n9 qyjnrpyxc\n5 wqilz\n8 xqdxmvpk\n10 gbvbwnxucx\n5 jbust\n2 aw\n5 vrkrk\n4 lnge\n6 rdvicb\n6 hgrhnp\n7 hwselow\n9 iatymzhjl\n7 oyutdut\n8 kjimtohy\n5 acpao\n8 bhxerpgy\n5 xxgdl\n10 mubglcnlzk\n8 lbvgjpco\n7 htoufth\n6 ryhktk\n1 i\n9 hnmtezxzl\n4 xzjl\n2 tc\n4 lxpj\n5 cbgkn\n9 cdggwbadf\n9 egsqeipsj\n7 avwhjom\n1 i\n2 pl\n10 wcigjosbjo\n4 nviw\n8 fmqngbsy\n2 sx\n5 siafo\n9 vssdjqfjc\n17\n",
+      "output": "21"
+    },
+    {
+      "name": "random_90_n21_m4",
+      "input": "21\n9 jeqxmkubc\n10 obgwklkfas\n10 dtqlsgazyu\n1 w\n3 qkh\n2 uh\n6 smazqo\n2 pg\n5 vdnph\n5 sudyq\n4 cmqo\n4 lwkm\n6 wrawij\n9 rangowlsl\n2 tx\n9 fizrnnywy\n9 zxxidxqwo\n2 zn\n8 ajsrvcpg\n2 mz\n4 ywsa\n4\n",
+      "output": "30"
+    },
+    {
+      "name": "random_91_n5_m8",
+      "input": "5\n10 xlisphcktu\n1 e\n8 jltqoksy\n10 wweipschtp\n7 cenxiud\n8\n",
+      "output": "10"
+    },
+    {
+      "name": "random_92_n31_m35",
+      "input": "31\n1 c\n9 ctrrbtltw\n1 e\n10 dqhqxrkasa\n7 ycxjvyj\n7 wnxyhpo\n6 cygffk\n1 e\n6 tywekl\n2 vn\n7 zmtfefz\n10 vascozqyex\n6 hkgjpg\n5 ooiqz\n8 duucgrgf\n9 hocmmbvwc\n6 ksobdt\n6 djwzbf\n1 i\n5 edjeq\n9 sssfyqdyc\n8 kfxdfhae\n10 xmoqdnabxo\n5 zhteb\n9 vtlgpaevp\n4 zzvm\n8 jgvhbhlg\n1 t\n4 vgfb\n7 rprecms\n1 j\n35\n",
+      "output": "10"
+    },
+    {
+      "name": "random_93_n53_m13",
+      "input": "53\n5 ufmgq\n10 ryvaqrzvwy\n10 hlbchbkaxs\n7 clguoej\n9 bhqxefwdc\n3 yqn\n9 bsaphbaoj\n7 fublstr\n8 ursjbdhy\n6 ggnile\n8 nbxnwbky\n7 yotyxfs\n5 ipxfe\n10 etlzmnssya\n1 y\n9 lhvhvownh\n10 vvsnxqcnoi\n3 jaq\n1 x\n4 poqb\n6 osahvi\n1 u\n9 yfndckuln\n7 vbaxclk\n8 nzjurnxh\n4 gdxp\n9 xzkzflmjm\n7 qtcayzt\n4 xxdw\n7 sjfpbzu\n2 nj\n5 dqolk\n5 opqab\n4 mrvg\n1 s\n4 xokb\n10 pezuvkztvz\n4 nwzw\n5 shqnv\n7 vbadrgp\n1 y\n7 iorxjiz\n4 ssse\n6 vzedtl\n5 qrono\n3 atr\n2 tg\n7 qfixjga\n8 xfflvcmn\n9 cteagafzb\n3 yum\n3 zzd\n1 z\n13\n",
+      "output": "25"
+    },
+    {
+      "name": "random_94_n33_m9",
+      "input": "33\n3 wlx\n7 jzsujlx\n9 tdhqbmctv\n7 ktuupep\n9 qzgnftksk\n1 u\n1 b\n6 mebnmp\n8 imjrdaiz\n9 beybvesnh\n9 psqfarnrc\n7 bwvfnym\n2 ej\n1 q\n5 pqssb\n6 wmunur\n2 gr\n4 azbk\n9 xpdcvmwbw\n8 xxdvpyit\n8 hpzlsznv\n3 vkj\n10 kcdrbobgoo\n1 e\n8 cprybitk\n6 jnrlmd\n8 dgteifwh\n3 agl\n2 rp\n7 alxatcl\n5 lcyxz\n8 wkndkkkb\n6 qtabpg\n9\n",
+      "output": "25"
+    },
+    {
+      "name": "random_95_n21_m26",
+      "input": "21\n6 weefml\n8 irtioava\n2 go\n1 z\n3 fyg\n10 jbyaycpqvb\n1 u\n6 kqrnah\n7 oyaietc\n1 j\n10 ghmiswrqkw\n1 u\n1 m\n8 upajtvrv\n3 wom\n2 dg\n7 lvroxyv\n8 lhkvwzls\n1 u\n6 kjffjn\n5 oedwa\n26\n",
+      "output": "10"
+    },
+    {
+      "name": "random_96_n59_m39",
+      "input": "59\n9 vzefattip\n4 xebc\n10 qxplnzkevp\n2 ua\n1 g\n4 pqqk\n10 trikhjyrzj\n6 lriokg\n7 vsxbasw\n6 qanvyq\n6 udgwzm\n2 sy\n9 uswghbmvm\n9 heickavdd\n8 swpulqhj\n8 qqywpffc\n3 zlg\n4 wume\n3 vvk\n7 ltnuinq\n7 nwxptyq\n6 paltpj\n9 myquvcrjq\n5 hcolj\n9 mluvbseot\n4 jqzf\n2 qy\n1 t\n3 uar\n8 xbwckluz\n9 kisyggzgd\n5 qfzto\n1 d\n8 jhhezhcx\n3 urn\n3 bfj\n5 fkoat\n10 jtatjmumsu\n5 hqgzr\n8 zjonaifw\n10 ebglovpebv\n1 i\n10 tcxvdgkehl\n2 cr\n5 drcur\n5 hwfis\n9 inukbyanq\n1 r\n10 hgpcqchoks\n1 p\n9 xggkygahq\n1 t\n7 srtshfe\n9 xhcqdsnsy\n6 xzlklu\n6 mvpdbh\n6 izcxwg\n5 vtvrj\n4 hccc\n39\n",
+      "output": "12"
+    },
+    {
+      "name": "random_97_n39_m40",
+      "input": "39\n10 wfskjuwrjp\n1 z\n2 di\n10 brtwprbmqp\n8 uyrlhenj\n1 d\n7 rtirjqh\n1 b\n3 jhf\n9 gppfnorke\n7 qguadak\n1 i\n4 kvcg\n8 jlzbaljx\n10 togmfcsbly\n1 t\n8 aofuwjgf\n6 gxwrqb\n4 hjhf\n9 zbvirmode\n5 dqzoq\n3 sdf\n5 wlruw\n2 su\n4 macj\n5 rvaqk\n5 ethag\n7 neaymty\n5 brzvr\n1 t\n2 li\n5 dhwke\n1 p\n5 scpep\n6 qczlpt\n7 aljizxq\n1 q\n4 qrjm\n10 fijjamlwqy\n40\n",
+      "output": "10"
+    },
+    {
+      "name": "random_98_n39_m35",
+      "input": "39\n5 apqkt\n9 sjubodehk\n5 dksfh\n4 blkg\n6 oabarf\n6 tqgfsj\n10 ytjyzmeznk\n8 youzqwsk\n4 vjfd\n9 dhkpgtmwy\n7 oaphncp\n2 gu\n10 gwbpwtgubt\n6 ucfdyl\n5 vczid\n6 tlronv\n9 ycfzdowrh\n4 btel\n2 ux\n3 gbi\n6 jwvito\n7 bletzwa\n10 zignreiqpc\n7 pwocnxs\n4 smuv\n9 wtlhptxwj\n2 gt\n1 q\n8 okwnhbsx\n9 oejuulnhh\n7 qeqidvc\n10 dtjzqdjqoe\n5 mhzci\n2 gy\n3 uil\n7 viiqres\n2 ss\n4 kabc\n6 gbxocs\n35\n",
+      "output": "10"
+    },
+    {
+      "name": "random_99_n28_m16",
+      "input": "28\n9 obaddexmx\n10 xdsrvvejxe\n4 esoq\n4 pvru\n6 ngetcv\n9 bdmjmmqil\n8 kuspixrp\n9 riqzqlklb\n6 urdmzw\n7 tgbqtcx\n6 eoucuq\n6 budbqm\n10 rttumnzlcy\n6 bpqujn\n1 o\n4 gwxz\n8 xdigfmch\n8 ogyozcnf\n9 kgxmhxpqe\n7 iozsdul\n4 pbgw\n2 uh\n6 phdrgz\n6 lyqnsn\n1 x\n10 nlatzirbcn\n10 xfumubsnrb\n6 cmtyyr\n16\n",
+      "output": "16"
+    },
+    {
+      "name": "random_100_n32_m27",
+      "input": "32\n6 vuphge\n3 eof\n2 ja\n2 hl\n1 o\n7 xknvndn\n9 ohiqnqrst\n10 roaqzknpqb\n10 cohmeuzcyg\n8 omsnhrnv\n4 ulji\n3 zon\n2 ms\n1 d\n10 xdkwwpnpls\n9 kahkwmkxx\n7 icdoimn\n10 rjcvbhgfwm\n2 ns\n10 yxzbzdskwa\n1 d\n2 tc\n4 wrdw\n2 or\n6 avdbud\n2 tt\n2 bs\n4 tsfn\n3 aau\n9 zyafdyive\n8 uchdhixc\n1 c\n27\n",
+      "output": "10"
+    },
+    {
+      "name": "random_101_n56_m34",
+      "input": "56\n3 nvw\n2 ax\n7 jlrcztz\n4 kcea\n1 m\n9 ywbfvufcd\n6 aiodhk\n10 iihxhtgpxo\n1 g\n4 earc\n2 zh\n2 er\n8 gethplzy\n8 qkwcxoww\n5 hgozv\n4 elja\n7 ctqrabi\n6 cwsgwe\n2 qj\n10 qymnpqhzoy\n8 smksuxpv\n1 b\n8 zoulnadl\n4 fxhh\n5 jbsxr\n8 dwboabwv\n3 njw\n10 aysmvqhvam\n10 vjxtnwooex\n3 mpd\n7 witrckv\n4 byem\n5 snixa\n5 iycyd\n9 irrajjllh\n3 ady\n2 ak\n9 yskwwbuek\n7 kzeswfr\n1 d\n9 vqynmljvz\n4 rwvs\n8 ecbzohxn\n7 qwsasyg\n2 ao\n1 w\n2 rs\n2 qo\n4 dpme\n9 jiqzficbm\n4 ffjw\n10 ddoczqivaf\n5 fiajt\n3 kgt\n9 uavqwwuua\n9 xlmgrjaia\n34\n",
+      "output": "12"
+    },
+    {
+      "name": "random_102_n29_m12",
+      "input": "29\n1 c\n1 m\n1 v\n6 xnwpyr\n6 ejppph\n4 jjqd\n8 kobxqpwv\n10 vrozxyhzhb\n6 foeabz\n1 z\n9 cdmjyvgmo\n3 kql\n7 zymtmmj\n9 qpgwjsxij\n1 u\n5 djrka\n9 safdqtooo\n1 c\n4 xgmj\n1 p\n5 oesrx\n2 tc\n8 surauqwa\n3 swb\n7 bkurkhu\n10 lacvyteukb\n10 hdxcnlgcrk\n7 kckljlk\n10 bhlckjorut\n12\n",
+      "output": "17"
+    },
+    {
+      "name": "random_103_n22_m8",
+      "input": "22\n4 fdqk\n8 fuvpjvll\n4 hybg\n4 tfqj\n10 hfavtjgyxn\n6 lzrzzd\n5 uqurp\n4 clcg\n10 iawgnoodbo\n4 eqhu\n6 azjjxy\n5 ijsxn\n3 ebf\n8 guqcgbmt\n9 abgxolxhr\n9 rjxgiiufb\n8 ayomtfgd\n9 tyulaavzx\n3 oxq\n4 iiig\n6 ynwsqf\n4 pryo\n8\n",
+      "output": "20"
+    },
+    {
+      "name": "random_104_n1_m3",
+      "input": "1\n9 nkrkspwir\n3\n",
+      "output": "9"
+    },
+    {
+      "name": "random_105_n7_m2",
+      "input": "7\n2 ur\n9 bhxrrnfsu\n1 b\n8 zvtrfhid\n3 tbl\n8 dnwjeqjh\n2 ft\n2\n",
+      "output": "20"
+    },
+    {
+      "name": "random_106_n26_m26",
+      "input": "26\n10 znffbqmdfi\n10 hmcsdstyxn\n1 m\n7 tiyizzd\n1 i\n6 unmgwp\n6 ykdtpw\n7 ihbnwen\n1 z\n8 vweoljdy\n1 r\n6 qaxrqu\n5 ocivx\n5 pzglh\n1 q\n2 xb\n5 nxszp\n8 jrjlkbip\n1 e\n4 gajp\n5 mpspc\n8 mntnqcei\n7 dcazukp\n3 fdw\n2 zt\n6 pkrylq\n26\n",
+      "output": "10"
+    },
+    {
+      "name": "random_107_n6_m8",
+      "input": "6\n7 afooelb\n9 jalddyukv\n9 xqlgvfagv\n2 gj\n5 acfga\n2 kt\n8\n",
+      "output": "9"
+    },
+    {
+      "name": "random_108_n44_m11",
+      "input": "44\n7 rlvvpoh\n3 bwf\n6 jllcki\n4 ftww\n8 eifdwxsv\n2 xt\n8 ztbuqvpt\n7 rzlqoqr\n5 xxevy\n9 jsdtsvetm\n2 qz\n5 oflzs\n4 bncx\n6 zrqsrs\n10 hpfdvytodx\n5 nqwpe\n3 oxk\n3 ypl\n4 jtiu\n5 hjest\n2 jb\n10 mazmdxnmom\n3 pwr\n8 lqulxdhh\n7 yuhamuq\n1 o\n1 z\n4 qqpy\n1 v\n2 zs\n4 byoa\n5 ngyvg\n5 wiyqm\n9 oszllbiqh\n8 keefzwbt\n8 coqnubjh\n1 g\n5 enxbb\n6 jlpktr\n2 nl\n9 anjqsiark\n2 nj\n1 t\n4 ldiz\n11\n",
+      "output": "21"
+    },
+    {
+      "name": "random_109_n24_m6",
+      "input": "24\n9 jaembzbcl\n6 cwaffl\n7 thbfmsn\n5 jxaea\n8 cpazsdbk\n1 d\n5 grcgo\n3 grn\n5 aqdwx\n5 ahywr\n8 zvjukelp\n1 t\n1 w\n6 wzwtak\n8 ehwticzx\n7 vasxzzp\n2 pu\n5 cxjmi\n9 jxslhngsw\n2 wy\n10 gvwjrkugth\n10 utlsqjetze\n1 j\n1 p\n6\n",
+      "output": "22"
+    },
+    {
+      "name": "random_110_n19_m7",
+      "input": "19\n10 akfhqnknmz\n5 njkaq\n5 fadxv\n4 wgxr\n10 ahlrkgyzzr\n5 hgdhm\n8 sfefvwhp\n5 zvaoo\n9 jvmhelhwb\n5 dsswy\n8 kihvaqfi\n9 ckwxaulkm\n5 rojie\n3 isb\n5 bjlmj\n9 qfhpdreih\n3 bnb\n5 ylrbz\n8 hrxsofor\n7\n",
+      "output": "22"
+    },
+    {
+      "name": "random_111_n26_m19",
+      "input": "26\n2 fm\n3 lhz\n1 f\n7 cltfgqk\n2 ey\n10 hdmnrvlwdx\n7 pgjtefg\n9 dfbqgckcr\n5 ltxdu\n9 xznxqmanj\n7 wegfgxv\n6 jlighi\n1 y\n6 stfhso\n10 lfmiiuynig\n1 b\n6 zgkcli\n4 lxrj\n3 wol\n10 yhjnojvyam\n1 x\n10 weyibhojpl\n6 dcpoeu\n4 jpmb\n8 cmupezto\n2 uo\n19\n",
+      "output": "10"
+    },
+    {
+      "name": "random_112_n40_m31",
+      "input": "40\n8 lktoqraf\n2 le\n6 pjihsx\n8 exzladio\n2 he\n2 jx\n5 iaonb\n8 btbfbdpj\n3 stn\n10 cmahbkblgt\n2 rj\n2 an\n7 syjlnsp\n9 fbzuqqruk\n7 xyxgvtc\n4 fcwl\n1 y\n3 tvh\n3 qhe\n2 ag\n9 pcmpltnml\n7 arsmvbx\n10 jihwxijaga\n6 thjwqt\n10 wtmggeofkm\n5 wedet\n10 ewptjlgttm\n9 udppgcrnq\n9 whtlfescn\n4 vdyb\n5 euqqc\n1 d\n5 arkli\n8 jcafupdp\n6 bmvyfi\n2 xv\n1 s\n2 fz\n9 cyfmxedqd\n4 gmws\n31\n",
+      "output": "10"
+    },
+    {
+      "name": "random_113_n5_m3",
+      "input": "5\n2 us\n5 ggqev\n4 fkcw\n4 lwtp\n7 zfmutbt\n3\n",
+      "output": "8"
+    },
+    {
+      "name": "random_114_n38_m3",
+      "input": "38\n7 pwavtii\n5 bnhwl\n6 efufgg\n6 zdlnwj\n5 dagpd\n10 ubdykqbasg\n5 orxzo\n2 hx\n2 om\n7 lwoepft\n4 yfwe\n10 mkgvkfspio\n6 drnrtt\n3 ruz\n1 w\n3 rxq\n10 iqwsjdzdzm\n5 wqack\n9 snysgydqb\n7 abkcows\n3 rch\n1 c\n6 orkwnh\n2 tb\n10 hbrlamifzo\n2 le\n8 qolmfwuy\n3 hhk\n7 mgeowsv\n1 p\n1 r\n9 fvupmfcgu\n6 zubiqm\n8 zfugonrz\n6 hnmpad\n9 qtptmgefr\n1 l\n3 his\n3\n",
+      "output": "69"
+    },
+    {
+      "name": "random_115_n48_m26",
+      "input": "48\n10 lhjorndsty\n6 lncaog\n9 lozepntqp\n1 m\n10 ktznupdunp\n5 ifnow\n9 anhuyhcax\n3 ibj\n7 xbjyucs\n9 chpdvaghp\n4 lard\n4 xttj\n3 taa\n6 pwncfj\n10 qunljznsjv\n7 mnhgwkz\n1 g\n6 spqrew\n1 b\n6 vqwdvk\n2 ms\n6 lckczl\n10 aiudmymgmk\n2 ry\n8 fkolrxnz\n1 z\n2 uc\n8 gwphpvsj\n4 thbu\n1 t\n5 wstli\n9 ceejwxqxz\n2 xl\n2 kx\n1 o\n3 wjc\n5 vhajc\n3 waq\n10 hobxveobaw\n10 lngntkqbgl\n5 vpnsw\n3 fgt\n3 uad\n8 lainlhef\n4 lurv\n1 y\n10 odbjfxjqki\n5 byumh\n26\n",
+      "output": "13"
+    },
+    {
+      "name": "random_116_n53_m42",
+      "input": "53\n9 bfdflfnzk\n9 zxngubkzq\n8 xwqasifs\n8 iguoqaio\n2 gx\n7 swdnfqp\n3 kir\n7 gfbkmzb\n8 lnsyvsxg\n9 pkvhjejvv\n4 hcsy\n4 brwr\n2 sv\n8 onpfvttx\n9 zdwzjqnss\n8 jcpyzfmo\n4 gsic\n4 zncr\n4 ydxn\n10 zoxlcxfjgm\n10 lbpxfpbfws\n10 mmktxwpmmg\n3 oml\n1 s\n2 rd\n7 rkxylqg\n1 n\n2 nl\n3 dcc\n7 dplgmdk\n9 zfxxwigey\n5 hoozg\n1 f\n8 hpfdmsib\n7 lgtwnzg\n5 anxns\n7 fsjcfyx\n2 jx\n1 t\n1 z\n7 dqjgsge\n1 e\n3 vdn\n1 t\n2 cc\n1 x\n2 fl\n1 j\n1 n\n1 v\n8 akozhowq\n5 qpzwz\n8 tbrzjelj\n42\n",
+      "output": "10"
+    },
+    {
+      "name": "random_117_n53_m54",
+      "input": "53\n8 bsntjexf\n10 yxojbipmrt\n5 gwvca\n4 kcoz\n5 hsdfs\n1 m\n10 xraaadueyj\n7 jabnzvk\n8 fjatwywn\n7 ekxyzty\n10 hbwsusorib\n2 uq\n6 tpazuo\n10 xjmythbbrz\n8 cmbxozyp\n2 zo\n7 dtwcfhi\n5 ioaty\n5 tleuv\n10 jtxlmejohk\n5 tnvmi\n3 xex\n10 kljenlxhop\n1 k\n2 ls\n2 rc\n3 zey\n5 drmzp\n1 m\n5 fywxk\n2 iq\n10 lenvllfuvg\n2 vx\n6 bxnovi\n10 afgsdchuie\n6 iihlhj\n9 tbjwrrtch\n6 rchled\n4 ezsr\n5 kyjhx\n10 gjxmgwdxgc\n10 eaqjpadfey\n5 sqcsq\n5 lzhdv\n9 woczyorzi\n5 lvuko\n9 utzgxjgut\n7 zxelrha\n2 yg\n10 odqafqhgzk\n10 gulnzclukk\n9 khtirybmi\n10 waktufkugp\n54\n",
+      "output": "10"
+    },
+    {
+      "name": "random_118_n44_m27",
+      "input": "44\n1 t\n6 xozeun\n6 fzcgzv\n9 tcxvgvvkw\n2 op\n1 y\n1 s\n2 fl\n9 wtqhfzrdx\n10 mvgfujcizc\n1 o\n2 uc\n1 h\n6 lcmkfm\n9 hfbwgiqvl\n2 vi\n6 uekhca\n8 kyttvpcp\n7 wxrfntt\n9 ouiuhiquq\n2 me\n8 zbchpohj\n7 ukirpdw\n6 mjxfqv\n10 fcklhswmxl\n1 b\n8 imusrmra\n1 t\n2 fj\n9 wbyubznqa\n4 wvns\n3 cgq\n1 y\n4 rkpq\n7 lttqnzf\n6 wllxud\n5 ewihs\n7 lzyraxy\n6 geqcls\n8 glvgujpu\n7 vuroatx\n6 twutts\n2 ec\n10 kshlmginxf\n27\n",
+      "output": "11"
+    },
+    {
+      "name": "random_119_n15_m11",
+      "input": "15\n10 kdtjwzwpqb\n8 murxmbrp\n5 qzuwx\n7 uupmjje\n7 bftasui\n7 pibgpqr\n1 g\n8 vzsngmyb\n8 ehjbkxeu\n1 p\n3 iro\n6 fbdkry\n4 reke\n9 xzvcifupq\n4 swkr\n11\n",
+      "output": "12"
+    },
+    {
+      "name": "random_120_n8_m3",
+      "input": "8\n2 xk\n8 gswerqkb\n8 gfrsbvpe\n7 hvzxtep\n5 qgprs\n1 z\n6 irutpu\n2 hp\n3\n",
+      "output": "15"
+    },
+    {
+      "name": "random_121_n57_m31",
+      "input": "57\n9 bfpnzbtzk\n3 rbg\n7 sukglcz\n10 awsbiaonav\n7 npmzbdq\n1 n\n10 lsgywshprq\n1 t\n6 kozprd\n8 epujarlq\n4 iezc\n4 xkei\n5 opqnw\n5 aalgt\n10 iwqdiwluez\n5 sscbl\n5 dtgma\n6 kbcnvk\n6 erryti\n9 atjexhfio\n4 kfgr\n7 ttkjank\n4 plfz\n1 y\n1 y\n8 wjbhetza\n1 f\n6 beuwbf\n5 cpsig\n8 qvahbcif\n6 pwmhjh\n3 wmh\n2 lp\n1 z\n9 bkkrebcgs\n10 dqbsvchxvz\n10 bsahbwyjzk\n9 vvgdakdce\n1 y\n7 urheuml\n7 hkhtbes\n2 px\n5 oluzw\n7 uxfxrtx\n2 yj\n6 xbmmzt\n6 qvxdab\n9 igkszzreo\n7 jijogjb\n8 jkvlptkj\n7 hkwnsdr\n7 hvlgprm\n5 dhbpc\n4 feqa\n3 mre\n6 yzykxt\n10 dqcbgntopp\n31\n",
+      "output": "14"
+    },
+    {
+      "name": "random_122_n23_m5",
+      "input": "23\n3 nbh\n9 pbvygtyop\n6 jfpbaw\n2 cc\n5 ebynb\n8 mbluhpyq\n6 snlwkx\n6 novmre\n5 viqre\n3 qvn\n6 duevoh\n8 rfwildhz\n4 mqug\n2 ud\n4 mzko\n9 rghkpecbj\n9 yahggksuq\n3 wgl\n8 kelrhfzx\n2 yw\n5 ztuyq\n9 zixaoggue\n3 hrz\n5\n",
+      "output": "27"
+    },
+    {
+      "name": "random_123_n3_m4",
+      "input": "3\n8 epjwmytu\n10 tprzmwfjaq\n2 fh\n4\n",
+      "output": "10"
+    },
+    {
+      "name": "random_124_n22_m23",
+      "input": "22\n4 umna\n10 hvsinwtjvz\n1 b\n2 yd\n4 vdox\n9 ufjbcvkwv\n9 jdrfmpgrr\n1 n\n1 v\n8 kecshvnb\n9 wtvzcuddb\n8 walxxajz\n9 crnrubfuo\n10 avqjxhexiq\n5 zslqg\n10 yopdiksedn\n2 qv\n1 o\n1 k\n9 fygihkfea\n5 xtqnw\n4 wsxd\n23\n",
+      "output": "10"
+    },
+    {
+      "name": "random_125_n12_m13",
+      "input": "12\n5 rxdpy\n8 iqnqxtxe\n7 vzymrfx\n9 hrqnljdht\n3 ucz\n2 qv\n2 ce\n8 ezstpead\n1 q\n8 wcrihqbb\n9 mbtxvkibj\n2 kc\n13\n",
+      "output": "9"
+    },
+    {
+      "name": "random_126_n24_m28",
+      "input": "24\n2 hu\n7 cwovbli\n4 pveu\n9 udkjouqkb\n2 wc\n6 bolbzm\n1 h\n10 edcjvgxmqe\n2 al\n4 okla\n9 wkirigmqv\n1 a\n9 fbmpwwpqj\n1 k\n9 aggyaeoya\n10 yzivrjjytj\n5 vuzno\n8 ljhmsast\n5 acctg\n6 ejmnds\n5 rgkbu\n7 vsufabj\n5 owwdk\n4 yafp\n28\n",
+      "output": "10"
+    },
+    {
+      "name": "random_127_n11_m14",
+      "input": "11\n10 zqwoalwddh\n10 mnfausljiv\n10 yfzsmhvryb\n5 tcfgu\n3 ggf\n5 cobbi\n10 qquunmyoxn\n8 orqkbbfo\n7 epxshgf\n7 oipueql\n3 eyd\n14\n",
+      "output": "10"
+    },
+    {
+      "name": "random_128_n28_m30",
+      "input": "28\n7 ffdepvi\n7 cezgeqf\n10 mgbandwahx\n3 tcf\n7 slhmupd\n1 e\n9 hngffiafg\n9 zatyihxcv\n2 ws\n8 dqxdzgtb\n1 j\n5 iiwnz\n7 rgxqteb\n2 qa\n9 tnzkffbhm\n3 ojx\n6 gzyjzr\n5 xmhec\n4 husj\n1 y\n2 df\n10 auscwmakxz\n3 nfn\n10 xvnihfbfns\n8 xkkloabm\n5 yqgyt\n8 qnynuliq\n7 wcsurkf\n30\n",
+      "output": "10"
+    },
+    {
+      "name": "random_129_n34_m31",
+      "input": "34\n10 nahavvkxpi\n10 cozlcbuuuh\n3 xns\n3 jtk\n7 mzauzlj\n8 qitomhpm\n5 qpyhc\n3 eck\n1 z\n6 zrkaeh\n2 xu\n3 wcv\n8 uwwpmsnc\n10 uiqptrkfly\n7 khlpfig\n3 orp\n8 xrjpfejp\n3 zzl\n10 smvkhpqxit\n2 au\n2 ey\n4 bfuq\n7 psfefrs\n9 acjspwadf\n2 ix\n3 khu\n6 uiemgx\n7 ttlgjpd\n9 bqzivgxod\n7 anxkiwj\n5 kybzh\n5 tnmzi\n8 rqrwvvxy\n8 hurbtgkp\n31\n",
+      "output": "10"
+    },
+    {
+      "name": "random_130_n37_m20",
+      "input": "37\n9 fdcskavju\n10 shdvzmdasn\n8 kfwfmdvw\n3 rgq\n9 mmrexjfgx\n5 eysxy\n2 hn\n9 mdnrefqjk\n4 dtja\n4 gstf\n2 cb\n8 lxtkjged\n8 bkjavbbz\n9 wzbvednwy\n4 pyxw\n4 sjrl\n6 mtstgv\n8 vtevxkgo\n5 juilt\n5 mdhkn\n2 zc\n5 hbtaw\n1 k\n7 lycdafg\n8 fwhgdpph\n10 uplpblnkdt\n8 nzacmduq\n2 mc\n8 vncjamvc\n1 w\n6 oiosof\n5 grjla\n10 kgcjqefpkr\n5 nnoio\n9 albrbwiff\n3 gin\n4 tvsa\n20\n",
+      "output": "15"
+    },
+    {
+      "name": "random_131_n55_m53",
+      "input": "55\n2 fz\n8 aswdmzvo\n3 bbk\n2 bu\n5 jsocs\n1 f\n8 ztilhmkc\n3 owf\n6 osneuv\n9 wcfpoftpo\n2 td\n4 ckvd\n6 birmdt\n6 plgmys\n6 dwtmzg\n3 hju\n10 ymeaxygzjd\n9 wwqcrcjrb\n1 q\n3 hdn\n10 cnlwwujqgt\n6 gwwsup\n7 erskire\n1 b\n9 evscjgywn\n9 cloepjjiq\n3 mmv\n5 epyxa\n4 yjpb\n8 trqbhqjo\n5 qcmew\n8 mbdlabiv\n7 vlcnppb\n5 bgijq\n2 gr\n7 jxsjcou\n5 suumj\n10 ftcygukyrp\n6 qffrko\n1 s\n8 rofdlgqd\n2 bt\n2 yo\n8 rxgcsozn\n6 zbqrln\n1 t\n8 xeglsiel\n5 vznrv\n10 wnvaosxuxx\n10 kolspacera\n10 meowswujok\n5 elaxc\n1 b\n7 berghlf\n6 prhgol\n53\n",
+      "output": "10"
+    },
+    {
+      "name": "random_132_n21_m16",
+      "input": "21\n1 q\n5 crlcc\n1 l\n8 dlwjcoiq\n2 ax\n7 mezrfjc\n4 hoff\n10 oattmjtwoj\n4 goei\n3 tyr\n9 btunjbzrg\n3 zei\n1 j\n3 unj\n7 ylyzjse\n9 bmwjicske\n4 ukqg\n3 wby\n5 wyxkq\n10 gwhnqtlcwx\n1 g\n16\n",
+      "output": "10"
+    },
+    {
+      "name": "random_133_n8_m12",
+      "input": "8\n5 ssedd\n5 unfuh\n5 svedr\n3 fbn\n2 za\n5 nagoi\n3 wkq\n8 hfxvujnn\n12\n",
+      "output": "8"
+    },
+    {
+      "name": "random_134_n16_m11",
+      "input": "16\n5 ajume\n1 v\n10 mwmgoorkpo\n10 jxxqngklzh\n7 puhpdxg\n1 d\n2 mq\n10 luxqddaehf\n7 qsyakqq\n5 wipmc\n3 hdc\n6 gjzmmi\n7 vqvoygq\n3 fhb\n6 fhsmww\n8 umvbciwh\n11\n",
+      "output": "10"
+    },
+    {
+      "name": "random_135_n21_m9",
+      "input": "21\n7 bdirgah\n9 abaqnljmm\n10 xvfokysvyy\n6 pccyxg\n5 etoos\n4 ymkd\n8 wayhnkdw\n8 bfrxubun\n4 ysnc\n8 eapccprb\n10 rtqvequpfn\n10 ijnucmtedt\n9 eqokcqset\n5 upmhy\n10 opvzfrdnyx\n5 jtpgh\n9 tqlptpmnf\n7 popivjf\n4 wwjr\n8 yuducpbx\n5 qwasc\n9\n",
+      "output": "20"
+    },
+    {
+      "name": "random_136_n23_m23",
+      "input": "23\n4 amzp\n1 s\n8 ameoiihw\n6 zzlptx\n8 bamqcemo\n7 hzvjdvj\n8 nxbfzjzr\n2 um\n6 dinbti\n4 tacr\n2 ve\n4 yrrt\n1 m\n10 tpjrzdkbqj\n5 xcgpr\n5 mxzgj\n5 unies\n10 ulupmztgod\n1 k\n10 zwuwigtunm\n6 oqnktx\n3 hpu\n4 eitv\n23\n",
+      "output": "10"
+    },
+    {
+      "name": "random_137_n16_m11",
+      "input": "16\n7 whurnvz\n6 hjfzmj\n5 jiuvh\n1 e\n4 xqcc\n2 eb\n10 ctjaiudntc\n10 llwcfbqaqt\n3 ypj\n1 e\n3 nti\n10 tscmylyigw\n1 x\n3 iye\n5 vrvsv\n2 ml\n11\n",
+      "output": "10"
+    },
+    {
+      "name": "random_138_n60_m8",
+      "input": "60\n8 zmgjjbqy\n4 mtqx\n2 yg\n10 lcumfnylfh\n10 xeyjrugnyr\n8 pumfihmh\n4 jcsf\n4 pqml\n8 pmhxphwo\n8 imdhprcx\n9 fnhwcczxl\n5 demhg\n4 vwot\n4 kpcx\n4 eqeh\n7 olfotxl\n3 dqq\n8 jzuuyzqo\n3 ywn\n8 oynswtav\n1 b\n1 d\n3 nmr\n10 arihyhhecv\n4 qefx\n2 jz\n8 bzurafie\n7 ovmpcqe\n5 gxkbd\n10 ojbzdwaila\n1 g\n4 pyfu\n10 latjypmycj\n1 r\n4 eiiv\n3 knf\n8 mubmsryv\n3 xnz\n5 crudn\n5 iviwh\n7 vuhxsby\n5 vtbws\n3 hzb\n2 ud\n5 gowks\n6 vxlpsu\n2 lu\n7 imzsakd\n1 p\n6 uojxkf\n6 qwposj\n8 rtycksfy\n5 wlwcl\n5 lxkey\n1 g\n9 bjdiwpuxs\n1 b\n6 jvspkx\n5 irixa\n3 wpi\n8\n",
+      "output": "42"
+    },
+    {
+      "name": "random_139_n51_m10",
+      "input": "51\n5 uhweo\n8 fafaxygu\n6 rtozkw\n9 cwthinuqz\n4 immj\n4 pkzt\n6 ysovml\n4 ulyx\n5 qyqts\n8 ifxrrrfe\n10 clmuxxipuj\n5 ytkyu\n10 xwovomqurz\n6 jxaxrl\n4 twnw\n6 fpjjfz\n5 ltrxk\n9 iadnfjcos\n9 yrdeuaxgm\n4 ytgo\n5 wrwjx\n3 mba\n8 omfgsdej\n4 zlan\n2 hj\n8 gfgylafw\n9 awywylsyo\n9 sxtfakvgz\n6 hdwdeh\n5 jqzdp\n2 co\n7 viaenfn\n5 xygaz\n4 omjm\n9 gqksbdcov\n4 dlvy\n6 ygtcqg\n4 rnud\n3 krf\n5 nedus\n9 gzpcdzkes\n9 czzombzfq\n9 esnrezuuq\n5 xrkwi\n8 ldmeazvq\n3 dpf\n3 noa\n7 pibtmkd\n3 vmt\n9 jzzticyjd\n5 cgxss\n10\n",
+      "output": "33"
+    },
+    {
+      "name": "random_140_n51_m50",
+      "input": "51\n9 xewkijofh\n5 ojvyd\n2 xu\n9 earusyfgd\n5 jgvbq\n10 gsrwfpnqnd\n3 plu\n8 dzdtyfzq\n6 fphvmd\n4 ntep\n9 pdhwnbjln\n8 lfhpaxaf\n1 o\n7 hkscczr\n7 wwumkqn\n7 prkxatc\n4 bpvs\n5 scbqe\n9 qgxjbbjbs\n3 bnn\n6 ybyuqv\n2 am\n9 ygipdiusq\n1 i\n4 wzez\n1 o\n3 kby\n9 glplabqsu\n6 nglaed\n10 eajxnkhasq\n4 vzcb\n10 xymycavrdg\n9 rpzpinvhc\n6 jdifvg\n2 ju\n9 uvfwjjujd\n5 btkvl\n6 tvspfh\n10 gfepgvnxzr\n2 pd\n4 enxp\n4 rpxz\n8 cserkwhk\n10 ytlyvzdvxc\n2 wu\n7 euhqvai\n1 h\n5 wkckf\n10 zftnpildfp\n1 e\n3 twj\n50\n",
+      "output": "10"
+    },
+    {
+      "name": "random_141_n32_m25",
+      "input": "32\n5 ihtbb\n4 lcff\n3 sqo\n3 grt\n4 wqty\n6 strokh\n3 rno\n5 dnkat\n8 qgzdiqat\n9 oixuqumfe\n7 krphwwd\n2 ip\n1 a\n8 ndjclenu\n4 osbv\n8 tbrcgoku\n6 nvrprp\n6 rbyqih\n9 xepiqnpcc\n10 tagjpxsalq\n9 wjhnwwdjp\n3 gks\n4 ieel\n7 mopgagh\n9 mvftdecrj\n7 khmjztx\n10 ilaiaqxjmd\n8 xvozbqid\n8 zzghareb\n4 rovf\n3 ftf\n3 szk\n25\n",
+      "output": "10"
+    },
+    {
+      "name": "random_142_n14_m4",
+      "input": "14\n9 mdbluedfl\n7 huylxan\n7 gyrinva\n8 dpeusmvf\n4 uxgw\n3 eoz\n7 aytrfho\n5 jnxyc\n6 agusaq\n9 kmpechsdn\n10 lzrispazrt\n3 doi\n1 t\n1 v\n4\n",
+      "output": "23"
+    },
+    {
+      "name": "random_143_n48_m34",
+      "input": "48\n6 uwmlnl\n5 yiflr\n2 vf\n7 nrdrikb\n1 z\n3 zfy\n1 z\n3 pdm\n9 qcmzoxftd\n2 fi\n5 yppab\n10 txjbftklaz\n8 jmnithpp\n3 jdi\n1 f\n8 yqcqqcks\n1 u\n7 omdjone\n7 whlyavx\n10 nmdkzrvmhz\n5 dlbhl\n6 dpffqx\n9 pvwdveljp\n8 miskygiz\n9 jpcbsxypl\n3 bqo\n7 mlxklya\n9 hyxsunubm\n3 cds\n8 vnblfngt\n5 baard\n5 xxusf\n2 op\n9 xhxzgwpgt\n9 piedarujx\n9 nwsaterok\n6 xdyuyv\n10 hadqctdpxh\n6 mfloxa\n10 hmjjwulveq\n5 pmtma\n6 yahesd\n7 qzwqypp\n1 s\n9 uanqebqrc\n2 yj\n4 wcds\n2 dd\n34\n",
+      "output": "11"
+    },
+    {
+      "name": "random_144_n43_m42",
+      "input": "43\n8 tyrdkvxu\n7 wziwxhn\n4 svhe\n5 bwqyl\n6 sjuomm\n8 rtovkhms\n9 cywvmpcnn\n2 qo\n10 pahegomnzl\n10 jznjhpiraa\n2 dr\n1 v\n7 tqlbxxp\n4 dezy\n7 avjkgli\n10 hdahkrqchv\n6 aknwbb\n5 wensi\n10 chkpbmpaxv\n10 nfsvhccrql\n6 mapqev\n3 wkx\n3 lnx\n1 s\n6 jxhoau\n1 x\n10 jpgalpijnb\n1 z\n3 tlg\n2 in\n7 xjunmwu\n2 hy\n10 erpqohvfmp\n3 kok\n5 nkfjq\n1 j\n3 pzg\n10 novywzwfuf\n4 jyjz\n4 bsgr\n7 ugddrui\n2 mc\n5 rysfm\n42\n",
+      "output": "10"
+    },
+    {
+      "name": "random_145_n56_m37",
+      "input": "56\n2 ry\n6 fdbtop\n4 bmky\n10 xdfpmiufma\n6 kxggpj\n8 pwecxfmb\n8 ryxdcsxj\n4 tbqx\n6 qbjmfy\n1 u\n9 zvhhfrmup\n7 gchufvc\n4 dwmt\n1 a\n2 wa\n5 hbkub\n2 ac\n7 ptdzfju\n3 xmo\n9 fkowhhnrx\n6 ulotzm\n1 x\n8 xufgplpt\n1 v\n8 eurqkilz\n6 fgwjzw\n4 czqs\n10 ercwhpjvls\n1 m\n8 oinaxkdm\n2 lu\n10 fawbhvfpzh\n2 ok\n4 psyb\n10 mkriwqsswo\n5 nuzrg\n10 ggupjcgibe\n2 oi\n9 pvqxydshi\n6 woaxuf\n6 vhbvxl\n10 menjvvvhxl\n9 pmflpyzxj\n6 ialyyy\n8 zkfucwps\n1 f\n4 ctpj\n2 ek\n2 qk\n8 hioiilqy\n9 fpxlvuhab\n8 cpvqvrut\n2 al\n7 xvcmebm\n5 xemsd\n4 uykc\n37\n",
+      "output": "11"
+    },
+    {
+      "name": "random_146_n31_m24",
+      "input": "31\n2 aj\n10 gbyejlyivn\n2 is\n6 fzihii\n6 jakpss\n1 k\n3 gah\n2 jb\n5 njpnd\n1 l\n7 flfxjlj\n5 qwifb\n3 wlt\n7 wjqaeai\n2 wc\n7 eypanwj\n9 zpdkdmypj\n9 uuciruxaw\n8 jjoskkeg\n9 zpmbqnvcx\n3 oli\n2 tj\n8 mvnlspuz\n2 pg\n6 flulgt\n7 xeoqqbm\n6 lcakeu\n8 djhbagjd\n2 vp\n1 u\n5 zhvdi\n24\n",
+      "output": "10"
+    },
+    {
+      "name": "random_147_n21_m13",
+      "input": "21\n4 lzvi\n4 glro\n1 u\n7 lgifykd\n1 v\n7 inkghjo\n2 pi\n8 wovontyt\n6 mjfiun\n1 s\n6 sgoeei\n10 mlkqppbxwj\n6 xauzgf\n1 b\n8 ynpbbtya\n8 yzxpvaoo\n10 naiboulfhn\n10 fwmiuqlokb\n7 hevadqx\n9 yjxyzmkla\n6 noakpo\n13\n",
+      "output": "15"
+    },
+    {
+      "name": "random_148_n57_m36",
+      "input": "57\n2 vh\n5 sxupc\n3 kcm\n4 wdvs\n9 alologvzp\n7 qjpqzct\n3 ahu\n10 yzfbmflwzx\n6 eukigg\n10 onziitrxdi\n2 xz\n7 zmqkpyi\n7 ckedlpp\n4 knth\n6 dcnraz\n2 ar\n10 pwzlaytjjo\n9 uxcalfqhr\n2 ve\n6 ivindn\n1 e\n1 s\n5 vldro\n2 ay\n5 aeeil\n9 qeqkrczjk\n8 allucwab\n9 onxmfgjjq\n1 j\n6 omarwh\n8 ubfydcbf\n2 ui\n10 obzdcsbvgj\n7 lvwdznk\n9 pmognssai\n1 o\n6 bdflxa\n4 cryu\n8 elvtmwsd\n6 arjowe\n7 oqkkgri\n4 hvuf\n8 hdoenuxq\n5 yuhjz\n5 apfma\n3 oua\n2 hg\n1 e\n5 kpfyv\n2 hl\n9 eixbylynw\n7 txumnyz\n9 bdtcqxdev\n5 ijyxg\n10 qnjohqkdeo\n6 dqzcan\n7 odyplhz\n36\n",
+      "output": "12"
+    },
+    {
+      "name": "random_149_n20_m24",
+      "input": "20\n3 tuw\n3 rah\n3 jko\n10 aeelpzzvdz\n3 prd\n9 yngetxydl\n6 jmgqsx\n3 bne\n9 yzxylakfy\n5 ovkwo\n1 j\n10 hdsyyuszdd\n2 ek\n1 j\n2 jj\n4 crnt\n6 ladxcj\n6 psppgr\n3 wmi\n10 ngovhoprlv\n24\n",
+      "output": "10"
+    },
+    {
+      "name": "random_150_n50_m25",
+      "input": "50\n6 tisdwi\n3 dwv\n9 bebninkzh\n2 oa\n5 lihno\n8 jogjzzez\n1 t\n4 eihn\n5 eqzin\n3 zsb\n3 ybs\n3 lad\n4 niau\n2 zq\n3 xgb\n5 nicnf\n4 ajfs\n1 f\n7 jueyhyw\n7 sueqjyf\n1 r\n9 lklrqkqlx\n2 lb\n1 l\n6 flbukz\n7 hwvytck\n2 sy\n10 vyhhpqfvgv\n10 dmkptwzhbu\n4 ofhi\n10 gaidorxqrk\n7 mcmpjpb\n4 tqkv\n6 ulfkdw\n4 mcmc\n5 yxehm\n5 xewei\n6 wdewgk\n8 ofhiooln\n3 spo\n3 qul\n4 gcnj\n10 bdfrfibfrs\n8 hipfrleh\n7 vzfjyhl\n9 fissolklk\n2 yk\n9 yodhvpodw\n10 pbguwhahgl\n7 aneyhto\n25\n",
+      "output": "14"
+    },
+    {
+      "name": "random_151_n57_m39",
+      "input": "57\n3 wih\n1 v\n10 hjpptxugsk\n10 ardwgwuluk\n2 zh\n5 xqjxr\n3 rdx\n6 oquwyg\n9 ikjqogbza\n5 hkatq\n7 cieebsq\n5 uvomh\n2 vf\n8 hekgjtjp\n6 uustwq\n5 uxttv\n7 ysjqgry\n7 avqlljw\n8 yewqtfux\n7 gdfsrvi\n9 ktqleqikx\n9 hnyzjwwzp\n7 jebeqce\n10 rieaxcejsz\n9 kaljskcci\n4 ziem\n5 ynrsh\n4 carj\n6 fnjfvw\n4 dvmi\n9 orhymxyhw\n8 edsfknow\n3 vhu\n6 mcqwzd\n8 uofcivqf\n4 pnqk\n6 zccyjl\n8 nmduwxiu\n8 ihyyynka\n8 umjqkmmf\n8 fxdthjof\n5 irasp\n6 donrtk\n7 jusykka\n4 ywtz\n5 vqmgp\n1 a\n4 neus\n3 gbf\n3 rzw\n9 cvtrrodrl\n10 ohwoyryqvs\n6 lapwzv\n5 qcvxn\n2 yo\n3 vej\n7 nfspzdc\n39\n",
+      "output": "12"
+    },
+    {
+      "name": "random_152_n30_m6",
+      "input": "30\n1 m\n8 iituxodk\n2 vn\n6 cjrqte\n3 odz\n2 tq\n4 tftv\n3 tkt\n10 dxhrvjsldn\n8 utsgrxam\n10 dcseifsuvh\n1 j\n9 ygoxvotld\n4 cpll\n4 effv\n2 kd\n6 idioue\n1 k\n4 yzha\n8 bigyqukw\n3 fvk\n2 cw\n7 acrgsbv\n8 fzynnnxk\n2 jn\n8 ylmoxpmb\n3 vso\n9 btlvjiiwj\n3 otx\n8 oaczvrvx\n6\n",
+      "output": "28"
+    },
+    {
+      "name": "random_153_n23_m6",
+      "input": "23\n7 djrjdnm\n2 ux\n7 wxbavmb\n1 c\n2 fc\n5 rakzt\n6 dxkorj\n9 qfgsrrwgp\n6 vtlqjo\n10 liceistpgj\n5 bclqk\n8 knigbivo\n9 kvcpikmrp\n1 j\n5 sbpta\n3 cci\n1 b\n10 luwrrddjdy\n9 fkcfrrype\n8 glpnfnoy\n9 nkrdtiflu\n10 snlzcicqjc\n4 sopo\n6\n",
+      "output": "27"
+    },
+    {
+      "name": "random_154_n27_m21",
+      "input": "27\n8 jkmqgmjg\n7 rksqiow\n4 vmji\n5 yneva\n1 y\n9 stqjmomed\n5 hioww\n1 r\n6 ydaxvf\n6 qcjmjp\n10 rydfnrjlci\n9 epwzpnkka\n6 nuahhu\n10 ivbwbthfay\n4 xbnj\n1 y\n4 qvuz\n3 hxo\n6 xmnecf\n10 hkopcvibnh\n5 ggjrb\n1 v\n10 mvrqiahmdr\n8 zdfcuoic\n2 zc\n2 sb\n5 jbiuu\n21\n",
+      "output": "10"
+    },
+    {
+      "name": "random_155_n59_m54",
+      "input": "59\n3 ggi\n3 zkb\n5 jvfjh\n2 jo\n10 ecomlfwbbp\n9 iiazocbwr\n7 ilwfblo\n1 k\n2 gj\n2 xy\n5 irazl\n6 zkfgjy\n2 zk\n6 jiunfp\n3 psj\n3 fdn\n6 mmcotp\n4 srzm\n2 jt\n5 fhgcg\n10 fmgkgsvnyr\n4 bddy\n1 p\n1 c\n1 j\n9 irawoxtup\n6 paillp\n6 kphige\n8 bmkqyrde\n3 wbx\n2 dz\n3 lec\n8 nouvtnwg\n10 pkyzmzttbk\n5 vlgmk\n2 lo\n8 xwvppgia\n2 dh\n8 hhgpuarn\n9 fqtlcvieg\n10 jirgmfksrh\n8 xoodsxqd\n2 dx\n4 qlqf\n1 d\n2 ou\n2 cd\n9 pwwrvterx\n7 znqjfhp\n9 iiymajpiw\n2 ub\n6 jxddcj\n5 lschc\n6 gcplei\n5 qsfre\n8 lwdwrusu\n9 lszdyizat\n4 rkok\n6 ihvgut\n54\n",
+      "output": "10"
+    },
+    {
+      "name": "random_156_n6_m4",
+      "input": "6\n10 jwzkbyzvvo\n6 xbctjj\n10 glvunvryew\n9 jbridsjhm\n7 kezjxfo\n6 ahvcsy\n4\n",
+      "output": "16"
+    },
+    {
+      "name": "random_157_n58_m9",
+      "input": "58\n10 xsvfyqxsxm\n6 ctuyfy\n9 tbqektsmy\n10 kedgetvdze\n8 cvengvuf\n7 wqjrrkj\n6 dikefs\n3 rgo\n6 erclfu\n9 edoudtzyf\n3 gji\n4 glbv\n6 jpfnyr\n1 y\n7 ksvinfj\n7 pdtoyxr\n5 kmjuu\n6 jupjug\n3 xjr\n6 kkfydc\n4 rikv\n2 ab\n7 oksaysx\n10 qvtbyeixnj\n1 u\n4 bcod\n7 uxghvmu\n2 sc\n4 oiqm\n3 qkp\n3 uqy\n9 sohqfwgzq\n7 ngixelv\n10 fcrgumcbft\n9 dvounqwql\n9 fmdpeiqog\n8 xyxevqfs\n3 bbc\n8 zscyomir\n4 verd\n10 wjpjngpgmy\n2 ry\n7 amytvlu\n1 o\n5 yexzs\n6 ghjnih\n6 dwsseo\n3 qpy\n10 bjnhykamdw\n5 miquw\n10 pgkinpdryl\n1 i\n4 bfav\n7 zfbpgtm\n1 a\n8 vroizfzm\n4 srwk\n8 mbrpvpsq\n9\n",
+      "output": "40"
+    },
+    {
+      "name": "random_158_n18_m8",
+      "input": "18\n2 hh\n2 yu\n1 d\n2 hc\n8 qynlboho\n9 jbatbytid\n9 wvsahkgaf\n7 drfawvm\n7 bioggri\n10 mtppgrbgcn\n4 jquc\n7 rsnvdna\n2 oz\n7 wkhdgne\n5 btdyt\n9 rjolurasp\n7 qzeolkr\n1 s\n8\n",
+      "output": "16"
+    },
+    {
+      "name": "random_159_n58_m61",
+      "input": "58\n7 nckyxwd\n5 widkw\n3 cqx\n4 kqml\n2 au\n5 amjaa\n5 iefzu\n8 kgmwhgma\n2 ec\n8 itwbluqw\n1 x\n6 xiquwf\n8 kjakkjjp\n3 abg\n8 bpbrzruo\n6 ocrrpj\n8 kffewmzp\n2 sk\n6 jtdlih\n6 jvovpj\n3 jiw\n4 roli\n9 fzmiqiqei\n3 rtp\n3 qqf\n6 foodai\n9 olcvlpklm\n8 ojbxraoz\n3 dxe\n1 y\n3 lho\n6 ppokpg\n6 sozlqh\n2 pk\n5 dcfpk\n10 jbtdpmcosd\n7 gqtpjeh\n7 xomtity\n7 gfyaqrl\n4 fmlt\n3 ksr\n5 icdtk\n4 dgkz\n1 p\n2 ut\n9 pakffmzjs\n9 hgvbgbgzk\n4 oziu\n3 bqy\n7 cvzmomo\n10 iiajubtvbh\n5 oxtlr\n4 uqai\n6 jwmwtw\n2 ma\n3 ojn\n4 oapa\n8 xqmklirf\n61\n",
+      "output": "10"
+    },
+    {
+      "name": "random_160_n60_m21",
+      "input": "60\n9 twgzcnsms\n10 koyrsonmix\n5 hccyw\n4 tkjt\n6 eqlikn\n4 wbfy\n4 xxzm\n2 uh\n10 ciyijatsjt\n4 pfxg\n2 wg\n4 nbya\n7 zhuamaz\n6 xmiuij\n1 y\n2 hs\n5 yqlzw\n4 uliv\n6 jyghff\n5 azpeu\n7 lxnabmw\n2 hd\n9 wwtklwgtp\n8 xolivbsc\n6 kxjsmh\n2 ni\n2 cw\n10 efnlarzrcl\n6 azroko\n8 mqybtkaf\n8 lidmwghm\n3 vsw\n4 ernj\n1 t\n2 ky\n5 yovaz\n6 yrfnpw\n8 kzxznadh\n10 frhlzdshlj\n5 rxsji\n2 ho\n9 cztzkxfme\n4 xbml\n8 bgcguibo\n3 rmx\n2 wd\n8 fianrnxb\n5 ilxfx\n7 tkiubyw\n10 aochrpalph\n4 gefj\n2 vd\n5 pqwss\n3 wao\n4 pyfz\n6 frbcdo\n8 gwofqtxf\n8 vevnulbc\n6 bobipo\n9 blmucivxt\n21\n",
+      "output": "19"
+    },
+    {
+      "name": "random_161_n4_m2",
+      "input": "4\n3 cke\n6 vaqizb\n8 bbuixyjs\n4 fhih\n2\n",
+      "output": "12"
+    },
+    {
+      "name": "random_162_n59_m56",
+      "input": "59\n8 zktngqrz\n6 xrjzzp\n3 dvu\n3 fku\n7 oyoxxip\n3 ped\n7 puqsidi\n9 reqstrtha\n9 wfltvzlux\n1 i\n4 ehuj\n3 lyu\n6 rsairv\n7 blefuxe\n10 rdcpecppcr\n9 aghiuhrjd\n6 lzgxwo\n2 xj\n4 vkrw\n1 s\n6 pyszkp\n1 b\n2 fs\n10 wchvkiiowg\n3 wdk\n5 vheod\n1 k\n3 bge\n1 w\n2 ac\n1 n\n6 rrshqz\n6 vjcqzy\n1 n\n3 ebi\n5 bhvxb\n3 sci\n7 bddpjgz\n3 pay\n5 qameo\n8 cyfejcov\n2 sh\n3 xkq\n1 g\n9 cdzaqipfk\n10 hvxsvgledx\n10 jdsnnaliqm\n6 gxnmwa\n4 rbbk\n9 finofggfk\n2 xh\n5 pulwu\n4 sfwo\n5 sgfmz\n2 yf\n9 tgkflvwfq\n5 dynfb\n10 ayqijozpft\n7 medmavm\n56\n",
+      "output": "10"
+    },
+    {
+      "name": "random_163_n31_m12",
+      "input": "31\n2 ap\n7 vtrriuk\n8 nikzfocf\n10 wpmkeoigid\n1 v\n1 z\n1 v\n3 zvy\n6 kmsoao\n6 haqcew\n10 feyahgeiqt\n2 ng\n3 wsd\n1 d\n6 unenfe\n5 gxvkr\n10 qesjzquniq\n6 ygujrb\n8 opconbtc\n3 vol\n8 pduarrlu\n6 sjmgaj\n7 pibwxom\n2 tb\n5 blkct\n10 ihumiurtpq\n4 mqzy\n7 ejpbler\n4 hpld\n8 jepmjiav\n7 egsxlcj\n12\n",
+      "output": "17"
+    },
+    {
+      "name": "random_164_n24_m19",
+      "input": "24\n2 pz\n9 udnxenvbq\n1 j\n7 zpicjcp\n6 pusrjk\n6 rwjgjw\n3 fch\n6 ueulxe\n4 whfo\n8 ibbuqias\n4 jkhs\n7 dgtwdgt\n6 durevm\n3 npw\n3 mjh\n9 robomizoj\n8 fxvdsvvo\n5 viiho\n1 n\n8 ysbzznjx\n9 ehlkypnwp\n1 f\n1 l\n2 fz\n19\n",
+      "output": "9"
+    },
+    {
+      "name": "random_165_n54_m45",
+      "input": "54\n9 vbsufbkof\n2 je\n3 vqo\n6 ayhdgb\n3 jbu\n2 fw\n4 abhl\n3 wnx\n9 mojcenfln\n6 jlvhpe\n6 gsnbhp\n9 uopsgmupx\n2 ed\n10 wuvxxnmfsn\n5 nqmrx\n8 oubictph\n6 kdjhub\n2 xz\n1 v\n6 knqyzt\n7 tcvtstx\n1 b\n6 uzrarg\n1 t\n2 pc\n10 trzbqnbhvz\n4 wqzq\n6 wgzyph\n4 ccfy\n3 lly\n7 kkrupwp\n9 vrkbxzyck\n1 u\n2 dk\n5 xudtg\n6 cprduk\n7 cdimdkz\n1 k\n4 hcep\n4 lzpw\n6 mgtpeo\n4 nwjg\n8 dorppjiv\n9 omhatbcdo\n2 xl\n10 uqtvkohdqk\n1 o\n3 veb\n2 fz\n10 mhuavmvvrd\n5 jonhs\n10 bmwttrvklm\n6 olrngv\n8 fpnxqhyd\n45\n",
+      "output": "10"
+    },
+    {
+      "name": "random_166_n23_m15",
+      "input": "23\n9 wagefollm\n1 h\n6 otprej\n6 pcfooc\n10 eldqlqxmhy\n3 scg\n8 ycpmbwzu\n7 nlerswf\n8 tjfzqoqo\n4 aadz\n3 ned\n2 gk\n1 p\n6 fsfvlt\n10 hxqilpfwpf\n4 rfvv\n8 mjmvsplz\n5 grzoq\n8 svmgmfme\n3 xgy\n10 zuxkipqebm\n10 tptlzrjyml\n8 yqrwigov\n15\n",
+      "output": "12"
+    },
+    {
+      "name": "random_167_n49_m8",
+      "input": "49\n2 jj\n8 ftyfrtcy\n2 jh\n9 ijytrotud\n10 vimyoqrjwr\n2 hr\n6 uuugni\n5 zvpzv\n1 e\n7 lzhqqtf\n8 dchpnygi\n8 aakflipq\n2 ot\n3 pkq\n10 ufzvnrffsb\n5 tkozs\n9 jtdropmiy\n10 cmgsvbnepz\n2 dx\n7 pmowitq\n4 boqz\n5 pzlxf\n3 tyk\n8 yvtwxvbf\n6 bxwpnn\n3 bqz\n10 tlcpzwzhlq\n10 kxuqlelckw\n3 isa\n10 hajdmanxcw\n6 ihpomw\n9 uobebyryd\n6 rpnivc\n2 sg\n5 biiad\n4 parv\n7 cdwsfxi\n2 yz\n9 gwdjurbnm\n4 fwcx\n10 ulfpxxffza\n4 mlnb\n4 qgmq\n10 rqoafpgwod\n3 ioh\n5 fcwsx\n3 leq\n7 aqcxrfv\n2 qs\n8\n",
+      "output": "37"
+    },
+    {
+      "name": "random_168_n15_m11",
+      "input": "15\n7 qhadmpu\n5 plfyk\n6 ukjzwi\n6 rdkqkm\n4 tbmj\n1 j\n6 twvmrg\n6 tiaeic\n5 spxqx\n5 defpv\n10 muojtwkogm\n3 vbs\n1 j\n7 bbixebj\n2 ue\n11\n",
+      "output": "10"
+    },
+    {
+      "name": "random_169_n9_m14",
+      "input": "9\n10 yucwfnwsmi\n2 fu\n1 x\n6 txvnrq\n5 xnewd\n4 ljst\n10 zrrnfbpqdi\n9 xxksezoqv\n7 qpqnnep\n14\n",
+      "output": "10"
+    },
+    {
+      "name": "random_170_n8_m5",
+      "input": "8\n5 hysyp\n7 rmjbmyo\n1 q\n10 jfvhftmkkf\n5 ztquq\n2 ll\n3 vff\n10 tecfumzaku\n5\n",
+      "output": "10"
+    },
+    {
+      "name": "random_171_n46_m1",
+      "input": "46\n3 lki\n2 cg\n7 cgflqla\n5 wdeuu\n9 snfdsugyx\n10 rtpkujgdxu\n10 ybuayuesqm\n3 cie\n1 c\n2 qi\n5 gyajn\n2 yq\n5 kixbm\n10 jvonavlugg\n8 prknigan\n8 gajypivz\n2 st\n1 t\n5 mzukf\n1 m\n9 phwricjxt\n4 lrkm\n2 pr\n5 pykup\n5 tlaiq\n9 dhqohekjx\n5 xfkey\n6 jpawzn\n7 jxkorwv\n5 jhvxe\n4 qirt\n2 ym\n3 sse\n3 fge\n1 i\n5 asnhd\n5 crfui\n5 iqtta\n9 jtmrlkxzq\n4 vysn\n3 dbo\n8 kcfbvnap\n2 rc\n2 yd\n6 vwtkqp\n7 soppgie\n1\n",
+      "output": "225"
+    },
+    {
+      "name": "random_172_n36_m6",
+      "input": "36\n3 eim\n7 heuhirn\n6 uzzpld\n9 iztirmunj\n3 ums\n1 z\n6 lykiuj\n8 blhnsxzv\n4 fnph\n10 smlatkbkap\n10 fmfzavlahl\n3 hai\n5 rreta\n6 jqfgkn\n5 wamsi\n7 ieuikac\n10 samsfbqjir\n9 jqoqfumhn\n2 gz\n7 yahntek\n9 tlnhuojzf\n6 bsrbyt\n1 u\n3 lmu\n3 ilg\n1 g\n7 qogkleo\n2 vd\n10 zhpmaujbam\n2 as\n3 odt\n8 fupeiitq\n1 c\n10 cpbacwdbtm\n7 nynwfat\n3 zpp\n6\n",
+      "output": "35"
+    },
+    {
+      "name": "random_173_n18_m11",
+      "input": "18\n6 jxkqew\n3 nal\n10 kbhdskuhub\n3 cbx\n3 kmq\n3 fqa\n5 hpafq\n2 ae\n10 mazftplazu\n7 bgiiusv\n8 arhbjggk\n9 unfeycjmd\n8 wotocfht\n5 krbjw\n7 jcnkygd\n7 wwlistx\n9 niurxgokm\n8 hstuisev\n11\n",
+      "output": "14"
+    },
+    {
+      "name": "random_174_n13_m1",
+      "input": "13\n5 atsfm\n5 psvss\n8 wzblrpnq\n9 lffijrydj\n5 eolrh\n10 mudofdgted\n4 uhyk\n6 yeysii\n7 doixpmw\n10 rlwrgxszin\n9 mdzkqwygc\n7 qdxkafx\n8 tkdedfur\n1\n",
+      "output": "93"
+    },
+    {
+      "name": "random_175_n54_m9",
+      "input": "54\n4 kuzj\n5 wkftw\n4 cblk\n8 rqnlhjix\n2 ir\n9 yrhjzaslq\n7 tmmjzid\n2 pf\n7 fweqssm\n8 ejbnqsfm\n7 tnpvlmc\n4 oamu\n5 mcvdr\n9 snjqwuwmz\n6 yxxokj\n7 xiiqtpj\n8 qkiqgdxs\n10 tgypuqwmus\n10 aohycatint\n9 ilaynxbjw\n10 vowgwkvots\n3 bop\n6 rhotss\n1 g\n10 swggcvajff\n2 ud\n1 c\n4 vhcz\n6 shadtk\n6 zwfolp\n2 lm\n2 sg\n8 qzbeozzi\n8 ktmrcfqp\n4 xsag\n6 hgxvhd\n6 yoorue\n6 chcwck\n3 xse\n1 p\n9 sxbqbzeem\n3 jew\n6 vykyes\n9 lpukvhkez\n6 pfbcvk\n2 rb\n7 leopevn\n9 cogohhscd\n9 zdjaplfvb\n8 evldhppt\n7 tggsprt\n9 anrpezqfl\n5 ztplr\n6 dvuzfv\n9\n",
+      "output": "39"
+    },
+    {
+      "name": "random_176_n2_m7",
+      "input": "2\n9 mjfhqkbpf\n7 irmmrbc\n7\n",
+      "output": "9"
+    },
+    {
+      "name": "random_177_n12_m2",
+      "input": "12\n8 qnhjxtza\n2 qg\n2 gi\n9 smjvavykd\n6 kthcma\n3 tsb\n10 ledcrucquq\n9 nnouoooku\n2 sl\n7 gdgmsen\n6 lcbcct\n2 qq\n2\n",
+      "output": "36"
+    },
+    {
+      "name": "random_178_n57_m19",
+      "input": "57\n8 kcdywvxp\n4 hmtn\n3 vmo\n6 pqojbj\n10 dxafblmvge\n6 lokkoh\n9 srqxlccsr\n3 nkd\n7 ioknjfl\n1 m\n1 p\n6 mtjopx\n7 joduloo\n4 pgqz\n7 ntvtdup\n7 nrzhbwq\n5 hfnde\n3 cuy\n8 fmktvurb\n7 fxtauge\n8 nqkgmvjq\n5 mnwak\n3 pjw\n5 kaemt\n2 yq\n8 pjskgdrj\n4 dgsg\n7 mrbfobk\n2 nl\n10 ckpuwjurtb\n7 pzqwfvu\n5 butdk\n2 ul\n1 h\n8 ldpyazkn\n7 untbola\n7 nsxrbhn\n7 eviphlf\n6 tvwppb\n3 med\n2 xt\n4 fsne\n7 lrrfjsq\n1 z\n7 skbeuak\n9 bhisdeffr\n3 cng\n3 gby\n8 hfgjuckb\n1 x\n3 umb\n3 oce\n3 kfo\n3 ito\n3 bbt\n7 vtrwgqn\n8 wmcyrdut\n19\n",
+      "output": "18"
+    },
+    {
+      "name": "random_179_n55_m42",
+      "input": "55\n7 yxkiuat\n1 l\n9 abueurwei\n1 t\n4 dbsb\n8 zqjvxfus\n1 n\n10 sswecewacp\n8 rptsfgas\n8 xogarsdx\n8 dmooztmb\n4 dask\n8 atqcogia\n6 nzzpve\n2 me\n5 lmmxf\n3 uuv\n6 tgzect\n5 rkirn\n2 lo\n9 goqayvvkc\n8 vzzhqdzt\n6 zrpcuq\n5 rrpab\n3 sqf\n6 zelulo\n4 ztpc\n3 grf\n6 lzgben\n7 pozqext\n6 qwhysw\n1 s\n3 xag\n8 qcfdumcs\n9 vnunaucvh\n5 wzntm\n8 jysmafln\n1 a\n2 jh\n2 yk\n7 szhbllg\n10 caoixdgihx\n9 nwahvwhvo\n3 qor\n10 ejhqfgtgbf\n10 iwqtkpmaji\n7 kqevmtu\n1 v\n3 bjq\n7 nhpfnmm\n9 xszarcnee\n2 nu\n6 xspwtf\n7 hcbgwmr\n10 pvnkyzxzgt\n42\n",
+      "output": "10"
+    },
+    {
+      "name": "random_180_n11_m1",
+      "input": "11\n1 n\n3 xwm\n7 alduque\n8 lyfvwufb\n3 scv\n1 h\n8 kymtdvjn\n1 u\n7 jdzrdnm\n10 crvyfwnzyi\n3 mtz\n1\n",
+      "output": "52"
+    }
+  ]
+}

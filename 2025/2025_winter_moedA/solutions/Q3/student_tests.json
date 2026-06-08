@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "sample_5_2_8",
+      "input": "6\n5 2 5 5 2 8\n8\n",
+      "output": "3\n8 2 5 "
+    },
+    {
+      "name": "sample_1_3_4",
+      "input": "8\n1 3 3 3 4 4 4 4\n4\n",
+      "output": "3\n1 3 4 "
+    },
+    {
+      "name": "sample_single_six",
+      "input": "3\n6 6 6\n7\n",
+      "output": "1\n6 "
+    }
+  ]
+}

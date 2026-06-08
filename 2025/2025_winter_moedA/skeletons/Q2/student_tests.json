@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "sample_i_love_computer_science_m2",
+      "input": "4\n1 I\n4 love\n8 computer\n7 science\n2\n",
+      "output": "13"
+    },
+    {
+      "name": "simple_three_words_m2",
+      "input": "3\n2 aa\n3 bbb\n1 c\n2\n",
+      "output": "4"
+    },
+    {
+      "name": "simple_one_line",
+      "input": "3\n3 red\n4 blue\n5 green\n1\n",
+      "output": "12"
+    }
+  ]
+}
