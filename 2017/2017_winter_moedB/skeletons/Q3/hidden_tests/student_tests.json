@@ -1,0 +1,1029 @@
+{
+  "tests": [
+    {
+      "name": "example_deadbeef_k3",
+      "input": "3\ndeadbeef\n",
+      "output": "6"
+    },
+    {
+      "name": "example_deadbeef_k2",
+      "input": "2\ndeadbeef\n",
+      "output": "4"
+    },
+    {
+      "name": "example_deadbeef_k4",
+      "input": "4\ndeadbeef\n",
+      "output": "8"
+    },
+    {
+      "name": "no_substring_k_too_large",
+      "input": "7\nabcde\n",
+      "output": "0"
+    },
+    {
+      "name": "single_char_k2",
+      "input": "2\na\n",
+      "output": "1"
+    },
+    {
+      "name": "single_char_k3",
+      "input": "3\na\n",
+      "output": "0"
+    },
+    {
+      "name": "single_char_k1",
+      "input": "1\na\n",
+      "output": "0"
+    },
+    {
+      "name": "two_same_k2",
+      "input": "2\naa\n",
+      "output": "1"
+    },
+    {
+      "name": "two_same_k3",
+      "input": "3\naa\n",
+      "output": "2"
+    },
+    {
+      "name": "two_diff_k2",
+      "input": "2\nab\n",
+      "output": "2"
+    },
+    {
+      "name": "all_unique_26_k2",
+      "input": "2\nabcdefghijklmnopqrstuvwxyz\n",
+      "output": "26"
+    },
+    {
+      "name": "all_unique_26_k3",
+      "input": "3\nabcdefghijklmnopqrstuvwxyz\n",
+      "output": "0"
+    },
+    {
+      "name": "all_a_10_k2",
+      "input": "2\naaaaaaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "all_a_10_k3",
+      "input": "3\naaaaaaaaaa\n",
+      "output": "2"
+    },
+    {
+      "name": "all_a_10_k4",
+      "input": "4\naaaaaaaaaa\n",
+      "output": "3"
+    },
+    {
+      "name": "all_a_10_k11",
+      "input": "11\naaaaaaaaaa\n",
+      "output": "10"
+    },
+    {
+      "name": "alternating_ab_10_k2",
+      "input": "2\nababababab\n",
+      "output": "2"
+    },
+    {
+      "name": "alternating_ab_10_k3",
+      "input": "3\nababababab\n",
+      "output": "4"
+    },
+    {
+      "name": "alternating_ab_10_k4",
+      "input": "4\nababababab\n",
+      "output": "6"
+    },
+    {
+      "name": "blocks_aaabbbccc_k2",
+      "input": "2\naaabbbccc\n",
+      "output": "2"
+    },
+    {
+      "name": "blocks_aaabbbccc_k3",
+      "input": "3\naaabbbccc\n",
+      "output": "4"
+    },
+    {
+      "name": "blocks_aaabbbccc_k4",
+      "input": "4\naaabbbccc\n",
+      "output": "9"
+    },
+    {
+      "name": "mixed_banana_k2",
+      "input": "2\nbanana\n",
+      "output": "3"
+    },
+    {
+      "name": "mixed_banana_k3",
+      "input": "3\nbanana\n",
+      "output": "5"
+    },
+    {
+      "name": "mixed_banana_k4",
+      "input": "4\nbanana\n",
+      "output": "6"
+    },
+    {
+      "name": "mixed_mississippi_k2",
+      "input": "2\nmississippi\n",
+      "output": "3"
+    },
+    {
+      "name": "mixed_mississippi_k3",
+      "input": "3\nmississippi\n",
+      "output": "6"
+    },
+    {
+      "name": "mixed_mississippi_k4",
+      "input": "4\nmississippi\n",
+      "output": "8"
+    },
+    {
+      "name": "mixed_mississippi_k5",
+      "input": "5\nmississippi\n",
+      "output": "11"
+    },
+    {
+      "name": "alphabet_twice_k2",
+      "input": "2\nabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz\n",
+      "output": "26"
+    },
+    {
+      "name": "alphabet_twice_k3",
+      "input": "3\nabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz\n",
+      "output": "52"
+    },
+    {
+      "name": "alphabet_twice_k4",
+      "input": "4\nabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len1_k2",
+      "input": "2\na\n",
+      "output": "1"
+    },
+    {
+      "name": "same_len1_k3",
+      "input": "3\na\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len1_k5",
+      "input": "5\na\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len1_k2",
+      "input": "2\na\n",
+      "output": "1"
+    },
+    {
+      "name": "same_len1_k3",
+      "input": "3\na\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len2_k2",
+      "input": "2\naa\n",
+      "output": "1"
+    },
+    {
+      "name": "same_len2_k3",
+      "input": "3\naa\n",
+      "output": "2"
+    },
+    {
+      "name": "same_len2_k5",
+      "input": "5\naa\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len2_k3",
+      "input": "3\naa\n",
+      "output": "2"
+    },
+    {
+      "name": "same_len2_k4",
+      "input": "4\naa\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len3_k2",
+      "input": "2\naaa\n",
+      "output": "1"
+    },
+    {
+      "name": "same_len3_k3",
+      "input": "3\naaa\n",
+      "output": "2"
+    },
+    {
+      "name": "same_len3_k5",
+      "input": "5\naaa\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len3_k4",
+      "input": "4\naaa\n",
+      "output": "3"
+    },
+    {
+      "name": "same_len3_k5",
+      "input": "5\naaa\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len4_k2",
+      "input": "2\naaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "same_len4_k3",
+      "input": "3\naaaa\n",
+      "output": "2"
+    },
+    {
+      "name": "same_len4_k5",
+      "input": "5\naaaa\n",
+      "output": "4"
+    },
+    {
+      "name": "same_len4_k5",
+      "input": "5\naaaa\n",
+      "output": "4"
+    },
+    {
+      "name": "same_len4_k6",
+      "input": "6\naaaa\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len5_k2",
+      "input": "2\naaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "same_len5_k3",
+      "input": "3\naaaaa\n",
+      "output": "2"
+    },
+    {
+      "name": "same_len5_k5",
+      "input": "5\naaaaa\n",
+      "output": "4"
+    },
+    {
+      "name": "same_len5_k6",
+      "input": "6\naaaaa\n",
+      "output": "5"
+    },
+    {
+      "name": "same_len5_k7",
+      "input": "7\naaaaa\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len6_k2",
+      "input": "2\naaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "same_len6_k3",
+      "input": "3\naaaaaa\n",
+      "output": "2"
+    },
+    {
+      "name": "same_len6_k5",
+      "input": "5\naaaaaa\n",
+      "output": "4"
+    },
+    {
+      "name": "same_len6_k7",
+      "input": "7\naaaaaa\n",
+      "output": "6"
+    },
+    {
+      "name": "same_len6_k8",
+      "input": "8\naaaaaa\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len7_k2",
+      "input": "2\naaaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "same_len7_k3",
+      "input": "3\naaaaaaa\n",
+      "output": "2"
+    },
+    {
+      "name": "same_len7_k5",
+      "input": "5\naaaaaaa\n",
+      "output": "4"
+    },
+    {
+      "name": "same_len7_k8",
+      "input": "8\naaaaaaa\n",
+      "output": "7"
+    },
+    {
+      "name": "same_len7_k9",
+      "input": "9\naaaaaaa\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len8_k2",
+      "input": "2\naaaaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "same_len8_k3",
+      "input": "3\naaaaaaaa\n",
+      "output": "2"
+    },
+    {
+      "name": "same_len8_k5",
+      "input": "5\naaaaaaaa\n",
+      "output": "4"
+    },
+    {
+      "name": "same_len8_k9",
+      "input": "9\naaaaaaaa\n",
+      "output": "8"
+    },
+    {
+      "name": "same_len8_k10",
+      "input": "10\naaaaaaaa\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len9_k2",
+      "input": "2\naaaaaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "same_len9_k3",
+      "input": "3\naaaaaaaaa\n",
+      "output": "2"
+    },
+    {
+      "name": "same_len9_k5",
+      "input": "5\naaaaaaaaa\n",
+      "output": "4"
+    },
+    {
+      "name": "same_len9_k10",
+      "input": "10\naaaaaaaaa\n",
+      "output": "9"
+    },
+    {
+      "name": "same_len9_k11",
+      "input": "11\naaaaaaaaa\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len10_k2",
+      "input": "2\naaaaaaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "same_len10_k3",
+      "input": "3\naaaaaaaaaa\n",
+      "output": "2"
+    },
+    {
+      "name": "same_len10_k5",
+      "input": "5\naaaaaaaaaa\n",
+      "output": "4"
+    },
+    {
+      "name": "same_len10_k11",
+      "input": "11\naaaaaaaaaa\n",
+      "output": "10"
+    },
+    {
+      "name": "same_len10_k12",
+      "input": "12\naaaaaaaaaa\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len11_k2",
+      "input": "2\naaaaaaaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "same_len11_k3",
+      "input": "3\naaaaaaaaaaa\n",
+      "output": "2"
+    },
+    {
+      "name": "same_len11_k5",
+      "input": "5\naaaaaaaaaaa\n",
+      "output": "4"
+    },
+    {
+      "name": "same_len11_k12",
+      "input": "12\naaaaaaaaaaa\n",
+      "output": "11"
+    },
+    {
+      "name": "same_len11_k13",
+      "input": "13\naaaaaaaaaaa\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len12_k2",
+      "input": "2\naaaaaaaaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "same_len12_k3",
+      "input": "3\naaaaaaaaaaaa\n",
+      "output": "2"
+    },
+    {
+      "name": "same_len12_k5",
+      "input": "5\naaaaaaaaaaaa\n",
+      "output": "4"
+    },
+    {
+      "name": "same_len12_k13",
+      "input": "13\naaaaaaaaaaaa\n",
+      "output": "12"
+    },
+    {
+      "name": "same_len12_k14",
+      "input": "14\naaaaaaaaaaaa\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len13_k2",
+      "input": "2\naaaaaaaaaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "same_len13_k3",
+      "input": "3\naaaaaaaaaaaaa\n",
+      "output": "2"
+    },
+    {
+      "name": "same_len13_k5",
+      "input": "5\naaaaaaaaaaaaa\n",
+      "output": "4"
+    },
+    {
+      "name": "same_len13_k14",
+      "input": "14\naaaaaaaaaaaaa\n",
+      "output": "13"
+    },
+    {
+      "name": "same_len13_k15",
+      "input": "15\naaaaaaaaaaaaa\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len14_k2",
+      "input": "2\naaaaaaaaaaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "same_len14_k3",
+      "input": "3\naaaaaaaaaaaaaa\n",
+      "output": "2"
+    },
+    {
+      "name": "same_len14_k5",
+      "input": "5\naaaaaaaaaaaaaa\n",
+      "output": "4"
+    },
+    {
+      "name": "same_len14_k15",
+      "input": "15\naaaaaaaaaaaaaa\n",
+      "output": "14"
+    },
+    {
+      "name": "same_len14_k16",
+      "input": "16\naaaaaaaaaaaaaa\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len15_k2",
+      "input": "2\naaaaaaaaaaaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "same_len15_k3",
+      "input": "3\naaaaaaaaaaaaaaa\n",
+      "output": "2"
+    },
+    {
+      "name": "same_len15_k5",
+      "input": "5\naaaaaaaaaaaaaaa\n",
+      "output": "4"
+    },
+    {
+      "name": "same_len15_k16",
+      "input": "16\naaaaaaaaaaaaaaa\n",
+      "output": "15"
+    },
+    {
+      "name": "same_len15_k17",
+      "input": "17\naaaaaaaaaaaaaaa\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len16_k2",
+      "input": "2\naaaaaaaaaaaaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "same_len16_k3",
+      "input": "3\naaaaaaaaaaaaaaaa\n",
+      "output": "2"
+    },
+    {
+      "name": "same_len16_k5",
+      "input": "5\naaaaaaaaaaaaaaaa\n",
+      "output": "4"
+    },
+    {
+      "name": "same_len16_k17",
+      "input": "17\naaaaaaaaaaaaaaaa\n",
+      "output": "16"
+    },
+    {
+      "name": "same_len16_k18",
+      "input": "18\naaaaaaaaaaaaaaaa\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len17_k2",
+      "input": "2\naaaaaaaaaaaaaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "same_len17_k3",
+      "input": "3\naaaaaaaaaaaaaaaaa\n",
+      "output": "2"
+    },
+    {
+      "name": "same_len17_k5",
+      "input": "5\naaaaaaaaaaaaaaaaa\n",
+      "output": "4"
+    },
+    {
+      "name": "same_len17_k18",
+      "input": "18\naaaaaaaaaaaaaaaaa\n",
+      "output": "17"
+    },
+    {
+      "name": "same_len17_k19",
+      "input": "19\naaaaaaaaaaaaaaaaa\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len18_k2",
+      "input": "2\naaaaaaaaaaaaaaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "same_len18_k3",
+      "input": "3\naaaaaaaaaaaaaaaaaa\n",
+      "output": "2"
+    },
+    {
+      "name": "same_len18_k5",
+      "input": "5\naaaaaaaaaaaaaaaaaa\n",
+      "output": "4"
+    },
+    {
+      "name": "same_len18_k19",
+      "input": "19\naaaaaaaaaaaaaaaaaa\n",
+      "output": "18"
+    },
+    {
+      "name": "same_len18_k20",
+      "input": "20\naaaaaaaaaaaaaaaaaa\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len19_k2",
+      "input": "2\naaaaaaaaaaaaaaaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "same_len19_k3",
+      "input": "3\naaaaaaaaaaaaaaaaaaa\n",
+      "output": "2"
+    },
+    {
+      "name": "same_len19_k5",
+      "input": "5\naaaaaaaaaaaaaaaaaaa\n",
+      "output": "4"
+    },
+    {
+      "name": "same_len19_k20",
+      "input": "20\naaaaaaaaaaaaaaaaaaa\n",
+      "output": "19"
+    },
+    {
+      "name": "same_len19_k21",
+      "input": "21\naaaaaaaaaaaaaaaaaaa\n",
+      "output": "0"
+    },
+    {
+      "name": "same_len20_k2",
+      "input": "2\naaaaaaaaaaaaaaaaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "same_len20_k3",
+      "input": "3\naaaaaaaaaaaaaaaaaaaa\n",
+      "output": "2"
+    },
+    {
+      "name": "same_len20_k5",
+      "input": "5\naaaaaaaaaaaaaaaaaaaa\n",
+      "output": "4"
+    },
+    {
+      "name": "same_len20_k21",
+      "input": "21\naaaaaaaaaaaaaaaaaaaa\n",
+      "output": "20"
+    },
+    {
+      "name": "pattern_1_ab_r2_k2",
+      "input": "2\nabab\n",
+      "output": "2"
+    },
+    {
+      "name": "pattern_2_ab_r2_k3",
+      "input": "3\nabab\n",
+      "output": "4"
+    },
+    {
+      "name": "pattern_3_ab_r2_k4",
+      "input": "4\nabab\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_4_ab_r2_k5",
+      "input": "5\nabab\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_5_ab_r2_k6",
+      "input": "6\nabab\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_6_ab_r3_k2",
+      "input": "2\nababab\n",
+      "output": "2"
+    },
+    {
+      "name": "pattern_7_ab_r3_k3",
+      "input": "3\nababab\n",
+      "output": "4"
+    },
+    {
+      "name": "pattern_8_ab_r3_k4",
+      "input": "4\nababab\n",
+      "output": "6"
+    },
+    {
+      "name": "pattern_9_ab_r3_k5",
+      "input": "5\nababab\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_10_ab_r3_k6",
+      "input": "6\nababab\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_11_ab_r5_k2",
+      "input": "2\nababababab\n",
+      "output": "2"
+    },
+    {
+      "name": "pattern_12_ab_r5_k3",
+      "input": "3\nababababab\n",
+      "output": "4"
+    },
+    {
+      "name": "pattern_13_ab_r5_k4",
+      "input": "4\nababababab\n",
+      "output": "6"
+    },
+    {
+      "name": "pattern_14_ab_r5_k5",
+      "input": "5\nababababab\n",
+      "output": "8"
+    },
+    {
+      "name": "pattern_15_ab_r5_k6",
+      "input": "6\nababababab\n",
+      "output": "10"
+    },
+    {
+      "name": "pattern_16_ab_r8_k2",
+      "input": "2\nabababababababab\n",
+      "output": "2"
+    },
+    {
+      "name": "pattern_17_ab_r8_k3",
+      "input": "3\nabababababababab\n",
+      "output": "4"
+    },
+    {
+      "name": "pattern_18_ab_r8_k4",
+      "input": "4\nabababababababab\n",
+      "output": "6"
+    },
+    {
+      "name": "pattern_19_ab_r8_k5",
+      "input": "5\nabababababababab\n",
+      "output": "8"
+    },
+    {
+      "name": "pattern_20_ab_r8_k6",
+      "input": "6\nabababababababab\n",
+      "output": "10"
+    },
+    {
+      "name": "pattern_21_abc_r2_k2",
+      "input": "2\nabcabc\n",
+      "output": "3"
+    },
+    {
+      "name": "pattern_22_abc_r2_k3",
+      "input": "3\nabcabc\n",
+      "output": "6"
+    },
+    {
+      "name": "pattern_23_abc_r2_k4",
+      "input": "4\nabcabc\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_24_abc_r2_k5",
+      "input": "5\nabcabc\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_25_abc_r2_k6",
+      "input": "6\nabcabc\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_26_abc_r3_k2",
+      "input": "2\nabcabcabc\n",
+      "output": "3"
+    },
+    {
+      "name": "pattern_27_abc_r3_k3",
+      "input": "3\nabcabcabc\n",
+      "output": "6"
+    },
+    {
+      "name": "pattern_28_abc_r3_k4",
+      "input": "4\nabcabcabc\n",
+      "output": "9"
+    },
+    {
+      "name": "pattern_29_abc_r3_k5",
+      "input": "5\nabcabcabc\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_30_abc_r3_k6",
+      "input": "6\nabcabcabc\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_31_abc_r5_k2",
+      "input": "2\nabcabcabcabcabc\n",
+      "output": "3"
+    },
+    {
+      "name": "pattern_32_abc_r5_k3",
+      "input": "3\nabcabcabcabcabc\n",
+      "output": "6"
+    },
+    {
+      "name": "pattern_33_abc_r5_k4",
+      "input": "4\nabcabcabcabcabc\n",
+      "output": "9"
+    },
+    {
+      "name": "pattern_34_abc_r5_k5",
+      "input": "5\nabcabcabcabcabc\n",
+      "output": "12"
+    },
+    {
+      "name": "pattern_35_abc_r5_k6",
+      "input": "6\nabcabcabcabcabc\n",
+      "output": "15"
+    },
+    {
+      "name": "pattern_36_abc_r8_k2",
+      "input": "2\nabcabcabcabcabcabcabcabc\n",
+      "output": "3"
+    },
+    {
+      "name": "pattern_37_abc_r8_k3",
+      "input": "3\nabcabcabcabcabcabcabcabc\n",
+      "output": "6"
+    },
+    {
+      "name": "pattern_38_abc_r8_k4",
+      "input": "4\nabcabcabcabcabcabcabcabc\n",
+      "output": "9"
+    },
+    {
+      "name": "pattern_39_abc_r8_k5",
+      "input": "5\nabcabcabcabcabcabcabcabc\n",
+      "output": "12"
+    },
+    {
+      "name": "pattern_40_abc_r8_k6",
+      "input": "6\nabcabcabcabcabcabcabcabc\n",
+      "output": "15"
+    },
+    {
+      "name": "pattern_41_abcd_r2_k2",
+      "input": "2\nabcdabcd\n",
+      "output": "4"
+    },
+    {
+      "name": "pattern_42_abcd_r2_k3",
+      "input": "3\nabcdabcd\n",
+      "output": "8"
+    },
+    {
+      "name": "pattern_43_abcd_r2_k4",
+      "input": "4\nabcdabcd\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_44_abcd_r2_k5",
+      "input": "5\nabcdabcd\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_45_abcd_r2_k6",
+      "input": "6\nabcdabcd\n",
+      "output": "0"
+    },
+    {
+      "name": "pattern_46_abcd_r3_k2",
+      "input": "2\nabcdabcdabcd\n",
+      "output": "4"
+    },
+    {
+      "name": "pattern_47_abcd_r3_k3",
+      "input": "3\nabcdabcdabcd\n",
+      "output": "8"
+    },
+    {
+      "name": "pattern_48_abcd_r3_k4",
+      "input": "4\nabcdabcdabcd\n",
+      "output": "12"
+    },
+    {
+      "name": "pattern_49_abcd_r3_k5",
+      "input": "5\nabcdabcdabcd\n",
+      "output": "0"
+    },
+    {
+      "name": "random_1_len60_k4",
+      "input": "4\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "3"
+    },
+    {
+      "name": "random_2_len55_k5",
+      "input": "5\ntftalqurndhkkjhnqcuuibrpadjcnliobdpjbmhblfgfekttuhutifq\n",
+      "output": "50"
+    },
+    {
+      "name": "random_3_len63_k10",
+      "input": "10\njfbbghjaeediaafadfffibbiecfiedbfcgbaidgjkgjdcacjghhcjieeijjhcdb\n",
+      "output": "0"
+    },
+    {
+      "name": "random_4_len15_k8",
+      "input": "8\nbccbibicbdibaib\n",
+      "output": "0"
+    },
+    {
+      "name": "random_5_len15_k3",
+      "input": "3\ngchgbcghccecgcc\n",
+      "output": "7"
+    },
+    {
+      "name": "random_6_len41_k4",
+      "input": "4\nccabcacagffdggebfcfeedebfcfeefcfgegecefgg\n",
+      "output": "16"
+    },
+    {
+      "name": "random_7_len45_k7",
+      "input": "7\nbaadabdbdccbaddcbddbaacddacdccacabcdbdadbddba\n",
+      "output": "22"
+    },
+    {
+      "name": "random_8_len84_k11",
+      "input": "11\nrteulctxvndeevonfdbmytyxniwveetxxworetsesefctuerhfybqmaktifrftcstjyxbdgxwmplbhsthofg\n",
+      "output": "84"
+    },
+    {
+      "name": "random_9_len39_k11",
+      "input": "11\nbfabcbcecfebffeddecdfbeacfefbbaaceeceae\n",
+      "output": "39"
+    },
+    {
+      "name": "random_10_len29_k12",
+      "input": "12\nelcdrcidsoicfredaiolmrkarnldf\n",
+      "output": "0"
+    },
+    {
+      "name": "random_11_len4_k5",
+      "input": "5\nbbcc\n",
+      "output": "0"
+    },
+    {
+      "name": "random_12_len72_k9",
+      "input": "9\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "8"
+    },
+    {
+      "name": "random_13_len30_k12",
+      "input": "12\nbegjbdlgjklffldldefclhdhjeieef\n",
+      "output": "0"
+    },
+    {
+      "name": "random_14_len61_k4",
+      "input": "4\ncdiflmmclfmbjagjfefhmackcjcdcflajbkkacdfjekjamijddhjkefbahcjg\n",
+      "output": "21"
+    },
+    {
+      "name": "random_15_len36_k11",
+      "input": "11\nnaxxwqrdppnkluoimunttestykamkgvblwjd\n",
+      "output": "0"
+    },
+    {
+      "name": "random_16_len35_k11",
+      "input": "11\ndeadaeeffbdaefecddddcceecfegaaaafcf\n",
+      "output": "0"
+    },
+    {
+      "name": "random_17_len39_k7",
+      "input": "7\ngabbafgedgfaagdefcadebfeefededfgbgcagdg\n",
+      "output": "31"
+    },
+    {
+      "name": "random_18_len86_k9",
+      "input": "9\necibcjbkjjiikhhadghfcccddhakeeachdcgfdaffgicfaaghcggjjhkhbhkeiahifbbhijgadiciaicbfjgej\n",
+      "output": "65"
+    },
+    {
+      "name": "random_19_len43_k3",
+      "input": "3\nfdhdhjbcijjjehcagcfcajiegifhjihebjgbgjbcaag\n",
+      "output": "14"
+    },
+    {
+      "name": "random_20_len43_k1",
+      "input": "1\njhermrxdmbhqeiipaxlbktnugjogxemosnlfxqcgxqc\n",
+      "output": "0"
+    },
+    {
+      "name": "random_21_len89_k7",
+      "input": "7\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "6"
+    },
+    {
+      "name": "random_22_len10_k7",
+      "input": "7\noxvrqnbrez\n",
+      "output": "0"
+    },
+    {
+      "name": "random_23_len22_k10",
+      "input": "10\nbbaabababbaaaaabbabaaa\n",
+      "output": "17"
+    },
+    {
+      "name": "random_24_len90_k6",
+      "input": "6\njkqkbjpbaqvfskdnbplolhptjdqbjfsivvuuehgmjiecnsnoilbcrbjkikcervdtnlhuksbsssoesjvdksrqaeruiv\n",
+      "output": "65"
+    },
+    {
+      "name": "random_25_len57_k5",
+      "input": "5\ngdedadcddfebeffccedcbfacafhffbhagdbbfhgfgbfcedaadbddefcca\n",
+      "output": "23"
+    }
+  ]
+}

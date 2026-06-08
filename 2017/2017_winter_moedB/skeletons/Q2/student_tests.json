@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "example_single_duplicate_4",
+      "input": "6\n1 2 3 4 5 4\n",
+      "output": "OK"
+    },
+    {
+      "name": "example_many_duplicates_1_or_2",
+      "input": "6\n1 1 1 2 2 2\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_min_n2_duplicate_1",
+      "input": "2\n1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "duplicate_at_edges",
+      "input": "6\n3 1 2 4 5 3\n",
+      "output": "OK"
+    }
+  ]
+}

@@ -1,0 +1,1104 @@
+{
+  "tests": [
+    {
+      "name": "edge_empty",
+      "input": "0\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_single_a",
+      "input": "1\na\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_two_same",
+      "input": "2\naa\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_two_diff",
+      "input": "2\nab\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_three_same",
+      "input": "3\naaa\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_three_aba",
+      "input": "3\naba\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_three_abc",
+      "input": "3\nabc\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_four_all_same",
+      "input": "4\naaaa\n",
+      "output": "3"
+    },
+    {
+      "name": "edge_four_abba",
+      "input": "4\nabba\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_four_abab",
+      "input": "4\nabab\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_four_abca",
+      "input": "4\nabca\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_example_feffef",
+      "input": "6\nfeffef\n",
+      "output": "3"
+    },
+    {
+      "name": "edge_example_ffefeef",
+      "input": "7\nffefeef\n",
+      "output": "3"
+    },
+    {
+      "name": "edge_unique_alphabet",
+      "input": "26\nabcdefghijklmnopqrstuvwxyz\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_alphabet_twice",
+      "input": "52\nabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_reverse_pair",
+      "input": "51\nabcdefghijklmnopqrstuvwxyzyxwvutsrqponmlkjihgfedcba\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_all_a_26",
+      "input": "26\naaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "25"
+    },
+    {
+      "name": "edge_all_z_50",
+      "input": "50\nzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\n",
+      "output": "49"
+    },
+    {
+      "name": "edge_alternating_ab_20",
+      "input": "20\nabababababababababab\n",
+      "output": "17"
+    },
+    {
+      "name": "edge_block_a_then_b",
+      "input": "20\naaaaaaaaaabbbbbbbbbb\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_block_ab_then_ab",
+      "input": "20\naaaaabbbbbaaaaabbbbb\n",
+      "output": "9"
+    },
+    {
+      "name": "edge_missing_last_letter",
+      "input": "8\nabcabcab\n",
+      "output": "3"
+    },
+    {
+      "name": "edge_many_counts_same_set",
+      "input": "12\naaabbbcccabc\n",
+      "output": "3"
+    },
+    {
+      "name": "edge_set_changes_often",
+      "input": "15\nabacabadabacaba\n",
+      "output": "0"
+    },
+    {
+      "name": "all_same_n2",
+      "input": "2\naa\n",
+      "output": "1"
+    },
+    {
+      "name": "all_same_n3",
+      "input": "3\naaa\n",
+      "output": "2"
+    },
+    {
+      "name": "all_same_n4",
+      "input": "4\naaaa\n",
+      "output": "3"
+    },
+    {
+      "name": "all_same_n5",
+      "input": "5\naaaaa\n",
+      "output": "4"
+    },
+    {
+      "name": "all_same_n6",
+      "input": "6\naaaaaa\n",
+      "output": "5"
+    },
+    {
+      "name": "all_same_n7",
+      "input": "7\naaaaaaa\n",
+      "output": "6"
+    },
+    {
+      "name": "all_same_n8",
+      "input": "8\naaaaaaaa\n",
+      "output": "7"
+    },
+    {
+      "name": "all_same_n9",
+      "input": "9\naaaaaaaaa\n",
+      "output": "8"
+    },
+    {
+      "name": "all_same_n10",
+      "input": "10\naaaaaaaaaa\n",
+      "output": "9"
+    },
+    {
+      "name": "all_same_n11",
+      "input": "11\naaaaaaaaaaa\n",
+      "output": "10"
+    },
+    {
+      "name": "all_same_n12",
+      "input": "12\naaaaaaaaaaaa\n",
+      "output": "11"
+    },
+    {
+      "name": "all_same_n13",
+      "input": "13\naaaaaaaaaaaaa\n",
+      "output": "12"
+    },
+    {
+      "name": "all_same_n14",
+      "input": "14\naaaaaaaaaaaaaa\n",
+      "output": "13"
+    },
+    {
+      "name": "all_same_n15",
+      "input": "15\naaaaaaaaaaaaaaa\n",
+      "output": "14"
+    },
+    {
+      "name": "all_same_n16",
+      "input": "16\naaaaaaaaaaaaaaaa\n",
+      "output": "15"
+    },
+    {
+      "name": "all_same_n17",
+      "input": "17\naaaaaaaaaaaaaaaaa\n",
+      "output": "16"
+    },
+    {
+      "name": "all_same_n18",
+      "input": "18\naaaaaaaaaaaaaaaaaa\n",
+      "output": "17"
+    },
+    {
+      "name": "all_same_n19",
+      "input": "19\naaaaaaaaaaaaaaaaaaa\n",
+      "output": "18"
+    },
+    {
+      "name": "all_same_n20",
+      "input": "20\naaaaaaaaaaaaaaaaaaaa\n",
+      "output": "19"
+    },
+    {
+      "name": "all_same_n21",
+      "input": "21\naaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "20"
+    },
+    {
+      "name": "all_same_n22",
+      "input": "22\naaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "21"
+    },
+    {
+      "name": "all_same_n23",
+      "input": "23\naaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "22"
+    },
+    {
+      "name": "all_same_n24",
+      "input": "24\naaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "23"
+    },
+    {
+      "name": "all_same_n25",
+      "input": "25\naaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "24"
+    },
+    {
+      "name": "all_same_n26",
+      "input": "26\naaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "25"
+    },
+    {
+      "name": "all_same_n27",
+      "input": "27\naaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "26"
+    },
+    {
+      "name": "all_same_n28",
+      "input": "28\naaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "27"
+    },
+    {
+      "name": "all_same_n29",
+      "input": "29\naaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "28"
+    },
+    {
+      "name": "all_same_n30",
+      "input": "30\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "29"
+    },
+    {
+      "name": "all_same_n31",
+      "input": "31\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "30"
+    },
+    {
+      "name": "all_same_n32",
+      "input": "32\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "31"
+    },
+    {
+      "name": "all_same_n33",
+      "input": "33\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "32"
+    },
+    {
+      "name": "all_same_n34",
+      "input": "34\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "33"
+    },
+    {
+      "name": "all_same_n35",
+      "input": "35\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "34"
+    },
+    {
+      "name": "all_same_n36",
+      "input": "36\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "35"
+    },
+    {
+      "name": "all_same_n37",
+      "input": "37\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "36"
+    },
+    {
+      "name": "all_same_n38",
+      "input": "38\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "37"
+    },
+    {
+      "name": "all_same_n39",
+      "input": "39\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "38"
+    },
+    {
+      "name": "all_same_n40",
+      "input": "40\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "39"
+    },
+    {
+      "name": "all_same_n41",
+      "input": "41\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "40"
+    },
+    {
+      "name": "all_same_n42",
+      "input": "42\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "41"
+    },
+    {
+      "name": "all_same_n43",
+      "input": "43\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "42"
+    },
+    {
+      "name": "all_same_n44",
+      "input": "44\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "43"
+    },
+    {
+      "name": "all_same_n45",
+      "input": "45\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "44"
+    },
+    {
+      "name": "all_same_n46",
+      "input": "46\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "45"
+    },
+    {
+      "name": "all_same_n47",
+      "input": "47\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "46"
+    },
+    {
+      "name": "all_same_n48",
+      "input": "48\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "47"
+    },
+    {
+      "name": "all_same_n49",
+      "input": "49\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "48"
+    },
+    {
+      "name": "all_same_n50",
+      "input": "50\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "49"
+    },
+    {
+      "name": "all_same_n51",
+      "input": "51\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "50"
+    },
+    {
+      "name": "all_same_n52",
+      "input": "52\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "51"
+    },
+    {
+      "name": "all_same_n53",
+      "input": "53\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "52"
+    },
+    {
+      "name": "all_same_n54",
+      "input": "54\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "53"
+    },
+    {
+      "name": "all_same_n55",
+      "input": "55\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "54"
+    },
+    {
+      "name": "all_same_n56",
+      "input": "56\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "55"
+    },
+    {
+      "name": "all_same_n57",
+      "input": "57\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "56"
+    },
+    {
+      "name": "all_same_n58",
+      "input": "58\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "57"
+    },
+    {
+      "name": "all_same_n59",
+      "input": "59\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "58"
+    },
+    {
+      "name": "all_same_n60",
+      "input": "60\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "59"
+    },
+    {
+      "name": "unique_prefix_n1",
+      "input": "1\na\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n2",
+      "input": "2\nab\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n3",
+      "input": "3\nabc\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n4",
+      "input": "4\nabcd\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n5",
+      "input": "5\nabcde\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n6",
+      "input": "6\nabcdef\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n7",
+      "input": "7\nabcdefg\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n8",
+      "input": "8\nabcdefgh\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n9",
+      "input": "9\nabcdefghi\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n10",
+      "input": "10\nabcdefghij\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n11",
+      "input": "11\nabcdefghijk\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n12",
+      "input": "12\nabcdefghijkl\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n13",
+      "input": "13\nabcdefghijklm\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n14",
+      "input": "14\nabcdefghijklmn\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n15",
+      "input": "15\nabcdefghijklmno\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n16",
+      "input": "16\nabcdefghijklmnop\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n17",
+      "input": "17\nabcdefghijklmnopq\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n18",
+      "input": "18\nabcdefghijklmnopqr\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n19",
+      "input": "19\nabcdefghijklmnopqrs\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n20",
+      "input": "20\nabcdefghijklmnopqrst\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n21",
+      "input": "21\nabcdefghijklmnopqrstu\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n22",
+      "input": "22\nabcdefghijklmnopqrstuv\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n23",
+      "input": "23\nabcdefghijklmnopqrstuvw\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n24",
+      "input": "24\nabcdefghijklmnopqrstuvwx\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n25",
+      "input": "25\nabcdefghijklmnopqrstuvwxy\n",
+      "output": "0"
+    },
+    {
+      "name": "unique_prefix_n26",
+      "input": "26\nabcdefghijklmnopqrstuvwxyz\n",
+      "output": "0"
+    },
+    {
+      "name": "triple_prefix_k1",
+      "input": "3\naaa\n",
+      "output": "2"
+    },
+    {
+      "name": "triple_prefix_k2",
+      "input": "6\nababab\n",
+      "output": "3"
+    },
+    {
+      "name": "triple_prefix_k3",
+      "input": "9\nabcabcabc\n",
+      "output": "4"
+    },
+    {
+      "name": "triple_prefix_k4",
+      "input": "12\nabcdabcdabcd\n",
+      "output": "5"
+    },
+    {
+      "name": "triple_prefix_k5",
+      "input": "15\nabcdeabcdeabcde\n",
+      "output": "6"
+    },
+    {
+      "name": "triple_prefix_k6",
+      "input": "18\nabcdefabcdefabcdef\n",
+      "output": "7"
+    },
+    {
+      "name": "triple_prefix_k7",
+      "input": "21\nabcdefgabcdefgabcdefg\n",
+      "output": "8"
+    },
+    {
+      "name": "triple_prefix_k8",
+      "input": "24\nabcdefghabcdefghabcdefgh\n",
+      "output": "9"
+    },
+    {
+      "name": "triple_prefix_k9",
+      "input": "27\nabcdefghiabcdefghiabcdefghi\n",
+      "output": "10"
+    },
+    {
+      "name": "triple_prefix_k10",
+      "input": "30\nabcdefghijabcdefghijabcdefghij\n",
+      "output": "11"
+    },
+    {
+      "name": "triple_prefix_k11",
+      "input": "33\nabcdefghijkabcdefghijkabcdefghijk\n",
+      "output": "12"
+    },
+    {
+      "name": "triple_prefix_k12",
+      "input": "36\nabcdefghijklabcdefghijklabcdefghijkl\n",
+      "output": "13"
+    },
+    {
+      "name": "triple_prefix_k13",
+      "input": "39\nabcdefghijklmabcdefghijklmabcdefghijklm\n",
+      "output": "14"
+    },
+    {
+      "name": "triple_prefix_k14",
+      "input": "42\nabcdefghijklmnabcdefghijklmnabcdefghijklmn\n",
+      "output": "15"
+    },
+    {
+      "name": "triple_prefix_k15",
+      "input": "45\nabcdefghijklmnoabcdefghijklmnoabcdefghijklmno\n",
+      "output": "16"
+    },
+    {
+      "name": "triple_prefix_k16",
+      "input": "48\nabcdefghijklmnopabcdefghijklmnopabcdefghijklmnop\n",
+      "output": "17"
+    },
+    {
+      "name": "triple_prefix_k17",
+      "input": "51\nabcdefghijklmnopqabcdefghijklmnopqabcdefghijklmnopq\n",
+      "output": "18"
+    },
+    {
+      "name": "triple_prefix_k18",
+      "input": "54\nabcdefghijklmnopqrabcdefghijklmnopqrabcdefghijklmnopqr\n",
+      "output": "19"
+    },
+    {
+      "name": "triple_prefix_k19",
+      "input": "57\nabcdefghijklmnopqrsabcdefghijklmnopqrsabcdefghijklmnopqrs\n",
+      "output": "20"
+    },
+    {
+      "name": "triple_prefix_k20",
+      "input": "60\nabcdefghijklmnopqrstabcdefghijklmnopqrstabcdefghijklmnopqrst\n",
+      "output": "21"
+    },
+    {
+      "name": "triple_prefix_k21",
+      "input": "63\nabcdefghijklmnopqrstuabcdefghijklmnopqrstuabcdefghijklmnopqrstu\n",
+      "output": "22"
+    },
+    {
+      "name": "triple_prefix_k22",
+      "input": "66\nabcdefghijklmnopqrstuvabcdefghijklmnopqrstuvabcdefghijklmnopqrstuv\n",
+      "output": "23"
+    },
+    {
+      "name": "triple_prefix_k23",
+      "input": "69\nabcdefghijklmnopqrstuvwabcdefghijklmnopqrstuvwabcdefghijklmnopqrstuvw\n",
+      "output": "24"
+    },
+    {
+      "name": "triple_prefix_k24",
+      "input": "72\nabcdefghijklmnopqrstuvwxabcdefghijklmnopqrstuvwxabcdefghijklmnopqrstuvwx\n",
+      "output": "25"
+    },
+    {
+      "name": "triple_prefix_k25",
+      "input": "75\nabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxy\n",
+      "output": "26"
+    },
+    {
+      "name": "triple_prefix_k26",
+      "input": "78\nabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz\n",
+      "output": "27"
+    },
+    {
+      "name": "random_1_n84",
+      "input": "84\naacdccccbadcdaaacbcdcbaacdddabbdbbcabbdbadccdbaaaaadbcabbdaddbbcbaddbbccddcadccdcaab\n",
+      "output": "71"
+    },
+    {
+      "name": "random_2_n17",
+      "input": "17\nehgaddhejaadbhihb\n",
+      "output": "0"
+    },
+    {
+      "name": "random_3_n34",
+      "input": "34\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "33"
+    },
+    {
+      "name": "random_4_n27",
+      "input": "27\ndbccbbbadacabcdcdcddacddbcc\n",
+      "output": "13"
+    },
+    {
+      "name": "random_5_n60",
+      "input": "60\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "59"
+    },
+    {
+      "name": "random_6_n78",
+      "input": "78\naacccabcbccccbcaaaaacbacacbbaabbacaaccaaacccabaabaabbcbaabbccbaccaabcbbccaaabc\n",
+      "output": "69"
+    },
+    {
+      "name": "random_7_n5",
+      "input": "5\nbacaa\n",
+      "output": "0"
+    },
+    {
+      "name": "random_8_n2",
+      "input": "2\nca\n",
+      "output": "0"
+    },
+    {
+      "name": "random_9_n58",
+      "input": "58\nacaabcdaddadcbaadabdaabbcddcdcccbadddbaabccaccdcccadaaacda\n",
+      "output": "34"
+    },
+    {
+      "name": "random_10_n53",
+      "input": "53\nbaaaababbbbabbbbbaababababbbaaabaaaaaaabbabbaaaaaabbb\n",
+      "output": "48"
+    },
+    {
+      "name": "random_11_n38",
+      "input": "38\ncaabbcbabababbaccacbaabcaaabaabaacccca\n",
+      "output": "27"
+    },
+    {
+      "name": "random_12_n87",
+      "input": "87\ngdibggbiiafaeeghaegddbiiheaaefcjfijcafbgahbcchhbidbagdgbbhicijjjajcfegfeiecgijebbgdihbb\n",
+      "output": "33"
+    },
+    {
+      "name": "random_13_n73",
+      "input": "73\nacacbbcbaaaccccccaacabbbacbaaaacabcaabbcbbaccbcaccbccabccaacacaaaabcccacc\n",
+      "output": "62"
+    },
+    {
+      "name": "random_14_n67",
+      "input": "67\nabbaabbaaaabaababaaabbbaabbbbaaababbbaabbbbbbbabbabbbaaaababbaababb\n",
+      "output": "63"
+    },
+    {
+      "name": "random_15_n8",
+      "input": "8\naaaaaaaa\n",
+      "output": "7"
+    },
+    {
+      "name": "random_16_n35",
+      "input": "35\ncccadbbdccabbaeeadebcdcceecbcbcdeab\n",
+      "output": "16"
+    },
+    {
+      "name": "random_17_n49",
+      "input": "49\nadvsivewuadpecyvtywuletggjbwugvrbvgnvvlzfvyiwfzbg\n",
+      "output": "0"
+    },
+    {
+      "name": "random_18_n16",
+      "input": "16\nigiabafaebeajehh\n",
+      "output": "0"
+    },
+    {
+      "name": "random_19_n44",
+      "input": "44\nddcadcabadbcbddbbdadcaabbbacdbcbabcdbdcdddab\n",
+      "output": "31"
+    },
+    {
+      "name": "random_20_n53",
+      "input": "53\naaaaaabaaaabababaaabbbbbbbaaababbbababbabaababbabbbbb\n",
+      "output": "41"
+    },
+    {
+      "name": "random_21_n47",
+      "input": "47\naababababbababbbbabaaaaabaabbabbaaababababbbbbb\n",
+      "output": "38"
+    },
+    {
+      "name": "random_22_n87",
+      "input": "87\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "86"
+    },
+    {
+      "name": "random_23_n70",
+      "input": "70\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "69"
+    },
+    {
+      "name": "random_24_n82",
+      "input": "82\nbaaababaaabbbbbabaababbaaaaabbbabbaabababaaabaabaabbabaabbbabaababaababbbbabbbbabb\n",
+      "output": "78"
+    },
+    {
+      "name": "random_25_n67",
+      "input": "67\najfbddejfciefbidcbjfhfajhfjijeiecgabhhjdjjjjeicgjhehcacjdigiacegihc\n",
+      "output": "0"
+    },
+    {
+      "name": "random_26_n8",
+      "input": "8\nadbadbdb\n",
+      "output": "1"
+    },
+    {
+      "name": "random_27_n10",
+      "input": "10\ncffaibeigh\n",
+      "output": "0"
+    },
+    {
+      "name": "random_28_n8",
+      "input": "8\naaccaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "random_29_n14",
+      "input": "14\ncbdfaecbahhica\n",
+      "output": "0"
+    },
+    {
+      "name": "random_30_n8",
+      "input": "8\ndjgafbhj\n",
+      "output": "0"
+    },
+    {
+      "name": "random_31_n90",
+      "input": "90\ncgiciidejgfajcdbddbggjicdaccbcdijahbffdhdbgbehfbacajfdbhajffhagaahhdgdhhhidfhaaffjgjchgbif\n",
+      "output": "10"
+    },
+    {
+      "name": "random_32_n77",
+      "input": "77\nidifcibjbbagjjaheadicaddjdgahaejiegfcgdebeeceaibajfebidfbibfbiibigbihchfdajei\n",
+      "output": "49"
+    },
+    {
+      "name": "random_33_n57",
+      "input": "57\nioqeipzcfzphbdwafzhoxxlvuwpndlwvzlognutlqvhtavmdwnjdzoezj\n",
+      "output": "0"
+    },
+    {
+      "name": "random_34_n20",
+      "input": "20\nabbbabbabcaabbcbabbb\n",
+      "output": "5"
+    },
+    {
+      "name": "random_35_n59",
+      "input": "59\njcldpciwdeaigkbsdrggckkcrutwmzphbpmefyjoounldklefuwhaylqvrt\n",
+      "output": "0"
+    },
+    {
+      "name": "random_36_n75",
+      "input": "75\nzygqntryloisudrfzreplyxkfudyctmiaqjplvmznmdyimbmveitaphkvpktvjxnibnfkvilhih\n",
+      "output": "0"
+    },
+    {
+      "name": "random_37_n81",
+      "input": "81\niyvuobelzihzvqlvrwbpkjtegfjxommcogayvjocottlraqqzdtvnmutqjuypdxyfdhzrdmrmwrnemchu\n",
+      "output": "0"
+    },
+    {
+      "name": "random_38_n62",
+      "input": "62\nababbabbabbbabbbaabbaabbaaabaaaababbabbbbabaaaabbbbbaaabaaabaa\n",
+      "output": "58"
+    },
+    {
+      "name": "random_39_n37",
+      "input": "37\ngaaceccaacgjbjedhigehcdgbgehadadegaai\n",
+      "output": "0"
+    },
+    {
+      "name": "random_40_n58",
+      "input": "58\ncbbcbaccdbcdbababbabccbaaaddbbddadacccdddbbcbcbaaadcdcacbb\n",
+      "output": "44"
+    },
+    {
+      "name": "random_41_n73",
+      "input": "73\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "72"
+    },
+    {
+      "name": "random_42_n30",
+      "input": "30\neghafhjfbcbedhhfegdbgbibhicjab\n",
+      "output": "0"
+    },
+    {
+      "name": "random_43_n57",
+      "input": "57\neeaaddadaccdddceedddbdadecededaaeddaaedcdeceedbaeacbdadcb\n",
+      "output": "28"
+    },
+    {
+      "name": "random_44_n23",
+      "input": "23\ncabbbabaabcbabacaabcaac\n",
+      "output": "16"
+    },
+    {
+      "name": "random_45_n51",
+      "input": "51\ndbcbbaccdbcbdccccbccccbadbbbacbbdcbdcacaacbcbbabbcd\n",
+      "output": "41"
+    },
+    {
+      "name": "random_46_n10",
+      "input": "10\naaaaaaaaaa\n",
+      "output": "9"
+    },
+    {
+      "name": "random_47_n18",
+      "input": "18\nbbaccaabcbabadabdc\n",
+      "output": "1"
+    },
+    {
+      "name": "random_48_n61",
+      "input": "61\nbdkcpalwhqiwnxhfnsvjbdfzkctjyqdbcqnlccvydbpqufryfuuihmvwlxibk\n",
+      "output": "0"
+    },
+    {
+      "name": "random_49_n41",
+      "input": "41\nibjltpohsqtgcjlnugmnfahlvsrcnhbprkhxvtjqx\n",
+      "output": "0"
+    },
+    {
+      "name": "random_50_n64",
+      "input": "64\nccdaaddabeceaaaecbdbeeaceedcbbabdbabbacddebbdddcceddbaaedabaeacb\n",
+      "output": "47"
+    },
+    {
+      "name": "random_51_n40",
+      "input": "40\naabaababcbcabcbcbcacbaccaccbccbaabbcbaab\n",
+      "output": "27"
+    },
+    {
+      "name": "random_52_n11",
+      "input": "11\nacaheceeejh\n",
+      "output": "0"
+    },
+    {
+      "name": "random_53_n22",
+      "input": "22\naccccbbabcaaabcbacbacb\n",
+      "output": "14"
+    },
+    {
+      "name": "random_54_n52",
+      "input": "52\naeeccebbcceacedcaaecddeacbbedaebeddebbcddcaedbcbcedb\n",
+      "output": "28"
+    },
+    {
+      "name": "random_55_n35",
+      "input": "35\nbaababbbbbbabaababbbaaaaaabaabaabab\n",
+      "output": "32"
+    },
+    {
+      "name": "random_56_n75",
+      "input": "75\nidbdedieeieegehdjeddhidjjighadefgciddeecfebfdjadiaaahfaegjfhdeafejdcagejgid\n",
+      "output": "9"
+    },
+    {
+      "name": "random_57_n88",
+      "input": "88\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "87"
+    },
+    {
+      "name": "random_58_n65",
+      "input": "65\nifbdhdjcabgiehihicbfjeaadahjhccfdffihjifdfefhcbdefffgiabeeicgidai\n",
+      "output": "25"
+    },
+    {
+      "name": "random_59_n8",
+      "input": "8\naabbbbab\n",
+      "output": "4"
+    },
+    {
+      "name": "random_60_n38",
+      "input": "38\naaabaababbabbababaaaaaaabaabbababbabaa\n",
+      "output": "32"
+    },
+    {
+      "name": "random_61_n57",
+      "input": "57\nabababaababaaabbabaaabbbbaababbbaabbaabbbaabbbbaabbaaaabb\n",
+      "output": "53"
+    },
+    {
+      "name": "random_62_n12",
+      "input": "12\nabbbbaaaaaab\n",
+      "output": "9"
+    },
+    {
+      "name": "random_63_n51",
+      "input": "51\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "50"
+    },
+    {
+      "name": "random_64_n3",
+      "input": "3\naaa\n",
+      "output": "2"
+    },
+    {
+      "name": "random_65_n21",
+      "input": "21\nbcaabcbdaaedecbaababa\n",
+      "output": "1"
+    },
+    {
+      "name": "random_66_n55",
+      "input": "55\nbbbdcdaccccabddbbbdbcaabdccadbbabddbddcaccbcadcbbcdbaab\n",
+      "output": "43"
+    },
+    {
+      "name": "random_67_n89",
+      "input": "89\ndcccaacbbaadccccabbbcdabadbaccbbdabccaccbbaadddcddaaabaccbddcdcbbddaadaaabcbdcccbbaccbdda\n",
+      "output": "77"
+    },
+    {
+      "name": "random_68_n4",
+      "input": "4\ncaac\n",
+      "output": "1"
+    },
+    {
+      "name": "random_69_n60",
+      "input": "60\naaaaaabbbbaababaaabbbaabaaaabbabaabbbbabaaaaabbbabbaaabaabbb\n",
+      "output": "50"
+    },
+    {
+      "name": "random_70_n10",
+      "input": "10\naaaaabbabb\n",
+      "output": "2"
+    },
+    {
+      "name": "random_71_n41",
+      "input": "41\nmkkvpabjizyfklakljsqtvolltepzchvniwhvsayi\n",
+      "output": "0"
+    },
+    {
+      "name": "random_72_n78",
+      "input": "78\ncababcbaccabbcaccbabbacbcabacacbccccccbbaccaaabacbbccabaccabacbacaccbbacaacabc\n",
+      "output": "73"
+    },
+    {
+      "name": "random_73_n48",
+      "input": "48\nbbcaabdaddabdaaaabccdadbadcdabddbbcdbbbbaabcbbaa\n",
+      "output": "29"
+    },
+    {
+      "name": "random_74_n80",
+      "input": "80\ncabcdbbdaacdbcbbdbccdadccbddddbbccaaccdbccbbdabddccccbcbcbcbadadddbccccabdcbdacd\n",
+      "output": "71"
+    },
+    {
+      "name": "random_75_n70",
+      "input": "70\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "69"
+    },
+    {
+      "name": "random_76_n11",
+      "input": "11\ncbdceedddbc\n",
+      "output": "1"
+    },
+    {
+      "name": "random_77_n37",
+      "input": "37\nbcabbbaabcaabcbcbaaabbbccbaacbbaccbab\n",
+      "output": "31"
+    },
+    {
+      "name": "random_78_n89",
+      "input": "89\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "88"
+    },
+    {
+      "name": "random_79_n18",
+      "input": "18\nbajhdehddjghjdjafd\n",
+      "output": "0"
+    },
+    {
+      "name": "random_80_n57",
+      "input": "57\nccababacaaccaccbcdbbbbbbbbacbccbcccdabbbcccadccdddbbdaaad\n",
+      "output": "29"
+    },
+    {
+      "name": "random_81_n80",
+      "input": "80\ndbbadcacbbdabaaaabcdbbbadcbcaccbcacabddaddbabdacccaaaabbbaddabadcbbabaccddbaabad\n",
+      "output": "66"
+    },
+    {
+      "name": "random_82_n60",
+      "input": "60\nbaaaaabbaaababbaabbbababaaaaaaabbabbbbbaabbbaabbababbbbbbbab\n",
+      "output": "57"
+    },
+    {
+      "name": "random_83_n11",
+      "input": "11\nbbaccccaaaa\n",
+      "output": "0"
+    },
+    {
+      "name": "random_84_n64",
+      "input": "64\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "63"
+    },
+    {
+      "name": "random_85_n35",
+      "input": "35\nbbabbabaaaaaaabbabaaabbbbbababaabab\n",
+      "output": "31"
+    }
+  ]
+}

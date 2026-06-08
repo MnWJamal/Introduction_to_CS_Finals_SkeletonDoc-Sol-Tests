@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "example_deadbeef_k3",
+      "input": "3\ndeadbeef\n",
+      "output": "6"
+    },
+    {
+      "name": "example_deadbeef_k2",
+      "input": "2\ndeadbeef\n",
+      "output": "4"
+    },
+    {
+      "name": "example_deadbeef_k4",
+      "input": "4\ndeadbeef\n",
+      "output": "8"
+    },
+    {
+      "name": "no_substring_k_too_large",
+      "input": "7\nabcde\n",
+      "output": "0"
+    }
+  ]
+}

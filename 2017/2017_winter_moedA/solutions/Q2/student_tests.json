@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "exam_example",
+      "input": "8\n2 1 1 4 1 1 2 3\n",
+      "output": "7"
+    },
+    {
+      "name": "no_water_increasing",
+      "input": "5\n1 2 3 4 5\n",
+      "output": "0"
+    },
+    {
+      "name": "simple_bowl",
+      "input": "3\n3 1 3\n",
+      "output": "2"
+    }
+  ]
+}

@@ -1,0 +1,999 @@
+{
+  "tests": [
+    {
+      "name": "isword_same_single",
+      "input": "1\na\na\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_missing_single",
+      "input": "1\na\nb\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_same_word",
+      "input": "1\nabc\nabc\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_permutation",
+      "input": "1\nabc\ncba\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_repeated_enough",
+      "input": "1\naabbcc\nabcabc\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_repeated_not_enough",
+      "input": "1\naabbcc\naaabbc\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_test_longer_than_main",
+      "input": "1\nabc\nabcd\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_all_same_true",
+      "input": "1\naaaaa\naaa\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_all_same_false",
+      "input": "1\naaaaa\naaaaaa\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_technion_icon",
+      "input": "1\ntechnion\nicon\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_technion_iconic",
+      "input": "1\ntechnion\niconic\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_technion_tent",
+      "input": "1\ntechnion\ntent\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_last_letter_missing",
+      "input": "1\nabcdefghijklmnopqrstuvwxy\nz\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_full_alphabet",
+      "input": "1\nabcdefghijklmnopqrstuvwxyz\nzyxwvutsrqponmlkjihgfedcba\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_double_alphabet_true",
+      "input": "1\nabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz\nzzzzaaaa\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_double_alphabet_false",
+      "input": "1\nabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz\nzzzaaa\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_case_given_lower_only_many",
+      "input": "1\nmississippi\nmisis\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_case_given_lower_only_too_many",
+      "input": "1\nmississippi\nsssssi\n",
+      "output": "0"
+    },
+    {
+      "name": "wordscore_empty_dictionary",
+      "input": "2\n0\nabc\n",
+      "output": "0"
+    },
+    {
+      "name": "wordscore_only_self",
+      "input": "2\n1\ntest\ntest\n",
+      "output": "0"
+    },
+    {
+      "name": "wordscore_exam_test",
+      "input": "2\n8\nsett\nest\nset\ntes\ntet\nes\nte\ntest\ntest\n",
+      "output": "7"
+    },
+    {
+      "name": "wordscore_basic_mix",
+      "input": "2\n8\na\nb\nab\nba\naa\naba\ncab\nabc\nab\n",
+      "output": "3"
+    },
+    {
+      "name": "wordscore_repeated_letters",
+      "input": "2\n8\na\naa\naaa\naaaa\nb\nab\naab\naaab\naaab\n",
+      "output": "6"
+    },
+    {
+      "name": "wordscore_alphabet_small",
+      "input": "2\n6\nabc\ncba\nabcd\nz\naz\nza\nabc\n",
+      "output": "1"
+    },
+    {
+      "name": "wordscore_no_matches",
+      "input": "2\n4\nzz\nzzz\nyyyy\npq\nabc\n",
+      "output": "0"
+    },
+    {
+      "name": "wordscore_many_short_words",
+      "input": "2\n10\na\nb\nc\nab\nbc\nac\nabc\nabcd\ncab\nbac\nabc\n",
+      "output": "8"
+    },
+    {
+      "name": "wordscore_long_main_word",
+      "input": "2\n8\nalgorithm\nlog\nmath\nrhythm\ngamma\namalgam\nlong\nring\nalgorithmalgorithm\n",
+      "output": "4"
+    },
+    {
+      "name": "isword_systematic_a_true",
+      "input": "1\naaaaa\na\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_a_false",
+      "input": "1\naaaaa\naaaaaa\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_b_true",
+      "input": "1\nbbbbb\nbbbbb\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_b_false",
+      "input": "1\nbbbbb\nbbbbbb\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_c_true",
+      "input": "1\nccccc\ncccc\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_c_false",
+      "input": "1\nccccc\ncccccc\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_d_true",
+      "input": "1\nddddd\ndd\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_d_false",
+      "input": "1\nddddd\ndddddd\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_e_true",
+      "input": "1\neeeee\nee\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_e_false",
+      "input": "1\neeeee\neeeeee\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_f_true",
+      "input": "1\nfffff\nfffff\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_f_false",
+      "input": "1\nfffff\nffffff\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_g_true",
+      "input": "1\nggggg\ng\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_g_false",
+      "input": "1\nggggg\ngggggg\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_h_true",
+      "input": "1\nhhhhh\nh\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_h_false",
+      "input": "1\nhhhhh\nhhhhhh\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_i_true",
+      "input": "1\niiiii\niiii\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_i_false",
+      "input": "1\niiiii\niiiiii\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_j_true",
+      "input": "1\njjjjj\njjjj\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_j_false",
+      "input": "1\njjjjj\njjjjjj\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_k_true",
+      "input": "1\nkkkkk\nkk\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_k_false",
+      "input": "1\nkkkkk\nkkkkkk\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_l_true",
+      "input": "1\nlllll\nll\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_l_false",
+      "input": "1\nlllll\nllllll\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_m_true",
+      "input": "1\nmmmmm\nmmm\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_m_false",
+      "input": "1\nmmmmm\nmmmmmm\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_n_true",
+      "input": "1\nnnnnn\nnnnnn\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_n_false",
+      "input": "1\nnnnnn\nnnnnnn\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_o_true",
+      "input": "1\nooooo\nooo\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_o_false",
+      "input": "1\nooooo\noooooo\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_p_true",
+      "input": "1\nppppp\npp\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_p_false",
+      "input": "1\nppppp\npppppp\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_q_true",
+      "input": "1\nqqqqq\nqqq\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_q_false",
+      "input": "1\nqqqqq\nqqqqqq\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_r_true",
+      "input": "1\nrrrrr\nrr\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_r_false",
+      "input": "1\nrrrrr\nrrrrrr\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_s_true",
+      "input": "1\nsssss\nsssss\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_s_false",
+      "input": "1\nsssss\nssssss\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_t_true",
+      "input": "1\nttttt\ntttt\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_t_false",
+      "input": "1\nttttt\ntttttt\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_u_true",
+      "input": "1\nuuuuu\nuuuu\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_u_false",
+      "input": "1\nuuuuu\nuuuuuu\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_v_true",
+      "input": "1\nvvvvv\nv\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_v_false",
+      "input": "1\nvvvvv\nvvvvvv\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_w_true",
+      "input": "1\nwwwww\nww\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_w_false",
+      "input": "1\nwwwww\nwwwwww\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_x_true",
+      "input": "1\nxxxxx\nxxxx\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_x_false",
+      "input": "1\nxxxxx\nxxxxxx\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_y_true",
+      "input": "1\nyyyyy\nyyyy\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_y_false",
+      "input": "1\nyyyyy\nyyyyyy\n",
+      "output": "0"
+    },
+    {
+      "name": "isword_systematic_z_true",
+      "input": "1\nzzzzz\nzz\n",
+      "output": "1"
+    },
+    {
+      "name": "isword_systematic_z_false",
+      "input": "1\nzzzzz\nzzzzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_1",
+      "input": "1\nhhnppun\nhaxannuhc\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_2",
+      "input": "1\nillbhnbhjlbilhhyybnijhnjbjbijbyhyhnynilhibl\njlybninjhyljihiyilhhbniihnbnylbh\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_3",
+      "input": "1\nfvhfrrrhfvrhfvfhfvhhfhrffnhnvnvrvnrfnhrhhhhffffhhf\nrvnvnvrvhnrhnrhnnhh\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_4",
+      "input": "1\nbdyyiilbtyibilldtdbbidlblbititltdlitbyltlblyt\nlbtbbiid\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_5",
+      "input": "1\nbdspsdssbpksllpslbppbbbsksdspdlskdk\ndbkkkdskddkkslpksbllsdpdlksbk\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_6",
+      "input": "1\neygxxgygyxhghxyyeeeexeyyhxeegxxxyxhhggyxhhyhegyyheyg\negxeeh\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_7",
+      "input": "1\naaaaaaaaaaaaaaaa\naaaaaaaaaaauuu\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_8",
+      "input": "1\nykeykkwfk\nkkkyywk\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_9",
+      "input": "1\natjtrttfctajtfcyyytajf\ntfrcfrarr\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_10",
+      "input": "1\nkygeorkoyyegegyrekoeryyoyyerreregyoeoeeyegeoggo\neeerkereegkeyrr\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_11",
+      "input": "1\nzwwnnwzhl\nzhnstlhzt\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_12",
+      "input": "1\njqcxdyhjpfjypffcqxfhyddjdjqxqffhjyycyppqdfxpqyyjxxfd\nydjqyyhfqpyjjqhxqjffpyffxdxdyfyjdjfpfqhdpcxqypcx\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_13",
+      "input": "1\nmfmu\nvvf\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_14",
+      "input": "1\ndkkdnndkn\nd\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_15",
+      "input": "1\nfnnnnnffnfnnnfnffffnnfnnffnfnnfnfnnnffnffnfffnfffnfnf\nfnfffnnffffnmm\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_16",
+      "input": "1\niiiiiiiiiiiiiiiiiiiiii\niiii\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_17",
+      "input": "1\ncccscuubucssbscuussasbsssbsuuacuacbusuasbaubbccacs\nssabcauacj\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_18",
+      "input": "1\nnervvehvheanaevhwwwhwnwwhrhavwhhe\nahewvanweevvrhhwawrnnwhhhewwvheh\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_19",
+      "input": "1\nnhkrrkmnisnnhishimnrshkkhmrhhmnsrrmkrrhrm\nshmc\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_20",
+      "input": "1\nrwmvns\nrs\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_21",
+      "input": "1\nqrrrzrzzzrvgzvreereqgzrvrqgrzvqrggrvrvrqggregqgege\nzv\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_22",
+      "input": "1\nypayraugivgpgvviuuagyvvvg\napyvuuypgrugivvgvvavgygai\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_23",
+      "input": "1\ng\nuuuuugj\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_24",
+      "input": "1\nnppphnpmpwn\nmwhppnpn\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_25",
+      "input": "1\ngzggchhdhgsgnngngsningnzcsziibdigzgszscgbsdgghznhghndnbzgni\nzddzdddignhzgnbt\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_26",
+      "input": "1\nondqnqjjjqodjnodqdnzddlqqqnznojzqldoljzozqqlndnjjoqozddond\nzonojqqqnoqdzqozdqjjznnddoqqqqlonl\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_27",
+      "input": "1\nbaie\ngieibibazaa\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_28",
+      "input": "1\nqwqwwwqwwwqqqqwwwqwwwwwqqqwqqwqwqwqwwwwqq\nqwwwwwqqwqq\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_29",
+      "input": "1\nuwukuwqumqw\nwumauaquqx\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_30",
+      "input": "1\nyefyyym\nmyyey\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_31",
+      "input": "1\nsuglwglwrltrtatarttjslsgjaggrsjr\ngtusurljuuufff\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_32",
+      "input": "1\nllullbuubbb\nbbubllulu\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_33",
+      "input": "1\njzswsjwjpwsqqwpzwzpsqsuqwqnjzsnu\nwnpwzswnwjlll\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_34",
+      "input": "1\ndryiydveuidvrirddueerryyudvdyryvyvydvvieeriuueereyyuidyedre\nevyddirdrvddeyyirueeiyd\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_35",
+      "input": "1\njuljluullljullluj\nujulwww\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_36",
+      "input": "1\nxccxccxcxxcccccxxcxcxxcxxxcxccxxccc\nxcccxxccxxccxcccxxcxxccccxccx\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_37",
+      "input": "1\niiupieuiuiupuuuepepeeeiuupeiueeueieippiiuepieepeeepuiee\niueuepepiiippiippp\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_38",
+      "input": "1\nkhkvvkhvhvvkkvhhvhhhvvhhkvvkkvvhhkhkkhvvhhhhkvhkkvv\nvhkhvhkhhhvhvk\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_39",
+      "input": "1\nkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk\nkkkkkkkkkkkkkkkkkkkkkkkkkkkkii\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_40",
+      "input": "1\nyyytttyttyttyyytytytyyttyytyyyt\ntyyytyy\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_41",
+      "input": "1\nxxxxxxxxxx\nxxxxxxuu\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_42",
+      "input": "1\nttyttxstsstyccscxcssyxyctxxxxxxsytcs\ncttsxxcxtxsyysxstccytxssxxxttsccsty\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_43",
+      "input": "1\nxnnccrcenexcnncrxnxxcccncnnececxnrxcrxnxxrcxennccxenenee\ncennrrxrncnxnxxcceeeu\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_44",
+      "input": "1\nauodoaoauddajdaauudoddojo\ndaadddadaudo\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_45",
+      "input": "1\nhveduvvhvdseuuduvvueehduhwwvsuvddv\nswwwudshdhhewvehvshshudhdh\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_46",
+      "input": "1\nbbkkvdugvkkkvjjhuvkvgbwivhbjjwghjkvkbbdjkkbhggkigdivvjikh\nvvkv\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_47",
+      "input": "1\njvjggccxxeijaxaahgehicgjjjxgcgeeiexj\nvejgajgjjhaichxviijhw\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_48",
+      "input": "1\nahhhhhhqhmqmqhamaahaqaahahaammhqh\nmhhhhmamqmqmhaahaqaahahha\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_49",
+      "input": "1\nwhhthtnhnhnwtnwthhnnwwhwwtwttnttntnthntthtnnntnw\nhttwthwnnthwwwwnwwhnwwhtnwthwxxx\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_50",
+      "input": "1\njjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj\njjjjjjjjjjjjjjjjjj\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_51",
+      "input": "1\naawxawyayxaywsfxsyxxxxfwfasfyyswafaafwsasswasyssxaysafsaswa\nsssxyyxwyxxa\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_52",
+      "input": "1\nzuwxtfwazdduzxldllulwtuuldfautawaxlfzffdxwawdudtalfudldx\nufwfuuwtflldddfaaaaaldufzuuzdwxxdwtdwtuauxdl\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_53",
+      "input": "1\nfavgbveaefybssragvsvvryyeyggyfafyffsfvgabbvargerssv\nffefggssfvsbeabreraz\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_54",
+      "input": "1\nkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk\nkkkkkkk\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_55",
+      "input": "1\njwojwoowwoojowojjjowwjwjjjjowjwwjwojowowjowjjojwwjojowojwjw\nwjjwjjjwwwjjwomm\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_56",
+      "input": "1\ngytpttkygabkbtpaakgaqpttgabyabbqkbgaapqgtgytgkgqtktg\nabbgtptbyqgqtq\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_57",
+      "input": "1\nrrrpwwrbawara\npyy\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_58",
+      "input": "1\nygzozgnqszsnoynonyqnozymmz\no\n",
+      "output": "1"
+    },
+    {
+      "name": "random_isword_59",
+      "input": "1\niiddidddiiiiddiidddddi\ndidddddj\n",
+      "output": "0"
+    },
+    {
+      "name": "random_isword_60",
+      "input": "1\njywksjdsjwdwjsskkwj\nskdssjjwwwkjd\n",
+      "output": "1"
+    },
+    {
+      "name": "random_wordscore_1",
+      "input": "2\n13\nhi\nqqfrfuhfxxggufur\ngkzk\niqqzzqziiqqzzqqizq\nii\niiee\nih\npyyypy\naeaeaajajeaeejaajee\ni\niqe\nxxx\naaasssssssass\niihieieq\n",
+      "output": "6"
+    },
+    {
+      "name": "random_wordscore_2",
+      "input": "2\n7\nvxs\nvs\ndddddddduudd\njkuzvyjuvvkxyxjkjy\nk\nhnu\nffffffffffff\nsvx\n",
+      "output": "2"
+    },
+    {
+      "name": "random_wordscore_3",
+      "input": "2\n28\nbrrbrrbbrrbbbbbrr\nrvvrrvvv\nffqqffqfqfqfffq\nqt\nvrvvvvvrrvv\nomzeammazeazeozoa\ncbibp\njjjujjjuuuujujuuju\nr\nwewqqemqwwwqmqemmwm\nrv\nyfqtfitgyfifgs\nghpgjajbsh\nrvrrrvvvvvvr\nvrvvvrv\nottpgstspjjsouu\nrvrvrvr\nvvvvvr\nnnngnn\nvvvrvvrrrvvvvrv\nbumf\nv\nvrv\nzfsfozzzfzfszzo\nvpvppvpppvp\nvvvrvrvrvvvv\nlsltsssltlsdldld\nrvvvv\nvvvvvrrvrvrvvrvv\n",
+      "output": "13"
+    },
+    {
+      "name": "random_wordscore_4",
+      "input": "2\n9\nqzzhhqqz\nhz\nhqhzqqzhhqq\nzhhhzqzqqhqhhhhzzq\njkks\nhqzzhqz\nyyoaay\nboa\nqzqzhzqzqzqhqz\nhzqhqzhqhhzhhqzqzzzqqh\n",
+      "output": "6"
+    },
+    {
+      "name": "random_wordscore_5",
+      "input": "2\n29\nzniznivhllziithr\nvhlirvznltzzt\nizhltilzzi\nzyzkqkzkkzzqyzyyqz\ntttttttttt\nohvqqhhovokhkq\nlh\nrrrrr\nbbcpppcpbcccbpbcbccb\nj\nlziiizitlhh\nthivinzvhznh\nvzznn\nivzirin\nxnrayznznryzxraarrxa\nlilvhztzh\ntftofnnoofnnotofnsfo\nhhzlzlr\nlht\nhvtlnz\nhlzlnitizl\nllv\nodnenonledfeedlddfn\nlihltnzthvllzvtz\nl\nnfnffnnfnnn\nhzzntvillihzlzl\ntlnllizz\nebpeppopxvevxo\nvnhzrtttvzlilnzlilvihhhiz\n",
+      "output": "18"
+    },
+    {
+      "name": "random_wordscore_6",
+      "input": "2\n28\noi\nzsaaczxxzlsekzcsaxaz\nsmqsqfuqsufufmms\norg\npccppppcpppppcppcp\nfsssssffsfsbssbsbbs\nddddddddddddd\nrw\nyynvvwvvwvyyv\nu\nxwbvbox\nswio\nwwpppww\ng\niogowr\ngrwooiuo\nwowjooww\naarraraaaararrarra\nrnrrrll\ngo\no\nmzmlzmqqqtllzvlz\nxszvvvzvv\noog\nisr\nooisuworgi\nrioguo\nugtz\niwriooogsu\n",
+      "output": "14"
+    },
+    {
+      "name": "random_wordscore_7",
+      "input": "2\n18\ny\nshshashhaaaaahhashaa\ncmcczma\niphbiihhbbipibb\naaaaaaaaaaaaaaaaa\nypywe\nhohoooohhohhooh\nyw\npe\nypwye\nwy\nhghhghgihjhigji\npywye\nwyeyp\npppppppppppppppppp\ne\nwp\nyepyw\nyepyw\n",
+      "output": "10"
+    },
+    {
+      "name": "random_wordscore_8",
+      "input": "2\n28\nozjrd\ncccot\ndrrrmmdcmzmoo\nscrzd\ncormroodcrrm\nmosmm\nmodrrcdsmrdrcjmcr\nwffrwhwwd\nxwb\nycpyppacoyeyecea\nomrmmdjsmdormomrcrr\nllllllllllllllll\nxcyma\neueuvvvueevevvjj\nzebbeebezezeezb\nlolklloml\nppppppppppppppppppp\ndam\nbhoyyymyfuuhufb\nullvu\nrrrrrrrrrrrrrr\nrmrmcmocrocrosmdd\nzddcrcr\ndmmrscdm\nrdcrcrmdo\ncor\nkkk\ns\njscrzrddcdmrmmmrcommoord\n",
+      "output": "13"
+    },
+    {
+      "name": "random_wordscore_9",
+      "input": "2\n27\nxkkxo\neelb\ngoeekpompppe\nopkpm\nvevvwwsvwswesewwsw\nekkpelo\nopepmlgkeop\np\nkdietrydeikyr\nmeeppgkolopk\nccbcccbbbbccbccc\nec\nczzcczczczzzzzc\nkoep\nrr\nki\nokeppoommpeokglp\nclo\na\ngmeplp\nlepgmopkm\nkee\ncmdcii\npegpoop\npdvexrpvepddpro\nootccct\nmegopeemolpkk\nelmogpomokppoekep\n",
+      "output": "13"
+    },
+    {
+      "name": "random_wordscore_10",
+      "input": "2\n14\nnrbarnnnabbn\nchfeppcpenppenfnze\nrgywvc\nwddbjfbdbdbjf\ngrgrgrergggerrgrrre\nrttthtohthjtrtt\nezepnccfcpfef\nahhlachphpvlvpcvah\nyuccyyvccy\nppfpzc\nnenpnfppehffppcep\nnccnfepepepp\nnfpcceptpezhnn\npezepencfcp\ncheecephznfneecpfepcpnfpnfptep\n",
+      "output": "7"
+    },
+    {
+      "name": "random_wordscore_11",
+      "input": "2\n14\nskkkffkfkvkv\ngbvuguk\npzpzmzcmmc\ntbbbtbbbtttbbbbb\nrrrov\npppppppppppp\nke\nqqkrq\nq\nqqireqr\nr\nyytmtkymccmmckytcmm\nir\nrqeiek\nieqkrqrqe\n",
+      "output": "7"
+    },
+    {
+      "name": "random_wordscore_12",
+      "input": "2\n18\nqiyjjixpyjp\nlllllllllllll\nhhah\nhh\nh\na\nddxxf\nbppebapabaebbp\nhhhha\nhha\nqelotqpqo\nj\nhhh\nhhhh\niwim\nrrrdirr\nah\notfccriitffrotfrc\nhhhah\n",
+      "output": "9"
+    },
+    {
+      "name": "random_wordscore_13",
+      "input": "2\n14\njbbbjbjjjjbeebjjrjr\njrjrjbrjjbebejbj\nnnc\nbe\njbbrreb\nrguuuuuqcgkvvruqqrvu\nbjrjbbbrjjbr\nbejbjjbjrbr\nueeueuueeu\nb\nxinieerbi\nejrbjbbejrbbjrb\nhhhhh\neebjjbbbjrjjbjrrj\njjrjjebbbjebjbjrjjbrb\n",
+      "output": "9"
+    },
+    {
+      "name": "random_wordscore_14",
+      "input": "2\n29\nmrxmvmvxmvuvmvmvr\nktgklgtptzzplt\nmrmvvmvvummmmxmmmxxv\nvmxvuvmrmm\nvvvmmxmvmv\nndcdnncc\nzjsdzjju\nmmmmxvmmvumrvvxvrvm\nrvvmvxmvmurvx\nmxrmvmxvxvxrvvvvmu\nzzzzzzzzz\nmxvxvxrmvvvm\no\nrfxxrvxrrvrxxvrr\nmrxvvmmmrmmvvxumxm\nrmmvxvmvr\nxmmvmmv\nmmxvmmumvxvxmvmvmrmr\nmvxvvrmvmx\nmrmmmuxvxmxvmvvvmmmv\numrvmmvvvvmmrx\nsceauswuawwiuc\nmmummmmv\nxmmvurx\nmmvvmxmmvvvm\nmuvxmrmmvvmmmmr\nxvxvvm\nmm\nffiffiif\nmvmmvvmxmuvmmmxxrmvmvvvxr\n",
+      "output": "21"
+    },
+    {
+      "name": "random_wordscore_15",
+      "input": "2\n21\naaqaettteqa\nmttemetmtemm\neeemteeettmtmmetemm\nfykfyffnjyfnjkwfjk\neeememtemtmete\nemem\netemmetem\nmmmtmtemtttmemee\nee\nxliiilllllixiiilx\nbmwrb\ntmet\nmetmtemteeet\nrrrrrrrrrrrrrrrr\naa\nttemmtmeteeemetmem\njvovo\nqgteeegkgp\nem\nemtetetmmemmett\netttemmmeetemmm\nmmtmteememmetemmmeteemeteemttt\n",
+      "output": "13"
+    },
+    {
+      "name": "random_wordscore_16",
+      "input": "2\n30\nemtyyyotoomyt\nymttoteymtttymy\ntyymoyoyyo\naaaaa\nmte\nooov\nohockckkochoh\nppbggpcgbgccggcbggc\notmyytymtty\nmyttttoot\nyttmytyo\nbbbbbb\netmyttyotoy\nvvvvvvvvvv\nmmo\nomoto\notytttt\noety\nmttyomyooytm\ntkk\nqyvvqevngnq\nomy\nytettty\nmmtottyt\ntomommyyoyty\nymhoommmxooxustu\nwwwwwwwwwwwwwwww\nfuufuuuuuu\nwwqnz\nytyoymtytt\nmoymttyytoyytotmeymtt\n",
+      "output": "18"
+    },
+    {
+      "name": "random_wordscore_17",
+      "input": "2\n6\nrlrllrrrlvlv\ntve\ntevtttv\nvevtttvteetttee\nvtetevetvetvevt\ntveteevevtvttvvet\ntevtveevttevevtttvte\n",
+      "output": "5"
+    },
+    {
+      "name": "random_wordscore_18",
+      "input": "2\n25\nedzddjdjdjj\ncrcj\nssssssssssssss\nzz\nwn\ndo\nw\ndpl\noilp\nffwwgeffeelfgeffel\nahfhrfhpjfjafxpxf\nkffkkkkkkfkfkff\nopiql\nllmmlmmllm\npd\nqqfbfbq\ng\noidplq\nkcr\nxxnx\nd\ndrgcr\npod\ndoqp\nthkhbebuhhkuee\nilodpq\n",
+      "output": "9"
+    },
+    {
+      "name": "random_wordscore_19",
+      "input": "2\n34\nyyyppyqqqqeep\nfemmaefmfe\ndds\nzsvtddvvsrora\nwxrwrxrxxxwwxrwxrwxr\nkhkkkh\nrrdssdosr\nds\naszrv\nmmnvwmwuzzvnpppu\nrszrrtoaprvav\nrpvztvdrrd\nvvvvvvvvvvvvvvvvvvv\nprvdrzrvrodt\nuuuuuuuuuuuuuuu\nvkhkkvhtktt\ndadsrzvavzdvrsrzto\nt\nquqpqymumumyuppumm\ndozdvrrzs\nvrvzszstrrd\njxxxhenimn\nz\ndvzrsrdsrdvvpa\nffffffxfxxxdxdxd\nstzsdorzrvvazvsrdr\nllalleer\nf\nvdrvzddavpsd\nicmimcxiixiwxmwmx\nvzzrrsrsaradzsrdvpr\nvvvvvvvvv\nsdtszddadzvrvzs\nvbkkbbbkvbvkvkbkb\nsorrvddzrzvszrdvdrvpzraast\n",
+      "output": "18"
+    },
+    {
+      "name": "random_wordscore_20",
+      "input": "2\n33\nzmezqezzeeqem\niunmpszpzuz\nhhhpnpinineph\ndudcdukdduqcsq\npisppphn\nqttqcatjqvjjavqqqqta\nqiuupmh\npn\nziphpupuhzqpz\npmp\nzuzusupin\nmooooooomomooommm\nppnz\nccyiyiyicicc\nqziuspuhzzpuz\nnpmquzhpuzzpspu\nmmmmmmm\nzpuuipsqhh\npppzusizqzmhnuzuph\nppznipzhs\nszzuzp\nzzzihhp\nzupzqzzhuship\ngigggddodeldall\noor\nn\npzzzmhhunpqpsuip\njxllxjuxjjf\nszzqppzppzuiunmhh\nbb\nwb\njutttjuutjtt\nlhleeln\npzzzmupunpziqhhpsu\n",
+      "output": "19"
+    },
+    {
+      "name": "random_wordscore_21",
+      "input": "2\n8\nqiqii\niiq\nvoooffvofoffvfvo\nxiipiixq\nqbi\ntttvttvtttvvttvvtvvv\niqq\nixiixiqxpq\nixiixiqxpq\n",
+      "output": "4"
+    },
+    {
+      "name": "random_wordscore_22",
+      "input": "2\n29\nssssss\nhjsjxsjan\nipgbmmmggb\nvmuuvuvvu\ngvgggwwgfgvgfw\nm\nsrkrkwwwrskwrkrswdkr\numuumvuuumv\nujjbbnhugkkb\nvmuvmv\nuumvvuuvuuuvmmmvmuu\neeww\nmumvvu\nz\nodo\nuumumuvuumvm\naljlanc\nvvmmuumuuuvmvu\nuu\nvumumvuuuuvvmuumm\nuuvmum\ntllttllttt\nrkkszfsfgfppszjzr\neyyejdjedjjordyrdr\nmuuvvmmvu\nxxfffxxfxxfxfxff\nvvuuumuvuuvvmmuuumm\nmvvuuvuvuummmuvum\nfbf\nuuvmumuuuvvmuvvuumm\n",
+      "output": "14"
+    },
+    {
+      "name": "random_wordscore_23",
+      "input": "2\n32\nguonnugn\nbb\nuceeuzuufzfc\nuuonnuggoofn\nlloolnoloynyumo\nog\nn\nccccccccc\nnnu\nguonfnguoouufn\nungonfuufognuo\nfggouu\nm\nsffssssssfs\nhkvqoqlqqtztkklhkh\nuf\ngugonffnouu\noouugfuunnnfo\nnaaxxa\niiiiiiiiiiiiiiiiiii\ntttttttttttttttttt\nunzzunxzxn\nu\ngnfgununo\nnn\nunouuuoggnfn\nrbxyb\nywxgyadgg\nywgwdyygywwyd\nze\nuonungugnofufo\njjvvka\nuoufunonnoufgg\n",
+      "output": "16"
+    },
+    {
+      "name": "random_wordscore_24",
+      "input": "2\n22\nuzv\nfhjjfthfj\nbwsevizuzuiezvyue\nezvezzzebv\nvyzzvewuiwvbwizu\niuv\nffxnfxnnxnffxxn\nvieeyzwszubvuvi\nkkwqwonk\nbsiyi\nwuuvyz\nllpll\nuw\neevwzuvuuyvibzezwi\nbyzwv\nvvvvv\nkhvh\nevvs\ny\nw\nwivsivvzbzuuwe\nzuszzwveeibuvuiewzvw\nuezevzziewivswuzbuywv\n",
+      "output": "16"
+    },
+    {
+      "name": "random_wordscore_25",
+      "input": "2\n6\nhzpelppgmvvpvp\np\naudkuwaaawdu\nhmsthtbsbbttbhs\nqr\nudaduaadaawuuk\nduaukuaadkwwauawuwukaadk\n",
+      "output": "2"
+    },
+    {
+      "name": "random_wordscore_26",
+      "input": "2\n23\nnozyuonuuyznoun\nsmssmsmmmm\nzn\nrr\nuozzuznyoynnuon\nzzznzouyonuunoynnu\nz\nynz\nyounynzouzuz\noz\nouoyznznynozuuunz\nmmmlmlwowmlmlwmll\ngjgtgmmgtjtgpnnt\nrzv\nzznuonnunzyoynuo\nunnuzuzzouzo\nn\nbpoii\nzzzounnoyuunnnyu\nynonun\neeololeoeeell\nzynzyozounuzuunnon\njzzhoycw\nnynzzznonuzynuuouo\n",
+      "output": "15"
+    },
+    {
+      "name": "random_wordscore_27",
+      "input": "2\n24\nggppprprrrppggp\nbyoouyuto\nzzzzzzzzzzz\nr\nlolwrwr\nqqdddqqdqdqd\nntuq\nassua\nwrorl\nrrwolw\nrlwwkro\nlwrrow\nyqqyqyqyqqq\nlrkrwlwo\nmssmmmmsmssmms\ndrmpzkdprrkdi\nrllwokwr\nrrhrmrmrrmrhmmhh\norwlk\nrwkorw\nraqi\nflvlvlflfyfjvjvyg\nlw\nrrowwkl\nrlwkrowl\n",
+      "output": "12"
+    },
+    {
+      "name": "random_wordscore_28",
+      "input": "2\n15\nvzvhzznk\nhffnzvdh\nuuuaauuuaauaa\nnhv\nffvzzzhnhh\niiiiii\nfkkhnfkvhzhznkvfvh\nvhzhvhvhfwfkkhvvhn\nvzvvhvzdnhhhnzkkzf\ngxeggutxfbugxf\nkyyqki\nkfhzvzfn\nqsppsysyqysii\nhkzfnw\ndhzwnz\nvhfhhzfnnfhkvhvwvdzkzhzvknzk\n",
+      "output": "10"
+    },
+    {
+      "name": "random_wordscore_29",
+      "input": "2\n29\nlllf\nhlhbghghxhbhghxx\npppmf\nzzzyyzy\nohzziiissodh\nzyzzzyzzzy\nzyzyzyzzy\nofbbbfbbifooi\nyzyzyzyyzz\nzyzzyzzyyzy\nzzyyyzzzy\nyyz\nzyyyyyzzzy\npfhxxyfhjlxjf\nyzzy\nnilletej\nyzzyzyzzzyzyyz\nzzzyyzyyzz\nyyyzzz\nhhhhhhhhhh\nwvwwwwpppvpgwvwvgvv\npprqsrpl\nzzzyyy\na\nqqqqps\noolnzozrrooznrol\nejjjcq\nzzzzzyyyzyyz\nwsisc\nzyzzyyzzzzzyyy\n",
+      "output": "14"
+    },
+    {
+      "name": "random_wordscore_30",
+      "input": "2\n31\neppepipiepii\nnni\nwoowwpppowow\noaoou\nqyaoeauouuayooqe\naccjmkmvravvjmre\nueay\nuayayoqaeuou\nyayuaqayquoeeoouao\nubbfz\nyaeyq\nyeuyquoa\nooyyqoaeeuuaauaqo\nqoaaoeouy\nqzqzvzzzve\naeayyo\nayyaauoqoeuoyeoauq\niigzqigiz\ngjggggggggjggj\nd\nunmcttcmu\ncrrrrggcrcjgj\njjmnmqj\noy\nswfwwow\namhabahha\nnnqnqii\nqoyyaaeauaoouqyeuo\nque\nayuoo\nccccccccccccc\nyquaoyaoauqyoeeuao\n",
+      "output": "15"
+    },
+    {
+      "name": "random_wordscore_31",
+      "input": "2\n28\nosgosgsoggogo\nm\nyijqi\nodxhpmtq\nlupapuuppuaapu\npmotqpphdxh\nqjqjjqdqdqjqddq\nddqd\nhgeweewwhsx\nvvvbtbtvvtbtbbvb\nkkxyxkyy\nxqtmdhp\nhpxqtpom\nqt\nhqhdpx\nhtqxhm\nmpto\ntpphom\nvuuzhizhvi\nwwt\nccsc\nyyj\npdxqhohptm\nhpp\nsswuwwus\nhpdphpqtx\nhhhhhhhhhhhhhhhhhhh\nhppdphtqm\ntmhhpqpxodp\n",
+      "output": "14"
+    },
+    {
+      "name": "random_wordscore_32",
+      "input": "2\n10\nllqltqqlttrllr\nxrgllvsggltggnng\nnss\nlgtlrsgllltssxrtsg\nrggllltgx\niwppwtxqqpyiwxxiyqhw\nlnvvgstgrlgsgsggl\nvrlggllxsx\nss\npppppppppppppppppppp\nlntggsssslnlgxstvlgtlxvrrgg\n",
+      "output": "7"
+    },
+    {
+      "name": "random_wordscore_33",
+      "input": "2\n5\niliuui\ngigvjviggji\njuujxjuerju\nauquneqaeun\npakapkappa\njggzzgvvvjiiiegjgizgigz\n",
+      "output": "1"
+    },
+    {
+      "name": "random_wordscore_34",
+      "input": "2\n20\nvag\navq\nrfjjnnnjnrrjfnn\naqg\nvdfvffznkz\nz\nva\nav\njfjvzjzvpzz\nqga\nqag\nfooococo\nuxuuu\ngvq\nag\nxnxnxnxxaan\nvsfas\nv\ntntb\nnnnnnnnnnnnn\nqagv\n",
+      "output": "10"
+    },
+    {
+      "name": "random_wordscore_35",
+      "input": "2\n34\nqwaaawwqqqwawww\nwqvpuowqoquv\nojuwjuqo\noquovwwjowuvu\npw\nuouuvpjqw\nuqu\nvqjoqqvqoouwju\nkkkkkk\nstssqjqs\nwj\nqfefdwwewefqewddfqw\na\nbfbqfqbbbb\nwpqquwouvoouuwouj\nuujpqvwww\nkkjkaakjfagbbjag\nsddsasdaaadsaasa\nquvo\nwouovuoqpuwojw\njqpqpwpuqu\nvwquoovpwquqpuuuo\ngoeuogbgobo\nrrrrr\nvppvppppvpvppp\ng\nuwwvuqoqvojqopqpqouw\npvpwouuqojwuvq\nvxxxxvxvuuxuvvux\nwwwwww\njouvouwp\nwwuuvuqwupu\njo\nwwv\nwqjuoqwpovouqpuuqqwuwuovojvwwp\n",
+      "output": "21"
+    },
+    {
+      "name": "random_wordscore_36",
+      "input": "2\n16\nu\nmu\numukukx\nuxgumk\nrjlrjrjlrl\ngbbaggbgbgrgx\nuoortrururuurrutt\nuuxmkugkx\nkugux\nukxu\nmug\nxugxuku\nxu\ns\nxm\nmuuk\nkuxmxuugk\n",
+      "output": "12"
+    },
+    {
+      "name": "random_wordscore_37",
+      "input": "2\n12\nv\nhvi\nioviohanhnvvhiox\niuiufdid\nyfgfsg\nvoavnxoaihvooihahv\nbrleerdedddedr\nhuihmhmis\nygzgy\nrfru\nyqjddjqodqqdqqddddcc\nhaohvovohoviinoxv\nihoooaxhavvhviionnivona\n",
+      "output": "5"
+    },
+    {
+      "name": "random_wordscore_38",
+      "input": "2\n10\nzs\nvvzzdvllvfl\ncs\ncsz\njlkkkhhhlhakak\nszc\nsz\ns\nz\nltftfflltltlllfttlfl\nczs\n",
+      "output": "7"
+    },
+    {
+      "name": "random_wordscore_39",
+      "input": "2\n12\nnnnananannnan\nwt\nq\npepbbpebbb\nbqpqxng\nnnnn\nvvvvvvvvvvvvv\naaaaaaaaaaaaaaaaaaa\nkp\nb\nggbqbqpnsgmsxqxg\nbspxgqngxnqqsg\ngqsbsgqqgsmgbpqxnxng\n",
+      "output": "5"
+    },
+    {
+      "name": "random_wordscore_40",
+      "input": "2\n35\njbhtjjmbjtmtmjhb\nuy\nonmnnlolmfmoyjf\nfnymnfmjjmlnoomoo\nfly\nluloyyfnomfnom\njfjmmnlounfyoooon\nyounmonjyunfyo\noocoocooccooocoo\ngkf\noyomlofnonjyfmnm\nerrejrjje\nnumlynnnmyfomjl\nollunmm\njlomofnjmflnn\nourwo\nynofumonommmlolfomy\nloollooolo\nxpxpxpxjpxjpjjxxpxp\nmljfouyoymfof\nttppuppp\nplalluulls\nmullo\nggkkgkggkgkgggkkgg\nqqrqqrqqqqrrrrr\nccdcfc\nnnmoffmojl\nfjonlfoojmyuonmnyo\nccnchhccsgchscg\nzfpvovjr\nfoofomoln\nyyunhnungugzaazygz\nyojnmmomnyfoumnf\nonoymfoufjlounonl\nodrgojdgdzgo\nmflyonooymjfmnuoymfojnulfnmo\n",
+      "output": "19"
+    },
+    {
+      "name": "random_wordscore_41",
+      "input": "2\n19\nn\nddddddd\nsswwww\nnnn\nnn\npywpwwpy\nbbbbb\ndgrrgdkkvvrkkkdrdgsr\naeoaryoealrar\nmntnqtmqqntnmty\ntgbgb\nvwbbnbanan\nrxrmxm\ntttsyjjyjjsjyyyst\niyiyygzz\ngngggngggggngnnnn\ntjjjezhjheehegwhqgz\nowhvvkhkhhco\nufaqhhqaqauffqaqhuqq\nnnn\n",
+      "output": "2"
+    },
+    {
+      "name": "random_wordscore_42",
+      "input": "2\n13\nnjjnnjjjjnjj\netwtetvnnevwrwt\nntreeetvwtnww\newwttnewnrvvewtt\nevwterwtnentw\nppmzz\nqmmmwck\nweev\ntnntrtwwetewevw\nseewjsb\nwnt\nwtv\nntvwttwneewtrewv\nntvwttwneewtrewv\n",
+      "output": "8"
+    },
+    {
+      "name": "random_wordscore_43",
+      "input": "2\n17\ncnalmnattcatilcjaz\nqjtpffkkqyjkfpyt\ntimxcxeiiexemtccte\nubhby\nilct\ntn\nmmybbfmmynmnfbymy\ncnjczclmzaaat\nlzu\nuuducjjujacjjcud\nalaazt\naja\npppppppppppppppppppp\nk\nzncjatntaacim\ntcnaalat\nanzczttlajmcn\nitltltcajanzmazaccn\n",
+      "output": "9"
+    },
+    {
+      "name": "random_wordscore_44",
+      "input": "2\n29\nammmaaamaaama\ndddddwddwwddwd\nbggcgbb\ngvluivgvnmi\nggx\nnnnnnnnnnnnnnnnnnnnn\nccrrcrcr\nhrrrhrrhrrrr\ngviwbwxigxbxsgs\nixwwsbxi\nqqqqqqqqqq\nmfdlllefmdtle\neeieixizqxqzqzxe\nmvmvmvmmmvvvv\nsxwxsggivvix\nxs\nxwgswg\ntdzodu\nxwsgwivgbvxg\nwwwwwwwwwwww\ngxxgvbsxvgw\nibwxggg\nuqyv\nwxgivwxbgsisbvg\ndbazazppkadzdvadkk\nggvswsbvbi\nix\nb\nj\ngxivxbbvxsisggww\n",
+      "output": "13"
+    },
+    {
+      "name": "random_wordscore_45",
+      "input": "2\n24\njpjppjjppjjjpj\njjjjjjppjppjpjpjp\nn\nqdy\nhohxohm\nivitiqriau\nba\nppjjjjjpjpjjjj\nppjjjppj\nunuunnnunuuuluuu\ngkgggkgkgg\njppj\npjppppjppjpjjjjjjp\nirdemai\njjjpjppjpjjpjjpjjjp\naslbqqdllvassbabq\njjjpjpppjpjjjjjpp\nuuuuuuuuuuuu\noisfyosffsi\nrgggrgrrgggrggrgrggr\nppjjjpppjp\nppjjpjjjjjjjj\njjpjpj\ncccccc\npjpjjpppjpjpjjjjpjppjjjj\n",
+      "output": "11"
+    },
+    {
+      "name": "random_wordscore_46",
+      "input": "2\n24\nysq\nymqqs\nyf\nqs\ns\nqymsq\nebe\ncyy\nm\nae\nxxjtgjatzzxa\ny\nbgrrbcbrgcjjg\nmqsy\nwsymqq\nmwsyqq\nsmwy\nazhnz\nwllpccpnnnxpbcpcnxb\nwqs\nvv\nzz\ndkgkgdkggdgggkkgkddg\nw\nwmqqys\n",
+      "output": "13"
+    },
+    {
+      "name": "random_wordscore_47",
+      "input": "2\n35\nwho\nouwoob\npo\nooouow\npzpzpoptt\netnx\nhoopowb\nopw\nhouow\nnnatteenextxnxtat\nhoubwp\nuhpwoooob\nbbbbbbbbbbbb\neeee\npggu\npruurxlt\npouowohw\nwpoh\nhuuhhhhhunuhncu\naaaaaaaaaaaaaaaaa\nmmak\nqqgeee\nouwwooop\nouwhpoo\nohw\noop\nwhoooupwb\nwooou\nwhowb\nowuogw\nbooow\nbpbskpqkbsbakkqqq\nwbwooo\noouwowpbh\nfshfiiss\nbpuowhoowo\n",
+      "output": "21"
+    },
+    {
+      "name": "random_wordscore_48",
+      "input": "2\n25\nqklllxnx\nrlnvvnvtrn\nqiippiiqp\nknkql\nnllxkxnklkl\nx\nuqffdqqnfcldq\naaa\nnnkx\nxxxjjjjjx\nlkqlklkqn\nkqnqnnlqlk\nmnummhnmfnuiumiimf\nhsshhstthht\nkevkfetzkeftzft\nuuuuuuuuuuuuuuu\ntncfo\nqxklxnqk\nzpttaj\nnlxnlkklkx\nizddihz\nllnklkqlx\noengnneeneegno\noyoy\nhbz\nxknxkkllllxkqnqqn\n",
+      "output": "10"
+    },
+    {
+      "name": "random_wordscore_49",
+      "input": "2\n29\nbbi\nrrrrrr\nlxlqlllklx\nxqxqqxllk\nmrmm\naovvvvboao\nql\nweauuueewwauxwww\nstagigvs\nkg\nqxqlxxllkl\npko\nqxqlql\nkqqlqx\nlxxqlqllqxlq\nqkxqlqlx\nyrrrmwrglyyymlyylgg\nl\nllxqqqklxxqxq\nqqxlqlqllxl\nxqq\nrleswllsewrrsew\nlkxxlqqqx\nx\nqxqxqxqllxllklq\nsb\nfwfyyfwfywyyfy\neppeeee\nqlqllqqxxxlklxql\nqlqllqqxxxlklxql\n",
+      "output": "15"
+    },
+    {
+      "name": "random_wordscore_50",
+      "input": "2\n10\njxdxoutgtjxjxtttjug\njjokjmqvvoqvmv\ncxxxhckrikahcha\nkxhc\nccac\nhixhhauckkcaihxch\nq\nkhkix\niiid\nmiuiujihuu\nkuhhxcachcxkixhichkar\n",
+      "output": "5"
+    },
+    {
+      "name": "random_wordscore_51",
+      "input": "2\n35\ntbtttttbtbtbbbb\nyyaayyay\nhggmhmnnxxg\ndmmmmdmhciydhihc\nyyayyyy\ngmege\nyyyaaayyyyyayay\nyyyayyyayyaayyyyaaay\nkokkoookkzkozkkk\nbmyyomobmiombtrym\nw\nhrehrrhrhhereeherre\nyyayyyyyayyayayyy\nyayyyyyyya\nowxw\nay\nyyaya\naa\ndjldljhhjdhljjjdhhd\nyya\nux\nayyyyyyay\nunnuuffufffnfuff\nxxxhhmrhxrmh\nyyyyyayayayyyaayayyy\nyy\nyyyyay\nyyaaayyaayyyyyyyaya\ntiiiiittyyyityitit\nxvprvxrepp\nyayaayya\nyyyayyay\ndddd\ntfmgmamg\naaaayhyeeehaehh\nyyyayyayayayyyyyyayyyyaayaya\n",
+      "output": "17"
+    },
+    {
+      "name": "random_wordscore_52",
+      "input": "2\n23\nhjmm\nm\nnnqnnqqnq\nah\nggwggwgwggwwg\nma\nj\njhmijj\nmamamjmajlmmjjml\nxxxxxxxxxxx\njmhilihmmjihimm\njmlhmm\namalijahmmijh\nmaialajhhmlj\njmhmhiimjhhaaij\najmlmimhmjj\nhiamijalmmiljamim\nnjksns\nahlajhhmmihi\nrrb\nmjjaiimami\njjj\nammawmaa\nhmhmimlammmjljmijiahhmjjilah\n",
+      "output": "17"
+    },
+    {
+      "name": "random_wordscore_53",
+      "input": "2\n35\nkrvlblkr\nweeeewwee\nlk\nvrl\nkbl\nklrvbl\nzmmkkmvrkrmkzrr\nhccaff\nblrkr\nannqhoz\nvkkrl\nyyqqqqqbbybbyy\nsllslnsnss\nlkrrbl\nmmfiqsfyismiqwh\nlbr\nkrrllvk\nbrlrk\nkv\nqxqqxxqqxxxxqx\noooooooooooooooo\nhhnirii\nk\nvkbl\nkvrr\nldllldeeeel\nznlulnnlzl\nkvlbrk\neqx\nbkrvrl\nlkbrrlk\nklblr\nkkvrl\nvynw\nqqqwwwqqw\nvkkrlblr\n",
+      "output": "20"
+    },
+    {
+      "name": "random_wordscore_54",
+      "input": "2\n17\nsspsppssp\nst\nrkscs\nssspppppssspsppp\npgp\nsp\nfifidiiimhdz\npspsssspss\npppssppppssp\npppsspssspspppp\npsspsss\nhhnhaaqhn\nppppps\np\nl\nrrrrrrr\nxlxlllxxxlxlxlllllxx\npsspssspppsspppp\n",
+      "output": "9"
+    },
+    {
+      "name": "random_wordscore_55",
+      "input": "2\n18\nbbbkk\nbxkkbkdxkbxbbd\nh\nddbbxdd\ndbkxxbdbbdxxbbkxdkkx\nxxbkdd\nilllillle\norbr\ngggzgzz\nddb\nxxkxdbbxbbk\nbxdbkxxxxbbdx\nssssssss\njfmj\nbxkxbdkkdkbb\nxbxdkxbbdbbdxbxb\nuuuuuuududuu\nbkxxbxbkbdxxb\nxdbxxxkbxddbbkbxbbxbkxkd\n",
+      "output": "11"
+    },
+    {
+      "name": "random_wordscore_56",
+      "input": "2\n32\nicnkchntkwt\njpjpjjp\nyzn\nvawq\nssssssssssssssssssss\ngrgrrrrggggrg\njpjjjpppp\nwvwwav\nyjjnyjbjjjaby\nppjppjjpjp\np\nppppppppppjpjj\nbhhbbbhbbb\njj\nnbnncuucnnnbnnbubn\nofffttxxtoxj\nppjjppppjppjppjpp\npjjpjjppj\njnzrpwzrjrpzjzjnzww\npjpjjppjjpjpjpjpp\njppjppppjjjppppj\nehpgppe\npppjjpjpjpjjpjpppppp\njpjpjjjpppjpjp\nppjpjjjjpjjp\neeietltltooeeeottoe\npppjpjppjppppjp\njpppppjppjp\ngggllkklkgkkgkgk\npppjpppjj\npjpjpj\nppjjjjpp\npppppppppppjjjjpjpjjj\n",
+      "output": "18"
+    },
+    {
+      "name": "random_wordscore_57",
+      "input": "2\n25\nefasndasagafs\nr\nri\nztyyn\nadd\nirlir\nyypowyyywgoowoh\nnnnnnnnnnnnnnnnn\ni\neeeeeeee\nccccccccccc\nii\nlrri\nkkkkkkkkkkkkkkkkkkkk\nirr\nwwwqq\nrilri\nliirr\njokos\np\niiiiiiiiiiii\nknokoxnssx\ngo\niril\nejwqed\nrrili\n",
+      "output": "10"
+    },
+    {
+      "name": "random_wordscore_58",
+      "input": "2\n18\nwwssswsww\nnnnnnnnnnnnnn\ngdggdd\ngdgddgjgdg\ngggdj\nddj\ndgg\njgomomjbbffbgbooomoo\nggjgggd\nzzzzzzzzzzzzzzzz\ndgdggddgg\ndjggddggg\nggg\nwd\nffniit\ngdg\ngdggdj\noqoqooovoqqqvvqqqv\njdggdgdggd\n",
+      "output": "11"
+    },
+    {
+      "name": "random_wordscore_59",
+      "input": "2\n27\nfkjvkjjjjvvvjljlflv\ndmmdxdmmxmd\nbsbsbebbeebssesee\ndvddvv\nbxdxdmdbdmdxbdmdbxb\ndxdd\nuqqqqyqq\nppppp\noesqsssqevooquvsv\nmmm\nbddxmmbx\nwmmfdwwdrm\nxvvvxvxvvxxvxvvv\nd\nbmbmdbbdmdddxmdbdd\nxrqr\nqeqddeqpudedudeee\ndxddmdddxxbdmxbmd\nbdmbbxdbdd\nyyof\nqooqc\ndmdbdmddxbmxmmdd\nyczzzcssycyyzyzchhsc\ndmbxdxdmxxmbdmx\nbmdddmxdbdxbdmxmxm\nm\ndmxbbd\nmbmxddxbxmmddxbddmdmbmddbx\n",
+      "output": "14"
+    },
+    {
+      "name": "random_wordscore_60",
+      "input": "2\n11\nvtbt\nbmcbcmccbbbmbmm\nyvyxafvyxfyxxxxafvv\nkkuuwfuwfuwqk\nvhpvhhppvphphh\naxvxvv\ntzjtuzzjzllkjkuljjzl\nuq\nt\nddttbtbttttbd\nfy\nyxvfaxyxvvxyxafyfxfvvavyvf\n",
+      "output": "3"
+    }
+  ]
+}

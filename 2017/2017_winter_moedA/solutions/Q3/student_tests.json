@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "exam_technion_icon",
+      "input": "1\ntechnion\nicon\n",
+      "output": "1"
+    },
+    {
+      "name": "exam_technion_iconic",
+      "input": "1\ntechnion\niconic\n",
+      "output": "0"
+    },
+    {
+      "name": "exam_wordscore_test",
+      "input": "2\n8\nsett\nest\nset\ntes\ntet\nes\nte\ntest\ntest\n",
+      "output": "7"
+    }
+  ]
+}

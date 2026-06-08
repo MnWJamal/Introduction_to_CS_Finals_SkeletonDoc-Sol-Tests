@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "given_feffef",
+      "input": "6\nfeffef\n",
+      "output": "3"
+    },
+    {
+      "name": "given_ffefeef",
+      "input": "7\nffefeef\n",
+      "output": "3"
+    },
+    {
+      "name": "given_abcde",
+      "input": "5\nabcde\n",
+      "output": "0"
+    },
+    {
+      "name": "given_empty",
+      "input": "0\n",
+      "output": "0"
+    }
+  ]
+}

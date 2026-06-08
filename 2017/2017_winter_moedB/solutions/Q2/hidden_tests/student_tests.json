@@ -1,0 +1,1054 @@
+{
+  "tests": [
+    {
+      "name": "example_single_duplicate_4",
+      "input": "6\n1 2 3 4 5 4\n",
+      "output": "OK"
+    },
+    {
+      "name": "example_many_duplicates_1_or_2",
+      "input": "6\n1 1 1 2 2 2\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_min_n2_duplicate_1",
+      "input": "2\n1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "duplicate_at_edges",
+      "input": "6\n3 1 2 4 5 3\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n2_all_ones",
+      "input": "2\n1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n3_all_ones",
+      "input": "3\n1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n4_all_ones",
+      "input": "4\n1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n5_all_ones",
+      "input": "5\n1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n6_all_ones",
+      "input": "6\n1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n7_all_ones",
+      "input": "7\n1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n8_all_ones",
+      "input": "8\n1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n9_all_ones",
+      "input": "9\n1 1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n10_all_ones",
+      "input": "10\n1 1 1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n11_all_ones",
+      "input": "11\n1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n12_all_ones",
+      "input": "12\n1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n13_all_ones",
+      "input": "13\n1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n14_all_ones",
+      "input": "14\n1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n15_all_ones",
+      "input": "15\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n16_all_ones",
+      "input": "16\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n17_all_ones",
+      "input": "17\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n18_all_ones",
+      "input": "18\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n19_all_ones",
+      "input": "19\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n20_all_ones",
+      "input": "20\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n21_all_ones",
+      "input": "21\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n22_all_ones",
+      "input": "22\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n23_all_ones",
+      "input": "23\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n24_all_ones",
+      "input": "24\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n25_all_ones",
+      "input": "25\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n26_all_ones",
+      "input": "26\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n27_all_ones",
+      "input": "27\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n28_all_ones",
+      "input": "28\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n29_all_ones",
+      "input": "29\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n30_all_ones",
+      "input": "30\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n3_all_max",
+      "input": "3\n2 2 2\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n4_all_max",
+      "input": "4\n3 3 3 3\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n5_all_max",
+      "input": "5\n4 4 4 4 4\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n6_all_max",
+      "input": "6\n5 5 5 5 5 5\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n7_all_max",
+      "input": "7\n6 6 6 6 6 6 6\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n8_all_max",
+      "input": "8\n7 7 7 7 7 7 7 7\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n9_all_max",
+      "input": "9\n8 8 8 8 8 8 8 8 8\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n10_all_max",
+      "input": "10\n9 9 9 9 9 9 9 9 9 9\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n11_all_max",
+      "input": "11\n10 10 10 10 10 10 10 10 10 10 10\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n12_all_max",
+      "input": "12\n11 11 11 11 11 11 11 11 11 11 11 11\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n13_all_max",
+      "input": "13\n12 12 12 12 12 12 12 12 12 12 12 12 12\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n14_all_max",
+      "input": "14\n13 13 13 13 13 13 13 13 13 13 13 13 13 13\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n15_all_max",
+      "input": "15\n14 14 14 14 14 14 14 14 14 14 14 14 14 14 14\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n16_all_max",
+      "input": "16\n15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n17_all_max",
+      "input": "17\n16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n18_all_max",
+      "input": "18\n17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n19_all_max",
+      "input": "19\n18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n20_all_max",
+      "input": "20\n19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n21_all_max",
+      "input": "21\n20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n22_all_max",
+      "input": "22\n21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n23_all_max",
+      "input": "23\n22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22 22\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n24_all_max",
+      "input": "24\n23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n25_all_max",
+      "input": "25\n24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n26_all_max",
+      "input": "26\n25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25 25\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n27_all_max",
+      "input": "27\n26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n28_all_max",
+      "input": "28\n27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27 27\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n29_all_max",
+      "input": "29\n28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28 28\n",
+      "output": "OK"
+    },
+    {
+      "name": "edge_n30_all_max",
+      "input": "30\n29 29 29 29 29 29 29 29 29 29 29 29 29 29 29 29 29 29 29 29 29 29 29 29 29 29 29 29 29 29\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n3",
+      "input": "3\n1 2 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n3",
+      "input": "3\n1 2 2\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n4",
+      "input": "4\n1 2 3 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n4",
+      "input": "4\n1 2 3 3\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n5",
+      "input": "5\n1 2 3 4 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n5",
+      "input": "5\n1 2 3 4 4\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n6",
+      "input": "6\n1 2 3 4 5 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n6",
+      "input": "6\n1 2 3 4 5 5\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n7",
+      "input": "7\n1 2 3 4 5 6 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n7",
+      "input": "7\n1 2 3 4 5 6 6\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n8",
+      "input": "8\n1 2 3 4 5 6 7 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n8",
+      "input": "8\n1 2 3 4 5 6 7 7\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n9",
+      "input": "9\n1 2 3 4 5 6 7 8 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n9",
+      "input": "9\n1 2 3 4 5 6 7 8 8\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n10",
+      "input": "10\n1 2 3 4 5 6 7 8 9 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n10",
+      "input": "10\n1 2 3 4 5 6 7 8 9 9\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n11",
+      "input": "11\n1 2 3 4 5 6 7 8 9 10 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n11",
+      "input": "11\n1 2 3 4 5 6 7 8 9 10 10\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n12",
+      "input": "12\n1 2 3 4 5 6 7 8 9 10 11 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n12",
+      "input": "12\n1 2 3 4 5 6 7 8 9 10 11 11\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n13",
+      "input": "13\n1 2 3 4 5 6 7 8 9 10 11 12 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n13",
+      "input": "13\n1 2 3 4 5 6 7 8 9 10 11 12 12\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n14",
+      "input": "14\n1 2 3 4 5 6 7 8 9 10 11 12 13 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n14",
+      "input": "14\n1 2 3 4 5 6 7 8 9 10 11 12 13 13\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n15",
+      "input": "15\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n15",
+      "input": "15\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 14\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n16",
+      "input": "16\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n16",
+      "input": "16\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 15\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n17",
+      "input": "17\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n17",
+      "input": "17\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 16\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n18",
+      "input": "18\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n18",
+      "input": "18\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 17\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n19",
+      "input": "19\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n19",
+      "input": "19\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 18\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n20",
+      "input": "20\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n20",
+      "input": "20\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 19\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n21",
+      "input": "21\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n21",
+      "input": "21\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 20\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n22",
+      "input": "22\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n22",
+      "input": "22\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 21\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n23",
+      "input": "23\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n23",
+      "input": "23\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 22\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n24",
+      "input": "24\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n24",
+      "input": "24\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 23\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n25",
+      "input": "25\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n25",
+      "input": "25\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 24\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n26",
+      "input": "26\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n26",
+      "input": "26\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 25\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n27",
+      "input": "27\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n27",
+      "input": "27\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 26\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n28",
+      "input": "28\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n28",
+      "input": "28\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 27\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n29",
+      "input": "29\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n29",
+      "input": "29\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 28\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n30",
+      "input": "30\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n30",
+      "input": "30\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 29\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n31",
+      "input": "31\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n31",
+      "input": "31\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 30\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n32",
+      "input": "32\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n32",
+      "input": "32\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 31\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n33",
+      "input": "33\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n33",
+      "input": "33\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 32\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n34",
+      "input": "34\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n34",
+      "input": "34\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 33\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n35",
+      "input": "35\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n35",
+      "input": "35\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 34\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n36",
+      "input": "36\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n36",
+      "input": "36\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 35\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n37",
+      "input": "37\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n37",
+      "input": "37\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 36\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n38",
+      "input": "38\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n38",
+      "input": "38\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 37\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n39",
+      "input": "39\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n39",
+      "input": "39\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 38\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_first_n40",
+      "input": "40\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "sorted_duplicate_last_n40",
+      "input": "40\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 39\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n4",
+      "input": "4\n1 2 2 3\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n4",
+      "input": "4\n1 2 3 2\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n5",
+      "input": "5\n1 2 2 3 4\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n5",
+      "input": "5\n1 2 3 4 3\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n6",
+      "input": "6\n1 2 2 3 4 5\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n6",
+      "input": "6\n1 2 3 4 5 4\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n7",
+      "input": "7\n1 2 2 3 4 5 6\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n7",
+      "input": "7\n1 2 3 4 5 6 5\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n8",
+      "input": "8\n1 2 2 3 4 5 6 7\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n8",
+      "input": "8\n1 2 3 4 5 6 7 6\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n9",
+      "input": "9\n1 2 2 3 4 5 6 7 8\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n9",
+      "input": "9\n1 2 3 4 5 6 7 8 7\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n10",
+      "input": "10\n1 2 2 3 4 5 6 7 8 9\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n10",
+      "input": "10\n1 2 3 4 5 6 7 8 9 8\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n11",
+      "input": "11\n1 2 2 3 4 5 6 7 8 9 10\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n11",
+      "input": "11\n1 2 3 4 5 6 7 8 9 10 9\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n12",
+      "input": "12\n1 2 2 3 4 5 6 7 8 9 10 11\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n12",
+      "input": "12\n1 2 3 4 5 6 7 8 9 10 11 10\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n13",
+      "input": "13\n1 2 2 3 4 5 6 7 8 9 10 11 12\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n13",
+      "input": "13\n1 2 3 4 5 6 7 8 9 10 11 12 11\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n14",
+      "input": "14\n1 2 2 3 4 5 6 7 8 9 10 11 12 13\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n14",
+      "input": "14\n1 2 3 4 5 6 7 8 9 10 11 12 13 12\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n15",
+      "input": "15\n1 2 2 3 4 5 6 7 8 9 10 11 12 13 14\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n15",
+      "input": "15\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 13\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n16",
+      "input": "16\n1 2 2 3 4 5 6 7 8 9 10 11 12 13 14 15\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n16",
+      "input": "16\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 14\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n17",
+      "input": "17\n1 2 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n17",
+      "input": "17\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 15\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n18",
+      "input": "18\n1 2 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n18",
+      "input": "18\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 16\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n19",
+      "input": "19\n1 2 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n19",
+      "input": "19\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 17\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n20",
+      "input": "20\n1 2 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n20",
+      "input": "20\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 18\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n21",
+      "input": "21\n1 2 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n21",
+      "input": "21\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 19\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n22",
+      "input": "22\n1 2 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n22",
+      "input": "22\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 20\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n23",
+      "input": "23\n1 2 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n23",
+      "input": "23\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 21\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n24",
+      "input": "24\n1 2 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n24",
+      "input": "24\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 22\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n25",
+      "input": "25\n1 2 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n25",
+      "input": "25\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 23\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n26",
+      "input": "26\n1 2 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n26",
+      "input": "26\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 24\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n27",
+      "input": "27\n1 2 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n27",
+      "input": "27\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 25\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n28",
+      "input": "28\n1 2 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n28",
+      "input": "28\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 26\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n29",
+      "input": "29\n1 2 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n29",
+      "input": "29\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 27\n",
+      "output": "OK"
+    },
+    {
+      "name": "adjacent_duplicate_near_start_n30",
+      "input": "30\n1 2 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29\n",
+      "output": "OK"
+    },
+    {
+      "name": "near_end_duplicate_n30",
+      "input": "30\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 28\n",
+      "output": "OK"
+    },
+    {
+      "name": "shuffled_one_duplicate_n5",
+      "input": "5\n1 2 4 3 2\n",
+      "output": "OK"
+    },
+    {
+      "name": "pattern_many_duplicates_n5",
+      "input": "5\n1 4 3 2 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "shuffled_one_duplicate_n6",
+      "input": "6\n3 3 2 4 1 5\n",
+      "output": "OK"
+    },
+    {
+      "name": "pattern_many_duplicates_n6",
+      "input": "6\n1 3 5 2 4 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "shuffled_one_duplicate_n7",
+      "input": "7\n6 3 5 1 4 2 3\n",
+      "output": "OK"
+    },
+    {
+      "name": "pattern_many_duplicates_n7",
+      "input": "7\n1 2 3 4 5 6 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "shuffled_one_duplicate_n8",
+      "input": "8\n6 1 7 5 2 4 3 4\n",
+      "output": "OK"
+    },
+    {
+      "name": "pattern_many_duplicates_n8",
+      "input": "8\n1 1 1 1 1 1 1 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "shuffled_one_duplicate_n10",
+      "input": "10\n6 3 8 2 9 5 4 7 1 5\n",
+      "output": "OK"
+    },
+    {
+      "name": "pattern_many_duplicates_n10",
+      "input": "10\n1 8 6 4 2 9 7 5 3 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "shuffled_one_duplicate_n12",
+      "input": "12\n10 11 2 7 6 1 4 3 6 9 5 8\n",
+      "output": "OK"
+    },
+    {
+      "name": "pattern_many_duplicates_n12",
+      "input": "12\n1 8 4 11 7 3 10 6 2 9 5 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "shuffled_one_duplicate_n16",
+      "input": "16\n11 9 13 2 3 6 10 8 1 14 4 7 5 15 8 12\n",
+      "output": "OK"
+    },
+    {
+      "name": "pattern_many_duplicates_n16",
+      "input": "16\n1 8 15 7 14 6 13 5 12 4 11 3 10 2 9 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "shuffled_one_duplicate_n20",
+      "input": "20\n10 13 15 17 19 18 10 8 16 3 12 2 14 7 1 6 11 4 9 5\n",
+      "output": "OK"
+    },
+    {
+      "name": "pattern_many_duplicates_n20",
+      "input": "20\n1 8 15 3 10 17 5 12 19 7 14 2 9 16 4 11 18 6 13 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "shuffled_one_duplicate_n25",
+      "input": "25\n24 8 18 3 5 11 14 6 4 12 12 15 17 23 20 22 19 9 2 16 21 10 7 1 13\n",
+      "output": "OK"
+    },
+    {
+      "name": "pattern_many_duplicates_n25",
+      "input": "25\n1 8 15 22 5 12 19 2 9 16 23 6 13 20 3 10 17 24 7 14 21 4 11 18 1\n",
+      "output": "OK"
+    },
+    {
+      "name": "shuffled_one_duplicate_n30",
+      "input": "30\n15 19 11 12 28 6 8 23 14 17 24 16 4 22 29 15 3 5 25 13 2 9 7 21 27 1 20 10 26 18\n",
+      "output": "OK"
+    }
+  ]
+}
