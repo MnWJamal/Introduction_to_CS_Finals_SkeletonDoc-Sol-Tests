@@ -1,0 +1,804 @@
+{
+  "tests": [
+    {
+      "name": "edge_00_a",
+      "input": "A\n",
+      "output": "A\n"
+    },
+    {
+      "name": "edge_01_z",
+      "input": "Z\n",
+      "output": "Z\n"
+    },
+    {
+      "name": "edge_02_aa",
+      "input": "AA\n",
+      "output": "A\nAA\n"
+    },
+    {
+      "name": "edge_03_ab",
+      "input": "AB\n",
+      "output": "A\nAB\nB\nBA\n"
+    },
+    {
+      "name": "edge_04_ba",
+      "input": "BA\n",
+      "output": "A\nAB\nB\nBA\n"
+    },
+    {
+      "name": "edge_05_zz",
+      "input": "ZZ\n",
+      "output": "Z\nZZ\n"
+    },
+    {
+      "name": "edge_06_aaa",
+      "input": "AAA\n",
+      "output": "A\nAA\nAAA\n"
+    },
+    {
+      "name": "edge_07_aab",
+      "input": "AAB\n",
+      "output": "A\nAA\nAAB\nAB\nABA\nB\nBA\nBAA\n"
+    },
+    {
+      "name": "edge_08_aba",
+      "input": "ABA\n",
+      "output": "A\nAA\nAAB\nAB\nABA\nB\nBA\nBAA\n"
+    },
+    {
+      "name": "edge_09_baa",
+      "input": "BAA\n",
+      "output": "A\nAA\nAAB\nAB\nABA\nB\nBA\nBAA\n"
+    },
+    {
+      "name": "edge_10_abc",
+      "input": "ABC\n",
+      "output": "A\nAB\nABC\nAC\nACB\nB\nBA\nBAC\nBC\nBCA\nC\nCA\nCAB\nCB\nCBA\n"
+    },
+    {
+      "name": "edge_11_cba",
+      "input": "CBA\n",
+      "output": "A\nAB\nABC\nAC\nACB\nB\nBA\nBAC\nBC\nBCA\nC\nCA\nCAB\nCB\nCBA\n"
+    },
+    {
+      "name": "edge_12_aaaa",
+      "input": "AAAA\n",
+      "output": "A\nAA\nAAA\nAAAA\n"
+    },
+    {
+      "name": "edge_13_aaab",
+      "input": "AAAB\n",
+      "output": "A\nAA\nAAA\nAAAB\nAAB\nAABA\nAB\nABA\nABAA\nB\nBA\nBAA\nBAAA\n"
+    },
+    {
+      "name": "edge_14_aabb",
+      "input": "AABB\n",
+      "output": "A\nAA\nAAB\nAABB\nAB\nABA\nABAB\nABB\nABBA\nB\nBA\nBAA\nBAAB\nBAB\nBABA\nBB\nBBA\nBBAA\n"
+    },
+    {
+      "name": "edge_15_abcd",
+      "input": "ABCD\n",
+      "output": "A\nAB\nABC\nABCD\nABD\nABDC\nAC\nACB\nACBD\nACD\nACDB\nAD\nADB\nADBC\nADC\nADCB\nB\nBA\nBAC\nBACD\nBAD\nBADC\nBC\nBCA\nBCAD\nBCD\nBCDA\nBD\nBDA\nBDAC\nBDC\nBDCA\nC\nCA\nCAB\nCABD\nCAD\nCADB\nCB\nCBA\nCBAD\nCBD\nCBDA\nCD\nCDA\nCDAB\nCDB\nCDBA\nD\nDA\nDAB\nDABC\nDAC\nDACB\nDB\nDBA\nDBAC\nDBC\nDBCA\nDC\nDCA\nDCAB\nDCB\nDCBA\n"
+    },
+    {
+      "name": "edge_16_dcba",
+      "input": "DCBA\n",
+      "output": "A\nAB\nABC\nABCD\nABD\nABDC\nAC\nACB\nACBD\nACD\nACDB\nAD\nADB\nADBC\nADC\nADCB\nB\nBA\nBAC\nBACD\nBAD\nBADC\nBC\nBCA\nBCAD\nBCD\nBCDA\nBD\nBDA\nBDAC\nBDC\nBDCA\nC\nCA\nCAB\nCABD\nCAD\nCADB\nCB\nCBA\nCBAD\nCBD\nCBDA\nCD\nCDA\nCDAB\nCDB\nCDBA\nD\nDA\nDAB\nDABC\nDAC\nDACB\nDB\nDBA\nDBAC\nDBC\nDBCA\nDC\nDCA\nDCAB\nDCB\nDCBA\n"
+    },
+    {
+      "name": "edge_17_saab",
+      "input": "SAAB\n",
+      "output": "A\nAA\nAAB\nAABS\nAAS\nAASB\nAB\nABA\nABAS\nABS\nABSA\nAS\nASA\nASAB\nASB\nASBA\nB\nBA\nBAA\nBAAS\nBAS\nBASA\nBS\nBSA\nBSAA\nS\nSA\nSAA\nSAAB\nSAB\nSABA\nSB\nSBA\nSBAA\n"
+    },
+    {
+      "name": "edge_18_baba",
+      "input": "BABA\n",
+      "output": "A\nAA\nAAB\nAABB\nAB\nABA\nABAB\nABB\nABBA\nB\nBA\nBAA\nBAAB\nBAB\nBABA\nBB\nBBA\nBBAA\n"
+    },
+    {
+      "name": "edge_19_zaza",
+      "input": "ZAZA\n",
+      "output": "A\nAA\nAAZ\nAAZZ\nAZ\nAZA\nAZAZ\nAZZ\nAZZA\nZ\nZA\nZAA\nZAAZ\nZAZ\nZAZA\nZZ\nZZA\nZZAA\n"
+    },
+    {
+      "name": "edge_20_abcde",
+      "input": "ABCDE\n",
+      "output": "A\nAB\nABC\nABCD\nABCDE\nABCE\nABCED\nABD\nABDC\nABDCE\nABDE\nABDEC\nABE\nABEC\nABECD\nABED\nABEDC\nAC\nACB\nACBD\nACBDE\nACBE\nACBED\nACD\nACDB\nACDBE\nACDE\nACDEB\nACE\nACEB\nACEBD\nACED\nACEDB\nAD\nADB\nADBC\nADBCE\nADBE\nADBEC\nADC\nADCB\nADCBE\nADCE\nADCEB\nADE\nADEB\nADEBC\nADEC\nADECB\nAE\nAEB\nAEBC\nAEBCD\nAEBD\nAEBDC\nAEC\nAECB\nAECBD\nAECD\nAECDB\nAED\nAEDB\nAEDBC\nAEDC\nAEDCB\nB\nBA\nBAC\nBACD\nBACDE\nBACE\nBACED\nBAD\nBADC\nBADCE\nBADE\nBADEC\nBAE\nBAEC\nBAECD\nBAED\nBAEDC\nBC\nBCA\nBCAD\nBCADE\nBCAE\nBCAED\nBCD\nBCDA\nBCDAE\nBCDE\nBCDEA\nBCE\nBCEA\nBCEAD\nBCED\nBCEDA\nBD\nBDA\nBDAC\nBDACE\nBDAE\nBDAEC\nBDC\nBDCA\nBDCAE\nBDCE\nBDCEA\nBDE\nBDEA\nBDEAC\nBDEC\nBDECA\nBE\nBEA\nBEAC\nBEACD\nBEAD\nBEADC\nBEC\nBECA\nBECAD\nBECD\nBECDA\nBED\nBEDA\nBEDAC\nBEDC\nBEDCA\nC\nCA\nCAB\nCABD\nCABDE\nCABE\nCABED\nCAD\nCADB\nCADBE\nCADE\nCADEB\nCAE\nCAEB\nCAEBD\nCAED\nCAEDB\nCB\nCBA\nCBAD\nCBADE\nCBAE\nCBAED\nCBD\nCBDA\nCBDAE\nCBDE\nCBDEA\nCBE\nCBEA\nCBEAD\nCBED\nCBEDA\nCD\nCDA\nCDAB\nCDABE\nCDAE\nCDAEB\nCDB\nCDBA\nCDBAE\nCDBE\nCDBEA\nCDE\nCDEA\nCDEAB\nCDEB\nCDEBA\nCE\nCEA\nCEAB\nCEABD\nCEAD\nCEADB\nCEB\nCEBA\nCEBAD\nCEBD\nCEBDA\nCED\nCEDA\nCEDAB\nCEDB\nCEDBA\nD\nDA\nDAB\nDABC\nDABCE\nDABE\nDABEC\nDAC\nDACB\nDACBE\nDACE\nDACEB\nDAE\nDAEB\nDAEBC\nDAEC\nDAECB\nDB\nDBA\nDBAC\nDBACE\nDBAE\nDBAEC\nDBC\nDBCA\nDBCAE\nDBCE\nDBCEA\nDBE\nDBEA\nDBEAC\nDBEC\nDBECA\nDC\nDCA\nDCAB\nDCABE\nDCAE\nDCAEB\nDCB\nDCBA\nDCBAE\nDCBE\nDCBEA\nDCE\nDCEA\nDCEAB\nDCEB\nDCEBA\nDE\nDEA\nDEAB\nDEABC\nDEAC\nDEACB\nDEB\nDEBA\nDEBAC\nDEBC\nDEBCA\nDEC\nDECA\nDECAB\nDECB\nDECBA\nE\nEA\nEAB\nEABC\nEABCD\nEABD\nEABDC\nEAC\nEACB\nEACBD\nEACD\nEACDB\nEAD\nEADB\nEADBC\nEADC\nEADCB\nEB\nEBA\nEBAC\nEBACD\nEBAD\nEBADC\nEBC\nEBCA\nEBCAD\nEBCD\nEBCDA\nEBD\nEBDA\nEBDAC\nEBDC\nEBDCA\nEC\nECA\nECAB\nECABD\nECAD\nECADB\nECB\nECBA\nECBAD\nECBD\nECBDA\nECD\nECDA\nECDAB\nECDB\nECDBA\nED\nEDA\nEDAB\nEDABC\nEDAC\nEDACB\nEDB\nEDBA\nEDBAC\nEDBC\nEDBCA\nEDC\nEDCA\nEDCAB\nEDCB\nEDCBA\n"
+    },
+    {
+      "name": "edge_21_aabbc",
+      "input": "AABBC\n",
+      "output": "A\nAA\nAAB\nAABB\nAABBC\nAABC\nAABCB\nAAC\nAACB\nAACBB\nAB\nABA\nABAB\nABABC\nABAC\nABACB\nABB\nABBA\nABBAC\nABBC\nABBCA\nABC\nABCA\nABCAB\nABCB\nABCBA\nAC\nACA\nACAB\nACABB\nACB\nACBA\nACBAB\nACBB\nACBBA\nB\nBA\nBAA\nBAAB\nBAABC\nBAAC\nBAACB\nBAB\nBABA\nBABAC\nBABC\nBABCA\nBAC\nBACA\nBACAB\nBACB\nBACBA\nBB\nBBA\nBBAA\nBBAAC\nBBAC\nBBACA\nBBC\nBBCA\nBBCAA\nBC\nBCA\nBCAA\nBCAAB\nBCAB\nBCABA\nBCB\nBCBA\nBCBAA\nC\nCA\nCAA\nCAAB\nCAABB\nCAB\nCABA\nCABAB\nCABB\nCABBA\nCB\nCBA\nCBAA\nCBAAB\nCBAB\nCBABA\nCBB\nCBBA\nCBBAA\n"
+    },
+    {
+      "name": "edge_22_abbcc",
+      "input": "ABBCC\n",
+      "output": "A\nAB\nABB\nABBC\nABBCC\nABC\nABCB\nABCBC\nABCC\nABCCB\nAC\nACB\nACBB\nACBBC\nACBC\nACBCB\nACC\nACCB\nACCBB\nB\nBA\nBAB\nBABC\nBABCC\nBAC\nBACB\nBACBC\nBACC\nBACCB\nBB\nBBA\nBBAC\nBBACC\nBBC\nBBCA\nBBCAC\nBBCC\nBBCCA\nBC\nBCA\nBCAB\nBCABC\nBCAC\nBCACB\nBCB\nBCBA\nBCBAC\nBCBC\nBCBCA\nBCC\nBCCA\nBCCAB\nBCCB\nBCCBA\nC\nCA\nCAB\nCABB\nCABBC\nCABC\nCABCB\nCAC\nCACB\nCACBB\nCB\nCBA\nCBAB\nCBABC\nCBAC\nCBACB\nCBB\nCBBA\nCBBAC\nCBBC\nCBBCA\nCBC\nCBCA\nCBCAB\nCBCB\nCBCBA\nCC\nCCA\nCCAB\nCCABB\nCCB\nCCBA\nCCBAB\nCCBB\nCCBBA\n"
+    },
+    {
+      "name": "edge_23_banan",
+      "input": "BANAN\n",
+      "output": "A\nAA\nAAB\nAABN\nAABNN\nAAN\nAANB\nAANBN\nAANN\nAANNB\nAB\nABA\nABAN\nABANN\nABN\nABNA\nABNAN\nABNN\nABNNA\nAN\nANA\nANAB\nANABN\nANAN\nANANB\nANB\nANBA\nANBAN\nANBN\nANBNA\nANN\nANNA\nANNAB\nANNB\nANNBA\nB\nBA\nBAA\nBAAN\nBAANN\nBAN\nBANA\nBANAN\nBANN\nBANNA\nBN\nBNA\nBNAA\nBNAAN\nBNAN\nBNANA\nBNN\nBNNA\nBNNAA\nN\nNA\nNAA\nNAAB\nNAABN\nNAAN\nNAANB\nNAB\nNABA\nNABAN\nNABN\nNABNA\nNAN\nNANA\nNANAB\nNANB\nNANBA\nNB\nNBA\nNBAA\nNBAAN\nNBAN\nNBANA\nNBN\nNBNA\nNBNAA\nNN\nNNA\nNNAA\nNNAAB\nNNAB\nNNABA\nNNB\nNNBA\nNNBAA\n"
+    },
+    {
+      "name": "edge_24_level",
+      "input": "LEVEL\n",
+      "output": "E\nEE\nEEL\nEELL\nEELLV\nEELV\nEELVL\nEEV\nEEVL\nEEVLL\nEL\nELE\nELEL\nELELV\nELEV\nELEVL\nELL\nELLE\nELLEV\nELLV\nELLVE\nELV\nELVE\nELVEL\nELVL\nELVLE\nEV\nEVE\nEVEL\nEVELL\nEVL\nEVLE\nEVLEL\nEVLL\nEVLLE\nL\nLE\nLEE\nLEEL\nLEELV\nLEEV\nLEEVL\nLEL\nLELE\nLELEV\nLELV\nLELVE\nLEV\nLEVE\nLEVEL\nLEVL\nLEVLE\nLL\nLLE\nLLEE\nLLEEV\nLLEV\nLLEVE\nLLV\nLLVE\nLLVEE\nLV\nLVE\nLVEE\nLVEEL\nLVEL\nLVELE\nLVL\nLVLE\nLVLEE\nV\nVE\nVEE\nVEEL\nVEELL\nVEL\nVELE\nVELEL\nVELL\nVELLE\nVL\nVLE\nVLEE\nVLEEL\nVLEL\nVLELE\nVLL\nVLLE\nVLLEE\n"
+    },
+    {
+      "name": "edge_25_hello",
+      "input": "HELLO\n",
+      "output": "E\nEH\nEHL\nEHLL\nEHLLO\nEHLO\nEHLOL\nEHO\nEHOL\nEHOLL\nEL\nELH\nELHL\nELHLO\nELHO\nELHOL\nELL\nELLH\nELLHO\nELLO\nELLOH\nELO\nELOH\nELOHL\nELOL\nELOLH\nEO\nEOH\nEOHL\nEOHLL\nEOL\nEOLH\nEOLHL\nEOLL\nEOLLH\nH\nHE\nHEL\nHELL\nHELLO\nHELO\nHELOL\nHEO\nHEOL\nHEOLL\nHL\nHLE\nHLEL\nHLELO\nHLEO\nHLEOL\nHLL\nHLLE\nHLLEO\nHLLO\nHLLOE\nHLO\nHLOE\nHLOEL\nHLOL\nHLOLE\nHO\nHOE\nHOEL\nHOELL\nHOL\nHOLE\nHOLEL\nHOLL\nHOLLE\nL\nLE\nLEH\nLEHL\nLEHLO\nLEHO\nLEHOL\nLEL\nLELH\nLELHO\nLELO\nLELOH\nLEO\nLEOH\nLEOHL\nLEOL\nLEOLH\nLH\nLHE\nLHEL\nLHELO\nLHEO\nLHEOL\nLHL\nLHLE\nLHLEO\nLHLO\nLHLOE\nLHO\nLHOE\nLHOEL\nLHOL\nLHOLE\nLL\nLLE\nLLEH\nLLEHO\nLLEO\nLLEOH\nLLH\nLLHE\nLLHEO\nLLHO\nLLHOE\nLLO\nLLOE\nLLOEH\nLLOH\nLLOHE\nLO\nLOE\nLOEH\nLOEHL\nLOEL\nLOELH\nLOH\nLOHE\nLOHEL\nLOHL\nLOHLE\nLOL\nLOLE\nLOLEH\nLOLH\nLOLHE\nO\nOE\nOEH\nOEHL\nOEHLL\nOEL\nOELH\nOELHL\nOELL\nOELLH\nOH\nOHE\nOHEL\nOHELL\nOHL\nOHLE\nOHLEL\nOHLL\nOHLLE\nOL\nOLE\nOLEH\nOLEHL\nOLEL\nOLELH\nOLH\nOLHE\nOLHEL\nOLHL\nOLHLE\nOLL\nOLLE\nOLLEH\nOLLH\nOLLHE\n"
+    },
+    {
+      "name": "edge_26_world",
+      "input": "WORLD\n",
+      "output": "D\nDL\nDLO\nDLOR\nDLORW\nDLOW\nDLOWR\nDLR\nDLRO\nDLROW\nDLRW\nDLRWO\nDLW\nDLWO\nDLWOR\nDLWR\nDLWRO\nDO\nDOL\nDOLR\nDOLRW\nDOLW\nDOLWR\nDOR\nDORL\nDORLW\nDORW\nDORWL\nDOW\nDOWL\nDOWLR\nDOWR\nDOWRL\nDR\nDRL\nDRLO\nDRLOW\nDRLW\nDRLWO\nDRO\nDROL\nDROLW\nDROW\nDROWL\nDRW\nDRWL\nDRWLO\nDRWO\nDRWOL\nDW\nDWL\nDWLO\nDWLOR\nDWLR\nDWLRO\nDWO\nDWOL\nDWOLR\nDWOR\nDWORL\nDWR\nDWRL\nDWRLO\nDWRO\nDWROL\nL\nLD\nLDO\nLDOR\nLDORW\nLDOW\nLDOWR\nLDR\nLDRO\nLDROW\nLDRW\nLDRWO\nLDW\nLDWO\nLDWOR\nLDWR\nLDWRO\nLO\nLOD\nLODR\nLODRW\nLODW\nLODWR\nLOR\nLORD\nLORDW\nLORW\nLORWD\nLOW\nLOWD\nLOWDR\nLOWR\nLOWRD\nLR\nLRD\nLRDO\nLRDOW\nLRDW\nLRDWO\nLRO\nLROD\nLRODW\nLROW\nLROWD\nLRW\nLRWD\nLRWDO\nLRWO\nLRWOD\nLW\nLWD\nLWDO\nLWDOR\nLWDR\nLWDRO\nLWO\nLWOD\nLWODR\nLWOR\nLWORD\nLWR\nLWRD\nLWRDO\nLWRO\nLWROD\nO\nOD\nODL\nODLR\nODLRW\nODLW\nODLWR\nODR\nODRL\nODRLW\nODRW\nODRWL\nODW\nODWL\nODWLR\nODWR\nODWRL\nOL\nOLD\nOLDR\nOLDRW\nOLDW\nOLDWR\nOLR\nOLRD\nOLRDW\nOLRW\nOLRWD\nOLW\nOLWD\nOLWDR\nOLWR\nOLWRD\nOR\nORD\nORDL\nORDLW\nORDW\nORDWL\nORL\nORLD\nORLDW\nORLW\nORLWD\nORW\nORWD\nORWDL\nORWL\nORWLD\nOW\nOWD\nOWDL\nOWDLR\nOWDR\nOWDRL\nOWL\nOWLD\nOWLDR\nOWLR\nOWLRD\nOWR\nOWRD\nOWRDL\nOWRL\nOWRLD\nR\nRD\nRDL\nRDLO\nRDLOW\nRDLW\nRDLWO\nRDO\nRDOL\nRDOLW\nRDOW\nRDOWL\nRDW\nRDWL\nRDWLO\nRDWO\nRDWOL\nRL\nRLD\nRLDO\nRLDOW\nRLDW\nRLDWO\nRLO\nRLOD\nRLODW\nRLOW\nRLOWD\nRLW\nRLWD\nRLWDO\nRLWO\nRLWOD\nRO\nROD\nRODL\nRODLW\nRODW\nRODWL\nROL\nROLD\nROLDW\nROLW\nROLWD\nROW\nROWD\nROWDL\nROWL\nROWLD\nRW\nRWD\nRWDL\nRWDLO\nRWDO\nRWDOL\nRWL\nRWLD\nRWLDO\nRWLO\nRWLOD\nRWO\nRWOD\nRWODL\nRWOL\nRWOLD\nW\nWD\nWDL\nWDLO\nWDLOR\nWDLR\nWDLRO\nWDO\nWDOL\nWDOLR\nWDOR\nWDORL\nWDR\nWDRL\nWDRLO\nWDRO\nWDROL\nWL\nWLD\nWLDO\nWLDOR\nWLDR\nWLDRO\nWLO\nWLOD\nWLODR\nWLOR\nWLORD\nWLR\nWLRD\nWLRDO\nWLRO\nWLROD\nWO\nWOD\nWODL\nWODLR\nWODR\nWODRL\nWOL\nWOLD\nWOLDR\nWOLR\nWOLRD\nWOR\nWORD\nWORDL\nWORL\nWORLD\nWR\nWRD\nWRDL\nWRDLO\nWRDO\nWRDOL\nWRL\nWRLD\nWRLDO\nWRLO\nWRLOD\nWRO\nWROD\nWRODL\nWROL\nWROLD\n"
+    },
+    {
+      "name": "edge_27_qqqqq",
+      "input": "QQQQQ\n",
+      "output": "Q\nQQ\nQQQ\nQQQQ\nQQQQQ\n"
+    },
+    {
+      "name": "edge_28_abcde",
+      "input": "ABCDE\n",
+      "output": "A\nAB\nABC\nABCD\nABCDE\nABCE\nABCED\nABD\nABDC\nABDCE\nABDE\nABDEC\nABE\nABEC\nABECD\nABED\nABEDC\nAC\nACB\nACBD\nACBDE\nACBE\nACBED\nACD\nACDB\nACDBE\nACDE\nACDEB\nACE\nACEB\nACEBD\nACED\nACEDB\nAD\nADB\nADBC\nADBCE\nADBE\nADBEC\nADC\nADCB\nADCBE\nADCE\nADCEB\nADE\nADEB\nADEBC\nADEC\nADECB\nAE\nAEB\nAEBC\nAEBCD\nAEBD\nAEBDC\nAEC\nAECB\nAECBD\nAECD\nAECDB\nAED\nAEDB\nAEDBC\nAEDC\nAEDCB\nB\nBA\nBAC\nBACD\nBACDE\nBACE\nBACED\nBAD\nBADC\nBADCE\nBADE\nBADEC\nBAE\nBAEC\nBAECD\nBAED\nBAEDC\nBC\nBCA\nBCAD\nBCADE\nBCAE\nBCAED\nBCD\nBCDA\nBCDAE\nBCDE\nBCDEA\nBCE\nBCEA\nBCEAD\nBCED\nBCEDA\nBD\nBDA\nBDAC\nBDACE\nBDAE\nBDAEC\nBDC\nBDCA\nBDCAE\nBDCE\nBDCEA\nBDE\nBDEA\nBDEAC\nBDEC\nBDECA\nBE\nBEA\nBEAC\nBEACD\nBEAD\nBEADC\nBEC\nBECA\nBECAD\nBECD\nBECDA\nBED\nBEDA\nBEDAC\nBEDC\nBEDCA\nC\nCA\nCAB\nCABD\nCABDE\nCABE\nCABED\nCAD\nCADB\nCADBE\nCADE\nCADEB\nCAE\nCAEB\nCAEBD\nCAED\nCAEDB\nCB\nCBA\nCBAD\nCBADE\nCBAE\nCBAED\nCBD\nCBDA\nCBDAE\nCBDE\nCBDEA\nCBE\nCBEA\nCBEAD\nCBED\nCBEDA\nCD\nCDA\nCDAB\nCDABE\nCDAE\nCDAEB\nCDB\nCDBA\nCDBAE\nCDBE\nCDBEA\nCDE\nCDEA\nCDEAB\nCDEB\nCDEBA\nCE\nCEA\nCEAB\nCEABD\nCEAD\nCEADB\nCEB\nCEBA\nCEBAD\nCEBD\nCEBDA\nCED\nCEDA\nCEDAB\nCEDB\nCEDBA\nD\nDA\nDAB\nDABC\nDABCE\nDABE\nDABEC\nDAC\nDACB\nDACBE\nDACE\nDACEB\nDAE\nDAEB\nDAEBC\nDAEC\nDAECB\nDB\nDBA\nDBAC\nDBACE\nDBAE\nDBAEC\nDBC\nDBCA\nDBCAE\nDBCE\nDBCEA\nDBE\nDBEA\nDBEAC\nDBEC\nDBECA\nDC\nDCA\nDCAB\nDCABE\nDCAE\nDCAEB\nDCB\nDCBA\nDCBAE\nDCBE\nDCBEA\nDCE\nDCEA\nDCEAB\nDCEB\nDCEBA\nDE\nDEA\nDEAB\nDEABC\nDEAC\nDEACB\nDEB\nDEBA\nDEBAC\nDEBC\nDEBCA\nDEC\nDECA\nDECAB\nDECB\nDECBA\nE\nEA\nEAB\nEABC\nEABCD\nEABD\nEABDC\nEAC\nEACB\nEACBD\nEACD\nEACDB\nEAD\nEADB\nEADBC\nEADC\nEADCB\nEB\nEBA\nEBAC\nEBACD\nEBAD\nEBADC\nEBC\nEBCA\nEBCAD\nEBCD\nEBCDA\nEBD\nEBDA\nEBDAC\nEBDC\nEBDCA\nEC\nECA\nECAB\nECABD\nECAD\nECADB\nECB\nECBA\nECBAD\nECBD\nECBDA\nECD\nECDA\nECDAB\nECDB\nECDBA\nED\nEDA\nEDAB\nEDABC\nEDAC\nEDACB\nEDB\nEDBA\nEDBAC\nEDBC\nEDBCA\nEDC\nEDCA\nEDCAB\nEDCB\nEDCBA\n"
+    },
+    {
+      "name": "edge_29_edcba",
+      "input": "EDCBA\n",
+      "output": "A\nAB\nABC\nABCD\nABCDE\nABCE\nABCED\nABD\nABDC\nABDCE\nABDE\nABDEC\nABE\nABEC\nABECD\nABED\nABEDC\nAC\nACB\nACBD\nACBDE\nACBE\nACBED\nACD\nACDB\nACDBE\nACDE\nACDEB\nACE\nACEB\nACEBD\nACED\nACEDB\nAD\nADB\nADBC\nADBCE\nADBE\nADBEC\nADC\nADCB\nADCBE\nADCE\nADCEB\nADE\nADEB\nADEBC\nADEC\nADECB\nAE\nAEB\nAEBC\nAEBCD\nAEBD\nAEBDC\nAEC\nAECB\nAECBD\nAECD\nAECDB\nAED\nAEDB\nAEDBC\nAEDC\nAEDCB\nB\nBA\nBAC\nBACD\nBACDE\nBACE\nBACED\nBAD\nBADC\nBADCE\nBADE\nBADEC\nBAE\nBAEC\nBAECD\nBAED\nBAEDC\nBC\nBCA\nBCAD\nBCADE\nBCAE\nBCAED\nBCD\nBCDA\nBCDAE\nBCDE\nBCDEA\nBCE\nBCEA\nBCEAD\nBCED\nBCEDA\nBD\nBDA\nBDAC\nBDACE\nBDAE\nBDAEC\nBDC\nBDCA\nBDCAE\nBDCE\nBDCEA\nBDE\nBDEA\nBDEAC\nBDEC\nBDECA\nBE\nBEA\nBEAC\nBEACD\nBEAD\nBEADC\nBEC\nBECA\nBECAD\nBECD\nBECDA\nBED\nBEDA\nBEDAC\nBEDC\nBEDCA\nC\nCA\nCAB\nCABD\nCABDE\nCABE\nCABED\nCAD\nCADB\nCADBE\nCADE\nCADEB\nCAE\nCAEB\nCAEBD\nCAED\nCAEDB\nCB\nCBA\nCBAD\nCBADE\nCBAE\nCBAED\nCBD\nCBDA\nCBDAE\nCBDE\nCBDEA\nCBE\nCBEA\nCBEAD\nCBED\nCBEDA\nCD\nCDA\nCDAB\nCDABE\nCDAE\nCDAEB\nCDB\nCDBA\nCDBAE\nCDBE\nCDBEA\nCDE\nCDEA\nCDEAB\nCDEB\nCDEBA\nCE\nCEA\nCEAB\nCEABD\nCEAD\nCEADB\nCEB\nCEBA\nCEBAD\nCEBD\nCEBDA\nCED\nCEDA\nCEDAB\nCEDB\nCEDBA\nD\nDA\nDAB\nDABC\nDABCE\nDABE\nDABEC\nDAC\nDACB\nDACBE\nDACE\nDACEB\nDAE\nDAEB\nDAEBC\nDAEC\nDAECB\nDB\nDBA\nDBAC\nDBACE\nDBAE\nDBAEC\nDBC\nDBCA\nDBCAE\nDBCE\nDBCEA\nDBE\nDBEA\nDBEAC\nDBEC\nDBECA\nDC\nDCA\nDCAB\nDCABE\nDCAE\nDCAEB\nDCB\nDCBA\nDCBAE\nDCBE\nDCBEA\nDCE\nDCEA\nDCEAB\nDCEB\nDCEBA\nDE\nDEA\nDEAB\nDEABC\nDEAC\nDEACB\nDEB\nDEBA\nDEBAC\nDEBC\nDEBCA\nDEC\nDECA\nDECAB\nDECB\nDECBA\nE\nEA\nEAB\nEABC\nEABCD\nEABD\nEABDC\nEAC\nEACB\nEACBD\nEACD\nEACDB\nEAD\nEADB\nEADBC\nEADC\nEADCB\nEB\nEBA\nEBAC\nEBACD\nEBAD\nEBADC\nEBC\nEBCA\nEBCAD\nEBCD\nEBCDA\nEBD\nEBDA\nEBDAC\nEBDC\nEBDCA\nEC\nECA\nECAB\nECABD\nECAD\nECADB\nECB\nECBA\nECBAD\nECBD\nECBDA\nECD\nECDA\nECDAB\nECDB\nECDBA\nED\nEDA\nEDAB\nEDABC\nEDAC\nEDACB\nEDB\nEDBA\nEDBAC\nEDBC\nEDBCA\nEDC\nEDCA\nEDCAB\nEDCB\nEDCBA\n"
+    },
+    {
+      "name": "random_030_bbbbb",
+      "input": "BBBBB\n",
+      "output": "B\nBB\nBBB\nBBBB\nBBBBB\n"
+    },
+    {
+      "name": "random_031_h",
+      "input": "H\n",
+      "output": "H\n"
+    },
+    {
+      "name": "random_032_bg",
+      "input": "BG\n",
+      "output": "B\nBG\nG\nGB\n"
+    },
+    {
+      "name": "random_033_dfeac",
+      "input": "DFEAC\n",
+      "output": "A\nAC\nACD\nACDE\nACDEF\nACDF\nACDFE\nACE\nACED\nACEDF\nACEF\nACEFD\nACF\nACFD\nACFDE\nACFE\nACFED\nAD\nADC\nADCE\nADCEF\nADCF\nADCFE\nADE\nADEC\nADECF\nADEF\nADEFC\nADF\nADFC\nADFCE\nADFE\nADFEC\nAE\nAEC\nAECD\nAECDF\nAECF\nAECFD\nAED\nAEDC\nAEDCF\nAEDF\nAEDFC\nAEF\nAEFC\nAEFCD\nAEFD\nAEFDC\nAF\nAFC\nAFCD\nAFCDE\nAFCE\nAFCED\nAFD\nAFDC\nAFDCE\nAFDE\nAFDEC\nAFE\nAFEC\nAFECD\nAFED\nAFEDC\nC\nCA\nCAD\nCADE\nCADEF\nCADF\nCADFE\nCAE\nCAED\nCAEDF\nCAEF\nCAEFD\nCAF\nCAFD\nCAFDE\nCAFE\nCAFED\nCD\nCDA\nCDAE\nCDAEF\nCDAF\nCDAFE\nCDE\nCDEA\nCDEAF\nCDEF\nCDEFA\nCDF\nCDFA\nCDFAE\nCDFE\nCDFEA\nCE\nCEA\nCEAD\nCEADF\nCEAF\nCEAFD\nCED\nCEDA\nCEDAF\nCEDF\nCEDFA\nCEF\nCEFA\nCEFAD\nCEFD\nCEFDA\nCF\nCFA\nCFAD\nCFADE\nCFAE\nCFAED\nCFD\nCFDA\nCFDAE\nCFDE\nCFDEA\nCFE\nCFEA\nCFEAD\nCFED\nCFEDA\nD\nDA\nDAC\nDACE\nDACEF\nDACF\nDACFE\nDAE\nDAEC\nDAECF\nDAEF\nDAEFC\nDAF\nDAFC\nDAFCE\nDAFE\nDAFEC\nDC\nDCA\nDCAE\nDCAEF\nDCAF\nDCAFE\nDCE\nDCEA\nDCEAF\nDCEF\nDCEFA\nDCF\nDCFA\nDCFAE\nDCFE\nDCFEA\nDE\nDEA\nDEAC\nDEACF\nDEAF\nDEAFC\nDEC\nDECA\nDECAF\nDECF\nDECFA\nDEF\nDEFA\nDEFAC\nDEFC\nDEFCA\nDF\nDFA\nDFAC\nDFACE\nDFAE\nDFAEC\nDFC\nDFCA\nDFCAE\nDFCE\nDFCEA\nDFE\nDFEA\nDFEAC\nDFEC\nDFECA\nE\nEA\nEAC\nEACD\nEACDF\nEACF\nEACFD\nEAD\nEADC\nEADCF\nEADF\nEADFC\nEAF\nEAFC\nEAFCD\nEAFD\nEAFDC\nEC\nECA\nECAD\nECADF\nECAF\nECAFD\nECD\nECDA\nECDAF\nECDF\nECDFA\nECF\nECFA\nECFAD\nECFD\nECFDA\nED\nEDA\nEDAC\nEDACF\nEDAF\nEDAFC\nEDC\nEDCA\nEDCAF\nEDCF\nEDCFA\nEDF\nEDFA\nEDFAC\nEDFC\nEDFCA\nEF\nEFA\nEFAC\nEFACD\nEFAD\nEFADC\nEFC\nEFCA\nEFCAD\nEFCD\nEFCDA\nEFD\nEFDA\nEFDAC\nEFDC\nEFDCA\nF\nFA\nFAC\nFACD\nFACDE\nFACE\nFACED\nFAD\nFADC\nFADCE\nFADE\nFADEC\nFAE\nFAEC\nFAECD\nFAED\nFAEDC\nFC\nFCA\nFCAD\nFCADE\nFCAE\nFCAED\nFCD\nFCDA\nFCDAE\nFCDE\nFCDEA\nFCE\nFCEA\nFCEAD\nFCED\nFCEDA\nFD\nFDA\nFDAC\nFDACE\nFDAE\nFDAEC\nFDC\nFDCA\nFDCAE\nFDCE\nFDCEA\nFDE\nFDEA\nFDEAC\nFDEC\nFDECA\nFE\nFEA\nFEAC\nFEACD\nFEAD\nFEADC\nFEC\nFECA\nFECAD\nFECD\nFECDA\nFED\nFEDA\nFEDAC\nFEDC\nFEDCA\n"
+    },
+    {
+      "name": "random_034_fghce",
+      "input": "FGHCE\n",
+      "output": "C\nCE\nCEF\nCEFG\nCEFGH\nCEFH\nCEFHG\nCEG\nCEGF\nCEGFH\nCEGH\nCEGHF\nCEH\nCEHF\nCEHFG\nCEHG\nCEHGF\nCF\nCFE\nCFEG\nCFEGH\nCFEH\nCFEHG\nCFG\nCFGE\nCFGEH\nCFGH\nCFGHE\nCFH\nCFHE\nCFHEG\nCFHG\nCFHGE\nCG\nCGE\nCGEF\nCGEFH\nCGEH\nCGEHF\nCGF\nCGFE\nCGFEH\nCGFH\nCGFHE\nCGH\nCGHE\nCGHEF\nCGHF\nCGHFE\nCH\nCHE\nCHEF\nCHEFG\nCHEG\nCHEGF\nCHF\nCHFE\nCHFEG\nCHFG\nCHFGE\nCHG\nCHGE\nCHGEF\nCHGF\nCHGFE\nE\nEC\nECF\nECFG\nECFGH\nECFH\nECFHG\nECG\nECGF\nECGFH\nECGH\nECGHF\nECH\nECHF\nECHFG\nECHG\nECHGF\nEF\nEFC\nEFCG\nEFCGH\nEFCH\nEFCHG\nEFG\nEFGC\nEFGCH\nEFGH\nEFGHC\nEFH\nEFHC\nEFHCG\nEFHG\nEFHGC\nEG\nEGC\nEGCF\nEGCFH\nEGCH\nEGCHF\nEGF\nEGFC\nEGFCH\nEGFH\nEGFHC\nEGH\nEGHC\nEGHCF\nEGHF\nEGHFC\nEH\nEHC\nEHCF\nEHCFG\nEHCG\nEHCGF\nEHF\nEHFC\nEHFCG\nEHFG\nEHFGC\nEHG\nEHGC\nEHGCF\nEHGF\nEHGFC\nF\nFC\nFCE\nFCEG\nFCEGH\nFCEH\nFCEHG\nFCG\nFCGE\nFCGEH\nFCGH\nFCGHE\nFCH\nFCHE\nFCHEG\nFCHG\nFCHGE\nFE\nFEC\nFECG\nFECGH\nFECH\nFECHG\nFEG\nFEGC\nFEGCH\nFEGH\nFEGHC\nFEH\nFEHC\nFEHCG\nFEHG\nFEHGC\nFG\nFGC\nFGCE\nFGCEH\nFGCH\nFGCHE\nFGE\nFGEC\nFGECH\nFGEH\nFGEHC\nFGH\nFGHC\nFGHCE\nFGHE\nFGHEC\nFH\nFHC\nFHCE\nFHCEG\nFHCG\nFHCGE\nFHE\nFHEC\nFHECG\nFHEG\nFHEGC\nFHG\nFHGC\nFHGCE\nFHGE\nFHGEC\nG\nGC\nGCE\nGCEF\nGCEFH\nGCEH\nGCEHF\nGCF\nGCFE\nGCFEH\nGCFH\nGCFHE\nGCH\nGCHE\nGCHEF\nGCHF\nGCHFE\nGE\nGEC\nGECF\nGECFH\nGECH\nGECHF\nGEF\nGEFC\nGEFCH\nGEFH\nGEFHC\nGEH\nGEHC\nGEHCF\nGEHF\nGEHFC\nGF\nGFC\nGFCE\nGFCEH\nGFCH\nGFCHE\nGFE\nGFEC\nGFECH\nGFEH\nGFEHC\nGFH\nGFHC\nGFHCE\nGFHE\nGFHEC\nGH\nGHC\nGHCE\nGHCEF\nGHCF\nGHCFE\nGHE\nGHEC\nGHECF\nGHEF\nGHEFC\nGHF\nGHFC\nGHFCE\nGHFE\nGHFEC\nH\nHC\nHCE\nHCEF\nHCEFG\nHCEG\nHCEGF\nHCF\nHCFE\nHCFEG\nHCFG\nHCFGE\nHCG\nHCGE\nHCGEF\nHCGF\nHCGFE\nHE\nHEC\nHECF\nHECFG\nHECG\nHECGF\nHEF\nHEFC\nHEFCG\nHEFG\nHEFGC\nHEG\nHEGC\nHEGCF\nHEGF\nHEGFC\nHF\nHFC\nHFCE\nHFCEG\nHFCG\nHFCGE\nHFE\nHFEC\nHFECG\nHFEG\nHFEGC\nHFG\nHFGC\nHFGCE\nHFGE\nHFGEC\nHG\nHGC\nHGCE\nHGCEF\nHGCF\nHGCFE\nHGE\nHGEC\nHGECF\nHGEF\nHGEFC\nHGF\nHGFC\nHGFCE\nHGFE\nHGFEC\n"
+    },
+    {
+      "name": "random_035_hh",
+      "input": "HH\n",
+      "output": "H\nHH\n"
+    },
+    {
+      "name": "random_036_faf",
+      "input": "FAF\n",
+      "output": "A\nAF\nAFF\nF\nFA\nFAF\nFF\nFFA\n"
+    },
+    {
+      "name": "random_037_hagf",
+      "input": "HAGF\n",
+      "output": "A\nAF\nAFG\nAFGH\nAFH\nAFHG\nAG\nAGF\nAGFH\nAGH\nAGHF\nAH\nAHF\nAHFG\nAHG\nAHGF\nF\nFA\nFAG\nFAGH\nFAH\nFAHG\nFG\nFGA\nFGAH\nFGH\nFGHA\nFH\nFHA\nFHAG\nFHG\nFHGA\nG\nGA\nGAF\nGAFH\nGAH\nGAHF\nGF\nGFA\nGFAH\nGFH\nGFHA\nGH\nGHA\nGHAF\nGHF\nGHFA\nH\nHA\nHAF\nHAFG\nHAG\nHAGF\nHF\nHFA\nHFAG\nHFG\nHFGA\nHG\nHGA\nHGAF\nHGF\nHGFA\n"
+    },
+    {
+      "name": "random_038_eee",
+      "input": "EEE\n",
+      "output": "E\nEE\nEEE\n"
+    },
+    {
+      "name": "random_039_hb",
+      "input": "HB\n",
+      "output": "B\nBH\nH\nHB\n"
+    },
+    {
+      "name": "random_040_bcgc",
+      "input": "BCGC\n",
+      "output": "B\nBC\nBCC\nBCCG\nBCG\nBCGC\nBG\nBGC\nBGCC\nC\nCB\nCBC\nCBCG\nCBG\nCBGC\nCC\nCCB\nCCBG\nCCG\nCCGB\nCG\nCGB\nCGBC\nCGC\nCGCB\nG\nGB\nGBC\nGBCC\nGC\nGCB\nGCBC\nGCC\nGCCB\n"
+    },
+    {
+      "name": "random_041_bc",
+      "input": "BC\n",
+      "output": "B\nBC\nC\nCB\n"
+    },
+    {
+      "name": "random_042_e",
+      "input": "E\n",
+      "output": "E\n"
+    },
+    {
+      "name": "random_043_a",
+      "input": "A\n",
+      "output": "A\n"
+    },
+    {
+      "name": "random_044_hf",
+      "input": "HF\n",
+      "output": "F\nFH\nH\nHF\n"
+    },
+    {
+      "name": "random_045_ee",
+      "input": "EE\n",
+      "output": "E\nEE\n"
+    },
+    {
+      "name": "random_046_cgf",
+      "input": "CGF\n",
+      "output": "C\nCF\nCFG\nCG\nCGF\nF\nFC\nFCG\nFG\nFGC\nG\nGC\nGCF\nGF\nGFC\n"
+    },
+    {
+      "name": "random_047_daa",
+      "input": "DAA\n",
+      "output": "A\nAA\nAAD\nAD\nADA\nD\nDA\nDAA\n"
+    },
+    {
+      "name": "random_048_gg",
+      "input": "GG\n",
+      "output": "G\nGG\n"
+    },
+    {
+      "name": "random_049_ag",
+      "input": "AG\n",
+      "output": "A\nAG\nG\nGA\n"
+    },
+    {
+      "name": "random_050_c",
+      "input": "C\n",
+      "output": "C\n"
+    },
+    {
+      "name": "random_051_eae",
+      "input": "EAE\n",
+      "output": "A\nAE\nAEE\nE\nEA\nEAE\nEE\nEEA\n"
+    },
+    {
+      "name": "random_052_cgb",
+      "input": "CGB\n",
+      "output": "B\nBC\nBCG\nBG\nBGC\nC\nCB\nCBG\nCG\nCGB\nG\nGB\nGBC\nGC\nGCB\n"
+    },
+    {
+      "name": "random_053_b",
+      "input": "B\n",
+      "output": "B\n"
+    },
+    {
+      "name": "random_054_fdb",
+      "input": "FDB\n",
+      "output": "B\nBD\nBDF\nBF\nBFD\nD\nDB\nDBF\nDF\nDFB\nF\nFB\nFBD\nFD\nFDB\n"
+    },
+    {
+      "name": "random_055_dg",
+      "input": "DG\n",
+      "output": "D\nDG\nG\nGD\n"
+    },
+    {
+      "name": "random_056_baf",
+      "input": "BAF\n",
+      "output": "A\nAB\nABF\nAF\nAFB\nB\nBA\nBAF\nBF\nBFA\nF\nFA\nFAB\nFB\nFBA\n"
+    },
+    {
+      "name": "random_057_cf",
+      "input": "CF\n",
+      "output": "C\nCF\nF\nFC\n"
+    },
+    {
+      "name": "random_058_f",
+      "input": "F\n",
+      "output": "F\n"
+    },
+    {
+      "name": "random_059_fah",
+      "input": "FAH\n",
+      "output": "A\nAF\nAFH\nAH\nAHF\nF\nFA\nFAH\nFH\nFHA\nH\nHA\nHAF\nHF\nHFA\n"
+    },
+    {
+      "name": "random_060_h",
+      "input": "H\n",
+      "output": "H\n"
+    },
+    {
+      "name": "random_061_fabd",
+      "input": "FABD\n",
+      "output": "A\nAB\nABD\nABDF\nABF\nABFD\nAD\nADB\nADBF\nADF\nADFB\nAF\nAFB\nAFBD\nAFD\nAFDB\nB\nBA\nBAD\nBADF\nBAF\nBAFD\nBD\nBDA\nBDAF\nBDF\nBDFA\nBF\nBFA\nBFAD\nBFD\nBFDA\nD\nDA\nDAB\nDABF\nDAF\nDAFB\nDB\nDBA\nDBAF\nDBF\nDBFA\nDF\nDFA\nDFAB\nDFB\nDFBA\nF\nFA\nFAB\nFABD\nFAD\nFADB\nFB\nFBA\nFBAD\nFBD\nFBDA\nFD\nFDA\nFDAB\nFDB\nFDBA\n"
+    },
+    {
+      "name": "random_062_fbe",
+      "input": "FBE\n",
+      "output": "B\nBE\nBEF\nBF\nBFE\nE\nEB\nEBF\nEF\nEFB\nF\nFB\nFBE\nFE\nFEB\n"
+    },
+    {
+      "name": "random_063_g",
+      "input": "G\n",
+      "output": "G\n"
+    },
+    {
+      "name": "random_064_ag",
+      "input": "AG\n",
+      "output": "A\nAG\nG\nGA\n"
+    },
+    {
+      "name": "random_065_cdega",
+      "input": "CDEGA\n",
+      "output": "A\nAC\nACD\nACDE\nACDEG\nACDG\nACDGE\nACE\nACED\nACEDG\nACEG\nACEGD\nACG\nACGD\nACGDE\nACGE\nACGED\nAD\nADC\nADCE\nADCEG\nADCG\nADCGE\nADE\nADEC\nADECG\nADEG\nADEGC\nADG\nADGC\nADGCE\nADGE\nADGEC\nAE\nAEC\nAECD\nAECDG\nAECG\nAECGD\nAED\nAEDC\nAEDCG\nAEDG\nAEDGC\nAEG\nAEGC\nAEGCD\nAEGD\nAEGDC\nAG\nAGC\nAGCD\nAGCDE\nAGCE\nAGCED\nAGD\nAGDC\nAGDCE\nAGDE\nAGDEC\nAGE\nAGEC\nAGECD\nAGED\nAGEDC\nC\nCA\nCAD\nCADE\nCADEG\nCADG\nCADGE\nCAE\nCAED\nCAEDG\nCAEG\nCAEGD\nCAG\nCAGD\nCAGDE\nCAGE\nCAGED\nCD\nCDA\nCDAE\nCDAEG\nCDAG\nCDAGE\nCDE\nCDEA\nCDEAG\nCDEG\nCDEGA\nCDG\nCDGA\nCDGAE\nCDGE\nCDGEA\nCE\nCEA\nCEAD\nCEADG\nCEAG\nCEAGD\nCED\nCEDA\nCEDAG\nCEDG\nCEDGA\nCEG\nCEGA\nCEGAD\nCEGD\nCEGDA\nCG\nCGA\nCGAD\nCGADE\nCGAE\nCGAED\nCGD\nCGDA\nCGDAE\nCGDE\nCGDEA\nCGE\nCGEA\nCGEAD\nCGED\nCGEDA\nD\nDA\nDAC\nDACE\nDACEG\nDACG\nDACGE\nDAE\nDAEC\nDAECG\nDAEG\nDAEGC\nDAG\nDAGC\nDAGCE\nDAGE\nDAGEC\nDC\nDCA\nDCAE\nDCAEG\nDCAG\nDCAGE\nDCE\nDCEA\nDCEAG\nDCEG\nDCEGA\nDCG\nDCGA\nDCGAE\nDCGE\nDCGEA\nDE\nDEA\nDEAC\nDEACG\nDEAG\nDEAGC\nDEC\nDECA\nDECAG\nDECG\nDECGA\nDEG\nDEGA\nDEGAC\nDEGC\nDEGCA\nDG\nDGA\nDGAC\nDGACE\nDGAE\nDGAEC\nDGC\nDGCA\nDGCAE\nDGCE\nDGCEA\nDGE\nDGEA\nDGEAC\nDGEC\nDGECA\nE\nEA\nEAC\nEACD\nEACDG\nEACG\nEACGD\nEAD\nEADC\nEADCG\nEADG\nEADGC\nEAG\nEAGC\nEAGCD\nEAGD\nEAGDC\nEC\nECA\nECAD\nECADG\nECAG\nECAGD\nECD\nECDA\nECDAG\nECDG\nECDGA\nECG\nECGA\nECGAD\nECGD\nECGDA\nED\nEDA\nEDAC\nEDACG\nEDAG\nEDAGC\nEDC\nEDCA\nEDCAG\nEDCG\nEDCGA\nEDG\nEDGA\nEDGAC\nEDGC\nEDGCA\nEG\nEGA\nEGAC\nEGACD\nEGAD\nEGADC\nEGC\nEGCA\nEGCAD\nEGCD\nEGCDA\nEGD\nEGDA\nEGDAC\nEGDC\nEGDCA\nG\nGA\nGAC\nGACD\nGACDE\nGACE\nGACED\nGAD\nGADC\nGADCE\nGADE\nGADEC\nGAE\nGAEC\nGAECD\nGAED\nGAEDC\nGC\nGCA\nGCAD\nGCADE\nGCAE\nGCAED\nGCD\nGCDA\nGCDAE\nGCDE\nGCDEA\nGCE\nGCEA\nGCEAD\nGCED\nGCEDA\nGD\nGDA\nGDAC\nGDACE\nGDAE\nGDAEC\nGDC\nGDCA\nGDCAE\nGDCE\nGDCEA\nGDE\nGDEA\nGDEAC\nGDEC\nGDECA\nGE\nGEA\nGEAC\nGEACD\nGEAD\nGEADC\nGEC\nGECA\nGECAD\nGECD\nGECDA\nGED\nGEDA\nGEDAC\nGEDC\nGEDCA\n"
+    },
+    {
+      "name": "random_066_cehad",
+      "input": "CEHAD\n",
+      "output": "A\nAC\nACD\nACDE\nACDEH\nACDH\nACDHE\nACE\nACED\nACEDH\nACEH\nACEHD\nACH\nACHD\nACHDE\nACHE\nACHED\nAD\nADC\nADCE\nADCEH\nADCH\nADCHE\nADE\nADEC\nADECH\nADEH\nADEHC\nADH\nADHC\nADHCE\nADHE\nADHEC\nAE\nAEC\nAECD\nAECDH\nAECH\nAECHD\nAED\nAEDC\nAEDCH\nAEDH\nAEDHC\nAEH\nAEHC\nAEHCD\nAEHD\nAEHDC\nAH\nAHC\nAHCD\nAHCDE\nAHCE\nAHCED\nAHD\nAHDC\nAHDCE\nAHDE\nAHDEC\nAHE\nAHEC\nAHECD\nAHED\nAHEDC\nC\nCA\nCAD\nCADE\nCADEH\nCADH\nCADHE\nCAE\nCAED\nCAEDH\nCAEH\nCAEHD\nCAH\nCAHD\nCAHDE\nCAHE\nCAHED\nCD\nCDA\nCDAE\nCDAEH\nCDAH\nCDAHE\nCDE\nCDEA\nCDEAH\nCDEH\nCDEHA\nCDH\nCDHA\nCDHAE\nCDHE\nCDHEA\nCE\nCEA\nCEAD\nCEADH\nCEAH\nCEAHD\nCED\nCEDA\nCEDAH\nCEDH\nCEDHA\nCEH\nCEHA\nCEHAD\nCEHD\nCEHDA\nCH\nCHA\nCHAD\nCHADE\nCHAE\nCHAED\nCHD\nCHDA\nCHDAE\nCHDE\nCHDEA\nCHE\nCHEA\nCHEAD\nCHED\nCHEDA\nD\nDA\nDAC\nDACE\nDACEH\nDACH\nDACHE\nDAE\nDAEC\nDAECH\nDAEH\nDAEHC\nDAH\nDAHC\nDAHCE\nDAHE\nDAHEC\nDC\nDCA\nDCAE\nDCAEH\nDCAH\nDCAHE\nDCE\nDCEA\nDCEAH\nDCEH\nDCEHA\nDCH\nDCHA\nDCHAE\nDCHE\nDCHEA\nDE\nDEA\nDEAC\nDEACH\nDEAH\nDEAHC\nDEC\nDECA\nDECAH\nDECH\nDECHA\nDEH\nDEHA\nDEHAC\nDEHC\nDEHCA\nDH\nDHA\nDHAC\nDHACE\nDHAE\nDHAEC\nDHC\nDHCA\nDHCAE\nDHCE\nDHCEA\nDHE\nDHEA\nDHEAC\nDHEC\nDHECA\nE\nEA\nEAC\nEACD\nEACDH\nEACH\nEACHD\nEAD\nEADC\nEADCH\nEADH\nEADHC\nEAH\nEAHC\nEAHCD\nEAHD\nEAHDC\nEC\nECA\nECAD\nECADH\nECAH\nECAHD\nECD\nECDA\nECDAH\nECDH\nECDHA\nECH\nECHA\nECHAD\nECHD\nECHDA\nED\nEDA\nEDAC\nEDACH\nEDAH\nEDAHC\nEDC\nEDCA\nEDCAH\nEDCH\nEDCHA\nEDH\nEDHA\nEDHAC\nEDHC\nEDHCA\nEH\nEHA\nEHAC\nEHACD\nEHAD\nEHADC\nEHC\nEHCA\nEHCAD\nEHCD\nEHCDA\nEHD\nEHDA\nEHDAC\nEHDC\nEHDCA\nH\nHA\nHAC\nHACD\nHACDE\nHACE\nHACED\nHAD\nHADC\nHADCE\nHADE\nHADEC\nHAE\nHAEC\nHAECD\nHAED\nHAEDC\nHC\nHCA\nHCAD\nHCADE\nHCAE\nHCAED\nHCD\nHCDA\nHCDAE\nHCDE\nHCDEA\nHCE\nHCEA\nHCEAD\nHCED\nHCEDA\nHD\nHDA\nHDAC\nHDACE\nHDAE\nHDAEC\nHDC\nHDCA\nHDCAE\nHDCE\nHDCEA\nHDE\nHDEA\nHDEAC\nHDEC\nHDECA\nHE\nHEA\nHEAC\nHEACD\nHEAD\nHEADC\nHEC\nHECA\nHECAD\nHECD\nHECDA\nHED\nHEDA\nHEDAC\nHEDC\nHEDCA\n"
+    },
+    {
+      "name": "random_067_h",
+      "input": "H\n",
+      "output": "H\n"
+    },
+    {
+      "name": "random_068_h",
+      "input": "H\n",
+      "output": "H\n"
+    },
+    {
+      "name": "random_069_cgcc",
+      "input": "CGCC\n",
+      "output": "C\nCC\nCCC\nCCCG\nCCG\nCCGC\nCG\nCGC\nCGCC\nG\nGC\nGCC\nGCCC\n"
+    },
+    {
+      "name": "random_070_gggg",
+      "input": "GGGG\n",
+      "output": "G\nGG\nGGG\nGGGG\n"
+    },
+    {
+      "name": "random_071_ea",
+      "input": "EA\n",
+      "output": "A\nAE\nE\nEA\n"
+    },
+    {
+      "name": "random_072_efdgh",
+      "input": "EFDGH\n",
+      "output": "D\nDE\nDEF\nDEFG\nDEFGH\nDEFH\nDEFHG\nDEG\nDEGF\nDEGFH\nDEGH\nDEGHF\nDEH\nDEHF\nDEHFG\nDEHG\nDEHGF\nDF\nDFE\nDFEG\nDFEGH\nDFEH\nDFEHG\nDFG\nDFGE\nDFGEH\nDFGH\nDFGHE\nDFH\nDFHE\nDFHEG\nDFHG\nDFHGE\nDG\nDGE\nDGEF\nDGEFH\nDGEH\nDGEHF\nDGF\nDGFE\nDGFEH\nDGFH\nDGFHE\nDGH\nDGHE\nDGHEF\nDGHF\nDGHFE\nDH\nDHE\nDHEF\nDHEFG\nDHEG\nDHEGF\nDHF\nDHFE\nDHFEG\nDHFG\nDHFGE\nDHG\nDHGE\nDHGEF\nDHGF\nDHGFE\nE\nED\nEDF\nEDFG\nEDFGH\nEDFH\nEDFHG\nEDG\nEDGF\nEDGFH\nEDGH\nEDGHF\nEDH\nEDHF\nEDHFG\nEDHG\nEDHGF\nEF\nEFD\nEFDG\nEFDGH\nEFDH\nEFDHG\nEFG\nEFGD\nEFGDH\nEFGH\nEFGHD\nEFH\nEFHD\nEFHDG\nEFHG\nEFHGD\nEG\nEGD\nEGDF\nEGDFH\nEGDH\nEGDHF\nEGF\nEGFD\nEGFDH\nEGFH\nEGFHD\nEGH\nEGHD\nEGHDF\nEGHF\nEGHFD\nEH\nEHD\nEHDF\nEHDFG\nEHDG\nEHDGF\nEHF\nEHFD\nEHFDG\nEHFG\nEHFGD\nEHG\nEHGD\nEHGDF\nEHGF\nEHGFD\nF\nFD\nFDE\nFDEG\nFDEGH\nFDEH\nFDEHG\nFDG\nFDGE\nFDGEH\nFDGH\nFDGHE\nFDH\nFDHE\nFDHEG\nFDHG\nFDHGE\nFE\nFED\nFEDG\nFEDGH\nFEDH\nFEDHG\nFEG\nFEGD\nFEGDH\nFEGH\nFEGHD\nFEH\nFEHD\nFEHDG\nFEHG\nFEHGD\nFG\nFGD\nFGDE\nFGDEH\nFGDH\nFGDHE\nFGE\nFGED\nFGEDH\nFGEH\nFGEHD\nFGH\nFGHD\nFGHDE\nFGHE\nFGHED\nFH\nFHD\nFHDE\nFHDEG\nFHDG\nFHDGE\nFHE\nFHED\nFHEDG\nFHEG\nFHEGD\nFHG\nFHGD\nFHGDE\nFHGE\nFHGED\nG\nGD\nGDE\nGDEF\nGDEFH\nGDEH\nGDEHF\nGDF\nGDFE\nGDFEH\nGDFH\nGDFHE\nGDH\nGDHE\nGDHEF\nGDHF\nGDHFE\nGE\nGED\nGEDF\nGEDFH\nGEDH\nGEDHF\nGEF\nGEFD\nGEFDH\nGEFH\nGEFHD\nGEH\nGEHD\nGEHDF\nGEHF\nGEHFD\nGF\nGFD\nGFDE\nGFDEH\nGFDH\nGFDHE\nGFE\nGFED\nGFEDH\nGFEH\nGFEHD\nGFH\nGFHD\nGFHDE\nGFHE\nGFHED\nGH\nGHD\nGHDE\nGHDEF\nGHDF\nGHDFE\nGHE\nGHED\nGHEDF\nGHEF\nGHEFD\nGHF\nGHFD\nGHFDE\nGHFE\nGHFED\nH\nHD\nHDE\nHDEF\nHDEFG\nHDEG\nHDEGF\nHDF\nHDFE\nHDFEG\nHDFG\nHDFGE\nHDG\nHDGE\nHDGEF\nHDGF\nHDGFE\nHE\nHED\nHEDF\nHEDFG\nHEDG\nHEDGF\nHEF\nHEFD\nHEFDG\nHEFG\nHEFGD\nHEG\nHEGD\nHEGDF\nHEGF\nHEGFD\nHF\nHFD\nHFDE\nHFDEG\nHFDG\nHFDGE\nHFE\nHFED\nHFEDG\nHFEG\nHFEGD\nHFG\nHFGD\nHFGDE\nHFGE\nHFGED\nHG\nHGD\nHGDE\nHGDEF\nHGDF\nHGDFE\nHGE\nHGED\nHGEDF\nHGEF\nHGEFD\nHGF\nHGFD\nHGFDE\nHGFE\nHGFED\n"
+    },
+    {
+      "name": "random_073_h",
+      "input": "H\n",
+      "output": "H\n"
+    },
+    {
+      "name": "random_074_ggg",
+      "input": "GGG\n",
+      "output": "G\nGG\nGGG\n"
+    },
+    {
+      "name": "random_075_hahha",
+      "input": "HAHHA\n",
+      "output": "A\nAA\nAAH\nAAHH\nAAHHH\nAH\nAHA\nAHAH\nAHAHH\nAHH\nAHHA\nAHHAH\nAHHH\nAHHHA\nH\nHA\nHAA\nHAAH\nHAAHH\nHAH\nHAHA\nHAHAH\nHAHH\nHAHHA\nHH\nHHA\nHHAA\nHHAAH\nHHAH\nHHAHA\nHHH\nHHHA\nHHHAA\n"
+    },
+    {
+      "name": "random_076_bb",
+      "input": "BB\n",
+      "output": "B\nBB\n"
+    },
+    {
+      "name": "random_077_bg",
+      "input": "BG\n",
+      "output": "B\nBG\nG\nGB\n"
+    },
+    {
+      "name": "random_078_gaaad",
+      "input": "GAAAD\n",
+      "output": "A\nAA\nAAA\nAAAD\nAAADG\nAAAG\nAAAGD\nAAD\nAADA\nAADAG\nAADG\nAADGA\nAAG\nAAGA\nAAGAD\nAAGD\nAAGDA\nAD\nADA\nADAA\nADAAG\nADAG\nADAGA\nADG\nADGA\nADGAA\nAG\nAGA\nAGAA\nAGAAD\nAGAD\nAGADA\nAGD\nAGDA\nAGDAA\nD\nDA\nDAA\nDAAA\nDAAAG\nDAAG\nDAAGA\nDAG\nDAGA\nDAGAA\nDG\nDGA\nDGAA\nDGAAA\nG\nGA\nGAA\nGAAA\nGAAAD\nGAAD\nGAADA\nGAD\nGADA\nGADAA\nGD\nGDA\nGDAA\nGDAAA\n"
+    },
+    {
+      "name": "random_079_fbccf",
+      "input": "FBCCF\n",
+      "output": "B\nBC\nBCC\nBCCF\nBCCFF\nBCF\nBCFC\nBCFCF\nBCFF\nBCFFC\nBF\nBFC\nBFCC\nBFCCF\nBFCF\nBFCFC\nBFF\nBFFC\nBFFCC\nC\nCB\nCBC\nCBCF\nCBCFF\nCBF\nCBFC\nCBFCF\nCBFF\nCBFFC\nCC\nCCB\nCCBF\nCCBFF\nCCF\nCCFB\nCCFBF\nCCFF\nCCFFB\nCF\nCFB\nCFBC\nCFBCF\nCFBF\nCFBFC\nCFC\nCFCB\nCFCBF\nCFCF\nCFCFB\nCFF\nCFFB\nCFFBC\nCFFC\nCFFCB\nF\nFB\nFBC\nFBCC\nFBCCF\nFBCF\nFBCFC\nFBF\nFBFC\nFBFCC\nFC\nFCB\nFCBC\nFCBCF\nFCBF\nFCBFC\nFCC\nFCCB\nFCCBF\nFCCF\nFCCFB\nFCF\nFCFB\nFCFBC\nFCFC\nFCFCB\nFF\nFFB\nFFBC\nFFBCC\nFFC\nFFCB\nFFCBC\nFFCC\nFFCCB\n"
+    },
+    {
+      "name": "random_080_ffff",
+      "input": "FFFF\n",
+      "output": "F\nFF\nFFF\nFFFF\n"
+    },
+    {
+      "name": "random_081_gggg",
+      "input": "GGGG\n",
+      "output": "G\nGG\nGGG\nGGGG\n"
+    },
+    {
+      "name": "random_082_achf",
+      "input": "ACHF\n",
+      "output": "A\nAC\nACF\nACFH\nACH\nACHF\nAF\nAFC\nAFCH\nAFH\nAFHC\nAH\nAHC\nAHCF\nAHF\nAHFC\nC\nCA\nCAF\nCAFH\nCAH\nCAHF\nCF\nCFA\nCFAH\nCFH\nCFHA\nCH\nCHA\nCHAF\nCHF\nCHFA\nF\nFA\nFAC\nFACH\nFAH\nFAHC\nFC\nFCA\nFCAH\nFCH\nFCHA\nFH\nFHA\nFHAC\nFHC\nFHCA\nH\nHA\nHAC\nHACF\nHAF\nHAFC\nHC\nHCA\nHCAF\nHCF\nHCFA\nHF\nHFA\nHFAC\nHFC\nHFCA\n"
+    },
+    {
+      "name": "random_083_edh",
+      "input": "EDH\n",
+      "output": "D\nDE\nDEH\nDH\nDHE\nE\nED\nEDH\nEH\nEHD\nH\nHD\nHDE\nHE\nHED\n"
+    },
+    {
+      "name": "random_084_dghb",
+      "input": "DGHB\n",
+      "output": "B\nBD\nBDG\nBDGH\nBDH\nBDHG\nBG\nBGD\nBGDH\nBGH\nBGHD\nBH\nBHD\nBHDG\nBHG\nBHGD\nD\nDB\nDBG\nDBGH\nDBH\nDBHG\nDG\nDGB\nDGBH\nDGH\nDGHB\nDH\nDHB\nDHBG\nDHG\nDHGB\nG\nGB\nGBD\nGBDH\nGBH\nGBHD\nGD\nGDB\nGDBH\nGDH\nGDHB\nGH\nGHB\nGHBD\nGHD\nGHDB\nH\nHB\nHBD\nHBDG\nHBG\nHBGD\nHD\nHDB\nHDBG\nHDG\nHDGB\nHG\nHGB\nHGBD\nHGD\nHGDB\n"
+    },
+    {
+      "name": "random_085_aed",
+      "input": "AED\n",
+      "output": "A\nAD\nADE\nAE\nAED\nD\nDA\nDAE\nDE\nDEA\nE\nEA\nEAD\nED\nEDA\n"
+    },
+    {
+      "name": "random_086_fc",
+      "input": "FC\n",
+      "output": "C\nCF\nF\nFC\n"
+    },
+    {
+      "name": "random_087_g",
+      "input": "G\n",
+      "output": "G\n"
+    },
+    {
+      "name": "random_088_cegdf",
+      "input": "CEGDF\n",
+      "output": "C\nCD\nCDE\nCDEF\nCDEFG\nCDEG\nCDEGF\nCDF\nCDFE\nCDFEG\nCDFG\nCDFGE\nCDG\nCDGE\nCDGEF\nCDGF\nCDGFE\nCE\nCED\nCEDF\nCEDFG\nCEDG\nCEDGF\nCEF\nCEFD\nCEFDG\nCEFG\nCEFGD\nCEG\nCEGD\nCEGDF\nCEGF\nCEGFD\nCF\nCFD\nCFDE\nCFDEG\nCFDG\nCFDGE\nCFE\nCFED\nCFEDG\nCFEG\nCFEGD\nCFG\nCFGD\nCFGDE\nCFGE\nCFGED\nCG\nCGD\nCGDE\nCGDEF\nCGDF\nCGDFE\nCGE\nCGED\nCGEDF\nCGEF\nCGEFD\nCGF\nCGFD\nCGFDE\nCGFE\nCGFED\nD\nDC\nDCE\nDCEF\nDCEFG\nDCEG\nDCEGF\nDCF\nDCFE\nDCFEG\nDCFG\nDCFGE\nDCG\nDCGE\nDCGEF\nDCGF\nDCGFE\nDE\nDEC\nDECF\nDECFG\nDECG\nDECGF\nDEF\nDEFC\nDEFCG\nDEFG\nDEFGC\nDEG\nDEGC\nDEGCF\nDEGF\nDEGFC\nDF\nDFC\nDFCE\nDFCEG\nDFCG\nDFCGE\nDFE\nDFEC\nDFECG\nDFEG\nDFEGC\nDFG\nDFGC\nDFGCE\nDFGE\nDFGEC\nDG\nDGC\nDGCE\nDGCEF\nDGCF\nDGCFE\nDGE\nDGEC\nDGECF\nDGEF\nDGEFC\nDGF\nDGFC\nDGFCE\nDGFE\nDGFEC\nE\nEC\nECD\nECDF\nECDFG\nECDG\nECDGF\nECF\nECFD\nECFDG\nECFG\nECFGD\nECG\nECGD\nECGDF\nECGF\nECGFD\nED\nEDC\nEDCF\nEDCFG\nEDCG\nEDCGF\nEDF\nEDFC\nEDFCG\nEDFG\nEDFGC\nEDG\nEDGC\nEDGCF\nEDGF\nEDGFC\nEF\nEFC\nEFCD\nEFCDG\nEFCG\nEFCGD\nEFD\nEFDC\nEFDCG\nEFDG\nEFDGC\nEFG\nEFGC\nEFGCD\nEFGD\nEFGDC\nEG\nEGC\nEGCD\nEGCDF\nEGCF\nEGCFD\nEGD\nEGDC\nEGDCF\nEGDF\nEGDFC\nEGF\nEGFC\nEGFCD\nEGFD\nEGFDC\nF\nFC\nFCD\nFCDE\nFCDEG\nFCDG\nFCDGE\nFCE\nFCED\nFCEDG\nFCEG\nFCEGD\nFCG\nFCGD\nFCGDE\nFCGE\nFCGED\nFD\nFDC\nFDCE\nFDCEG\nFDCG\nFDCGE\nFDE\nFDEC\nFDECG\nFDEG\nFDEGC\nFDG\nFDGC\nFDGCE\nFDGE\nFDGEC\nFE\nFEC\nFECD\nFECDG\nFECG\nFECGD\nFED\nFEDC\nFEDCG\nFEDG\nFEDGC\nFEG\nFEGC\nFEGCD\nFEGD\nFEGDC\nFG\nFGC\nFGCD\nFGCDE\nFGCE\nFGCED\nFGD\nFGDC\nFGDCE\nFGDE\nFGDEC\nFGE\nFGEC\nFGECD\nFGED\nFGEDC\nG\nGC\nGCD\nGCDE\nGCDEF\nGCDF\nGCDFE\nGCE\nGCED\nGCEDF\nGCEF\nGCEFD\nGCF\nGCFD\nGCFDE\nGCFE\nGCFED\nGD\nGDC\nGDCE\nGDCEF\nGDCF\nGDCFE\nGDE\nGDEC\nGDECF\nGDEF\nGDEFC\nGDF\nGDFC\nGDFCE\nGDFE\nGDFEC\nGE\nGEC\nGECD\nGECDF\nGECF\nGECFD\nGED\nGEDC\nGEDCF\nGEDF\nGEDFC\nGEF\nGEFC\nGEFCD\nGEFD\nGEFDC\nGF\nGFC\nGFCD\nGFCDE\nGFCE\nGFCED\nGFD\nGFDC\nGFDCE\nGFDE\nGFDEC\nGFE\nGFEC\nGFECD\nGFED\nGFEDC\n"
+    },
+    {
+      "name": "random_089_b",
+      "input": "B\n",
+      "output": "B\n"
+    },
+    {
+      "name": "random_090_bae",
+      "input": "BAE\n",
+      "output": "A\nAB\nABE\nAE\nAEB\nB\nBA\nBAE\nBE\nBEA\nE\nEA\nEAB\nEB\nEBA\n"
+    },
+    {
+      "name": "random_091_ddd",
+      "input": "DDD\n",
+      "output": "D\nDD\nDDD\n"
+    },
+    {
+      "name": "random_092_acc",
+      "input": "ACC\n",
+      "output": "A\nAC\nACC\nC\nCA\nCAC\nCC\nCCA\n"
+    },
+    {
+      "name": "random_093_ddg",
+      "input": "DDG\n",
+      "output": "D\nDD\nDDG\nDG\nDGD\nG\nGD\nGDD\n"
+    },
+    {
+      "name": "random_094_fffff",
+      "input": "FFFFF\n",
+      "output": "F\nFF\nFFF\nFFFF\nFFFFF\n"
+    },
+    {
+      "name": "random_095_hfac",
+      "input": "HFAC\n",
+      "output": "A\nAC\nACF\nACFH\nACH\nACHF\nAF\nAFC\nAFCH\nAFH\nAFHC\nAH\nAHC\nAHCF\nAHF\nAHFC\nC\nCA\nCAF\nCAFH\nCAH\nCAHF\nCF\nCFA\nCFAH\nCFH\nCFHA\nCH\nCHA\nCHAF\nCHF\nCHFA\nF\nFA\nFAC\nFACH\nFAH\nFAHC\nFC\nFCA\nFCAH\nFCH\nFCHA\nFH\nFHA\nFHAC\nFHC\nFHCA\nH\nHA\nHAC\nHACF\nHAF\nHAFC\nHC\nHCA\nHCAF\nHCF\nHCFA\nHF\nHFA\nHFAC\nHFC\nHFCA\n"
+    },
+    {
+      "name": "random_096_agdf",
+      "input": "AGDF\n",
+      "output": "A\nAD\nADF\nADFG\nADG\nADGF\nAF\nAFD\nAFDG\nAFG\nAFGD\nAG\nAGD\nAGDF\nAGF\nAGFD\nD\nDA\nDAF\nDAFG\nDAG\nDAGF\nDF\nDFA\nDFAG\nDFG\nDFGA\nDG\nDGA\nDGAF\nDGF\nDGFA\nF\nFA\nFAD\nFADG\nFAG\nFAGD\nFD\nFDA\nFDAG\nFDG\nFDGA\nFG\nFGA\nFGAD\nFGD\nFGDA\nG\nGA\nGAD\nGADF\nGAF\nGAFD\nGD\nGDA\nGDAF\nGDF\nGDFA\nGF\nGFA\nGFAD\nGFD\nGFDA\n"
+    },
+    {
+      "name": "random_097_ge",
+      "input": "GE\n",
+      "output": "E\nEG\nG\nGE\n"
+    },
+    {
+      "name": "random_098_fhhdf",
+      "input": "FHHDF\n",
+      "output": "D\nDF\nDFF\nDFFH\nDFFHH\nDFH\nDFHF\nDFHFH\nDFHH\nDFHHF\nDH\nDHF\nDHFF\nDHFFH\nDHFH\nDHFHF\nDHH\nDHHF\nDHHFF\nF\nFD\nFDF\nFDFH\nFDFHH\nFDH\nFDHF\nFDHFH\nFDHH\nFDHHF\nFF\nFFD\nFFDH\nFFDHH\nFFH\nFFHD\nFFHDH\nFFHH\nFFHHD\nFH\nFHD\nFHDF\nFHDFH\nFHDH\nFHDHF\nFHF\nFHFD\nFHFDH\nFHFH\nFHFHD\nFHH\nFHHD\nFHHDF\nFHHF\nFHHFD\nH\nHD\nHDF\nHDFF\nHDFFH\nHDFH\nHDFHF\nHDH\nHDHF\nHDHFF\nHF\nHFD\nHFDF\nHFDFH\nHFDH\nHFDHF\nHFF\nHFFD\nHFFDH\nHFFH\nHFFHD\nHFH\nHFHD\nHFHDF\nHFHF\nHFHFD\nHH\nHHD\nHHDF\nHHDFF\nHHF\nHHFD\nHHFDF\nHHFF\nHHFFD\n"
+    },
+    {
+      "name": "random_099_d",
+      "input": "D\n",
+      "output": "D\n"
+    },
+    {
+      "name": "random_100_hfhhh",
+      "input": "HFHHH\n",
+      "output": "F\nFH\nFHH\nFHHH\nFHHHH\nH\nHF\nHFH\nHFHH\nHFHHH\nHH\nHHF\nHHFH\nHHFHH\nHHH\nHHHF\nHHHFH\nHHHH\nHHHHF\n"
+    },
+    {
+      "name": "random_101_caf",
+      "input": "CAF\n",
+      "output": "A\nAC\nACF\nAF\nAFC\nC\nCA\nCAF\nCF\nCFA\nF\nFA\nFAC\nFC\nFCA\n"
+    },
+    {
+      "name": "random_102_ffee",
+      "input": "FFEE\n",
+      "output": "E\nEE\nEEF\nEEFF\nEF\nEFE\nEFEF\nEFF\nEFFE\nF\nFE\nFEE\nFEEF\nFEF\nFEFE\nFF\nFFE\nFFEE\n"
+    },
+    {
+      "name": "random_103_dc",
+      "input": "DC\n",
+      "output": "C\nCD\nD\nDC\n"
+    },
+    {
+      "name": "random_104_fac",
+      "input": "FAC\n",
+      "output": "A\nAC\nACF\nAF\nAFC\nC\nCA\nCAF\nCF\nCFA\nF\nFA\nFAC\nFC\nFCA\n"
+    },
+    {
+      "name": "random_105_fffff",
+      "input": "FFFFF\n",
+      "output": "F\nFF\nFFF\nFFFF\nFFFFF\n"
+    },
+    {
+      "name": "random_106_eee",
+      "input": "EEE\n",
+      "output": "E\nEE\nEEE\n"
+    },
+    {
+      "name": "random_107_accaa",
+      "input": "ACCAA\n",
+      "output": "A\nAA\nAAA\nAAAC\nAAACC\nAAC\nAACA\nAACAC\nAACC\nAACCA\nAC\nACA\nACAA\nACAAC\nACAC\nACACA\nACC\nACCA\nACCAA\nC\nCA\nCAA\nCAAA\nCAAAC\nCAAC\nCAACA\nCAC\nCACA\nCACAA\nCC\nCCA\nCCAA\nCCAAA\n"
+    },
+    {
+      "name": "random_108_bd",
+      "input": "BD\n",
+      "output": "B\nBD\nD\nDB\n"
+    },
+    {
+      "name": "random_109_a",
+      "input": "A\n",
+      "output": "A\n"
+    },
+    {
+      "name": "random_110_f",
+      "input": "F\n",
+      "output": "F\n"
+    },
+    {
+      "name": "random_111_deecd",
+      "input": "DEECD\n",
+      "output": "C\nCD\nCDD\nCDDE\nCDDEE\nCDE\nCDED\nCDEDE\nCDEE\nCDEED\nCE\nCED\nCEDD\nCEDDE\nCEDE\nCEDED\nCEE\nCEED\nCEEDD\nD\nDC\nDCD\nDCDE\nDCDEE\nDCE\nDCED\nDCEDE\nDCEE\nDCEED\nDD\nDDC\nDDCE\nDDCEE\nDDE\nDDEC\nDDECE\nDDEE\nDDEEC\nDE\nDEC\nDECD\nDECDE\nDECE\nDECED\nDED\nDEDC\nDEDCE\nDEDE\nDEDEC\nDEE\nDEEC\nDEECD\nDEED\nDEEDC\nE\nEC\nECD\nECDD\nECDDE\nECDE\nECDED\nECE\nECED\nECEDD\nED\nEDC\nEDCD\nEDCDE\nEDCE\nEDCED\nEDD\nEDDC\nEDDCE\nEDDE\nEDDEC\nEDE\nEDEC\nEDECD\nEDED\nEDEDC\nEE\nEEC\nEECD\nEECDD\nEED\nEEDC\nEEDCD\nEEDD\nEEDDC\n"
+    },
+    {
+      "name": "random_112_bhd",
+      "input": "BHD\n",
+      "output": "B\nBD\nBDH\nBH\nBHD\nD\nDB\nDBH\nDH\nDHB\nH\nHB\nHBD\nHD\nHDB\n"
+    },
+    {
+      "name": "random_113_hbd",
+      "input": "HBD\n",
+      "output": "B\nBD\nBDH\nBH\nBHD\nD\nDB\nDBH\nDH\nDHB\nH\nHB\nHBD\nHD\nHDB\n"
+    },
+    {
+      "name": "random_114_eccac",
+      "input": "ECCAC\n",
+      "output": "A\nAC\nACC\nACCC\nACCCE\nACCE\nACCEC\nACE\nACEC\nACECC\nAE\nAEC\nAECC\nAECCC\nC\nCA\nCAC\nCACC\nCACCE\nCACE\nCACEC\nCAE\nCAEC\nCAECC\nCC\nCCA\nCCAC\nCCACE\nCCAE\nCCAEC\nCCC\nCCCA\nCCCAE\nCCCE\nCCCEA\nCCE\nCCEA\nCCEAC\nCCEC\nCCECA\nCE\nCEA\nCEAC\nCEACC\nCEC\nCECA\nCECAC\nCECC\nCECCA\nE\nEA\nEAC\nEACC\nEACCC\nEC\nECA\nECAC\nECACC\nECC\nECCA\nECCAC\nECCC\nECCCA\n"
+    },
+    {
+      "name": "random_115_hgbfa",
+      "input": "HGBFA\n",
+      "output": "A\nAB\nABF\nABFG\nABFGH\nABFH\nABFHG\nABG\nABGF\nABGFH\nABGH\nABGHF\nABH\nABHF\nABHFG\nABHG\nABHGF\nAF\nAFB\nAFBG\nAFBGH\nAFBH\nAFBHG\nAFG\nAFGB\nAFGBH\nAFGH\nAFGHB\nAFH\nAFHB\nAFHBG\nAFHG\nAFHGB\nAG\nAGB\nAGBF\nAGBFH\nAGBH\nAGBHF\nAGF\nAGFB\nAGFBH\nAGFH\nAGFHB\nAGH\nAGHB\nAGHBF\nAGHF\nAGHFB\nAH\nAHB\nAHBF\nAHBFG\nAHBG\nAHBGF\nAHF\nAHFB\nAHFBG\nAHFG\nAHFGB\nAHG\nAHGB\nAHGBF\nAHGF\nAHGFB\nB\nBA\nBAF\nBAFG\nBAFGH\nBAFH\nBAFHG\nBAG\nBAGF\nBAGFH\nBAGH\nBAGHF\nBAH\nBAHF\nBAHFG\nBAHG\nBAHGF\nBF\nBFA\nBFAG\nBFAGH\nBFAH\nBFAHG\nBFG\nBFGA\nBFGAH\nBFGH\nBFGHA\nBFH\nBFHA\nBFHAG\nBFHG\nBFHGA\nBG\nBGA\nBGAF\nBGAFH\nBGAH\nBGAHF\nBGF\nBGFA\nBGFAH\nBGFH\nBGFHA\nBGH\nBGHA\nBGHAF\nBGHF\nBGHFA\nBH\nBHA\nBHAF\nBHAFG\nBHAG\nBHAGF\nBHF\nBHFA\nBHFAG\nBHFG\nBHFGA\nBHG\nBHGA\nBHGAF\nBHGF\nBHGFA\nF\nFA\nFAB\nFABG\nFABGH\nFABH\nFABHG\nFAG\nFAGB\nFAGBH\nFAGH\nFAGHB\nFAH\nFAHB\nFAHBG\nFAHG\nFAHGB\nFB\nFBA\nFBAG\nFBAGH\nFBAH\nFBAHG\nFBG\nFBGA\nFBGAH\nFBGH\nFBGHA\nFBH\nFBHA\nFBHAG\nFBHG\nFBHGA\nFG\nFGA\nFGAB\nFGABH\nFGAH\nFGAHB\nFGB\nFGBA\nFGBAH\nFGBH\nFGBHA\nFGH\nFGHA\nFGHAB\nFGHB\nFGHBA\nFH\nFHA\nFHAB\nFHABG\nFHAG\nFHAGB\nFHB\nFHBA\nFHBAG\nFHBG\nFHBGA\nFHG\nFHGA\nFHGAB\nFHGB\nFHGBA\nG\nGA\nGAB\nGABF\nGABFH\nGABH\nGABHF\nGAF\nGAFB\nGAFBH\nGAFH\nGAFHB\nGAH\nGAHB\nGAHBF\nGAHF\nGAHFB\nGB\nGBA\nGBAF\nGBAFH\nGBAH\nGBAHF\nGBF\nGBFA\nGBFAH\nGBFH\nGBFHA\nGBH\nGBHA\nGBHAF\nGBHF\nGBHFA\nGF\nGFA\nGFAB\nGFABH\nGFAH\nGFAHB\nGFB\nGFBA\nGFBAH\nGFBH\nGFBHA\nGFH\nGFHA\nGFHAB\nGFHB\nGFHBA\nGH\nGHA\nGHAB\nGHABF\nGHAF\nGHAFB\nGHB\nGHBA\nGHBAF\nGHBF\nGHBFA\nGHF\nGHFA\nGHFAB\nGHFB\nGHFBA\nH\nHA\nHAB\nHABF\nHABFG\nHABG\nHABGF\nHAF\nHAFB\nHAFBG\nHAFG\nHAFGB\nHAG\nHAGB\nHAGBF\nHAGF\nHAGFB\nHB\nHBA\nHBAF\nHBAFG\nHBAG\nHBAGF\nHBF\nHBFA\nHBFAG\nHBFG\nHBFGA\nHBG\nHBGA\nHBGAF\nHBGF\nHBGFA\nHF\nHFA\nHFAB\nHFABG\nHFAG\nHFAGB\nHFB\nHFBA\nHFBAG\nHFBG\nHFBGA\nHFG\nHFGA\nHFGAB\nHFGB\nHFGBA\nHG\nHGA\nHGAB\nHGABF\nHGAF\nHGAFB\nHGB\nHGBA\nHGBAF\nHGBF\nHGBFA\nHGF\nHGFA\nHGFAB\nHGFB\nHGFBA\n"
+    },
+    {
+      "name": "random_116_fbgad",
+      "input": "FBGAD\n",
+      "output": "A\nAB\nABD\nABDF\nABDFG\nABDG\nABDGF\nABF\nABFD\nABFDG\nABFG\nABFGD\nABG\nABGD\nABGDF\nABGF\nABGFD\nAD\nADB\nADBF\nADBFG\nADBG\nADBGF\nADF\nADFB\nADFBG\nADFG\nADFGB\nADG\nADGB\nADGBF\nADGF\nADGFB\nAF\nAFB\nAFBD\nAFBDG\nAFBG\nAFBGD\nAFD\nAFDB\nAFDBG\nAFDG\nAFDGB\nAFG\nAFGB\nAFGBD\nAFGD\nAFGDB\nAG\nAGB\nAGBD\nAGBDF\nAGBF\nAGBFD\nAGD\nAGDB\nAGDBF\nAGDF\nAGDFB\nAGF\nAGFB\nAGFBD\nAGFD\nAGFDB\nB\nBA\nBAD\nBADF\nBADFG\nBADG\nBADGF\nBAF\nBAFD\nBAFDG\nBAFG\nBAFGD\nBAG\nBAGD\nBAGDF\nBAGF\nBAGFD\nBD\nBDA\nBDAF\nBDAFG\nBDAG\nBDAGF\nBDF\nBDFA\nBDFAG\nBDFG\nBDFGA\nBDG\nBDGA\nBDGAF\nBDGF\nBDGFA\nBF\nBFA\nBFAD\nBFADG\nBFAG\nBFAGD\nBFD\nBFDA\nBFDAG\nBFDG\nBFDGA\nBFG\nBFGA\nBFGAD\nBFGD\nBFGDA\nBG\nBGA\nBGAD\nBGADF\nBGAF\nBGAFD\nBGD\nBGDA\nBGDAF\nBGDF\nBGDFA\nBGF\nBGFA\nBGFAD\nBGFD\nBGFDA\nD\nDA\nDAB\nDABF\nDABFG\nDABG\nDABGF\nDAF\nDAFB\nDAFBG\nDAFG\nDAFGB\nDAG\nDAGB\nDAGBF\nDAGF\nDAGFB\nDB\nDBA\nDBAF\nDBAFG\nDBAG\nDBAGF\nDBF\nDBFA\nDBFAG\nDBFG\nDBFGA\nDBG\nDBGA\nDBGAF\nDBGF\nDBGFA\nDF\nDFA\nDFAB\nDFABG\nDFAG\nDFAGB\nDFB\nDFBA\nDFBAG\nDFBG\nDFBGA\nDFG\nDFGA\nDFGAB\nDFGB\nDFGBA\nDG\nDGA\nDGAB\nDGABF\nDGAF\nDGAFB\nDGB\nDGBA\nDGBAF\nDGBF\nDGBFA\nDGF\nDGFA\nDGFAB\nDGFB\nDGFBA\nF\nFA\nFAB\nFABD\nFABDG\nFABG\nFABGD\nFAD\nFADB\nFADBG\nFADG\nFADGB\nFAG\nFAGB\nFAGBD\nFAGD\nFAGDB\nFB\nFBA\nFBAD\nFBADG\nFBAG\nFBAGD\nFBD\nFBDA\nFBDAG\nFBDG\nFBDGA\nFBG\nFBGA\nFBGAD\nFBGD\nFBGDA\nFD\nFDA\nFDAB\nFDABG\nFDAG\nFDAGB\nFDB\nFDBA\nFDBAG\nFDBG\nFDBGA\nFDG\nFDGA\nFDGAB\nFDGB\nFDGBA\nFG\nFGA\nFGAB\nFGABD\nFGAD\nFGADB\nFGB\nFGBA\nFGBAD\nFGBD\nFGBDA\nFGD\nFGDA\nFGDAB\nFGDB\nFGDBA\nG\nGA\nGAB\nGABD\nGABDF\nGABF\nGABFD\nGAD\nGADB\nGADBF\nGADF\nGADFB\nGAF\nGAFB\nGAFBD\nGAFD\nGAFDB\nGB\nGBA\nGBAD\nGBADF\nGBAF\nGBAFD\nGBD\nGBDA\nGBDAF\nGBDF\nGBDFA\nGBF\nGBFA\nGBFAD\nGBFD\nGBFDA\nGD\nGDA\nGDAB\nGDABF\nGDAF\nGDAFB\nGDB\nGDBA\nGDBAF\nGDBF\nGDBFA\nGDF\nGDFA\nGDFAB\nGDFB\nGDFBA\nGF\nGFA\nGFAB\nGFABD\nGFAD\nGFADB\nGFB\nGFBA\nGFBAD\nGFBD\nGFBDA\nGFD\nGFDA\nGFDAB\nGFDB\nGFDBA\n"
+    },
+    {
+      "name": "random_117_b",
+      "input": "B\n",
+      "output": "B\n"
+    },
+    {
+      "name": "random_118_ffff",
+      "input": "FFFF\n",
+      "output": "F\nFF\nFFF\nFFFF\n"
+    },
+    {
+      "name": "random_119_bfgdc",
+      "input": "BFGDC\n",
+      "output": "B\nBC\nBCD\nBCDF\nBCDFG\nBCDG\nBCDGF\nBCF\nBCFD\nBCFDG\nBCFG\nBCFGD\nBCG\nBCGD\nBCGDF\nBCGF\nBCGFD\nBD\nBDC\nBDCF\nBDCFG\nBDCG\nBDCGF\nBDF\nBDFC\nBDFCG\nBDFG\nBDFGC\nBDG\nBDGC\nBDGCF\nBDGF\nBDGFC\nBF\nBFC\nBFCD\nBFCDG\nBFCG\nBFCGD\nBFD\nBFDC\nBFDCG\nBFDG\nBFDGC\nBFG\nBFGC\nBFGCD\nBFGD\nBFGDC\nBG\nBGC\nBGCD\nBGCDF\nBGCF\nBGCFD\nBGD\nBGDC\nBGDCF\nBGDF\nBGDFC\nBGF\nBGFC\nBGFCD\nBGFD\nBGFDC\nC\nCB\nCBD\nCBDF\nCBDFG\nCBDG\nCBDGF\nCBF\nCBFD\nCBFDG\nCBFG\nCBFGD\nCBG\nCBGD\nCBGDF\nCBGF\nCBGFD\nCD\nCDB\nCDBF\nCDBFG\nCDBG\nCDBGF\nCDF\nCDFB\nCDFBG\nCDFG\nCDFGB\nCDG\nCDGB\nCDGBF\nCDGF\nCDGFB\nCF\nCFB\nCFBD\nCFBDG\nCFBG\nCFBGD\nCFD\nCFDB\nCFDBG\nCFDG\nCFDGB\nCFG\nCFGB\nCFGBD\nCFGD\nCFGDB\nCG\nCGB\nCGBD\nCGBDF\nCGBF\nCGBFD\nCGD\nCGDB\nCGDBF\nCGDF\nCGDFB\nCGF\nCGFB\nCGFBD\nCGFD\nCGFDB\nD\nDB\nDBC\nDBCF\nDBCFG\nDBCG\nDBCGF\nDBF\nDBFC\nDBFCG\nDBFG\nDBFGC\nDBG\nDBGC\nDBGCF\nDBGF\nDBGFC\nDC\nDCB\nDCBF\nDCBFG\nDCBG\nDCBGF\nDCF\nDCFB\nDCFBG\nDCFG\nDCFGB\nDCG\nDCGB\nDCGBF\nDCGF\nDCGFB\nDF\nDFB\nDFBC\nDFBCG\nDFBG\nDFBGC\nDFC\nDFCB\nDFCBG\nDFCG\nDFCGB\nDFG\nDFGB\nDFGBC\nDFGC\nDFGCB\nDG\nDGB\nDGBC\nDGBCF\nDGBF\nDGBFC\nDGC\nDGCB\nDGCBF\nDGCF\nDGCFB\nDGF\nDGFB\nDGFBC\nDGFC\nDGFCB\nF\nFB\nFBC\nFBCD\nFBCDG\nFBCG\nFBCGD\nFBD\nFBDC\nFBDCG\nFBDG\nFBDGC\nFBG\nFBGC\nFBGCD\nFBGD\nFBGDC\nFC\nFCB\nFCBD\nFCBDG\nFCBG\nFCBGD\nFCD\nFCDB\nFCDBG\nFCDG\nFCDGB\nFCG\nFCGB\nFCGBD\nFCGD\nFCGDB\nFD\nFDB\nFDBC\nFDBCG\nFDBG\nFDBGC\nFDC\nFDCB\nFDCBG\nFDCG\nFDCGB\nFDG\nFDGB\nFDGBC\nFDGC\nFDGCB\nFG\nFGB\nFGBC\nFGBCD\nFGBD\nFGBDC\nFGC\nFGCB\nFGCBD\nFGCD\nFGCDB\nFGD\nFGDB\nFGDBC\nFGDC\nFGDCB\nG\nGB\nGBC\nGBCD\nGBCDF\nGBCF\nGBCFD\nGBD\nGBDC\nGBDCF\nGBDF\nGBDFC\nGBF\nGBFC\nGBFCD\nGBFD\nGBFDC\nGC\nGCB\nGCBD\nGCBDF\nGCBF\nGCBFD\nGCD\nGCDB\nGCDBF\nGCDF\nGCDFB\nGCF\nGCFB\nGCFBD\nGCFD\nGCFDB\nGD\nGDB\nGDBC\nGDBCF\nGDBF\nGDBFC\nGDC\nGDCB\nGDCBF\nGDCF\nGDCFB\nGDF\nGDFB\nGDFBC\nGDFC\nGDFCB\nGF\nGFB\nGFBC\nGFBCD\nGFBD\nGFBDC\nGFC\nGFCB\nGFCBD\nGFCD\nGFCDB\nGFD\nGFDB\nGFDBC\nGFDC\nGFDCB\n"
+    },
+    {
+      "name": "random_120_fghcb",
+      "input": "FGHCB\n",
+      "output": "B\nBC\nBCF\nBCFG\nBCFGH\nBCFH\nBCFHG\nBCG\nBCGF\nBCGFH\nBCGH\nBCGHF\nBCH\nBCHF\nBCHFG\nBCHG\nBCHGF\nBF\nBFC\nBFCG\nBFCGH\nBFCH\nBFCHG\nBFG\nBFGC\nBFGCH\nBFGH\nBFGHC\nBFH\nBFHC\nBFHCG\nBFHG\nBFHGC\nBG\nBGC\nBGCF\nBGCFH\nBGCH\nBGCHF\nBGF\nBGFC\nBGFCH\nBGFH\nBGFHC\nBGH\nBGHC\nBGHCF\nBGHF\nBGHFC\nBH\nBHC\nBHCF\nBHCFG\nBHCG\nBHCGF\nBHF\nBHFC\nBHFCG\nBHFG\nBHFGC\nBHG\nBHGC\nBHGCF\nBHGF\nBHGFC\nC\nCB\nCBF\nCBFG\nCBFGH\nCBFH\nCBFHG\nCBG\nCBGF\nCBGFH\nCBGH\nCBGHF\nCBH\nCBHF\nCBHFG\nCBHG\nCBHGF\nCF\nCFB\nCFBG\nCFBGH\nCFBH\nCFBHG\nCFG\nCFGB\nCFGBH\nCFGH\nCFGHB\nCFH\nCFHB\nCFHBG\nCFHG\nCFHGB\nCG\nCGB\nCGBF\nCGBFH\nCGBH\nCGBHF\nCGF\nCGFB\nCGFBH\nCGFH\nCGFHB\nCGH\nCGHB\nCGHBF\nCGHF\nCGHFB\nCH\nCHB\nCHBF\nCHBFG\nCHBG\nCHBGF\nCHF\nCHFB\nCHFBG\nCHFG\nCHFGB\nCHG\nCHGB\nCHGBF\nCHGF\nCHGFB\nF\nFB\nFBC\nFBCG\nFBCGH\nFBCH\nFBCHG\nFBG\nFBGC\nFBGCH\nFBGH\nFBGHC\nFBH\nFBHC\nFBHCG\nFBHG\nFBHGC\nFC\nFCB\nFCBG\nFCBGH\nFCBH\nFCBHG\nFCG\nFCGB\nFCGBH\nFCGH\nFCGHB\nFCH\nFCHB\nFCHBG\nFCHG\nFCHGB\nFG\nFGB\nFGBC\nFGBCH\nFGBH\nFGBHC\nFGC\nFGCB\nFGCBH\nFGCH\nFGCHB\nFGH\nFGHB\nFGHBC\nFGHC\nFGHCB\nFH\nFHB\nFHBC\nFHBCG\nFHBG\nFHBGC\nFHC\nFHCB\nFHCBG\nFHCG\nFHCGB\nFHG\nFHGB\nFHGBC\nFHGC\nFHGCB\nG\nGB\nGBC\nGBCF\nGBCFH\nGBCH\nGBCHF\nGBF\nGBFC\nGBFCH\nGBFH\nGBFHC\nGBH\nGBHC\nGBHCF\nGBHF\nGBHFC\nGC\nGCB\nGCBF\nGCBFH\nGCBH\nGCBHF\nGCF\nGCFB\nGCFBH\nGCFH\nGCFHB\nGCH\nGCHB\nGCHBF\nGCHF\nGCHFB\nGF\nGFB\nGFBC\nGFBCH\nGFBH\nGFBHC\nGFC\nGFCB\nGFCBH\nGFCH\nGFCHB\nGFH\nGFHB\nGFHBC\nGFHC\nGFHCB\nGH\nGHB\nGHBC\nGHBCF\nGHBF\nGHBFC\nGHC\nGHCB\nGHCBF\nGHCF\nGHCFB\nGHF\nGHFB\nGHFBC\nGHFC\nGHFCB\nH\nHB\nHBC\nHBCF\nHBCFG\nHBCG\nHBCGF\nHBF\nHBFC\nHBFCG\nHBFG\nHBFGC\nHBG\nHBGC\nHBGCF\nHBGF\nHBGFC\nHC\nHCB\nHCBF\nHCBFG\nHCBG\nHCBGF\nHCF\nHCFB\nHCFBG\nHCFG\nHCFGB\nHCG\nHCGB\nHCGBF\nHCGF\nHCGFB\nHF\nHFB\nHFBC\nHFBCG\nHFBG\nHFBGC\nHFC\nHFCB\nHFCBG\nHFCG\nHFCGB\nHFG\nHFGB\nHFGBC\nHFGC\nHFGCB\nHG\nHGB\nHGBC\nHGBCF\nHGBF\nHGBFC\nHGC\nHGCB\nHGCBF\nHGCF\nHGCFB\nHGF\nHGFB\nHGFBC\nHGFC\nHGFCB\n"
+    },
+    {
+      "name": "random_121_baa",
+      "input": "BAA\n",
+      "output": "A\nAA\nAAB\nAB\nABA\nB\nBA\nBAA\n"
+    },
+    {
+      "name": "random_122_fbage",
+      "input": "FBAGE\n",
+      "output": "A\nAB\nABE\nABEF\nABEFG\nABEG\nABEGF\nABF\nABFE\nABFEG\nABFG\nABFGE\nABG\nABGE\nABGEF\nABGF\nABGFE\nAE\nAEB\nAEBF\nAEBFG\nAEBG\nAEBGF\nAEF\nAEFB\nAEFBG\nAEFG\nAEFGB\nAEG\nAEGB\nAEGBF\nAEGF\nAEGFB\nAF\nAFB\nAFBE\nAFBEG\nAFBG\nAFBGE\nAFE\nAFEB\nAFEBG\nAFEG\nAFEGB\nAFG\nAFGB\nAFGBE\nAFGE\nAFGEB\nAG\nAGB\nAGBE\nAGBEF\nAGBF\nAGBFE\nAGE\nAGEB\nAGEBF\nAGEF\nAGEFB\nAGF\nAGFB\nAGFBE\nAGFE\nAGFEB\nB\nBA\nBAE\nBAEF\nBAEFG\nBAEG\nBAEGF\nBAF\nBAFE\nBAFEG\nBAFG\nBAFGE\nBAG\nBAGE\nBAGEF\nBAGF\nBAGFE\nBE\nBEA\nBEAF\nBEAFG\nBEAG\nBEAGF\nBEF\nBEFA\nBEFAG\nBEFG\nBEFGA\nBEG\nBEGA\nBEGAF\nBEGF\nBEGFA\nBF\nBFA\nBFAE\nBFAEG\nBFAG\nBFAGE\nBFE\nBFEA\nBFEAG\nBFEG\nBFEGA\nBFG\nBFGA\nBFGAE\nBFGE\nBFGEA\nBG\nBGA\nBGAE\nBGAEF\nBGAF\nBGAFE\nBGE\nBGEA\nBGEAF\nBGEF\nBGEFA\nBGF\nBGFA\nBGFAE\nBGFE\nBGFEA\nE\nEA\nEAB\nEABF\nEABFG\nEABG\nEABGF\nEAF\nEAFB\nEAFBG\nEAFG\nEAFGB\nEAG\nEAGB\nEAGBF\nEAGF\nEAGFB\nEB\nEBA\nEBAF\nEBAFG\nEBAG\nEBAGF\nEBF\nEBFA\nEBFAG\nEBFG\nEBFGA\nEBG\nEBGA\nEBGAF\nEBGF\nEBGFA\nEF\nEFA\nEFAB\nEFABG\nEFAG\nEFAGB\nEFB\nEFBA\nEFBAG\nEFBG\nEFBGA\nEFG\nEFGA\nEFGAB\nEFGB\nEFGBA\nEG\nEGA\nEGAB\nEGABF\nEGAF\nEGAFB\nEGB\nEGBA\nEGBAF\nEGBF\nEGBFA\nEGF\nEGFA\nEGFAB\nEGFB\nEGFBA\nF\nFA\nFAB\nFABE\nFABEG\nFABG\nFABGE\nFAE\nFAEB\nFAEBG\nFAEG\nFAEGB\nFAG\nFAGB\nFAGBE\nFAGE\nFAGEB\nFB\nFBA\nFBAE\nFBAEG\nFBAG\nFBAGE\nFBE\nFBEA\nFBEAG\nFBEG\nFBEGA\nFBG\nFBGA\nFBGAE\nFBGE\nFBGEA\nFE\nFEA\nFEAB\nFEABG\nFEAG\nFEAGB\nFEB\nFEBA\nFEBAG\nFEBG\nFEBGA\nFEG\nFEGA\nFEGAB\nFEGB\nFEGBA\nFG\nFGA\nFGAB\nFGABE\nFGAE\nFGAEB\nFGB\nFGBA\nFGBAE\nFGBE\nFGBEA\nFGE\nFGEA\nFGEAB\nFGEB\nFGEBA\nG\nGA\nGAB\nGABE\nGABEF\nGABF\nGABFE\nGAE\nGAEB\nGAEBF\nGAEF\nGAEFB\nGAF\nGAFB\nGAFBE\nGAFE\nGAFEB\nGB\nGBA\nGBAE\nGBAEF\nGBAF\nGBAFE\nGBE\nGBEA\nGBEAF\nGBEF\nGBEFA\nGBF\nGBFA\nGBFAE\nGBFE\nGBFEA\nGE\nGEA\nGEAB\nGEABF\nGEAF\nGEAFB\nGEB\nGEBA\nGEBAF\nGEBF\nGEBFA\nGEF\nGEFA\nGEFAB\nGEFB\nGEFBA\nGF\nGFA\nGFAB\nGFABE\nGFAE\nGFAEB\nGFB\nGFBA\nGFBAE\nGFBE\nGFBEA\nGFE\nGFEA\nGFEAB\nGFEB\nGFEBA\n"
+    },
+    {
+      "name": "random_123_hhh",
+      "input": "HHH\n",
+      "output": "H\nHH\nHHH\n"
+    },
+    {
+      "name": "random_124_ccccd",
+      "input": "CCCCD\n",
+      "output": "C\nCC\nCCC\nCCCC\nCCCCD\nCCCD\nCCCDC\nCCD\nCCDC\nCCDCC\nCD\nCDC\nCDCC\nCDCCC\nD\nDC\nDCC\nDCCC\nDCCCC\n"
+    },
+    {
+      "name": "random_125_cge",
+      "input": "CGE\n",
+      "output": "C\nCE\nCEG\nCG\nCGE\nE\nEC\nECG\nEG\nEGC\nG\nGC\nGCE\nGE\nGEC\n"
+    },
+    {
+      "name": "random_126_aaa",
+      "input": "AAA\n",
+      "output": "A\nAA\nAAA\n"
+    },
+    {
+      "name": "random_127_f",
+      "input": "F\n",
+      "output": "F\n"
+    },
+    {
+      "name": "random_128_bbaab",
+      "input": "BBAAB\n",
+      "output": "A\nAA\nAAB\nAABB\nAABBB\nAB\nABA\nABAB\nABABB\nABB\nABBA\nABBAB\nABBB\nABBBA\nB\nBA\nBAA\nBAAB\nBAABB\nBAB\nBABA\nBABAB\nBABB\nBABBA\nBB\nBBA\nBBAA\nBBAAB\nBBAB\nBBABA\nBBB\nBBBA\nBBBAA\n"
+    },
+    {
+      "name": "random_129_bbb",
+      "input": "BBB\n",
+      "output": "B\nBB\nBBB\n"
+    },
+    {
+      "name": "random_130_gc",
+      "input": "GC\n",
+      "output": "C\nCG\nG\nGC\n"
+    },
+    {
+      "name": "random_131_cfac",
+      "input": "CFAC\n",
+      "output": "A\nAC\nACC\nACCF\nACF\nACFC\nAF\nAFC\nAFCC\nC\nCA\nCAC\nCACF\nCAF\nCAFC\nCC\nCCA\nCCAF\nCCF\nCCFA\nCF\nCFA\nCFAC\nCFC\nCFCA\nF\nFA\nFAC\nFACC\nFC\nFCA\nFCAC\nFCC\nFCCA\n"
+    },
+    {
+      "name": "random_132_aaaaa",
+      "input": "AAAAA\n",
+      "output": "A\nAA\nAAA\nAAAA\nAAAAA\n"
+    },
+    {
+      "name": "random_133_fhc",
+      "input": "FHC\n",
+      "output": "C\nCF\nCFH\nCH\nCHF\nF\nFC\nFCH\nFH\nFHC\nH\nHC\nHCF\nHF\nHFC\n"
+    },
+    {
+      "name": "random_134_fbbbb",
+      "input": "FBBBB\n",
+      "output": "B\nBB\nBBB\nBBBB\nBBBBF\nBBBF\nBBBFB\nBBF\nBBFB\nBBFBB\nBF\nBFB\nBFBB\nBFBBB\nF\nFB\nFBB\nFBBB\nFBBBB\n"
+    },
+    {
+      "name": "random_135_fh",
+      "input": "FH\n",
+      "output": "F\nFH\nH\nHF\n"
+    },
+    {
+      "name": "random_136_bhdag",
+      "input": "BHDAG\n",
+      "output": "A\nAB\nABD\nABDG\nABDGH\nABDH\nABDHG\nABG\nABGD\nABGDH\nABGH\nABGHD\nABH\nABHD\nABHDG\nABHG\nABHGD\nAD\nADB\nADBG\nADBGH\nADBH\nADBHG\nADG\nADGB\nADGBH\nADGH\nADGHB\nADH\nADHB\nADHBG\nADHG\nADHGB\nAG\nAGB\nAGBD\nAGBDH\nAGBH\nAGBHD\nAGD\nAGDB\nAGDBH\nAGDH\nAGDHB\nAGH\nAGHB\nAGHBD\nAGHD\nAGHDB\nAH\nAHB\nAHBD\nAHBDG\nAHBG\nAHBGD\nAHD\nAHDB\nAHDBG\nAHDG\nAHDGB\nAHG\nAHGB\nAHGBD\nAHGD\nAHGDB\nB\nBA\nBAD\nBADG\nBADGH\nBADH\nBADHG\nBAG\nBAGD\nBAGDH\nBAGH\nBAGHD\nBAH\nBAHD\nBAHDG\nBAHG\nBAHGD\nBD\nBDA\nBDAG\nBDAGH\nBDAH\nBDAHG\nBDG\nBDGA\nBDGAH\nBDGH\nBDGHA\nBDH\nBDHA\nBDHAG\nBDHG\nBDHGA\nBG\nBGA\nBGAD\nBGADH\nBGAH\nBGAHD\nBGD\nBGDA\nBGDAH\nBGDH\nBGDHA\nBGH\nBGHA\nBGHAD\nBGHD\nBGHDA\nBH\nBHA\nBHAD\nBHADG\nBHAG\nBHAGD\nBHD\nBHDA\nBHDAG\nBHDG\nBHDGA\nBHG\nBHGA\nBHGAD\nBHGD\nBHGDA\nD\nDA\nDAB\nDABG\nDABGH\nDABH\nDABHG\nDAG\nDAGB\nDAGBH\nDAGH\nDAGHB\nDAH\nDAHB\nDAHBG\nDAHG\nDAHGB\nDB\nDBA\nDBAG\nDBAGH\nDBAH\nDBAHG\nDBG\nDBGA\nDBGAH\nDBGH\nDBGHA\nDBH\nDBHA\nDBHAG\nDBHG\nDBHGA\nDG\nDGA\nDGAB\nDGABH\nDGAH\nDGAHB\nDGB\nDGBA\nDGBAH\nDGBH\nDGBHA\nDGH\nDGHA\nDGHAB\nDGHB\nDGHBA\nDH\nDHA\nDHAB\nDHABG\nDHAG\nDHAGB\nDHB\nDHBA\nDHBAG\nDHBG\nDHBGA\nDHG\nDHGA\nDHGAB\nDHGB\nDHGBA\nG\nGA\nGAB\nGABD\nGABDH\nGABH\nGABHD\nGAD\nGADB\nGADBH\nGADH\nGADHB\nGAH\nGAHB\nGAHBD\nGAHD\nGAHDB\nGB\nGBA\nGBAD\nGBADH\nGBAH\nGBAHD\nGBD\nGBDA\nGBDAH\nGBDH\nGBDHA\nGBH\nGBHA\nGBHAD\nGBHD\nGBHDA\nGD\nGDA\nGDAB\nGDABH\nGDAH\nGDAHB\nGDB\nGDBA\nGDBAH\nGDBH\nGDBHA\nGDH\nGDHA\nGDHAB\nGDHB\nGDHBA\nGH\nGHA\nGHAB\nGHABD\nGHAD\nGHADB\nGHB\nGHBA\nGHBAD\nGHBD\nGHBDA\nGHD\nGHDA\nGHDAB\nGHDB\nGHDBA\nH\nHA\nHAB\nHABD\nHABDG\nHABG\nHABGD\nHAD\nHADB\nHADBG\nHADG\nHADGB\nHAG\nHAGB\nHAGBD\nHAGD\nHAGDB\nHB\nHBA\nHBAD\nHBADG\nHBAG\nHBAGD\nHBD\nHBDA\nHBDAG\nHBDG\nHBDGA\nHBG\nHBGA\nHBGAD\nHBGD\nHBGDA\nHD\nHDA\nHDAB\nHDABG\nHDAG\nHDAGB\nHDB\nHDBA\nHDBAG\nHDBG\nHDBGA\nHDG\nHDGA\nHDGAB\nHDGB\nHDGBA\nHG\nHGA\nHGAB\nHGABD\nHGAD\nHGADB\nHGB\nHGBA\nHGBAD\nHGBD\nHGBDA\nHGD\nHGDA\nHGDAB\nHGDB\nHGDBA\n"
+    },
+    {
+      "name": "random_137_cfhea",
+      "input": "CFHEA\n",
+      "output": "A\nAC\nACE\nACEF\nACEFH\nACEH\nACEHF\nACF\nACFE\nACFEH\nACFH\nACFHE\nACH\nACHE\nACHEF\nACHF\nACHFE\nAE\nAEC\nAECF\nAECFH\nAECH\nAECHF\nAEF\nAEFC\nAEFCH\nAEFH\nAEFHC\nAEH\nAEHC\nAEHCF\nAEHF\nAEHFC\nAF\nAFC\nAFCE\nAFCEH\nAFCH\nAFCHE\nAFE\nAFEC\nAFECH\nAFEH\nAFEHC\nAFH\nAFHC\nAFHCE\nAFHE\nAFHEC\nAH\nAHC\nAHCE\nAHCEF\nAHCF\nAHCFE\nAHE\nAHEC\nAHECF\nAHEF\nAHEFC\nAHF\nAHFC\nAHFCE\nAHFE\nAHFEC\nC\nCA\nCAE\nCAEF\nCAEFH\nCAEH\nCAEHF\nCAF\nCAFE\nCAFEH\nCAFH\nCAFHE\nCAH\nCAHE\nCAHEF\nCAHF\nCAHFE\nCE\nCEA\nCEAF\nCEAFH\nCEAH\nCEAHF\nCEF\nCEFA\nCEFAH\nCEFH\nCEFHA\nCEH\nCEHA\nCEHAF\nCEHF\nCEHFA\nCF\nCFA\nCFAE\nCFAEH\nCFAH\nCFAHE\nCFE\nCFEA\nCFEAH\nCFEH\nCFEHA\nCFH\nCFHA\nCFHAE\nCFHE\nCFHEA\nCH\nCHA\nCHAE\nCHAEF\nCHAF\nCHAFE\nCHE\nCHEA\nCHEAF\nCHEF\nCHEFA\nCHF\nCHFA\nCHFAE\nCHFE\nCHFEA\nE\nEA\nEAC\nEACF\nEACFH\nEACH\nEACHF\nEAF\nEAFC\nEAFCH\nEAFH\nEAFHC\nEAH\nEAHC\nEAHCF\nEAHF\nEAHFC\nEC\nECA\nECAF\nECAFH\nECAH\nECAHF\nECF\nECFA\nECFAH\nECFH\nECFHA\nECH\nECHA\nECHAF\nECHF\nECHFA\nEF\nEFA\nEFAC\nEFACH\nEFAH\nEFAHC\nEFC\nEFCA\nEFCAH\nEFCH\nEFCHA\nEFH\nEFHA\nEFHAC\nEFHC\nEFHCA\nEH\nEHA\nEHAC\nEHACF\nEHAF\nEHAFC\nEHC\nEHCA\nEHCAF\nEHCF\nEHCFA\nEHF\nEHFA\nEHFAC\nEHFC\nEHFCA\nF\nFA\nFAC\nFACE\nFACEH\nFACH\nFACHE\nFAE\nFAEC\nFAECH\nFAEH\nFAEHC\nFAH\nFAHC\nFAHCE\nFAHE\nFAHEC\nFC\nFCA\nFCAE\nFCAEH\nFCAH\nFCAHE\nFCE\nFCEA\nFCEAH\nFCEH\nFCEHA\nFCH\nFCHA\nFCHAE\nFCHE\nFCHEA\nFE\nFEA\nFEAC\nFEACH\nFEAH\nFEAHC\nFEC\nFECA\nFECAH\nFECH\nFECHA\nFEH\nFEHA\nFEHAC\nFEHC\nFEHCA\nFH\nFHA\nFHAC\nFHACE\nFHAE\nFHAEC\nFHC\nFHCA\nFHCAE\nFHCE\nFHCEA\nFHE\nFHEA\nFHEAC\nFHEC\nFHECA\nH\nHA\nHAC\nHACE\nHACEF\nHACF\nHACFE\nHAE\nHAEC\nHAECF\nHAEF\nHAEFC\nHAF\nHAFC\nHAFCE\nHAFE\nHAFEC\nHC\nHCA\nHCAE\nHCAEF\nHCAF\nHCAFE\nHCE\nHCEA\nHCEAF\nHCEF\nHCEFA\nHCF\nHCFA\nHCFAE\nHCFE\nHCFEA\nHE\nHEA\nHEAC\nHEACF\nHEAF\nHEAFC\nHEC\nHECA\nHECAF\nHECF\nHECFA\nHEF\nHEFA\nHEFAC\nHEFC\nHEFCA\nHF\nHFA\nHFAC\nHFACE\nHFAE\nHFAEC\nHFC\nHFCA\nHFCAE\nHFCE\nHFCEA\nHFE\nHFEA\nHFEAC\nHFEC\nHFECA\n"
+    },
+    {
+      "name": "random_138_bb",
+      "input": "BB\n",
+      "output": "B\nBB\n"
+    },
+    {
+      "name": "random_139_hhhh",
+      "input": "HHHH\n",
+      "output": "H\nHH\nHHH\nHHHH\n"
+    },
+    {
+      "name": "random_140_a",
+      "input": "A\n",
+      "output": "A\n"
+    },
+    {
+      "name": "random_141_bfga",
+      "input": "BFGA\n",
+      "output": "A\nAB\nABF\nABFG\nABG\nABGF\nAF\nAFB\nAFBG\nAFG\nAFGB\nAG\nAGB\nAGBF\nAGF\nAGFB\nB\nBA\nBAF\nBAFG\nBAG\nBAGF\nBF\nBFA\nBFAG\nBFG\nBFGA\nBG\nBGA\nBGAF\nBGF\nBGFA\nF\nFA\nFAB\nFABG\nFAG\nFAGB\nFB\nFBA\nFBAG\nFBG\nFBGA\nFG\nFGA\nFGAB\nFGB\nFGBA\nG\nGA\nGAB\nGABF\nGAF\nGAFB\nGB\nGBA\nGBAF\nGBF\nGBFA\nGF\nGFA\nGFAB\nGFB\nGFBA\n"
+    },
+    {
+      "name": "random_142_gg",
+      "input": "GG\n",
+      "output": "G\nGG\n"
+    },
+    {
+      "name": "random_143_gd",
+      "input": "GD\n",
+      "output": "D\nDG\nG\nGD\n"
+    },
+    {
+      "name": "random_144_aegc",
+      "input": "AEGC\n",
+      "output": "A\nAC\nACE\nACEG\nACG\nACGE\nAE\nAEC\nAECG\nAEG\nAEGC\nAG\nAGC\nAGCE\nAGE\nAGEC\nC\nCA\nCAE\nCAEG\nCAG\nCAGE\nCE\nCEA\nCEAG\nCEG\nCEGA\nCG\nCGA\nCGAE\nCGE\nCGEA\nE\nEA\nEAC\nEACG\nEAG\nEAGC\nEC\nECA\nECAG\nECG\nECGA\nEG\nEGA\nEGAC\nEGC\nEGCA\nG\nGA\nGAC\nGACE\nGAE\nGAEC\nGC\nGCA\nGCAE\nGCE\nGCEA\nGE\nGEA\nGEAC\nGEC\nGECA\n"
+    },
+    {
+      "name": "random_145_e",
+      "input": "E\n",
+      "output": "E\n"
+    },
+    {
+      "name": "random_146_f",
+      "input": "F\n",
+      "output": "F\n"
+    },
+    {
+      "name": "random_147_ec",
+      "input": "EC\n",
+      "output": "C\nCE\nE\nEC\n"
+    },
+    {
+      "name": "random_148_fffff",
+      "input": "FFFFF\n",
+      "output": "F\nFF\nFFF\nFFFF\nFFFFF\n"
+    },
+    {
+      "name": "random_149_cgd",
+      "input": "CGD\n",
+      "output": "C\nCD\nCDG\nCG\nCGD\nD\nDC\nDCG\nDG\nDGC\nG\nGC\nGCD\nGD\nGDC\n"
+    },
+    {
+      "name": "random_150_dff",
+      "input": "DFF\n",
+      "output": "D\nDF\nDFF\nF\nFD\nFDF\nFF\nFFD\n"
+    },
+    {
+      "name": "random_151_hafe",
+      "input": "HAFE\n",
+      "output": "A\nAE\nAEF\nAEFH\nAEH\nAEHF\nAF\nAFE\nAFEH\nAFH\nAFHE\nAH\nAHE\nAHEF\nAHF\nAHFE\nE\nEA\nEAF\nEAFH\nEAH\nEAHF\nEF\nEFA\nEFAH\nEFH\nEFHA\nEH\nEHA\nEHAF\nEHF\nEHFA\nF\nFA\nFAE\nFAEH\nFAH\nFAHE\nFE\nFEA\nFEAH\nFEH\nFEHA\nFH\nFHA\nFHAE\nFHE\nFHEA\nH\nHA\nHAE\nHAEF\nHAF\nHAFE\nHE\nHEA\nHEAF\nHEF\nHEFA\nHF\nHFA\nHFAE\nHFE\nHFEA\n"
+    },
+    {
+      "name": "random_152_fg",
+      "input": "FG\n",
+      "output": "F\nFG\nG\nGF\n"
+    },
+    {
+      "name": "random_153_cacc",
+      "input": "CACC\n",
+      "output": "A\nAC\nACC\nACCC\nC\nCA\nCAC\nCACC\nCC\nCCA\nCCAC\nCCC\nCCCA\n"
+    },
+    {
+      "name": "random_154_hehcc",
+      "input": "HEHCC\n",
+      "output": "C\nCC\nCCE\nCCEH\nCCEHH\nCCH\nCCHE\nCCHEH\nCCHH\nCCHHE\nCE\nCEC\nCECH\nCECHH\nCEH\nCEHC\nCEHCH\nCEHH\nCEHHC\nCH\nCHC\nCHCE\nCHCEH\nCHCH\nCHCHE\nCHE\nCHEC\nCHECH\nCHEH\nCHEHC\nCHH\nCHHC\nCHHCE\nCHHE\nCHHEC\nE\nEC\nECC\nECCH\nECCHH\nECH\nECHC\nECHCH\nECHH\nECHHC\nEH\nEHC\nEHCC\nEHCCH\nEHCH\nEHCHC\nEHH\nEHHC\nEHHCC\nH\nHC\nHCC\nHCCE\nHCCEH\nHCCH\nHCCHE\nHCE\nHCEC\nHCECH\nHCEH\nHCEHC\nHCH\nHCHC\nHCHCE\nHCHE\nHCHEC\nHE\nHEC\nHECC\nHECCH\nHECH\nHECHC\nHEH\nHEHC\nHEHCC\nHH\nHHC\nHHCC\nHHCCE\nHHCE\nHHCEC\nHHE\nHHEC\nHHECC\n"
+    },
+    {
+      "name": "random_155_hadb",
+      "input": "HADB\n",
+      "output": "A\nAB\nABD\nABDH\nABH\nABHD\nAD\nADB\nADBH\nADH\nADHB\nAH\nAHB\nAHBD\nAHD\nAHDB\nB\nBA\nBAD\nBADH\nBAH\nBAHD\nBD\nBDA\nBDAH\nBDH\nBDHA\nBH\nBHA\nBHAD\nBHD\nBHDA\nD\nDA\nDAB\nDABH\nDAH\nDAHB\nDB\nDBA\nDBAH\nDBH\nDBHA\nDH\nDHA\nDHAB\nDHB\nDHBA\nH\nHA\nHAB\nHABD\nHAD\nHADB\nHB\nHBA\nHBAD\nHBD\nHBDA\nHD\nHDA\nHDAB\nHDB\nHDBA\n"
+    },
+    {
+      "name": "random_156_acef",
+      "input": "ACEF\n",
+      "output": "A\nAC\nACE\nACEF\nACF\nACFE\nAE\nAEC\nAECF\nAEF\nAEFC\nAF\nAFC\nAFCE\nAFE\nAFEC\nC\nCA\nCAE\nCAEF\nCAF\nCAFE\nCE\nCEA\nCEAF\nCEF\nCEFA\nCF\nCFA\nCFAE\nCFE\nCFEA\nE\nEA\nEAC\nEACF\nEAF\nEAFC\nEC\nECA\nECAF\nECF\nECFA\nEF\nEFA\nEFAC\nEFC\nEFCA\nF\nFA\nFAC\nFACE\nFAE\nFAEC\nFC\nFCA\nFCAE\nFCE\nFCEA\nFE\nFEA\nFEAC\nFEC\nFECA\n"
+    },
+    {
+      "name": "random_157_fda",
+      "input": "FDA\n",
+      "output": "A\nAD\nADF\nAF\nAFD\nD\nDA\nDAF\nDF\nDFA\nF\nFA\nFAD\nFD\nFDA\n"
+    },
+    {
+      "name": "random_158_aec",
+      "input": "AEC\n",
+      "output": "A\nAC\nACE\nAE\nAEC\nC\nCA\nCAE\nCE\nCEA\nE\nEA\nEAC\nEC\nECA\n"
+    },
+    {
+      "name": "random_159_dbbe",
+      "input": "DBBE\n",
+      "output": "B\nBB\nBBD\nBBDE\nBBE\nBBED\nBD\nBDB\nBDBE\nBDE\nBDEB\nBE\nBEB\nBEBD\nBED\nBEDB\nD\nDB\nDBB\nDBBE\nDBE\nDBEB\nDE\nDEB\nDEBB\nE\nEB\nEBB\nEBBD\nEBD\nEBDB\nED\nEDB\nEDBB\n"
+    }
+  ]
+}

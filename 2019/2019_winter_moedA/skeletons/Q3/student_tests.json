@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "sample_five_x_six_y",
+      "input": "XXXXXYYYYYY\n",
+      "output": "5"
+    },
+    {
+      "name": "edge_one_x_one_y",
+      "input": "XY\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_two_x_two_y",
+      "input": "XXYY\n",
+      "output": "2"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "count_example_multiple",
+      "input": "1\n7 c\naabccce\n",
+      "output": "3"
+    },
+    {
+      "name": "equal_example_true",
+      "input": "2\n7\naabccce\naabccce\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_example_false",
+      "input": "2\n7\naabccce\naabbcce\n",
+      "output": "0"
+    }
+  ]
+}

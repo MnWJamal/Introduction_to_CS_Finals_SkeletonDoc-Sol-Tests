@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "sample_voldemort",
+      "input": "Riddle Marvolo Tom\nVoldemort Lord am I\n",
+      "output": "1"
+    },
+    {
+      "name": "sample_false_different_letters",
+      "input": "hello\nworld\n",
+      "output": "0"
+    },
+    {
+      "name": "sample_spaces_and_case",
+      "input": "A gentleman\nElegant man\n",
+      "output": "1"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "tests": [
+    {
+      "name": "exam_example",
+      "input": "abaabababbaa\naab\n",
+      "output": "6"
+    },
+    {
+      "name": "single_char_matches",
+      "input": "aaaaa\na\n",
+      "output": "5"
+    },
+    {
+      "name": "pattern_longer_than_text",
+      "input": "abc\nabcd\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_strings_permutation",
+      "input": "cba\nabc\n",
+      "output": "1"
+    },
+    {
+      "name": "no_matches",
+      "input": "abcdef\nzzz\n",
+      "output": "0"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "sample_single_middle",
+      "input": "7\n1 1 2 2 3 4 4\n",
+      "output": "3"
+    },
+    {
+      "name": "sample_value_has_pair_elsewhere",
+      "input": "7\n7 7 5 1 1 5 5\n",
+      "output": "5"
+    },
+    {
+      "name": "edge_one_element",
+      "input": "1\n9\n",
+      "output": "9"
+    }
+  ]
+}

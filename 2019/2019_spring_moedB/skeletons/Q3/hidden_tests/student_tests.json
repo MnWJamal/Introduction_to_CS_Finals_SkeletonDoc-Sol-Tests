@@ -1,0 +1,1004 @@
+{
+  "tests": [
+    {
+      "name": "count_n1_present",
+      "input": "1\n1 a\na\n",
+      "output": "1"
+    },
+    {
+      "name": "count_n1_absent",
+      "input": "1\n1 b\na\n",
+      "output": "0"
+    },
+    {
+      "name": "count_all_a",
+      "input": "1\n10 a\naaaaaaaaaa\n",
+      "output": "10"
+    },
+    {
+      "name": "count_all_a_absent_z",
+      "input": "1\n10 z\naaaaaaaaaa\n",
+      "output": "0"
+    },
+    {
+      "name": "count_all_z",
+      "input": "1\n8 z\nzzzzzzzz\n",
+      "output": "8"
+    },
+    {
+      "name": "count_at_start",
+      "input": "1\n10 a\naaaabbbbcc\n",
+      "output": "4"
+    },
+    {
+      "name": "count_in_middle",
+      "input": "1\n10 b\naaaabbbbcc\n",
+      "output": "4"
+    },
+    {
+      "name": "count_at_end",
+      "input": "1\n10 c\naaaabbbbcc\n",
+      "output": "2"
+    },
+    {
+      "name": "count_between_runs_absent",
+      "input": "1\n10 d\naaaabbbbcc\n",
+      "output": "0"
+    },
+    {
+      "name": "count_alphabet_each",
+      "input": "1\n26 m\nabcdefghijklmnopqrstuvwxyz\n",
+      "output": "1"
+    },
+    {
+      "name": "count_alphabet_absent_none",
+      "input": "1\n26 a\nabcdefghijklmnopqrstuvwxyz\n",
+      "output": "1"
+    },
+    {
+      "name": "count_large_run_start",
+      "input": "1\n65 a\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbccccc\n",
+      "output": "50"
+    },
+    {
+      "name": "count_large_run_middle",
+      "input": "1\n65 b\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbccccc\n",
+      "output": "10"
+    },
+    {
+      "name": "count_large_run_end",
+      "input": "1\n65 c\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbccccc\n",
+      "output": "5"
+    },
+    {
+      "name": "count_large_run_absent",
+      "input": "1\n65 z\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbccccc\n",
+      "output": "0"
+    },
+    {
+      "name": "count_two_letters_one",
+      "input": "1\n21 m\nmnnnnnnnnnnnnnnnnnnnn\n",
+      "output": "1"
+    },
+    {
+      "name": "count_two_letters_twenty",
+      "input": "1\n21 n\nmnnnnnnnnnnnnnnnnnnnn\n",
+      "output": "20"
+    },
+    {
+      "name": "count_char_before_min",
+      "input": "1\n8 a\nmmmmmmmm\n",
+      "output": "0"
+    },
+    {
+      "name": "count_char_after_max",
+      "input": "1\n8 z\nmmmmmmmm\n",
+      "output": "0"
+    },
+    {
+      "name": "count_single_middle_letter",
+      "input": "1\n1 n\nn\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_n1_true",
+      "input": "2\n1\na\na\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_n1_false",
+      "input": "2\n1\na\nb\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_all_same_true",
+      "input": "2\n6\naaaaaa\naaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_all_same_false",
+      "input": "2\n6\naaaaaa\nbbbbbb\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_diff_start",
+      "input": "2\n6\naaabbb\naabbbb\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_diff_middle",
+      "input": "2\n9\naaabbbccc\naaabbcccc\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_diff_end",
+      "input": "2\n9\naaabbbccc\naaabbbccd\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_alphabet_true",
+      "input": "2\n26\nabcdefghijklmnopqrstuvwxyz\nabcdefghijklmnopqrstuvwxyz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_alphabet_false",
+      "input": "2\n26\nabcdefghijklmnopqrstuvwxyy\nabcdefghijklmnopqrstuvwxyz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_same_counts_true",
+      "input": "2\n12\naabbccddeeff\naabbccddeeff\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_close_false",
+      "input": "2\n12\naabbccddeeff\naabbccddeefg\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_long_true",
+      "input": "2\n45\naaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbzzzzzzzzzz\naaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbzzzzzzzzzz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_long_missing_one",
+      "input": "2\n45\naaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbzzzzzzzzzz\naaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbyzzzzzzzzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_min_max_false",
+      "input": "2\n60\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\naaaaaaaaaaaaaaaaaaaaaaaaaaaaabzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_sparse_true",
+      "input": "2\n6\ncckktt\ncckktt\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_sparse_false",
+      "input": "2\n6\ncckktt\ncckktu\n",
+      "output": "0"
+    },
+    {
+      "name": "count_systematic_letter_a",
+      "input": "1\n76 a\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "1"
+    },
+    {
+      "name": "count_systematic_letter_b",
+      "input": "1\n76 b\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "2"
+    },
+    {
+      "name": "count_systematic_letter_c",
+      "input": "1\n76 c\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "3"
+    },
+    {
+      "name": "count_systematic_letter_d",
+      "input": "1\n76 d\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "4"
+    },
+    {
+      "name": "count_systematic_letter_e",
+      "input": "1\n76 e\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "5"
+    },
+    {
+      "name": "count_systematic_letter_f",
+      "input": "1\n76 f\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "1"
+    },
+    {
+      "name": "count_systematic_letter_g",
+      "input": "1\n76 g\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "2"
+    },
+    {
+      "name": "count_systematic_letter_h",
+      "input": "1\n76 h\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "3"
+    },
+    {
+      "name": "count_systematic_letter_i",
+      "input": "1\n76 i\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "4"
+    },
+    {
+      "name": "count_systematic_letter_j",
+      "input": "1\n76 j\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "5"
+    },
+    {
+      "name": "count_systematic_letter_k",
+      "input": "1\n76 k\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "1"
+    },
+    {
+      "name": "count_systematic_letter_l",
+      "input": "1\n76 l\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "2"
+    },
+    {
+      "name": "count_systematic_letter_m",
+      "input": "1\n76 m\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "3"
+    },
+    {
+      "name": "count_systematic_letter_n",
+      "input": "1\n76 n\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "4"
+    },
+    {
+      "name": "count_systematic_letter_o",
+      "input": "1\n76 o\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "5"
+    },
+    {
+      "name": "count_systematic_letter_p",
+      "input": "1\n76 p\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "1"
+    },
+    {
+      "name": "count_systematic_letter_q",
+      "input": "1\n76 q\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "2"
+    },
+    {
+      "name": "count_systematic_letter_r",
+      "input": "1\n76 r\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "3"
+    },
+    {
+      "name": "count_systematic_letter_s",
+      "input": "1\n76 s\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "4"
+    },
+    {
+      "name": "count_systematic_letter_t",
+      "input": "1\n76 t\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "5"
+    },
+    {
+      "name": "count_systematic_letter_u",
+      "input": "1\n76 u\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "1"
+    },
+    {
+      "name": "count_systematic_letter_v",
+      "input": "1\n76 v\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "2"
+    },
+    {
+      "name": "count_systematic_letter_w",
+      "input": "1\n76 w\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "3"
+    },
+    {
+      "name": "count_systematic_letter_x",
+      "input": "1\n76 x\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "4"
+    },
+    {
+      "name": "count_systematic_letter_y",
+      "input": "1\n76 y\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "5"
+    },
+    {
+      "name": "count_systematic_letter_z",
+      "input": "1\n76 z\nabbcccddddeeeeefgghhhiiiijjjjjkllmmmnnnnooooopqqrrrsssstttttuvvwwwxxxxyyyyyz\n",
+      "output": "1"
+    },
+    {
+      "name": "count_random_1_n55_g",
+      "input": "1\n55 g\naaabbbcccddeeefffgghiiijjlmmnooppqsstttttuuuvvwwwwxxxzz\n",
+      "output": "2"
+    },
+    {
+      "name": "count_random_2_n6_f",
+      "input": "1\n6 f\ndhirsx\n",
+      "output": "0"
+    },
+    {
+      "name": "count_random_3_n107_l",
+      "input": "1\n107 l\naaaaabbcdddeeeeffffgggghhhhhhiiiijjjjjjjkkkkllllmmmnnnnoooooppppqrrrrrssssssttttttuuuuvvvwwwwxxyyyzzzzzzzzz\n",
+      "output": "4"
+    },
+    {
+      "name": "count_random_4_n6_m",
+      "input": "1\n6 m\ncddsvv\n",
+      "output": "0"
+    },
+    {
+      "name": "count_random_5_n2_m",
+      "input": "1\n2 m\ncr\n",
+      "output": "0"
+    },
+    {
+      "name": "count_random_6_n10_v",
+      "input": "1\n10 v\nbegjlprtxx\n",
+      "output": "0"
+    },
+    {
+      "name": "count_random_7_n53_d",
+      "input": "1\n53 d\naaabdddeefggghhhiijjjjmmmmnnnnoopppqqrrsssttuuvwwwxyy\n",
+      "output": "3"
+    },
+    {
+      "name": "count_random_8_n1_c",
+      "input": "1\n1 c\ne\n",
+      "output": "0"
+    },
+    {
+      "name": "count_random_9_n55_x",
+      "input": "1\n55 x\nbbbbbbddeeeeeeffghhhiiiijjkkklloopppprsstuuuuvwwxxyyyzz\n",
+      "output": "2"
+    },
+    {
+      "name": "count_random_10_n12_l",
+      "input": "1\n12 l\nbcdfjnottvwx\n",
+      "output": "0"
+    },
+    {
+      "name": "count_random_11_n9_x",
+      "input": "1\n9 x\naffhknwxz\n",
+      "output": "1"
+    },
+    {
+      "name": "count_random_12_n29_d",
+      "input": "1\n29 d\naccdeeeeffhjjknnoopppqrsuwxxx\n",
+      "output": "1"
+    },
+    {
+      "name": "count_random_13_n22_v",
+      "input": "1\n22 v\nbbcdijmmnnppqqrtuuwyyz\n",
+      "output": "0"
+    },
+    {
+      "name": "count_random_14_n24_t",
+      "input": "1\n24 t\nabdfhhjklllnoqrrttuuvwwy\n",
+      "output": "2"
+    },
+    {
+      "name": "count_random_15_n3_o",
+      "input": "1\n3 o\nqsx\n",
+      "output": "0"
+    },
+    {
+      "name": "count_random_16_n4_m",
+      "input": "1\n4 m\nacdy\n",
+      "output": "0"
+    },
+    {
+      "name": "count_random_17_n32_a",
+      "input": "1\n32 a\nabbccefghjklmmnnnnppqqrrrsuuwwxz\n",
+      "output": "1"
+    },
+    {
+      "name": "count_random_18_n26_s",
+      "input": "1\n26 s\nacdddeffghjkkmnopqtuwwxxxz\n",
+      "output": "0"
+    },
+    {
+      "name": "count_random_19_n23_f",
+      "input": "1\n23 f\nceefiijknoprsttuuwwyyyy\n",
+      "output": "1"
+    },
+    {
+      "name": "count_random_20_n47_o",
+      "input": "1\n47 o\naaaaaccdeeefffgggiiijjjllmmnnpqqrrsttuvwwwwxyzz\n",
+      "output": "0"
+    },
+    {
+      "name": "count_random_21_n45_d",
+      "input": "1\n45 d\nbcccdddeeffffgghijjkkklllmmmmpppqrtuuuuvwwyyz\n",
+      "output": "3"
+    },
+    {
+      "name": "count_random_22_n13_b",
+      "input": "1\n13 b\nccfghimnorstu\n",
+      "output": "0"
+    },
+    {
+      "name": "count_random_23_n25_a",
+      "input": "1\n25 a\ncddfghjjjklmmnoopprstttwx\n",
+      "output": "0"
+    },
+    {
+      "name": "count_random_24_n2_g",
+      "input": "1\n2 g\nlo\n",
+      "output": "0"
+    },
+    {
+      "name": "count_random_25_n20_i",
+      "input": "1\n20 i\nbdefghiimmopqqrstvxy\n",
+      "output": "2"
+    },
+    {
+      "name": "count_random_26_n30_d",
+      "input": "1\n30 d\ndeefffgghhiikopqrrrrrrsstuuyyy\n",
+      "output": "1"
+    },
+    {
+      "name": "count_random_27_n9_k",
+      "input": "1\n9 k\nachimrrvy\n",
+      "output": "0"
+    },
+    {
+      "name": "count_random_28_n57_n",
+      "input": "1\n57 n\naabbbccddddefghhiijklnoopppqqqrrrrssstuuuuvvvvwwwwwxxxxyz\n",
+      "output": "1"
+    },
+    {
+      "name": "count_random_29_n84_d",
+      "input": "1\n84 d\naaaaabbbbbcdeefffgghhhhiiiijklmmmmmnnnnnnnoopppqqqqrrrssstttuvvvwwwwwxxxyyyyyyyzzzzz\n",
+      "output": "1"
+    },
+    {
+      "name": "count_random_30_n47_p",
+      "input": "1\n47 p\naaabccdeeeffghiijjllllmnnnnppqrrsstttuuvvwxxyyz\n",
+      "output": "2"
+    },
+    {
+      "name": "count_random_31_n2_o",
+      "input": "1\n2 o\nnu\n",
+      "output": "0"
+    },
+    {
+      "name": "count_random_32_n21_n",
+      "input": "1\n21 n\nabcdfgghijkmnsvvvvwyz\n",
+      "output": "1"
+    },
+    {
+      "name": "count_random_33_n16_v",
+      "input": "1\n16 v\nabcefinnorsttvvv\n",
+      "output": "3"
+    },
+    {
+      "name": "count_random_34_n61_j",
+      "input": "1\n61 j\naaaaaabbccccdeeeefgggghiijjklllmmmmnnopqqrrsssttuvvwwxxxyyyyy\n",
+      "output": "2"
+    },
+    {
+      "name": "count_random_35_n26_f",
+      "input": "1\n26 f\nccdfghiiiijkllnnoopqquvxxx\n",
+      "output": "1"
+    },
+    {
+      "name": "count_random_36_n6_y",
+      "input": "1\n6 y\nffjmmp\n",
+      "output": "0"
+    },
+    {
+      "name": "count_random_37_n4_j",
+      "input": "1\n4 j\npqsw\n",
+      "output": "0"
+    },
+    {
+      "name": "count_random_38_n9_o",
+      "input": "1\n9 o\nbfgknoops\n",
+      "output": "2"
+    },
+    {
+      "name": "count_random_39_n32_n",
+      "input": "1\n32 n\naaaabbbcdeeffghjkmmnnnoprvvvwyyy\n",
+      "output": "3"
+    },
+    {
+      "name": "count_random_40_n8_t",
+      "input": "1\n8 t\ncehhstyy\n",
+      "output": "1"
+    },
+    {
+      "name": "count_random_41_n50_d",
+      "input": "1\n50 d\nabbcccddeefffghhhkkklllmmooopprrstttuvvwwxxxxyyyyz\n",
+      "output": "2"
+    },
+    {
+      "name": "count_random_42_n14_u",
+      "input": "1\n14 u\nabcdddegpqqsss\n",
+      "output": "0"
+    },
+    {
+      "name": "count_random_43_n29_p",
+      "input": "1\n29 p\nabbbccceggiijjmmnopsuuvwwxyyz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_1_n32",
+      "input": "2\n32\naabcdeeefffghikllmmmnppqqqrsstuu\naabcdeeeffgghikllmmmnppqqqrsstuu\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_2_n69",
+      "input": "2\n69\nabbbbbddddeeeeffgghhhiiijkllmmmmnnoooooopqqqrrrrrssuuuuuuuvwwxxxxyyzz\nabbbbbddddeeeeffgghhhhiiijklmmmmnnoooooopqqqrrrrrssuuuuuuuvwwxxxxyyzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_3_n89",
+      "input": "2\n89\naaabbbbccccccddddeefffgghiijjkklllllmnnnnooooooopqqqqqrrsttttuuuvvvvvvvwwwxxxyyyyyyyzzzzz\naaabbbbccccccddddeefffgghiijjkklllllmnnnnooooooopqqqqqrrsttttuuuvvvvvvvwwwxxxyyyyyyyzzzzz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_4_n56",
+      "input": "2\n56\naaacccccdeeeeeeffggghhiijjkkkllllmmopqqqsstttuuwwwxyyzzz\naaacccccdeeeeeeffggghhiijjkkkllllmmopqqqsstttuuwwwxyyzzz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_5_n3",
+      "input": "2\n3\naad\naaw\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_6_n25",
+      "input": "2\n25\naabcggiijkllnnnooopqsuvvy\naabcggiijkkllnnnoopqsuvvy\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_7_n99",
+      "input": "2\n99\naabbbbbbbcccddddeeeeffffgggggghiijjjjjkkkkllmmnnnnnoooooooopppqqqqrrrrrstttttuuuuuuvvvvwwwwxxyyyzzz\naabbbbbbbcccddddeeeffffgggggghiijjjjjkkkkllmmnnnnnooooooooppppqqqqrrrrrstttttuuuuuuvvvvwwwwxxyyyzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_8_n32",
+      "input": "2\n32\naabbccdeeffggghkklmoppqqrrttvvvy\naabbccdeeffggghkklmoppqqrrttvvvy\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_9_n36",
+      "input": "2\n36\nbbbcdffggghhijkklnoppqqqrrrrssuvwxzz\nbbbcdffggghhijkklnoppqqqrrrrssuvwxzz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_10_n73",
+      "input": "2\n73\naaaaccccccddddefffffgggghhhhiilllllmmmnnnnnoopppqqqqqqrrrrrsstttuuwxxzzzz\naaaaccccccddddefffffgggghhhhiilllllmmmnnnnnoopppqqqqqqrrrrrsstttuuwxxzzzz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_11_n6",
+      "input": "2\n6\ncfgqtt\ncfgjqt\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_12_n58",
+      "input": "2\n58\naaaccccccddeefffggghhiiijklmmmnnnnnnoppppqrrtvvxxxyyyyyyzz\naaabccccccddeefffggghhiiijklmmmnnnnnnoppppqrrtvvxxyyyyyyzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_13_n36",
+      "input": "2\n36\nbcddeeeffgggjllllmmmoopqqssvvvwwyyzz\nbcddeeeffgggjllllmmmmoopqqssvvvwwyzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_14_n74",
+      "input": "2\n74\naaaabbccccddefgggggiiiijjjjjkkklllmmnnnnnooppppqrrsssstuuuvwwwwxxxxxyyzzzz\naaaabbccccddefgggggiiiijjjjjkkklllmmnnnnnooppppqrrsssstuuuwwwwwxxxxxyyzzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_15_n92",
+      "input": "2\n92\naabbbbcccddeefffgghhiiijjjjjjkkkkkklllmmmmnnnnnoooppqqqqrrrrrsssstttttuuuuuvvvvwwwxxxxxyyzzz\naabbbcccddeefffgghhiiijjjjjjkkkkkklllmmmmnnnnnoooppqqqqrrrrrrsssstttttuuuuuvvvvwwwxxxxxyyzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_16_n72",
+      "input": "2\n72\naabbbbbbbbcccddeeeeffggggggghiikkkklmnooopqqqqqqqqrrrrrrsssttuuwwwxxyyyy\naabbbbbbbbcccddeeeeffggggggghiikkkklmnooopqqqqqqqqrrrrrrsssttuuwwwxxyyyy\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_17_n9",
+      "input": "2\n9\ngilqrtvvw\ngilqrtvvw\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_18_n43",
+      "input": "2\n43\naabcccdeefffgggghijjjjkkkllmnooqssstuvvwwyz\naabcccdeefffgggghijjjjkkkllmmnooqssstuvvwyz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_19_n62",
+      "input": "2\n62\naaabbbcdddeeeggggghhjjjjkkklllllmmnnoopppqqrrrrrrstttuvwwxxxyy\naaabbbcdddeeeggggghhjjjjkkklllllmmnnoopppqqrrrrrrsttuvwwxxxxyy\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_20_n40",
+      "input": "2\n40\nbbddeefghhhijlmnnoppqqrtuuuuuuvxxyzzzzzz\nbbddeefghhhijlmnnoppqqrtuuuuuuvxxyzzzzzz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_21_n96",
+      "input": "2\n96\naaaabbbbbccdddeeffffghhhhhhiijjjjjjkkkklmnnnooooooooppppppqqqqqqqssstttuuuuvvvwwxxxxyyyyyyyzzzzz\naaaabbbbbccdddeeffffghhhhhhiijjjjjjkkklmmnnnooooooooppppppqqqqqqqssstttuuuuvvvwwxxxxyyyyyyyzzzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_22_n53",
+      "input": "2\n53\naaaaaabbddefggghhhijjjjjkkklllmnnooopqqsstuuuvvwyzzzz\naaaaaabbddefggghhhijjjjjkkklllmnnooopqqsstuuuvvwyzzzz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_23_n85",
+      "input": "2\n85\naaaaabbccdddddeeeggghhhjjjjkkkmmmmmmnnnooooooppqqrssstttttttuuuuvvvvvvwxxxxxxyyyyyzzz\naaaaabbccdddddeeeggghhhjjjjkkkmmmmmmnnooooooppqqrsssstttttttuuuuvvvvvvwxxxxxxyyyyyzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_24_n15",
+      "input": "2\n15\nbbceefhnnrswwxz\nbbceefhnnrswwxz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_25_n94",
+      "input": "2\n94\naabbbbbbbcccddeffgggghhhiiiijjkkkkkkkkkllllmmnnnnoooppppppqqqrrrrsssssssssstttuuuuuvvvvxxxxyzz\naabbbbbbbcccddeffgggghhhiiiijjkkkkkkkkkllllmmnnnnoooppppppqqqrrrrsssssssssstttuuuuuvvvvxxxxyzz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_26_n77",
+      "input": "2\n77\naaaabbcccccdeeeeeffgggghiiijjklllmmnnnnoooppqqqqqrrrrstttttuvvvvwwxxxyyyyzzzz\naaaabbcccccdeeeeeffgggghiiijkklllmmnnnnoooppqqqqqrrrrstttttuvvvvwwxxxyyyyzzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_27_n16",
+      "input": "2\n16\nabbdjkllostuwwwx\nabbdjkllostuwwwx\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_28_n27",
+      "input": "2\n27\naabdefggjllnnoopqqrrtuwwyzz\naabdefgghjllnnooqqrrtuwwyzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_29_n18",
+      "input": "2\n18\naaabceefhjjlmopqru\naabceefhjjlmoppqru\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_30_n11",
+      "input": "2\n11\nadfjmnottuv\nadfmnoottuv\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_31_n29",
+      "input": "2\n29\naabcdfggghjjjjjkklnppqsuuwwxz\naabcefggghjjjjjkklnppqsuuwwxz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_32_n47",
+      "input": "2\n47\naaaabbcccddefghijjkkkmmnnooopqqqrrrrssssttvxyzz\naaaabbcccddeefghijjkkkmmnnooopqqqrrrssssttvxyzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_33_n97",
+      "input": "2\n97\naaabbbbcdddeeffffffggggghhhhhhhiiiiiiijjjjkkkkkklllmmmmmmnnnooppppqqrsssssttttuuuuvvvvwwwxxxxyyyy\naaabbbbcddddeeffffffggggghhhhhhhiiiiiiijjjjkkkkkklllmmmmmmnnnooppppqqrsssssttttuuuuvvvvwwwxxxyyyy\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_34_n58",
+      "input": "2\n58\naaaacccddeeeeefgghijjjjjkkkllllllmmmnnnnopqrrsstuuuvvwxxyz\naaaacccddeeeeefgghijjjjjkkkllllllmmmnnnnopqrrsstuuuvvwxxyz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_35_n87",
+      "input": "2\n87\naaaabbbbbccdefgggghhhhiiiijjjlllllmmmmmnnnnnoooopqqqqqrrrrsssssttuuuvvvvwwwwwwwxxxyyyzz\naaaabbbbbccdefgggghhhhiiiijjjlllllmmmmmnnnnnoooopqqqqqrrrrsssssttuuuvvvvwwwwwwwxxxyyyzz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_36_n67",
+      "input": "2\n67\nbbbccddeeeffgghhhjjjjkkklllmmmnnoooooppppppqqqqrrrssssttuuvvwwxxyzz\nbbbccddeeeffgghhhjjjjkkklllmmmnnoooooppppppqqqqrrrssssttuuvvwwxxyzz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_37_n98",
+      "input": "2\n98\naaaaabbccdddeeeffgghhhiijjjjjjjkkkkklllmmnnoooppppppppqqqqqqrsssstttttttuuuvvvvvvwwwwwxxxxxyyzzzzz\naaaaabbccdddeeeffgghhhiijjjjjjkkkkklllmmnnoooppppppppqqqqqqrsssstttttttuuuvvvvvvwwwwwxxxxxyyzzzzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_38_n99",
+      "input": "2\n99\naaaabbbbbbbbcccccddeffgggghhhiiiiijlllmmnnnnnopppppqqqqqqqqrrrrrrrsssssttuuuuvvvvwwwwxxxxxxxyyyyzzz\naaaabbbbbbbbcccccddefffgggghhhiiiiijlllmmnnnnnopppppqqqqqqqrrrrrrrsssssttuuuuvvvvwwwwxxxxxxxyyyyzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_39_n29",
+      "input": "2\n29\nabdddeehjkllmmprrssttuuvwxxzz\naabdddeehjkllmprrssttuuvwxxzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_40_n7",
+      "input": "2\n7\nbehiuux\nbefhiux\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_41_n67",
+      "input": "2\n67\naabbcccddeffffggggghiiijkkkkllmmmmmmnnooopppppqqqrrstuuuuwwxyyyyzzz\naabbcccddeffffggggghiiijjkkkllmmmmmmnnooopppppqqqrrstuuuuwwxyyyyzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_42_n26",
+      "input": "2\n26\nbccccdddefghkmpqqrtuvvwyyz\nbccccdddefhikmpqqrtuvvwyyz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_43_n7",
+      "input": "2\n7\nfllnoxy\nfllnoxy\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_44_n86",
+      "input": "2\n86\naaabbbbcdddeeeeefffffggggggghhhiiiiijjjjkklmmnnoooopppqqqrrrrrsttuuvvvvvwwwwwwxxxxxyzz\naaabbbcdddeeeeefffffggggggghhhiiiiijjjjkklmmnnoooopppqqqrrrrrsttuuvvvvvwwwwwwxxxxxxyzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_45_n50",
+      "input": "2\n50\naaabccddddeeeefggghhikkklmnnnnoooppprrssstttvwyzzz\naaabccddddeeeefggghhikkklmnnnnoooppprrssstttvwyzzz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_46_n78",
+      "input": "2\n78\naabcccccdddeeeeeeffgghhhiijjjjllmmmnnoooppppqqqrrrrrsstttuuuuvvvwxxxxxyyyyyyyz\naabcccccdddeeeeeeffgghhhiijjjjllmmmnnoooppppqqqrrrrrsstttuuuuvvvwxxxxxyyyyyyyz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_47_n51",
+      "input": "2\n51\nabcccddeffgghhijkkllmmnnnnooppqqqrrssstttuuvwwxxyyz\nabcccddeffgghhijkkllmmnnnnooppqqqrrssstttuuvwwxxyyz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_48_n80",
+      "input": "2\n80\nabbcccdeeefggghhhijkkkkkkllllmmmnoooppqqqrrsssstttuuuuuuuuvvvvvvxxxxyyyyyyzzzzzz\nabbcccdeefggghhhijkkkkkkllllmmmnoooppqqqrrsssstttuuuuuuuuvvvvvvxxxxxyyyyyyzzzzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_49_n45",
+      "input": "2\n45\nbbdeeffggggiiiijjkkkllmmmnoooppqqrrtuvvwxxxzz\nbddeeffggggiiiijjkkkllmmmnoooppqqrrtuvvwxxxzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_50_n37",
+      "input": "2\n37\nabcdefghhhiijjkkklllnnnnprrttuuvvwwzz\nabcdeffhhhiijjkkklllnnnnprrttuuvvwwzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_51_n96",
+      "input": "2\n96\naabbbccddeeffffffgggghhhhhhiiiiiiiijjjjjkkllllmmmmmmmnnooooopppppqqqrrrssttuuuvvwwwxxxxxxyyyyzzz\naabbbccddeeffffffgggghhhhhhhiiiiiiiijjjjjkllllmmmmmmmnnooooopppppqqqrrrssttuuuvvwwwxxxxxxyyyyzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_52_n9",
+      "input": "2\n9\nbeikmmvxz\nbeikmmvxz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_53_n29",
+      "input": "2\n29\ncdddddeefhhhikklmnoqrsssuvxxx\ncdddddeefhhikklmmnoqrsssuvxxx\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_54_n89",
+      "input": "2\n89\naaaaaabbbbcccdddddeefffgghhhiiiiiijjjkkkkkkllmmmnnnnnnnoopppqqqqqrrrrrrtttttuuuuvwxxxyzzz\naaaaaabbbbcccdddddeefffgghhhiiiiiijjjkkkkkkllmmmmnnnnnnnoopppqqqqqrrrrrrtttttuuuuvwxxyzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_55_n62",
+      "input": "2\n62\naaaaabbbbbccddddefffffggghhiijjjkkllnnooqqrrsstttttuvvvwwxyzzz\naaaaabbbbbccddddefffffggghhiijjjkkllnnooqqrrsstttttuvvvwwxyzzz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_56_n93",
+      "input": "2\n93\naaabbbbccccdddefffffffgghhiiiiiiiijjjjkkkkkklllllllmmmnnoppppppqqqqrrssttuuuvvvvvwwwwxxyyyyzz\naaabbbbccccdddefffffffgghhiiiiiiiijjjjkkkkkklllllllmmmnnoppppppqqqqrrssttuuuvvvvvwwwwxxyyyyzz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_57_n4",
+      "input": "2\n4\nakow\naiko\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_58_n92",
+      "input": "2\n92\naaaabbbbccccccdddddeefffgiijjjjjjjkkkllllmmmnoooppppppqqqqrrrssstttttttuuuvvvwwwwxxxxyyyzzzz\naaaabbbbccccccdddddeefffgiijjjjjjjkkkllllmmmnoooppppppqqqqrrrssstttttttuuuvvvwwwwxxxxyyyzzzz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_59_n88",
+      "input": "2\n88\naaaaabcccccddeeffffffffgggghhhiiijjjkkkllmnoopppppqqqrrsstttuuuuuuuvvvvwwwwwxxxyyyyyzzzz\naaaaabcccccddeeffffffffgggghhhiiijjjkkkllmnoopppppqqqrrsstttuuuuuuuvvvvwwwwwxxxyyyyyzzzz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_60_n80",
+      "input": "2\n80\nabbbcccdddeeefghiiijjjjjkkklllllmmmnnnnoooooppppppqqqrsssssstttuuuuuvvvwwwyzzzzz\nbbbcccdddeeeefghiiijjjjjkkklllllmmmnnnnoooooppppppqqqrsssssstttuuuuuvvvwwwyzzzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_61_n86",
+      "input": "2\n86\naaaabbbccddeeeefffgggghhhiiijjkklllmmmnnnoooopppqqqqqqqqqrrrsstttttuuuuuuvwwxxxxxxzzzz\naaaabbbccddeeeefffgggghhhiiijjkklllmmmnnnoooopppqqqqqqqqqrrrsstttttuuuuuuvwwxxxxxxzzzz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_62_n90",
+      "input": "2\n90\naaaabbccdddeefffghhhhhiiijjjjjjjkklllllmmnnnnooooopppqqqrrrrrrssttttuuuuvvvvwwwxxyyyyyzzzz\naaaabbccdddeefffghhhhhiiijjjjjjjklllllmmnnnnoooooopppqqqrrrrrrssttttuuuuvvvvwwwxxyyyyyzzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_63_n47",
+      "input": "2\n47\nabbccdefgghhiiijjjjjjjlllmnppppqrrrstuuvvwwyyzz\nabbccdefgghhiiiijjjjjjjlllmnppppqrrrstuuvwwyyzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_64_n91",
+      "input": "2\n91\naabbccccddddeeeffffffffffgghhhhiijkkklmmmmnnooopppppqqqqrrrrrrstttttttuuvvvvvvwwwxxyyzzzzzz\naabbccccddddeeeffffffffffgghhhhiijkkklmmmmnnooopppppqqqqrrrrrrstttttttuuvvvvvvwwwxxyyzzzzzz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_65_n31",
+      "input": "2\n31\nbbbccceeghhiklllnnprrssttttvvvy\nbbbcccdeeghhiklllnnprrssttttvvv\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_66_n33",
+      "input": "2\n33\nabdefgghiklmmnoooppqstvvvvwwwxxzz\nabdefgghiklmmnnoooppqstvvvvwwwxxz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_67_n69",
+      "input": "2\n69\naaaaaaaadefffffgggghiiiijjjkllllllmmmmnnooopppqttttuuuvvvwwwxxxxyyyzz\naaaaaaaadefffffgggghiiiijjjkllllllmmmmnnooopppqttttuuvvvwwwxxxxyyyzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_68_n37",
+      "input": "2\n37\ncfghhiiiijjjjkkkllmooqrttttwwwwyzzzzz\ncfghhiiiijjjjkkkllmooqrttttwwwwyzzzzz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_69_n9",
+      "input": "2\n9\nceijrtxxz\neijnrtxxz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_70_n8",
+      "input": "2\n8\ncgklpstu\ncgklpstu\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_71_n56",
+      "input": "2\n56\naabbbcdddddeffgghhhiiiijjjjkllmooppppqqqqstuuuvvvvvvxzzz\naabbbcdddddeffgghhhiiiijjjjkllmooppppqqqrstuuuvvvvvvxzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_72_n70",
+      "input": "2\n70\naaaabbcccccdefffgggghhiijjkkkkmmmmmnnnnnnooppppqssssttuuuvvwwwxxxzzzzz\naaaabbcccccdefffgggghhiijjkkkkmmmmmnnnnnnooppppqssssttuuuvvwwwxxxzzzzz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_73_n62",
+      "input": "2\n62\naaabdeeeeffffghiijjjjjklllmnnnnoooooooppppppqqqqrrrssuuvwwxxxz\naaabdeeeeffffghiijjjjjklllmnnnnoooooooppppppqqqqrrrssuuvwwxxxz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_74_n24",
+      "input": "2\n24\nccdgghhiikkklmmqrtuwyyyz\nccdgghhiikkklmmqrtuwyyyz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_75_n89",
+      "input": "2\n89\naabbbbccdddeeeeeffffggggghhhhiiikkkkkkllmmmmmmnnnnnoooooppppqqqrrrrrrssstuvvvwwwwxxxxyzzz\naabbbbccdddeeeeeeffffggggghhhhiiikkkkkkllmmmmmmnnnnnoooooppppqqqrrrrrrssstuvvvwwwwxxxxyzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_76_n79",
+      "input": "2\n79\naabbbbcccdeeeefgggggghhijjkkkllllllllllmmmnnnnoopppqqrrstttuuuuuuvvvwwwwxxxxyzz\naabbbbcccdeeeefgggggghhijjkkkllllllllllmmmnnnnoopppqqrrstttuuuuuuvvvwwwwxxxxyzz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_77_n9",
+      "input": "2\n9\naafilmrsx\naafilmrsx\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_78_n13",
+      "input": "2\n13\nbbceeiktwwyyz\nbbceeiktwwyyz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_79_n63",
+      "input": "2\n63\nabbbccddeeeefffghhiiijjjkllmmnnnnnoppqqrrrrsstuvvwwwxxxxxyyyyyz\nabbbccddeeeefffghiiijjjklllmmnnnnnoppqqrrrrsstuvvwwwxxxxxyyyyyz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_80_n91",
+      "input": "2\n91\naaabbccccdddddeefgghhiiiiiijjjjkkllmmmmmnnopppqqqqrrrrssstttttuuuuuvvvvvvvvwwxxxxyyyyyzzzzz\naaabbcccdddddeeefgghhiiiiiijjjjkkllmmmmmnnopppqqqqrrrrssstttttuuuuuvvvvvvvvwwxxxxyyyyyzzzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_81_n62",
+      "input": "2\n62\nabbbccccdeeffhhhhiijjkllmmmmmnnnnoopppqrstttuuuuuvwwwwwwwxxyyy\nabbbbccccdeeffhhhhiijjkllmmmmmnnnoopppqrstttuuuuuvwwwwwwwxxyyy\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_82_n81",
+      "input": "2\n81\naaaabbccddddeeffgggggghhhiiiiijjjjjkllllllmnnooooppqqssssssstuuuuuvwxxxxxxxyyzzzz\naaaabbccddddeeffgggggghhhhiiiiijjjjjkllllllmnnooooppqqsssssstuuuuuvwxxxxxxxyyzzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_83_n83",
+      "input": "2\n83\naaaaaabbbbccddddfffgggghhiiiijjjjkkklllmmmnnnooppqqrrrrssssuuuvvvwwwwwwwxxxyyyyyzzz\naaaaaabbbbccdddfffgggghhiiiijjjjkkklllmmmnnnooppqqrrrrrssssuuuvvvwwwwwwwxxxyyyyyzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_84_n65",
+      "input": "2\n65\naaabbbbcdeeeeffffffffghhhhhhhijjlllmmooqqrrrrssttttvvvwxxxxxyzzzz\naaabbbbcdeeeeffffffffghhhhhhhijjlllmmoopqqrrrrssttttvvvwxxxxxzzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_85_n24",
+      "input": "2\n24\nabbdggjkklmmnppprttvvxzz\nabbdggjkklmmnppprttvvxzz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_86_n60",
+      "input": "2\n60\nabbccdeeeffgghhhhhiijjkkkllllllmmooooppppppqqrrrrssstvvwxxzz\nabbccdeeeffgghhhhhiijjjkkkllllllmmooooppppppqqrrrrsstvvwxxzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_87_n5",
+      "input": "2\n5\ngqwww\ngqwww\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_88_n59",
+      "input": "2\n59\naaaaabcdddeefffggghhiiiiimmnnnnoooppppqqqqrrrrrsuvvwxxxyyyz\naaaaabcdddeefffgggghhiiiiimmnnnnoooppppqqqqrrrrrsuvvwxxxyyz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_89_n54",
+      "input": "2\n54\naabbcccddeeeffghhijjjjjkkklllmooopqqrrrrrssstttuuvxyzz\naabbcccddeeeffghhijjjjjkkklllmooopqqrrrrrssstttuuvxyzz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_90_n64",
+      "input": "2\n64\naaabbcdeeefffffhhijjjklllmmmnnnooooppqqqqqrrrsttttttuuuuuvvwyzzz\naaabbcdeeeefffffhhijjjklllmmmnnnooooppqqqqqrrrsttttttuuuuuvvwzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_91_n25",
+      "input": "2\n25\nabddeffjkmoorrrrrstuvxxyz\nabddeffjkmoorrrrrstuvxxyz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_92_n25",
+      "input": "2\n25\naabbcdegghiknpqrstuuvwxzz\naabbcdegghiknpqrstuuvwxzz\n",
+      "output": "1"
+    },
+    {
+      "name": "equal_random_93_n25",
+      "input": "2\n25\nabbhijkklpqrstttuuvvwxyyy\naabbhijkklpqrstttuuvvwyyy\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_94_n49",
+      "input": "2\n49\nabbcccddffhhhjjjjjkklmmooooppqrstttuuuvvxxxxyyzzz\nabbcccddffhhhjjjjjkklmmoooppqrstttuuuvvxxxxyyyzzz\n",
+      "output": "0"
+    },
+    {
+      "name": "equal_random_95_n94",
+      "input": "2\n94\nabbbbcccdddddeeffffggggghhhhhiiiiiiijjjkkkkklllllmmnnpppppqqqrrrrsssstttuuvvvvwwwxxxxyyyyyyzzz\nabbbbcccdddddeeffffgggggghhhhhiiiiiijjjkkkkklllllmmnnpppppqqqrrrrsssstttuuvvvvwwwxxxxyyyyyyzzz\n",
+      "output": "0"
+    }
+  ]
+}

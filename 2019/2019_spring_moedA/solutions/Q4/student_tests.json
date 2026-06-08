@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "sample_path_length_eleven",
+      "input": "a b\na b a b\nx a b a\na b a b\n",
+      "output": "11"
+    },
+    {
+      "name": "sample_no_allowed_cells",
+      "input": "a b\nx x x x\ny y y y\nz z z z\n",
+      "output": "0"
+    },
+    {
+      "name": "sample_single_cell",
+      "input": "a b\nx x x x\nx a x x\nx x x x\n",
+      "output": "1"
+    }
+  ]
+}

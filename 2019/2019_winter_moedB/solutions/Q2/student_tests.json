@@ -1,0 +1,29 @@
+{
+  "tests": [
+    {
+      "name": "exam_example",
+      "input": "8\n22 24 26 32 34 36 38 40\n",
+      "output": "3"
+    },
+    {
+      "name": "single_missing_middle",
+      "input": "5\n1 3 5 9 11\n",
+      "output": "3"
+    },
+    {
+      "name": "missing_near_start",
+      "input": "5\n10 20 25 30 35\n",
+      "output": "1"
+    },
+    {
+      "name": "missing_near_end",
+      "input": "5\n0 10 20 30 50\n",
+      "output": "4"
+    },
+    {
+      "name": "decreasing_sequence",
+      "input": "7\n50 47 38 35 32 29 26\n",
+      "output": "2"
+    }
+  ]
+}

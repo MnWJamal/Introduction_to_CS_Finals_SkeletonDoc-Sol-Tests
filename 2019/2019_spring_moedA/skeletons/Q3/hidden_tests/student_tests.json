@@ -1,0 +1,954 @@
+{
+  "tests": [
+    {
+      "name": "empty_both",
+      "input": "\n\n",
+      "output": "1"
+    },
+    {
+      "name": "spaces_only_both",
+      "input": "     \n  \n",
+      "output": "1"
+    },
+    {
+      "name": "empty_vs_a",
+      "input": "\na\n",
+      "output": "0"
+    },
+    {
+      "name": "single_same_case",
+      "input": "a\nA\n",
+      "output": "1"
+    },
+    {
+      "name": "single_different",
+      "input": "a\nb\n",
+      "output": "0"
+    },
+    {
+      "name": "ignore_spaces_true",
+      "input": "a b c\nCBA\n",
+      "output": "1"
+    },
+    {
+      "name": "ignore_spaces_false",
+      "input": "a b c\nab d\n",
+      "output": "0"
+    },
+    {
+      "name": "many_same_true",
+      "input": "aaaa bbbb cccc\ncbac bacb aabc\n",
+      "output": "1"
+    },
+    {
+      "name": "many_same_false",
+      "input": "aaaa bbbb cccc\naaaa bbbb cccd\n",
+      "output": "0"
+    },
+    {
+      "name": "classic_listen",
+      "input": "Listen\nSilent\n",
+      "output": "1"
+    },
+    {
+      "name": "classic_dormitory",
+      "input": "Dormitory\nDirty room\n",
+      "output": "1"
+    },
+    {
+      "name": "classic_conversation",
+      "input": "Conversation\nVoices rant on\n",
+      "output": "1"
+    },
+    {
+      "name": "classic_theeyes",
+      "input": "The eyes\nThey see\n",
+      "output": "1"
+    },
+    {
+      "name": "classic_schoolmaster",
+      "input": "School master\nThe classroom\n",
+      "output": "1"
+    },
+    {
+      "name": "extra_space_false",
+      "input": "abc\nabcc\n",
+      "output": "0"
+    },
+    {
+      "name": "case_sensitive_should_ignore",
+      "input": "ABCdef\nfed CBA\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len1",
+      "input": "Y\nY   \n",
+      "output": "1"
+    },
+    {
+      "name": "true_len2",
+      "input": "rF \nfR\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len3",
+      "input": "vzT\nVzt   \n",
+      "output": "1"
+    },
+    {
+      "name": "true_len4",
+      "input": "   eBkF\nFK b   e\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len5",
+      "input": "UlE fR\nE   LUR  F\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len6",
+      "input": "lwrCUg\ncuRWGL\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len7",
+      "input": "wejvge u\njvUEw  EG   \n",
+      "output": "1"
+    },
+    {
+      "name": "true_len8",
+      "input": "rewl  Tpkw  \nwlwt k R e  P\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len9",
+      "input": "pU  EeEqhxs\nqhEspEEXU  \n",
+      "output": "1"
+    },
+    {
+      "name": "true_len10",
+      "input": "esfsO  uY AEm\nosaeUE  smYF\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len11",
+      "input": "Q   ls   ccjnikSk\nNIKs  ksclj qC\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len12",
+      "input": "Fpn  n  kb   v   DMn  Sk\nBFK Dv ksnmNpn\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len13",
+      "input": "PjOCHcLQKZSuU\nKU   hUzSJplC cO   Q\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len14",
+      "input": "d  RqxHL obrbJevD \n HOd qV XldEBjbR   r\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len15",
+      "input": "lcH eZyFEkLZ Szbj\nzylz   l ejfB  HkE   cSz   \n",
+      "output": "1"
+    },
+    {
+      "name": "true_len16",
+      "input": "lax   mZd   ydtsAFM fpx\n   ML  aXdADYFtzS   p XFm\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len17",
+      "input": "bQWklIkQipmG   ovN  Bz\nGvPNbkz  iQKMLB   QIow\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len18",
+      "input": "TtbKme i oyzla  vbrsK  i\nyKe   i OZt  sTb   Il  mb  R   kav\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len19",
+      "input": "skcE  pAmwZlfncG   miYAQ  \na iEq   CgP SL   mmznfC   wKAY\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len20",
+      "input": "Hgs   lptzncbzwdQTXeSFb\nEhBTzSqBx  fdWNzc Pts   Gl\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len21",
+      "input": "dHaAvvfNHJRckllPcRKwv  \npl  LkVfHHDjRAkwaCNvVRc\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len22",
+      "input": "oUK  z   sjCHBcSLceczxQi bSU\nCxEojSzl   z   q KB  uihc   uS   cCsb\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len23",
+      "input": "fOkMvc MAxXruu cixYGv  h  kAY\nA   u CKY  u   mxYxhoG v  MA   cKiFXVr\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len24",
+      "input": "oixxqNRIEl   njN anHzpvnH MSg\nNhngA   S  rNZiOxxLmhP  QeNI  jNv\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len25",
+      "input": "   vypCXus dnBbW   ufRZTER   qjhcai \nDjXz ueitRnCR   VBWaPFBYCQHs   u\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len26",
+      "input": "hvPY  IjCu  pnZ Vv Rpac CS b  ZcFRVH \nPrHNZvc   u YVvcPCPVrISz cHJBFA\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len27",
+      "input": "Nqeactt   dwgik z tqGkNF  KVgwgyeI\nKQkAVcgzIgEGT  wyKw ItG  qEdNt  NF\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len28",
+      "input": "siNmavyyextdgGEesi N b ae   zlHzyC\nESia  ty   GYnZHb XysAe  Ivce   Zl   dm ENg\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len29",
+      "input": "Q   vh xulfIoulbjlp  EE LFalWgiijleA \nLLFQLuv bA pi  AfgeixeIOL   wjHLejL  u\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len30",
+      "input": "fbZUVaLoadixyO   DoDwL  Q   ihvMdn toji\nlaaBXdizFWM   dlY oO dVoT Joh   in uIDq  v \n",
+      "output": "1"
+    },
+    {
+      "name": "true_len31",
+      "input": "lahyn  lblBwof  qNan   Urth  cPX   HTgqXOkR\n   GrA HO W   n  H xqHLk  OuqapnlRn LxYfcBTb t\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len32",
+      "input": "i  rabax   mCOno   x  E  RNE au   qdQo   wcTPGHOhdz\nRZAu   bE IdtComWGHNa  OHXDQ Ao  r   PCOeqX   N\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len33",
+      "input": "IpwNHns  mgnnrwbhrw  M   gnBuPNbl  lISkabU\nPsgWBbUR R  LHnh  mabn  nm   WkNsI  U   nLpWgBiN   \n",
+      "output": "1"
+    },
+    {
+      "name": "true_len34",
+      "input": "eq loK M vx   cn  y   yjDirtU KeCGDlAbNj eg   A   t nJ\nbnJ   v  kjyGe   YecADolTauDLeCq XTRmNi   n kjG   \n",
+      "output": "1"
+    },
+    {
+      "name": "true_len35",
+      "input": "hUF  evqJd mc Ss  FeEObCbEpAazdG   Lf   i  shM qGl\nbQsClEMaeEdssajFD   Hflv GeoHUq   zFGPB   c  IM\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len36",
+      "input": "   qu aYgvexcWaHf  eaT  Ub   g   ugl xRi GmvvkO  AE  ia D\nKLHAaa cGrVxbEg v Of   EgTEv   Ug  q iUMuIXA   ydwA\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len37",
+      "input": "HUPsiDxGn  s  bDelsu Xeojhz tYs Htg  HTlP uPvUO\nt BeVhuudX   DT  PnGspSS   EoGh   lX   y   IUhtjLh   zsOUP\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len38",
+      "input": " ymW   Vgwlp   xajydte fOxvTsxf dbVI  lLm   QczLiwwy\nT   Wd  Fxzw   ldMgTLLVv bjlY AimeOYcfXvQW  s  YXi   w   p\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len39",
+      "input": "   X  C   a  GXwgsun  uMvRCACevGcHtmmmtdn  vtEzR  ra IIr\n V   gtrtrtmCaVWu   CaemXZ GnhumX   si rvECiG anDM  C   r\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len40",
+      "input": "z  kpqcJGLpoqGEgrNDrntiuH   gc wreZUnHhjefyajp\nrZuodIhp q gAPL   fyCzUQ  E  EPJN   gcR   Njtg  kgjnwhRH   E\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len41",
+      "input": "knvkxx  l  sWNphQcFkvTJWolFxHfmheoVUxmojoDBma\n   Skf   VwKOJm   d fXbcpH   kqvA luMxwnXHeMLxJoTvNoOHF \n",
+      "output": "1"
+    },
+    {
+      "name": "true_len42",
+      "input": "I z  exKCKEx jvsmE   DHqnmU  HyoC  EiLXyEwzulqDjLFrzi\noeSHe jld XIWY  rE   y  HCZ zU  uv   kZcQQnM   DLKiMxJEefXiL \n",
+      "output": "1"
+    },
+    {
+      "name": "true_len43",
+      "input": "NjbcV   bZjxmpzpasla fczeeiqR   xTe   NWtoKdAGRcefGa   W\ns p Zv aiqZPEc   rjToXj   Kc wBCGmeT   Z   nRleAWf   xga ANB D  F e\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len44",
+      "input": "nwrIkA   Uw   KvoNRRYlkw  pC  T   N  yF  KYxb   FVb TLcucYySdBT   ml\n Wyy YLLa WsN wIBM   tdK Bt vkc   tYFyrkfN   ncxLOCrkUbRPuv   \n",
+      "output": "1"
+    },
+    {
+      "name": "true_len45",
+      "input": "   rpZ IOrsj   s  papG t  x   pz   vwkBmTiK  ujFIr  dcjazwpUjviFylI\nVcZbFZJJotikT PwUad  pxF  uiiRjRSazKp   gjlPyIi Sw PMr V\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len46",
+      "input": "qEZBmB J lIL qEpkFbbV  gpfggL   oeVcNr  Evu   dJBe   OsbyehHJn   \n   F jD z   L ggy E  FMebBP OkNlIu  eEV  J C   RG   VJl  qsHhvPBBqe  ObEBN\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len47",
+      "input": "mnk   Ykhn   oa   bBi  yiytvclT  zczET w   fIG   Q   MFnKiSFmx TuInRZFH\nnkm   y   YcBXv  sii MbaWQ  Zh  EyFucNt  GkTtMNK rFF   z   iLiz  Oih   Fnt\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len48",
+      "input": "Bpu   edrS  k zyeqHchgemz   OF nYyg   GytjGvpFhjGgNxJj fUb lihq\njfyGuY fgXyly Nj  qeUjGtHvHRJE zNmFghBgcS zqEK  P  O   iDP Hgb\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len49",
+      "input": "dcsUyt   Vwyzyt UeMavvofzsIAtQ  nj DzVwObbaNznzv   V   a  wuYMhy \nYzTw  AvtdNEa  Z Uyy  NFmbv WtOyVQAUz   SmojH yvDAbuvIS zCWzN V\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len50",
+      "input": "jaIzYoYuSoMRvbqsznSh  ruyYXBuypqKYJMilnl   woupypq   tvTma   \nMM  Ys  optjJrLb qLYu iPUbVAySknayQrNPoq   Z  ZuYMItVSyxO HuYW\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len51",
+      "input": "nCai YXegoyRDHH   Uv e  CXXbOcipNumxyfwRTxcyUUgOT  eoTkEsjfv\nFY  UTHOIuTyncUtykox   g W O CVCeESF  mXeXuGcbREix   JxORN   Ya  vHdp\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len52",
+      "input": "OxCrWWmbVhwcuTAbMDUFFSAanfLDamd sYVa   K mdO  ZLbdlm   mSWgj  vs\nDTM Sr ZODLc  f  AGsH  OjBaSbSnkC UwmwADWX  Ym  M laUBDVFMl AfDV   mw  v\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len53",
+      "input": "rvyeeD KPolvnaVbwyRzB  EQnnGllQ   qJC  COzrxiuuiimsObWaqfWytu\nd Qyuo   U P  Y  lgTBKIOAOUyE   IQ EWMn  SCNqjcvV Re  BzV   a  wwlNrlz q   B R IXF\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len54",
+      "input": "rVepzovE  kgNg   RrpwX NYN V   BnMdtyHzAjzX U   uhtHnjwiQhBryFwqsosU\nBqSJzb YTRWy  nxG sWYV ntqe  v WumgzuhJrNKhoev pNfO xHRir  APN   hDUZ\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len55",
+      "input": "poPMqG  h qvjb   BP SsGhjIT lUJtjfUUwmWxZpbtfLa   peoo UvUZxdnkK  us   m  \n  F  WU   gLzQnxpo   TH O Pku mU TvSb q   sUkw IAUD PXUH   bLMb  VG jJ   zJJPTmo  e  FpS\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len56",
+      "input": "x  Beme   XnJhsgehvtvwy JlEyo   gLaPe JGWdSnJOeovEyIuZA uexX   wy  Gb S   Hf\ns vnog   JyE   oXh eYzndEXGL bfG   tsAjgXvXeEo   BYv   e yHW   iwl wj H   m   EJaUSP eu \n",
+      "output": "1"
+    },
+    {
+      "name": "true_len57",
+      "input": "qCl   ykLcCWE  u   SpIyCH  n vqiCGlWfSkMNJKkeRqemhzOlU  YpiwPkrS   yKwlse\nreK  KCI  M P Wf Q  YkyK  i   RnCwLYsSq  sE   s   v   n z  WpLuIE  J lOKHUCCHePL  YMKWlcQG\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len58",
+      "input": "fk nBEpeVuwdmpK  Zlrqal dfzU  J  gRwTp  jmu  wcdPmqfmYuA as h   ryec  P   D  fuwUx \nZreddW  FkjEvEUQafAaWUSMNud  xcyClQpylJ   U  Z   RKb uFWGU PmdpFhPMtMwPr \n",
+      "output": "1"
+    },
+    {
+      "name": "true_len59",
+      "input": "puIwqhGb  gxwsZZNneLZbuziHtuFAArty  glLeiG  ZgkNmc   Wwym   lUxPrLgq  i NJ  \nSZmZP uw QZLNL   NrlizW  ByANx  uLGFWGKhiIJzT  WT mGu  rq  CpLH  UYN   giabx Egge\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len60",
+      "input": "iKSPb   dmSMR   c  K  ssIvrzggvHFjbI   nuR  kC  fm yhPEGqbti   DqJg  Ywj   agwd   Srr w  Bu   o \nt  Gd  DRYzj q   wbuRNmh yK  SwKpsGDC gWba   s Jr   BObscIfPvhuiFEkiRijGs   mGRM  vQ\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len61",
+      "input": "m nQi   O  vkqipdx  M  sw  kfldOdjvF   tvr   lu   bemfb ESortLG cg zEu  L  Ckm  AygpkbNngca  \nv  UlFrGMpYo dOSMVlUklQqenC   kjan  ZlGDt  MB rF c ikeEBt   X  b   kog   GVFc  sPd   mwnAi\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len62",
+      "input": "Eun  F   lc   dk EhfWOe  pKv   ubk TyLSPgx Bs  dKEZbw  C   fv zvZoPsglXQep k   vfHDGNk   Rgjy\nSkzO   HXBpvpEh  VkObVFKbv   ZdfsYyWd   gNnfwP   EKCDZuc   lglPgt   QlsJeEgrFk   kEX  U\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len63",
+      "input": "gBMov mWnuT   JHTjXE   LCiJD  U  dKs obWiEb   c pkbllbhFKVdDSuqVRgrOHGbzCkwgoq   x   \ngiBWdlwHpTvbXb   UCS  E   wnr   V  mc   D  hkldVZ ULQqUkk   bGiGoOMbD   JgrJ   EStkhO   BC  FoxJ\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len64",
+      "input": "   GFsx  JvdOxVcChdhR   AOpPQiovg K   K e  nPxkvwIhy   OIYO svrIqra  k jfrLsncIrpdjPUn\n  ug  PfVpkCV  XFKxIYScoPRHpNr  DVXlJIO d  g  k   O   Hpa  V   YKiJSqoVNiR  wDrEnQ  ro  jCiSaH\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len65",
+      "input": "RUcrpm rSFzVu lsA   ma   wlr wBweynv  bF   mRtkp   Ss   Sw   n Cntlg   diz   BkcdE   wvisSrhiyBuSz\n a  lbmmwwuSRS   vnN  PrE   VHCYErSTMwswU  rzuZ R  tk   gNpr LIffcdaLsBbSDSVKYCsZiWib\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len66",
+      "input": "VzA oga  wh   i  RwuS  UjfMcJqyYRawKvxAuRuRfl  pOJ  LRuEbBsr   J tZod   c  Dbmx  zzZdbadkLb\nbkFj r   aOCzJYBY SFr   DHrCJVmBd GioUXEZ   uZdmz  S QR   AWKLau Vuoa  l Bp  lXWab   J   tZr   R  dUW\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len67",
+      "input": "GAraVpVekMwrchlk   z  xVhZVw  sXRaO   o   orToCf gVvq  geevxk   rXm   GZKdw   rAwkHeV  illdfqj\n   DC  aO   oJOvEV zLlga  G  wKXzp   qr   dgVMEfRW   cER   ktSVV  x AA   iK   KV frrRo Q  hh GHL   kZEvWWv MXX\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len68",
+      "input": "kPTucq fvm  Z wnRrht  MIUEac   Vjgd ltzmziinocraCyLwkaAdv  gPzS  uT c   qc   t  Whjw   NqAC   XcP  \nEIp WAQkZwL  r c  ONvaJfWxZiCg  mv cVAd utdCLUgacRTZRj  N   pT t IHC   Tqh   AsuNmPzcYc   Kw mq\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len69",
+      "input": "okbpd   ekhaYopq nA  jpQRSCm   UVKz  vOsgfSro  GAealGpL yLOdpEf a  wtnn   fnhsx   afXOWXfLqw   \nag   agVpaAPefZ   k g  H pPL   N xjYatAFw   pkB L   n cO   n yOwkf   ssfUHoqXdxRO vQ WqM  oo   RDe  sel   NL   f S\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len70",
+      "input": "z   iHi gfAACrlsdFuz  pzFCkPEz   sDzm l   GGSc   V   BvaV  lxV  H NTyjbuf tQApFpg   W h dvjywZxfeQsj\nYg   vCBHFDZHavWJgKl   XPAVtjZZEzHDSiAlj   VLfC   Q  icwxsmp   FVDUF  FGtbUnzPQeRsAFgzSPy\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len71",
+      "input": "b   NDO TyRCtVgbyZERJmuJupFjcLeu FN xwTmD   yunUD  zbW   vupNd StBR  tZngfFgH hGxZ  SAkjwv  w\nNg nnrFZh WbzVRycfWABOSsHzJjpu   NGEDWwtzvPtDy  gUB  B E  FtlU TJU  MKGmUnyjXtFuxVD   rcd\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len72",
+      "input": "HgX   oohsnUPejF   l  Lsn  FoHXopx qirvQgvguuFRxIZ   Onr   ewG sttG wp bgy XzXZxknJkv k   ehXbrkJ\nNz   rbS  FzkEK  NPnujLIGkOiwxERjxlX  X vTrHXH  vW hofne   qqj   GzxOOGgf  v   XugghksoX   y  rPpTS U  B\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len73",
+      "input": "SS   hjjOoYv  k dnxtac   c FpiyDIdymqWJ  uQnUt  xd RwhzdA   Mqzv l   tZQ   VDXEz nkdRbMoQQqZQhAx   sWl\nOv   OqU UYQHDQ  Wxz  wBDhZnN Q rqvOYdxlKRTDHC A sFNjdjQyDs  dt  S EVxm   xj  zAlZmckIT   QQaz  iMW  p\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len74",
+      "input": "   tezWgjidUia L vc  rvco   tfcxD   olM xEQbhqmgehWjeOiqVjqgsO  qfrrfPwslyccE   af  M cg   v  jk  sMamN\n   SIm  R   Ao iWQFC WDJMqqsdmhGQo  je ROxfr CCX   Bpel L   O VcsVTnlC  JHE  cvAyaGuM vzf   JmEWg i Eq k  T   fg  \n",
+      "output": "1"
+    },
+    {
+      "name": "true_len75",
+      "input": "etgQDL   wQn indbd   sK  rXxiX   nlfLfUhXx   fyXmwjXbhGj AOLD m  iOzRkw  yyLMwyCMkTPTWjbtr  xfg  yFg\nlyY yq  MKb Td gzwK IFBNyhFtOEKldDfLjWuJXM   XXh   WtR   XNi  XfGr PFc   yXW DLnXBg   wtJgxaLRmoISm  Q\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len76",
+      "input": "Oi   QUhlma gCP  eyVp  vtl  nkMvxqNDFZhZwindclqSXyS Hppdm  DqWm mb  ssClGkszNwwyWwMySZnH   Qj  GF\nHMVQUlsVKj ySxcEshgSw nTdFDWlyWom  WzsY D  Q   QpYAlw   D nZb  WGZPh imq xNm   lMPGvsHiMNPcn kCqzf\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len77",
+      "input": "lokjggiy   ldHAqnFjzHEub  MpyZ   ddI AZkweVr DMefpSkTlXt   zGv  H I   gltobryR   t f o   jo bhTw  pjtL   JgEEx\ng   p   zLdlKp  eOr  lz  DKlESEBYVHTroZgYhY   MbIwmfjJOJ   KT O  dzG  Hdatg   JH XvNJxiaTGp eT TB l  eiwF qu  Fr\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len78",
+      "input": "MGsM sCqfVU  rqSLruhb  ugshXpT  ZJu  ynzEH ajVDSTasp  sg yXpyIHymH   S   VSpO bmdzzr Ihrs  se   tLunJyrv \nZ l  Es HR sB D msBfuTzYsPC  uGQPSp   MYtsh  jO EpusaG  yJUv  ZSHLvnQzDGVv  sR   AS   UryNsxIH  i   tRjX YRmm hH\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len79",
+      "input": "lumcaVoO IvBo   B  gqijaxpx otom e wv   sGwoc   uowFC   rsVAOkBvuB  vcpL fAhpq   ZqfaGPgiw   rwiphOBa  aBycn\nNB   FkV  AUWogZCQsoSO  BHpaIPaoUpCgoAhoi   pba  QoIX  YjwE WV  gogC   PIlB  TRMBQ vlWucfmAwAFB  vr X  vVCo\n",
+      "output": "1"
+    },
+    {
+      "name": "true_len80",
+      "input": "   l  yqZFsmkw  oqAyPHHcYapzyH pogeDr  uvqs toalFmkS   CwAHN  VO   H   UbfjkesCvMAk  B   TkaGlnka   ei   QheWkEzH\n PsAy   K  KUttY   Q   uHWOAKhakc Lc   q   M  wNz   MhHkHPvYsBsQ   cWrJp  B  z zlq VOYOgiEeAf  a  heNaK  Ko eefDfL  mSg Av   h\n",
+      "output": "1"
+    },
+    {
+      "name": "false_len1",
+      "input": "v\nvh\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len2",
+      "input": "di \nIDw\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len3",
+      "input": "kkt\nokK\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len4",
+      "input": "O Ugh\nuy  oH\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len5",
+      "input": " lqzpw  \nwPLlq   \n",
+      "output": "0"
+    },
+    {
+      "name": "false_len6",
+      "input": "Lcukjc\n coLjK  C\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len7",
+      "input": "   ayKbMLE\nL  EA  YmK  be\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len8",
+      "input": "n vudjktn\nDv KJuN  Tno\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len9",
+      "input": "qd Okq Fkki\nQjkQIFDkk\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len10",
+      "input": "aidukmdwEI\ni DKxEaMid  u\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len11",
+      "input": "DF   il z   sMtg xi\nLsfM Gz  DtiiI\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len12",
+      "input": "LZTyG sfNpvXz   \nf  tgyPd Xzz VNL\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len13",
+      "input": "mNtakAV  DbLcwL\nTwA  dblCl   VManko\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len14",
+      "input": "tfxcvS  syS   oLdl   g\n  O mXL  DCyg tLSFvS\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len15",
+      "input": "ragRUAm pwxtAlqi\n   aW  r   tx   IAGU QArkLm\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len16",
+      "input": "yYnqsIfEtUyCY Hgu\nYqHE FuIsnYyTc  G  Y  um\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len17",
+      "input": "fAFuSiWtgtuldahCJ\nugHcUtD  alf   I sawjfTp\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len18",
+      "input": "BpIytdnCLSnDktIOzv\nVtyBiCSnTLdIKPZnO  Du\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len19",
+      "input": " bhtzIsqgQCwywQF   nxix\nCbiQzY   sx  nGQFx  W Tq iHwk\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len20",
+      "input": "z   b  ltDWKLccaqcvljh xun\nQLNlL CKWVCDt jCZU HA x  by\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len21",
+      "input": "b ausTYo  YRVCiN eSTVoYty\nrNCtOys   v  IayvYxBy toSEt  \n",
+      "output": "0"
+    },
+    {
+      "name": "false_len22",
+      "input": "irq  BWlc   dd   pMm  nY rAIwq Nvv\nwBn wR v IqlD  mViRm c   NDYpAQn\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len23",
+      "input": "b ltekrzcxjxJlvz   bOsfzvRn\n  xLBEvKLBVJ   ZtoXrZCfn   rSjzu\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len24",
+      "input": "   wbBngbRKGQVsU mDD  MyeTwHGg\nT  UbbdymMe NdG  WWGr  BVghqkgsk\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len25",
+      "input": "  Uuh qjOeQH fcXMkgiJF  WVpqoul\nJ   ofEQc   mX Qu H  FifU juP   G klwqOH\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len26",
+      "input": "FC  fJr   yEuhjBxxHr nrxCMRubQVg\nJCR   xyxrhQe  frGNb VJ R  Hbuu   xcF v\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len27",
+      "input": "Mw skpfEnVWj  tKwDQGgL  zZUf  ltih\njWgLf  Ntp  KSukTzzq   G mewiwFhVdlq\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len28",
+      "input": " GhqZSik  jc   zp  HV Xadm   uzgsUc nuish\naXHc  M   z  Ss   g  pIuiQhNkzGhUsUJZDCvi\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len29",
+      "input": "uocW dsvlGVtFgFzlvhrLrkiwSLjzF\nJW vKh  wS vLT  Z   c FlvLu dfzgFrSIL  o  r   Gv\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len30",
+      "input": "sQzxcVz  VAVMopjobzqctozKukcvv   rt\ntvJCkvO   zrqkcqO UtAVZPv   zmCZSXoVbf\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len31",
+      "input": "WEqlv   e mBko  mCgseSm   sjjcuiza   jPdpw  H\nWEjBS   gCuMH  E  swEL  Cm voqSA pmdkZijPjz\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len32",
+      "input": "KQ  ni  nb ewZxZS   piDjlfHowb  JrKM   Iftrv  F\n K  LW TNPOJieViF   XlzmwJB   Rn   SdFIkfRbQZ\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len33",
+      "input": "LxTpiiaWeASdrs   vSOzb  ugAqliOeMrkOK  x\nrUEaoM   wl   IIE  g s XXsdjvK OAkpAs  T Z   B   iloq\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len34",
+      "input": "voZWRr QexrMCXoWdbqQkKus  bXfwJ   NnZxDI\njzVbqkn  KXXQ SoMRdwrIZcRXu   B   NXwWFoQedw\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len35",
+      "input": "BiMfqcbAurDL  tozBfelbNH mw Jemzyejj  MbB\ni TMhbDWBlC  jM  ub   JbBZLm  bORFEN eE amFJZQyz\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len36",
+      "input": "EzOfhdyrVY WdTLSSKpLnLnrh k TgO   V   yb   mPyYc   \n   LYR Po  nLk  LDwY   Z  vReOfKVYS  nbDTYPM  yGHhTse\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len37",
+      "input": "BdnwofwPNsRruVnAlllk  xqnVehBtJungk  Di hn\nansgKH  RNhlJX  eU  VOdlkUTN nb H   D   nFrwVBi qwPN\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len38",
+      "input": "OnX   IqNoutf oWg ERQifnIhnpbODLn   jDKoQnPVpm\n   IJLoDVqo IeHptbfj   KDQ RN   om   xnfniNWn n OoPQgP \n",
+      "output": "0"
+    },
+    {
+      "name": "false_len39",
+      "input": "IysMO  oogF  RhJKmoiPNzJqWlymDRpaoyergG   nYgr\nMz   Wr  ONhmrkAYJOgG   G lOyyosiqromPI   D  g  NPjRFyEf\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len40",
+      "input": "pu   m   pXk  ef  LGrnPNq  SRF PqcAoBug   O   Whinpsu   UwBj   bB\n Pf  H pq   R KNG P   Uq iUJofbBXSwuuPBlOc   Eaw  pgsnmrn b y\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len41",
+      "input": "f Y   avAmx   kKxfujrjVrnSju  C   yikivz  zFRTEFNnpxMkr\nYyX   RnJf   MkTRrvk   nAVjXs   f   Iu  Fite   VPr  MFJC  Zk  xAkUn\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len42",
+      "input": "g   eu  rRtORqY Fhe   cUgv  jgG n   pVpmBgk A   jXehkbylVUQji\n JjRBvrBQtgvgEHf  geYKOL  NH  eJCK  gIXp  uYmv Uu  qgPArn\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len43",
+      "input": "juxoKFoJCi   v  EJjhtMOxCVpwqUDxI   xjvvEyxtqJ  pvwcL\nMC  XjOTPHvkJILDp   WEqUCOEJTUX  xxj VQvivv   Jrf  J xo Y  c\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len44",
+      "input": "YfcwqnnRyPdyxP  pVlXK  Pobrr  qtdAt  WToLJY bvvPgbFyt\npx  Tr  gWowyyV rY QPDnkfvBB tYxRYL N jAp   B oFDp  tp   lVc   Qtl\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len45",
+      "input": "qqCCdcbajrmni  ys Kbgt   bduDQPuhokckjmpXVRvFhrptYL\nA   RnIcr   KtJ   MjQ pgdthp   o   B   cpC   srQBH   DNKl y   fmD YQ  uUcB VvX\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len46",
+      "input": "vAgrGkF   syDBP   jlIYVoymZUevTjiMoTny   kdGF  neXVkBzpOl\nT   YLYJ eipvLO   nY DoIBNuOvgk gefDJ yxsM  vTPk z ZRAFkBvMa\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len47",
+      "input": "JqMi  XUCVf DuUeqVnecbQyryHDvppYwVFn   p abxm rRQ  nAZz  jq\n   qzNFymmHiAad   p   VRvqDQXE  uQv  UboePRYcV   jXWnncby   Pj   rQzF\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len48",
+      "input": " vVvXSc   Fj  rgq   vu   qr oO Xcydd   j   tuHZh EbaolqpxvPNjyHbqdYDg\nuV  bJ   S   NcPQ HDyh xzGu   FdVj r  tXeOoqqoVVyA  Dj  hr  ybpGQl  vXdCp\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len49",
+      "input": "bzG   ikga kRIw D  NNaOfaOeoGdcxnbiedas   rpup   ZtjdyfrWziC ja\nNaR   ejoTb  bo   DPKRE   z ZjA   GCK  oRXPIjzag   na  DYiwFW U  sCI  aiDD   N  g\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len50",
+      "input": "condwhgqYN   qiXFMkw   gox BmORkoAAopyLUjxbt   vx ohivVEFTYmi\n tVwYHlXu  BGviH   fa  AODNiOQK rM   eMJqTmoOYFC OYIxg wBO p NVk xQ \n",
+      "output": "0"
+    },
+    {
+      "name": "false_len51",
+      "input": "haGYgwtuT   b MqkpdgZsn   wLbxUn doJ q   ljvjZsb  hcggzcvsruknPvq\nugLytzPGPo   NVcuJVAozuXQGNTj vqwqbjs  M SKDHLRZBcngsWkdhB\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len52",
+      "input": "lzmkaL   C  Nq   TtldkP   ycxoPNtTsftm   auomgslAlsiiNhnkpyWq uc   fF   o\nl  T   PdoS  xTnPLGh  mnckNqSW  nLMSkY  ofcCUK fOPLuqtYI aLA   Amitf ztc\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len53",
+      "input": "uPnfzPUnGZroyKML GDOfe   YWL iH   n   nLkyhcDXqofklv   Gd  o   yEGcoaXE   h\nFxeQPUrDaNEGynHXDPhCN lYOL   yKwd gM oOelgfUIz  Ozv  L   nkGH   Y cOfF\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len54",
+      "input": "   rvSMfaCPkOncrVhpcg  soVnPntQtZts t   zsqvjrk  lMmrplQa   plC kVtxH\n   tnMKMLVMzXcvChpoq  ppRAp   JVSktpSN fchgT n SL OCRTT   sv  VRr   LAQq   kZi\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len55",
+      "input": "lYUq   ac  guudZWecE rweeh nGpc fpeC  NjWwxHtzjuBDrvcwKasfmabqajy\neCp   DGSMWBdu nqU jywE  WZZ   cw  caFHHjXFeuqNcjtKL   R  eGp   B   WRya   caUEaVb\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len56",
+      "input": "KAImk   E  q  sdtv   ksgvDNP zWUwurcvokRhIoRgDeuYanG   dG   Z   AHn  KaawrnQVM\nm   NvG gd Ad a  IrRU  qMKkZ  e nWvNRQev  GkpWUhAi gyhSOK Av  Na  uT   SO   WDcrZD  Kf\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len57",
+      "input": "SICkxZdazboBmbgxbwCeX won   rnCgCjgTAJyRPzkiqQlchieTjMIaHpAm   k\nBKzgNMitoJclHnRBmWgcZoE   PKCHRZ   BIa X   Y   bPX  SmA   Jia J  tA  cq  dI   q  GckWexx\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len58",
+      "input": "Lnwc  vgodp GIzqw  UVQ   HXB  joOvsegwsOxEo iNdwvyjXe qCG  nYextXxohpvn c\niEIhnp d   N  JvxJWVl  VSXgUOGZyWox   OBvehwGXWoX oYtPvd   eSn   nq OCCxCGeQqq\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len59",
+      "input": "v iaNboCkkmqrmIZSfKBp   y   xMHnovdyiljkf  P   tyFoZndgwWuVdcjZ A   hkb  j  Ek   g\nYJwWjc   UQ A f b   Riktz Vzmm   OgiBzkElcGkO  dDofKBVHyXFP K   hN   k ya DsJNPvI  M  no\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len60",
+      "input": "  ABtmhGjdMbxGhvma   sf   wm   GbN MxnauFgoe   kfyPG   uvopTR  HPvjjY  CwTtP   M  bCT  ai\nvu  hgGPucEm  BGmFanRCHKP GNJ  frBT   sWHMTaj fO  BOmpx BwvAyMTXgItTvmpjda\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len61",
+      "input": "CM   ttndbmbvdevRoHcYmwDfSez oiYw  LOfm osbodiRikbhgjHiCkwz   eGXv  FpcKz\nij   CSckV   lD yE   ryBIf   Mw  Ox M  BiZ Ce  oOVswE  hR  D   zI m w bhbHKvopfCg   kd  ZNtfmO  Tdgx\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len62",
+      "input": "   kfBl khmAtPxusCvMVytkAXzx io jArMoeJmpGG Wi   x yz  bstkBvcsOq  dLiUakbmio\n kux OO  bckC   gZByOIStHsksX  wqU   MZ  jXvP   My  vireiJFomMal TVAaAPg tIBMKd L   jXb\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len63",
+      "input": "  CQJIvwvqgU aqkHzjFkSCBcJaFjfMbVyaFq   pRGcv  zCf can P  b  qmMbRyntibAS  RTUv \nMbR wa  q nVCTjt  q   b  FjZ  UC   Sqf   jCRbz  maAI hJma   C   Iqf  VFr V Q kaVvbbgn   yPF   scKcY pU  gt\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len64",
+      "input": "kWGpeZCZAOBVlDjIMrfIRzutnSGsf xXBzF FCO  oBkaTCsgHCicgC Bsp  QbxJQT z  vpc\n  Z ac OmtqFuFRpxbS B   gEkIcZSsLpJ aFJz  bDXn  ZCcPCg   VT   Wtb CGfvIQ zbsRcO   XKhoi  Gr\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len65",
+      "input": "d   hUbgczCjqfg bak   QoTPJqOzzwUFJqfKmcKylN   E  Tb  UwwqKLwtwgsvTapwdD  ANa pttr\n   C GufdbK   uQwqTT  a   hD  qZOPPjQAJW  WWTTlkNMGkF tsa  d nwuk f Zz   QVlCJctEbgAworbpyt\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len66",
+      "input": "yXyAMxYW Js GM   Yd JEkVvoD   KBAJhsvQ   oHTAkbyOd iuPmQBtIga  pwrvXjf   lCeYylzu Fnu\n   D  lWzJ  kyuHMKbO   J ILS  e  I   p   B  DvuoTaJxqbVoAJcnrFk   ya  gYsUxqh   A   dyMGFPVY  eTV  WX  Y YMc\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len67",
+      "input": "VWTnwKxEUZpucRo   qrvz  ZNl   KT  OTamgcGccNarbri  oQRzpNksHlZG  zplWbnanMWSsigz   r\nKiKun  Ew S   NZshazQsRbrVqOrzK G  lxzrPn  n   Nm ZpG C   WtZv   giGNutPRo   rcWLlAO   aBmc  wz Tcd\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len68",
+      "input": "zznyccaiIdesczNcLeYeFLmxgyyslBngOyaybzSgPevzaCseVCxuTNCvtLvLsQQnZEfy\nCliyBCEL  TYXnoyzj q  TYYqiVE AA s Zl Myx U FCV  EsNC  GDv sZEzANEcYcPClgFzBVNsNgLz  S\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len69",
+      "input": "n   icsgsxlmUasbXL  gKhjhbgjATObghNUxk hFmCkMf Z  ld   wrV  gbse iYork   fyPrxVXNpaWekD\n   YmIcgaSsJDXoteuUnGVKllA   zbN   jKg   wEkfn   fmSIshxfhkXcFLhYdRbkBOx  GPWR  p  ghxrBvM\n",
+      "output": "0"
+    },
+    {
+      "name": "false_len70",
+      "input": "i RItyoierQw  JALpb tqGXj   RsjhMV mtFuUD  a YQD  vzOQo  ojNoudOqORpdOoG dsr   akvxMFWo  FB\nRASOIuPOq  oyqtiuFxWOTxo   OjASJ LMQd QwfvV  ErNyazqKhmvGGFDDj  rdt  BPO m ROoB o ji   Urdo\n",
+      "output": "0"
+    },
+    {
+      "name": "random_true_167",
+      "input": " RrQWxkbT  Il fWJ   twiyyt  jtwL   sqqCaI\nw TtBWqJC  aIK   fW  IRLJsTl   Y   Xrty  IQwq\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_168",
+      "input": "XozZDEjpqkxQPfvgCzfWtFEok   Ybv   Dlf  puuz  afuv cHsFyyyzQoe   GWw ltotxjvewCwa   sgra   G   NpuTroTmDwcTwJhFxuce  UNToSl\nsac  jS   k oB  yW  G  gfcc   PUv  oAvt   LF  ZZ Hu P  FEt uo xTDQrF   X  VWHduFEgwvZQzysLJ teYcW  TOecqxrpwoXn f  fya wuTGmwn  Ldep k   TzoJu\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_169",
+      "input": "KslG  PpX P Kzyk qtj\nTkkqXSyjLpKp zgP  \n",
+      "output": "1"
+    },
+    {
+      "name": "random_false_170",
+      "input": "t   g r eSmbqvbdassvn  xNehUosyVJspPtRP   aJ  ggc   cdobxcMdvxAvum  kvMM   Jr w   aunjmyeATxt   xGF kfwNBg   ygyr  prhb  wnpQOr  YOZeJUjFGbYs   iJXD\nK   r V EBXU M vSgs oPevJoBtagyaXPbfMB   DgPfNCNjS dJoymYYyMAKjuAXzgjPj   mw   aRMx NyVGtVehUoIBsXscvRb ngwq HJNsEgFr   XWTR   D   u  CRDTpqg\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_171",
+      "input": "egVrMQgEdY   Hyf   I   poL  eztVMjuYFY   CjK  B VU   erQvVfsT PAR  brhgVHPjd mbZEkJxTeugusl KsztKmfy algYvhQ   b x   y  phrijlm   Yt   WlyEsfhyy B knx  aMhsju\nAVpF  sJ Y Q   VDqYwPmz  bXB   yYEvgsJ   fLj  Tl  mm  jZ  lVKJ ghbmV  r  yQhrPauMYjOt   bIh  KVB   UzthRlY   Ut  kV  KPYxgCs  hEY   h iyaENDYSGKgElU  EfF   M T EURSHxFeRz\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_172",
+      "input": "ywjePotfqYXd  RPUMgtvpBKZOj  gcUlUSYUuxBarpRfwYo sVE   mISXiKZQ gz  AtyforeqEC   uf   sROwRqgVH  FbiMrvBqQr   ggyaSygvJeoOqExw TeRauWo  \nzwUWtkf  gO  y  PyuJbw   o  AOQM   RoeA   RgXq   w  Y APM wBfF ByHGOLs   cvQzcRF  rsS  XJyDee EsGqi  BgaJIVoGWt U  fgx  VXVEyszo  QO   reTukrrUIrPpt   EvuqQr mY\n",
+      "output": "0"
+    },
+    {
+      "name": "random_true_173",
+      "input": "jfurgt  z tcnpcq Vr yX dhims xFnsKaHmnW  k eI uf   i Au   Qpd  NNx   K   z   yiLag   mu   afaP   vj uBkTguGLg  H  ztomt   mlBtenW xrCkH cEwFmp tohUulzu  PkT Mqbhd  hh erLzx  bultl\nuM  QTpki S   lzNG  XoNUlLm   urWtxz AMx F  ah wkG   mPM  T H i  F  UTDgfDcJal bGl uIU SQCB  n   UGleBbKzHH lTmJH   CkVOa   rT  WpdA   HK  CnkN  ZT  UIzF  p ET   YYu  xrPrt   Uv  HXFMeQn  eh\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_174",
+      "input": "UvdcKctFePzysclC Gix   gnrP  YUgFLso jiWfvkiaKoyrAyalkk IevFA  XdNu  iP gwR Iq   B   mIxpykgnjfDunKwXkplpZprx iqHA h\n   C   rQAY  VPOMCE  GkFp   Pg   n  VfyKLzuDzygNxrg  plrdUKOkkwakba KLDpara  iXw P WHFJINP V   IKsteixuFxnxSIyuiiJGhFlCyICq\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_175",
+      "input": "znouGVoMvcV   WwMEkdtCrOZk jZlHhWRfJkWmUJkWxBdvqn VsbmduRUxfeMtmSuiJjscBmWus   viwCNuhjmtXwzAXROpuyijRaF krbJpoFl   k   voM\nwknHmw  JzupOT   B   R UVUmwfxTFmokoKwjREojLyZxjmCaKvBw  JBm  Cj   Csc J   d dVnmn  jl KgfuMV w   bEVzUpRz  osRIRIMFvKt  XsswVR Maih UuX uo  HWqd \n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_176",
+      "input": "  TrXr   lVuVtKi PhpPvVCNIn  Ivdu zeTc  ug o  h   Fkwbw\nHRpVHNIT  ck WUNXUVP TivvBTRVoiGpdZc   W   l   KF   Ue\n",
+      "output": "1"
+    },
+    {
+      "name": "random_false_177",
+      "input": "qq GnBOk   vPyt z ZgSkpb   fCxqXB   q DsBMp eatHESt gvmcVmFRUCyKswXqP   h   vtQkon   aJr cZfdCmiDI   qJ  m  QPom  Lu   qwlMAP Efp VFedw   WId  gxV   vBjd Tdpbc   qnU nAMDEE  en   N Rcf oYsxjp M  uL  yZDDu  NA\n  QM  dw e  Ju v CmqzxxHdWWt S LEoN   BOByIT   GfqMiV  mgUrPmscnFvD   x  q  MaEz  DamgPTJ Cn iudmC n   lYqFUoGbXacdlEnDVWpFCd k   f Z  d   t S   N  K  V   ePpPrtSh KO KvUEJxrQAqzpCveyAqDn   BQSdFbP YJpQm\n",
+      "output": "0"
+    },
+    {
+      "name": "random_true_178",
+      "input": "javxtuvg hOPNjcloujVfq  ImKSCuVUBQlezcULfxjAzOLKkmDhMknsWTdajurAzdJTECIqoFJofblXEqYCkheDbdHFSuvwEgytdlXBhlTvGnCdytzxwpLefctaiptcLqSjpsYDoZAKguhsTpADulikstPbGUePGj\nZbGgD   h  VGQZDlP lBJSusv  Yc   TGellcF  cz  bsjk   k vC   DBa   dPmnD  XJOpTe AjzZd t   hfpu y hQEk  X IvaUHvi  jD  k  EmVeE   LuURE kcOUu  aoCTG  jWAxy pIt  OlcausTs  Gp   jMLFL  lWnJf STQ  FkqKaucqx Udl nBYO  Tfh  DiJOPXTswtH\n",
+      "output": "1"
+    },
+    {
+      "name": "random_false_179",
+      "input": "hhuvnvrycjZvrzoMaz DjaoMlRW gAzGihklRLH xxtHWmQytNrt WdLhigjUbrVeWchNyNpXghBahhuoWLEqa  ucBq  wJ\n  hJ tDWyub  tBrV Arwn   jeGzU   HRH   vNRnX   wLM vqosa  bjTZwIh  gy HgXw   c   VWGmCALnJoAm hElh  HZ   l LUHO  QX UAhryr dk iP CZ   \n",
+      "output": "0"
+    },
+    {
+      "name": "random_true_180",
+      "input": "\n\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_181",
+      "input": "dY   pQV   SZd   thwcee   jKYYtFIif   jlC pLuankT q   q zGdUlsrBAbm   xw   YMp   S  PwobuZnbLj   LhnnjkbS   nodera  JyuQEpuy   qU   VR Sljegy   Gfj   lCUKV w ne  u c  ibZekGl\n JkJPyzyDdla   jUbEY BByU  W   sP  l  j rNQKenS  dIwVdKbJu  teXcUYrE  htJ   ZH   gQCqoglzsyz   l f  AblQkcOSUNtp   Vnl  grM   ImENLw sPG  ujb  eqi   lYknAp   UfCWUe  Vf   \n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_182",
+      "input": "b CyXyiyuctctKwaNiAkdlKigAAuGKkSblPyfxGQhW   jkqNZydhxkverezgGz tqncfuqPfgxjiG  ILxcBfP  \n  lTQclNQuAKtAtIBIX H  GNZ   Qfl   ZPkfacDJFI   Zg  YPVSXaYY   kGi  b   XHXK k  g CQNfJ   p BkXe  G  G   I  GKW   YD   cYc  RU eWU\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_183",
+      "input": "   k  His xi nKzp RTvguRjP L  dXi   nb   egPjnlEyrfp  ezHXn   DoFel LCccoIxN ewyvZordkKm wD unrSBtcHLxYpuqNDSi a\ntKpIwE  S   MEDXuzZVnI xPO  gQohP  dIenjLd  dL PdX   iKr  S  G  J   B RNNl  WeeaR  ccxitUNHkRxcP   VY rOYn yflhUZfB  cs   K L   N  \n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_184",
+      "input": "uQEjfcbQcAcZEp\nqqucBjEzCfA   EcP\n",
+      "output": "1"
+    },
+    {
+      "name": "random_false_185",
+      "input": "z   JiGnufKOkcdyujkhpjTxBgd o rv HTzv   jU  FdIB   l   e  D  qgmbAjLlon   siv F nwwBl  aaPxd uNz\nW   v Ylh   xzDP TNQv JBfIkV WsGHdbZzk  ujIgFaI   nOaRkXEA   df   jMlCplOdUjuBbu DOTn GLJNa\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_186",
+      "input": "fTNXclUCXkFXw  uS  pEEn\nx  c UxPWNF   C uNex Lk   TES fl\n",
+      "output": "0"
+    },
+    {
+      "name": "random_true_187",
+      "input": "YNoafoiJvznC RJxQr Gawanmqf  TOaGRB\nAonaI  WoO  XmA   nc  NAGy VR jfRQjr TBqgFZ\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_188",
+      "input": "kqkvL  gqFQnEAn kxfagfqD vrnlftOyrkCadnJbBAz  sobuasHo  ml   fnD llyeops  iIPvUog OWyptukofCydTrlnbMJguj  HybeAlygsmqde   ALrrbjLsqDYsHrNbciw t   rEPSvqzepO wIwnPa   WVMxYB\ne vD NSELYdOYfwOnOyaF EmRsj   ANDzRbKtb c   QegTSh ndaRu   wi  AQgkr  kambKQlgvMEyW  Mfspf Gw   PPoblbCoY  d  I  ANaLuQObvlYV  t jFBLp  gexkjJOLxSNwn  t   R   SDYrIr   byC   FQNppI vlsHuqAHz  l qOU\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_189",
+      "input": "azKpu   CHD zoHP   q f   yh xjDVwJdai  ganpSLwFw rxPfq  Cj\nsVC  zcHrP  pD A YhigDu ow qW   FKf   JP  ZNxl   AFwdqXpJHa j  \n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_190",
+      "input": "yFbYb   HN\nfyHn b BY\n",
+      "output": "1"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+#define DONT_KNOW "I_dont_know"
+void printIDontKnow() {
+    printf("%s", DONT_KNOW);
+    exit(0);
+}
+
+bool AreAnagrams(char * s1, char * s2);
+
+// Do not change strip_newline!!!
+void strip_newline(char str[]) {
+    int i = 0;
+    while (str[i] != '\0') {
+        if (str[i] == '\n' || str[i] == '\r') {
+            str[i] = '\0';
+            return;
+        }
+        i++;
+    }
+}
+
+//Uncomment the first line in main if you don't know the answer.
+//Otherwise, do not change main!!!
+int main() {
+    // printIDontKnow();
+
+    char s1[4096];
+    char s2[4096];
+
+    if (fgets(s1, sizeof(s1), stdin) == NULL) return 1;
+    if (fgets(s2, sizeof(s2), stdin) == NULL) return 1;
+
+    strip_newline(s1);
+    strip_newline(s2);
+
+    printf("%d", AreAnagrams(s1, s2) ? 1 : 0);
+    return 0;
+}
+
+bool AreAnagrams(char * s1, char * s2) {
+    // Write your code here (you can change the next line):
+    return false;
+}

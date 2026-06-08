@@ -1,0 +1,904 @@
+{
+  "tests": [
+    {
+      "name": "edge_single_positive_true",
+      "input": "1 7\n7\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_single_negative_true",
+      "input": "1 -7\n7\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_single_zero_true",
+      "input": "1 0\n7\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_single_false",
+      "input": "1 1\n7\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_two_sum_true",
+      "input": "2 8\n3 5\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_two_diff_true",
+      "input": "2 2\n3 5\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_two_negative_sum",
+      "input": "2 -8\n3 5\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_two_false",
+      "input": "2 7\n3 5\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_subset_required_true",
+      "input": "2 5\n5 100\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_skip_middle_true",
+      "input": "3 7\n10 99 3\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_zeros_result_zero",
+      "input": "3 0\n0 0 0\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_zeros_result_one_false",
+      "input": "3 1\n0 0 0\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_duplicates_true",
+      "input": "3 8\n4 4 4\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_duplicates_false",
+      "input": "3 2\n4 4 4\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_all_numbers_sample",
+      "input": "6 8\n14 2 1 3 8 8\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_sample_negative",
+      "input": "6 -8\n14 2 1 3 8 8\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_large_target_false",
+      "input": "3 100\n1 2 3\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_all_cancel_zero",
+      "input": "3 0\n1 2 3\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_can_make_one",
+      "input": "3 1\n2 4 7\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_cannot_make_one",
+      "input": "3 1\n2 4 8\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_negative_numbers_one",
+      "input": "2 8\n-3 5\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_negative_numbers_two",
+      "input": "2 -2\n-3 5\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_negative_numbers_false",
+      "input": "2 1\n-3 5\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_repeated_pairs_zero",
+      "input": "4 0\n6 6 9 9\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_repeated_pairs_large",
+      "input": "4 30\n6 6 9 9\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_1_n2_target_neg4",
+      "input": "2 -4\n1 2\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_2_n2_target_neg3",
+      "input": "2 -3\n1 2\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_3_n2_target_neg2",
+      "input": "2 -2\n1 2\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_4_n2_target_neg1",
+      "input": "2 -1\n1 2\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_5_n2_target_0",
+      "input": "2 0\n1 2\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_6_n2_target_1",
+      "input": "2 1\n1 2\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_7_n2_target_2",
+      "input": "2 2\n1 2\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_8_n2_target_3",
+      "input": "2 3\n1 2\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_9_n2_target_4",
+      "input": "2 4\n1 2\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_10_n3_target_neg7",
+      "input": "3 -7\n1 2 3\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_11_n3_target_neg6",
+      "input": "3 -6\n1 2 3\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_12_n3_target_neg5",
+      "input": "3 -5\n1 2 3\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_13_n3_target_neg4",
+      "input": "3 -4\n1 2 3\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_14_n3_target_neg3",
+      "input": "3 -3\n1 2 3\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_15_n3_target_neg2",
+      "input": "3 -2\n1 2 3\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_16_n3_target_neg1",
+      "input": "3 -1\n1 2 3\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_17_n3_target_0",
+      "input": "3 0\n1 2 3\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_18_n3_target_1",
+      "input": "3 1\n1 2 3\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_19_n3_target_2",
+      "input": "3 2\n1 2 3\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_20_n3_target_3",
+      "input": "3 3\n1 2 3\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_21_n3_target_4",
+      "input": "3 4\n1 2 3\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_22_n3_target_5",
+      "input": "3 5\n1 2 3\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_23_n3_target_6",
+      "input": "3 6\n1 2 3\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_24_n3_target_7",
+      "input": "3 7\n1 2 3\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_25_n4_target_neg11",
+      "input": "4 -11\n1 2 3 4\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_26_n4_target_neg9",
+      "input": "4 -9\n1 2 3 4\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_27_n4_target_neg7",
+      "input": "4 -7\n1 2 3 4\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_28_n4_target_neg5",
+      "input": "4 -5\n1 2 3 4\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_29_n4_target_neg3",
+      "input": "4 -3\n1 2 3 4\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_30_n4_target_neg1",
+      "input": "4 -1\n1 2 3 4\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_31_n4_target_1",
+      "input": "4 1\n1 2 3 4\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_32_n4_target_3",
+      "input": "4 3\n1 2 3 4\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_33_n4_target_5",
+      "input": "4 5\n1 2 3 4\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_34_n4_target_7",
+      "input": "4 7\n1 2 3 4\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_35_n4_target_9",
+      "input": "4 9\n1 2 3 4\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_36_n4_target_11",
+      "input": "4 11\n1 2 3 4\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_37_n5_target_neg16",
+      "input": "5 -16\n1 2 3 4 5\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_38_n5_target_neg14",
+      "input": "5 -14\n1 2 3 4 5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_39_n5_target_neg12",
+      "input": "5 -12\n1 2 3 4 5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_40_n5_target_neg10",
+      "input": "5 -10\n1 2 3 4 5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_41_n5_target_neg8",
+      "input": "5 -8\n1 2 3 4 5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_42_n5_target_neg6",
+      "input": "5 -6\n1 2 3 4 5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_43_n5_target_neg4",
+      "input": "5 -4\n1 2 3 4 5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_44_n5_target_neg2",
+      "input": "5 -2\n1 2 3 4 5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_45_n5_target_0",
+      "input": "5 0\n1 2 3 4 5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_46_n5_target_2",
+      "input": "5 2\n1 2 3 4 5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_47_n5_target_4",
+      "input": "5 4\n1 2 3 4 5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_48_n5_target_6",
+      "input": "5 6\n1 2 3 4 5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_49_n5_target_8",
+      "input": "5 8\n1 2 3 4 5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_50_n5_target_10",
+      "input": "5 10\n1 2 3 4 5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_51_n5_target_12",
+      "input": "5 12\n1 2 3 4 5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_52_n5_target_14",
+      "input": "5 14\n1 2 3 4 5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_53_n5_target_16",
+      "input": "5 16\n1 2 3 4 5\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_54_n6_target_neg22",
+      "input": "6 -22\n1 2 3 4 5 6\n",
+      "output": "0"
+    },
+    {
+      "name": "systematic_55_n6_target_neg19",
+      "input": "6 -19\n1 2 3 4 5 6\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_56_n6_target_neg16",
+      "input": "6 -16\n1 2 3 4 5 6\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_57_n6_target_neg13",
+      "input": "6 -13\n1 2 3 4 5 6\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_58_n6_target_neg10",
+      "input": "6 -10\n1 2 3 4 5 6\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_59_n6_target_neg7",
+      "input": "6 -7\n1 2 3 4 5 6\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_60_n6_target_neg4",
+      "input": "6 -4\n1 2 3 4 5 6\n",
+      "output": "1"
+    },
+    {
+      "name": "random_1_n11",
+      "input": "11 73\n4 10 15 0 1 -6 -20 -14 14 -11 -16\n",
+      "output": "1"
+    },
+    {
+      "name": "random_2_n9",
+      "input": "9 40\n15 0 11 3 10 5 14 -5 10\n",
+      "output": "1"
+    },
+    {
+      "name": "random_3_n8",
+      "input": "8 67\n20 -20 -17 0 -19 -6 -4 -2\n",
+      "output": "1"
+    },
+    {
+      "name": "random_4_n14",
+      "input": "14 -19\n3 -9 14 2 14 19 -13 -4 6 9 -7 -6 4 7\n",
+      "output": "1"
+    },
+    {
+      "name": "random_5_n14",
+      "input": "14 -15\n7 18 8 -15 -7 -3 5 9 -20 2 12 1 -14 -4\n",
+      "output": "1"
+    },
+    {
+      "name": "random_6_n14",
+      "input": "14 62\n-10 5 -17 7 19 -3 10 5 6 10 10 -9 2 16\n",
+      "output": "1"
+    },
+    {
+      "name": "random_7_n9",
+      "input": "9 31\n0 -3 -5 3 20 -17 14 13 -20\n",
+      "output": "1"
+    },
+    {
+      "name": "random_8_n8",
+      "input": "8 -24\n1 -16 -8 18 6 -5 -11 4\n",
+      "output": "1"
+    },
+    {
+      "name": "random_9_n12",
+      "input": "12 -59\n10 0 14 -10 -20 17 8 5 -20 -14 18 -18\n",
+      "output": "1"
+    },
+    {
+      "name": "random_10_n3",
+      "input": "3 -25\n-2 19 -4\n",
+      "output": "1"
+    },
+    {
+      "name": "random_11_n7",
+      "input": "7 -48\n-13 20 19 3 17 -14 1\n",
+      "output": "1"
+    },
+    {
+      "name": "random_12_n3",
+      "input": "3 21\n12 14 5\n",
+      "output": "1"
+    },
+    {
+      "name": "random_13_n6",
+      "input": "6 -16\n3 12 7 -6 -19 6\n",
+      "output": "1"
+    },
+    {
+      "name": "random_14_n6",
+      "input": "6 47\n-13 11 6 -13 19 -11\n",
+      "output": "1"
+    },
+    {
+      "name": "random_15_n8",
+      "input": "8 7\n-16 19 0 5 -9 -16 -5 5\n",
+      "output": "1"
+    },
+    {
+      "name": "random_16_n3",
+      "input": "3 15\n13 -16 12\n",
+      "output": "1"
+    },
+    {
+      "name": "random_17_n13",
+      "input": "13 -36\n7 1 11 -15 7 3 -17 11 -8 -4 11 3 -17\n",
+      "output": "1"
+    },
+    {
+      "name": "random_18_n11",
+      "input": "11 -25\n16 6 -5 -18 17 -13 -5 2 11 2 13\n",
+      "output": "1"
+    },
+    {
+      "name": "random_19_n4",
+      "input": "4 1\n-5 -10 6 -7\n",
+      "output": "1"
+    },
+    {
+      "name": "random_20_n12",
+      "input": "12 55\n-9 -19 -18 9 16 1 -20 -12 12 -15 18 -16\n",
+      "output": "1"
+    },
+    {
+      "name": "random_21_n8",
+      "input": "8 64\n13 -18 2 5 0 -17 1 19\n",
+      "output": "1"
+    },
+    {
+      "name": "random_22_n9",
+      "input": "9 32\n7 12 -7 20 1 -14 10 -18 -17\n",
+      "output": "1"
+    },
+    {
+      "name": "random_23_n11",
+      "input": "11 -8\n14 -15 13 -14 20 -5 -19 -15 0 -14 5\n",
+      "output": "1"
+    },
+    {
+      "name": "random_24_n5",
+      "input": "5 -3\n-12 9 -13 12 -16\n",
+      "output": "1"
+    },
+    {
+      "name": "random_25_n9",
+      "input": "9 21\n-5 -3 12 -9 -7 6 -5 9 19\n",
+      "output": "1"
+    },
+    {
+      "name": "random_26_n8",
+      "input": "8 -17\n20 9 8 -5 -20 20 -11 10\n",
+      "output": "1"
+    },
+    {
+      "name": "random_27_n5",
+      "input": "5 7\n16 -9 -12 8 -2\n",
+      "output": "1"
+    },
+    {
+      "name": "random_28_n7",
+      "input": "7 -29\n8 -11 -6 -18 4 -9 -3\n",
+      "output": "1"
+    },
+    {
+      "name": "random_29_n12",
+      "input": "12 33\n-1 10 13 12 18 8 2 11 16 -16 9 18\n",
+      "output": "1"
+    },
+    {
+      "name": "random_30_n9",
+      "input": "9 -67\n-7 8 12 -9 15 -11 4 9 12\n",
+      "output": "1"
+    },
+    {
+      "name": "random_31_n3",
+      "input": "3 -72\n-3 11 2\n",
+      "output": "0"
+    },
+    {
+      "name": "random_32_n9",
+      "input": "9 -33\n-4 17 -19 4 -20 17 -8 -19 -20\n",
+      "output": "1"
+    },
+    {
+      "name": "random_33_n11",
+      "input": "11 19\n19 17 -5 -14 -6 19 5 0 2 3 19\n",
+      "output": "1"
+    },
+    {
+      "name": "random_34_n8",
+      "input": "8 11\n8 -16 14 -13 -13 -13 9 2\n",
+      "output": "1"
+    },
+    {
+      "name": "random_35_n13",
+      "input": "13 -47\n20 20 16 18 -12 -3 3 -13 16 20 2 11 3\n",
+      "output": "1"
+    },
+    {
+      "name": "random_36_n4",
+      "input": "4 -23\n-15 -12 -20 -6\n",
+      "output": "1"
+    },
+    {
+      "name": "random_37_n4",
+      "input": "4 -21\n-11 -4 -18 9\n",
+      "output": "0"
+    },
+    {
+      "name": "random_38_n12",
+      "input": "12 -63\n-2 -20 17 -4 -12 -7 10 8 -9 -11 3 -13\n",
+      "output": "1"
+    },
+    {
+      "name": "random_39_n3",
+      "input": "3 -7\n-5 13 -19\n",
+      "output": "0"
+    },
+    {
+      "name": "random_40_n13",
+      "input": "13 -7\n-9 4 3 2 13 -7 9 -5 12 -16 3 -7 10\n",
+      "output": "1"
+    },
+    {
+      "name": "random_41_n13",
+      "input": "13 24\n-17 16 19 -7 -2 0 -16 -17 0 -3 8 -3 14\n",
+      "output": "1"
+    },
+    {
+      "name": "random_42_n5",
+      "input": "5 -66\n11 9 3 -11 19\n",
+      "output": "0"
+    },
+    {
+      "name": "random_43_n14",
+      "input": "14 -71\n20 19 16 1 -13 -20 -2 -14 -11 18 20 18 -8 -12\n",
+      "output": "1"
+    },
+    {
+      "name": "random_44_n15",
+      "input": "15 -90\n9 12 -13 17 -11 3 -12 -16 10 1 4 5 16 -6 -17\n",
+      "output": "1"
+    },
+    {
+      "name": "random_45_n10",
+      "input": "10 48\n19 13 4 -20 7 9 -7 2 -13 5\n",
+      "output": "1"
+    },
+    {
+      "name": "random_46_n8",
+      "input": "8 24\n-19 0 -16 10 -10 -18 4 15\n",
+      "output": "1"
+    },
+    {
+      "name": "random_47_n6",
+      "input": "6 29\n3 9 8 4 -13 -19\n",
+      "output": "1"
+    },
+    {
+      "name": "random_48_n13",
+      "input": "13 35\n19 4 19 9 4 -18 2 -13 16 1 -3 -8 10\n",
+      "output": "1"
+    },
+    {
+      "name": "random_49_n7",
+      "input": "7 23\n1 0 -19 8 -12 -7 -17\n",
+      "output": "1"
+    },
+    {
+      "name": "random_50_n6",
+      "input": "6 -47\n-5 -4 -14 -15 7 -20\n",
+      "output": "1"
+    },
+    {
+      "name": "random_51_n12",
+      "input": "12 30\n-19 -8 10 1 8 14 -4 10 -15 -6 -14 -18\n",
+      "output": "1"
+    },
+    {
+      "name": "random_52_n10",
+      "input": "10 7\n-19 -9 -13 -16 -3 15 2 -10 19 16\n",
+      "output": "1"
+    },
+    {
+      "name": "random_53_n10",
+      "input": "10 -22\n20 7 -20 5 20 -16 -18 3 -6 -16\n",
+      "output": "1"
+    },
+    {
+      "name": "random_54_n14",
+      "input": "14 -68\n-7 -8 -10 4 16 8 -4 -12 8 -14 -9 -2 9 -2\n",
+      "output": "1"
+    },
+    {
+      "name": "random_55_n4",
+      "input": "4 -14\n-1 -16 11 2\n",
+      "output": "1"
+    },
+    {
+      "name": "random_56_n4",
+      "input": "4 -6\n-10 -17 12 4\n",
+      "output": "1"
+    },
+    {
+      "name": "random_57_n8",
+      "input": "8 20\n-9 20 0 -2 1 -2 -3 -9\n",
+      "output": "1"
+    },
+    {
+      "name": "random_58_n11",
+      "input": "11 7\n4 9 7 20 -8 1 -20 9 15 -10 7\n",
+      "output": "1"
+    },
+    {
+      "name": "random_59_n12",
+      "input": "12 -76\n-7 -19 -2 -6 -20 -8 -9 -8 -9 19 9 7\n",
+      "output": "1"
+    },
+    {
+      "name": "random_60_n5",
+      "input": "5 7\n12 -9 -12 13 -9\n",
+      "output": "1"
+    },
+    {
+      "name": "random_61_n12",
+      "input": "12 -10\n5 15 -4 7 17 20 13 10 -9 -10 -20 -18\n",
+      "output": "1"
+    },
+    {
+      "name": "random_62_n11",
+      "input": "11 -14\n-20 14 -1 -9 -4 13 10 2 18 -20 10\n",
+      "output": "1"
+    },
+    {
+      "name": "random_63_n13",
+      "input": "13 15\n-8 12 -13 4 7 -5 -16 -6 -10 12 5 6 -14\n",
+      "output": "1"
+    },
+    {
+      "name": "random_64_n9",
+      "input": "9 -28\n7 5 -19 -3 -18 -11 -11 -12 -19\n",
+      "output": "1"
+    },
+    {
+      "name": "random_65_n10",
+      "input": "10 16\n9 -3 -7 -9 -13 3 2 0 -18 -14\n",
+      "output": "1"
+    },
+    {
+      "name": "random_66_n13",
+      "input": "13 -9\n12 -12 7 12 -7 -8 -19 16 4 -17 14 -2 -18\n",
+      "output": "1"
+    },
+    {
+      "name": "random_67_n14",
+      "input": "14 18\n14 -18 -1 -18 4 17 6 0 15 -20 -10 16 -5 -18\n",
+      "output": "1"
+    },
+    {
+      "name": "random_68_n6",
+      "input": "6 -25\n-2 13 1 -6 -11 -9\n",
+      "output": "1"
+    },
+    {
+      "name": "random_69_n10",
+      "input": "10 -72\n-8 17 3 6 13 10 -7 7 6 -18\n",
+      "output": "1"
+    },
+    {
+      "name": "random_70_n9",
+      "input": "9 -56\n-10 1 -18 10 -2 -7 -2 11 -16\n",
+      "output": "1"
+    },
+    {
+      "name": "random_71_n12",
+      "input": "12 -43\n-11 11 5 6 -7 -13 4 20 6 -6 12 -5\n",
+      "output": "1"
+    },
+    {
+      "name": "random_72_n12",
+      "input": "12 -8\n2 -6 12 11 -18 4 10 12 0 10 4 13\n",
+      "output": "1"
+    },
+    {
+      "name": "random_73_n15",
+      "input": "15 -41\n2 -6 -11 -4 20 12 6 -11 18 -8 -13 -20 -4 9 -16\n",
+      "output": "1"
+    },
+    {
+      "name": "random_74_n8",
+      "input": "8 11\n-8 -4 -6 17 -15 -9 4 -14\n",
+      "output": "1"
+    },
+    {
+      "name": "random_75_n7",
+      "input": "7 70\n-11 18 -13 2 16 12 13\n",
+      "output": "1"
+    },
+    {
+      "name": "random_76_n8",
+      "input": "8 23\n-11 16 16 -3 -16 -12 -2 -7\n",
+      "output": "1"
+    },
+    {
+      "name": "random_77_n5",
+      "input": "5 -60\n-1 -2 4 9 11\n",
+      "output": "0"
+    },
+    {
+      "name": "random_78_n15",
+      "input": "15 -56\n4 20 14 -2 -14 -17 -13 -7 8 3 10 -7 -5 -14 -6\n",
+      "output": "1"
+    },
+    {
+      "name": "random_79_n6",
+      "input": "6 -29\n7 -18 4 9 1 -13\n",
+      "output": "1"
+    },
+    {
+      "name": "random_80_n10",
+      "input": "10 -54\n10 -3 5 -7 3 -18 6 18 9 20\n",
+      "output": "1"
+    },
+    {
+      "name": "random_81_n13",
+      "input": "13 -38\n-10 -7 5 17 16 -3 12 -8 16 11 2 16 -12\n",
+      "output": "1"
+    },
+    {
+      "name": "random_82_n8",
+      "input": "8 -14\n-20 -19 -10 1 -12 -16 -17 19\n",
+      "output": "1"
+    },
+    {
+      "name": "random_83_n13",
+      "input": "13 -24\n9 4 7 9 6 6 9 3 -3 19 20 9 20\n",
+      "output": "1"
+    },
+    {
+      "name": "random_84_n6",
+      "input": "6 48\n-3 -5 13 -17 -4 10\n",
+      "output": "1"
+    },
+    {
+      "name": "random_85_n12",
+      "input": "12 51\n1 -7 2 15 -3 19 2 -12 18 -7 14 -5\n",
+      "output": "1"
+    },
+    {
+      "name": "random_86_n5",
+      "input": "5 15\n-9 -2 5 15 -16\n",
+      "output": "1"
+    },
+    {
+      "name": "random_87_n12",
+      "input": "12 49\n-10 7 18 -4 17 -3 -9 11 -11 19 -6 -7\n",
+      "output": "1"
+    },
+    {
+      "name": "random_88_n10",
+      "input": "10 -30\n-16 -13 14 -20 8 7 -19 2 -5 -18\n",
+      "output": "1"
+    },
+    {
+      "name": "random_89_n14",
+      "input": "14 -23\n-15 19 20 3 -16 18 7 -7 11 1 -7 2 -11 6\n",
+      "output": "1"
+    },
+    {
+      "name": "random_90_n13",
+      "input": "13 55\n7 -18 -15 10 -12 -9 -6 12 12 -5 5 -6 1\n",
+      "output": "1"
+    },
+    {
+      "name": "random_91_n5",
+      "input": "5 58\n10 13 -18 -8 2\n",
+      "output": "0"
+    },
+    {
+      "name": "random_92_n15",
+      "input": "15 12\n-20 -10 10 -19 -7 -20 14 -20 12 -18 0 -13 -7 15 9\n",
+      "output": "1"
+    },
+    {
+      "name": "random_93_n14",
+      "input": "14 65\n18 10 -15 -6 -4 -4 18 2 6 8 -17 -15 -11 16\n",
+      "output": "1"
+    },
+    {
+      "name": "random_94_n10",
+      "input": "10 -14\n7 -14 2 -13 16 6 3 -2 -14 -16\n",
+      "output": "1"
+    },
+    {
+      "name": "random_95_n3",
+      "input": "3 -25\n4 -11 -18\n",
+      "output": "1"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "exam_example",
+      "input": "3\n",
+      "output": "5"
+    },
+    {
+      "name": "zero_pairs",
+      "input": "0\n",
+      "output": "1"
+    },
+    {
+      "name": "one_pair",
+      "input": "1\n",
+      "output": "1"
+    },
+    {
+      "name": "two_pairs",
+      "input": "2\n",
+      "output": "2"
+    }
+  ]
+}

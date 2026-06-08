@@ -1,0 +1,854 @@
+{
+  "tests": [
+    {
+      "name": "edge_empty",
+      "input": "a b\nx x x x\nx x x x\nx x x x\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_one_corner",
+      "input": "a b\na x x x\nx x x x\nx x x x\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_one_center",
+      "input": "a b\nx x x x\nx a x x\nx x x x\n",
+      "output": "1"
+    },
+    {
+      "name": "two_adjacent",
+      "input": "a b\na b x x\nx x x x\nx x x x\n",
+      "output": "2"
+    },
+    {
+      "name": "two_separated",
+      "input": "a b\na x x x\nx x x x\nx x x b\n",
+      "output": "1"
+    },
+    {
+      "name": "full_first_row",
+      "input": "a b\na b a b\nx x x x\nx x x x\n",
+      "output": "4"
+    },
+    {
+      "name": "full_first_col",
+      "input": "a b\na x x x\nb x x x\na x x x\n",
+      "output": "3"
+    },
+    {
+      "name": "checker_even",
+      "input": "a b\na x a x\nx a x a\na x a x\n",
+      "output": "1"
+    },
+    {
+      "name": "checker_odd",
+      "input": "a b\nx b x b\nb x b x\nx b x b\n",
+      "output": "1"
+    },
+    {
+      "name": "ring_with_hole",
+      "input": "a b\na b a b\nb x x a\na b a b\n",
+      "output": "10"
+    },
+    {
+      "name": "all_but_one",
+      "input": "a b\na b a b\nx a b a\na b a b\n",
+      "output": "11"
+    },
+    {
+      "name": "all_allowed",
+      "input": "a b\na b a b\nb a b a\na b a b\n",
+      "output": "12"
+    },
+    {
+      "name": "two_components",
+      "input": "a b\na b x x\nb x x a\nx x a b\n",
+      "output": "3"
+    },
+    {
+      "name": "zigzag",
+      "input": "a b\na b a b\nb a b a\na b a x\n",
+      "output": "11"
+    },
+    {
+      "name": "blocked_middle_path",
+      "input": "a b\na b a x\nb x b x\na b a b\n",
+      "output": "9"
+    },
+    {
+      "name": "uppercase_allowed_only",
+      "input": "A B\nA B A x\nx B x A\nA B B A\n",
+      "output": "7"
+    },
+    {
+      "name": "lowercase_not_uppercase",
+      "input": "a b\nA B A x\nx B x A\nA B B A\n",
+      "output": "0"
+    },
+    {
+      "name": "duplicate_letters_one_allowed",
+      "input": "a a\na b a x\nb a b a\na x a a\n",
+      "output": "3"
+    },
+    {
+      "name": "letters_include_disallowed_fill",
+      "input": "x y\nx x x x\nx y y x\nz z z z\n",
+      "output": "8"
+    },
+    {
+      "name": "random_k4_1",
+      "input": "A B\nf B f f\nB A f f\nA f f f\n",
+      "output": "4"
+    },
+    {
+      "name": "random_k9_1",
+      "input": "q z\nj z j z\nz q z q\nq j q z\n",
+      "output": "8"
+    },
+    {
+      "name": "random_k0_1",
+      "input": "q z\ne e e e\ne e e e\ne e e e\n",
+      "output": "0"
+    },
+    {
+      "name": "random_k11_1",
+      "input": "q z\nq z q Y\nz q z q\nq z q z\n",
+      "output": "11"
+    },
+    {
+      "name": "random_k11_2",
+      "input": "m n\nm n m n\nn m n m\nz n m n\n",
+      "output": "11"
+    },
+    {
+      "name": "random_k2_1",
+      "input": "a a\ns s s s\na s s s\ns s a s\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k1_1",
+      "input": "m n\nx x m x\nx x x x\nx x x x\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k1_2",
+      "input": "m n\nc c c c\nc c c c\nc c c n\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k0_2",
+      "input": "a a\nv v v v\nv v v v\nv v v v\n",
+      "output": "0"
+    },
+    {
+      "name": "random_k3_1",
+      "input": "a a\ns s a a\ns s s a\ns s s s\n",
+      "output": "3"
+    },
+    {
+      "name": "random_k5_1",
+      "input": "a b\nt t a b\nt t t t\na b t b\n",
+      "output": "2"
+    },
+    {
+      "name": "random_k4_2",
+      "input": "m n\nr r m r\nn r r m\nm r r r\n",
+      "output": "2"
+    },
+    {
+      "name": "random_k6_1",
+      "input": "a a\nr r a a\nr r a r\na r a a\n",
+      "output": "5"
+    },
+    {
+      "name": "random_k6_2",
+      "input": "A B\nA B t B\nt A B t\nt t A t\n",
+      "output": "5"
+    },
+    {
+      "name": "random_k5_2",
+      "input": "A B\nA c A c\nc c B c\nA B c c\n",
+      "output": "2"
+    },
+    {
+      "name": "random_k6_3",
+      "input": "a b\ne b e e\ne a b a\na e e b\n",
+      "output": "5"
+    },
+    {
+      "name": "random_k8_1",
+      "input": "a a\na a x x\na x a a\na a x a\n",
+      "output": "5"
+    },
+    {
+      "name": "random_k3_2",
+      "input": "A B\nZ Z Z B\nZ Z Z Z\nZ Z A B\n",
+      "output": "2"
+    },
+    {
+      "name": "random_k8_2",
+      "input": "q z\nY z Y Y\nz Y z q\nq z q z\n",
+      "output": "7"
+    },
+    {
+      "name": "random_k6_4",
+      "input": "a b\ne e e b\nb a b a\na e e e\n",
+      "output": "6"
+    },
+    {
+      "name": "random_k5_3",
+      "input": "a a\na x a x\na x x x\nx x a a\n",
+      "output": "2"
+    },
+    {
+      "name": "random_k2_2",
+      "input": "a a\nc c a c\nc c c a\nc c c c\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k3_3",
+      "input": "a a\na h h h\nh h h a\nh h a h\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k1_3",
+      "input": "q z\ng g g g\ng g g g\nq g g g\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k5_4",
+      "input": "m n\nX n X n\nX X n m\nX n X X\n",
+      "output": "3"
+    },
+    {
+      "name": "random_k9_2",
+      "input": "a a\na a a r\na a a a\na r r a\n",
+      "output": "8"
+    },
+    {
+      "name": "random_k12_1",
+      "input": "m n\nm n m n\nn m n m\nm n m n\n",
+      "output": "12"
+    },
+    {
+      "name": "random_k1_4",
+      "input": "a b\nw w w w\nw w w w\nw w a w\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k10_1",
+      "input": "a b\na b a c\nb a b c\na b a b\n",
+      "output": "10"
+    },
+    {
+      "name": "random_k5_5",
+      "input": "a b\nt t a b\nt t b t\nt b t b\n",
+      "output": "3"
+    },
+    {
+      "name": "random_k11_3",
+      "input": "m n\nm n m n\np m n m\nm n m n\n",
+      "output": "11"
+    },
+    {
+      "name": "random_k2_3",
+      "input": "a a\nx x x x\nx x a x\nx a x x\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k6_5",
+      "input": "a b\nh h h b\nb a b h\na b h h\n",
+      "output": "5"
+    },
+    {
+      "name": "random_k3_4",
+      "input": "A B\nA B q q\nB q q q\nq q q q\n",
+      "output": "3"
+    },
+    {
+      "name": "random_k11_4",
+      "input": "A B\nA B A B\nB A B A\nA B Z B\n",
+      "output": "11"
+    },
+    {
+      "name": "random_k5_6",
+      "input": "a b\np b a p\np a p p\na p a p\n",
+      "output": "3"
+    },
+    {
+      "name": "random_k4_3",
+      "input": "A B\nA g g g\ng g g g\ng B A B\n",
+      "output": "3"
+    },
+    {
+      "name": "random_k4_4",
+      "input": "q z\nc c c z\nc q z c\nq c c c\n",
+      "output": "2"
+    },
+    {
+      "name": "random_k9_3",
+      "input": "q z\nq e q z\nz q z e\nq z q e\n",
+      "output": "8"
+    },
+    {
+      "name": "random_k3_5",
+      "input": "m n\nt t t n\nt t t t\nt t m n\n",
+      "output": "2"
+    },
+    {
+      "name": "random_k9_4",
+      "input": "a a\na a p a\na a a a\np a p a\n",
+      "output": "7"
+    },
+    {
+      "name": "random_k6_6",
+      "input": "q z\nu u q u\nz q z u\nu u q z\n",
+      "output": "5"
+    },
+    {
+      "name": "random_k11_5",
+      "input": "m n\nm n m n\nn m n m\nm n m d\n",
+      "output": "11"
+    },
+    {
+      "name": "random_k8_3",
+      "input": "A B\ns B A B\nB A B A\nA s s s\n",
+      "output": "8"
+    },
+    {
+      "name": "random_k9_5",
+      "input": "A B\nA B A B\nB r B r\nA r A B\n",
+      "output": "8"
+    },
+    {
+      "name": "random_k6_7",
+      "input": "A B\nm B m B\nB m B m\nA m A m\n",
+      "output": "2"
+    },
+    {
+      "name": "random_k10_2",
+      "input": "q z\nv z q z\nz q z q\nv z q z\n",
+      "output": "9"
+    },
+    {
+      "name": "random_k4_5",
+      "input": "A B\nA o A o\nB o B o\no o o o\n",
+      "output": "2"
+    },
+    {
+      "name": "random_k4_6",
+      "input": "m n\nm e e n\ne m e m\ne e e e\n",
+      "output": "2"
+    },
+    {
+      "name": "random_k2_4",
+      "input": "A B\nw w w w\nw w w A\nw w w B\n",
+      "output": "2"
+    },
+    {
+      "name": "random_k4_7",
+      "input": "m n\nv n v n\nn v n v\nv v v v\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k9_6",
+      "input": "a a\na a z a\nz a z a\na a a a\n",
+      "output": "8"
+    },
+    {
+      "name": "random_k9_7",
+      "input": "a b\na b a b\nb a b v\nv v a b\n",
+      "output": "9"
+    },
+    {
+      "name": "random_k8_4",
+      "input": "m n\nm c m n\nn c n m\nc c m n\n",
+      "output": "6"
+    },
+    {
+      "name": "random_k7_1",
+      "input": "m n\nl n m l\nl m l m\nm n l n\n",
+      "output": "5"
+    },
+    {
+      "name": "random_k6_8",
+      "input": "q z\nq z q w\nz w w w\nq w q w\n",
+      "output": "5"
+    },
+    {
+      "name": "random_k7_2",
+      "input": "a a\na a a v\na a v a\nv v a v\n",
+      "output": "5"
+    },
+    {
+      "name": "random_k6_9",
+      "input": "a b\na b d d\nb d d a\na d a d\n",
+      "output": "4"
+    },
+    {
+      "name": "random_k3_6",
+      "input": "A B\nx x x x\nx x x x\nx B A B\n",
+      "output": "3"
+    },
+    {
+      "name": "random_k3_7",
+      "input": "m n\np p p n\nn p p p\np n p p\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k10_3",
+      "input": "q z\nq z q i\nz i z q\nq z q z\n",
+      "output": "10"
+    },
+    {
+      "name": "random_k6_10",
+      "input": "q z\nq o o o\no q z q\no z q o\n",
+      "output": "5"
+    },
+    {
+      "name": "random_k4_8",
+      "input": "q z\nr r q r\nr r r r\nq r q z\n",
+      "output": "2"
+    },
+    {
+      "name": "random_k4_9",
+      "input": "A B\ns s A s\nB s s s\ns B A s\n",
+      "output": "2"
+    },
+    {
+      "name": "random_k1_5",
+      "input": "m n\nt t t t\nt t t t\nm t t t\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k4_10",
+      "input": "a a\nY a a Y\nY Y Y Y\nY a Y a\n",
+      "output": "2"
+    },
+    {
+      "name": "random_k5_7",
+      "input": "A B\nw B w B\nB A B w\nw w w w\n",
+      "output": "3"
+    },
+    {
+      "name": "random_k5_8",
+      "input": "a b\na r a b\nb r r r\nr b r r\n",
+      "output": "2"
+    },
+    {
+      "name": "random_k8_5",
+      "input": "a b\nf b f b\nf a b a\nf b a b\n",
+      "output": "7"
+    },
+    {
+      "name": "random_k7_3",
+      "input": "a b\na d d b\nb d b a\na b d d\n",
+      "output": "4"
+    },
+    {
+      "name": "random_k2_5",
+      "input": "A B\nj B j j\nj j B j\nj j j j\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k11_6",
+      "input": "m n\nm z m n\nn m n m\nm n m n\n",
+      "output": "11"
+    },
+    {
+      "name": "random_k0_3",
+      "input": "A B\no o o o\no o o o\no o o o\n",
+      "output": "0"
+    },
+    {
+      "name": "random_k9_8",
+      "input": "m n\nm n m n\nh m n m\nm h h n\n",
+      "output": "8"
+    },
+    {
+      "name": "random_k4_11",
+      "input": "a b\nf b a f\nb f f f\nf f f b\n",
+      "output": "2"
+    },
+    {
+      "name": "random_k1_6",
+      "input": "q z\nf f f z\nf f f f\nf f f f\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k6_11",
+      "input": "a b\na b j j\nj a b a\nj j j b\n",
+      "output": "6"
+    },
+    {
+      "name": "random_k12_2",
+      "input": "a a\na a a a\na a a a\na a a a\n",
+      "output": "12"
+    },
+    {
+      "name": "random_k1_7",
+      "input": "q z\nq s s s\ns s s s\ns s s s\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k1_8",
+      "input": "m n\nh h h h\nh h h h\nh h m h\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k3_8",
+      "input": "m n\nm r r n\nr r n r\nr r r r\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k8_6",
+      "input": "a b\na b c b\nc a b a\nc c a b\n",
+      "output": "8"
+    },
+    {
+      "name": "random_k8_7",
+      "input": "a b\nr b a b\nr a b a\na b r r\n",
+      "output": "8"
+    },
+    {
+      "name": "random_k4_12",
+      "input": "q z\nq X q z\nX X z X\nX X X X\n",
+      "output": "3"
+    },
+    {
+      "name": "random_k10_4",
+      "input": "m n\nm n m i\nn m i m\nm n m n\n",
+      "output": "9"
+    },
+    {
+      "name": "random_k8_8",
+      "input": "A B\ni B A i\ni A B A\nA B i B\n",
+      "output": "8"
+    },
+    {
+      "name": "random_k6_12",
+      "input": "q z\nq u u z\nz q u q\nu u u z\n",
+      "output": "3"
+    },
+    {
+      "name": "random_k1_9",
+      "input": "a b\nd d d d\nd d d d\nd d d b\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k11_7",
+      "input": "a a\nj a a a\na a a a\na a a a\n",
+      "output": "11"
+    },
+    {
+      "name": "random_k7_4",
+      "input": "q z\nq z q u\nu q u q\nq u q u\n",
+      "output": "3"
+    },
+    {
+      "name": "random_k6_13",
+      "input": "A B\nh h h B\nh A h A\nh B A B\n",
+      "output": "6"
+    },
+    {
+      "name": "random_k1_10",
+      "input": "a a\nx a x x\nx x x x\nx x x x\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k4_13",
+      "input": "A B\nw w w w\nw A w A\nw B A w\n",
+      "output": "3"
+    },
+    {
+      "name": "random_k7_5",
+      "input": "m n\nm n d d\nd d n m\nm d m n\n",
+      "output": "4"
+    },
+    {
+      "name": "random_k6_14",
+      "input": "a a\na a g g\na g a a\ng a g g\n",
+      "output": "3"
+    },
+    {
+      "name": "random_k10_5",
+      "input": "q z\nn z n z\nz q z q\nq z q z\n",
+      "output": "9"
+    },
+    {
+      "name": "random_k2_6",
+      "input": "a a\nZ Z Z Z\nZ Z a Z\nZ Z a Z\n",
+      "output": "2"
+    },
+    {
+      "name": "random_k2_7",
+      "input": "q z\ny y y y\nz y y y\ny y q y\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k11_8",
+      "input": "a b\nu b a b\nb a b a\na b a b\n",
+      "output": "11"
+    },
+    {
+      "name": "random_k0_4",
+      "input": "m n\nl l l l\nl l l l\nl l l l\n",
+      "output": "0"
+    },
+    {
+      "name": "random_k6_15",
+      "input": "q z\ns s q s\nz s s s\nq z q z\n",
+      "output": "5"
+    },
+    {
+      "name": "random_k3_9",
+      "input": "a b\na k k k\nk k k k\nk b a k\n",
+      "output": "2"
+    },
+    {
+      "name": "random_k5_9",
+      "input": "m n\nd d d d\nd d d m\nm n m n\n",
+      "output": "5"
+    },
+    {
+      "name": "random_k7_6",
+      "input": "A B\ns B s s\nB A B s\nA B s B\n",
+      "output": "5"
+    },
+    {
+      "name": "random_k10_6",
+      "input": "q z\nq z q z\nz q f f\nq z q z\n",
+      "output": "9"
+    },
+    {
+      "name": "random_k10_7",
+      "input": "a b\na b a b\nb a h a\na b a h\n",
+      "output": "9"
+    },
+    {
+      "name": "random_k1_11",
+      "input": "q z\np p p p\np p p q\np p p p\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k2_8",
+      "input": "q z\no o q o\no o o o\no z o o\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k7_7",
+      "input": "a a\nk a a a\na k k a\na a k k\n",
+      "output": "4"
+    },
+    {
+      "name": "random_k7_8",
+      "input": "A B\nA g A B\nB A g A\ng B g g\n",
+      "output": "4"
+    },
+    {
+      "name": "random_k11_9",
+      "input": "m n\np n m n\nn m n m\nm n m n\n",
+      "output": "11"
+    },
+    {
+      "name": "random_k7_9",
+      "input": "a b\nj j j b\nb j b a\na j a b\n",
+      "output": "5"
+    },
+    {
+      "name": "random_k10_8",
+      "input": "A B\nA l A B\nB A B A\nl B A B\n",
+      "output": "10"
+    },
+    {
+      "name": "random_k12_3",
+      "input": "A B\nA B A B\nB A B A\nA B A B\n",
+      "output": "12"
+    },
+    {
+      "name": "random_k6_16",
+      "input": "a b\nX b a X\nX a b X\nX b a X\n",
+      "output": "6"
+    },
+    {
+      "name": "random_k6_17",
+      "input": "a b\na j a b\nj j j a\nj j a b\n",
+      "output": "5"
+    },
+    {
+      "name": "random_k9_9",
+      "input": "q z\nq z c z\nz q c c\nq z q z\n",
+      "output": "8"
+    },
+    {
+      "name": "random_k9_10",
+      "input": "m n\nk k k n\nn m n m\nm n m n\n",
+      "output": "9"
+    },
+    {
+      "name": "random_k8_9",
+      "input": "a b\ne e a e\nb e b a\na b a b\n",
+      "output": "8"
+    },
+    {
+      "name": "random_k7_10",
+      "input": "q z\nr z r z\nz r z q\nr z q r\n",
+      "output": "5"
+    },
+    {
+      "name": "random_k3_10",
+      "input": "A B\nZ Z Z Z\nB Z B Z\nA Z Z Z\n",
+      "output": "2"
+    },
+    {
+      "name": "random_k10_9",
+      "input": "A B\nA B A B\no A B o\nA B A B\n",
+      "output": "8"
+    },
+    {
+      "name": "random_k2_9",
+      "input": "a a\ns s s a\ns s a s\ns s s s\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k10_10",
+      "input": "m n\nm n k k\nn m n m\nm n m n\n",
+      "output": "10"
+    },
+    {
+      "name": "random_k3_11",
+      "input": "A B\np p p p\np A p A\nA p p p\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k8_10",
+      "input": "q z\nq z q z\nZ q Z q\nq Z Z z\n",
+      "output": "6"
+    },
+    {
+      "name": "random_k8_11",
+      "input": "m n\nX n m n\nX X X m\nm n m n\n",
+      "output": "8"
+    },
+    {
+      "name": "random_k4_14",
+      "input": "a a\nc a c a\nc c c c\na a c c\n",
+      "output": "2"
+    },
+    {
+      "name": "random_k11_10",
+      "input": "m n\nm n m n\nn m Z m\nm n m n\n",
+      "output": "11"
+    },
+    {
+      "name": "random_k4_15",
+      "input": "a a\na u u u\na u u u\na u a u\n",
+      "output": "3"
+    },
+    {
+      "name": "random_k8_12",
+      "input": "m n\nz z m n\nn m z z\nm n m n\n",
+      "output": "6"
+    },
+    {
+      "name": "random_k8_13",
+      "input": "q z\nq y q y\ny y z q\nq z q z\n",
+      "output": "7"
+    },
+    {
+      "name": "random_k3_12",
+      "input": "A B\nw w w w\nB w B w\nw w w B\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k3_13",
+      "input": "q z\nq n n n\nn n n q\nn n n z\n",
+      "output": "2"
+    },
+    {
+      "name": "random_k3_14",
+      "input": "m n\nw w w n\nn w n w\nw w w w\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k2_10",
+      "input": "m n\ns s s n\ns m s s\ns s s s\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k11_11",
+      "input": "q z\nq z h z\nz q z q\nq z q z\n",
+      "output": "11"
+    },
+    {
+      "name": "random_k3_15",
+      "input": "q z\nq u u z\nu u u u\nq u u u\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k2_11",
+      "input": "q z\nr r q r\nr r r r\nq r r r\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k5_10",
+      "input": "A B\no B o o\no A B A\no o o B\n",
+      "output": "5"
+    },
+    {
+      "name": "random_k11_12",
+      "input": "A B\nA B A B\nB A B v\nA B A B\n",
+      "output": "11"
+    },
+    {
+      "name": "random_k12_4",
+      "input": "q z\nq z q z\nz q z q\nq z q z\n",
+      "output": "12"
+    },
+    {
+      "name": "random_k4_16",
+      "input": "A B\ny y A y\ny y B y\nA y y B\n",
+      "output": "2"
+    },
+    {
+      "name": "random_k1_12",
+      "input": "A B\nn n n n\nB n n n\nn n n n\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k1_13",
+      "input": "q z\nr r r r\nr r r r\nr r q r\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k2_12",
+      "input": "A B\nA j j j\nj j j j\nj j A j\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k10_11",
+      "input": "a a\na a u a\na a a a\na a a u\n",
+      "output": "10"
+    },
+    {
+      "name": "random_k4_17",
+      "input": "a a\na u a u\nu u u u\nu a u a\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k3_16",
+      "input": "A B\nd d A d\nd A d d\nd d d B\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k2_13",
+      "input": "q z\nq c c z\nc c c c\nc c c c\n",
+      "output": "1"
+    },
+    {
+      "name": "random_k9_11",
+      "input": "A B\ns B A B\nB s B A\nA B A s\n",
+      "output": "9"
+    }
+  ]
+}

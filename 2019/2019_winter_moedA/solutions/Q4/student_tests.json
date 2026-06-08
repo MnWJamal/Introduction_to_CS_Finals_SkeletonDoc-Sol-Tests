@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "visible_a",
+      "input": "A\n",
+      "output": "A\n"
+    },
+    {
+      "name": "visible_ba",
+      "input": "BA\n",
+      "output": "A\nAB\nB\nBA\n"
+    },
+    {
+      "name": "visible_saab",
+      "input": "SAAB\n",
+      "output": "A\nAA\nAAB\nAABS\nAAS\nAASB\nAB\nABA\nABAS\nABS\nABSA\nAS\nASA\nASAB\nASB\nASBA\nB\nBA\nBAA\nBAAS\nBAS\nBASA\nBS\nBSA\nBSAA\nS\nSA\nSAA\nSAAB\nSAB\nSABA\nSB\nSBA\nSBAA\n"
+    }
+  ]
+}
