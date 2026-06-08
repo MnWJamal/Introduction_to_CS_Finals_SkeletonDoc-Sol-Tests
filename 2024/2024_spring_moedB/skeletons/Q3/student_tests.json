@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "exam_small_unique_sorted",
+      "input": "3\n1 10 8\n10\n",
+      "output": "1 8"
+    },
+    {
+      "name": "exam_duplicates_and_unordered",
+      "input": "8\n2 35 8 10 2 15 5 3\n10\n",
+      "output": "2 3 5 8"
+    },
+    {
+      "name": "extra_no_values_less_than_k",
+      "input": "4\n5 7 9 12\n5\n",
+      "output": ""
+    }
+  ]
+}

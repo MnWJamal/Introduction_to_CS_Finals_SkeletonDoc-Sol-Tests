@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "exam_example_missing_four",
+      "input": "6\n1 2 8 16 32 64\n",
+      "output": "4.00"
+    },
+    {
+      "name": "exam_example_n2_missing_nine",
+      "input": "2\n3 27\n",
+      "output": "9.00"
+    },
+    {
+      "name": "public_missing_after_first",
+      "input": "4\n2 50 250 1250\n",
+      "output": "10.00"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "exam_second_contained",
+      "input": "4\n70 20 50 100\n2\n70 50\n",
+      "output": "2"
+    },
+    {
+      "name": "exam_first_contained_duplicates",
+      "input": "5\n10 10 10 10 30\n6\n10 10 30 10 20 10\n",
+      "output": "1"
+    },
+    {
+      "name": "exam_not_contained",
+      "input": "4\n70 20 50 100\n2\n70 10\n",
+      "output": "0"
+    },
+    {
+      "name": "exam_empty_second",
+      "input": "4\n70 20 50 100\n0\n",
+      "output": "2"
+    }
+  ]
+}

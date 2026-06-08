@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "exam_example_elf_leafish_true",
+      "input": "3 7\nelf\nleafish\n",
+      "output": "true"
+    },
+    {
+      "name": "exam_example_hello_world_false",
+      "input": "5 5\nhello\nworld\n",
+      "output": "false"
+    },
+    {
+      "name": "exam_example_aab_ab_false",
+      "input": "3 2\naab\nab\n",
+      "output": "false"
+    },
+    {
+      "name": "exam_example_aab_abac_true",
+      "input": "3 4\naab\nabac\n",
+      "output": "true"
+    }
+  ]
+}

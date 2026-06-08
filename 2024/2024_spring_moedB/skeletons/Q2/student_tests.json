@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "exam_egg_closest_to_cat",
+      "input": "5\negg date apple banana carrot\ncat\n",
+      "output": "0"
+    },
+    {
+      "name": "extra_single_exact",
+      "input": "1\nabc\nabc\n",
+      "output": "0"
+    },
+    {
+      "name": "extra_last_is_closest",
+      "input": "4\na abc zzzz abcdef\nyyyy\n",
+      "output": "2"
+    }
+  ]
+}

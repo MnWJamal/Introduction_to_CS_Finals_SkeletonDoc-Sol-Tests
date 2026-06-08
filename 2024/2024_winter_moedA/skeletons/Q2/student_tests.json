@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "exam_example_train",
+      "input": "4 2\nZBCDE\nAZBY\nDEXFG\nFGCAZ\n",
+      "output": "ZBCDEXFGCAZBY"
+    },
+    {
+      "name": "public_two_strings",
+      "input": "2 2\nabHEL\nELx\n",
+      "output": "abHELx"
+    },
+    {
+      "name": "public_three_strings_k1",
+      "input": "3 1\nab\nbc\ncd\n",
+      "output": "abcd"
+    }
+  ]
+}

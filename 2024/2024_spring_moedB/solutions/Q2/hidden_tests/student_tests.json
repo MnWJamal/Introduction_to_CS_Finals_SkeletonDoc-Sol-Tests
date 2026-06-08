@@ -1,0 +1,1104 @@
+{
+  "tests": [
+    {
+      "name": "edge_n1_smaller_target",
+      "input": "1\nm\na\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_n1_larger_target",
+      "input": "1\na\nzz\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_n2_first_closest",
+      "input": "2\na zzzz\nb\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_n2_second_closest",
+      "input": "2\na zzzz\nyyyy\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_exact_middle",
+      "input": "5\na ab abc abcd abcde\nabc\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_first_closest_low",
+      "input": "4\naa bbb ccccc zzzzzz\na\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_last_closest_high",
+      "input": "4\naa bbb ccccc zzzzzz\nzzzzz\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_var_lengths_target_short",
+      "input": "5\nz az zzz zzzz zzzzz\nb\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_var_lengths_target_long",
+      "input": "5\nz az zzz zzzz zzzzz\nzzzzzz\n",
+      "output": "4"
+    },
+    {
+      "name": "edge_same_length_sorted_by_strength",
+      "input": "5\nabc abd abe abf abg\naba\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_long_low_vs_short_high",
+      "input": "4\naaaaaa mmmmmm zzzzzz yyyyyyy\nnnnnnn\n",
+      "output": "1"
+    },
+    {
+      "name": "random_size_n1",
+      "input": "1\nyub\naa\n",
+      "output": "0"
+    },
+    {
+      "name": "random_size_n2",
+      "input": "2\nyccf zojlmfhhqmhn\nszlqlyni\n",
+      "output": "1"
+    },
+    {
+      "name": "random_size_n3",
+      "input": "3\nxp qxism yqfxpbzgm\nnpkgt\n",
+      "output": "1"
+    },
+    {
+      "name": "random_size_n4",
+      "input": "4\nfr djmtb lvlmwg vnuckcpupq\nnhx\n",
+      "output": "0"
+    },
+    {
+      "name": "random_size_n5",
+      "input": "5\nc t qe pwgiivbtu apmfnbsxdib\nmdiaejiqdc\n",
+      "output": "3"
+    },
+    {
+      "name": "random_size_n6",
+      "input": "6\nq hhm pxrvvu wivgultsw tazsmtinon byvujrqdiaku\nwpfqvboljeas\n",
+      "output": "5"
+    },
+    {
+      "name": "random_size_n7",
+      "input": "7\nn oyd obhs nymkzfqxzl wtfjqufftscj ozprlpazpxqp mtezzvmmypss\nnjeyoygc\n",
+      "output": "3"
+    },
+    {
+      "name": "random_size_n8",
+      "input": "8\nea pl ozje iufwrdq vuhpars ivircux htgblccm cplljpavbhz\nnaswnealk\n",
+      "output": "6"
+    },
+    {
+      "name": "random_size_n9",
+      "input": "9\nig mjgg ldth qgax yoph cyvrpjg hspbnkwo ziihwhqkpz upcgzxwpvsp\nefajjpbxsi\n",
+      "output": "7"
+    },
+    {
+      "name": "random_size_n10",
+      "input": "10\nl itnnb kbrtp akxpttl svordpz qhlsqjjjz qvpwyqxaq sprfwcuuhz crqykodaztki wltwhmwxsmwx\ntzunx\n",
+      "output": "2"
+    },
+    {
+      "name": "random_size_n12",
+      "input": "12\nm p ka wriodf itnczi wpwskbn xvvoncn wpfcxsrx yalaxqper iaaagattmkz qebdcjgcseck sekbbsfousgb\nyc\n",
+      "output": "2"
+    },
+    {
+      "name": "random_size_n15",
+      "input": "15\ntz ech abu lto vmtz eoblcow gilggvuv fxzwmulsw pdamnvosnn leilbibpevf kmgbydtdfob qsxfgsjgaar tttpqfrrpil emzdgspzutmh azteypjwxgjy\nitaktu\n",
+      "output": "5"
+    },
+    {
+      "name": "random_size_n20",
+      "input": "20\nc d q acv lyw ufjd gouae tgiksa ulfcmld hrwfhiu lnvmiyy tzavvyu ixmirdxc exubshmm avzryhmr wvsxtsyw zistocmbse ezgoqifjhbf acziauunwxth iwojulnhjjyy\nzzdoxai\n",
+      "output": "9"
+    },
+    {
+      "name": "random_size_n25",
+      "input": "25\nu lb nq mbd ghp tta vds fzv yop dhud dfkhq vzuyt omimhb cqpuvh ieicorx vfnoguuu votodvzer lgqvrgcdsi kbiydemvcy vhselcfhxp isubupwzjm ijkifpavuig oiwfjfqpywb mjkmxpwsdsq tkuynokrqmn\nudajbhpto\n",
+      "output": "16"
+    },
+    {
+      "name": "random_size_n30",
+      "input": "30\nc bf hb mk dv yg ww len zxkb diwkt oybwq cmsail rybhku farnenw jcmqyxy qykjzzu sznmlazr wyzqneog ssqjrqagi vwqnzlcyl ieduwbhstv yqyxjauefb ethcfkermtg pgpihilsssr zcnrrcowoat slfstybaqyn rztcauzupvd cddhgymkcnhy jnfyuvynkzwg ztsewzgelxrz\nagvlborya\n",
+      "output": "18"
+    },
+    {
+      "name": "random_q2_27",
+      "input": "15\nay bqe vxp gaav fggp shgn xoxe bljsn lcygit uqhdtt mrwujlp rtqgwaist ztsfkpmnvo qvlwgpjljxt mxjtajcsbttu\nnfjvl\n",
+      "output": "7"
+    },
+    {
+      "name": "random_q2_28",
+      "input": "20\np gq iw nxz rerj xshr agygl onlqu uqpjq njzwo jcpkeh biupgbe tfzigqb hyturra fuojbryh eescableq hwpagzdarn hjfvthsabrk ershbpvtxxj zrauzwgyeyii\nngkvinfaj\n",
+      "output": "15"
+    },
+    {
+      "name": "random_q2_29",
+      "input": "5\nek zqiizceabg tghwtckxdc pvgopbtixop bnmlvjdmeyvg\ni\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_30",
+      "input": "23\nc p xq eedmu rbjmooi uirnniy mgyahnqf ztyapocb krjqdkcsoo numziecspw kcurzywobi bgwpqxbszv uiumtyjszs yvhvszgqxw gamdfcaybzt ivcwabjwrfa qdcqcespdsn qdetmxkurzq wbtgugalfvmu tbqcxylfplds tncfyxdyjrzt bvzydymphryl zaymvyvpxvkc\nynytpeytz\n",
+      "output": "8"
+    },
+    {
+      "name": "random_q2_31",
+      "input": "17\ne k ng vf ddj fxr tex bwz vxu aars cswc zczv beiph lmoex uvnydrgt eglowcgml msopzpwgy\nanfdskk\n",
+      "output": "14"
+    },
+    {
+      "name": "random_q2_32",
+      "input": "20\nc r y qp rq jmjzog dihreeeb vabhbzkg diaxzfle yadwhmccge cardajpirz enmpnybpeb lpgthptzrh ftixpapxwt tujxhlefjej yiqmxrfensa snbztfyhilz wxgngafgdboc wmqtbnkbdzpa szehgfhhmwoq\nlrkjbr\n",
+      "output": "5"
+    },
+    {
+      "name": "random_q2_33",
+      "input": "26\na x cs qu cob fog jqi wmw aeqo hlbnw whbgsq qusmuo lkzqkiz lsovuyg urwvttz vmmlbruh vxazrrih jylbudued xugypsyps bhzdfdinqj livpybtgmj pefyjtnbrjb jvvlkojakki tpqvuirbtol pwtbtizzzcb mrmtupjckgrz\ngroybixirl\n",
+      "output": "20"
+    },
+    {
+      "name": "random_q2_34",
+      "input": "13\nf oc ug had alq oew ywyb utugpb lznqqjc stlobayk zwbrzwsx ezkdiqesz shqdcarymdz\npmggi\n",
+      "output": "6"
+    },
+    {
+      "name": "random_q2_35",
+      "input": "25\nm hf pqn zly qjnh zghp zdjv hyyw akrmb mkdpx earbka sxzwws defdfrb faoilgu syvxnhr vbwodtgp gkballyer kjayaisth howcwdooz exspqaugbc xlwnuygnog uroumliavxr nyaqhzwlwtn jwpvjxlzxzd krkzzckpevql\nhddpipf\n",
+      "output": "13"
+    },
+    {
+      "name": "random_q2_36",
+      "input": "30\na ch zl tu bjq iwf dvn sgu togm yubr tagxu ebajxr hebgzo mdlaxw ltgyzd efexsji dnplkczc vrpbhnzgr ehmzpnulr bfymnbgllb kjcyxevaby jrtqqxjwag uklhxvesoy vkvkllkqgan vjcmdzwguth tmursaqbtiy hadhewkatfjc dtgvftsdeaaj mzindcresihh ptcvvnjiqipq\neekdtuylz\n",
+      "output": "17"
+    },
+    {
+      "name": "random_q2_37",
+      "input": "30\np u z zn gwc ciok iwcg znmk zwyu coccd dfymkm ckjhrx gunitt qdcaedd kvcktbm ytabjpl uzbydnt mtzvoxra vkafdjkel nqmagayad hpcmlfprp euyjmjczh fnkylkhus smctkwzqj mhirenfnxu jjxehsypay lyqaquxhof cpqxhcrpiuh gqufyfqppxp cqjmxclhygrq\nean\n",
+      "output": "4"
+    },
+    {
+      "name": "random_q2_38",
+      "input": "13\na b l x ru leu cjms rkemlr verpcmo eslapifj kqjkqhmxu hdwgzppltf hzumgtzkuww\nkglbrafd\n",
+      "output": "9"
+    },
+    {
+      "name": "random_q2_39",
+      "input": "30\nh n u ru knhl fkfx ronl vtrg avux wzzb safjg acaqz rrvns djfsxb ianlfz epxoaj zizgkt ybwwfz hkywxq ljjuojiq lprrdomi dmvfuomyj lzkxwbvxl ujwalkhynj qxooqrhfvi azunugcxoz vmqlqqyqsy gowiscuijcc dxapdylywnn ebfbcndlhycx\nb\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_40",
+      "input": "22\ns bp qj oin mez sun pzs cmsd xtti zyya kuejg cetpl uxnyng vviobxv orlesmdk btzwkhysk xyosmunueb oqaxyekwxq absdjiudzak esfihvgvcsb autqyupsjog sreyiemkzndm\nnkeo\n",
+      "output": "7"
+    },
+    {
+      "name": "random_q2_41",
+      "input": "22\nh qf rf ws vbg igy yil tpl fxpe epjv siss jyaxd ykzfc wzoodd omanlij jeqsmiq rdwvqus xihbgohjdf nrwoyjcepu vsmibmxgqzh rlijlqyoyrdh qnlceqwsyvlw\nrctpdnstc\n",
+      "output": "17"
+    },
+    {
+      "name": "random_q2_42",
+      "input": "4\nkwfgq giacseeltk oddjayvxnz xflbazzbymuu\nwbgzaf\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_43",
+      "input": "1\nzyyce\ndqtcjwxgf\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_44",
+      "input": "30\ng q cd jb vf bzej rhmi fwdhkb vnkjaw znpbjx sjfchjh fiteuvo vzbffyl jnxzuck jdtdobsr yviappgp qaswmkpw kuuhgbuju iimedmtkhd lamnamdohp ewzkrghfgb uvajurwdaa uidzwrlnak tkmuvvhwww pjagkqcpskq ggsvkmmnqri syohspxfroz isqwuqyrzqd jdkvzbocijjy haluaubvvzlq\navzabezcp\n",
+      "output": "17"
+    },
+    {
+      "name": "random_q2_45",
+      "input": "12\ny bat csss zsycp xakphv aabwmhw hsqafpek qhilmtrl dokkcxwyy gboznymqjx vwpabwtiaqza yveyxidnlvqs\noxpi\n",
+      "output": "2"
+    },
+    {
+      "name": "random_q2_46",
+      "input": "7\nnhi wraiy oexyhls vbpomvoc ewtrocduj rnyjmwqoz vxqfswsyh\nbdm\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_47",
+      "input": "7\nl oc iyge qfydwte sslotbnba ruaeamlmwdi skyrperqbkrx\nrsnkapqtqfr\n",
+      "output": "5"
+    },
+    {
+      "name": "random_q2_48",
+      "input": "32\nz rq oer dtaz sufy vqur qakzk svtxd xjrzq tzmbsc matonu rdsmky qhqyvy nqglanf ctnfggu vogdphm rwnekas okngqvh emuwrtr xusxtqr agbjorte fdvzdkeu lhaaikytd motlidiip qkgnlasyo ojjzxnucz riikqgjhbr isebpcxnlf steiwdqlcd bikxnfguio ojkbxumkwv bhdqgvmuewyh\ngnh\n",
+      "output": "2"
+    },
+    {
+      "name": "random_q2_49",
+      "input": "17\nd jmi rox wjkf nyivn hqqtz aoptlm mnyjrk itlypsd vfthpntgr rwgvvvtkqu argvdqvotko yxcstylukzv pppcmknpkdpz xhwfveqpnfyb ypercsonkltk rxotztdphnmm\nf\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_50",
+      "input": "5\nllor mpfwt qpqyhlrswtae cqtrztzvlcpu hyuxnotiszhx\nmynbwq\n",
+      "output": "1"
+    },
+    {
+      "name": "random_q2_51",
+      "input": "7\nw tkj qhumq jvgkaj noerxwp qtjopuz vtonouukycgx\nwqxnzylcwl\n",
+      "output": "6"
+    },
+    {
+      "name": "random_q2_52",
+      "input": "29\nr wv uz uhx ahgc ffbl ygbi bxiq socv kalrd cimmk smeid vhxtgm ydmyor zsvtyr flofnxi hmwooue ukemxrya mnamfiqcd nhbetdjhz knhxspfvz fheuywuvz ksdzhjfeiw ioqfhkbtzj zqcduyqbza abheylqchcm lgmxrldbtoe stuuhdexcqb evsrrvxbresa\ncz\n",
+      "output": "1"
+    },
+    {
+      "name": "random_q2_53",
+      "input": "14\nn dm dn ep bzd gaau cidv zsrs pqyif iyalisd btxtfazma tectrsiaxl mjjwqiwqfi tjccjwaqysa\nfidxfujr\n",
+      "output": "10"
+    },
+    {
+      "name": "random_q2_54",
+      "input": "17\nh s u z bmgz ekxeq ihjuaf deoqnw pfyhjn queldv hfkuyhc qbvlsnb nlnijiesw pzxdqjjsi dephdkzgfcb uwaauwpjxug vlnimpvwdntw\nqlfkcnveil\n",
+      "output": "13"
+    },
+    {
+      "name": "random_q2_55",
+      "input": "31\nl q u x dm nt ktc fdy cpq rin ddfn guvz aulif hanwi txmpq yxbwu wcindj fzjaxf hwgjxj dfrzlza cdmoxdjm njqzuhnf nwvxbmyb sildyjqht zbshnzlqm dicbhgzgty kfeebzsbqou gryjvlrymop rkzckhoekcvg rvkkffoawswa lbvpaqwjuawz\ndyxblvjp\n",
+      "output": "21"
+    },
+    {
+      "name": "random_q2_56",
+      "input": "30\nb m q sv oer xzh dpdz mkfu qnin rnegv qsosf piwpv anemhl feczao exnjnp gtydru hjxacuc dvkdjbgs orexbnzj dypdyjkfh zvpihqbgv dzazwtdqx ojsmxspto oglhbiaigz ixglrshnqa fvgnkbovzs rrrctukcasu wpjzuczuvbo bxjvkoxwvmfr oxytwdxiezco\nvgkbf\n",
+      "output": "9"
+    },
+    {
+      "name": "random_q2_57",
+      "input": "5\nd ufp setnghgy sxavhbpyzu vcljyrngubd\npuxdsivv\n",
+      "output": "2"
+    },
+    {
+      "name": "random_q2_58",
+      "input": "31\nc f i t x y xa plgql qbtew gapzt usrwyc kugdkib rhqihdf izvatcja roqmcknr hxnylune dpikyampq jrhxhdyuw lmnrxvyuf gwzosvssf azkmxiaykd ofotkundta gzmdlpoxcj mcjkkdfdwgz elzltgsxudi zfnuyltnycc bothhgvrchme mtpjadleumbz zbclywieatwp fbynhslyumjq rrkxgwmkcqiw\nneeocjt\n",
+      "output": "12"
+    },
+    {
+      "name": "random_q2_59",
+      "input": "24\ni o bf eo az dxg ddke ncnm rrqj ktvl jocac olgjm mujhq tiabwg tibgwk gzsrop fxrsqbl mpkrejz eooqxhq lmvwmut jycwylomv dgbhsynqdv jtdfveeswz ykqsdlttlwls\nuwciykljkvs\n",
+      "output": "22"
+    },
+    {
+      "name": "random_q2_60",
+      "input": "32\nv x kr yu ribn csui czhz pwfv rpuu hhioe ykfsc bxvpo aaqhzu snbzglq sgmwsgz rrnbncjc qflfrncz lnmayfnwy gxizqnxgn txwtzajxa lmfvbkknvj lxqtcfbuil tojyazemri wcxhjqezmq ynbcmvsuwx fdosvjxenle mcqqqmhngor jkglevvmngt vkbldrtgswp omzypinazlz tzorouoogwm wlwspkkynjz\nhooxkn\n",
+      "output": "12"
+    },
+    {
+      "name": "random_q2_61",
+      "input": "13\nm n nfj aprq golx oietkuqd ucupwycd chkozsivx neasaxyfzg gmpnbzvrrt fzpyrgsxnw wukwfepamfu dpnvdoukcsih\nimmohko\n",
+      "output": "5"
+    },
+    {
+      "name": "random_q2_62",
+      "input": "3\nlkhdqr icwfxzgn lpuwfvbpiviq\nwok\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_63",
+      "input": "11\nm ix ijm wypmjh qypxeq idtaqgaq eoofhbfu nsyptine ruhbktizqc qiukshywdxh guuuaxneakhx\nvmkzqmala\n",
+      "output": "7"
+    },
+    {
+      "name": "random_q2_64",
+      "input": "4\ng giefcic omgwtod ezzwutdsr\nblkhaypuhbjd\n",
+      "output": "3"
+    },
+    {
+      "name": "random_q2_65",
+      "input": "24\nb q t kc ret uvx bhfb sovi mszqb tnftz vuufie wrmcuo cdehgoh wghkdec vagniuc claivzddy geghimjtki qupawdejvt jsxyyhqhwp sklrgaaqhwc iynczgprmzs xzqhfiowztf duuqivfjwimn ivlpunvowwee\nplazlfyxhh\n",
+      "output": "17"
+    },
+    {
+      "name": "random_q2_66",
+      "input": "16\na tp ent fhmt aicag wesrc jxyty giwqfl vujufc hqtmtr rjiojaa wplvqrumx ybgelsdjdh hzogtsejda amzivswfrjsw kiwgxmwrfkwz\nbqmtgnq\n",
+      "output": "10"
+    },
+    {
+      "name": "random_q2_67",
+      "input": "7\nofju xwgfosa ywjbneue pzifknvv khhpvlrxb uwfbemhdwpf osotgtqjvifx\nuzel\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_68",
+      "input": "18\nh p hg mc im hy uhb ppdc binkg luime fkxon wevto lzdcoj qhupqaikh lnnkucjpyc dzcnemkrur jpjbrnqzpay rakdhogsvhyi\nlfxiy\n",
+      "output": "10"
+    },
+    {
+      "name": "random_q2_69",
+      "input": "30\na d w fz aie gaw mtu sizb aywj fjnlc terui gcikac bakjtd ndenjtc epwrdwc leyuxaf ofmjdhcs awjqcgfy qczukuke ksganeliu mvvbgcpubb lbyppjntke pfmulzqkos zvywpgzqaf cjkdciizhbg aredeuumpas epgljzczbbq cnzwwwhjwab nrdyhywdriga ozbfvgwsumvx\nvdfkkuvqdx\n",
+      "output": "21"
+    },
+    {
+      "name": "random_q2_70",
+      "input": "15\nf n kl dz jiq afhrd hplgy alpyr jebtrz xsmajo igovrts crxbftqaln ukkizegafoh fupstecxgqm oksvcanjxber\nyhtnkyj\n",
+      "output": "10"
+    },
+    {
+      "name": "random_q2_71",
+      "input": "11\nqs yic fclcr pgvkt aojyqag epwoqaecr rqsdmhhoo esvebtpxn hqzqswuvpx aqpyaeifzml sllmwzoborh\nbryhgcokzqpk\n",
+      "output": "10"
+    },
+    {
+      "name": "random_q2_72",
+      "input": "14\nv pp tea ipm acpp dvtb juein domwt htybbn rusrra rdqgsqc oltwmkoayia bkvbqfiyyqj ijegtakfjmbw\nloddzoruo\n",
+      "output": "11"
+    },
+    {
+      "name": "random_q2_73",
+      "input": "10\nw cm kre ldz zue ycecndr gnzkrif aqxdjsddnzx nkjamxrnyii dsoskjrcoyyt\ndosdykaifr\n",
+      "output": "7"
+    },
+    {
+      "name": "random_q2_74",
+      "input": "7\np ssy bqdltv fbtkzs nywtdsn qdcmkdkz jpsbnkhu\nlhmrscfwl\n",
+      "output": "6"
+    },
+    {
+      "name": "random_q2_75",
+      "input": "12\nf ua yg tev bkbl vmlnz fbrjnyv cmytsmo youypzlfvp mtcorrdehnv vvjggqpvhie hyxbtwkotut\nuyzkxpid\n",
+      "output": "7"
+    },
+    {
+      "name": "random_q2_76",
+      "input": "18\nn s li jt ls ov lslgk unsxe itcktrg spplkgt ttoxbqju ipwdjisdr quszkkdgu idcafygmom utnjonksvnh bhfbalwhaeaf jqepwuyhxiea iusnuvligycm\ni\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_77",
+      "input": "27\nf m ak at cqg ynr wmoj nccep gegwi rnrvq agocgf lsehyhq skzwrab ynpygts pcsgsjdo debppjxz vxnwkjmp tktxlsry kecknfmco iicnvfhcls cjbzxrgrlx uwvkzhlhkq lfxqvzpnln hvudyloruy qwuourjtjz qxomxgevoejr nofbuwsuwqzh\nzv\n",
+      "output": "3"
+    },
+    {
+      "name": "random_q2_78",
+      "input": "6\nkf nan iqh pznc gemuivwk rvbyaspwh\nupprboqt\n",
+      "output": "4"
+    },
+    {
+      "name": "random_q2_79",
+      "input": "32\nq x al ih qj xy brn zeh qagc ogli rqrw tzibm kjaihe phbvfi oubhfn yssgbh hiousm xfcgsfe tahejzm ugxdtdf wwjogbk rhshkthn jvcixnjnk zazigduzl cextwyumv csddoevhkl wqwqkncsrmb xcdsnpyqjxk dsbrmgasxrpa kxxjldrlbyfe ojjmzojlbvya gutkhxdojxsm\nfx\n",
+      "output": "4"
+    },
+    {
+      "name": "random_q2_80",
+      "input": "32\nr ai ni lgat fllp uglg plgu xamt jicbr gajow vamwo gqdrsef xzngoldc uyhnijfq xxqrexmn yrtmiwkx rylupvkz urrgvwux xxwdxnzs oxsfavzdf gpylwjved qjuiyirqb ynvrabhqeq eewucvjcnz zjauwgrnpt seuzodhlvci okikezkmslp whyscvoxefd oehdxfhajcdu ralfjxhfqkwz luqwoayegtwc kwxvhyogrdzv\npzfikm\n",
+      "output": "11"
+    },
+    {
+      "name": "random_q2_81",
+      "input": "23\np bl jxr yqv trcm safpf pshsq ppamdf fnhtmx mjgxov fssgzq dfqjnqe urvgsgo oowokpid yxvlmwxb kincvcksh lnricvsfm wljkxlpho pftraupum tlwehfakjm euocclkpkvcc jarfwzgikvxo slnglppqjzfs\niyj\n",
+      "output": "2"
+    },
+    {
+      "name": "random_q2_82",
+      "input": "30\nwa rx mdc enp ksp tjx gyzmq mpwox ylruq gbbqia lkdmkq wfjmne xgpjzh wvxvya kdcffgg bhukihd cbopdnu fgqjpin dmnfbsy bayqfmu lsptgld ailtexu gzjrxml zvnotow ckdprsoh pmpsiioa mmhqbsqr exwnykkrfm umyasaocycf bwpuivudreq\nll\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_83",
+      "input": "19\ns bx zh cfc mth pmv gvsmi hlqujl gptutb lvanmhd wmmhkjh ntepwik mawhteca ahiwbbtqg stlrnndqj zjguorfxo hyvnheikff vldmoevlqk gtwocsadwky\nni\n",
+      "output": "1"
+    },
+    {
+      "name": "random_q2_84",
+      "input": "26\nc x rx bml ypd laew odxa qxjd ouohfn hytcpj oqlmlp xfhevhf cdsrfey xqdsapn hffkbics ttaaocgw irtwtgptr sdtkhhntuf tgqoxmgwji vzihrhkuzr rindnhmsftd ppidrfzbifw klnuqmmubya fqgozkjgxbhi utrfxynqladc yplfflpfzhvo\nzsesyl\n",
+      "output": "10"
+    },
+    {
+      "name": "random_q2_85",
+      "input": "10\nh n z mqf uji lxo fejhi ardmhy hdofmislfs mjtweezkar\nomhc\n",
+      "output": "5"
+    },
+    {
+      "name": "random_q2_86",
+      "input": "18\nq u ff kq vj qxt doai llho trxi hmtia qkgmab dvwaqmcp woxximifk hketpkvybt zfteeuoheio lhbdmsprxav dhutyubhaeub xpapodmbcyjt\nwo\n",
+      "output": "4"
+    },
+    {
+      "name": "random_q2_87",
+      "input": "13\nu y fr inr xjm siyyzr cnyeteh ordlxaee xptltlbi hfgiwldkf tgtwdfpvt xpddbgmxdj ivhxzozsink\nxmacuyyxjkl\n",
+      "output": "12"
+    },
+    {
+      "name": "random_q2_88",
+      "input": "19\nw hb gs ajt nmm jwy yhkp abjww gkkqq rcvqbc jwsghl dankmyx mzltzbox dndrfqakx hevpeknvv odeixomyz cwuwzrffw wmlpgxerxx pqhmocvvbggb\nidrqxdvlk\n",
+      "output": "14"
+    },
+    {
+      "name": "random_q2_89",
+      "input": "30\na d g v ud gv jeh lfv zgm kehj hepgf xzgeu zqaqz ohkylc nayjcz tprnqa rqhsoai mnqjuza gjdihqqp mbphkowm rhwpqnwb icdfkhqnp gkcsmuufj dtmxbdngz kmnyohxdn wkqgjpbwx vlgxwqdzy fbhzyzehvc wkovkftutii ljzkoqzmwbcs\nnvayleg\n",
+      "output": "16"
+    },
+    {
+      "name": "random_q2_90",
+      "input": "25\nc o p fi gs fv lew qot uxi yfhd txnh oboqc hzvtcc ykcutz jodgdla xfxciwd yjfzvyi ostabanc tbwavrnb bfedfnsfl flngqyxvm wyzmsturg mlzcsorltd okuljywazs lholjfpfpss\na\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_91",
+      "input": "31\nq r gf jd of pq hz wl ts zu wy jnon ulvm xnpo jqdcs wgpdp vskfq uqvzkv xhvymnv scshhnrj yhugsvmv yqwcqxrr kkggmtyca cpgnvztsa kbnmtdvjpe qvhzyoqxka pjqyayqquv poezysaalem zaekftqgtvm nlzjznbgimkn yimlhyqwhwwy\nelnictxwtf\n",
+      "output": "24"
+    },
+    {
+      "name": "random_q2_92",
+      "input": "31\np w cb fo ln pxk ozy jiug eeux yyuw xacrx gusqh hpqlx gxvud oijkyw trjdfai aulwpkb luukdiu ktxoenv aqtqqaad ijjncxyg dfdzwqbx ueleyauy szpesotl njczccabua gdtwahgpmk qhslabaoepo uneipfjkapup silplsdjknkv lrxcbdqvoviz iuqvwokukhzw\nkkqbr\n",
+      "output": "10"
+    },
+    {
+      "name": "random_q2_93",
+      "input": "23\nj n jr uy vz gkm kvh sdy wsg zqq kgds wmvj zoyv orgloao uhjpfkq kgmcuwn ularhnx rmucxfv zsdcebpdq jbjmsikssw detkwfwzdaq brvqrkcjjznb hzvuwueopold\nieeiqzrtanog\n",
+      "output": "21"
+    },
+    {
+      "name": "random_q2_94",
+      "input": "20\nh m jf qq ym fman hgqf hssm zess eghmd nbxim xetex akbpap mfdlgm odvmcc zmibaal zpfguml bngmxtjor xoegovrlalb prxkqnhwjfb\nz\n",
+      "output": "1"
+    },
+    {
+      "name": "random_q2_95",
+      "input": "8\nxuau jvihs hvqqo cawirlb pfhjlluj xmqrtpqnc wziuoxnopv sqdjwjkhcjn\nvpcwaivoa\n",
+      "output": "5"
+    },
+    {
+      "name": "random_q2_96",
+      "input": "29\ne q bra hwh gqde hjut bkofb mkebi cwpgg jbnmv lswgqe ujwcyp aystajk uzzclna lpuliwt cinjhzpg quexhcws rprhnsfy rvupurlp utzkruew kptwgpwbv slxoqruqu iltdtkphak vhublkcumg vrrrfmkyai yqxvpdyqyt pqjbsczxfcp lseyuolqqlo qzsbvrtrjinw\nor\n",
+      "output": "2"
+    },
+    {
+      "name": "random_q2_97",
+      "input": "17\nx zz mdd cow nqdn ccvwg qjeasy kmitwr sxotgx vymrro apvmweo ykznunog btbkpqrza mgafelriej lghdwcdtvk dariawetapu nxzvfdpxhiq\nfvnskq\n",
+      "output": "7"
+    },
+    {
+      "name": "random_q2_98",
+      "input": "5\nc nwq ififgvqf wsubbzlvwe tzppunixqd\nx\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_99",
+      "input": "2\nxc sijr\ngrhr\n",
+      "output": "1"
+    },
+    {
+      "name": "random_q2_100",
+      "input": "22\ng j m oa in te sqchn lmudl gsnvc pdkndin hkxbmcr uezoldm qdmjjsy zvilgio cbfvbvha nubyhaow tcyykduqh keruwjynm lomicotefi cwqgntfpri jcuywmjpuvs cxvselvythtw\nwfdculom\n",
+      "output": "15"
+    },
+    {
+      "name": "random_q2_101",
+      "input": "23\nh l y jd eo wb wu kxbi txat wzxce ixbimk oayokl qiwiqy ohyjztzl kalkddepk vbtmrdnkwm adtlmfdpxjw quekxnexbjb sprgulbziof rvkdxmrqojo dwxphowrtts trlvostrcabp rmyspjieetkt\njauganpnr\n",
+      "output": "14"
+    },
+    {
+      "name": "random_q2_102",
+      "input": "12\nf v nh gff jcz nbqrgl gpgviabb tvlauxdz ytfubvdou ybxtdendon mrfbmipkjdi xmparvoueqk\nykwhjapobu\n",
+      "output": "9"
+    },
+    {
+      "name": "random_q2_103",
+      "input": "19\nc m vxsc nbuirp awqtsb ssguue svknpk baubcfd amctjyr zvirdne szwasvh khemwunk ckqvugiri ccpgrokonj xrnrnugifd skkuznopif udstnbkzuo tqgtxnehqnpb wywloqilvihj\nfuiyeruy\n",
+      "output": "11"
+    },
+    {
+      "name": "random_q2_104",
+      "input": "7\ndgdlf gkwce rqogh mzikfv fxtlhv wvteyoaldcn spvopawmgdq\nusjqslfcajo\n",
+      "output": "5"
+    },
+    {
+      "name": "random_q2_105",
+      "input": "9\nl tt pcl sljb hhthp bzvjcy acvqvxly lkcgsqybise nfcgfltfztv\nnc\n",
+      "output": "1"
+    },
+    {
+      "name": "random_q2_106",
+      "input": "19\na c x se kyg byu tmv ptbj jvvwee ljsojz datkaanr isgzzurc hxskcahjc yvctvtlof savymwbfpl lasvsulagz kreyfyjrehd qnzbrkawtmr jbyspdslypy\nc\n",
+      "output": "1"
+    },
+    {
+      "name": "random_q2_107",
+      "input": "30\ni l vc zc vm pw kdn zfj msu qvz dbbz pasz taipm tucpp witwf njfmxy ykutsja ipqyquy leffgbmi zfbchpdc jfonahfzw azuqusodn wekczfsuy gutjrbzkdh mrlfztzoxz pvabfsaszle yqeknomhytm qdnyvwkzhvj plwpryjpzzy svhpnvhnzstn\ngmasd\n",
+      "output": "12"
+    },
+    {
+      "name": "random_q2_108",
+      "input": "19\nb s cn gsz fkhg lxnh wwpf uhxgcf kutgjx zwwmrrg bjgqfdnvl emkkpegwe xcqnerdoa chjwljrkov xxzerqnwiph vqyekhqpqaaa kvbixtcqgfpz xmhdfvvzxhoe qwxpwpyhqlze\npitg\n",
+      "output": "5"
+    },
+    {
+      "name": "random_q2_109",
+      "input": "10\nj fg lg icjz zqmg muclq ngetfkt weobgiwi saacjeljo wvtwlgjrpcc\nso\n",
+      "output": "2"
+    },
+    {
+      "name": "random_q2_110",
+      "input": "22\np w cbt hlm qev lulm hlnch gmzief qslnry zszskw ffdieeh zcaotij mvfzcupg ixmuvhve ubxjcimpi leoajutky pffwjunvd dmqmpiljog wrfyukekpj xtqmmdpuln teqwwctucw hqutjjqtumgm\nzmtudp\n",
+      "output": "8"
+    },
+    {
+      "name": "random_q2_111",
+      "input": "8\ny jn ajyme qshss bcnuels tnpfghjj phzrpynb whvtdehuua\nfregdigrzol\n",
+      "output": "7"
+    },
+    {
+      "name": "random_q2_112",
+      "input": "1\nsxak\nzxybxrwfz\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_113",
+      "input": "23\nh r z nl ikm vdw gozj rsor iuien nwkxy rbibudf ktltolf slskfzk lngwuwg ubsinxz jdnewtej adytptjp treummmk ebyxuexi fqkryhlsw xcygofgxuo mkbqzdcwejc xuawuzjpmgnz\nlpsnvdd\n",
+      "output": "11"
+    },
+    {
+      "name": "random_q2_114",
+      "input": "31\nh m ep oy dmk bzb lfv uhac mdoj qrzm njzju oqapmb pbjtot zazohw fcefdnb beqrudl weykkar bqvoiflc tbybsgpq gkxaporw bcdardoum qlvplsdlf sagvtvmkkc mjjdtxeqsw jtgoxwoglbt uwsyighzqgj bikkwhonywcd ddbfwfolxnsz bsmoltxaeqyg druvvexfdlht mdnjspwqztdi\nredbbdz\n",
+      "output": "15"
+    },
+    {
+      "name": "random_q2_115",
+      "input": "11\nl v qjxv aqgom sejqe srpnjhgxb gztumrykt puluxurqp aptufvobmj xoyuagqeft tqydtiypyct\nurh\n",
+      "output": "2"
+    },
+    {
+      "name": "random_q2_116",
+      "input": "2\nkzgz isfsbg\ntepbo\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_117",
+      "input": "27\ng j mg xh lx fiw zkg toj ymt gtbi lchp zcls qwobu lznum flwvkh fdkkcbmh thnfbkwj odqnxuuqe dwydqimysg dufwqnlbpxd pgfyvliwods isrllpxsayo jhtqgotskbgp rsbbosiiwngt pkchdkwxfuun nmiaxkxnvgmn xmnwyknlfdgv\nrnpjzdgpsk\n",
+      "output": "18"
+    },
+    {
+      "name": "random_q2_118",
+      "input": "11\nj m y xzuwa gcyncr wnzzpve sqqrczln qifjhiwuaay avguyarbsyl rbutketvjym hglhxsjghtjz\nmly\n",
+      "output": "2"
+    },
+    {
+      "name": "random_q2_119",
+      "input": "17\nd ikeg dpey keueb nncel fnziig hsamkw rtgumg rjgjdhz jslrurb xrhrehoga yatoehpbti xwnhxuzthrf gohnlnhnfaln sgjedmbpensr krfzectavjgf mdlguajzsxip\nmuwnn\n",
+      "output": "4"
+    },
+    {
+      "name": "random_q2_120",
+      "input": "22\ne l ep im ev mr hne edu sblq anuzm wlqatd cjbcaad ocammol pisdatg gbgqszz uftsnsk esyipwafpe qvwudhdwtq lyjiebuguam paqftbtwfeu avzwcqhnyce xxjisceqtbwv\nzhdjnop\n",
+      "output": "14"
+    },
+    {
+      "name": "random_q2_121",
+      "input": "25\nh bv yan gus xlq ecvki jjmzc desann miyunc qcqijaal hoxjaqha uwopjaqd ucxuvzig hcrdgcpdu kcfgmuhcx ktyyioccab luxhjqgunw etjcmdwgncd mxzyyjpcedb pnpsjqtrkgo ybdcjsfatfmo ghzetfmkvvec hpoqptbmatct kcayzciozmks lpfptmhqhxgx\ndkubyemfqnhk\n",
+      "output": "21"
+    },
+    {
+      "name": "random_q2_122",
+      "input": "3\ndebbh jrrfbwyvu njlimsplyae\nlqritqskto\n",
+      "output": "2"
+    },
+    {
+      "name": "random_q2_123",
+      "input": "26\nl w x df rg mm wz czz ubjt cidbd xegvq vwevn dpjdigr bukgezb bgezjqu facrnhbm sfafrfev ksjqgipb nzdebrpn ewzcoihyb kqbzxaprx tmmwwoasv plssaockbx ajgwhpxslnu isvogzzfpdn ghctmbwmprol\nbmywj\n",
+      "output": "10"
+    },
+    {
+      "name": "random_q2_124",
+      "input": "28\nk v x eh dy hz ow bow dyp ppt xrn oxph onut tpbyo wdmrai wwqrig elocqwb osuvxtc dciydxgh erhxkgak lmpjbfyaq lzcwjlpda pkzxxrnpe cxvnobggsd vtaeosfcirw zwxfwvymyas jokjucjriill jncslgtodhqr\nbfctypskgm\n",
+      "output": "23"
+    },
+    {
+      "name": "random_q2_125",
+      "input": "14\nw fu wm pu ham bym ajahs pxvvi hwixqnc jgdkmkndy ypjfwaiij zvlizljtg lkuuihvpuue cujmsswwfnt\nlqyssx\n",
+      "output": "8"
+    },
+    {
+      "name": "random_q2_126",
+      "input": "16\nu qj rvig nrku faqix iyqik kmieayl izeuvot hiwcfjos rdaqomny uwjajljnf cjmfhtbqyoe eqevnzwoffa parqkqmbqzjn jfjmrcyidwxs uvjyicotipfw\nbhlwmpqa\n",
+      "output": "8"
+    },
+    {
+      "name": "random_q2_127",
+      "input": "4\nh fynz hrttj xjgbjgs\nznsiwchjiu\n",
+      "output": "3"
+    },
+    {
+      "name": "random_q2_128",
+      "input": "4\na xgvy vwqco qefemlnnpr\nyyf\n",
+      "output": "1"
+    },
+    {
+      "name": "random_q2_129",
+      "input": "19\nm oo adn dzm rfhm sbww zlrdf ryyav mmnqhb jsriqpy bijigpui zdiaieyi mknvxvtr goejsbtna vgpfektfb buwthjeyec yjkgouknor zbqtmvlnsj tghtlxwpagz\nnhf\n",
+      "output": "2"
+    },
+    {
+      "name": "random_q2_130",
+      "input": "21\nf j n z il sf yy cdv mqc jor kqx chqc gulqm ocqrfa ufdrzjd ziidsjp bwfpxxa avchscchp nuaowptul tceienpglceg lrfvpmyhogfu\nqtojxftnvoa\n",
+      "output": "19"
+    },
+    {
+      "name": "random_q2_131",
+      "input": "25\nh r et zbeb hdmo xjfy xoazd epanhl hnhjwp eorjsr bvdjsdp mjyrvhv rbsfizex nuthpsif bcczxbwdf ndzhaavpg dytdpbfgs skwtbrbug xccjbvbsga qrcyrhwrjz akosqibfndd dsqrdwgppjb xglvscghusl utmttfwloai ypmznbgcoewx\nx\n",
+      "output": "1"
+    },
+    {
+      "name": "random_q2_132",
+      "input": "29\nj y bf kb er cw ejl qzb srs qzs gvwg xclv zdxjx jbgnfl ksboio rflrjy wpwcvt oxutlp racknfv rbpxfvi zmpnwwq akkwwjfhi nqmhgeozoq uhuopgoirk qbdcisvddtc ahvihmzsrme jzytpvukvnp yipaxdpyddlx tljsxkuqwjdl\ngwcd\n",
+      "output": "10"
+    },
+    {
+      "name": "random_q2_133",
+      "input": "18\nm u tz cef rgq icsn bxay awxm gftmn qwtdxh xppgnzz buulnxgne vijivvdyw ollqggiebm zkjxrqqsup tbgatpmnxnx jwvodstresq nbuozvtqjfsb\nmrwcrlodkdt\n",
+      "output": "15"
+    },
+    {
+      "name": "random_q2_134",
+      "input": "28\ne o bo em ffn kug usl gcvc cnsnrd tipzsj gxcdgpk homnlew jwsgxan bmcnhduo ydckkkim zqacmnjy gezsjakqc kpagwefwig cwrccosgwe euiqcxnsid amdbhqyzzq fenunagpbal nhfeibwmkwd mlbelvpqqlv imykwqwprzf smdocujxreil msnpkibloqqz ayosjynnawnx\njhdubfj\n",
+      "output": "10"
+    },
+    {
+      "name": "random_q2_135",
+      "input": "26\ng x iu gcn ejq scl erv egwe dksh utfw ekrgc mbbrn cpddx rnewef qejpcw atmirp poojcw rvhrqk proqoybj neeqnkdvd yuuzptxjh csaekxmlogo qcmwgtaewkx wfctxuyhdmr yopvnzumpdn muymddybrfyj\novthxb\n",
+      "output": "17"
+    },
+    {
+      "name": "random_q2_136",
+      "input": "32\nj p s u ax mo vk lcg goa jjh cocd llsz dkixm qhzwl smvwj liefce nlrmdw goyczn fvfcwuq dfpmupgv fxjbghpvc wbwqsbaoi nhdxmlsto yuxovowcg rnqaggjapx ryuslehjhd plbvqvmkfu nbgmpadlqig yksblnzogwv bbmicemwcgkc eyywvneqbfcg imnszmqkytiu\nxqe\n",
+      "output": "9"
+    },
+    {
+      "name": "random_q2_137",
+      "input": "25\ni k r x gd wc cy dbm usc igpb nast cqwnw dxtnu omarnz tyssqp ojkrwbg rddwezq wmnqvww arzqcmog jixmiewp oumkbylu jjagvhljpu dsfqcnemvqcg zdkemvsodggb iiwfnbnthhuo\nhzhes\n",
+      "output": "11"
+    },
+    {
+      "name": "random_q2_138",
+      "input": "1\nrmsvbrhl\nog\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_139",
+      "input": "20\no vb ypj vxm tdgy ilqu kxqv useaq qmxja cctxu accfazj hinhfiq jygpyew tqvgxvk spoojfmw hkokjutz mjuuummzy dvxuegzcmei eksnuvbvigu bojqeidbpjnu\nnwdybaof\n",
+      "output": "14"
+    },
+    {
+      "name": "random_q2_140",
+      "input": "8\nrmre mquj fhahna ptgoko sjwwxvl tuasyzof pvkobhpnegl bosatooougpt\ndrpbeitvnie\n",
+      "output": "6"
+    },
+    {
+      "name": "random_q2_141",
+      "input": "8\nbf jz bmkmk avykgx yyscvjt vwnltqwys kufrxsxcej fvgamvszwoed\nqjovuovkic\n",
+      "output": "6"
+    },
+    {
+      "name": "random_q2_142",
+      "input": "19\na as wlk ytf mry zccjydv hxcgaott odxbzqak dsyoknui tvdqvplq zgkzhsjy apvsyxto lmfrgvilhd abiyzuesay njcotmwkrgd oweidtlrmvf yojosfdzzbe hxpeqkwmoll nonxjwsdlrad\nxyz\n",
+      "output": "4"
+    },
+    {
+      "name": "random_q2_143",
+      "input": "7\nv w pr liv cokvxccc ccrfvykipv wciwyqzbiktd\nzyrz\n",
+      "output": "3"
+    },
+    {
+      "name": "random_q2_144",
+      "input": "26\nb u fs agea nxca whpfg hnnso rmoey bzvgu jwcqz rxgpo legghf aarveg lhmrpi wquqqmy faphgnca szuqjtqhd pjjrdibdpi iwlonbltuw yvipsybazr ssrrjsivut ztylvhysav gfignragcwk bsqcvmnbrfrb hbpfjenmyext dilharxbvtns\ncqvfekx\n",
+      "output": "14"
+    },
+    {
+      "name": "random_q2_145",
+      "input": "24\ns kj gq xf hied motf wntj smdwq xntqr jkdmtw jnicinf bsgtayx ttixidu okyioiz yslghkcm fhdpexixp lvhnjzven hkdvapkevt wsfbaqqsft dxepyhvjin efnikzghdoi dypeihseaxn yfxsllyjsum vnscnmqmwabg\nmtojtt\n",
+      "output": "9"
+    },
+    {
+      "name": "random_q2_146",
+      "input": "9\ns co sp spz fjnn qgtw rigflvnpfk qpzfqyioto ifhaeotsavg\nkcdtfd\n",
+      "output": "5"
+    },
+    {
+      "name": "random_q2_147",
+      "input": "3\nfthc rinchar xyeysanymyi\npwkdyb\n",
+      "output": "1"
+    },
+    {
+      "name": "random_q2_148",
+      "input": "19\nic kw jze lqci ecval gcmjv gusex tzwgp itebap zaiwzf gitkehh sirvtaahl xbzxoablt ttxplnnei uesvevffjr xkwvmsxzcb aiuyhwqkioc ogvlbmcqdboa edrujcrdzzxe\neffksupwa\n",
+      "output": "11"
+    },
+    {
+      "name": "random_q2_149",
+      "input": "16\nfd tn wm peix rqvg ycvpz xqwrn sfdljn aglbpxd sshoani yuajtgb iqefjhzl pkzremmb mvjqdmtf clnpgwoazja zfsnsojmwapl\nhlrqntip\n",
+      "output": "13"
+    },
+    {
+      "name": "random_q2_150",
+      "input": "5\nfidfp qgeeo haidra nrhmayigig bnugwmhcjlf\nkvvngactsrz\n",
+      "output": "4"
+    },
+    {
+      "name": "random_q2_151",
+      "input": "19\nm z ig vb rp aea ycyh qnbvr fxjchu pilsyi syvnxqx kyezrtyo gtofvehff xhnbkgwnc pltdzscmn tlqexmhxs tkrausicuk tuxdmhfkpmp huzfkbmtxqya\nkfjacvj\n",
+      "output": "9"
+    },
+    {
+      "name": "random_q2_152",
+      "input": "4\nfl jofdu skwrvltspvu qasslfahvzzr\nomrjyh\n",
+      "output": "1"
+    },
+    {
+      "name": "random_q2_153",
+      "input": "13\nh nq coq mtg jeff cftu bhuvh cfqafe cpxocw kczefmqxng qzpwfdivrr omdrmulkgew djjhdjamrdih\ngzujifwaoybk\n",
+      "output": "12"
+    },
+    {
+      "name": "random_q2_154",
+      "input": "32\nd h l q gf nvk umz bfne pmco dxsg hbqpe tsevd yskwk itpscn dmkbqpl bwjyvng cjabuzzb unsighqh utejfwup ponrqbwu cmjyebomj kajhtexqo yyaufdrgj nawjrpwcl kwkjlahbag lsoezdojqc mfxiunuall fomdsmxqsf ytljapcoteg dfhxubgftsrf hzlqfvyauktj omdvvlthswbt\njeqy\n",
+      "output": "9"
+    },
+    {
+      "name": "random_q2_155",
+      "input": "19\nd f dba aqo unu xzg fmrc qutk ntvu nqilyih lezykhp qnhxvok hienxwql tmsoonbu gwokpzir kdtxbaemj shohrsniau mytxvxngumw rqplsnubuctm\nn\n",
+      "output": "1"
+    },
+    {
+      "name": "random_q2_156",
+      "input": "26\nf ig sp zj xam xil ugby wjziq xqwss kanuwh xioqgl frakucn pmtjpho nzgvtpwp gbmkaysnr ekqjymgxa ehynoysyc svprgsdthh nxowjptehm xjjljlzcxs ddcjyesknwb glprkjdnqma tsksgqczdha ekqlokylyud gnpxlvmitkv vyquijvwwdv\naiw\n",
+      "output": "4"
+    },
+    {
+      "name": "random_q2_157",
+      "input": "11\nfi yhaeko divzhy wjzcsff oijfdjka ndjhgtaf vjhxzivk zuphturq cnecntwdlas djmntatqcakj jwjnsyqriwik\nylddn\n",
+      "output": "1"
+    },
+    {
+      "name": "random_q2_158",
+      "input": "6\nl eng wjaib dznhs nlrfmb iwrlyclruvo\nqdkfxlgjxlc\n",
+      "output": "5"
+    },
+    {
+      "name": "random_q2_159",
+      "input": "13\nh dp mpo ryv spvba kwmev bczsy smunm epwlcd lrfsaiu xbezeex ezhjxyx jmwqednsz\nqnwkqoodnhp\n",
+      "output": "12"
+    },
+    {
+      "name": "random_q2_160",
+      "input": "6\nx iz wduz rppyc qgnobmu lwamnybvquzi\nyppajnyzc\n",
+      "output": "4"
+    },
+    {
+      "name": "random_q2_161",
+      "input": "15\nd h qg ky qiw lhwb uuwd tmigs ddqebk mlnfgcklkb ispyljwamd fpahsnufrps fpfrucotfemz mfzvfjnbmmqx qkwgsbuqnosc\ndaekoufxbp\n",
+      "output": "9"
+    },
+    {
+      "name": "random_q2_162",
+      "input": "3\nz hfqaa guznexionz\nkxwajwb\n",
+      "output": "1"
+    },
+    {
+      "name": "random_q2_163",
+      "input": "22\nd g m n v jka dqd qkb gbpw bwdz uwxf amzvf vbcamuk mooeeoy awfxavvj ooarspku qctbwfeajt veompolaww qwtdjghwzo cmjdirsalqr avasvqgivfh bbahvmsajagj\niwjxrqmit\n",
+      "output": "16"
+    },
+    {
+      "name": "random_q2_164",
+      "input": "1\njknivksnhpcp\nrupdjihzytef\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_165",
+      "input": "21\nn q u vy kcxb rjmz quzt mdgpb oiikd wzbli jvnyn bnppsd gthbrv jmjwev cjyupv bszlkjpiz zwjqmvpcmw harwqdfgfyz xthwchflwnis kwoiheymnzwj tsudovwvywqc\nweert\n",
+      "output": "9"
+    },
+    {
+      "name": "random_q2_166",
+      "input": "2\npyk daewn\ngq\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_167",
+      "input": "16\na e n u al egbx lclv epbkspg ccuefpsb phvwigan skrvqwzm xntmztbzj mdhvpudqrg rjacguchvhv cpjpminquwo forzbkyxtttt\nsdxtbmfpas\n",
+      "output": "12"
+    },
+    {
+      "name": "random_q2_168",
+      "input": "22\ng du udc toi zhs kcir zrga cuql vuhsi vivedi wjpaxq dqdnate hfzobgs qpctphe nhcaopnc fziwwnlg rqazjwpz xeicqeeph gbsayaslg tgvhkrfikv xfoukdyzve nrxqcacdvfyx\naew\n",
+      "output": "2"
+    },
+    {
+      "name": "random_q2_169",
+      "input": "2\nmabi nxsvqkkxc\ni\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_170",
+      "input": "16\na u ix qt py wu pmp zes adgd fmhl hoqpa yycbsdq foibednwg ntfngroczf ugpslijjir ikdayphmuqd\naipymdcvvt\n",
+      "output": "14"
+    },
+    {
+      "name": "random_q2_171",
+      "input": "28\nc dw cz cdk uib for pyh mskb xrdv gntkv atqjdxu yhegkzq gxkqxtb jyyokux ljffmdcf tqihdhre rabnoufsc gdtrqcmpd xeuruluqx ypcfnhzuon wqpwgxlwlm wanaqbigtxh xogunjpdbrg ufhguadjtwv ekhrzxifuul eoetpoqwoiz kqxwryjzwdv yaeuvrmlnndt\nss\n",
+      "output": "2"
+    },
+    {
+      "name": "random_q2_172",
+      "input": "13\ngf pi ulh zxpq lizfr jnrdz iomnwn sbciqow vmxtclp agrlmfor glsllvkwr gcxfpqqaco pvexfnooynth\nwcrulfhcic\n",
+      "output": "11"
+    },
+    {
+      "name": "random_q2_173",
+      "input": "15\nta llwy omhvg dobydml phzcfhq xhqmqfv tnbflovd edzcswex emthirosho gmuwnmhiwc wsycxhbgio dgnrvzqvja dtuuzbajrux qfjtkhcuhikm eunmglbtijry\nctwcvbxw\n",
+      "output": "7"
+    },
+    {
+      "name": "random_q2_174",
+      "input": "15\na g n gy mjn ssnc heluc ghjtn rmlxgj gdcbeeixmhe brnjngxchgb bfkoqzqdzmh gcedfcwcotcq qobcyegrtoro ykweujktsuou\nuydtoit\n",
+      "output": "8"
+    },
+    {
+      "name": "random_q2_175",
+      "input": "23\nt boqn fnnda hbdymu cvlygg ledadsz klgvzbg bzxbttny zftbzeidb mpsrnsach uekznjags cdgvzjnnq fhprvfvmj chzrxmhjt ytbzorstb caobesbqmb baukzgnabp bxcsbqvnjl gswmqxjrkg fzixydstqt viiliieeiup rwddwznffang cyvpndpxxixy\nipon\n",
+      "output": "1"
+    },
+    {
+      "name": "random_q2_176",
+      "input": "5\nxyrpk uwdqpfim vohbhqieh xldfshyup iyysznpadsz\nlztqcestwctz\n",
+      "output": "4"
+    },
+    {
+      "name": "random_q2_177",
+      "input": "20\ny aa wm mx rnd xktd tvkz fpono spkvo eiygos nzkoyss beimlhjcg qyrlcgpzd tlkrqryzn oydajaeobo dzaihqepizsa ccsrgwirkwap cpcowkjkwrcr avuatduwdlnu sqxqjdzesvqc\ndjzrpyuhk\n",
+      "output": "12"
+    },
+    {
+      "name": "random_q2_178",
+      "input": "7\nq z zv uxo ijzxuz socwscnchkpu sifksxiniony\nxvmporpkvsm\n",
+      "output": "5"
+    },
+    {
+      "name": "random_q2_179",
+      "input": "2\nmyh lqeodigssf\nuhzqucehhwdm\n",
+      "output": "1"
+    },
+    {
+      "name": "random_q2_180",
+      "input": "16\ni zie qqq qxv tmqd oxita sgwmam rvysve qkoumrk cxapvern qvdkolnty obnojzteskf itkcexmxzeg segxtzktrli nuuadtueyttq yzqvvkzsyzzi\nmedr\n",
+      "output": "4"
+    },
+    {
+      "name": "random_q2_181",
+      "input": "16\nb g jnt jtny ltaoa qwdjz gvkvv jhloyc xsxncl urtrmr cobbnca nslcvffh kkhczxejb anxcgfwjps vpyrqffwxk uhnibqcraqg\nonldutz\n",
+      "output": "10"
+    },
+    {
+      "name": "random_q2_182",
+      "input": "9\ne obbqpdtz rehzqblz mnvfugnw grfxtuwpwt wqqyktjxbnc qkelnfboewii qrhfgmevjrnk eeozxqdfxlpy\neixascne\n",
+      "output": "1"
+    },
+    {
+      "name": "random_q2_183",
+      "input": "23\nc d f g ei st pre mvu boou ftpjs kazzw vvavdf npmksj yvikom ywmjkx xnkxvp gjdvtsjh jcdzvvbet jfnnylseszq cgyrqyfzgzi ejkclokaqfmt ieojopwqslzp opsxubvjpjzt\nqsu\n",
+      "output": "7"
+    },
+    {
+      "name": "random_q2_184",
+      "input": "14\ne u w no hmakh nkeoa dsdrmg okjgojw mfilrnv tsgnvlq qyhhcrcf klosrtimd vsxwwcibak wtahachhclt\nzbvqroau\n",
+      "output": "10"
+    },
+    {
+      "name": "random_q2_185",
+      "input": "3\nug vzl pgacnixq\nuhmgufkoq\n",
+      "output": "2"
+    },
+    {
+      "name": "random_q2_186",
+      "input": "13\nzo vja qqe fabd hmtr cnrgg lteqh qybmr cgynkek yzfnimh ntmflox ecvauonb ymczscwbhdo\nbuon\n",
+      "output": "4"
+    },
+    {
+      "name": "random_q2_187",
+      "input": "22\nn q jf tb wm sfjjs ruvij aqmgrt hkuyvfih zivtapvx zeegmnghb phclrscdq vjvozfyma koczjddvno qvvcuoyswd hsdklwdnbzu ufwdxfidmxn ukwbuyeuhhu piqrmzqalpwc gutfwrlhugfy xdmxwxfrlcym fwwyosmuqiky\neorvftddu\n",
+      "output": "11"
+    },
+    {
+      "name": "random_q2_188",
+      "input": "3\nboh srvxasna hwdikmsmmk\ndzwhyzcjpes\n",
+      "output": "2"
+    },
+    {
+      "name": "random_q2_189",
+      "input": "29\ne f g r x kb kt zv ahx gsh tws iihd zhke oflu evvn jzijky qwtllp cebaezk iexgosn ppxxhcm ogrrdqmc dykntrva nfndlonrd shvzbsuxk oswnjyohpf wythebxmrv quwtlajxrit iyfsrjxrxcoo qvqftwktnsww\npeoocpuqlxb\n",
+      "output": "26"
+    },
+    {
+      "name": "random_q2_190",
+      "input": "7\nwcp edjhr tgfvisw cvqakble zgtbcacwa pcfpetylur vxtcyjdbpkw\nsiyiq\n",
+      "output": "1"
+    },
+    {
+      "name": "random_q2_191",
+      "input": "15\nb ni dem noa uzp mgaw atxzvjo vvjyhsmo uvngvwzpl hjchscdxtr wnwskinbdzz bkcmbuniasor vilhmbbifmtn abbakptriouu ryhrkbrpfslg\nszdks\n",
+      "output": "5"
+    },
+    {
+      "name": "random_q2_192",
+      "input": "2\ngw thneirjvpe\ni\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_193",
+      "input": "21\nl wd gu cker ckkv tppe kxlq aebxw rrbuin jjmguz exsotl yhyquw mivqylf ujumhcqx ofelhuvod cnznyezbl wslopcpto qztutnbzxw ntlvbgbtkch rlcdeqqrmwbs sdpezchgqrww\nm\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_194",
+      "input": "26\nd k n o y ah iq on hyo xmff avkr gvtqr ujdlat cjtznd cmehlmul tbifxxca bkwebfikl jzpehxpku nbkccbdhxr bpunaxgogl ozjdpsnwzi dnlimmfnmoo cypaoquoeid asnhrwstmnz qamdvnakdjvg timscofppbly\nxgglv\n",
+      "output": "11"
+    },
+    {
+      "name": "random_q2_195",
+      "input": "18\ncf ao od at cfs ctf zlu qddc puos xvew nzhdx mtoovf cxwfvaz qdheiqhn dttwxsmi lmwywrgwj hcqzjluxsr zvfdrueokzn\nvzrjbr\n",
+      "output": "11"
+    },
+    {
+      "name": "random_q2_196",
+      "input": "22\nai hy yl zp xt ncg mbil cwld vgky bfhkh twshqn thpvspy vdluyfli fparxoyg sxdfhypam tetzrnnck ehozjqvajv yvszfvycwy lfecaboboqin ddmcfoklhsos dgjwtlpvthjh rffhzbusxils\nfplshrvdlcci\n",
+      "output": "19"
+    },
+    {
+      "name": "random_q2_197",
+      "input": "18\nw dz sz jti pro ldmsv snytox cpameat amadfuq pwhibvg cgveisih noauctia icospsoehk bgyzfqlkog hklsoijtql vrkubbjrrv pythaghywm pggjifdluzv\nbdqoc\n",
+      "output": "5"
+    },
+    {
+      "name": "random_q2_198",
+      "input": "7\nqbnw ueoin oqbsmokkn krbfewvjgs ssculrddqw ylmfhmimrut htlbldqbqymb\nncdm\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_199",
+      "input": "5\nd j ld ymn lswmlpia\njdjclmpvbh\n",
+      "output": "4"
+    },
+    {
+      "name": "random_q2_200",
+      "input": "9\ne gz cic hhes togq hyjqe fuatqxdr vycrzwfhup uwricmaerflm\nlixx\n",
+      "output": "4"
+    },
+    {
+      "name": "random_q2_201",
+      "input": "21\nr cj cn hter rdjx cllgf nguxc kokmdq jqzjdm wcibyz kbimmui jriczpg vxbyajg gigrklek frvkoqdl xluyphjqt smkrjcgysf uxiincjzrm miuqxrzuidg widndxxizkv jkolahlsjexv\nqgeyoyet\n",
+      "output": "14"
+    },
+    {
+      "name": "random_q2_202",
+      "input": "30\ne i l s w dl bv yw yfg iwh rtc midf zmox lccve asykk ynimk sbxzut btbzaij eseuyez pitcnyy utwngvl ptarurwh zaflmjzpf cqeyoxcbz noefvymyk tszwlpkal atkwtjifqslz yddltetgntwz ykzirfiqtpnw drrxpjsuszvi\nfnqaxyzzhdb\n",
+      "output": "26"
+    },
+    {
+      "name": "random_q2_203",
+      "input": "26\nk l y hcj may vgo ewr wzc rys itye umju ntbld mmmjrd qkqfss imhjmft xrajxhj oiqgnwl qulokgne jxhmrsez ngpnbhaih qxfsejnnm mqklqbpcja dwruowhbfq cbsvmvdptqgd sznhepfpywco smbemykziuiz\nqhjjsf\n",
+      "output": "12"
+    },
+    {
+      "name": "random_q2_204",
+      "input": "13\nv w ti ruehw hgzcgr uicmoqr xrkqctha xszmjjbg rdlrtglgz juzswtjig zwwntwity zssyrgcqos ludnjnjevyzy\njof\n",
+      "output": "2"
+    },
+    {
+      "name": "random_q2_205",
+      "input": "22\nm hs jvj lgggz xqixxu ifkaiph jijhzha jpoozgw mxpaceth noigmgqq fmmgcyyt inoxslicr jzmznbrhh jwmzxvcxp jqiftkrmbe bqbslfrkwn nnabxmlmpld idpwydywvta uandkwvvjfhn yjwczikgljli pbwrtuhlrjxb xeqevpyrifvp\nvj\n",
+      "output": "1"
+    },
+    {
+      "name": "random_q2_206",
+      "input": "10\nlsf fezf ypgn pjrqncd gbizkvy oozjvzxv lsytqwtsfy glsafuioksf rmduknczstz ivjetzzujels\nrkpy\n",
+      "output": "2"
+    },
+    {
+      "name": "random_q2_207",
+      "input": "22\ni gj wk kah dhm lnr zyl dedvo jauxb cyyrr afemmd mqrack ygeqgo iedswv vrckrl niephvd tssdenx jpaietvj upvfsoij uhnhrwvit sbhhmiyzgh telpxmxbaau\ngdpfvrk\n",
+      "output": "15"
+    },
+    {
+      "name": "random_q2_208",
+      "input": "31\nh i k u y tv nfp nepm qyhv hgomr phtos zpcut ifbvvg bvztin pgfttbc rkblnsd fieqvcs xscfwfb qgbcjzu euwhkmj dtesvqv hfddyiia rozlsbqs inuooyrr bcfimymph cobjcezru whdfxskmp ndlejnzerfg uxxmymkhstr frsvgijkdloa ridldvhblmyv\ndshjccsmyj\n",
+      "output": "26"
+    },
+    {
+      "name": "random_q2_209",
+      "input": "31\nbc omd lhhh wgvhf bvlsl muduq rjyjz apjgmp oxmbxy wyzcrl yuhwqz ueosbsa zeglyma mvjmadbw udexsuwt yvhjnvmy ciwnfqgma rauzroohl qskvnnzje oyqulernq dwcakwegcq fknniuejhr dpiqclfvmy ffghonmbmgh tdzshlogtir xdwushmnvnb lbrkufzgzzq tzebnwsjxlt sxdawbemlliq vbhfqkwjchuz nffwldiskywm\nhckprbeyhkp\n",
+      "output": "23"
+    },
+    {
+      "name": "random_q2_210",
+      "input": "27\no fm yq npa ody hly sop otwa exgqy wmzwr fcyawe qqbomf gaeayrh fsapkzc uxmkufg rmwobvec ykugqfwc bheuppkef rzazmffzud rdvuttmlmh tjxvtjlmzb twawnxzmvmd opkejwpqnjgf osircxbkzray frwtcsugybrk cbrzormqlvzl qtjzkquvocyq\nu\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_211",
+      "input": "22\np ew vj odh ktq jyz hvcl ilpu gmvz nzcoa zbify vrwfx flwhmx wblwdaax phwvwhzf acpdnjeeb xyhicebsr tkfewiqfr chmasrsgmd gqbtsubncj xwpepgnccwd dymivkpgrty\nkwjuhaoyc\n",
+      "output": "17"
+    },
+    {
+      "name": "random_q2_212",
+      "input": "17\nrc sg acp ueq lcvz mzkt jcygw ezoyne gwoqez snaylii kabfxtka wezoapdbf xtcnixtcom torldsxorb okkrwskngs jkepykbycso fqynnstjsxso\nfa\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_213",
+      "input": "12\ng sj jio thvx dpjup ladnfa fnhupf srpeth uydqrcjvq rrvmwtbuwmt phlckkyvnddl pjiiyjjextoc\ncn\n",
+      "output": "1"
+    },
+    {
+      "name": "random_q2_214",
+      "input": "26\ni q ll tkd tcw qfx kvp hvy tkis pkavaz eczvwa ciupdkk ebmuqesb cxsegnlcn pvnjgdnsob atsookhqbu igrftwfktj afwvjhzogm xpfxrbvkbz nszvtwjifl ihyfxqhbbgb rcrlfnckciz rmohldtjqiz rennleypbsjd teyvonadshow itqrzchscpxx\nrcbgvm\n",
+      "output": "9"
+    },
+    {
+      "name": "random_q2_215",
+      "input": "11\ni v pm vvma vljx hdsgglj ewdtebu pldpsegaz dvmcfvrxwg kawwbyovoadg bukqwxyocqsg\nxlxtnxvhqq\n",
+      "output": "8"
+    },
+    {
+      "name": "random_q2_216",
+      "input": "21\nb m fa mdp qqt qzqy eefbjd rfkhbx kdbozs dfsjznac fhesbgpx lwdkaciz lpfmofxf ppgyclxz ufoyfhfgm chntuxfal uvyeegyxa zskogdflxk oipbvltogsg bbrrrvpzseo ablfcwprojuy\npdpqo\n",
+      "output": "6"
+    },
+    {
+      "name": "random_q2_217",
+      "input": "24\nm cn vi tga jpg fwga llml qwfo sxmo taikp yowlc nzhvn detsra rzrtxq cjmdylc aqkcdjxlm fhukduawt yphsgqyhtv umdjcjrrede nerkuzgqojf tjkdzhwamzm avfeurtzuyw hdemwcekpiuz pjnkbuqgnvxv\nftfyouf\n",
+      "output": "14"
+    },
+    {
+      "name": "random_q2_218",
+      "input": "15\nog nlj ymkl rdwki ufpckp sipenhf xqptanq fmrbuufb kcfpwbjga vridygokdx lfbttvnotz pxacnshjcpn cbmblmjdrdfa zubiqqugjyef usnavkflrrfz\niu\n",
+      "output": "0"
+    },
+    {
+      "name": "random_q2_219",
+      "input": "30\na e i ji dv ox iay lvt wpvb kxqu ukwz dghce iyemd iqntu whoeeb avphir dkdxot rztmyf lzdksxai fwnzykykw hseqirxabh dxmjdymrnm tgzcdlrryj jnbhdgsdmiy ganpjkndbtw jdzykcfhzqi kxumxmyipzn sfdytbszqjia jbxgpxwteupq gwazoujgsvwr\nagaozimtm\n",
+      "output": "19"
+    },
+    {
+      "name": "random_q2_220",
+      "input": "6\nrs qlgcnl uilamzgn momztguf punsoryqg pdnxjbujxk\nowitb\n",
+      "output": "1"
+    }
+  ]
+}

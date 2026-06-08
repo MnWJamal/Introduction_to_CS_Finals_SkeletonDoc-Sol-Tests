@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "exam_one_hundred_k_fifty",
+      "input": "100 50\n",
+      "output": "true"
+    },
+    {
+      "name": "exam_one_hundred_six_k_fifty",
+      "input": "106 50\n",
+      "output": "false"
+    },
+    {
+      "name": "exam_seventy_five_k_thirty",
+      "input": "75 30\n",
+      "output": "true"
+    }
+  ]
+}

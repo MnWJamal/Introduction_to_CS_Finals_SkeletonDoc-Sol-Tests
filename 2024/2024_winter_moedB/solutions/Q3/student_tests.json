@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "exam_overlapping_negative_positive",
+      "input": "3\n-4 -2\n3 8\n2 4\n",
+      "output": "10\n-4 -3 -2 2 3 4 5 6 7 8"
+    },
+    {
+      "name": "public_single_interval",
+      "input": "1\n1 5\n",
+      "output": "5\n1 2 3 4 5"
+    },
+    {
+      "name": "public_duplicate_and_nested",
+      "input": "3\n1 3\n1 3\n2 2\n",
+      "output": "3\n1 2 3"
+    },
+    {
+      "name": "public_disjoint_unsorted",
+      "input": "3\n10 12\n-3 -1\n5 5\n",
+      "output": "7\n-3 -2 -1 5 10 11 12"
+    }
+  ]
+}

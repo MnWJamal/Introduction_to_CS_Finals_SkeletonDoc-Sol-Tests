@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "exam_example_open_minds_lead_to_idea",
+      "input": "24\nopen minds lead to idea\n",
+      "output": "idea to lead minds open"
+    },
+    {
+      "name": "public_two_words",
+      "input": "12\nhello world\n",
+      "output": "world hello"
+    },
+    {
+      "name": "public_one_word",
+      "input": "7\nsingle\n",
+      "output": "single"
+    }
+  ]
+}

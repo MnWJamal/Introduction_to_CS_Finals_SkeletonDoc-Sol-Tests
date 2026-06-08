@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "exam_hello_twice",
+      "input": "3\nHello\nHello\nWorld\nHello\nGood\n",
+      "output": "Good Good World"
+    },
+    {
+      "name": "public_empty_array",
+      "input": "0\nalpha\nbeta\n",
+      "output": ""
+    },
+    {
+      "name": "public_not_found_between",
+      "input": "4\nant\nbee\ncat\ndog\ncow\nyak\n",
+      "output": "ant bee cat dog"
+    },
+    {
+      "name": "public_all_replaced",
+      "input": "3\nsame\nsame\nsame\nsame\nnew\n",
+      "output": "new new new"
+    }
+  ]
+}

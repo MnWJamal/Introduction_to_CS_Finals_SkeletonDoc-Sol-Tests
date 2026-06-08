@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "exam_example_two_pairs",
+      "input": "4\n-70 -20 50 100\n30\n",
+      "output": "2"
+    },
+    {
+      "name": "exam_example_duplicates_four_pairs",
+      "input": "5\n10 10 -10 -10 30\n0\n",
+      "output": "4"
+    },
+    {
+      "name": "public_no_pairs",
+      "input": "4\n1 2 3 4\n100\n",
+      "output": "0"
+    }
+  ]
+}

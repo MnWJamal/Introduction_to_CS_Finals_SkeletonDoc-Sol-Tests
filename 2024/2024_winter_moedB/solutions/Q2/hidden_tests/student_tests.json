@@ -1,0 +1,1569 @@
+{
+  "tests": [
+    {
+      "name": "edge_empty_no_strings",
+      "input": "0\na\nb\n",
+      "output": ""
+    },
+    {
+      "name": "edge_one_match",
+      "input": "1\ncat\ncat\ndog\n",
+      "output": "dog"
+    },
+    {
+      "name": "edge_one_not_match_lower",
+      "input": "1\ncat\nbat\ndog\n",
+      "output": "cat"
+    },
+    {
+      "name": "edge_src_before_first",
+      "input": "3\nbbb\nccc\nddd\naaa\nzzz\n",
+      "output": "bbb ccc ddd"
+    },
+    {
+      "name": "edge_src_after_last",
+      "input": "3\naaa\nbbb\nccc\nzzz\nxxx\n",
+      "output": "aaa bbb ccc"
+    },
+    {
+      "name": "edge_first_block",
+      "input": "5\naa\naa\naa\nbb\ncc\naa\nx\n",
+      "output": "x x x bb cc"
+    },
+    {
+      "name": "edge_last_block",
+      "input": "5\naa\nbb\ncc\ncc\ncc\ncc\nz\n",
+      "output": "aa bb z z z"
+    },
+    {
+      "name": "edge_middle_block",
+      "input": "6\naa\nbb\nbb\nbb\ncc\ndd\nbb\nlongerword\n",
+      "output": "aa longerword longerword longerword cc dd"
+    },
+    {
+      "name": "edge_all_same_many",
+      "input": "20\nsame\nsame\nsame\nsame\nsame\nsame\nsame\nsame\nsame\nsame\nsame\nsame\nsame\nsame\nsame\nsame\nsame\nsame\nsame\nsame\nsame\nother\n",
+      "output": "other other other other other other other other other other other other other other other other other other other other"
+    },
+    {
+      "name": "edge_duplicates_not_src",
+      "input": "6\naa\naa\nbb\nbb\ncc\ncc\ndd\nxx\n",
+      "output": "aa aa bb bb cc cc"
+    },
+    {
+      "name": "edge_exact_not_substring_1",
+      "input": "4\na\naa\naaa\naaaa\naa\nq\n",
+      "output": "a q aaa aaaa"
+    },
+    {
+      "name": "edge_exact_not_substring_2",
+      "input": "4\ncar\ncart\ncartridge\ndog\ncar\nauto\n",
+      "output": "auto cart cartridge dog"
+    },
+    {
+      "name": "edge_dst_shorter",
+      "input": "3\nalpha\nalpha\nbeta\nalpha\nz\n",
+      "output": "z z beta"
+    },
+    {
+      "name": "edge_dst_longer",
+      "input": "3\nalpha\nalpha\nbeta\nalpha\nsuperlongreplacement\n",
+      "output": "superlongreplacement superlongreplacement beta"
+    },
+    {
+      "name": "edge_dst_lex_before",
+      "input": "4\nb\nb\nc\nd\nb\na\n",
+      "output": "a a c d"
+    },
+    {
+      "name": "edge_dst_lex_after",
+      "input": "4\nb\nb\nc\nd\nb\nzzzz\n",
+      "output": "zzzz zzzz c d"
+    },
+    {
+      "name": "edge_uppercase_ascii",
+      "input": "4\nApple\nApple\nBanana\nZoo\nApple\nPear\n",
+      "output": "Pear Pear Banana Zoo"
+    },
+    {
+      "name": "edge_numbers_as_strings",
+      "input": "5\n001\n002\n002\n010\n100\n002\n999\n",
+      "output": "001 999 999 010 100"
+    },
+    {
+      "name": "edge_mixed_case_sorted",
+      "input": "5\nA\nB\na\nb\nc\na\nx\n",
+      "output": "A B x b c"
+    },
+    {
+      "name": "edge_long_len_30",
+      "input": "2\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\ncccccccccccccccccccccccccccccc\n",
+      "output": "cccccccccccccccccccccccccccccc bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    {
+      "name": "systematic_block_1_0",
+      "input": "12\nm\nz00\nz01\nz02\nz03\nz04\nz05\nz06\nz07\nz08\nz09\nz10\nm\nr10\n",
+      "output": "r10 z00 z01 z02 z03 z04 z05 z06 z07 z08 z09 z10"
+    },
+    {
+      "name": "systematic_block_1_1",
+      "input": "12\na00\nm\nz00\nz01\nz02\nz03\nz04\nz05\nz06\nz07\nz08\nz09\nm\nr11\n",
+      "output": "a00 r11 z00 z01 z02 z03 z04 z05 z06 z07 z08 z09"
+    },
+    {
+      "name": "systematic_block_1_3",
+      "input": "12\na00\na01\na02\nm\nz00\nz01\nz02\nz03\nz04\nz05\nz06\nz07\nm\nr13\n",
+      "output": "a00 a01 a02 r13 z00 z01 z02 z03 z04 z05 z06 z07"
+    },
+    {
+      "name": "systematic_block_1_7",
+      "input": "12\na00\na01\na02\na03\na04\na05\na06\nm\nz00\nz01\nz02\nz03\nm\nr17\n",
+      "output": "a00 a01 a02 a03 a04 a05 a06 r17 z00 z01 z02 z03"
+    },
+    {
+      "name": "systematic_block_1_11",
+      "input": "12\na00\na01\na02\na03\na04\na05\na06\na07\na08\na09\na10\nm\nm\nr111\n",
+      "output": "a00 a01 a02 a03 a04 a05 a06 a07 a08 a09 a10 r111"
+    },
+    {
+      "name": "systematic_block_2_0",
+      "input": "12\nm\nm\nz00\nz01\nz02\nz03\nz04\nz05\nz06\nz07\nz08\nz09\nm\nr20\n",
+      "output": "r20 r20 z00 z01 z02 z03 z04 z05 z06 z07 z08 z09"
+    },
+    {
+      "name": "systematic_block_2_1",
+      "input": "12\na00\nm\nm\nz00\nz01\nz02\nz03\nz04\nz05\nz06\nz07\nz08\nm\nr21\n",
+      "output": "a00 r21 r21 z00 z01 z02 z03 z04 z05 z06 z07 z08"
+    },
+    {
+      "name": "systematic_block_2_3",
+      "input": "12\na00\na01\na02\nm\nm\nz00\nz01\nz02\nz03\nz04\nz05\nz06\nm\nr23\n",
+      "output": "a00 a01 a02 r23 r23 z00 z01 z02 z03 z04 z05 z06"
+    },
+    {
+      "name": "systematic_block_2_7",
+      "input": "12\na00\na01\na02\na03\na04\na05\na06\nm\nm\nz00\nz01\nz02\nm\nr27\n",
+      "output": "a00 a01 a02 a03 a04 a05 a06 r27 r27 z00 z01 z02"
+    },
+    {
+      "name": "systematic_block_2_10",
+      "input": "12\na00\na01\na02\na03\na04\na05\na06\na07\na08\na09\nm\nm\nm\nr210\n",
+      "output": "a00 a01 a02 a03 a04 a05 a06 a07 a08 a09 r210 r210"
+    },
+    {
+      "name": "systematic_block_3_0",
+      "input": "12\nm\nm\nm\nz00\nz01\nz02\nz03\nz04\nz05\nz06\nz07\nz08\nm\nr30\n",
+      "output": "r30 r30 r30 z00 z01 z02 z03 z04 z05 z06 z07 z08"
+    },
+    {
+      "name": "systematic_block_3_1",
+      "input": "12\na00\nm\nm\nm\nz00\nz01\nz02\nz03\nz04\nz05\nz06\nz07\nm\nr31\n",
+      "output": "a00 r31 r31 r31 z00 z01 z02 z03 z04 z05 z06 z07"
+    },
+    {
+      "name": "systematic_block_3_3",
+      "input": "12\na00\na01\na02\nm\nm\nm\nz00\nz01\nz02\nz03\nz04\nz05\nm\nr33\n",
+      "output": "a00 a01 a02 r33 r33 r33 z00 z01 z02 z03 z04 z05"
+    },
+    {
+      "name": "systematic_block_3_7",
+      "input": "12\na00\na01\na02\na03\na04\na05\na06\nm\nm\nm\nz00\nz01\nm\nr37\n",
+      "output": "a00 a01 a02 a03 a04 a05 a06 r37 r37 r37 z00 z01"
+    },
+    {
+      "name": "systematic_block_3_9",
+      "input": "12\na00\na01\na02\na03\na04\na05\na06\na07\na08\nm\nm\nm\nm\nr39\n",
+      "output": "a00 a01 a02 a03 a04 a05 a06 a07 a08 r39 r39 r39"
+    },
+    {
+      "name": "systematic_block_4_0",
+      "input": "12\nm\nm\nm\nm\nz00\nz01\nz02\nz03\nz04\nz05\nz06\nz07\nm\nr40\n",
+      "output": "r40 r40 r40 r40 z00 z01 z02 z03 z04 z05 z06 z07"
+    },
+    {
+      "name": "systematic_block_4_1",
+      "input": "12\na00\nm\nm\nm\nm\nz00\nz01\nz02\nz03\nz04\nz05\nz06\nm\nr41\n",
+      "output": "a00 r41 r41 r41 r41 z00 z01 z02 z03 z04 z05 z06"
+    },
+    {
+      "name": "systematic_block_4_3",
+      "input": "12\na00\na01\na02\nm\nm\nm\nm\nz00\nz01\nz02\nz03\nz04\nm\nr43\n",
+      "output": "a00 a01 a02 r43 r43 r43 r43 z00 z01 z02 z03 z04"
+    },
+    {
+      "name": "systematic_block_4_7",
+      "input": "12\na00\na01\na02\na03\na04\na05\na06\nm\nm\nm\nm\nz00\nm\nr47\n",
+      "output": "a00 a01 a02 a03 a04 a05 a06 r47 r47 r47 r47 z00"
+    },
+    {
+      "name": "systematic_block_4_8",
+      "input": "12\na00\na01\na02\na03\na04\na05\na06\na07\nm\nm\nm\nm\nm\nr48\n",
+      "output": "a00 a01 a02 a03 a04 a05 a06 a07 r48 r48 r48 r48"
+    },
+    {
+      "name": "systematic_block_5_0",
+      "input": "12\nm\nm\nm\nm\nm\nz00\nz01\nz02\nz03\nz04\nz05\nz06\nm\nr50\n",
+      "output": "r50 r50 r50 r50 r50 z00 z01 z02 z03 z04 z05 z06"
+    },
+    {
+      "name": "systematic_block_5_1",
+      "input": "12\na00\nm\nm\nm\nm\nm\nz00\nz01\nz02\nz03\nz04\nz05\nm\nr51\n",
+      "output": "a00 r51 r51 r51 r51 r51 z00 z01 z02 z03 z04 z05"
+    },
+    {
+      "name": "systematic_block_5_3",
+      "input": "12\na00\na01\na02\nm\nm\nm\nm\nm\nz00\nz01\nz02\nz03\nm\nr53\n",
+      "output": "a00 a01 a02 r53 r53 r53 r53 r53 z00 z01 z02 z03"
+    },
+    {
+      "name": "systematic_block_5_7",
+      "input": "12\na00\na01\na02\na03\na04\na05\na06\nm\nm\nm\nm\nm\nm\nr57\n",
+      "output": "a00 a01 a02 a03 a04 a05 a06 r57 r57 r57 r57 r57"
+    },
+    {
+      "name": "systematic_block_5_7_2",
+      "input": "12\na00\na01\na02\na03\na04\na05\na06\nm\nm\nm\nm\nm\nm\nr57\n",
+      "output": "a00 a01 a02 a03 a04 a05 a06 r57 r57 r57 r57 r57"
+    },
+    {
+      "name": "systematic_block_6_0",
+      "input": "12\nm\nm\nm\nm\nm\nm\nz00\nz01\nz02\nz03\nz04\nz05\nm\nr60\n",
+      "output": "r60 r60 r60 r60 r60 r60 z00 z01 z02 z03 z04 z05"
+    },
+    {
+      "name": "systematic_block_6_1",
+      "input": "12\na00\nm\nm\nm\nm\nm\nm\nz00\nz01\nz02\nz03\nz04\nm\nr61\n",
+      "output": "a00 r61 r61 r61 r61 r61 r61 z00 z01 z02 z03 z04"
+    },
+    {
+      "name": "systematic_block_6_3",
+      "input": "12\na00\na01\na02\nm\nm\nm\nm\nm\nm\nz00\nz01\nz02\nm\nr63\n",
+      "output": "a00 a01 a02 r63 r63 r63 r63 r63 r63 z00 z01 z02"
+    },
+    {
+      "name": "systematic_block_6_6",
+      "input": "12\na00\na01\na02\na03\na04\na05\nm\nm\nm\nm\nm\nm\nm\nr66\n",
+      "output": "a00 a01 a02 a03 a04 a05 r66 r66 r66 r66 r66 r66"
+    },
+    {
+      "name": "systematic_block_7_0",
+      "input": "12\nm\nm\nm\nm\nm\nm\nm\nz00\nz01\nz02\nz03\nz04\nm\nr70\n",
+      "output": "r70 r70 r70 r70 r70 r70 r70 z00 z01 z02 z03 z04"
+    },
+    {
+      "name": "systematic_block_7_1",
+      "input": "12\na00\nm\nm\nm\nm\nm\nm\nm\nz00\nz01\nz02\nz03\nm\nr71\n",
+      "output": "a00 r71 r71 r71 r71 r71 r71 r71 z00 z01 z02 z03"
+    },
+    {
+      "name": "systematic_block_7_3",
+      "input": "12\na00\na01\na02\nm\nm\nm\nm\nm\nm\nm\nz00\nz01\nm\nr73\n",
+      "output": "a00 a01 a02 r73 r73 r73 r73 r73 r73 r73 z00 z01"
+    },
+    {
+      "name": "systematic_block_7_5",
+      "input": "12\na00\na01\na02\na03\na04\nm\nm\nm\nm\nm\nm\nm\nm\nr75\n",
+      "output": "a00 a01 a02 a03 a04 r75 r75 r75 r75 r75 r75 r75"
+    },
+    {
+      "name": "random_case_001",
+      "input": "5\nibis\nibis\nibis\nnewt\nnewt\nnewt\nalpha\n",
+      "output": "ibis ibis ibis alpha alpha"
+    },
+    {
+      "name": "random_case_002",
+      "input": "7\nhawk\nibis\nibis\nibis\nibis\nvole\nvole\nibis\nomega\n",
+      "output": "hawk omega omega omega omega vole vole"
+    },
+    {
+      "name": "random_case_003",
+      "input": "30\nbee\nbee\nbee\nbee\nbee\nbee\nfox\nfox\nfox\nhawk\nhawk\njay\njay\njay\nkiwi\nkiwi\nkiwi\npig\npig\npig\npig\npig\nquail\nquail\nquail\nquail\nquail\nquail\ntoad\ntoad\nseal\ntiny\n",
+      "output": "bee bee bee bee bee bee fox fox fox hawk hawk jay jay jay kiwi kiwi kiwi pig pig pig pig pig quail quail quail quail quail quail toad toad"
+    },
+    {
+      "name": "random_case_004",
+      "input": "10\ndog\ndog\ndog\nhawk\nhawk\nhawk\npig\npig\npig\npig\nhawk\nx\n",
+      "output": "dog dog dog x x x pig pig pig pig"
+    },
+    {
+      "name": "random_case_005",
+      "input": "25\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nlion\nlion\nlion\nlion\nlion\nquail\nquail\nquail\nquail\nquail\nrat\nrat\nrat\nrat\nrat\nrat\nrat\ngoat\nomega\n",
+      "output": "hawk hawk hawk hawk hawk hawk hawk hawk lion lion lion lion lion quail quail quail quail quail rat rat rat rat rat rat rat"
+    },
+    {
+      "name": "random_case_006",
+      "input": "90\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\norca\norca\norca\norca\norca\norca\norca\norca\norca\norca\norca\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nyak\ntiny\n",
+      "output": "cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis orca orca orca orca orca orca orca orca orca orca orca seal seal seal seal seal seal seal seal seal seal seal seal seal seal seal seal seal seal seal seal"
+    },
+    {
+      "name": "random_case_007",
+      "input": "20\nhawk\nhawk\nhawk\nhawk\nmole\nmole\npig\npig\npig\npig\nvole\nvole\nvole\nyak\nyak\nyak\nyak\nyak\nyak\nzebra\nyak\nMID\n",
+      "output": "hawk hawk hawk hawk mole mole pig pig pig pig vole vole vole MID MID MID MID MID MID zebra"
+    },
+    {
+      "name": "random_case_008",
+      "input": "30\nant\nant\ndog\ndog\ndog\ndog\ndog\ndog\ndog\nibis\nkiwi\nkiwi\nkiwi\nkiwi\nmole\nmole\nmole\nmole\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nquail\nquail\nrat\nrat\nrat\nrat\ntoad\n42\n",
+      "output": "ant ant dog dog dog dog dog dog dog ibis kiwi kiwi kiwi kiwi mole mole mole mole newt newt newt newt newt newt quail quail rat rat rat rat"
+    },
+    {
+      "name": "random_case_009",
+      "input": "2\nnewt\nzebra\nzebra\nlongreplacement\n",
+      "output": "newt longreplacement"
+    },
+    {
+      "name": "random_case_010",
+      "input": "25\nfox\nfox\nfox\nfox\nfox\nfox\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\nhawk\nalpha\n",
+      "output": "fox fox fox fox fox fox alpha alpha alpha alpha alpha alpha alpha alpha alpha alpha alpha alpha toad toad toad toad toad toad toad"
+    },
+    {
+      "name": "random_case_011",
+      "input": "2\nibis\nibis\nibis\ntiny\n",
+      "output": "tiny tiny"
+    },
+    {
+      "name": "random_case_012",
+      "input": "2\ngoat\ngoat\nzzz\nnew\n",
+      "output": "goat goat"
+    },
+    {
+      "name": "random_case_013",
+      "input": "20\ncat\ncat\ncat\ncat\ncat\nhawk\nibis\nibis\nibis\nibis\nlion\norca\norca\norca\norca\npig\npig\nquail\nseal\nzebra\nibis\nalpha\n",
+      "output": "cat cat cat cat cat hawk alpha alpha alpha alpha lion orca orca orca orca pig pig quail seal zebra"
+    },
+    {
+      "name": "random_case_014",
+      "input": "12\ncat\ncat\nhawk\nhawk\nhawk\nkiwi\nkiwi\nkiwi\nyak\nyak\nyak\nyak\nhawk\nrepl\n",
+      "output": "cat cat repl repl repl kiwi kiwi kiwi yak yak yak yak"
+    },
+    {
+      "name": "random_case_015",
+      "input": "15\ncat\ncat\ngoat\ngoat\njay\njay\nkiwi\nmole\nmole\nmole\nrat\nrat\nvole\nzebra\nzebra\nzebra\nMID\n",
+      "output": "cat cat goat goat jay jay kiwi mole mole mole rat rat vole MID MID"
+    },
+    {
+      "name": "random_case_016",
+      "input": "0\nrat\nomega\n",
+      "output": ""
+    },
+    {
+      "name": "random_case_017",
+      "input": "25\nant\nant\nant\nlion\nlion\nlion\nlion\nlion\nlion\norca\norca\norca\npig\npig\npig\npig\npig\npig\npig\nvole\nvole\nvole\nvole\nvole\nvole\npig\nalpha\n",
+      "output": "ant ant ant lion lion lion lion lion lion orca orca orca alpha alpha alpha alpha alpha alpha alpha vole vole vole vole vole vole"
+    },
+    {
+      "name": "random_case_018",
+      "input": "2\norca\norca\norca\ntiny\n",
+      "output": "tiny tiny"
+    },
+    {
+      "name": "random_case_019",
+      "input": "10\ndog\neel\neel\neel\nnewt\npig\nquail\ntoad\nyak\nyak\neel\nlongreplacement\n",
+      "output": "dog longreplacement longreplacement longreplacement newt pig quail toad yak yak"
+    },
+    {
+      "name": "random_case_020",
+      "input": "25\nant\nant\nant\nant\nant\nant\nant\nant\neel\neel\neel\nmole\nmole\nmole\nmole\nmole\nmole\nnewt\nnewt\nnewt\nnewt\nzebra\nzebra\nzebra\nzebra\nrat\nnew\n",
+      "output": "ant ant ant ant ant ant ant ant eel eel eel mole mole mole mole mole mole newt newt newt newt zebra zebra zebra zebra"
+    },
+    {
+      "name": "random_case_021",
+      "input": "90\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nibis\nnew\n",
+      "output": "new new new new new new new new new new new new new new new new new new new new new new new new new new new new new new new new new new new new new new new new new new new rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat"
+    },
+    {
+      "name": "random_case_022",
+      "input": "25\nbee\nbee\nbee\neel\neel\neel\nhawk\nhawk\nhawk\nhawk\nnewt\nnewt\nrat\nrat\nrat\nseal\nseal\nseal\ntoad\ntoad\ntoad\nvole\nyak\nyak\nyak\nseal\nrepl\n",
+      "output": "bee bee bee eel eel eel hawk hawk hawk hawk newt newt rat rat rat repl repl repl toad toad toad vole yak yak yak"
+    },
+    {
+      "name": "random_case_023",
+      "input": "4\ndog\ndog\ndog\ndog\ngoat\nalpha\n",
+      "output": "dog dog dog dog"
+    },
+    {
+      "name": "random_case_024",
+      "input": "20\ncat\ncat\ncat\ncat\ncat\njay\njay\njay\njay\njay\nnewt\npig\npig\nrat\nrat\nseal\nseal\nseal\nzebra\nzebra\nnotpresent\n42\n",
+      "output": "cat cat cat cat cat jay jay jay jay jay newt pig pig rat rat seal seal seal zebra zebra"
+    },
+    {
+      "name": "random_case_025",
+      "input": "90\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nlion\nz\n",
+      "output": "bee bee bee bee bee bee bee bee bee bee bee cat cat cat cat cat cat cat cat z z z z z z z z z z z z z z z quail quail quail quail quail quail quail quail quail quail quail quail quail quail seal seal seal seal seal seal seal seal seal seal seal vole vole vole vole vole vole vole vole vole vole vole vole vole vole vole vole yak yak yak yak yak yak yak yak yak yak yak yak yak yak yak"
+    },
+    {
+      "name": "random_case_026",
+      "input": "7\ndog\ndog\nmole\nmole\nmole\nmole\nvole\ndog\nnew\n",
+      "output": "new new mole mole mole mole vole"
+    },
+    {
+      "name": "random_case_027",
+      "input": "5\nmole\nmole\nzebra\nzebra\nzebra\nmole\nalpha\n",
+      "output": "alpha alpha zebra zebra zebra"
+    },
+    {
+      "name": "random_case_028",
+      "input": "30\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\ncat\ncat\ncat\nnewt\nnewt\nnewt\nnewt\nnewt\nseal\nseal\nseal\nvole\nvole\nvole\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nseal\nalpha\n",
+      "output": "bee bee bee bee bee bee bee bee bee cat cat cat newt newt newt newt newt alpha alpha alpha vole vole vole yak yak yak yak yak yak yak"
+    },
+    {
+      "name": "random_case_029",
+      "input": "90\nant\nant\nant\nant\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\neel\neel\neel\neel\neel\neel\neel\neel\neel\neel\neel\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\ncat\nMID\n",
+      "output": "ant ant ant ant bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee MID MID MID MID MID MID MID dog dog dog dog dog dog dog dog eel eel eel eel eel eel eel eel eel eel eel fox fox fox fox fox fox fox fox fox fox fox hawk hawk hawk hawk hawk hawk ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis mole mole mole mole mole mole mole mole mole"
+    },
+    {
+      "name": "random_case_030",
+      "input": "15\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrepl\n",
+      "output": "repl repl repl repl repl repl repl repl repl repl repl repl repl repl repl"
+    },
+    {
+      "name": "random_case_031",
+      "input": "90\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\nomega\n",
+      "output": "bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee quail quail quail quail quail quail quail quail quail quail quail quail quail quail quail quail quail quail quail quail quail quail quail quail quail quail quail quail quail omega omega omega omega omega omega omega omega omega omega omega omega omega omega omega omega omega omega omega omega omega omega omega omega omega omega omega omega omega"
+    },
+    {
+      "name": "random_case_032",
+      "input": "12\nmole\nmole\nmole\nmole\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nmole\nalpha\n",
+      "output": "alpha alpha alpha alpha yak yak yak yak yak yak yak yak"
+    },
+    {
+      "name": "random_case_033",
+      "input": "60\ndog\ndog\ndog\ndog\ndog\ndog\ndog\neel\neel\neel\nfox\nfox\nfox\nfox\nfox\ngoat\ngoat\ngoat\ngoat\ngoat\nibis\nibis\nibis\nibis\nibis\nibis\nmole\nmole\nmole\nmole\nmole\nmole\nnewt\nnewt\nnewt\nnewt\npig\npig\npig\npig\npig\npig\npig\npig\npig\npig\ntoad\ntoad\ntoad\ntoad\ntoad\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\ngoat\ntiny\n",
+      "output": "dog dog dog dog dog dog dog eel eel eel fox fox fox fox fox tiny tiny tiny tiny tiny ibis ibis ibis ibis ibis ibis mole mole mole mole mole mole newt newt newt newt pig pig pig pig pig pig pig pig pig pig toad toad toad toad toad wolf wolf wolf wolf wolf wolf wolf wolf wolf"
+    },
+    {
+      "name": "random_case_034",
+      "input": "20\npig\npig\npig\npig\npig\npig\npig\npig\npig\npig\npig\npig\npig\npig\npig\npig\npig\npig\npig\npig\npig\nlongreplacement\n",
+      "output": "longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement"
+    },
+    {
+      "name": "random_case_035",
+      "input": "0\nfox\nx\n",
+      "output": ""
+    },
+    {
+      "name": "random_case_036",
+      "input": "25\ncat\ncat\ncat\ncat\ndog\ndog\ndog\ndog\nfox\njay\nmole\nmole\nmole\nmole\nmole\nmole\nquail\nquail\nrat\nrat\nseal\ntoad\nyak\nyak\nyak\nmole\nnew\n",
+      "output": "cat cat cat cat dog dog dog dog fox jay new new new new new new quail quail rat rat seal toad yak yak yak"
+    },
+    {
+      "name": "random_case_037",
+      "input": "12\ndog\nfox\nmole\nmole\nnewt\nnewt\norca\npig\npig\nwolf\nwolf\nwolf\nnewt\nomega\n",
+      "output": "dog fox mole mole omega omega orca pig pig wolf wolf wolf"
+    },
+    {
+      "name": "random_case_038",
+      "input": "20\ncat\ncat\ncat\ncat\ncat\ngoat\ngoat\ngoat\nibis\nibis\nibis\nibis\nvole\nvole\nvole\nyak\nyak\nyak\nyak\nyak\nibis\n42\n",
+      "output": "cat cat cat cat cat goat goat goat 42 42 42 42 vole vole vole yak yak yak yak yak"
+    },
+    {
+      "name": "random_case_039",
+      "input": "90\nant\nant\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\njay\njay\njay\njay\njay\njay\njay\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nrat\nalpha\n",
+      "output": "ant ant cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat dog dog dog dog dog dog dog dog dog dog dog dog goat goat goat goat goat goat goat goat goat goat goat goat goat hawk hawk hawk hawk hawk hawk hawk ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis jay jay jay jay jay jay jay newt newt newt newt newt newt alpha alpha alpha alpha alpha alpha alpha alpha alpha alpha alpha alpha zebra zebra zebra zebra zebra zebra"
+    },
+    {
+      "name": "random_case_040",
+      "input": "5\nfox\nfox\njay\njay\nvole\nvole\nnew\n",
+      "output": "fox fox jay jay new"
+    },
+    {
+      "name": "random_case_041",
+      "input": "60\nant\nant\nant\nant\nant\nant\nant\nant\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\ntoad\ntoad\ntoad\ntoad\ntoad\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nzebra\nzebra\nzebra\nzebra\nzebra\nwolf\n42\n",
+      "output": "ant ant ant ant ant ant ant ant fox fox fox fox fox fox fox lion lion lion lion lion lion lion lion lion lion lion quail quail quail quail quail quail quail quail toad toad toad toad toad vole vole vole vole vole vole vole vole vole 42 42 42 42 42 42 42 zebra zebra zebra zebra zebra"
+    },
+    {
+      "name": "random_case_042",
+      "input": "2\nseal\nseal\nfox\nMID\n",
+      "output": "seal seal"
+    },
+    {
+      "name": "random_case_043",
+      "input": "4\nkiwi\nkiwi\nquail\nquail\nkiwi\ntiny\n",
+      "output": "tiny tiny quail quail"
+    },
+    {
+      "name": "random_case_044",
+      "input": "5\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\nx\n",
+      "output": "x x x x x"
+    },
+    {
+      "name": "random_case_045",
+      "input": "5\ngoat\ngoat\norca\nyak\nyak\nlion\nMID\n",
+      "output": "goat goat orca yak yak"
+    },
+    {
+      "name": "random_case_046",
+      "input": "25\ncat\ncat\ncat\ncat\ndog\ndog\ndog\ndog\ndog\ndog\neel\neel\neel\neel\neel\neel\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nmole\nmole\nmole\nbee\nrepl\n",
+      "output": "cat cat cat cat dog dog dog dog dog dog eel eel eel eel eel eel kiwi kiwi kiwi kiwi kiwi kiwi mole mole mole"
+    },
+    {
+      "name": "random_case_047",
+      "input": "1\norca\norca\nrepl\n",
+      "output": "repl"
+    },
+    {
+      "name": "random_case_048",
+      "input": "20\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\n42\n",
+      "output": "42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42"
+    },
+    {
+      "name": "random_case_049",
+      "input": "5\nmole\norca\norca\ntoad\nwolf\ntoad\n42\n",
+      "output": "mole orca orca 42 wolf"
+    },
+    {
+      "name": "random_case_050",
+      "input": "60\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\ndog\ntiny\n",
+      "output": "ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant newt newt newt newt newt newt newt newt newt newt newt newt newt newt newt newt newt newt newt newt newt newt newt newt newt newt newt newt newt newt newt newt newt newt newt newt"
+    },
+    {
+      "name": "random_case_051",
+      "input": "4\nhawk\nkiwi\nnewt\ntoad\nyak\nlongreplacement\n",
+      "output": "hawk kiwi newt toad"
+    },
+    {
+      "name": "random_case_052",
+      "input": "12\nant\nant\ndog\ndog\ndog\nkiwi\nlion\nlion\nmole\nmole\nvole\nzebra\nant\nMID\n",
+      "output": "MID MID dog dog dog kiwi lion lion mole mole vole zebra"
+    },
+    {
+      "name": "random_case_053",
+      "input": "30\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nlongreplacement\n",
+      "output": "newt newt newt newt newt newt newt newt newt newt newt newt newt newt longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement"
+    },
+    {
+      "name": "random_case_054",
+      "input": "12\neel\neel\neel\nfox\norca\norca\norca\norca\norca\nvole\nvole\nvole\norca\nz\n",
+      "output": "eel eel eel fox z z z z z vole vole vole"
+    },
+    {
+      "name": "random_case_055",
+      "input": "90\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nibis\nrepl\n",
+      "output": "hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk repl repl repl repl repl repl repl repl repl repl repl repl repl repl repl repl repl repl jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay mole mole mole mole mole mole mole mole mole mole mole mole mole mole mole mole mole mole mole mole mole mole mole mole mole mole mole mole mole"
+    },
+    {
+      "name": "random_case_056",
+      "input": "8\ndog\ndog\neel\nhawk\nmole\nmole\nmole\nseal\nhawk\nlongreplacement\n",
+      "output": "dog dog eel longreplacement mole mole mole seal"
+    },
+    {
+      "name": "random_case_057",
+      "input": "40\nbee\nbee\nbee\neel\neel\neel\neel\neel\neel\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nibis\nibis\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nlion\nlion\nlion\nlion\norca\nquail\nquail\nquail\nquail\nseal\nseal\nseal\ntoad\ntoad\ntoad\ntoad\ntoad\nkiwi\nz\n",
+      "output": "bee bee bee eel eel eel eel eel eel hawk hawk hawk hawk hawk hawk hawk ibis ibis z z z z z lion lion lion lion orca quail quail quail quail seal seal seal toad toad toad toad toad"
+    },
+    {
+      "name": "random_case_058",
+      "input": "2\njay\nvole\njay\nrepl\n",
+      "output": "repl vole"
+    },
+    {
+      "name": "random_case_059",
+      "input": "5\nrat\nrat\nrat\nrat\ntoad\nmole\nMID\n",
+      "output": "rat rat rat rat toad"
+    },
+    {
+      "name": "random_case_060",
+      "input": "90\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\naardvark\nz\n",
+      "output": "bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion"
+    },
+    {
+      "name": "random_case_061",
+      "input": "40\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\nkiwi\nkiwi\nkiwi\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nvole\nalpha\n",
+      "output": "cat cat cat cat cat cat cat cat cat cat kiwi kiwi kiwi toad toad toad toad toad toad toad toad toad alpha alpha alpha alpha alpha alpha alpha alpha zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra"
+    },
+    {
+      "name": "random_case_062",
+      "input": "8\nfox\nfox\nfox\nfox\njay\njay\njay\nyak\njay\nalpha\n",
+      "output": "fox fox fox fox alpha alpha alpha yak"
+    },
+    {
+      "name": "random_case_063",
+      "input": "7\ngoat\ngoat\nmole\npig\npig\npig\nzebra\npig\nrepl\n",
+      "output": "goat goat mole repl repl repl zebra"
+    },
+    {
+      "name": "random_case_064",
+      "input": "6\ncat\ncat\ncat\ndog\ndog\ndog\ncat\nnew\n",
+      "output": "new new new dog dog dog"
+    },
+    {
+      "name": "random_case_065",
+      "input": "3\nhawk\nnewt\nnewt\nrat\ntiny\n",
+      "output": "hawk newt newt"
+    },
+    {
+      "name": "random_case_066",
+      "input": "20\nbee\nbee\nbee\nbee\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nnewt\nnewt\nnewt\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nMID\n",
+      "output": "bee bee bee bee fox fox fox fox fox fox fox newt newt newt MID MID MID MID MID MID"
+    },
+    {
+      "name": "random_case_067",
+      "input": "3\ncat\ncat\ncat\ncat\ntiny\n",
+      "output": "tiny tiny tiny"
+    },
+    {
+      "name": "random_case_068",
+      "input": "4\nant\nmole\nmole\nmole\nmole\nlongreplacement\n",
+      "output": "ant longreplacement longreplacement longreplacement"
+    },
+    {
+      "name": "random_case_069",
+      "input": "6\neel\neel\nquail\nseal\nseal\nseal\neel\nrepl\n",
+      "output": "repl repl quail seal seal seal"
+    },
+    {
+      "name": "random_case_070",
+      "input": "30\nlion\nlion\nlion\nlion\nnewt\nnewt\nnewt\nnewt\norca\norca\norca\norca\norca\npig\npig\npig\npig\nseal\nseal\ntoad\ntoad\ntoad\ntoad\nvole\nvole\nzebra\nzebra\nzebra\nzebra\nzebra\ntoad\nlongreplacement\n",
+      "output": "lion lion lion lion newt newt newt newt orca orca orca orca orca pig pig pig pig seal seal longreplacement longreplacement longreplacement longreplacement vole vole zebra zebra zebra zebra zebra"
+    },
+    {
+      "name": "random_case_071",
+      "input": "7\nbee\nbee\ndog\neel\nmole\nmole\nseal\nseal\nrepl\n",
+      "output": "bee bee dog eel mole mole repl"
+    },
+    {
+      "name": "random_case_072",
+      "input": "25\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nlion\nx\n",
+      "output": "x x x x x x x x x x x x x vole vole vole vole vole vole vole vole vole vole vole vole"
+    },
+    {
+      "name": "random_case_073",
+      "input": "10\ngoat\njay\njay\njay\npig\nwolf\nyak\nyak\nzebra\nzebra\nfox\nomega\n",
+      "output": "goat jay jay jay pig wolf yak yak zebra zebra"
+    },
+    {
+      "name": "random_case_074",
+      "input": "40\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\njay\njay\njay\njay\njay\njay\njay\njay\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nseal\n42\n",
+      "output": "ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis jay jay jay jay jay jay jay jay kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi zebra zebra zebra zebra zebra zebra zebra zebra zebra"
+    },
+    {
+      "name": "random_case_075",
+      "input": "7\nfox\nfox\nfox\nfox\nfox\nseal\nseal\nseal\nlongreplacement\n",
+      "output": "fox fox fox fox fox longreplacement longreplacement"
+    },
+    {
+      "name": "random_case_076",
+      "input": "2\nbee\ntoad\nbee\n42\n",
+      "output": "42 toad"
+    },
+    {
+      "name": "random_case_077",
+      "input": "2\nant\nant\nant\nomega\n",
+      "output": "omega omega"
+    },
+    {
+      "name": "random_case_078",
+      "input": "30\nant\nant\nant\nant\nant\nant\nant\nant\nant\nhawk\nhawk\nhawk\nhawk\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nseal\nseal\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nz\n",
+      "output": "ant ant ant ant ant ant ant ant ant hawk hawk hawk hawk newt newt newt newt newt newt newt newt newt seal seal z z z z z z"
+    },
+    {
+      "name": "random_case_079",
+      "input": "0\nrat\nrepl\n",
+      "output": ""
+    },
+    {
+      "name": "random_case_080",
+      "input": "30\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nzzzz\nlongreplacement\n",
+      "output": "rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat"
+    },
+    {
+      "name": "random_case_081",
+      "input": "8\nbee\nbee\nibis\njay\nmole\npig\npig\nzebra\nmole\nx\n",
+      "output": "bee bee ibis jay x pig pig zebra"
+    },
+    {
+      "name": "random_case_082",
+      "input": "7\nlion\nlion\nlion\nlion\nlion\nlion\nlion\npig\nz\n",
+      "output": "lion lion lion lion lion lion lion"
+    },
+    {
+      "name": "random_case_083",
+      "input": "40\ncat\ncat\ncat\nibis\nibis\nibis\njay\njay\njay\njay\njay\njay\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nlion\nlion\nlion\nlion\npig\npig\npig\npig\npig\npig\nrat\nrat\nrat\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nalpha\n",
+      "output": "cat cat cat ibis ibis ibis jay jay jay jay jay jay kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi lion lion lion lion pig pig pig pig pig pig rat rat rat alpha alpha alpha alpha alpha alpha alpha"
+    },
+    {
+      "name": "random_case_084",
+      "input": "1\nyak\nyak\nnew\n",
+      "output": "new"
+    },
+    {
+      "name": "random_case_085",
+      "input": "90\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzzzz\nz\n",
+      "output": "lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra"
+    },
+    {
+      "name": "random_case_086",
+      "input": "30\ncat\ncat\ncat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\naardvark\ntiny\n",
+      "output": "cat cat cat rat rat rat rat rat rat rat vole vole vole vole vole vole vole vole vole vole vole vole yak yak yak yak yak yak yak yak"
+    },
+    {
+      "name": "random_case_087",
+      "input": "40\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nfox\nalpha\n",
+      "output": "dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi"
+    },
+    {
+      "name": "random_case_088",
+      "input": "6\ngoat\ngoat\ngoat\ngoat\njay\njay\naardvark\nz\n",
+      "output": "goat goat goat goat jay jay"
+    },
+    {
+      "name": "random_case_089",
+      "input": "3\nhawk\nhawk\nnewt\nhawk\ntiny\n",
+      "output": "tiny tiny newt"
+    },
+    {
+      "name": "random_case_090",
+      "input": "20\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nomega\n",
+      "output": "omega omega omega omega omega omega omega omega omega omega omega omega omega omega omega omega omega omega omega omega"
+    },
+    {
+      "name": "random_case_091",
+      "input": "5\nrat\nrat\nrat\nrat\nrat\nrat\n42\n",
+      "output": "42 42 42 42 42"
+    },
+    {
+      "name": "random_case_092",
+      "input": "7\ncat\ndog\ndog\neel\nhawk\nyak\nyak\nant\nomega\n",
+      "output": "cat dog dog eel hawk yak yak"
+    },
+    {
+      "name": "random_case_093",
+      "input": "8\nant\nant\nant\ncat\nquail\nseal\ntoad\ntoad\naaa\n42\n",
+      "output": "ant ant ant cat quail seal toad toad"
+    },
+    {
+      "name": "random_case_094",
+      "input": "10\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nz\n",
+      "output": "z z z z z z z z z z"
+    },
+    {
+      "name": "random_case_095",
+      "input": "12\nant\nant\nant\nbee\nhawk\nnewt\nnewt\nnewt\nquail\nquail\nwolf\nwolf\nnotpresent\n42\n",
+      "output": "ant ant ant bee hawk newt newt newt quail quail wolf wolf"
+    },
+    {
+      "name": "random_case_096",
+      "input": "25\neel\nfox\nfox\nibis\nibis\nibis\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nquail\nquail\ntoad\ntoad\ntoad\ntoad\nwolf\nwolf\nwolf\nyak\nyak\nzebra\nzebra\nquail\nMID\n",
+      "output": "eel fox fox ibis ibis ibis kiwi kiwi kiwi kiwi kiwi kiwi MID MID toad toad toad toad wolf wolf wolf yak yak zebra zebra"
+    },
+    {
+      "name": "random_case_097",
+      "input": "5\ndog\nquail\nvole\nvole\nvole\nwolf\nnew\n",
+      "output": "dog quail vole vole vole"
+    },
+    {
+      "name": "random_case_098",
+      "input": "20\nant\nbee\nbee\nbee\nbee\ndog\nhawk\nhawk\nhawk\nibis\nibis\nibis\nkiwi\nmole\npig\npig\nwolf\nwolf\nwolf\nwolf\nhawk\nnew\n",
+      "output": "ant bee bee bee bee dog new new new ibis ibis ibis kiwi mole pig pig wolf wolf wolf wolf"
+    },
+    {
+      "name": "random_case_099",
+      "input": "8\nrat\nrat\nseal\nseal\ntoad\ntoad\ntoad\ntoad\ntoad\nlongreplacement\n",
+      "output": "rat rat seal seal longreplacement longreplacement longreplacement longreplacement"
+    },
+    {
+      "name": "random_case_100",
+      "input": "60\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\nvole\nvole\nvole\nvole\nvole\nvole\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nlion\nMID\n",
+      "output": "MID MID MID MID MID MID MID MID MID MID MID MID MID MID toad toad toad toad toad toad toad toad toad toad toad toad toad toad toad toad vole vole vole vole vole vole yak yak yak yak yak yak yak yak yak yak yak yak yak yak yak yak zebra zebra zebra zebra zebra zebra zebra zebra"
+    },
+    {
+      "name": "random_case_101",
+      "input": "8\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nrepl\n",
+      "output": "repl repl repl repl repl repl repl repl"
+    },
+    {
+      "name": "random_case_102",
+      "input": "20\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nant\nz\n",
+      "output": "ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis"
+    },
+    {
+      "name": "random_case_103",
+      "input": "6\nbee\ndog\neel\neel\neel\nquail\ndog\nz\n",
+      "output": "bee z eel eel eel quail"
+    },
+    {
+      "name": "random_case_104",
+      "input": "40\neel\neel\neel\neel\neel\neel\neel\neel\neel\neel\neel\neel\neel\neel\neel\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nquail\nnew\n",
+      "output": "eel eel eel eel eel eel eel eel eel eel eel eel eel eel eel new new new new new new new new new new new new new new new vole vole vole vole vole vole vole vole vole vole"
+    },
+    {
+      "name": "random_case_105",
+      "input": "30\nant\nant\nant\nhawk\nhawk\nhawk\nhawk\nhawk\njay\njay\njay\njay\nnewt\nrat\nrat\nrat\nrat\nrat\ntoad\ntoad\nvole\nvole\nvole\nwolf\nwolf\nwolf\nyak\nyak\nyak\nyak\nvole\nrepl\n",
+      "output": "ant ant ant hawk hawk hawk hawk hawk jay jay jay jay newt rat rat rat rat rat toad toad repl repl repl wolf wolf wolf yak yak yak yak"
+    },
+    {
+      "name": "random_case_106",
+      "input": "5\nhawk\nhawk\nibis\nibis\nibis\nhawk\nlongreplacement\n",
+      "output": "longreplacement longreplacement ibis ibis ibis"
+    },
+    {
+      "name": "random_case_107",
+      "input": "7\nbee\nbee\ncat\ndog\ndog\nfox\nfox\nhawk\nalpha\n",
+      "output": "bee bee cat dog dog fox fox"
+    },
+    {
+      "name": "random_case_108",
+      "input": "6\njay\njay\njay\njay\njay\njay\njay\nomega\n",
+      "output": "omega omega omega omega omega omega"
+    },
+    {
+      "name": "random_case_109",
+      "input": "12\nfox\nfox\ngoat\ngoat\ngoat\ngoat\ngoat\nhawk\nkiwi\nmole\nmole\nyak\nmole\nalpha\n",
+      "output": "fox fox goat goat goat goat goat hawk kiwi alpha alpha yak"
+    },
+    {
+      "name": "random_case_110",
+      "input": "15\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\nomega\n",
+      "output": "omega omega omega omega omega omega omega omega omega omega omega omega omega omega omega"
+    },
+    {
+      "name": "random_case_111",
+      "input": "1\nhawk\naardvark\nrepl\n",
+      "output": "hawk"
+    },
+    {
+      "name": "random_case_112",
+      "input": "12\nquail\nquail\nquail\nquail\nquail\nquail\nrat\nvole\nvole\nvole\nvole\nvole\nquail\nMID\n",
+      "output": "MID MID MID MID MID MID rat vole vole vole vole vole"
+    },
+    {
+      "name": "random_case_113",
+      "input": "8\nant\nlion\norca\norca\nquail\nrat\nrat\nrat\nrat\ntiny\n",
+      "output": "ant lion orca orca quail tiny tiny tiny"
+    },
+    {
+      "name": "random_case_114",
+      "input": "1\ntoad\ntoad\ntiny\n",
+      "output": "tiny"
+    },
+    {
+      "name": "random_case_115",
+      "input": "60\nant\nant\nant\nant\ndog\ndog\ndog\ndog\ndog\ndog\ndog\neel\neel\neel\neel\neel\neel\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\njay\njay\njay\njay\njay\njay\njay\njay\nkiwi\nkiwi\nkiwi\nkiwi\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nseal\nomega\n",
+      "output": "ant ant ant ant dog dog dog dog dog dog dog eel eel eel eel eel eel fox fox fox fox fox fox fox hawk hawk hawk hawk hawk hawk jay jay jay jay jay jay jay jay kiwi kiwi kiwi kiwi omega omega omega omega omega omega omega omega omega omega yak yak yak yak yak yak yak yak"
+    },
+    {
+      "name": "random_case_116",
+      "input": "15\nbee\nbee\norca\norca\norca\norca\norca\norca\norca\norca\npig\npig\nzebra\nzebra\nzebra\nant\nnew\n",
+      "output": "bee bee orca orca orca orca orca orca orca orca pig pig zebra zebra zebra"
+    },
+    {
+      "name": "random_case_117",
+      "input": "25\nant\nant\nant\nant\nant\nant\nant\nant\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\norca\norca\norca\norca\norca\norca\norca\norca\ndog\n42\n",
+      "output": "ant ant ant ant ant ant ant ant cat cat cat cat cat cat cat cat cat orca orca orca orca orca orca orca orca"
+    },
+    {
+      "name": "random_case_118",
+      "input": "7\nant\nibis\njay\nlion\nnewt\norca\nquail\norca\nnew\n",
+      "output": "ant ibis jay lion newt new quail"
+    },
+    {
+      "name": "random_case_119",
+      "input": "60\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nant\nnew\n",
+      "output": "new new new new new new new new new new new new new new new new new new new new new new new new new new dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog dog rat rat rat rat rat rat rat rat rat rat rat rat"
+    },
+    {
+      "name": "random_case_120",
+      "input": "10\ndog\neel\nfox\nhawk\nseal\nseal\nwolf\nwolf\nzebra\nzebra\nhawk\nrepl\n",
+      "output": "dog eel fox repl seal seal wolf wolf zebra zebra"
+    },
+    {
+      "name": "random_case_121",
+      "input": "5\nant\nlion\nlion\nlion\nlion\nlion\nz\n",
+      "output": "ant z z z z"
+    },
+    {
+      "name": "random_case_122",
+      "input": "40\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nfox\nrepl\n",
+      "output": "wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf"
+    },
+    {
+      "name": "random_case_123",
+      "input": "40\nbee\nbee\ndog\ndog\ndog\neel\nfox\nfox\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\njay\njay\njay\njay\nmole\nmole\nmole\nmole\nquail\nquail\nquail\nquail\nquail\nquail\nzebra\nzebra\nzebra\nzebra\nzebra\njay\nx\n",
+      "output": "bee bee dog dog dog eel fox fox goat goat goat goat goat goat hawk hawk hawk hawk hawk hawk hawk x x x x mole mole mole mole quail quail quail quail quail quail zebra zebra zebra zebra zebra"
+    },
+    {
+      "name": "random_case_124",
+      "input": "40\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nbee\nlongreplacement\n",
+      "output": "longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement rat rat rat rat rat rat rat rat rat rat rat vole vole vole vole vole vole vole vole vole vole vole"
+    },
+    {
+      "name": "random_case_125",
+      "input": "0\nseal\nrepl\n",
+      "output": ""
+    },
+    {
+      "name": "random_case_126",
+      "input": "6\neel\neel\neel\nibis\nibis\nwolf\nibis\ntiny\n",
+      "output": "eel eel eel tiny tiny wolf"
+    },
+    {
+      "name": "random_case_127",
+      "input": "3\njay\njay\norca\njay\nlongreplacement\n",
+      "output": "longreplacement longreplacement orca"
+    },
+    {
+      "name": "random_case_128",
+      "input": "10\ngoat\ngoat\nmole\nmole\nmole\norca\norca\npig\npig\nrat\npig\nrepl\n",
+      "output": "goat goat mole mole mole orca orca repl repl rat"
+    },
+    {
+      "name": "random_case_129",
+      "input": "12\neel\neel\neel\neel\neel\neel\neel\neel\neel\neel\neel\neel\neel\nalpha\n",
+      "output": "alpha alpha alpha alpha alpha alpha alpha alpha alpha alpha alpha alpha"
+    },
+    {
+      "name": "random_case_130",
+      "input": "1\nrat\nrat\nomega\n",
+      "output": "omega"
+    },
+    {
+      "name": "random_case_131",
+      "input": "0\norca\n42\n",
+      "output": ""
+    },
+    {
+      "name": "random_case_132",
+      "input": "60\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nz\n",
+      "output": "rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat z z z z z z z z z z z z z z z z z z z z z z z z z z z z z z z z"
+    },
+    {
+      "name": "random_case_133",
+      "input": "5\nbee\nbee\ncat\ncat\nrat\neel\n42\n",
+      "output": "bee bee cat cat rat"
+    },
+    {
+      "name": "random_case_134",
+      "input": "2\nkiwi\nkiwi\njay\nx\n",
+      "output": "kiwi kiwi"
+    },
+    {
+      "name": "random_case_135",
+      "input": "8\nquail\nquail\nquail\nseal\nseal\nseal\nyak\nyak\nyak\nalpha\n",
+      "output": "quail quail quail seal seal seal alpha alpha"
+    },
+    {
+      "name": "random_case_136",
+      "input": "6\nfox\nfox\nmole\nmole\nyak\nyak\nwolf\nalpha\n",
+      "output": "fox fox mole mole yak yak"
+    },
+    {
+      "name": "random_case_137",
+      "input": "2\nibis\ntoad\ntoad\nrepl\n",
+      "output": "ibis repl"
+    },
+    {
+      "name": "random_case_138",
+      "input": "60\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\npig\npig\npig\npig\npig\npig\npig\npig\npig\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nkiwi\nlongreplacement\n",
+      "output": "longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement pig pig pig pig pig pig pig pig pig quail quail quail quail quail quail quail quail quail quail quail quail quail quail quail vole vole vole vole vole vole vole vole vole vole vole yak yak yak yak yak yak yak yak yak yak yak"
+    },
+    {
+      "name": "random_case_139",
+      "input": "3\ndog\ndog\ndog\norca\nnew\n",
+      "output": "dog dog dog"
+    },
+    {
+      "name": "random_case_140",
+      "input": "90\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nant\nrepl\n",
+      "output": "repl repl repl repl repl repl repl repl repl repl repl repl repl repl repl repl repl repl cat cat cat cat cat cat cat cat cat cat cat cat cat fox fox fox fox fox fox fox fox fox fox fox fox fox fox fox fox fox fox fox fox jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi"
+    },
+    {
+      "name": "random_case_141",
+      "input": "40\nant\nant\nant\nant\nbee\nbee\nbee\nbee\nbee\nbee\neel\neel\neel\nfox\nfox\nfox\nfox\nhawk\nhawk\nhawk\nhawk\nhawk\nkiwi\nkiwi\nkiwi\nrat\nrat\nrat\nseal\nseal\nseal\nwolf\nwolf\nwolf\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\njay\nx\n",
+      "output": "ant ant ant ant bee bee bee bee bee bee eel eel eel fox fox fox fox hawk hawk hawk hawk hawk kiwi kiwi kiwi rat rat rat seal seal seal wolf wolf wolf zebra zebra zebra zebra zebra zebra"
+    },
+    {
+      "name": "random_case_142",
+      "input": "0\nvole\nMID\n",
+      "output": ""
+    },
+    {
+      "name": "random_case_143",
+      "input": "2\nlion\nyak\nlion\ntiny\n",
+      "output": "tiny yak"
+    },
+    {
+      "name": "random_case_144",
+      "input": "1\njay\njay\ntiny\n",
+      "output": "tiny"
+    },
+    {
+      "name": "random_case_145",
+      "input": "30\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\nhawk\nhawk\nhawk\nhawk\nhawk\nibis\nibis\nibis\njay\nmole\nmole\norca\norca\nquail\nquail\ntoad\nvole\nvole\nvole\nvole\nyak\nyak\nyak\nyak\norca\nx\n",
+      "output": "goat goat goat goat goat goat hawk hawk hawk hawk hawk ibis ibis ibis jay mole mole x x quail quail toad vole vole vole vole yak yak yak yak"
+    },
+    {
+      "name": "random_case_146",
+      "input": "2\nbee\nbee\nbee\nlongreplacement\n",
+      "output": "longreplacement longreplacement"
+    },
+    {
+      "name": "random_case_147",
+      "input": "90\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\neel\neel\neel\neel\neel\neel\neel\neel\neel\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nfox\nMID\n",
+      "output": "bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee bee eel eel eel eel eel eel eel eel eel hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk jay jay jay jay jay jay jay jay jay jay jay jay jay jay mole mole mole mole mole mole mole mole newt newt newt newt newt newt newt newt rat rat rat rat rat rat rat rat seal seal seal seal seal seal seal seal seal wolf wolf wolf wolf wolf wolf"
+    },
+    {
+      "name": "random_case_148",
+      "input": "15\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nx\n",
+      "output": "x x x x x x x x x x x x x x x"
+    },
+    {
+      "name": "random_case_149",
+      "input": "10\nbee\nbee\nbee\ndog\nfox\nhawk\nnewt\ntoad\nwolf\nwolf\nbee\nomega\n",
+      "output": "omega omega omega dog fox hawk newt toad wolf wolf"
+    },
+    {
+      "name": "random_case_150",
+      "input": "40\nbee\nbee\nbee\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ndog\ndog\ndog\ndog\nfox\nfox\nfox\nfox\nfox\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nibis\nibis\nibis\nseal\nseal\nseal\nseal\nseal\nseal\nseal\ntoad\ntoad\ntoad\ntoad\njay\ntiny\n",
+      "output": "bee bee bee cat cat cat cat cat cat cat cat dog dog dog dog fox fox fox fox fox hawk hawk hawk hawk hawk hawk ibis ibis ibis seal seal seal seal seal seal seal toad toad toad toad"
+    },
+    {
+      "name": "random_case_151",
+      "input": "2\ncat\nhawk\ncat\nomega\n",
+      "output": "omega hawk"
+    },
+    {
+      "name": "random_case_152",
+      "input": "6\nant\nant\ndog\nhawk\njay\nrat\naaa\nalpha\n",
+      "output": "ant ant dog hawk jay rat"
+    },
+    {
+      "name": "random_case_153",
+      "input": "4\nrat\nwolf\nwolf\nwolf\norca\n42\n",
+      "output": "rat wolf wolf wolf"
+    },
+    {
+      "name": "random_case_154",
+      "input": "6\ngoat\ngoat\nnewt\nnewt\nnewt\nyak\ngoat\nrepl\n",
+      "output": "repl repl newt newt newt yak"
+    },
+    {
+      "name": "random_case_155",
+      "input": "12\ncat\nfox\nfox\nfox\nkiwi\nkiwi\nkiwi\ntoad\ntoad\nzebra\nzebra\nzebra\naaa\n42\n",
+      "output": "cat fox fox fox kiwi kiwi kiwi toad toad zebra zebra zebra"
+    },
+    {
+      "name": "random_case_156",
+      "input": "25\ngoat\ngoat\ngoat\ngoat\ngoat\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\npig\npig\npig\npig\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nhawk\nomega\n",
+      "output": "goat goat goat goat goat omega omega omega omega omega omega omega pig pig pig pig quail quail quail quail quail quail quail quail quail"
+    },
+    {
+      "name": "random_case_157",
+      "input": "0\nzzz\nMID\n",
+      "output": ""
+    },
+    {
+      "name": "random_case_158",
+      "input": "1\nbee\nwolf\nalpha\n",
+      "output": "bee"
+    },
+    {
+      "name": "random_case_159",
+      "input": "3\nwolf\nwolf\nwolf\nzzz\nomega\n",
+      "output": "wolf wolf wolf"
+    },
+    {
+      "name": "random_case_160",
+      "input": "7\neel\neel\norca\norca\nrat\nrat\nrat\ncat\nnew\n",
+      "output": "eel eel orca orca rat rat rat"
+    },
+    {
+      "name": "random_case_161",
+      "input": "12\nant\nant\nant\ncat\ndog\ndog\ngoat\nhawk\nmole\nmole\nvole\nvole\ndog\n42\n",
+      "output": "ant ant ant cat 42 42 goat hawk mole mole vole vole"
+    },
+    {
+      "name": "random_case_162",
+      "input": "12\ncat\ncat\nfox\nfox\njay\njay\njay\nkiwi\norca\nseal\nvole\nvole\nrat\nnew\n",
+      "output": "cat cat fox fox jay jay jay kiwi orca seal vole vole"
+    },
+    {
+      "name": "random_case_163",
+      "input": "20\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nlion\nlion\nlion\nmole\nnewt\nnewt\nnewt\nnewt\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\nhawk\nz\n",
+      "output": "z z z z z z lion lion lion mole newt newt newt newt toad toad toad toad toad toad"
+    },
+    {
+      "name": "random_case_164",
+      "input": "0\nzzzz\n42\n",
+      "output": ""
+    },
+    {
+      "name": "random_case_165",
+      "input": "15\neel\neel\ngoat\ngoat\nibis\nibis\nibis\nibis\nibis\nlion\nlion\nlion\nlion\nseal\nseal\nibis\nomega\n",
+      "output": "eel eel goat goat omega omega omega omega omega lion lion lion lion seal seal"
+    },
+    {
+      "name": "random_case_166",
+      "input": "10\nhawk\nhawk\nhawk\nnewt\nnewt\nnewt\norca\norca\ntoad\nvole\norca\nMID\n",
+      "output": "hawk hawk hawk newt newt newt MID MID toad vole"
+    },
+    {
+      "name": "random_case_167",
+      "input": "1\nzebra\nzebra\nlongreplacement\n",
+      "output": "longreplacement"
+    },
+    {
+      "name": "random_case_168",
+      "input": "1\njay\njay\nz\n",
+      "output": "z"
+    },
+    {
+      "name": "random_case_169",
+      "input": "1\nbee\nbee\nrepl\n",
+      "output": "repl"
+    },
+    {
+      "name": "random_case_170",
+      "input": "3\nyak\nyak\nyak\nyak\nlongreplacement\n",
+      "output": "longreplacement longreplacement longreplacement"
+    },
+    {
+      "name": "random_case_171",
+      "input": "10\nant\nant\neel\neel\neel\neel\ngoat\ngoat\nlion\nmole\njay\nlongreplacement\n",
+      "output": "ant ant eel eel eel eel goat goat lion mole"
+    },
+    {
+      "name": "random_case_172",
+      "input": "6\nfox\nnewt\nseal\nseal\nseal\nwolf\nseal\nlongreplacement\n",
+      "output": "fox newt longreplacement longreplacement longreplacement wolf"
+    },
+    {
+      "name": "random_case_173",
+      "input": "5\nmole\nmole\nmole\nmole\nmole\nmole\nnew\n",
+      "output": "new new new new new"
+    },
+    {
+      "name": "random_case_174",
+      "input": "5\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\n42\n",
+      "output": "42 42 42 42 42"
+    },
+    {
+      "name": "random_case_175",
+      "input": "12\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\ntiny\n",
+      "output": "toad toad toad toad toad toad tiny tiny tiny tiny tiny tiny"
+    },
+    {
+      "name": "random_case_176",
+      "input": "40\ndog\ndog\ndog\ndog\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nibis\nibis\nibis\nibis\njay\njay\njay\njay\nlion\nlion\nmole\nmole\nmole\nmole\norca\nrat\nrat\nrat\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nwolf\nwolf\nwolf\nwolf\nwolf\nlongreplacement\n",
+      "output": "dog dog dog dog hawk hawk hawk hawk hawk hawk ibis ibis ibis ibis jay jay jay jay lion lion mole mole mole mole orca rat rat rat seal seal seal seal seal seal seal seal longreplacement longreplacement longreplacement longreplacement"
+    },
+    {
+      "name": "random_case_177",
+      "input": "15\njay\njay\njay\njay\njay\njay\nlion\nmole\nmole\nmole\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\nlongreplacement\n",
+      "output": "jay jay jay jay jay jay lion mole mole mole longreplacement longreplacement longreplacement longreplacement longreplacement"
+    },
+    {
+      "name": "random_case_178",
+      "input": "1\npig\njay\n42\n",
+      "output": "pig"
+    },
+    {
+      "name": "random_case_179",
+      "input": "20\nhawk\nhawk\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nibis\n42\n",
+      "output": "hawk hawk 42 42 42 42 42 42 42 42 42 mole mole mole mole mole mole mole mole mole"
+    },
+    {
+      "name": "random_case_180",
+      "input": "0\nquail\n42\n",
+      "output": ""
+    },
+    {
+      "name": "random_case_181",
+      "input": "90\norca\norca\norca\norca\norca\norca\norca\norca\norca\norca\norca\norca\norca\norca\norca\norca\norca\norca\norca\norca\norca\norca\norca\norca\norca\norca\norca\norca\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\norca\nlongreplacement\n",
+      "output": "longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement toad toad toad toad toad toad toad toad toad toad toad toad toad toad toad toad toad toad toad toad toad toad toad toad toad toad toad toad toad toad toad toad toad zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra"
+    },
+    {
+      "name": "random_case_182",
+      "input": "2\ngoat\ngoat\ngoat\n42\n",
+      "output": "42 42"
+    },
+    {
+      "name": "random_case_183",
+      "input": "12\ngoat\ngoat\ngoat\ngoat\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nomega\n",
+      "output": "goat goat goat goat omega omega omega omega omega omega omega omega"
+    },
+    {
+      "name": "random_case_184",
+      "input": "2\ntoad\ntoad\ntoad\ntiny\n",
+      "output": "tiny tiny"
+    },
+    {
+      "name": "random_case_185",
+      "input": "60\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nfox\nfox\nfox\nfox\nfox\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\nkiwi\nkiwi\nkiwi\nmole\nmole\nmole\nmole\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nant\n42\n",
+      "output": "42 42 42 42 42 42 42 42 42 42 42 42 42 42 fox fox fox fox fox goat goat goat goat goat goat goat goat goat goat goat goat goat kiwi kiwi kiwi mole mole mole mole newt newt newt newt newt newt newt rat rat rat rat rat rat rat wolf wolf wolf wolf wolf wolf wolf"
+    },
+    {
+      "name": "random_case_186",
+      "input": "3\njay\njay\njay\nsun\nrepl\n",
+      "output": "jay jay jay"
+    },
+    {
+      "name": "random_case_187",
+      "input": "3\ncat\nhawk\nhawk\nhawk\nrepl\n",
+      "output": "cat repl repl"
+    },
+    {
+      "name": "random_case_188",
+      "input": "20\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nrepl\n",
+      "output": "repl repl repl repl repl repl repl repl repl repl repl repl repl repl repl repl repl repl repl repl"
+    },
+    {
+      "name": "random_case_189",
+      "input": "25\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\njay\njay\njay\njay\njay\njay\njay\njay\njay\nyak\nyak\nyak\nzebra\nzebra\nzebra\njay\nnew\n",
+      "output": "dog dog dog dog dog dog dog dog dog dog new new new new new new new new new yak yak yak zebra zebra zebra"
+    },
+    {
+      "name": "random_case_190",
+      "input": "30\ncat\ncat\ncat\ncat\neel\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\njay\njay\nlion\nlion\nlion\nmole\nmole\nmole\nmole\nmole\norca\norca\norca\norca\norca\nquail\nyak\nyak\nyak\nmole\n42\n",
+      "output": "cat cat cat cat eel hawk hawk hawk hawk hawk hawk jay jay lion lion lion 42 42 42 42 42 orca orca orca orca orca quail yak yak yak"
+    },
+    {
+      "name": "random_case_191",
+      "input": "30\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nlion\nz\n",
+      "output": "fox fox fox fox fox fox fox fox z z z z z z z z z z wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf wolf"
+    },
+    {
+      "name": "random_case_192",
+      "input": "0\nibis\nomega\n",
+      "output": ""
+    },
+    {
+      "name": "random_case_193",
+      "input": "12\nant\nant\nfox\nfox\njay\njay\njay\nmole\nrat\nseal\nseal\ntoad\nnotpresent\nMID\n",
+      "output": "ant ant fox fox jay jay jay mole rat seal seal toad"
+    },
+    {
+      "name": "random_case_194",
+      "input": "6\nant\ncat\nlion\nnewt\nnewt\nvole\nnewt\nrepl\n",
+      "output": "ant cat lion repl repl vole"
+    },
+    {
+      "name": "random_case_195",
+      "input": "4\nrat\nseal\nzebra\nzebra\nzebra\nMID\n",
+      "output": "rat seal MID MID"
+    },
+    {
+      "name": "random_case_196",
+      "input": "15\nkiwi\nkiwi\nrat\nrat\nrat\nvole\nvole\nvole\nyak\nyak\nyak\nzebra\nzebra\nzebra\nzebra\ndog\nz\n",
+      "output": "kiwi kiwi rat rat rat vole vole vole yak yak yak zebra zebra zebra zebra"
+    },
+    {
+      "name": "random_case_197",
+      "input": "60\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nlion\nlion\nlion\nlion\nlion\nlion\nlion\npig\npig\npig\npig\npig\npig\npig\npig\npig\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\npig\nlongreplacement\n",
+      "output": "cat cat cat cat cat cat cat cat cat cat cat cat hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk lion lion lion lion lion lion lion longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement rat rat rat rat rat rat rat rat rat rat rat rat rat zebra zebra zebra zebra zebra zebra zebra"
+    },
+    {
+      "name": "random_case_198",
+      "input": "0\nrat\nnew\n",
+      "output": ""
+    },
+    {
+      "name": "random_case_199",
+      "input": "40\neel\neel\neel\neel\neel\neel\neel\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\norca\norca\norca\norca\norca\norca\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nmole\n42\n",
+      "output": "eel eel eel eel eel eel eel 42 42 42 42 42 42 42 42 42 42 42 orca orca orca orca orca orca toad toad toad toad toad toad toad toad vole vole vole vole vole vole vole vole"
+    },
+    {
+      "name": "random_case_200",
+      "input": "60\nant\nant\nant\nant\ncat\ncat\ncat\ncat\ncat\ncat\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nmole\nmole\nmole\nmole\nmole\nmole\norca\norca\norca\norca\norca\norca\nquail\nquail\nquail\nquail\nwolf\nwolf\nwolf\nwolf\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nmole\nMID\n",
+      "output": "ant ant ant ant cat cat cat cat cat cat fox fox fox fox fox fox fox fox goat goat goat goat goat goat goat goat goat kiwi kiwi kiwi kiwi kiwi MID MID MID MID MID MID orca orca orca orca orca orca quail quail quail quail wolf wolf wolf wolf zebra zebra zebra zebra zebra zebra zebra zebra"
+    },
+    {
+      "name": "random_case_201",
+      "input": "7\neel\nkiwi\nseal\nseal\ntoad\ntoad\ntoad\neel\n42\n",
+      "output": "42 kiwi seal seal toad toad toad"
+    },
+    {
+      "name": "random_case_202",
+      "input": "0\npig\nnew\n",
+      "output": ""
+    },
+    {
+      "name": "random_case_203",
+      "input": "90\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nhawk\ntiny\n",
+      "output": "ant ant ant ant ant ant ant ant ant ant bee bee bee bee bee bee bee bee bee bee cat cat cat cat cat cat cat cat cat fox fox fox fox fox fox fox fox fox fox fox fox goat goat goat goat goat goat goat goat tiny tiny tiny tiny tiny tiny tiny tiny tiny tiny tiny tiny tiny tiny tiny tiny lion lion lion lion lion lion lion lion lion lion rat rat rat rat rat rat rat rat rat wolf wolf wolf wolf wolf wolf"
+    },
+    {
+      "name": "random_case_204",
+      "input": "15\nibis\nibis\nibis\nibis\nibis\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nibis\nlongreplacement\n",
+      "output": "longreplacement longreplacement longreplacement longreplacement longreplacement zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra"
+    },
+    {
+      "name": "random_case_205",
+      "input": "20\nbee\nbee\nbee\nfox\nfox\nfox\nkiwi\nkiwi\nkiwi\norca\norca\nquail\nquail\nquail\nwolf\nwolf\nwolf\nwolf\nzebra\nzebra\nzebra\nlongreplacement\n",
+      "output": "bee bee bee fox fox fox kiwi kiwi kiwi orca orca quail quail quail wolf wolf wolf wolf longreplacement longreplacement"
+    },
+    {
+      "name": "random_case_206",
+      "input": "0\norca\nlongreplacement\n",
+      "output": ""
+    },
+    {
+      "name": "random_case_207",
+      "input": "0\npig\nx\n",
+      "output": ""
+    },
+    {
+      "name": "random_case_208",
+      "input": "8\nnewt\nnewt\nnewt\nnewt\nnewt\ntoad\ntoad\ntoad\nnewt\nrepl\n",
+      "output": "repl repl repl repl repl toad toad toad"
+    },
+    {
+      "name": "random_case_209",
+      "input": "60\nant\nant\nant\nant\nant\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\nfox\nfox\nfox\nfox\nfox\nfox\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nibis\nibis\nibis\nibis\nibis\nibis\njay\njay\njay\njay\njay\nlion\nlion\norca\norca\norca\norca\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nhawk\nalpha\n",
+      "output": "ant ant ant ant ant bee bee bee bee bee bee bee bee dog dog dog dog dog dog dog dog fox fox fox fox fox fox alpha alpha alpha alpha alpha alpha alpha alpha alpha ibis ibis ibis ibis ibis ibis jay jay jay jay jay lion lion orca orca orca orca rat rat rat rat rat rat rat"
+    },
+    {
+      "name": "random_case_210",
+      "input": "40\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\neel\n42\n",
+      "output": "vole vole vole vole vole vole vole vole vole vole vole vole vole vole vole vole vole vole vole vole vole vole vole vole yak yak yak yak yak yak yak yak yak yak yak yak yak yak yak yak"
+    },
+    {
+      "name": "random_case_211",
+      "input": "1\nyak\nyak\ntiny\n",
+      "output": "tiny"
+    },
+    {
+      "name": "random_case_212",
+      "input": "30\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nvole\nlongreplacement\n",
+      "output": "longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement wolf wolf wolf wolf wolf wolf wolf wolf wolf yak yak yak yak yak yak yak yak yak yak yak yak yak"
+    },
+    {
+      "name": "random_case_213",
+      "input": "12\nfox\nfox\nfox\nfox\nfox\nfox\ngoat\ngoat\ngoat\ngoat\nmole\norca\nfox\nMID\n",
+      "output": "MID MID MID MID MID MID goat goat goat goat mole orca"
+    },
+    {
+      "name": "random_case_214",
+      "input": "40\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nzebra\nz\n",
+      "output": "rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat rat vole vole vole vole vole vole vole vole vole vole vole vole vole vole vole vole vole vole vole vole vole vole vole vole"
+    },
+    {
+      "name": "random_case_215",
+      "input": "12\ngoat\ngoat\ngoat\ngoat\ngoat\nhawk\nhawk\nhawk\nhawk\nnewt\nnewt\nwolf\nsun\nz\n",
+      "output": "goat goat goat goat goat hawk hawk hawk hawk newt newt wolf"
+    },
+    {
+      "name": "random_case_216",
+      "input": "1\nbee\npig\ntiny\n",
+      "output": "bee"
+    },
+    {
+      "name": "random_case_217",
+      "input": "12\nfox\nfox\nfox\nfox\nfox\njay\njay\njay\njay\nyak\nyak\nyak\nyak\nz\n",
+      "output": "fox fox fox fox fox jay jay jay jay z z z"
+    },
+    {
+      "name": "random_case_218",
+      "input": "12\nant\nant\nant\nant\nbee\ncat\ncat\ncat\ndog\ndog\nkiwi\nkiwi\nbee\nMID\n",
+      "output": "ant ant ant ant MID cat cat cat dog dog kiwi kiwi"
+    },
+    {
+      "name": "random_case_219",
+      "input": "4\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\ntiny\n",
+      "output": "tiny tiny tiny tiny"
+    },
+    {
+      "name": "random_case_220",
+      "input": "2\nant\nfox\nant\n42\n",
+      "output": "42 fox"
+    },
+    {
+      "name": "random_case_221",
+      "input": "4\nnewt\nnewt\nseal\nseal\nseal\n42\n",
+      "output": "newt newt 42 42"
+    },
+    {
+      "name": "random_case_222",
+      "input": "30\ndog\ndog\ndog\ndog\ndog\nfox\nfox\norca\norca\norca\nrat\nrat\nseal\nseal\nseal\nseal\nseal\ntoad\ntoad\ntoad\ntoad\ntoad\nyak\nyak\nyak\nyak\nzebra\nzebra\nzebra\nzebra\nlion\nlongreplacement\n",
+      "output": "dog dog dog dog dog fox fox orca orca orca rat rat seal seal seal seal seal toad toad toad toad toad yak yak yak yak zebra zebra zebra zebra"
+    },
+    {
+      "name": "random_case_223",
+      "input": "90\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\njay\njay\njay\njay\njay\njay\njay\njay\njay\norca\norca\norca\norca\norca\norca\norca\norca\norca\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\ntoad\nfox\nomega\n",
+      "output": "cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat omega omega omega omega omega omega omega omega omega omega omega hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk hawk ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis jay jay jay jay jay jay jay jay jay orca orca orca orca orca orca orca orca orca rat rat rat rat rat rat rat rat toad toad toad toad toad toad toad toad toad"
+    },
+    {
+      "name": "random_case_224",
+      "input": "4\nseal\nseal\nseal\nseal\nwolf\nMID\n",
+      "output": "seal seal seal seal"
+    },
+    {
+      "name": "random_case_225",
+      "input": "7\nbee\nbee\nbee\ndog\nmole\nmole\nvole\nvole\ntiny\n",
+      "output": "bee bee bee dog mole mole tiny"
+    },
+    {
+      "name": "random_case_226",
+      "input": "10\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\nomega\n",
+      "output": "omega omega omega omega omega omega omega omega omega omega"
+    },
+    {
+      "name": "random_case_227",
+      "input": "30\ndog\ndog\ndog\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\njay\njay\njay\njay\njay\njay\njay\nlion\nlion\nlion\nlion\nlion\nquail\nquail\nquail\nquail\nquail\nquail\nibis\nnew\n",
+      "output": "dog dog dog new new new new new new new new new jay jay jay jay jay jay jay lion lion lion lion lion quail quail quail quail quail quail"
+    },
+    {
+      "name": "random_case_228",
+      "input": "90\ndog\ndog\ndog\ndog\ndog\ndog\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\nibis\nibis\nibis\nibis\nibis\nibis\nlion\nlion\nlion\nlion\nlion\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\nmole\norca\norca\norca\norca\norca\norca\norca\norca\norca\norca\npig\npig\npig\npig\npig\npig\npig\npig\npig\npig\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nmoon\nx\n",
+      "output": "dog dog dog dog dog dog goat goat goat goat goat goat goat goat goat goat ibis ibis ibis ibis ibis ibis lion lion lion lion lion mole mole mole mole mole mole mole mole mole mole mole mole orca orca orca orca orca orca orca orca orca orca pig pig pig pig pig pig pig pig pig pig quail quail quail quail quail quail quail quail quail quail quail quail rat rat rat rat rat rat rat rat rat rat rat rat wolf wolf wolf wolf wolf wolf wolf"
+    },
+    {
+      "name": "random_case_229",
+      "input": "25\ndog\nhawk\nhawk\njay\njay\njay\njay\njay\nnewt\nnewt\nnewt\nnewt\norca\norca\norca\npig\npig\npig\npig\npig\npig\nzebra\nzebra\nzebra\nzebra\npig\nnew\n",
+      "output": "dog hawk hawk jay jay jay jay jay newt newt newt newt orca orca orca new new new new new new zebra zebra zebra zebra"
+    },
+    {
+      "name": "random_case_230",
+      "input": "0\npig\nalpha\n",
+      "output": ""
+    },
+    {
+      "name": "random_case_231",
+      "input": "3\nhawk\nnewt\nnewt\norca\n42\n",
+      "output": "hawk newt newt"
+    },
+    {
+      "name": "random_case_232",
+      "input": "1\ndog\ndog\nomega\n",
+      "output": "omega"
+    },
+    {
+      "name": "random_case_233",
+      "input": "10\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nomega\n",
+      "output": "omega omega omega omega omega omega omega omega omega omega"
+    },
+    {
+      "name": "random_case_234",
+      "input": "40\nant\nant\nant\neel\neel\neel\neel\neel\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nkiwi\nkiwi\nkiwi\nkiwi\nnewt\nnewt\nnewt\nnewt\norca\norca\norca\norca\norca\norca\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nhawk\nrepl\n",
+      "output": "ant ant ant eel eel eel eel eel repl repl repl repl repl repl repl kiwi kiwi kiwi kiwi newt newt newt newt orca orca orca orca orca orca quail quail quail quail quail quail quail quail quail quail quail"
+    },
+    {
+      "name": "random_case_235",
+      "input": "15\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nquail\nx\n",
+      "output": "x x x x x x x x x x x x x x x"
+    },
+    {
+      "name": "random_case_236",
+      "input": "8\ncat\ncat\nnewt\nnewt\norca\nquail\nquail\nquail\npig\nMID\n",
+      "output": "cat cat newt newt orca quail quail quail"
+    },
+    {
+      "name": "random_case_237",
+      "input": "0\norca\nalpha\n",
+      "output": ""
+    },
+    {
+      "name": "random_case_238",
+      "input": "40\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\ngoat\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nhawk\nmole\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nrat\nrat\nrat\nrat\nseal\nseal\nseal\nseal\nseal\nseal\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nzzzz\nMID\n",
+      "output": "goat goat goat goat goat goat goat hawk hawk hawk hawk hawk hawk hawk mole newt newt newt newt newt newt newt rat rat rat rat seal seal seal seal seal seal vole vole vole vole vole vole vole vole"
+    },
+    {
+      "name": "random_case_239",
+      "input": "0\nmole\nomega\n",
+      "output": ""
+    },
+    {
+      "name": "random_case_240",
+      "input": "4\ndog\ndog\nfox\nlion\nhawk\nlongreplacement\n",
+      "output": "dog dog fox lion"
+    },
+    {
+      "name": "random_case_241",
+      "input": "7\nibis\nlion\nseal\nseal\nvole\nvole\nvole\nlion\ntiny\n",
+      "output": "ibis tiny seal seal vole vole vole"
+    },
+    {
+      "name": "random_case_242",
+      "input": "60\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ndog\ndog\ndog\ndog\ndog\ndog\ndog\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\npig\npig\npig\npig\npig\npig\npig\npig\npig\npig\npig\npig\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\nyak\ncat\nMID\n",
+      "output": "MID MID MID MID MID MID MID MID MID MID dog dog dog dog dog dog dog fox fox fox fox fox fox fox fox fox fox fox kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi pig pig pig pig pig pig pig pig pig pig pig pig yak yak yak yak yak yak yak yak yak yak"
+    },
+    {
+      "name": "random_case_243",
+      "input": "7\nmole\nmole\nmole\nzebra\nzebra\nzebra\nzebra\nzebra\nomega\n",
+      "output": "mole mole mole omega omega omega omega"
+    },
+    {
+      "name": "random_case_244",
+      "input": "30\ncat\ncat\ncat\ncat\neel\neel\neel\neel\neel\neel\neel\neel\nhawk\nhawk\nhawk\npig\npig\npig\npig\nrat\nwolf\nwolf\nwolf\nwolf\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzzz\n42\n",
+      "output": "cat cat cat cat eel eel eel eel eel eel eel eel hawk hawk hawk pig pig pig pig rat wolf wolf wolf wolf zebra zebra zebra zebra zebra zebra"
+    },
+    {
+      "name": "random_case_245",
+      "input": "2\nzebra\nzebra\ngoat\nomega\n",
+      "output": "zebra zebra"
+    },
+    {
+      "name": "random_case_246",
+      "input": "60\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\nant\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\nMID\n",
+      "output": "ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant ant MID MID MID MID MID MID MID MID MID MID MID MID MID MID MID MID MID MID MID MID MID MID MID MID MID MID MID MID MID"
+    },
+    {
+      "name": "random_case_247",
+      "input": "25\ndog\ndog\ndog\ndog\ndog\ndog\ndog\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nzebra\nnewt\nz\n",
+      "output": "dog dog dog dog dog dog dog z z z z z z z z z z z zebra zebra zebra zebra zebra zebra zebra"
+    },
+    {
+      "name": "random_case_248",
+      "input": "0\nzebra\ntiny\n",
+      "output": ""
+    },
+    {
+      "name": "random_case_249",
+      "input": "10\ncat\ncat\ngoat\ngoat\nmole\nmole\nmole\nnewt\nrat\nrat\nmole\nlongreplacement\n",
+      "output": "cat cat goat goat longreplacement longreplacement longreplacement newt rat rat"
+    },
+    {
+      "name": "random_case_250",
+      "input": "12\nfox\nfox\ngoat\nhawk\nkiwi\npig\npig\npig\npig\npig\nyak\nyak\ndog\nnew\n",
+      "output": "fox fox goat hawk kiwi pig pig pig pig pig yak yak"
+    },
+    {
+      "name": "random_case_251",
+      "input": "90\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\nbee\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ncat\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\neel\neel\neel\neel\neel\neel\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nfox\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nibis\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\norca\norca\norca\norca\norca\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nbee\nnew\n",
+      "output": "new new new new new new new new new new new new cat cat cat cat cat cat cat cat cat cat cat cat dog dog dog dog dog dog dog dog dog dog dog dog dog eel eel eel eel eel eel fox fox fox fox fox fox fox fox fox ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis ibis newt newt newt newt newt newt newt newt newt newt orca orca orca orca orca seal seal seal seal seal seal seal seal seal seal seal"
+    },
+    {
+      "name": "random_case_252",
+      "input": "90\nant\nant\nant\nant\ndog\ndog\ndog\ndog\ndog\ndog\ndog\ndog\neel\neel\neel\neel\neel\neel\neel\neel\neel\neel\neel\neel\neel\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nlion\nlion\nlion\nlion\nlion\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\npig\npig\npig\npig\npig\npig\npig\npig\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nvole\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nwolf\nlongreplacement\n",
+      "output": "ant ant ant ant dog dog dog dog dog dog dog dog eel eel eel eel eel eel eel eel eel eel eel eel eel kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi kiwi lion lion lion lion lion newt newt newt newt newt newt pig pig pig pig pig pig pig pig seal seal seal seal seal seal seal seal seal seal vole vole vole vole vole vole vole vole longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement longreplacement"
+    },
+    {
+      "name": "random_case_253",
+      "input": "15\nant\nant\ndog\ndog\ndog\njay\njay\njay\nseal\nseal\nwolf\nwolf\nyak\nyak\nyak\nwolf\nlongreplacement\n",
+      "output": "ant ant dog dog dog jay jay jay seal seal longreplacement longreplacement yak yak yak"
+    },
+    {
+      "name": "random_case_254",
+      "input": "30\neel\neel\neel\neel\ngoat\ngoat\ngoat\ngoat\nlion\nlion\nlion\nlion\nlion\nlion\nmole\nmole\nmole\nmole\nseal\nseal\nseal\nseal\nseal\ntoad\ntoad\nvole\nvole\nvole\nvole\nvole\nvole\nlongreplacement\n",
+      "output": "eel eel eel eel goat goat goat goat lion lion lion lion lion lion mole mole mole mole seal seal seal seal seal toad toad longreplacement longreplacement longreplacement longreplacement longreplacement"
+    },
+    {
+      "name": "random_case_255",
+      "input": "1\nseal\nmole\n42\n",
+      "output": "seal"
+    },
+    {
+      "name": "random_case_256",
+      "input": "7\nibis\nibis\nibis\nmole\nmole\nmole\nzebra\nibis\nz\n",
+      "output": "z z z mole mole mole zebra"
+    },
+    {
+      "name": "random_case_257",
+      "input": "0\nfox\nx\n",
+      "output": ""
+    },
+    {
+      "name": "random_case_258",
+      "input": "20\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nkiwi\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nrat\nkiwi\nx\n",
+      "output": "x x x x x x x x x x x x rat rat rat rat rat rat rat rat"
+    },
+    {
+      "name": "random_case_259",
+      "input": "0\npig\nnew\n",
+      "output": ""
+    },
+    {
+      "name": "random_case_260",
+      "input": "90\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\njay\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nlion\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nnewt\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nseal\nnewt\ntiny\n",
+      "output": "jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay jay lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion lion tiny tiny tiny tiny tiny tiny tiny tiny tiny tiny tiny tiny tiny tiny tiny tiny tiny tiny tiny tiny tiny seal seal seal seal seal seal seal seal seal seal seal seal seal seal seal seal seal seal seal seal"
+    }
+  ]
+}
