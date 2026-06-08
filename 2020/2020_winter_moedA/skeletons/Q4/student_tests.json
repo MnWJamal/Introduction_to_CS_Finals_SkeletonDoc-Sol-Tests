@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "exam_true_partition",
+      "input": "9\n1 11 3 2 4 5 7 3 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exam_false_partition",
+      "input": "9\n1 14 3 2 4 5 7 3 0\n",
+      "output": "0"
+    },
+    {
+      "name": "basic_single_triplet_true",
+      "input": "3\n1 2 3\n",
+      "output": "1"
+    },
+    {
+      "name": "basic_all_zero_true",
+      "input": "6\n0 0 0 0 0 0\n",
+      "output": "1"
+    }
+  ]
+}

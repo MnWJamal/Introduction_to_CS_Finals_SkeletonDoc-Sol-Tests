@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "exam_bone_false_duplicate_color_limit",
+      "input": "4\nABC 0\nAEI 0\nEOU 1\nLNRST 2\n4\nBONE\n",
+      "output": "false"
+    },
+    {
+      "name": "exam_cat_false_color_conflict",
+      "input": "4\nABC 0\nAEI 0\nEOU 1\nLNRST 2\n3\nCAT\n",
+      "output": "false"
+    },
+    {
+      "name": "exam_bot_true",
+      "input": "4\nABC 0\nAEI 0\nEOU 1\nLNRST 2\n3\nBOT\n",
+      "output": "true"
+    },
+    {
+      "name": "exam_set_false_same_cube_twice",
+      "input": "4\nABC 0\nAEI 0\nEOU 1\nLNRST 2\n3\nSET\n",
+      "output": "false"
+    },
+    {
+      "name": "exam_to_true",
+      "input": "4\nABC 0\nAEI 0\nEOU 1\nLNRST 2\n2\nTO\n",
+      "output": "true"
+    },
+    {
+      "name": "exam_empty_target_true",
+      "input": "4\nABC 0\nAEI 0\nEOU 1\nLNRST 2\n0\n",
+      "output": "true"
+    }
+  ]
+}

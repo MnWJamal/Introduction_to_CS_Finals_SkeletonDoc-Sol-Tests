@@ -1,0 +1,854 @@
+{
+  "tests": [
+    {
+      "name": "edge_n1_k1_positive",
+      "input": "1 1\n7\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_n1_k1_negative",
+      "input": "1 1\n-7\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_n2_k1_any_sum",
+      "input": "2 1\n5 -2\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_n2_k2_equal",
+      "input": "2 2\n4 4\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_n2_k2_not_equal",
+      "input": "2 2\n4 5\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_all_zero_k2",
+      "input": "2 2\n0 0\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_all_zero_k4",
+      "input": "4 4\n0 0 0 0\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_k_equals_n_all_equal",
+      "input": "5 5\n3 3 3 3 3\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_k_equals_n_not_equal",
+      "input": "4 4\n3 3 3 4\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_sum_not_divisible",
+      "input": "4 3\n1 2 3 5\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_exam_k3_true",
+      "input": "11 3\n9 -2 3 17 5 3 8 4 1 1 2\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_exam_k4_false",
+      "input": "11 4\n9 -2 3 17 5 3 8 4 1 1 2\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_standard_k2_true",
+      "input": "4 2\n1 5 11 5\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_standard_k2_false",
+      "input": "3 2\n1 2 5\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_standard_k4_true",
+      "input": "7 4\n4 3 2 3 5 2 1\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_standard_k4_false",
+      "input": "7 4\n4 3 2 3 5 2 2\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_duplicates_true",
+      "input": "6 3\n2 2 2 2 2 2\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_duplicates_false",
+      "input": "5 3\n2 2 2 2 2\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_negative_pairs_true",
+      "input": "6 3\n5 -5 4 -4 3 -3\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_negative_mixed_true",
+      "input": "6 3\n-1 1 -2 2 3 -3\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_negative_target_true",
+      "input": "4 2\n-5 -1 -2 -2\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_negative_target_false",
+      "input": "4 2\n-5 -1 -2 -3\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_zero_with_positive_groups",
+      "input": "6 3\n0 0 1 1 2 2\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_contains_zero_true",
+      "input": "4 2\n0 3 3 6\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_contains_zero_false",
+      "input": "4 2\n0 3 4 6\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_many_small_true",
+      "input": "8 4\n1 1 1 1 2 2 2 2\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_many_small_false",
+      "input": "8 4\n1 1 1 1 2 2 2 3\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_k3_needs_combination",
+      "input": "7 3\n7 3 2 5 8 4 1\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_k3_no_combination",
+      "input": "7 3\n7 3 2 5 8 4 2\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_singletons_with_zero",
+      "input": "5 5\n0 0 0 0 0\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_1_k2_t1",
+      "input": "2 2\n1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_2_k2_t2",
+      "input": "4 2\n1 1 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_3_k2_t3",
+      "input": "5 2\n1 1 2 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_4_k2_t4",
+      "input": "4 2\n3 3 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_5_k2_t5",
+      "input": "5 2\n4 1 1 3 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_6_k2_t6",
+      "input": "5 2\n5 1 1 4 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_7_k2_t7",
+      "input": "4 2\n1 1 6 6\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_8_k2_t8",
+      "input": "5 2\n1 7 1 6 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_9_k2_t9",
+      "input": "5 2\n1 7 1 1 8\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_10_k2_t10",
+      "input": "4 2\n1 9 1 9\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_11_k3_t1",
+      "input": "3 3\n1 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_12_k3_t2",
+      "input": "6 3\n1 1 1 1 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_13_k3_t3",
+      "input": "7 3\n2 1 2 1 1 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_14_k3_t4",
+      "input": "7 3\n1 3 1 1 1 2 3\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_15_k3_t5",
+      "input": "7 3\n1 3 1 4 1 4 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_16_k3_t6",
+      "input": "7 3\n1 4 1 1 5 5 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_17_k3_t7",
+      "input": "7 3\n1 6 1 1 6 1 5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_18_k3_t8",
+      "input": "7 3\n1 1 7 6 1 7 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_19_k3_t9",
+      "input": "7 3\n1 8 1 1 1 7 8\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_20_k3_t10",
+      "input": "7 3\n8 9 1 9 1 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_21_k4_t1",
+      "input": "4 4\n1 1 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_22_k4_t2",
+      "input": "8 4\n1 1 1 1 1 1 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_23_k4_t3",
+      "input": "10 4\n1 1 2 1 2 1 1 1 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_24_k4_t4",
+      "input": "9 4\n1 3 3 2 1 1 1 3 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_25_k4_t5",
+      "input": "9 4\n4 1 1 4 1 3 1 4 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_26_k4_t6",
+      "input": "10 4\n1 5 1 1 4 4 1 1 1 5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_27_k4_t7",
+      "input": "9 4\n1 1 1 1 6 1 6 5 6\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_28_k4_t8",
+      "input": "9 4\n7 1 7 7 1 1 1 6 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_29_k4_t9",
+      "input": "10 4\n8 1 7 7 1 1 1 8 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_30_k4_t10",
+      "input": "9 4\n9 1 1 1 1 9 9 8 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_31_k5_t1",
+      "input": "5 5\n1 1 1 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_32_k5_t2",
+      "input": "10 5\n1 1 1 1 1 1 1 1 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_33_k5_t3",
+      "input": "12 5\n1 1 2 1 1 1 2 1 1 2 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_34_k5_t4",
+      "input": "11 5\n3 2 1 1 3 3 1 1 3 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_35_k5_t5",
+      "input": "12 5\n1 1 1 4 1 1 4 3 1 3 4 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_36_k5_t6",
+      "input": "12 5\n1 1 5 1 4 1 1 1 1 5 4 5\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_37_k5_t7",
+      "input": "11 5\n5 1 1 6 1 6 1 6 1 6 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_38_k5_t8",
+      "input": "12 5\n7 1 7 6 1 7 6 1 1 1 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_39_k5_t9",
+      "input": "12 5\n8 1 1 1 8 7 1 1 7 1 1 8\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_40_k5_t10",
+      "input": "11 5\n1 1 1 8 1 9 1 9 1 9 9\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_41_k6_t1",
+      "input": "6 6\n1 1 1 1 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_42_k6_t2",
+      "input": "12 6\n1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_43_k6_t3",
+      "input": "14 6\n1 1 2 1 1 2 2 1 2 1 1 1 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_44_k6_t4",
+      "input": "14 6\n2 3 2 1 1 3 3 1 1 3 1 1 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_45_k6_t5",
+      "input": "14 6\n3 3 1 1 1 4 4 4 1 1 1 4 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_46_k6_t6",
+      "input": "14 6\n4 1 1 5 1 5 1 1 5 5 1 4 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_47_k6_t7",
+      "input": "14 6\n6 5 1 6 1 1 6 5 1 6 1 1 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_48_k6_t8",
+      "input": "14 6\n1 7 1 6 1 7 7 1 1 1 1 6 7 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_49_k6_t9",
+      "input": "14 6\n1 1 8 8 1 7 1 7 1 8 1 1 8 1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_true_50_k6_t10",
+      "input": "14 6\n9 1 1 1 9 1 9 8 1 1 1 1 8 9\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_1_2_k2",
+      "input": "3 2\n2 3 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_1_3_k2",
+      "input": "3 2\n3 4 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_1_4_k2",
+      "input": "3 2\n4 5 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_1_5_k2",
+      "input": "3 2\n5 6 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_1_6_k2",
+      "input": "3 2\n6 7 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_1_7_k2",
+      "input": "3 2\n7 8 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_1_8_k2",
+      "input": "3 2\n8 9 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_1_9_k2",
+      "input": "3 2\n9 10 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_1_10_k2",
+      "input": "3 2\n10 11 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_1_11_k2",
+      "input": "3 2\n11 12 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_2_2_k3",
+      "input": "4 3\n2 2 3 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_2_3_k3",
+      "input": "4 3\n3 3 4 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_2_4_k3",
+      "input": "4 3\n4 4 5 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_2_5_k3",
+      "input": "4 3\n5 5 6 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_2_6_k3",
+      "input": "4 3\n6 6 7 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_2_7_k3",
+      "input": "4 3\n7 7 8 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_2_8_k3",
+      "input": "4 3\n8 8 9 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_2_9_k3",
+      "input": "4 3\n9 9 10 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_2_10_k3",
+      "input": "4 3\n10 10 11 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_2_11_k3",
+      "input": "4 3\n11 11 12 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_3_2_k4",
+      "input": "5 4\n2 2 2 3 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_3_3_k4",
+      "input": "5 4\n3 3 3 4 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_3_4_k4",
+      "input": "5 4\n4 4 4 5 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_3_5_k4",
+      "input": "5 4\n5 5 5 6 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_3_6_k4",
+      "input": "5 4\n6 6 6 7 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_3_7_k4",
+      "input": "5 4\n7 7 7 8 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_3_8_k4",
+      "input": "5 4\n8 8 8 9 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_3_9_k4",
+      "input": "5 4\n9 9 9 10 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_3_10_k4",
+      "input": "5 4\n10 10 10 11 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_3_11_k4",
+      "input": "5 4\n11 11 11 12 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_4_2_k5",
+      "input": "6 5\n2 2 2 2 3 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_4_3_k5",
+      "input": "6 5\n3 3 3 3 4 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_4_4_k5",
+      "input": "6 5\n4 4 4 4 5 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_4_5_k5",
+      "input": "6 5\n5 5 5 5 6 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_4_6_k5",
+      "input": "6 5\n6 6 6 6 7 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_4_7_k5",
+      "input": "6 5\n7 7 7 7 8 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_4_8_k5",
+      "input": "6 5\n8 8 8 8 9 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_4_9_k5",
+      "input": "6 5\n9 9 9 9 10 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_4_10_k5",
+      "input": "6 5\n10 10 10 10 11 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_4_11_k5",
+      "input": "6 5\n11 11 11 11 12 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_5_2_k6",
+      "input": "7 6\n2 2 2 2 2 3 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_5_3_k6",
+      "input": "7 6\n3 3 3 3 3 4 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_5_4_k6",
+      "input": "7 6\n4 4 4 4 4 5 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_5_5_k6",
+      "input": "7 6\n5 5 5 5 5 6 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_5_6_k6",
+      "input": "7 6\n6 6 6 6 6 7 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_5_7_k6",
+      "input": "7 6\n7 7 7 7 7 8 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_5_8_k6",
+      "input": "7 6\n8 8 8 8 8 9 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_5_9_k6",
+      "input": "7 6\n9 9 9 9 9 10 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_5_10_k6",
+      "input": "7 6\n10 10 10 10 10 11 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_computed_5_11_k6",
+      "input": "7 6\n11 11 11 11 11 12 -1\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_computed_1",
+      "input": "6 4\n2 2 2 2 3 3\n",
+      "output": "0"
+    },
+    {
+      "name": "hand_computed_2",
+      "input": "8 4\n6 6 6 6 4 4 4 4\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_computed_3",
+      "input": "7 3\n10 1 1 1 1 1 1\n",
+      "output": "0"
+    },
+    {
+      "name": "hand_computed_4",
+      "input": "8 5\n8 7 6 5 4 3 2 1\n",
+      "output": "0"
+    },
+    {
+      "name": "hand_computed_5",
+      "input": "9 3\n9 8 7 6 5 4 3 2 1\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_computed_6",
+      "input": "7 3\n100 1 2 3 4 5 6\n",
+      "output": "0"
+    },
+    {
+      "name": "hand_computed_7",
+      "input": "6 3\n10 10 10 1 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_computed_8",
+      "input": "5 4\n10 10 10 1 1\n",
+      "output": "0"
+    },
+    {
+      "name": "hand_computed_9",
+      "input": "6 3\n-4 -4 -4 -4 -1 -1\n",
+      "output": "0"
+    },
+    {
+      "name": "hand_computed_10",
+      "input": "6 3\n-8 -6 -4 -2 -2 -2\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_1_k3_n7",
+      "input": "7 3\n-3 3 -2 -3 -9 3 2\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_2_k2_n4",
+      "input": "4 2\n-11 5 2 8\n",
+      "output": "1"
+    },
+    {
+      "name": "random_false_3_k4_n12",
+      "input": "12 4\n11 -1 -1 1 -8 10 -5 -5 1 1 -1 10\n",
+      "output": "0"
+    },
+    {
+      "name": "random_true_4_k3_n3",
+      "input": "3 3\n-5 -5 -5\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_5_k5_n5",
+      "input": "5 5\n1 1 1 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_6_k5_n7",
+      "input": "7 5\n-4 -2 -2 -2 3 -1 -2\n",
+      "output": "1"
+    },
+    {
+      "name": "random_false_7_k5_n5",
+      "input": "5 5\n4 -4 9 -1 -7\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_8_k5_n11",
+      "input": "11 5\n-7 10 -5 -4 -6 1 -2 -4 -8 0 -8\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_9_k4_n8",
+      "input": "8 4\n7 12 -5 4 7 -2 -3 -6\n",
+      "output": "0"
+    },
+    {
+      "name": "random_true_10_k5_n12",
+      "input": "12 5\n0 4 1 2 1 4 3 3 1 5 0 1\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_11_k3_n9",
+      "input": "9 3\n-5 -3 6 -5 8 9 2 1 5\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_12_k4_n6",
+      "input": "6 4\n-5 -8 -5 -5 -1 4\n",
+      "output": "1"
+    },
+    {
+      "name": "random_false_13_k4_n4",
+      "input": "4 4\n1 -2 9 -7\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_14_k4_n8",
+      "input": "8 4\n-6 8 -2 12 -3 -5 4 4\n",
+      "output": "0"
+    },
+    {
+      "name": "random_true_15_k4_n4",
+      "input": "4 4\n-4 -4 -4 -4\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_16_k3_n8",
+      "input": "8 3\n2 1 1 0 1 4 1 2\n",
+      "output": "1"
+    },
+    {
+      "name": "random_false_17_k5_n11",
+      "input": "11 5\n-6 2 8 11 -8 -8 7 12 -6 -3 -1\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_18_k5_n5",
+      "input": "5 5\n3 9 -6 -2 -7\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_19_k4_n7",
+      "input": "7 4\n-4 -5 -3 6 0 -3 7\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_20_k5_n10",
+      "input": "10 5\n6 1 -8 2 10 -1 6 -6 -2 5\n",
+      "output": "0"
+    },
+    {
+      "name": "random_true_21_k5_n5",
+      "input": "5 5\n1 1 1 1 1\n",
+      "output": "1"
+    },
+    {
+      "name": "random_false_22_k2_n8",
+      "input": "8 2\n-5 12 9 1 -7 9 2 2\n",
+      "output": "0"
+    },
+    {
+      "name": "random_true_23_k4_n8",
+      "input": "8 4\n-14 3 2 -10 7 -5 -5 2\n",
+      "output": "1"
+    },
+    {
+      "name": "random_false_24_k3_n8",
+      "input": "8 3\n7 -2 -8 0 1 2 8 10\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_25_k2_n2",
+      "input": "2 2\n9 -8\n",
+      "output": "0"
+    },
+    {
+      "name": "random_true_26_k4_n11",
+      "input": "11 4\n0 4 2 10 4 -3 -3 0 2 -6 6\n",
+      "output": "1"
+    },
+    {
+      "name": "random_false_27_k5_n5",
+      "input": "5 5\n-1 9 -6 3 -8\n",
+      "output": "0"
+    },
+    {
+      "name": "random_true_28_k3_n9",
+      "input": "9 3\n5 0 0 5 0 1 0 1 6\n",
+      "output": "1"
+    },
+    {
+      "name": "random_false_29_k5_n12",
+      "input": "12 5\n9 5 9 3 -8 8 9 8 -1 -8 -3 10\n",
+      "output": "0"
+    },
+    {
+      "name": "random_true_30_k2_n8",
+      "input": "8 2\n0 0 6 2 7 0 3 2\n",
+      "output": "1"
+    }
+  ]
+}

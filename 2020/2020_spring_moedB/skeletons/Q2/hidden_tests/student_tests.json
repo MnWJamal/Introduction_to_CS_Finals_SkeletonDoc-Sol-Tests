@@ -1,0 +1,2954 @@
+{
+  "tests": [
+    {
+      "name": "edge_n0_k0_empty",
+      "input": "0 0\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_n0_k5_empty",
+      "input": "0 5\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_n1_one_k0",
+      "input": "1 0\n1\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_n1_zero_k0",
+      "input": "1 0\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_n1_zero_k1",
+      "input": "1 1\n0\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_n2_all_ones_k0",
+      "input": "2 0\n1 1\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_n2_all_zeros_k0",
+      "input": "2 0\n0 0\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_n2_all_zeros_k1",
+      "input": "2 1\n0 0\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_n2_all_zeros_k2",
+      "input": "2 2\n0 0\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_alternating_start_one_k0",
+      "input": "6 0\n1 0 1 0 1 0\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_alternating_start_zero_k0",
+      "input": "6 0\n0 1 0 1 0 1\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_alternating_start_one_k1",
+      "input": "6 1\n1 0 1 0 1 0\n",
+      "output": "3"
+    },
+    {
+      "name": "edge_alternating_start_zero_k2",
+      "input": "6 2\n0 1 0 1 0 1\n",
+      "output": "5"
+    },
+    {
+      "name": "edge_all_ones_long_k0",
+      "input": "50 0\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "50"
+    },
+    {
+      "name": "edge_all_ones_long_k7",
+      "input": "50 7\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "50"
+    },
+    {
+      "name": "edge_all_zeros_long_k0",
+      "input": "50 0\n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",
+      "output": "0"
+    },
+    {
+      "name": "edge_all_zeros_long_k1",
+      "input": "50 1\n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_all_zeros_long_k25",
+      "input": "50 25\n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",
+      "output": "25"
+    },
+    {
+      "name": "edge_all_zeros_long_k50",
+      "input": "50 50\n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",
+      "output": "50"
+    },
+    {
+      "name": "edge_k_larger_than_n",
+      "input": "5 99\n0 1 0 1 0\n",
+      "output": "5"
+    },
+    {
+      "name": "edge_zero_at_front_only",
+      "input": "21 0\n0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "20"
+    },
+    {
+      "name": "edge_zero_at_front_only_k1",
+      "input": "21 1\n0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "21"
+    },
+    {
+      "name": "edge_zero_at_end_only",
+      "input": "21 0\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "20"
+    },
+    {
+      "name": "edge_zero_at_end_only_k1",
+      "input": "21 1\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "21"
+    },
+    {
+      "name": "edge_many_zeros_between_blocks_k1",
+      "input": "9 1\n1 1 1 0 0 0 1 1 1\n",
+      "output": "4"
+    },
+    {
+      "name": "edge_many_zeros_between_blocks_k3",
+      "input": "9 3\n1 1 1 0 0 0 1 1 1\n",
+      "output": "9"
+    },
+    {
+      "name": "edge_exact_all_zeros_allowed",
+      "input": "6 3\n0 1 1 0 1 0\n",
+      "output": "6"
+    },
+    {
+      "name": "edge_one_zero_too_many_in_middle",
+      "input": "8 1\n1 1 0 1 1 0 1 1\n",
+      "output": "5"
+    },
+    {
+      "name": "edge_sparse_zeros_k2",
+      "input": "14 2\n1 1 1 0 1 1 1 1 0 1 1 1 1 1\n",
+      "output": "14"
+    },
+    {
+      "name": "edge_dense_zeros_k2",
+      "input": "8 2\n0 0 1 0 0 1 0 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n1_case0_k0",
+      "input": "1 0\n0\n",
+      "output": "0"
+    },
+    {
+      "name": "exhaustive_n1_case0_k1",
+      "input": "1 1\n0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n1_case0_k3",
+      "input": "1 3\n0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n1_case1_k0",
+      "input": "1 0\n1\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n1_case1_k1",
+      "input": "1 1\n1\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n1_case1_k3",
+      "input": "1 3\n1\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n2_case2_k0",
+      "input": "2 0\n0 0\n",
+      "output": "0"
+    },
+    {
+      "name": "exhaustive_n2_case2_k1",
+      "input": "2 1\n0 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n2_case2_k2",
+      "input": "2 2\n0 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n2_case2_k4",
+      "input": "2 4\n0 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n2_case3_k0",
+      "input": "2 0\n0 1\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n2_case3_k1",
+      "input": "2 1\n0 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n2_case3_k4",
+      "input": "2 4\n0 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n2_case4_k0",
+      "input": "2 0\n1 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n2_case4_k1",
+      "input": "2 1\n1 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n2_case4_k4",
+      "input": "2 4\n1 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n2_case5_k0",
+      "input": "2 0\n1 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n2_case5_k1",
+      "input": "2 1\n1 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n2_case5_k4",
+      "input": "2 4\n1 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n3_case6_k0",
+      "input": "3 0\n0 0 0\n",
+      "output": "0"
+    },
+    {
+      "name": "exhaustive_n3_case6_k1",
+      "input": "3 1\n0 0 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n3_case6_k3",
+      "input": "3 3\n0 0 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n3_case6_k5",
+      "input": "3 5\n0 0 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n3_case7_k0",
+      "input": "3 0\n0 0 1\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n3_case7_k1",
+      "input": "3 1\n0 0 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n3_case7_k2",
+      "input": "3 2\n0 0 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n3_case7_k5",
+      "input": "3 5\n0 0 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n3_case8_k0",
+      "input": "3 0\n0 1 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n3_case8_k1",
+      "input": "3 1\n0 1 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n3_case8_k2",
+      "input": "3 2\n0 1 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n3_case8_k5",
+      "input": "3 5\n0 1 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n3_case9_k0",
+      "input": "3 0\n0 1 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n3_case9_k1",
+      "input": "3 1\n0 1 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n3_case9_k5",
+      "input": "3 5\n0 1 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n3_case10_k0",
+      "input": "3 0\n1 0 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n3_case10_k1",
+      "input": "3 1\n1 0 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n3_case10_k2",
+      "input": "3 2\n1 0 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n3_case10_k5",
+      "input": "3 5\n1 0 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n3_case11_k0",
+      "input": "3 0\n1 0 1\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n3_case11_k1",
+      "input": "3 1\n1 0 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n3_case11_k5",
+      "input": "3 5\n1 0 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n3_case12_k0",
+      "input": "3 0\n1 1 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n3_case12_k1",
+      "input": "3 1\n1 1 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n3_case12_k5",
+      "input": "3 5\n1 1 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n3_case13_k0",
+      "input": "3 0\n1 1 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n3_case13_k1",
+      "input": "3 1\n1 1 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n3_case13_k5",
+      "input": "3 5\n1 1 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n4_case14_k0",
+      "input": "4 0\n0 0 0 0\n",
+      "output": "0"
+    },
+    {
+      "name": "exhaustive_n4_case14_k1",
+      "input": "4 1\n0 0 0 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n4_case14_k2",
+      "input": "4 2\n0 0 0 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n4_case14_k4",
+      "input": "4 4\n0 0 0 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case14_k6",
+      "input": "4 6\n0 0 0 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case15_k0",
+      "input": "4 0\n0 0 0 1\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n4_case15_k1",
+      "input": "4 1\n0 0 0 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n4_case15_k3",
+      "input": "4 3\n0 0 0 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case15_k6",
+      "input": "4 6\n0 0 0 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case16_k0",
+      "input": "4 0\n0 0 1 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n4_case16_k1",
+      "input": "4 1\n0 0 1 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n4_case16_k3",
+      "input": "4 3\n0 0 1 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case16_k6",
+      "input": "4 6\n0 0 1 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case17_k0",
+      "input": "4 0\n0 0 1 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n4_case17_k1",
+      "input": "4 1\n0 0 1 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n4_case17_k2",
+      "input": "4 2\n0 0 1 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case17_k6",
+      "input": "4 6\n0 0 1 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case18_k0",
+      "input": "4 0\n0 1 0 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n4_case18_k1",
+      "input": "4 1\n0 1 0 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n4_case18_k3",
+      "input": "4 3\n0 1 0 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case18_k6",
+      "input": "4 6\n0 1 0 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case19_k0",
+      "input": "4 0\n0 1 0 1\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n4_case19_k1",
+      "input": "4 1\n0 1 0 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n4_case19_k2",
+      "input": "4 2\n0 1 0 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case19_k6",
+      "input": "4 6\n0 1 0 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case20_k0",
+      "input": "4 0\n0 1 1 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n4_case20_k1",
+      "input": "4 1\n0 1 1 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n4_case20_k2",
+      "input": "4 2\n0 1 1 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case20_k6",
+      "input": "4 6\n0 1 1 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case21_k0",
+      "input": "4 0\n0 1 1 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n4_case21_k1",
+      "input": "4 1\n0 1 1 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case21_k6",
+      "input": "4 6\n0 1 1 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case22_k0",
+      "input": "4 0\n1 0 0 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n4_case22_k1",
+      "input": "4 1\n1 0 0 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n4_case22_k3",
+      "input": "4 3\n1 0 0 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case22_k6",
+      "input": "4 6\n1 0 0 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case23_k0",
+      "input": "4 0\n1 0 0 1\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n4_case23_k1",
+      "input": "4 1\n1 0 0 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n4_case23_k2",
+      "input": "4 2\n1 0 0 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case23_k6",
+      "input": "4 6\n1 0 0 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case24_k0",
+      "input": "4 0\n1 0 1 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n4_case24_k1",
+      "input": "4 1\n1 0 1 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n4_case24_k2",
+      "input": "4 2\n1 0 1 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case24_k6",
+      "input": "4 6\n1 0 1 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case25_k0",
+      "input": "4 0\n1 0 1 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n4_case25_k1",
+      "input": "4 1\n1 0 1 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case25_k6",
+      "input": "4 6\n1 0 1 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case26_k0",
+      "input": "4 0\n1 1 0 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n4_case26_k1",
+      "input": "4 1\n1 1 0 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n4_case26_k2",
+      "input": "4 2\n1 1 0 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case26_k6",
+      "input": "4 6\n1 1 0 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case27_k0",
+      "input": "4 0\n1 1 0 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n4_case27_k1",
+      "input": "4 1\n1 1 0 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case27_k6",
+      "input": "4 6\n1 1 0 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case28_k0",
+      "input": "4 0\n1 1 1 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n4_case28_k1",
+      "input": "4 1\n1 1 1 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case28_k6",
+      "input": "4 6\n1 1 1 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case29_k0",
+      "input": "4 0\n1 1 1 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case29_k1",
+      "input": "4 1\n1 1 1 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n4_case29_k6",
+      "input": "4 6\n1 1 1 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n5_case30_k0",
+      "input": "5 0\n0 0 0 0 0\n",
+      "output": "0"
+    },
+    {
+      "name": "exhaustive_n5_case30_k1",
+      "input": "5 1\n0 0 0 0 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n5_case30_k2",
+      "input": "5 2\n0 0 0 0 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n5_case30_k5",
+      "input": "5 5\n0 0 0 0 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case30_k7",
+      "input": "5 7\n0 0 0 0 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case31_k0",
+      "input": "5 0\n0 0 0 0 1\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n5_case31_k1",
+      "input": "5 1\n0 0 0 0 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n5_case31_k2",
+      "input": "5 2\n0 0 0 0 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n5_case31_k4",
+      "input": "5 4\n0 0 0 0 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case31_k7",
+      "input": "5 7\n0 0 0 0 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case32_k0",
+      "input": "5 0\n0 0 0 1 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n5_case32_k1",
+      "input": "5 1\n0 0 0 1 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n5_case32_k2",
+      "input": "5 2\n0 0 0 1 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n5_case32_k4",
+      "input": "5 4\n0 0 0 1 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case32_k7",
+      "input": "5 7\n0 0 0 1 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case33_k0",
+      "input": "5 0\n0 0 0 1 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n5_case33_k1",
+      "input": "5 1\n0 0 0 1 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n5_case33_k3",
+      "input": "5 3\n0 0 0 1 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case33_k7",
+      "input": "5 7\n0 0 0 1 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case34_k0",
+      "input": "5 0\n0 0 1 0 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n5_case34_k1",
+      "input": "5 1\n0 0 1 0 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n5_case34_k2",
+      "input": "5 2\n0 0 1 0 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n5_case34_k4",
+      "input": "5 4\n0 0 1 0 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case34_k7",
+      "input": "5 7\n0 0 1 0 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case35_k0",
+      "input": "5 0\n0 0 1 0 1\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n5_case35_k1",
+      "input": "5 1\n0 0 1 0 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n5_case35_k3",
+      "input": "5 3\n0 0 1 0 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case35_k7",
+      "input": "5 7\n0 0 1 0 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case36_k0",
+      "input": "5 0\n0 0 1 1 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n5_case36_k1",
+      "input": "5 1\n0 0 1 1 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n5_case36_k3",
+      "input": "5 3\n0 0 1 1 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case36_k7",
+      "input": "5 7\n0 0 1 1 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case37_k0",
+      "input": "5 0\n0 0 1 1 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n5_case37_k1",
+      "input": "5 1\n0 0 1 1 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n5_case37_k2",
+      "input": "5 2\n0 0 1 1 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case37_k7",
+      "input": "5 7\n0 0 1 1 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case38_k0",
+      "input": "5 0\n0 1 0 0 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n5_case38_k1",
+      "input": "5 1\n0 1 0 0 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n5_case38_k2",
+      "input": "5 2\n0 1 0 0 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n5_case38_k4",
+      "input": "5 4\n0 1 0 0 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case38_k7",
+      "input": "5 7\n0 1 0 0 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case39_k0",
+      "input": "5 0\n0 1 0 0 1\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n5_case39_k1",
+      "input": "5 1\n0 1 0 0 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n5_case39_k3",
+      "input": "5 3\n0 1 0 0 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case39_k7",
+      "input": "5 7\n0 1 0 0 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case40_k0",
+      "input": "5 0\n0 1 0 1 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n5_case40_k1",
+      "input": "5 1\n0 1 0 1 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n5_case40_k3",
+      "input": "5 3\n0 1 0 1 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case40_k7",
+      "input": "5 7\n0 1 0 1 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case41_k0",
+      "input": "5 0\n0 1 0 1 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n5_case41_k1",
+      "input": "5 1\n0 1 0 1 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n5_case41_k2",
+      "input": "5 2\n0 1 0 1 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case41_k7",
+      "input": "5 7\n0 1 0 1 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case42_k0",
+      "input": "5 0\n0 1 1 0 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n5_case42_k1",
+      "input": "5 1\n0 1 1 0 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n5_case42_k3",
+      "input": "5 3\n0 1 1 0 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case42_k7",
+      "input": "5 7\n0 1 1 0 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case43_k0",
+      "input": "5 0\n0 1 1 0 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n5_case43_k1",
+      "input": "5 1\n0 1 1 0 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n5_case43_k2",
+      "input": "5 2\n0 1 1 0 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case43_k7",
+      "input": "5 7\n0 1 1 0 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case44_k0",
+      "input": "5 0\n0 1 1 1 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n5_case44_k1",
+      "input": "5 1\n0 1 1 1 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n5_case44_k2",
+      "input": "5 2\n0 1 1 1 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case44_k7",
+      "input": "5 7\n0 1 1 1 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case45_k0",
+      "input": "5 0\n0 1 1 1 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n5_case45_k1",
+      "input": "5 1\n0 1 1 1 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case45_k7",
+      "input": "5 7\n0 1 1 1 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case46_k0",
+      "input": "5 0\n1 0 0 0 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n5_case46_k1",
+      "input": "5 1\n1 0 0 0 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n5_case46_k2",
+      "input": "5 2\n1 0 0 0 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n5_case46_k4",
+      "input": "5 4\n1 0 0 0 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case46_k7",
+      "input": "5 7\n1 0 0 0 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case47_k0",
+      "input": "5 0\n1 0 0 0 1\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n5_case47_k1",
+      "input": "5 1\n1 0 0 0 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n5_case47_k3",
+      "input": "5 3\n1 0 0 0 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case47_k7",
+      "input": "5 7\n1 0 0 0 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case48_k0",
+      "input": "5 0\n1 0 0 1 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n5_case48_k1",
+      "input": "5 1\n1 0 0 1 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n5_case48_k3",
+      "input": "5 3\n1 0 0 1 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case48_k7",
+      "input": "5 7\n1 0 0 1 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case49_k0",
+      "input": "5 0\n1 0 0 1 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n5_case49_k1",
+      "input": "5 1\n1 0 0 1 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n5_case49_k2",
+      "input": "5 2\n1 0 0 1 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case49_k7",
+      "input": "5 7\n1 0 0 1 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case50_k0",
+      "input": "5 0\n1 0 1 0 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n5_case50_k1",
+      "input": "5 1\n1 0 1 0 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n5_case50_k3",
+      "input": "5 3\n1 0 1 0 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case50_k7",
+      "input": "5 7\n1 0 1 0 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case51_k0",
+      "input": "5 0\n1 0 1 0 1\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n5_case51_k1",
+      "input": "5 1\n1 0 1 0 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n5_case51_k2",
+      "input": "5 2\n1 0 1 0 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case51_k7",
+      "input": "5 7\n1 0 1 0 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case52_k0",
+      "input": "5 0\n1 0 1 1 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n5_case52_k1",
+      "input": "5 1\n1 0 1 1 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n5_case52_k2",
+      "input": "5 2\n1 0 1 1 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case52_k7",
+      "input": "5 7\n1 0 1 1 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case53_k0",
+      "input": "5 0\n1 0 1 1 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n5_case53_k1",
+      "input": "5 1\n1 0 1 1 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case53_k7",
+      "input": "5 7\n1 0 1 1 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case54_k0",
+      "input": "5 0\n1 1 0 0 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n5_case54_k1",
+      "input": "5 1\n1 1 0 0 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n5_case54_k3",
+      "input": "5 3\n1 1 0 0 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case54_k7",
+      "input": "5 7\n1 1 0 0 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case55_k0",
+      "input": "5 0\n1 1 0 0 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n5_case55_k1",
+      "input": "5 1\n1 1 0 0 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n5_case55_k2",
+      "input": "5 2\n1 1 0 0 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case55_k7",
+      "input": "5 7\n1 1 0 0 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case56_k0",
+      "input": "5 0\n1 1 0 1 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n5_case56_k1",
+      "input": "5 1\n1 1 0 1 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n5_case56_k2",
+      "input": "5 2\n1 1 0 1 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case56_k7",
+      "input": "5 7\n1 1 0 1 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case57_k0",
+      "input": "5 0\n1 1 0 1 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n5_case57_k1",
+      "input": "5 1\n1 1 0 1 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case57_k7",
+      "input": "5 7\n1 1 0 1 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case58_k0",
+      "input": "5 0\n1 1 1 0 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n5_case58_k1",
+      "input": "5 1\n1 1 1 0 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n5_case58_k2",
+      "input": "5 2\n1 1 1 0 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case58_k7",
+      "input": "5 7\n1 1 1 0 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case59_k0",
+      "input": "5 0\n1 1 1 0 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n5_case59_k1",
+      "input": "5 1\n1 1 1 0 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case59_k7",
+      "input": "5 7\n1 1 1 0 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case60_k0",
+      "input": "5 0\n1 1 1 1 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n5_case60_k1",
+      "input": "5 1\n1 1 1 1 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case60_k7",
+      "input": "5 7\n1 1 1 1 0\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case61_k0",
+      "input": "5 0\n1 1 1 1 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case61_k1",
+      "input": "5 1\n1 1 1 1 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n5_case61_k7",
+      "input": "5 7\n1 1 1 1 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n6_case62_k0",
+      "input": "6 0\n0 0 0 0 0 0\n",
+      "output": "0"
+    },
+    {
+      "name": "exhaustive_n6_case62_k1",
+      "input": "6 1\n0 0 0 0 0 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n6_case62_k3",
+      "input": "6 3\n0 0 0 0 0 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n6_case62_k6",
+      "input": "6 6\n0 0 0 0 0 0\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case62_k8",
+      "input": "6 8\n0 0 0 0 0 0\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case63_k0",
+      "input": "6 0\n0 0 0 0 0 1\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n6_case63_k1",
+      "input": "6 1\n0 0 0 0 0 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n6_case63_k2",
+      "input": "6 2\n0 0 0 0 0 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n6_case63_k5",
+      "input": "6 5\n0 0 0 0 0 1\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case63_k8",
+      "input": "6 8\n0 0 0 0 0 1\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case64_k0",
+      "input": "6 0\n0 0 0 0 1 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n6_case64_k1",
+      "input": "6 1\n0 0 0 0 1 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n6_case64_k2",
+      "input": "6 2\n0 0 0 0 1 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n6_case64_k5",
+      "input": "6 5\n0 0 0 0 1 0\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case64_k8",
+      "input": "6 8\n0 0 0 0 1 0\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case65_k0",
+      "input": "6 0\n0 0 0 0 1 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n6_case65_k1",
+      "input": "6 1\n0 0 0 0 1 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n6_case65_k2",
+      "input": "6 2\n0 0 0 0 1 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n6_case65_k4",
+      "input": "6 4\n0 0 0 0 1 1\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case65_k8",
+      "input": "6 8\n0 0 0 0 1 1\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case66_k0",
+      "input": "6 0\n0 0 0 1 0 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n6_case66_k1",
+      "input": "6 1\n0 0 0 1 0 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n6_case66_k2",
+      "input": "6 2\n0 0 0 1 0 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n6_case66_k5",
+      "input": "6 5\n0 0 0 1 0 0\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case66_k8",
+      "input": "6 8\n0 0 0 1 0 0\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case67_k0",
+      "input": "6 0\n0 0 0 1 0 1\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n6_case67_k1",
+      "input": "6 1\n0 0 0 1 0 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n6_case67_k2",
+      "input": "6 2\n0 0 0 1 0 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n6_case67_k4",
+      "input": "6 4\n0 0 0 1 0 1\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case67_k8",
+      "input": "6 8\n0 0 0 1 0 1\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case68_k0",
+      "input": "6 0\n0 0 0 1 1 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n6_case68_k1",
+      "input": "6 1\n0 0 0 1 1 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n6_case68_k2",
+      "input": "6 2\n0 0 0 1 1 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n6_case68_k4",
+      "input": "6 4\n0 0 0 1 1 0\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case68_k8",
+      "input": "6 8\n0 0 0 1 1 0\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case69_k0",
+      "input": "6 0\n0 0 0 1 1 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n6_case69_k1",
+      "input": "6 1\n0 0 0 1 1 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n6_case69_k3",
+      "input": "6 3\n0 0 0 1 1 1\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case69_k8",
+      "input": "6 8\n0 0 0 1 1 1\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case70_k0",
+      "input": "6 0\n0 0 1 0 0 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n6_case70_k1",
+      "input": "6 1\n0 0 1 0 0 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n6_case70_k2",
+      "input": "6 2\n0 0 1 0 0 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n6_case70_k5",
+      "input": "6 5\n0 0 1 0 0 0\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case70_k8",
+      "input": "6 8\n0 0 1 0 0 0\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case71_k0",
+      "input": "6 0\n0 0 1 0 0 1\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n6_case71_k1",
+      "input": "6 1\n0 0 1 0 0 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n6_case71_k2",
+      "input": "6 2\n0 0 1 0 0 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n6_case71_k4",
+      "input": "6 4\n0 0 1 0 0 1\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case71_k8",
+      "input": "6 8\n0 0 1 0 0 1\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case72_k0",
+      "input": "6 0\n0 0 1 0 1 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n6_case72_k1",
+      "input": "6 1\n0 0 1 0 1 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n6_case72_k2",
+      "input": "6 2\n0 0 1 0 1 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n6_case72_k4",
+      "input": "6 4\n0 0 1 0 1 0\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case72_k8",
+      "input": "6 8\n0 0 1 0 1 0\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case73_k0",
+      "input": "6 0\n0 0 1 0 1 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n6_case73_k1",
+      "input": "6 1\n0 0 1 0 1 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n6_case73_k3",
+      "input": "6 3\n0 0 1 0 1 1\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case73_k8",
+      "input": "6 8\n0 0 1 0 1 1\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case74_k0",
+      "input": "6 0\n0 0 1 1 0 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n6_case74_k1",
+      "input": "6 1\n0 0 1 1 0 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n6_case74_k2",
+      "input": "6 2\n0 0 1 1 0 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n6_case74_k4",
+      "input": "6 4\n0 0 1 1 0 0\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case74_k8",
+      "input": "6 8\n0 0 1 1 0 0\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case75_k0",
+      "input": "6 0\n0 0 1 1 0 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n6_case75_k1",
+      "input": "6 1\n0 0 1 1 0 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n6_case75_k3",
+      "input": "6 3\n0 0 1 1 0 1\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case75_k8",
+      "input": "6 8\n0 0 1 1 0 1\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case76_k0",
+      "input": "6 0\n0 0 1 1 1 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n6_case76_k1",
+      "input": "6 1\n0 0 1 1 1 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n6_case76_k3",
+      "input": "6 3\n0 0 1 1 1 0\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case76_k8",
+      "input": "6 8\n0 0 1 1 1 0\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case77_k0",
+      "input": "6 0\n0 0 1 1 1 1\n",
+      "output": "4"
+    },
+    {
+      "name": "exhaustive_n6_case77_k1",
+      "input": "6 1\n0 0 1 1 1 1\n",
+      "output": "5"
+    },
+    {
+      "name": "exhaustive_n6_case77_k2",
+      "input": "6 2\n0 0 1 1 1 1\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case77_k8",
+      "input": "6 8\n0 0 1 1 1 1\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case78_k0",
+      "input": "6 0\n0 1 0 0 0 0\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n6_case78_k1",
+      "input": "6 1\n0 1 0 0 0 0\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n6_case78_k2",
+      "input": "6 2\n0 1 0 0 0 0\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n6_case78_k5",
+      "input": "6 5\n0 1 0 0 0 0\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case78_k8",
+      "input": "6 8\n0 1 0 0 0 0\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case79_k0",
+      "input": "6 0\n0 1 0 0 0 1\n",
+      "output": "1"
+    },
+    {
+      "name": "exhaustive_n6_case79_k1",
+      "input": "6 1\n0 1 0 0 0 1\n",
+      "output": "2"
+    },
+    {
+      "name": "exhaustive_n6_case79_k2",
+      "input": "6 2\n0 1 0 0 0 1\n",
+      "output": "3"
+    },
+    {
+      "name": "exhaustive_n6_case79_k4",
+      "input": "6 4\n0 1 0 0 0 1\n",
+      "output": "6"
+    },
+    {
+      "name": "exhaustive_n6_case79_k8",
+      "input": "6 8\n0 1 0 0 0 1\n",
+      "output": "6"
+    },
+    {
+      "name": "structured_block1_k0",
+      "input": "16 0\n1 0 1 0 0 1 0 0 0 1 0 0 0 0 1 0\n",
+      "output": "1"
+    },
+    {
+      "name": "structured_block1_k1",
+      "input": "16 1\n1 0 1 0 0 1 0 0 0 1 0 0 0 0 1 0\n",
+      "output": "3"
+    },
+    {
+      "name": "structured_block1_k2",
+      "input": "16 2\n1 0 1 0 0 1 0 0 0 1 0 0 0 0 1 0\n",
+      "output": "4"
+    },
+    {
+      "name": "structured_block1_k3",
+      "input": "16 3\n1 0 1 0 0 1 0 0 0 1 0 0 0 0 1 0\n",
+      "output": "6"
+    },
+    {
+      "name": "structured_block1_k5",
+      "input": "16 5\n1 0 1 0 0 1 0 0 0 1 0 0 0 0 1 0\n",
+      "output": "8"
+    },
+    {
+      "name": "structured_block1_k8",
+      "input": "16 8\n1 0 1 0 0 1 0 0 0 1 0 0 0 0 1 0\n",
+      "output": "12"
+    },
+    {
+      "name": "structured_block2_k0",
+      "input": "21 0\n1 1 0 1 1 0 0 1 1 0 0 0 1 1 0 0 0 0 1 1 0\n",
+      "output": "2"
+    },
+    {
+      "name": "structured_block2_k1",
+      "input": "21 1\n1 1 0 1 1 0 0 1 1 0 0 0 1 1 0 0 0 0 1 1 0\n",
+      "output": "5"
+    },
+    {
+      "name": "structured_block2_k2",
+      "input": "21 2\n1 1 0 1 1 0 0 1 1 0 0 0 1 1 0 0 0 0 1 1 0\n",
+      "output": "6"
+    },
+    {
+      "name": "structured_block2_k3",
+      "input": "21 3\n1 1 0 1 1 0 0 1 1 0 0 0 1 1 0 0 0 0 1 1 0\n",
+      "output": "9"
+    },
+    {
+      "name": "structured_block2_k5",
+      "input": "21 5\n1 1 0 1 1 0 0 1 1 0 0 0 1 1 0 0 0 0 1 1 0\n",
+      "output": "11"
+    },
+    {
+      "name": "structured_block2_k8",
+      "input": "21 8\n1 1 0 1 1 0 0 1 1 0 0 0 1 1 0 0 0 0 1 1 0\n",
+      "output": "16"
+    },
+    {
+      "name": "structured_block3_k0",
+      "input": "26 0\n1 1 1 0 1 1 1 0 0 1 1 1 0 0 0 1 1 1 0 0 0 0 1 1 1 0\n",
+      "output": "3"
+    },
+    {
+      "name": "structured_block3_k1",
+      "input": "26 1\n1 1 1 0 1 1 1 0 0 1 1 1 0 0 0 1 1 1 0 0 0 0 1 1 1 0\n",
+      "output": "7"
+    },
+    {
+      "name": "structured_block3_k2",
+      "input": "26 2\n1 1 1 0 1 1 1 0 0 1 1 1 0 0 0 1 1 1 0 0 0 0 1 1 1 0\n",
+      "output": "8"
+    },
+    {
+      "name": "structured_block3_k3",
+      "input": "26 3\n1 1 1 0 1 1 1 0 0 1 1 1 0 0 0 1 1 1 0 0 0 0 1 1 1 0\n",
+      "output": "12"
+    },
+    {
+      "name": "structured_block3_k5",
+      "input": "26 5\n1 1 1 0 1 1 1 0 0 1 1 1 0 0 0 1 1 1 0 0 0 0 1 1 1 0\n",
+      "output": "14"
+    },
+    {
+      "name": "structured_block3_k8",
+      "input": "26 8\n1 1 1 0 1 1 1 0 0 1 1 1 0 0 0 1 1 1 0 0 0 0 1 1 1 0\n",
+      "output": "20"
+    },
+    {
+      "name": "structured_block4_k0",
+      "input": "31 0\n1 1 1 1 0 1 1 1 1 0 0 1 1 1 1 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1 0\n",
+      "output": "4"
+    },
+    {
+      "name": "structured_block4_k1",
+      "input": "31 1\n1 1 1 1 0 1 1 1 1 0 0 1 1 1 1 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1 0\n",
+      "output": "9"
+    },
+    {
+      "name": "structured_block4_k2",
+      "input": "31 2\n1 1 1 1 0 1 1 1 1 0 0 1 1 1 1 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1 0\n",
+      "output": "10"
+    },
+    {
+      "name": "structured_block4_k3",
+      "input": "31 3\n1 1 1 1 0 1 1 1 1 0 0 1 1 1 1 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1 0\n",
+      "output": "15"
+    },
+    {
+      "name": "structured_block4_k5",
+      "input": "31 5\n1 1 1 1 0 1 1 1 1 0 0 1 1 1 1 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1 0\n",
+      "output": "17"
+    },
+    {
+      "name": "structured_block4_k8",
+      "input": "31 8\n1 1 1 1 0 1 1 1 1 0 0 1 1 1 1 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1 0\n",
+      "output": "24"
+    },
+    {
+      "name": "structured_block5_k0",
+      "input": "36 0\n1 1 1 1 1 0 1 1 1 1 1 0 0 1 1 1 1 1 0 0 0 1 1 1 1 1 0 0 0 0 1 1 1 1 1 0\n",
+      "output": "5"
+    },
+    {
+      "name": "structured_block5_k1",
+      "input": "36 1\n1 1 1 1 1 0 1 1 1 1 1 0 0 1 1 1 1 1 0 0 0 1 1 1 1 1 0 0 0 0 1 1 1 1 1 0\n",
+      "output": "11"
+    },
+    {
+      "name": "structured_block5_k2",
+      "input": "36 2\n1 1 1 1 1 0 1 1 1 1 1 0 0 1 1 1 1 1 0 0 0 1 1 1 1 1 0 0 0 0 1 1 1 1 1 0\n",
+      "output": "12"
+    },
+    {
+      "name": "structured_block5_k3",
+      "input": "36 3\n1 1 1 1 1 0 1 1 1 1 1 0 0 1 1 1 1 1 0 0 0 1 1 1 1 1 0 0 0 0 1 1 1 1 1 0\n",
+      "output": "18"
+    },
+    {
+      "name": "structured_block5_k5",
+      "input": "36 5\n1 1 1 1 1 0 1 1 1 1 1 0 0 1 1 1 1 1 0 0 0 1 1 1 1 1 0 0 0 0 1 1 1 1 1 0\n",
+      "output": "20"
+    },
+    {
+      "name": "structured_block5_k8",
+      "input": "36 8\n1 1 1 1 1 0 1 1 1 1 1 0 0 1 1 1 1 1 0 0 0 1 1 1 1 1 0 0 0 0 1 1 1 1 1 0\n",
+      "output": "28"
+    },
+    {
+      "name": "structured_block6_k0",
+      "input": "41 0\n1 1 1 1 1 1 0 1 1 1 1 1 1 0 0 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 0\n",
+      "output": "6"
+    },
+    {
+      "name": "structured_block6_k1",
+      "input": "41 1\n1 1 1 1 1 1 0 1 1 1 1 1 1 0 0 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 0\n",
+      "output": "13"
+    },
+    {
+      "name": "structured_block6_k2",
+      "input": "41 2\n1 1 1 1 1 1 0 1 1 1 1 1 1 0 0 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 0\n",
+      "output": "14"
+    },
+    {
+      "name": "structured_block6_k3",
+      "input": "41 3\n1 1 1 1 1 1 0 1 1 1 1 1 1 0 0 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 0\n",
+      "output": "21"
+    },
+    {
+      "name": "structured_block6_k5",
+      "input": "41 5\n1 1 1 1 1 1 0 1 1 1 1 1 1 0 0 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 0\n",
+      "output": "23"
+    },
+    {
+      "name": "structured_block6_k8",
+      "input": "41 8\n1 1 1 1 1 1 0 1 1 1 1 1 1 0 0 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 0\n",
+      "output": "32"
+    },
+    {
+      "name": "structured_block7_k0",
+      "input": "46 0\n1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 0\n",
+      "output": "7"
+    },
+    {
+      "name": "structured_block7_k1",
+      "input": "46 1\n1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 0\n",
+      "output": "15"
+    },
+    {
+      "name": "structured_block7_k2",
+      "input": "46 2\n1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 0\n",
+      "output": "16"
+    },
+    {
+      "name": "structured_block7_k3",
+      "input": "46 3\n1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 0\n",
+      "output": "24"
+    },
+    {
+      "name": "structured_block7_k5",
+      "input": "46 5\n1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 0\n",
+      "output": "26"
+    },
+    {
+      "name": "structured_block7_k8",
+      "input": "46 8\n1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 0\n",
+      "output": "36"
+    },
+    {
+      "name": "structured_block8_k0",
+      "input": "51 0\n1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 0\n",
+      "output": "8"
+    },
+    {
+      "name": "structured_block8_k1",
+      "input": "51 1\n1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 0\n",
+      "output": "17"
+    },
+    {
+      "name": "structured_block8_k2",
+      "input": "51 2\n1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 0\n",
+      "output": "18"
+    },
+    {
+      "name": "structured_block8_k3",
+      "input": "51 3\n1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 0\n",
+      "output": "27"
+    },
+    {
+      "name": "structured_block8_k5",
+      "input": "51 5\n1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 0\n",
+      "output": "29"
+    },
+    {
+      "name": "structured_block8_k8",
+      "input": "51 8\n1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 0\n",
+      "output": "40"
+    },
+    {
+      "name": "structured_block9_k0",
+      "input": "56 0\n1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "9"
+    },
+    {
+      "name": "structured_block9_k1",
+      "input": "56 1\n1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "19"
+    },
+    {
+      "name": "structured_block9_k2",
+      "input": "56 2\n1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "20"
+    },
+    {
+      "name": "structured_block9_k3",
+      "input": "56 3\n1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "30"
+    },
+    {
+      "name": "structured_block9_k5",
+      "input": "56 5\n1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "32"
+    },
+    {
+      "name": "structured_block9_k8",
+      "input": "56 8\n1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "44"
+    },
+    {
+      "name": "structured_block10_k0",
+      "input": "61 0\n1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "10"
+    },
+    {
+      "name": "structured_block10_k1",
+      "input": "61 1\n1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "21"
+    },
+    {
+      "name": "structured_block10_k2",
+      "input": "61 2\n1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "22"
+    },
+    {
+      "name": "structured_block10_k3",
+      "input": "61 3\n1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "33"
+    },
+    {
+      "name": "structured_block10_k5",
+      "input": "61 5\n1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "35"
+    },
+    {
+      "name": "structured_block10_k8",
+      "input": "61 8\n1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "48"
+    },
+    {
+      "name": "structured_block11_k0",
+      "input": "66 0\n1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "11"
+    },
+    {
+      "name": "structured_block11_k1",
+      "input": "66 1\n1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "23"
+    },
+    {
+      "name": "structured_block11_k2",
+      "input": "66 2\n1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "24"
+    },
+    {
+      "name": "structured_block11_k3",
+      "input": "66 3\n1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "36"
+    },
+    {
+      "name": "structured_block11_k5",
+      "input": "66 5\n1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "38"
+    },
+    {
+      "name": "structured_block11_k8",
+      "input": "66 8\n1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "52"
+    },
+    {
+      "name": "structured_block12_k0",
+      "input": "71 0\n1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "12"
+    },
+    {
+      "name": "structured_block12_k1",
+      "input": "71 1\n1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "25"
+    },
+    {
+      "name": "structured_block12_k2",
+      "input": "71 2\n1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "26"
+    },
+    {
+      "name": "structured_block12_k3",
+      "input": "71 3\n1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "39"
+    },
+    {
+      "name": "structured_block12_k5",
+      "input": "71 5\n1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "41"
+    },
+    {
+      "name": "structured_block12_k8",
+      "input": "71 8\n1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "56"
+    },
+    {
+      "name": "structured_block13_k0",
+      "input": "76 0\n1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "13"
+    },
+    {
+      "name": "structured_block13_k1",
+      "input": "76 1\n1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "27"
+    },
+    {
+      "name": "structured_block13_k2",
+      "input": "76 2\n1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "28"
+    },
+    {
+      "name": "structured_block13_k3",
+      "input": "76 3\n1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "42"
+    },
+    {
+      "name": "structured_block13_k5",
+      "input": "76 5\n1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "44"
+    },
+    {
+      "name": "structured_block13_k8",
+      "input": "76 8\n1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "60"
+    },
+    {
+      "name": "structured_block14_k0",
+      "input": "81 0\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "14"
+    },
+    {
+      "name": "structured_block14_k1",
+      "input": "81 1\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "29"
+    },
+    {
+      "name": "structured_block14_k2",
+      "input": "81 2\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "30"
+    },
+    {
+      "name": "structured_block14_k3",
+      "input": "81 3\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "45"
+    },
+    {
+      "name": "structured_block14_k5",
+      "input": "81 5\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "47"
+    },
+    {
+      "name": "structured_block14_k8",
+      "input": "81 8\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "64"
+    },
+    {
+      "name": "structured_block15_k0",
+      "input": "86 0\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "15"
+    },
+    {
+      "name": "structured_block15_k1",
+      "input": "86 1\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "31"
+    },
+    {
+      "name": "structured_block15_k2",
+      "input": "86 2\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "32"
+    },
+    {
+      "name": "structured_block15_k3",
+      "input": "86 3\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "48"
+    },
+    {
+      "name": "structured_block15_k5",
+      "input": "86 5\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "50"
+    },
+    {
+      "name": "structured_block15_k8",
+      "input": "86 8\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "68"
+    },
+    {
+      "name": "random_1_n118_k53",
+      "input": "118 53\n0 0 1 0 1 1 0 1 1 0 0 1 0 0 1 0 0 1 1 1 1 1 1 1 1 1 0 1 1 0 0 1 1 1 1 0 0 1 0 1 1 1 1 0 1 1 0 1 1 1 1 0 0 1 0 0 1 0 0 1 1 0 1 0 0 0 1 0 0 1 0 1 0 0 1 1 0 0 0 1 1 1 0 0 0 0 1 0 1 0 1 1 0 1 1 1 0 1 1 1 1 1 1 0 0 0 0 0 1 1 0 0 0 1 1 1 0 1\n",
+      "output": "118"
+    },
+    {
+      "name": "random_2_n173_k54",
+      "input": "173 54\n0 0 0 1 0 1 0 1 1 0 0 1 1 0 0 1 1 1 1 1 1 1 0 0 0 1 1 0 1 0 1 1 0 0 0 1 1 0 1 0 0 0 1 1 1 1 1 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 1 1 1 1 1 1 0 1 0 1 1 1 1 0 1 0 0 0 0 1 1 1 0 0 0 0 0 1 1 1 0 0 1 0 0 1 1 0 1 1 0 0 1 0 1 0 1 1 0 0 1 0 0 0 1 0 1 0 1 1 1 0 1 0 0 0 0 1 0 0 0 1 0 1 0 0 1 1 1 0 1 0 0 1 1 1 0 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 0\n",
+      "output": "119"
+    },
+    {
+      "name": "random_3_n94_k99",
+      "input": "94 99\n0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 1 0 0 0 0\n",
+      "output": "94"
+    },
+    {
+      "name": "random_4_n137_k137",
+      "input": "137 137\n0 0 0 0 0 0 1 1 0 0 1 0 0 0 1 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 1 1 1 0 0 0 1 0 1 0 0 0 1 0 1 0 0 1 0 0 0 0\n",
+      "output": "137"
+    },
+    {
+      "name": "random_5_n56_k0",
+      "input": "56 0\n1 0 0 1 1 0 0 1 0 0 1 0 0 1 0 1 0 1 0 1 0 1 0 0 1 0 0 1 0 1 1 1 0 0 1 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 1 0 1 1\n",
+      "output": "3"
+    },
+    {
+      "name": "random_6_n178_k1",
+      "input": "178 1\n1 1 0 1 0 1 1 1 0 1 1 0 1 1 0 1 0 1 1 1 1 0 1 1 1 0 1 0 0 1 1 1 0 1 0 0 0 1 0 1 1 1 1 1 1 1 0 0 1 1 1 0 1 1 0 0 0 1 1 0 1 1 0 0 1 0 1 1 0 1 1 1 0 0 0 1 0 1 1 1 1 0 1 1 1 0 0 1 1 1 1 1 1 1 1 0 1 1 0 0 1 1 0 1 0 1 0 0 0 0 1 0 1 1 1 1 1 0 1 1 1 0 1 1 0 1 1 1 0 1 1 1 1 1 1 0 1 1 1 0 1 1 0 1 0 1 1 1 1 0 0 1 0 1 1 1 1 0 0 1 0 0 1 1 0 0 0 0 0 1 0 1 0 1 1 1 0 1\n",
+      "output": "11"
+    },
+    {
+      "name": "random_7_n125_k130",
+      "input": "125 130\n1 0 1 1 1 1 0 1 0 0 1 1 1 0 1 1 1 0 1 1 1 1 0 1 1 1 1 0 0 1 1 0 0 1 0 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 0 1 1 0 1 1 1 1 1 1 1 0 1 0 1 0 1 1 1 1 1 1 0 1 0 1 1 0 1 1 0 1 0 0 1 0 1 1 1 1 0 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0\n",
+      "output": "125"
+    },
+    {
+      "name": "random_8_n42_k42",
+      "input": "42 42\n0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0\n",
+      "output": "42"
+    },
+    {
+      "name": "random_9_n32_k32",
+      "input": "32 32\n0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",
+      "output": "32"
+    },
+    {
+      "name": "random_10_n30_k0",
+      "input": "30 0\n1 1 1 1 1 1 1 0 1 1 1 0 1 1 1 1 1 0 0 1 1 1 1 0 1 1 1 1 1 1\n",
+      "output": "7"
+    },
+    {
+      "name": "random_11_n134_k139",
+      "input": "134 139\n0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0\n",
+      "output": "134"
+    },
+    {
+      "name": "random_12_n150_k155",
+      "input": "150 155\n0 1 0 0 0 0 0 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0 1 0 1 1 1 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 0 1 0 1 1 1 1 0 0 1 0 0 0 0 0 0 0 1 1 0 1 1 1 0 1 1 1 1 0 0 0 1 1 1 0 1 1 1 0 1 0 1 1 1 1 0 1 1 1 0 1 0 0 1 1 1 1 0 0 0 1 1 0 1 1 0 0 0 1 0 0 1 0 0 1 0 0 0\n",
+      "output": "150"
+    },
+    {
+      "name": "random_13_n64_k5",
+      "input": "64 5\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "64"
+    },
+    {
+      "name": "random_14_n175_k71",
+      "input": "175 71\n1 0 0 1 1 1 1 1 1 1 0 1 1 1 1 1 0 1 0 0 1 1 1 0 0 0 1 1 0 1 0 1 0 0 0 1 1 1 1 1 1 0 1 1 1 0 1 0 0 0 1 1 1 0 0 0 0 0 1 1 0 1 1 1 0 1 0 0 1 1 0 0 1 1 1 0 0 1 0 0 0 0 1 1 0 0 1 0 1 1 0 0 0 1 1 1 1 1 0 1 1 0 0 0 1 1 0 1 0 1 0 0 1 1 1 1 1 1 0 0 0 0 1 1 0 1 1 1 0 0 0 1 1 1 1 1 1 1 0 0 0 1 0 1 0 0 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0 1 1 0 1 0 1 1 0 1 1 1 1 0 1\n",
+      "output": "175"
+    },
+    {
+      "name": "random_15_n93_k93",
+      "input": "93 93\n1 1 1 0 1 1 1 1 1 1 0 1 1 1 1 0 1 1 1 1 1 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0 1 0 1\n",
+      "output": "93"
+    },
+    {
+      "name": "random_16_n96_k6",
+      "input": "96 6\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "96"
+    },
+    {
+      "name": "random_17_n168_k173",
+      "input": "168 173\n1 0 0 1 1 1 0 1 1 0 0 0 0 1 1 1 1 1 0 0 1 0 1 0 1 1 0 1 0 1 1 1 0 0 0 1 0 0 1 1 1 1 0 0 0 1 0 0 1 1 1 1 1 0 1 1 1 0 1 1 1 1 0 1 1 1 1 0 0 0 0 1 0 1 1 1 1 1 1 0 1 1 1 1 0 1 0 1 1 1 1 1 0 0 1 0 0 1 0 0 0 1 1 0 1 1 0 0 0 1 1 1 1 0 1 1 0 0 1 1 0 0 1 1 1 0 1 1 1 1 0 0 1 1 1 1 1 1 1 1 0 1 0 1 0 1 1 0 1 0 0 1 0 0 1 1 1 1 1 1 0 1 0 0 0 1 0 1\n",
+      "output": "168"
+    },
+    {
+      "name": "random_18_n33_k4",
+      "input": "33 4\n1 1 1 1 0 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 0 1 1 1 1 0 0 1 1 1 0 1 1\n",
+      "output": "25"
+    },
+    {
+      "name": "random_19_n54_k54",
+      "input": "54 54\n1 0 1 1 0 0 0 0 1 0 1 0 1 0 0 0 0 0 1 0 1 0 0 1 0 0 0 0 1 1 0 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0\n",
+      "output": "54"
+    },
+    {
+      "name": "random_20_n101_k106",
+      "input": "101 106\n1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 0 1 1 1 1 1 0 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1\n",
+      "output": "101"
+    },
+    {
+      "name": "random_21_n73_k78",
+      "input": "73 78\n0 1 0 0 0 0 1 1 1 0 0 1 1 1 1 1 1 0 1 1 0 0 1 0 1 1 0 1 1 0 1 1 1 0 0 1 0 1 1 0 0 0 1 0 1 1 1 1 1 1 1 1 0 0 1 1 0 0 0 1 1 1 1 1 1 1 0 0 0 0 1 1 1\n",
+      "output": "73"
+    },
+    {
+      "name": "random_22_n180_k185",
+      "input": "180 185\n0 1 0 0 1 1 1 1 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 1 1 1 1 1 0 1 0 0 0 0 0 0 1 1 0 0 1 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 1 1 0 0 1 1 1 0 1 1 0 0 0 0 0 1 1 0 1 1 0 1 0 0 1 0 0 0 1 1 0 0 0 1 0 0 1 1 1 0 0 0 1 1 0 1 0 1 0 1 0 0 1 0 0 0 1 0 1 1 0 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 1 0 1 1 1 0 0 0 1 1 1 0 0 1 0 0 0 1 0 0 0\n",
+      "output": "180"
+    },
+    {
+      "name": "random_23_n20_k20",
+      "input": "20 20\n0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",
+      "output": "20"
+    },
+    {
+      "name": "random_24_n155_k155",
+      "input": "155 155\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 0 1 0 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1\n",
+      "output": "155"
+    },
+    {
+      "name": "random_25_n164_k62",
+      "input": "164 62\n1 1 1 0 1 1 0 1 0 1 1 1 0 1 0 0 1 1 1 1 0 1 0 1 1 1 0 1 1 0 0 1 0 1 1 0 0 1 1 1 1 0 1 1 0 1 1 1 0 0 0 0 0 0 1 1 1 0 0 0 1 0 1 0 0 1 1 1 1 1 0 0 0 1 1 1 1 1 0 1 1 1 1 0 1 1 0 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 0 0 1 0 1 1 0 1 0 1 0 0 1 0 1 1 1 0 1 1 1 1 0 0 1 0 1 0 1 1 1 1 1 1 1 1 0 1 0 0 1 0 1 1 0 1 0 1 1 1 1 1 0 1 1\n",
+      "output": "164"
+    },
+    {
+      "name": "random_26_n21_k26",
+      "input": "21 26\n1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1\n",
+      "output": "21"
+    },
+    {
+      "name": "random_27_n69_k69",
+      "input": "69 69\n1 1 1 0 0 1 1 0 0 0 0 1 1 0 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 1 0 1 0 1 1 1 0 0 0 1 0 1 0 0 0 0 0 0 0 0 1 1 0 1 0 0 1 0 0 0 0 0 1 1 1 1 0 1 0\n",
+      "output": "69"
+    },
+    {
+      "name": "random_28_n69_k37",
+      "input": "69 37\n1 1 1 1 1 0 1 1 1 1 1 1 0 0 1 1 0 1 0 1 1 0 0 1 0 0 0 0 1 1 0 0 1 1 0 1 0 0 0 1 1 0 0 1 1 1 1 0 0 1 0 0 0 0 1 0 1 0 0 1 0 1 1 1 1 0 0 0 1\n",
+      "output": "69"
+    },
+    {
+      "name": "random_29_n100_k45",
+      "input": "100 45\n0 1 1 0 1 0 1 0 0 1 0 1 0 0 0 1 1 1 0 1 0 0 1 0 0 1 1 0 1 0 0 1 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 1 0 0 1 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 1 1 0 0 1 0\n",
+      "output": "70"
+    },
+    {
+      "name": "random_30_n69_k7",
+      "input": "69 7\n1 1 1 1 1 1 0 1 1 0 0 1 1 0 1 0 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 0 1 0 1 0 0 1 0 1 1 1 0 1 1 1 1\n",
+      "output": "48"
+    },
+    {
+      "name": "random_31_n173_k7",
+      "input": "173 7\n1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 0 1 1 1 1 0 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 0 1 0 1 0 0 1 1 1 0 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 0 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 0 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 0 1 1\n",
+      "output": "62"
+    },
+    {
+      "name": "random_32_n158_k100",
+      "input": "158 100\n0 1 0 0 0 0 0 0 0 0 1 0 0 1 1 0 0 0 0 0 0 1 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 0 0 0 0 0 1 1 1 0 0 1 0 0 0 1 1 1 1 0 0 0 0 0 0 1 0 0 0 0 1 0 1 0 1 0 0 1 0 0 0 0 0 0 1 0 0 0 1 0 0 1 0 1 1 1 0 1 0 0 1 0 0 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 1 0 1 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 1\n",
+      "output": "145"
+    },
+    {
+      "name": "random_33_n59_k5",
+      "input": "59 5\n1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "59"
+    },
+    {
+      "name": "random_34_n83_k15",
+      "input": "83 15\n1 0 1 1 0 1 1 0 1 1 1 1 1 1 1 0 1 0 1 1 0 1 1 0 0 1 1 0 1 1 0 1 1 1 1 0 0 0 0 1 0 1 0 1 1 1 0 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 0 1 1 0 1 0 0 1 1 0 0 1 0 0 1 0 0 0 1 1 1\n",
+      "output": "44"
+    },
+    {
+      "name": "random_35_n82_k0",
+      "input": "82 0\n0 0 0 0 0 0 1 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 1 0 0 1 0 0 0 1 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 1 1 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 1 0\n",
+      "output": "2"
+    },
+    {
+      "name": "random_36_n125_k130",
+      "input": "125 130\n1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "125"
+    },
+    {
+      "name": "random_37_n62_k62",
+      "input": "62 62\n1 1 1 0 1 1 0 0 1 1 1 1 0 1 0 0 1 1 0 1 1 1 0 1 0 0 1 1 1 0 1 0 0 1 1 0 1 1 1 1 1 1 1 1 0 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "62"
+    },
+    {
+      "name": "random_38_n21_k16",
+      "input": "21 16\n1 1 0 0 0 0 1 0 0 0 0 0 0 1 1 1 0 1 1 1 1\n",
+      "output": "21"
+    },
+    {
+      "name": "random_39_n113_k33",
+      "input": "113 33\n1 0 0 0 0 0 1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 0 0 1 1 1\n",
+      "output": "45"
+    },
+    {
+      "name": "random_40_n85_k90",
+      "input": "85 90\n1 0 1 1 1 1 0 1 1 0 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 0 1 1 1 1 0 1 1 1 1 1 0 1 1 0 1 0 1 1 1 1 0 1 1 0 1 1 0 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "85"
+    },
+    {
+      "name": "random_41_n66_k0",
+      "input": "66 0\n0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 1 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0\n",
+      "output": "3"
+    },
+    {
+      "name": "random_42_n52_k0",
+      "input": "52 0\n0 0 0 0 0 1 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0\n",
+      "output": "2"
+    },
+    {
+      "name": "random_43_n87_k4",
+      "input": "87 4\n1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "87"
+    },
+    {
+      "name": "random_44_n49_k0",
+      "input": "49 0\n1 1 1 0 1 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 0 0 1 1 1 1 1 1 0 0 1 1 1 0 1\n",
+      "output": "20"
+    },
+    {
+      "name": "random_45_n47_k52",
+      "input": "47 52\n1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "47"
+    },
+    {
+      "name": "random_46_n68_k73",
+      "input": "68 73\n0 0 1 1 0 1 0 1 1 1 0 0 1 0 1 1 1 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 1 0 1 0 0 0 0 1 0 0 0 1 1 0 1 0 0 0 0 1 0 0 1 0\n",
+      "output": "68"
+    },
+    {
+      "name": "random_47_n43_k48",
+      "input": "43 48\n0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0\n",
+      "output": "43"
+    },
+    {
+      "name": "random_48_n179_k184",
+      "input": "179 184\n1 0 1 1 1 1 0 1 1 1 0 1 0 0 1 1 1 1 1 0 0 0 0 1 0 1 1 0 1 1 0 1 0 0 1 1 1 1 1 0 1 1 1 0 0 0 1 1 1 1 1 0 1 1 1 1 1 1 0 0 0 1 1 1 0 1 0 1 1 0 1 1 0 1 0 0 1 1 1 1 1 1 1 1 0 0 0 1 0 1 1 0 0 1 1 0 0 1 0 1 1 1 0 1 1 1 1 0 0 1 1 1 1 0 0 1 1 1 0 1 1 0 1 1 1 0 1 0 1 1 0 0 0 1 1 1 1 1 1 1 0 0 1 1 1 1 1 0 1 1 0 1 1 0 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1\n",
+      "output": "179"
+    },
+    {
+      "name": "random_49_n82_k82",
+      "input": "82 82\n1 0 0 0 1 0 0 0 1 0 0 0 1 1 1 0 1 1 1 1 0 1 0 1 0 0 0 1 0 1 1 1 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 0 0 1 1 0 0 0 1 1 0 0 0 0 1 0 1 0 0 0 0\n",
+      "output": "82"
+    },
+    {
+      "name": "random_50_n160_k89",
+      "input": "160 89\n1 0 0 0 0 1 0 0 1 0 0 0 1 0 0 0 1 1 0 0 1 1 1 1 0 1 0 0 1 0 1 1 1 0 1 0 0 1 1 1 0 0 0 1 1 0 1 1 1 1 1 1 0 1 1 0 0 1 0 0 0 1 0 0 1 1 1 1 0 0 1 1 1 0 0 0 0 0 0 1 1 1 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 0 1 0 1 1 1 1 0 0 0 1 0 0 1 0 0 0 0 1 0 1 0 1 1 0 1 0 0 1 1 1 1 1 0 0 0 0 0 1 1 1 1 1 0 1 1 0 0 0 0 1 0 0 1 0 1 1 0 0 1 1 1 0\n",
+      "output": "160"
+    },
+    {
+      "name": "random_51_n142_k147",
+      "input": "142 147\n1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1\n",
+      "output": "142"
+    },
+    {
+      "name": "random_52_n116_k19",
+      "input": "116 19\n0 0 0 1 0 0 1 1 0 0 0 1 0 0 1 1 0 0 1 1 1 1 1 0 0 1 0 1 1 1 1 0 1 0 0 1 0 0 1 1 0 0 1 1 1 0 0 1 1 1 0 0 1 1 1 0 1 0 1 0 1 1 1 0 0 1 1 0 1 1 1 1 0 1 0 1 1 0 0 0 0 1 1 1 0 0 1 1 1 0 1 1 1 0 0 1 1 0 1 1 1 1 1 1 0 0 0 1 0 1 1 1 0 1 1 1\n",
+      "output": "53"
+    },
+    {
+      "name": "random_53_n34_k17",
+      "input": "34 17\n1 1 1 1 0 0 0 1 1 0 0 1 0 1 1 1 0 1 1 0 0 1 0 0 1 1 0 1 1 1 1 1 1 1\n",
+      "output": "34"
+    },
+    {
+      "name": "random_54_n8_k13",
+      "input": "8 13\n1 1 1 0 0 1 0 0\n",
+      "output": "8"
+    },
+    {
+      "name": "random_55_n136_k53",
+      "input": "136 53\n0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",
+      "output": "58"
+    },
+    {
+      "name": "random_56_n177_k0",
+      "input": "177 0\n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 1 0 1 0 0 0 0 1 1 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0\n",
+      "output": "3"
+    },
+    {
+      "name": "random_57_n178_k183",
+      "input": "178 183\n0 0 0 0 1 0 0 1 1 1 0 1 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 1 0 0 1 0 0 0 1 0 1 0 0 1 0 0 0 0 0 1 1 0 1 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 1 1 1 0 0 1 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",
+      "output": "178"
+    },
+    {
+      "name": "random_58_n32_k32",
+      "input": "32 32\n1 0 1 0 1 0 1 1 0 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1\n",
+      "output": "32"
+    },
+    {
+      "name": "random_59_n57_k0",
+      "input": "57 0\n0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 1 1 0 1 0 0 1 0\n",
+      "output": "2"
+    },
+    {
+      "name": "random_60_n26_k31",
+      "input": "26 31\n1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1\n",
+      "output": "26"
+    },
+    {
+      "name": "random_61_n15_k6",
+      "input": "15 6\n0 0 0 0 0 0 1 0 1 0 0 0 1 1 0\n",
+      "output": "10"
+    },
+    {
+      "name": "random_62_n148_k13",
+      "input": "148 13\n1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 0 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 0 1\n",
+      "output": "124"
+    },
+    {
+      "name": "random_63_n179_k131",
+      "input": "179 131\n0 1 0 0 0 0 0 0 0 0 0 1 0 1 0 1 0 0 1 1 0 0 1 0 0 0 0 0 1 1 0 1 0 0 0 0 1 0 0 0 1 1 1 0 0 0 0 0 1 0 1 1 0 1 0 0 0 0 0 0 0 1 1 0 0 0 0 1 1 0 0 1 0 1 1 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 1 1 0 1 0 1 1 0 1 0 1 0 0 1 0 0 1 0 0 0 0 0 1 1 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 1 0 0 0 0 0 1 1 0 0 1 0 0\n",
+      "output": "179"
+    },
+    {
+      "name": "random_64_n68_k14",
+      "input": "68 14\n1 1 0 1 1 1 1 1 1 0 1 1 1 1 1 0 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 0 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1\n",
+      "output": "68"
+    },
+    {
+      "name": "random_65_n135_k113",
+      "input": "135 113\n0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0\n",
+      "output": "121"
+    },
+    {
+      "name": "random_66_n73_k20",
+      "input": "73 20\n1 1 1 1 1 1 1 1 0 0 1 0 1 1 1 1 1 1 0 1 1 0 0 0 1 1 1 1 0 1 1 0 1 1 0 1 0 1 1 0 1 1 0 0 1 1 1 1 0 1 0 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 0 0 1 1 1 1 0\n",
+      "output": "72"
+    },
+    {
+      "name": "random_67_n129_k26",
+      "input": "129 26\n0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",
+      "output": "32"
+    },
+    {
+      "name": "random_68_n44_k49",
+      "input": "44 49\n1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "44"
+    },
+    {
+      "name": "random_69_n116_k116",
+      "input": "116 116\n1 0 0 1 0 0 1 0 1 1 1 1 0 1 1 1 1 1 1 0 1 0 1 1 0 1 1 0 1 1 1 1 1 1 0 0 0 1 0 0 1 1 1 0 0 1 1 0 0 1 1 1 1 0 0 0 1 1 0 1 1 1 1 1 0 1 0 1 0 0 0 0 0 0 1 1 1 1 1 1 0 1 1 0 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 0 1 1 0\n",
+      "output": "116"
+    },
+    {
+      "name": "random_70_n113_k0",
+      "input": "113 0\n1 0 1 0 1 0 1 0 0 0 0 0 0 1 1 0 1 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 1 1 1 1 0 0 0 0 0 1 0 0 1 1 0 0 1 0 0 0 1 0 1 0 1 0 1 0 1 0 1 1 1 0 0 0 0 0 0 0 0 0 1 0 1 1 1 0 1 1 0 1 0 1 0 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0\n",
+      "output": "4"
+    },
+    {
+      "name": "random_71_n61_k60",
+      "input": "61 60\n0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0\n",
+      "output": "61"
+    },
+    {
+      "name": "random_72_n110_k110",
+      "input": "110 110\n0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0\n",
+      "output": "110"
+    },
+    {
+      "name": "random_73_n65_k23",
+      "input": "65 23\n1 1 0 0 1 0 0 0 1 0 0 1 0 0 0 1 1 0 0 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 1 0 0 0 0 0 1 1 1 0 0 1 0 0 0 0 0 1 1 0 1 0 1 1 0 0 1\n",
+      "output": "37"
+    },
+    {
+      "name": "random_74_n2_k2",
+      "input": "2 2\n1 1\n",
+      "output": "2"
+    },
+    {
+      "name": "random_75_n120_k120",
+      "input": "120 120\n0 0 0 1 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0\n",
+      "output": "120"
+    },
+    {
+      "name": "random_76_n148_k153",
+      "input": "148 153\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 0 1 1 1 1 1 1\n",
+      "output": "148"
+    },
+    {
+      "name": "random_77_n68_k68",
+      "input": "68 68\n1 0 1 1 1 1 1 0 0 0 0 1 0 1 1 0 0 1 1 1 1 1 0 1 0 0 1 1 1 0 0 1 1 1 1 1 1 1 0 1 0 1 0 1 0 0 1 1 0 0 1 0 1 1 0 0 1 0 0 1 1 1 1 1 1 1 1 1\n",
+      "output": "68"
+    },
+    {
+      "name": "random_78_n104_k109",
+      "input": "104 109\n1 0 1 0 0 1 1 0 1 0 0 1 1 0 1 1 0 0 1 0 1 0 1 1 0 1 1 1 0 1 1 1 1 1 1 1 1 1 0 1 1 0 1 1 1 1 0 1 1 1 0 1 0 1 1 1 1 1 1 1 1 0 0 1 1 0 1 1 0 1 0 0 1 0 0 1 1 1 0 1 1 0 1 0 0 0 1 1 1 1 1 1 0 0 0 1 0 0 0 0 0 1 0 1\n",
+      "output": "104"
+    },
+    {
+      "name": "random_79_n5_k5",
+      "input": "5 5\n0 1 0 0 1\n",
+      "output": "5"
+    },
+    {
+      "name": "random_80_n77_k72",
+      "input": "77 72\n0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 1 0 0 0 0\n",
+      "output": "77"
+    },
+    {
+      "name": "random_81_n176_k38",
+      "input": "176 38\n0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 1 0 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0\n",
+      "output": "49"
+    },
+    {
+      "name": "random_82_n102_k0",
+      "input": "102 0\n1 0 1 1 1 1 1 1 1 1 1 1 0 1 1 0 1 1 1 0 0 0 1 1 1 1 0 1 0 0 1 0 0 0 1 0 1 1 1 1 1 1 1 0 1 1 0 0 1 1 0 1 1 1 0 0 1 1 0 1 0 0 1 1 1 0 1 1 1 0 1 0 1 0 0 0 0 0 0 1 1 1 0 0 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0\n",
+      "output": "10"
+    },
+    {
+      "name": "random_83_n24_k29",
+      "input": "24 29\n0 0 1 1 0 0 0 0 0 1 0 1 1 0 0 0 0 1 0 1 0 0 0 0\n",
+      "output": "24"
+    },
+    {
+      "name": "random_84_n36_k32",
+      "input": "36 32\n0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 1 1 0 0 0 1 0 0 1 0 0 0 0 0 0 1 0 1 0 0 1\n",
+      "output": "36"
+    },
+    {
+      "name": "random_85_n73_k0",
+      "input": "73 0\n1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 0 1 1 1 1 0 1 1 1 1 1 0 1 0 1 1 1 0 0 1 1 1 0 1 1 1 1 1 1 0 1 0 0 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 0 0 1 1 1 1 1 0\n",
+      "output": "9"
+    },
+    {
+      "name": "random_86_n47_k52",
+      "input": "47 52\n1 0 0 1 1 1 0 0 1 1 1 1 1 1 0 0 0 1 0 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1\n",
+      "output": "47"
+    },
+    {
+      "name": "random_87_n134_k84",
+      "input": "134 84\n0 0 1 1 1 1 1 0 1 0 0 0 0 0 0 1 1 0 1 0 0 1 0 1 0 0 0 1 1 1 1 0 0 0 0 0 1 1 1 0 0 0 0 1 1 0 0 0 1 0 0 1 0 0 0 1 1 1 0 0 0 0 0 0 0 1 0 1 0 1 0 0 1 0 0 0 1 0 0 1 1 0 0 0 1 1 0 0 0 0 0 1 1 1 1 0 0 1 1 0 0 0 1 0 1 1 0 0 0 1 0 0 0 1 0 0 0 0 1 1 0 1 1 1 0 1 1 1 0 0 0 1 0 1\n",
+      "output": "134"
+    },
+    {
+      "name": "random_88_n3_k8",
+      "input": "3 8\n1 1 1\n",
+      "output": "3"
+    },
+    {
+      "name": "random_89_n116_k121",
+      "input": "116 121\n1 1 1 0 1 0 1 1 0 1 1 0 1 0 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 0 1 0 1 0 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 0 0 1 0 1 1 1 1 1 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "116"
+    },
+    {
+      "name": "random_90_n132_k132",
+      "input": "132 132\n1 1 0 1 1 1 0 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 0 1 1 0 1 0 1 0 1 1 1 1 0 1 1 1 1 1 0 1 1 1 0 1 1 0 1 1 1 1 1 1 1 1 0 1 1 1 1 1 0 1 1 0 1 0 1 1 1 1 1 1 1 1 0 1 1 1 1\n",
+      "output": "132"
+    },
+    {
+      "name": "random_91_n112_k112",
+      "input": "112 112\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "112"
+    },
+    {
+      "name": "random_92_n27_k27",
+      "input": "27 27\n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",
+      "output": "27"
+    },
+    {
+      "name": "random_93_n130_k4",
+      "input": "130 4\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1\n",
+      "output": "92"
+    },
+    {
+      "name": "random_94_n72_k51",
+      "input": "72 51\n0 0 1 0 1 0 0 1 0 1 0 0 1 0 1 0 0 0 1 0 0 0 1 0 0 1 1 0 0 1 0 0 0 0 0 0 1 0 0 1 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 1 1 1 0 0 1\n",
+      "output": "72"
+    },
+    {
+      "name": "random_95_n45_k2",
+      "input": "45 2\n1 1 0 1 1 0 0 1 1 0 0 0 1 1 1 0 1 0 1 1 1 0 0 0 1 0 1 1 0 1 0 0 0 1 0 1 0 1 1 0 0 0 0 1 0\n",
+      "output": "9"
+    },
+    {
+      "name": "random_96_n123_k18",
+      "input": "123 18\n1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 0 1 1 1 1 1 1 1 1 0 0 1 1 0 1 1 1 1 1 0 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 0 1 1 1 1 0 1 1 0 1 1 1 1 1 1 0 1 0 1 1 1 1 1 0 1 0 0 1\n",
+      "output": "123"
+    },
+    {
+      "name": "random_97_n18_k5",
+      "input": "18 5\n0 0 0 0 1 1 1 0 0 0 0 0 0 1 1 1 0 0\n",
+      "output": "8"
+    },
+    {
+      "name": "random_98_n53_k0",
+      "input": "53 0\n1 0 0 0 1 1 0 0 0 1 0 0 1 1 1 1 0 1 0 0 0 0 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 1 0 1 0 1 0 0 1 1 0 0 0 0 1 0\n",
+      "output": "4"
+    },
+    {
+      "name": "random_99_n9_k9",
+      "input": "9 9\n0 0 0 0 0 0 0 0 0\n",
+      "output": "9"
+    },
+    {
+      "name": "random_100_n80_k55",
+      "input": "80 55\n1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 1 0 1 1 0 0 1 1 0 0 1 0 0 1 1 0 0 1 0 0 0 0 0 0 1 0 0 0 1 1 0 1 1 1 0 0 1 0 1 1 0 1 0 1 0 0 1 1 0 0 0 0 1 1 0 1 1 0 0\n",
+      "output": "80"
+    },
+    {
+      "name": "random_101_n48_k48",
+      "input": "48 48\n1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0 1 1 0 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "48"
+    },
+    {
+      "name": "random_102_n154_k15",
+      "input": "154 15\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "154"
+    },
+    {
+      "name": "random_103_n41_k12",
+      "input": "41 12\n1 1 0 0 1 1 1 1 1 0 0 1 0 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1\n",
+      "output": "41"
+    },
+    {
+      "name": "random_104_n15_k7",
+      "input": "15 7\n1 1 1 1 1 1 1 0 1 1 0 1 1 1 1\n",
+      "output": "15"
+    },
+    {
+      "name": "random_105_n62_k0",
+      "input": "62 0\n1 1 0 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "22"
+    },
+    {
+      "name": "random_106_n85_k23",
+      "input": "85 23\n1 1 1 1 0 0 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 1 0 1 0 0 1 1 1 1 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 0 1 1 1 1 1 1 1 0 0 1 1 1 0 1 1 1 0 1 1 1\n",
+      "output": "85"
+    },
+    {
+      "name": "random_107_n33_k9",
+      "input": "33 9\n1 0 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 0 1 1 1 1 1 1\n",
+      "output": "33"
+    },
+    {
+      "name": "random_108_n84_k84",
+      "input": "84 84\n1 1 0 1 0 1 0 1 1 0 0 0 1 1 1 0 0 1 1 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 0 0 0 1 0 0 1 1 0 1 0 1 0 0 1 1 0 0 0 1 0 1 1 0 0 1 0 1 1 0 1 0 1 1 1 0 1 1 1 1 1 0 0 1 1 0 0 1 0 1\n",
+      "output": "84"
+    },
+    {
+      "name": "random_109_n145_k0",
+      "input": "145 0\n0 0 0 1 0 0 0 0 1 0 1 0 0 1 0 0 0 0 1 0 0 1 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1\n",
+      "output": "2"
+    },
+    {
+      "name": "random_110_n38_k0",
+      "input": "38 0\n1 1 1 1 1 0 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 0 1 1 0 1 1 1 1 1 1 1 1 0 1 1 1 1\n",
+      "output": "8"
+    },
+    {
+      "name": "random_111_n115_k120",
+      "input": "115 120\n1 1 1 1 0 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 0 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "115"
+    },
+    {
+      "name": "random_112_n97_k0",
+      "input": "97 0\n1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 1\n",
+      "output": "2"
+    },
+    {
+      "name": "random_113_n15_k20",
+      "input": "15 20\n0 1 0 0 1 1 1 0 0 0 1 0 0 1 0\n",
+      "output": "15"
+    },
+    {
+      "name": "random_114_n4_k9",
+      "input": "4 9\n0 0 0 1\n",
+      "output": "4"
+    },
+    {
+      "name": "random_115_n73_k6",
+      "input": "73 6\n0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0\n",
+      "output": "7"
+    },
+    {
+      "name": "random_116_n63_k29",
+      "input": "63 29\n0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0\n",
+      "output": "36"
+    },
+    {
+      "name": "random_117_n116_k116",
+      "input": "116 116\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0 1 1 1 1 0 0 1 1 1 0 1 1 1\n",
+      "output": "116"
+    },
+    {
+      "name": "random_118_n176_k156",
+      "input": "176 156\n0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",
+      "output": "173"
+    },
+    {
+      "name": "random_119_n111_k0",
+      "input": "111 0\n1 1 1 1 1 1 1 1 1 0 1 1 1 0 1 1 0 1 1 1 1 1 1 1 1 0 1 1 1 0 1 1 0 1 1 0 1 1 0 0 1 1 1 0 1 1 1 1 1 1 1 1 1 1 0 1 1 0 1 0 1 1 1 1 1 1 0 1 1 1 1 1 0 0 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 0 1 1 0 1 1 1 0 1 1 1 0 0 1 1 1 1 1 1\n",
+      "output": "10"
+    },
+    {
+      "name": "random_120_n8_k1",
+      "input": "8 1\n0 1 0 0 0 0 0 0\n",
+      "output": "2"
+    },
+    {
+      "name": "random_121_n157_k162",
+      "input": "157 162\n1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 0 0 1 1 1 1 0 1 1 1 1 0 1 0 1 1 1 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 0 1 1 1 1 0 1 1 0 1 1 1 0 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 0 1 1 1 1 0 1 0 1 1 1 0 1 0 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 0 1 1 0 1 0 1 1 0 1 1\n",
+      "output": "157"
+    },
+    {
+      "name": "random_122_n162_k167",
+      "input": "162 167\n0 1 1 0 0 1 0 1 0 0 1 1 1 1 0 0 1 1 0 0 0 1 1 1 0 0 0 1 0 1 1 1 1 1 1 0 0 1 1 1 1 0 1 1 0 1 1 1 0 1 1 1 1 0 1 0 1 0 1 0 1 1 0 1 1 1 1 1 1 1 1 0 1 1 1 0 1 0 1 1 1 0 0 0 0 1 1 0 1 1 1 1 0 1 0 1 0 0 1 1 0 0 0 1 1 1 1 1 0 0 0 1 0 1 0 0 1 1 0 1 0 1 0 0 1 0 1 0 1 1 1 1 0 1 1 0 1 1 0 1 1 1 1 1 0 1 1 1 1 1 0 1 1 1 0 1 0 1 1 1 0 0\n",
+      "output": "162"
+    },
+    {
+      "name": "random_123_n177_k182",
+      "input": "177 182\n0 1 0 1 1 0 1 0 0 0 0 0 1 0 0 1 0 1 1 1 0 1 0 1 0 0 0 1 1 0 0 0 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 0 1 0 0 0 0 0 1 1 0 1 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 1 0 1 0 0 0 1 1 1 1 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 1 0 0 1 0 1 0 1 1 0 1 1 0 0 0 1 0 0 1 0 1 1 0 1 1 0 1 0 0 0 1 0 1 0 1 1 0 0 1 1 0 1 1\n",
+      "output": "177"
+    },
+    {
+      "name": "random_124_n75_k16",
+      "input": "75 16\n1 1 0 1 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 0 1 1 1 1 1 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 0 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "75"
+    },
+    {
+      "name": "random_125_n6_k5",
+      "input": "6 5\n1 1 1 1 1 1\n",
+      "output": "6"
+    },
+    {
+      "name": "random_126_n128_k133",
+      "input": "128 133\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0 1 1 1 1 0 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "128"
+    },
+    {
+      "name": "random_127_n38_k43",
+      "input": "38 43\n1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 1 0 1 0 0 0 1 0\n",
+      "output": "38"
+    },
+    {
+      "name": "random_128_n172_k127",
+      "input": "172 127\n0 0 0 0 0 0 0 0 1 0 1 1 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 1 0 0 1 0 1 1 0 1 0 1 0 0 1 0 0 0 1 0 1 0 1 1 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 1 0 1 1 1 1 0 0 0 1 0 1 0 0 0 0 0 0 1 1 0 0 1 0 1 0 0 0 0 0 0 0 1 1 1 0 1 0 0 0 0 0 1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 1 1 0 0\n",
+      "output": "172"
+    },
+    {
+      "name": "random_129_n37_k42",
+      "input": "37 42\n1 1 0 0 0 1 0 1 0 1 1 0 0 1 1 0 0 1 0 1 1 0 0 1 0 0 0 0 0 0 1 1 1 0 1 0 0\n",
+      "output": "37"
+    },
+    {
+      "name": "random_130_n179_k117",
+      "input": "179 117\n1 0 0 1 0 0 0 0 0 1 0 0 0 1 1 0 0 1 1 1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 1 0 1 0 0 0 0 1 1 1 1 0 0 1 0 0 1 0 0 1 0 1 1 0 0 1 1 1 0 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 1 0 0 0 0 0 1 1 0 1 0 0 1 0 1 1 1 0 0 0 0 1 1 0 0 0 1 1 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 1 0 0 1 0 1 1 0 0 0 1 0 1 0 0 0 1 1 1 0 0 1 0 0 0 1 0 0 1 1 0 1 1 1 0 0 0 1 1 1 0 0 1 0 0 0\n",
+      "output": "179"
+    },
+    {
+      "name": "random_131_n69_k74",
+      "input": "69 74\n0 0 1 0 1 0 1 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 1 0 1 1 0 0 0 1 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0 1 1 1 1 1 0 0 1 0 0 0 0 1 1\n",
+      "output": "69"
+    },
+    {
+      "name": "random_132_n151_k151",
+      "input": "151 151\n0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 1 0 0 1 1 1 0 0 0 0 0 1 1 0 0 0 1 1 1 1 0 0 1 1 1 0 1 0 0 0 0 1 0 1 1 0 1 1 0 0 1 0 0 1 0 1 0 1 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 1 0 1 0 1 1 0 0 1 1 0\n",
+      "output": "151"
+    },
+    {
+      "name": "random_133_n55_k55",
+      "input": "55 55\n0 1 0 0 0 1 0 0 1 1 0 0 0 1 1 0 0 0 1 0 0 1 0 0 0 0 0 0 1 1 0 1 1 1 0 0 1 0 0 1 0 1 0 1 0 0 1 0 1 1 0 0 1 0 0\n",
+      "output": "55"
+    },
+    {
+      "name": "random_134_n55_k55",
+      "input": "55 55\n1 1 0 0 0 0 0 0 1 0 0 0 0 0 1 1 1 1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 0 0 0 0 0 1 0 0 0 1 0 0 1 1 0\n",
+      "output": "55"
+    },
+    {
+      "name": "random_135_n92_k25",
+      "input": "92 25\n0 1 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 1 0 1 1 1 0 0 1 1 1 1 0 0 1 1 0 1 1 1 0 0 0 1 0 1 1 1 1 0 0 1 0 0 0 0 0 0 1 1 0 1 0 1 1 0 1 1 1 0 1 0 1 0 1 1 1 0 0 1 0 1 0 0 1 0 0 1 0 1 1 1 0 0 1\n",
+      "output": "57"
+    },
+    {
+      "name": "random_136_n10_k7",
+      "input": "10 7\n1 1 1 1 1 1 0 1 0 1\n",
+      "output": "10"
+    },
+    {
+      "name": "random_137_n48_k8",
+      "input": "48 8\n0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1\n",
+      "output": "11"
+    },
+    {
+      "name": "random_138_n76_k0",
+      "input": "76 0\n1 1 0 1 1 0 1 1 1 0 1 1 0 1 1 1 0 1 0 1 0 1 0 1 1 1 1 1 0 0 1 1 0 0 1 0 1 0 1 1 1 0 1 1 0 0 0 1 1 1 1 1 0 0 1 0 1 0 0 1 1 1 1 1 0 1 1 1 1 0 0 1 1 0 1 1\n",
+      "output": "5"
+    },
+    {
+      "name": "random_139_n163_k168",
+      "input": "163 168\n0 1 0 1 1 0 1 0 0 0 0 1 0 1 0 0 0 1 0 1 0 0 1 1 1 1 1 1 0 0 1 0 1 0 1 0 0 1 0 1 0 0 0 1 1 1 0 0 1 1 0 0 1 1 1 1 0 0 1 1 0 0 0 0 0 1 1 0 0 1 1 1 1 0 1 1 0 1 0 1 0 0 1 0 0 0 1 0 0 1 0 1 0 0 1 0 1 1 1 1 0 1 1 1 1 1 1 1 1 0 0 1 1 0 0 1 1 1 0 1 1 0 0 1 0 1 1 1 0 1 0 1 1 0 1 1 0 0 1 1 1 1 1 1 0 0 0 0 1 1 0 0 0 1 1 0 1 1 0 1 1 1 0\n",
+      "output": "163"
+    },
+    {
+      "name": "random_140_n19_k24",
+      "input": "19 24\n1 0 0 0 1 0 1 0 0 1 0 0 0 1 0 0 0 0 0\n",
+      "output": "19"
+    },
+    {
+      "name": "random_141_n9_k9",
+      "input": "9 9\n1 1 1 0 1 0 0 1 1\n",
+      "output": "9"
+    },
+    {
+      "name": "random_142_n49_k11",
+      "input": "49 11\n0 0 1 1 1 1 1 0 0 1 1 0 0 1 0 0 1 0 1 0 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0 0\n",
+      "output": "38"
+    },
+    {
+      "name": "random_143_n87_k92",
+      "input": "87 92\n0 0 1 0 1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0\n",
+      "output": "87"
+    },
+    {
+      "name": "random_144_n27_k0",
+      "input": "27 0\n0 1 0 1 0 1 1 0 1 0 0 0 1 0 0 1 0 1 0 0 1 0 0 0 0 0 0\n",
+      "output": "2"
+    },
+    {
+      "name": "random_145_n22_k27",
+      "input": "22 27\n0 1 0 0 0 1 1 0 0 1 0 1 0 0 1 1 1 1 1 1 1 0\n",
+      "output": "22"
+    },
+    {
+      "name": "random_146_n97_k97",
+      "input": "97 97\n0 1 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1\n",
+      "output": "97"
+    },
+    {
+      "name": "random_147_n35_k40",
+      "input": "35 40\n1 1 1 0 1 0 1 0 1 0 0 0 0 0 1 0 0 0 1 1 1 0 1 1 0 1 0 0 0 0 0 1 0 0 1\n",
+      "output": "35"
+    },
+    {
+      "name": "random_148_n76_k28",
+      "input": "76 28\n0 1 0 0 1 0 0 0 1 0 0 0 0 1 0 0 1 1 0 0 0 1 1 0 1 0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 1 1 1 1 1 0 0 0 0 0 1 1 0 0 0 1 0 0 0 1 0 1 0 0 0 1 0 1 0 0 0 0 0 0 0 0\n",
+      "output": "46"
+    },
+    {
+      "name": "random_149_n100_k10",
+      "input": "100 10\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1\n",
+      "output": "100"
+    },
+    {
+      "name": "random_150_n60_k0",
+      "input": "60 0\n0 0 1 1 1 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 1 1 1 0 0 0 0 0 1 1 1 1 0 0 1 1 1 0 1 0 0 1 1 1 1 1 1 1 0 0 1 1 1 1 0 1 0 1 1 1\n",
+      "output": "7"
+    }
+  ]
+}

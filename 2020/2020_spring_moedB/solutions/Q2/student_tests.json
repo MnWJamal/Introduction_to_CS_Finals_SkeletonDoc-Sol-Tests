@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "exam_k0_longest_four_ones",
+      "input": "12 0\n1 1 0 1 1 0 1 1 1 1 0 0\n",
+      "output": "4"
+    },
+    {
+      "name": "exam_k1_length_seven",
+      "input": "12 1\n1 1 0 1 1 0 1 1 1 1 0 0\n",
+      "output": "7"
+    },
+    {
+      "name": "exam_k2_length_ten",
+      "input": "12 2\n1 1 0 1 1 0 1 1 1 1 0 0\n",
+      "output": "10"
+    },
+    {
+      "name": "exam_k3_length_eleven",
+      "input": "12 3\n1 1 0 1 1 0 1 1 1 1 0 0\n",
+      "output": "11"
+    }
+  ]
+}

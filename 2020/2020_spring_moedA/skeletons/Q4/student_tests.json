@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "exam_example_k3_true",
+      "input": "11 3\n9 -2 3 17 5 3 8 4 1 1 2\n",
+      "output": "1"
+    },
+    {
+      "name": "exam_example_k4_false",
+      "input": "11 4\n9 -2 3 17 5 3 8 4 1 1 2\n",
+      "output": "0"
+    },
+    {
+      "name": "simple_public_k2_true",
+      "input": "4 2\n1 5 11 5\n",
+      "output": "1"
+    }
+  ]
+}

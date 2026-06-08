@@ -1,0 +1,1219 @@
+{
+  "tests": [
+    {
+      "name": "edge_no_cubes_empty_target",
+      "input": "0\n0\n",
+      "output": "true"
+    },
+    {
+      "name": "edge_no_cubes_nonempty_target",
+      "input": "0\n1\nA\n",
+      "output": "false"
+    },
+    {
+      "name": "edge_one_cube_empty_target",
+      "input": "1\nA 0\n0\n",
+      "output": "true"
+    },
+    {
+      "name": "edge_one_cube_has_letter",
+      "input": "1\nA 0\n1\nA\n",
+      "output": "true"
+    },
+    {
+      "name": "edge_one_cube_missing_letter",
+      "input": "1\nA 0\n1\nB\n",
+      "output": "false"
+    },
+    {
+      "name": "edge_one_cube_many_faces",
+      "input": "1\nABCDE 0\n1\nD\n",
+      "output": "true"
+    },
+    {
+      "name": "edge_one_cube_reuse_not_allowed",
+      "input": "1\nAB 0\n2\nAB\n",
+      "output": "false"
+    },
+    {
+      "name": "edge_two_cubes_same_color_false",
+      "input": "2\nA 0\nB 0\n2\nAB\n",
+      "output": "false"
+    },
+    {
+      "name": "edge_two_cubes_diff_color_true",
+      "input": "2\nA 0\nB 1\n2\nAB\n",
+      "output": "true"
+    },
+    {
+      "name": "edge_two_cubes_order_matters_true",
+      "input": "2\nB 0\nA 1\n2\nAB\n",
+      "output": "true"
+    },
+    {
+      "name": "edge_two_cubes_same_letter_two_colors",
+      "input": "2\nA 0\nA 1\n2\nAA\n",
+      "output": "true"
+    },
+    {
+      "name": "edge_two_cubes_same_letter_same_color",
+      "input": "2\nA 0\nA 0\n2\nAA\n",
+      "output": "false"
+    },
+    {
+      "name": "edge_target_longer_than_cubes",
+      "input": "2\nABC 0\nDEF 1\n5\nABCDE\n",
+      "output": "false"
+    },
+    {
+      "name": "edge_all_letters_one_cube_cannot_reuse",
+      "input": "3\nABCDEF 0\nG 1\nH 2\n2\nAB\n",
+      "output": "false"
+    },
+    {
+      "name": "edge_duplicate_letters_on_cube_irrelevant",
+      "input": "2\nAAAA 0\nA 1\n2\nAA\n",
+      "output": "true"
+    },
+    {
+      "name": "edge_unused_colors_do_not_help",
+      "input": "2\nA 0\nB 0\n2\nAB\n",
+      "output": "false"
+    },
+    {
+      "name": "edge_nonconsecutive_colors_valid",
+      "input": "3\nA 2\nB 0\nC 2\n2\nAB\n",
+      "output": "true"
+    },
+    {
+      "name": "edge_exam_bone",
+      "input": "4\nABC 0\nAEI 0\nEOU 1\nLNRST 2\n4\nBONE\n",
+      "output": "false"
+    },
+    {
+      "name": "edge_exam_cat",
+      "input": "4\nABC 0\nAEI 0\nEOU 1\nLNRST 2\n3\nCAT\n",
+      "output": "false"
+    },
+    {
+      "name": "edge_exam_bot",
+      "input": "4\nABC 0\nAEI 0\nEOU 1\nLNRST 2\n3\nBOT\n",
+      "output": "true"
+    },
+    {
+      "name": "edge_exam_set",
+      "input": "4\nABC 0\nAEI 0\nEOU 1\nLNRST 2\n3\nSET\n",
+      "output": "false"
+    },
+    {
+      "name": "edge_exam_to",
+      "input": "4\nABC 0\nAEI 0\nEOU 1\nLNRST 2\n2\nTO\n",
+      "output": "true"
+    },
+    {
+      "name": "edge_color_conflict_after_choice",
+      "input": "3\nAB 0\nA 1\nB 1\n2\nAB\n",
+      "output": "true"
+    },
+    {
+      "name": "edge_needs_backtracking_true",
+      "input": "3\nAB 0\nA 1\nB 2\n2\nAB\n",
+      "output": "true"
+    },
+    {
+      "name": "edge_greedy_trap_true",
+      "input": "3\nAB 0\nA 1\nC 2\n2\nAC\n",
+      "output": "true"
+    },
+    {
+      "name": "edge_greedy_trap_false",
+      "input": "3\nAB 0\nA 1\nC 0\n2\nAC\n",
+      "output": "true"
+    },
+    {
+      "name": "edge_many_same_color_with_one_path",
+      "input": "4\nA 0\nB 0\nC 1\nD 2\n3\nACD\n",
+      "output": "true"
+    },
+    {
+      "name": "edge_same_cube_for_two_required_letters_false",
+      "input": "3\nST 0\nE 1\nX 2\n3\nSET\n",
+      "output": "false"
+    },
+    {
+      "name": "edge_distinct_cubes_same_color_blocked",
+      "input": "3\nS 0\nE 1\nT 1\n3\nSET\n",
+      "output": "false"
+    },
+    {
+      "name": "structured_unique_colors_len1",
+      "input": "3\nA 0\nB 1\nC 2\n1\nA\n",
+      "output": "true"
+    },
+    {
+      "name": "structured_all_same_color_len1",
+      "input": "3\nA 0\nB 0\nC 0\n1\nA\n",
+      "output": "true"
+    },
+    {
+      "name": "structured_pair_colors_len1",
+      "input": "3\nA 0\nB 0\nC 1\n1\nA\n",
+      "output": "true"
+    },
+    {
+      "name": "structured_unique_colors_len2",
+      "input": "4\nAB 0\nBC 1\nCD 2\nDE 3\n2\nAB\n",
+      "output": "true"
+    },
+    {
+      "name": "structured_all_same_color_len2",
+      "input": "4\nAB 0\nBC 0\nCD 0\nDE 0\n2\nAB\n",
+      "output": "false"
+    },
+    {
+      "name": "structured_pair_colors_len2",
+      "input": "4\nAB 0\nBC 0\nCD 1\nDE 1\n2\nAB\n",
+      "output": "false"
+    },
+    {
+      "name": "structured_unique_colors_len3",
+      "input": "5\nABC 0\nBCD 1\nCDE 2\nDEF 3\nEFT 4\n3\nABC\n",
+      "output": "true"
+    },
+    {
+      "name": "structured_all_same_color_len3",
+      "input": "5\nABC 0\nBCD 0\nCDE 0\nDEF 0\nEFT 0\n3\nABC\n",
+      "output": "false"
+    },
+    {
+      "name": "structured_pair_colors_len3",
+      "input": "5\nABC 0\nBCD 0\nCDE 1\nDEF 1\nEFT 2\n3\nABC\n",
+      "output": "false"
+    },
+    {
+      "name": "structured_unique_colors_len4",
+      "input": "6\nABCD 0\nBCDE 1\nCDEF 2\nDEFT 3\nEFTO 4\nFTOS 5\n4\nABCD\n",
+      "output": "true"
+    },
+    {
+      "name": "structured_all_same_color_len4",
+      "input": "6\nABCD 0\nBCDE 0\nCDEF 0\nDEFT 0\nEFTO 0\nFTOS 0\n4\nABCD\n",
+      "output": "false"
+    },
+    {
+      "name": "structured_pair_colors_len4",
+      "input": "6\nABCD 0\nBCDE 0\nCDEF 1\nDEFT 1\nEFTO 2\nFTOS 2\n4\nABCD\n",
+      "output": "false"
+    },
+    {
+      "name": "structured_unique_colors_len5",
+      "input": "7\nABCDE 0\nBCDEF 1\nCDEFT 2\nDEFTO 3\nEFTOS 4\nFTOSN 5\nTOSNR 6\n5\nABCDE\n",
+      "output": "true"
+    },
+    {
+      "name": "structured_all_same_color_len5",
+      "input": "7\nABCDE 0\nBCDEF 0\nCDEFT 0\nDEFTO 0\nEFTOS 0\nFTOSN 0\nTOSNR 0\n5\nABCDE\n",
+      "output": "false"
+    },
+    {
+      "name": "structured_pair_colors_len5",
+      "input": "7\nABCDE 0\nBCDEF 0\nCDEFT 1\nDEFTO 1\nEFTOS 2\nFTOSN 2\nTOSNR 3\n5\nABCDE\n",
+      "output": "false"
+    },
+    {
+      "name": "structured_unique_colors_len6",
+      "input": "8\nABCDEF 0\nBCDEFT 1\nCDEFTO 2\nDEFTOS 3\nEFTOSN 4\nFTOSNR 5\nTOSNRL 6\nOSNRLU 7\n6\nABCDEF\n",
+      "output": "true"
+    },
+    {
+      "name": "structured_all_same_color_len6",
+      "input": "8\nABCDEF 0\nBCDEFT 0\nCDEFTO 0\nDEFTOS 0\nEFTOSN 0\nFTOSNR 0\nTOSNRL 0\nOSNRLU 0\n6\nABCDEF\n",
+      "output": "false"
+    },
+    {
+      "name": "structured_pair_colors_len6",
+      "input": "8\nABCDEF 0\nBCDEFT 0\nCDEFTO 1\nDEFTOS 1\nEFTOSN 2\nFTOSNR 2\nTOSNRL 3\nOSNRLU 3\n6\nABCDEF\n",
+      "output": "false"
+    },
+    {
+      "name": "structured_unique_colors_len7",
+      "input": "9\nABCDEFT 0\nBCDEFTO 1\nCDEFTOS 2\nDEFTOSN 3\nEFTOSNR 4\nFTOSNRL 5\nTOSNRLU 6\nOSNRLUI 7\nSNRLUIA 8\n7\nABCDEFT\n",
+      "output": "true"
+    },
+    {
+      "name": "structured_all_same_color_len7",
+      "input": "9\nABCDEFT 0\nBCDEFTO 0\nCDEFTOS 0\nDEFTOSN 0\nEFTOSNR 0\nFTOSNRL 0\nTOSNRLU 0\nOSNRLUI 0\nSNRLUIA 0\n7\nABCDEFT\n",
+      "output": "false"
+    },
+    {
+      "name": "structured_pair_colors_len7",
+      "input": "9\nABCDEFT 0\nBCDEFTO 0\nCDEFTOS 1\nDEFTOSN 1\nEFTOSNR 2\nFTOSNRL 2\nTOSNRLU 3\nOSNRLUI 3\nSNRLUIA 4\n7\nABCDEFT\n",
+      "output": "false"
+    },
+    {
+      "name": "structured_unique_colors_len8",
+      "input": "10\nABCDEFTO 0\nBCDEFTOS 1\nCDEFTOSN 2\nDEFTOSNR 3\nEFTOSNRL 4\nFTOSNRLU 5\nTOSNRLUI 6\nOSNRLUIA 7\nSNRLUIAB 8\nNRLUIABC 9\n8\nABCDEFTO\n",
+      "output": "true"
+    },
+    {
+      "name": "structured_all_same_color_len8",
+      "input": "10\nABCDEFTO 0\nBCDEFTOS 0\nCDEFTOSN 0\nDEFTOSNR 0\nEFTOSNRL 0\nFTOSNRLU 0\nTOSNRLUI 0\nOSNRLUIA 0\nSNRLUIAB 0\nNRLUIABC 0\n8\nABCDEFTO\n",
+      "output": "false"
+    },
+    {
+      "name": "structured_pair_colors_len8",
+      "input": "10\nABCDEFTO 0\nBCDEFTOS 0\nCDEFTOSN 1\nDEFTOSNR 1\nEFTOSNRL 2\nFTOSNRLU 2\nTOSNRLUI 3\nOSNRLUIA 3\nSNRLUIAB 4\nNRLUIABC 4\n8\nABCDEFTO\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_true_1",
+      "input": "9\nAC 0\nCE 1\nE 2\nABD 3\nBCE 4\nACE 5\nBC 1\nC 3\nACD 5\n6\nAEEDCA\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_2",
+      "input": "7\nBCE 0\nBCDE 1\nABD 2\nADE 3\nABCD 4\nC 1\nD 0\n5\nBDAEC\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_3",
+      "input": "5\nA 0\nBCDE 1\nCD 2\nCE 3\nABE 0\n4\nABCC\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_4",
+      "input": "5\nA 0\nAE 1\nABE 2\nABCD 3\nAE 1\n4\nAAED\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_5",
+      "input": "8\nB 0\nD 1\nABC 2\nCE 3\nBCD 4\nABDE 5\nBCE 4\nCD 1\n6\nBDBCCB\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_6",
+      "input": "6\nE 0\nAE 1\nDE 2\nACDE 1\nA 0\nD 1\n3\nEAD\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_7",
+      "input": "6\nDE 0\nABCD 1\nBC 2\nCE 3\nBCD 4\nC 5\n6\nEBBCDC\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_8",
+      "input": "9\nA 0\nBCE 1\nCDE 2\nB 3\nACD 4\nCD 5\nAB 2\nACD 3\nBCE 3\n6\nABEBAD\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_9",
+      "input": "6\nBCDE 0\nACE 1\nACE 2\nA 3\nABDE 4\nBE 5\n6\nCCEAEE\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_10",
+      "input": "2\nD 0\nDE 0\n1\nD\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_11",
+      "input": "6\nBCE 0\nABD 1\nCD 2\nABCE 3\nACDE 3\nA 2\n4\nBBCC\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_12",
+      "input": "2\nABE 0\nA 1\n2\nAA\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_13",
+      "input": "6\nD 0\nADE 1\nAE 2\nABE 3\nACD 4\nABC 2\n5\nDEABC\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_14",
+      "input": "9\nCDE 0\nADE 1\nAD 2\nAC 3\nAB 4\nABD 5\nBC 4\nC 5\nBD 4\n6\nDEACBA\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_15",
+      "input": "9\nBCD 0\nCDE 1\nD 2\nACE 3\nBC 4\nCDE 5\nCDE 6\nB 4\nACDE 2\n7\nDDDEBEE\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_16",
+      "input": "1\nABC 0\n1\nB\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_17",
+      "input": "3\nE 0\nCDE 1\nACD 0\n2\nED\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_18",
+      "input": "7\nABD 0\nBCE 1\nABCE 2\nBCE 1\nE 0\nA 1\nAD 0\n3\nBCC\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_19",
+      "input": "6\nAB 0\nBCD 1\nBD 2\nBCDE 3\nDE 0\nBC 0\n4\nBBBC\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_20",
+      "input": "6\nBCDE 0\nACD 1\nAB 2\nCD 2\nCE 1\nD 1\n3\nECB\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_21",
+      "input": "9\nADE 0\nE 1\nACD 2\nCE 3\nE 4\nB 3\nABE 2\nD 2\nBE 0\n5\nEECEE\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_22",
+      "input": "5\nABC 0\nBD 1\nABCD 2\nBDE 0\nADE 2\n3\nCBA\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_23",
+      "input": "4\nE 0\nCD 1\nC 2\nB 3\n4\nECCB\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_24",
+      "input": "3\nBD 0\nBCD 1\nABE 2\n3\nDCA\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_25",
+      "input": "6\nE 0\nBC 1\nCDE 2\nACE 3\nBE 3\nCD 3\n4\nEBCC\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_26",
+      "input": "7\nACDE 0\nC 1\nABDE 2\nCE 1\nC 2\nACDE 1\nACE 2\n3\nCCE\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_27",
+      "input": "2\nABDE 0\nDE 0\n1\nB\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_28",
+      "input": "10\nBDE 0\nADE 1\nBCD 2\nABCD 3\nADE 4\nBCE 5\nBC 0\nDE 2\nE 2\nB 0\n6\nEABAAB\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_29",
+      "input": "9\nBDE 0\nAC 1\nAC 2\nBCE 3\nB 4\nA 5\nACDE 1\nC 2\nB 0\n6\nECCCBA\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_30",
+      "input": "5\nACE 0\nB 0\nCD 0\nBCD 0\nAB 0\n1\nA\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_31",
+      "input": "2\nB 0\nBC 0\n1\nB\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_32",
+      "input": "8\nE 0\nCDE 1\nC 2\nBCD 3\nAB 3\nAB 1\nABD 2\nABCE 2\n4\nEECD\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_33",
+      "input": "6\nABE 0\nABC 1\nD 2\nD 3\nBC 4\nCE 5\n6\nEADDBC\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_34",
+      "input": "4\nBDE 0\nCE 1\nABDE 0\nBCDE 0\n2\nDE\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_35",
+      "input": "7\nA 0\nAD 1\nBE 2\nAE 3\nBCD 3\nDE 2\nC 1\n4\nAAEE\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_36",
+      "input": "4\nDE 0\nBE 1\nAE 2\nBE 2\n3\nEBE\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_37",
+      "input": "8\nABCD 0\nAC 1\nD 2\nABD 3\nDE 4\nAE 5\nA 6\nBCD 6\n7\nBCDDDAA\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_38",
+      "input": "8\nA 0\nBCDE 1\nC 2\nA 3\nABC 4\nABCD 5\nCDE 6\nAD 5\n7\nABCABDD\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_39",
+      "input": "4\nA 0\nABCD 1\nE 0\nABCD 1\n2\nAA\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_40",
+      "input": "7\nAD 0\nA 1\nBE 2\nBC 3\nBCDE 4\nAD 4\nA 2\n5\nDAEBD\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_41",
+      "input": "5\nBE 0\nACD 0\nB 0\nDE 0\nBCDE 0\n1\nE\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_42",
+      "input": "4\nC 0\nAC 1\nD 2\nCDE 3\n4\nCCDC\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_43",
+      "input": "6\nACE 0\nA 1\nDE 2\nBD 3\nDE 4\nADE 5\n6\nCAEBDA\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_44",
+      "input": "11\nBE 0\nABC 1\nBE 2\nBCD 3\nABE 4\nABCD 5\nB 6\nA 4\nBDE 5\nABCD 2\nAE 5\n7\nBCBDAAB\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_45",
+      "input": "11\nC 0\nACD 1\nAD 2\nBC 3\nAB 4\nABCE 5\nBC 6\nE 4\nA 1\nBCDE 3\nE 4\n7\nCADBAAB\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_46",
+      "input": "4\nABDE 0\nC 1\nACE 2\nCDE 1\n3\nACE\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_47",
+      "input": "9\nAD 0\nA 1\nBCDE 2\nADE 3\nE 4\nAD 5\nABDE 0\nBE 0\nACE 1\n6\nDACAED\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_48",
+      "input": "5\nC 0\nBE 1\nAE 0\nDE 1\nBD 0\n2\nCE\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_49",
+      "input": "8\nBE 0\nABCD 1\nABC 2\nAD 3\nCD 2\nABCD 1\nCE 0\nAB 2\n4\nEDCD\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_true_50",
+      "input": "8\nAC 0\nE 1\nBE 2\nAC 3\nABCD 4\nBCDE 1\nBD 1\nD 4\n5\nCEBCA\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_false_1",
+      "input": "8\nAB 5\nE 0\nBC 0\nBDEF 5\nACEF 7\nBEF 5\nADEF 2\nAEF 2\n4\nAFDZ\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_2",
+      "input": "7\nADE 0\nABCF 0\nB 0\nE 0\nAE 0\nF 0\nACEF 0\n6\nECBCFB\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_3",
+      "input": "8\nDE 0\nAD 1\nAB 0\nBE 7\nBCD 1\nCE 2\nCF 3\nACD 7\n4\nDFAZ\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_4",
+      "input": "6\nBF 0\nBCEF 0\nCF 0\nEF 0\nAE 0\nF 0\n3\nDCF\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_5",
+      "input": "1\nABCF 0\n3\nCFZ\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_6",
+      "input": "8\nACEF 0\nCE 0\nBEF 0\nBCD 0\nBCDEF 0\nA 0\nAC 0\nACDF 0\n7\nCBBECAE\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_7",
+      "input": "3\nBDE 0\nAF 2\nBCF 0\n4\nEDAZ\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_8",
+      "input": "3\nABCD 0\nE 0\nCF 0\n3\nDBC\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_9",
+      "input": "5\nCDF 0\nABDF 2\nABF 2\nCEF 0\nABC 3\n7\nDBCBCBZ\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_10",
+      "input": "5\nCEF 0\nABC 0\nF 0\nADEF 0\nADEF 0\n5\nDEEFF\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_11",
+      "input": "5\nD 2\nCD 4\nE 0\nAB 2\nBCEF 0\n4\nDBDZ\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_12",
+      "input": "1\nA 0\n1\nF\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_13",
+      "input": "3\nABEF 1\nDEF 2\nACDE 1\n3\nFDZ\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_14",
+      "input": "3\nC 0\nABCE 0\nAE 0\n3\nCEE\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_15",
+      "input": "1\nDEF 0\n8\nDAFAFCFZ\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_16",
+      "input": "1\nB 0\n1\nF\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_17",
+      "input": "8\nADF 2\nACE 5\nA 4\nBC 1\nAC 4\nABCE 0\nABF 5\nABDF 3\n8\nEBABFEFZ\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_18",
+      "input": "7\nD 0\nAB 0\nF 0\nBCD 0\nACEF 0\nBCE 0\nACF 0\n4\nDCAA\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_19",
+      "input": "6\nBE 2\nADEF 0\nBC 0\nBCDF 3\nABC 5\nABDF 4\n5\nDFBEZ\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_20",
+      "input": "3\nAB 0\nE 0\nCF 0\n3\nEAE\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_21",
+      "input": "1\nCE 0\n3\nBBZ\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_22",
+      "input": "7\nAF 0\nC 0\nCDF 0\nBF 0\nAF 0\nF 0\nABCF 0\n6\nFEBEFF\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_23",
+      "input": "3\nABDE 2\nBCE 1\nDF 0\n2\nAZ\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_24",
+      "input": "1\nABCEF 0\n1\nF\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_false_25",
+      "input": "8\nBE 2\nBF 3\nABC 2\nACDF 2\nACD 4\nEF 1\nAEF 5\nDEF 1\n3\nEFZ\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_26",
+      "input": "3\nCDE 0\nA 0\nACDF 0\n3\nDAC\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_27",
+      "input": "6\nE 2\nABCE 3\nABE 5\nF 2\nABDE 3\nBEF 1\n6\nCEBBDZ\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_28",
+      "input": "7\nBF 0\nBF 0\nAB 0\nF 0\nF 0\nA 0\nE 0\n4\nADDB\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_29",
+      "input": "8\nACDF 7\nACE 4\nB 7\nBEF 1\nA 2\nBCD 4\nCE 2\nE 6\n3\nFCZ\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_30",
+      "input": "1\nABE 0\n1\nA\n",
+      "output": "true"
+    },
+    {
+      "name": "constructed_false_31",
+      "input": "3\nADE 1\nACDF 1\nBC 2\n5\nEABCZ\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_32",
+      "input": "8\nCE 0\nCDEF 0\nB 0\nABD 0\nABE 0\nAC 0\nBD 0\nABCD 0\n3\nBDC\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_33",
+      "input": "7\nAD 3\nADE 6\nB 2\nC 5\nABEF 5\nBEF 1\nCDF 5\n6\nEFCCAZ\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_34",
+      "input": "7\nBF 0\nAE 0\nABCDE 0\nABEF 0\nABF 0\nABE 0\nB 0\n2\nEF\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_35",
+      "input": "2\nE 1\nCDE 0\n3\nBAZ\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_36",
+      "input": "7\nDE 0\nABCF 0\nA 0\nCD 0\nACD 0\nCE 0\nA 0\n5\nDCACE\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_37",
+      "input": "4\nADF 2\nAE 0\nCF 1\nBCDEF 1\n3\nCFZ\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_38",
+      "input": "6\nBDF 0\nCEF 0\nAB 0\nE 0\nBEF 0\nBC 0\n5\nDEAEB\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_39",
+      "input": "7\nD 5\nDF 5\nAE 1\nE 0\nBDF 4\nA 3\nD 6\n7\nBFBDBEZ\n",
+      "output": "false"
+    },
+    {
+      "name": "constructed_false_40",
+      "input": "5\nBDF 0\nAB 0\nA 0\nBF 0\nABDF 0\n5\nFCDDB\n",
+      "output": "false"
+    },
+    {
+      "name": "random_1_n4_t3",
+      "input": "4\nABEU 2\nACOU 2\nCI 1\nBCEU 0\n3\nOAU\n",
+      "output": "false"
+    },
+    {
+      "name": "random_2_n7_t2",
+      "input": "7\nEU 6\nBEU 3\nEIOU 5\nAC 3\nABCU 2\nCOU 5\nAEO 6\n2\nUA\n",
+      "output": "true"
+    },
+    {
+      "name": "random_3_n3_t3",
+      "input": "3\nBDE 2\nABDFG 2\nAFG 0\n3\nEFG\n",
+      "output": "false"
+    },
+    {
+      "name": "random_4_n1_t2",
+      "input": "1\nA 0\n2\nAC\n",
+      "output": "false"
+    },
+    {
+      "name": "random_5_n0_t2",
+      "input": "0\n2\nCA\n",
+      "output": "false"
+    },
+    {
+      "name": "random_6_n9_t8",
+      "input": "9\nEIO 2\nEU 5\nBO 6\nAE 5\nCU 0\nC 8\nBCIU 1\nIO 4\nBCEIO 3\n8\nACEBIAAI\n",
+      "output": "false"
+    },
+    {
+      "name": "random_7_n6_t7",
+      "input": "6\nA 0\nCU 1\nABCO 5\nEO 2\nABEO 1\nEIOU 0\n7\nOBEUEUO\n",
+      "output": "false"
+    },
+    {
+      "name": "random_8_n1_t0",
+      "input": "1\nACD 0\n0\n",
+      "output": "true"
+    },
+    {
+      "name": "random_9_n5_t3",
+      "input": "5\nABCI 0\nB 0\nEO 4\nBCE 1\nIU 3\n3\nCIC\n",
+      "output": "true"
+    },
+    {
+      "name": "random_10_n6_t2",
+      "input": "6\nBDE 4\nD 1\nACE 1\nAB 1\nBCDE 3\nCDE 1\n2\nEA\n",
+      "output": "true"
+    },
+    {
+      "name": "random_11_n4_t5",
+      "input": "4\nBC 2\nAB 0\nA 0\nBC 1\n5\nAACAC\n",
+      "output": "false"
+    },
+    {
+      "name": "random_12_n9_t1",
+      "input": "9\nBC 7\nAB 1\nAD 8\nB 3\nBCD 4\nABC 1\nAC 7\nAC 4\nBD 0\n1\nB\n",
+      "output": "true"
+    },
+    {
+      "name": "random_13_n1_t1",
+      "input": "1\nA 0\n1\nC\n",
+      "output": "false"
+    },
+    {
+      "name": "random_14_n5_t1",
+      "input": "5\nC 1\nAB 0\nBC 3\nAC 4\nB 0\n1\nA\n",
+      "output": "true"
+    },
+    {
+      "name": "random_15_n8_t8",
+      "input": "8\nACEU 1\nAO 2\nABCO 4\nBO 0\nU 3\nEU 6\nBEOU 7\nAI 7\n8\nBEAEBECO\n",
+      "output": "false"
+    },
+    {
+      "name": "random_16_n8_t7",
+      "input": "8\nBC 5\nBCD 4\nD 6\nBD 7\nAD 5\nACD 5\nCD 4\nC 6\n7\nBDCCDAB\n",
+      "output": "false"
+    },
+    {
+      "name": "random_17_n4_t0",
+      "input": "4\nC 1\nACD 3\nCE 3\nABD 0\n0\n",
+      "output": "true"
+    },
+    {
+      "name": "random_18_n3_t3",
+      "input": "3\nB 1\nA 2\nABC 1\n3\nBBC\n",
+      "output": "false"
+    },
+    {
+      "name": "random_19_n9_t8",
+      "input": "9\nABOU 7\nAEIO 3\nEO 4\nACEIU 0\nABEOU 6\nCO 7\nABEIU 6\nBCEU 8\nBU 1\n8\nIEOOEIIE\n",
+      "output": "false"
+    },
+    {
+      "name": "random_20_n3_t3",
+      "input": "3\nAC 1\nAB 0\nABD 1\n3\nCCA\n",
+      "output": "false"
+    },
+    {
+      "name": "random_21_n4_t6",
+      "input": "4\nCDG 0\nABDEF 3\nACG 2\nAEF 3\n6\nCEBEEC\n",
+      "output": "false"
+    },
+    {
+      "name": "random_22_n9_t8",
+      "input": "9\nCDE 6\nABC 1\nDE 2\nBD 6\nB 0\nCE 1\nABC 4\nACD 4\nCDE 3\n8\nECDACEDE\n",
+      "output": "false"
+    },
+    {
+      "name": "random_23_n1_t0",
+      "input": "1\nC 0\n0\n",
+      "output": "true"
+    },
+    {
+      "name": "random_24_n9_t9",
+      "input": "9\nBF 1\nAEG 0\nFG 6\nBC 5\nBCDE 7\nBDE 4\nE 1\nCDEF 4\nBEG 0\n9\nDADFFEBGD\n",
+      "output": "false"
+    },
+    {
+      "name": "random_25_n8_t7",
+      "input": "8\nCD 2\nA 0\nB 2\nE 1\nBCE 2\nC 4\nC 3\nBD 6\n7\nDDDDAEB\n",
+      "output": "false"
+    },
+    {
+      "name": "random_26_n4_t0",
+      "input": "4\nBCEO 1\nCIU 2\nIU 1\nACU 1\n0\n",
+      "output": "true"
+    },
+    {
+      "name": "random_27_n6_t0",
+      "input": "6\nABCDEG 3\nAF 0\nABDF 0\nBDEFG 2\nCG 3\nG 1\n0\n",
+      "output": "true"
+    },
+    {
+      "name": "random_28_n5_t4",
+      "input": "5\nB 4\nC 4\nC 2\nA 4\nB 2\n4\nACCA\n",
+      "output": "false"
+    },
+    {
+      "name": "random_29_n6_t5",
+      "input": "6\nBEI 4\nABCE 1\nACIO 4\nC 4\nU 1\nABI 0\n5\nUEICA\n",
+      "output": "false"
+    },
+    {
+      "name": "random_30_n5_t6",
+      "input": "5\nCD 0\nC 4\nACD 3\nAB 2\nBCD 2\n6\nBACDCB\n",
+      "output": "false"
+    },
+    {
+      "name": "random_31_n7_t6",
+      "input": "7\nABCIO 0\nCEIU 3\nCIOU 4\nE 2\nO 1\nABU 1\nEU 3\n6\nOUIEOI\n",
+      "output": "false"
+    },
+    {
+      "name": "random_32_n4_t2",
+      "input": "4\nA 1\nAC 2\nAC 0\nAB 3\n2\nAA\n",
+      "output": "true"
+    },
+    {
+      "name": "random_33_n1_t0",
+      "input": "1\nAB 0\n0\n",
+      "output": "true"
+    },
+    {
+      "name": "random_34_n0_t1",
+      "input": "0\n1\nF\n",
+      "output": "false"
+    },
+    {
+      "name": "random_35_n1_t3",
+      "input": "1\nABCE 0\n3\nEDB\n",
+      "output": "false"
+    },
+    {
+      "name": "random_36_n8_t3",
+      "input": "8\nB 6\nAC 3\nAB 2\nC 7\nA 1\nA 3\nC 2\nAB 3\n3\nBBA\n",
+      "output": "true"
+    },
+    {
+      "name": "random_37_n1_t0",
+      "input": "1\nADFG 0\n0\n",
+      "output": "true"
+    },
+    {
+      "name": "random_38_n3_t2",
+      "input": "3\nABCEIU 1\nAI 2\nEU 0\n2\nIA\n",
+      "output": "true"
+    },
+    {
+      "name": "random_39_n3_t2",
+      "input": "3\nEF 1\nCG 2\nDEF 1\n2\nAF\n",
+      "output": "false"
+    },
+    {
+      "name": "random_40_n7_t0",
+      "input": "7\nC 4\nAC 6\nABC 1\nAC 0\nB 6\nB 1\nA 4\n0\n",
+      "output": "true"
+    },
+    {
+      "name": "random_41_n1_t1",
+      "input": "1\nABD 0\n1\nE\n",
+      "output": "false"
+    },
+    {
+      "name": "random_42_n2_t3",
+      "input": "2\nDG 1\nCDG 1\n3\nCED\n",
+      "output": "false"
+    },
+    {
+      "name": "random_43_n8_t7",
+      "input": "8\nB 7\nABD 1\nABD 4\nC 1\nC 4\nA 3\nBD 6\nB 7\n7\nDDDBDCC\n",
+      "output": "false"
+    },
+    {
+      "name": "random_44_n7_t8",
+      "input": "7\nAB 6\nA 5\nA 4\nB 3\nA 0\nB 3\nC 3\n8\nACBBACAC\n",
+      "output": "false"
+    },
+    {
+      "name": "random_45_n0_t0",
+      "input": "0\n0\n",
+      "output": "true"
+    },
+    {
+      "name": "random_46_n9_t4",
+      "input": "9\nAG 4\nCEG 4\nB 6\nADF 3\nABCG 8\nD 2\nAB 5\nABCFG 7\nAFG 7\n4\nGDCA\n",
+      "output": "true"
+    },
+    {
+      "name": "random_47_n0_t2",
+      "input": "0\n2\nBE\n",
+      "output": "false"
+    },
+    {
+      "name": "random_48_n5_t7",
+      "input": "5\nBC 4\nB 0\nBC 4\nAC 0\nAC 1\n7\nACABBAB\n",
+      "output": "false"
+    },
+    {
+      "name": "random_49_n2_t3",
+      "input": "2\nC 0\nBD 0\n3\nDAA\n",
+      "output": "false"
+    },
+    {
+      "name": "random_50_n7_t2",
+      "input": "7\nABCD 1\nC 1\nABDE 1\nADE 4\nAE 0\nABC 1\nA 2\n2\nCC\n",
+      "output": "false"
+    },
+    {
+      "name": "random_51_n0_t1",
+      "input": "0\n1\nI\n",
+      "output": "false"
+    },
+    {
+      "name": "random_52_n5_t4",
+      "input": "5\nB 4\nA 2\nBC 4\nABC 0\nA 1\n4\nBCCA\n",
+      "output": "false"
+    },
+    {
+      "name": "random_53_n3_t2",
+      "input": "3\nD 1\nB 1\nACD 0\n2\nBB\n",
+      "output": "false"
+    },
+    {
+      "name": "random_54_n7_t5",
+      "input": "7\nABCD 6\nA 4\nC 6\nB 4\nD 0\nBCD 1\nC 4\n5\nCCABB\n",
+      "output": "false"
+    },
+    {
+      "name": "random_55_n2_t3",
+      "input": "2\nA 0\nB 1\n3\nBAA\n",
+      "output": "false"
+    },
+    {
+      "name": "random_56_n5_t5",
+      "input": "5\nACI 3\nBCEIO 4\nAIU 4\nIO 1\nI 2\n5\nEEIOA\n",
+      "output": "false"
+    },
+    {
+      "name": "random_57_n2_t3",
+      "input": "2\nC 0\nAB 0\n3\nCCB\n",
+      "output": "false"
+    },
+    {
+      "name": "random_58_n8_t0",
+      "input": "8\nAEO 2\nA 1\nI 3\nIOU 7\nBEIU 3\nIU 1\nBEU 1\nB 4\n0\n",
+      "output": "true"
+    },
+    {
+      "name": "random_59_n1_t0",
+      "input": "1\nACDF 0\n0\n",
+      "output": "true"
+    },
+    {
+      "name": "random_60_n1_t3",
+      "input": "1\nAD 0\n3\nACD\n",
+      "output": "false"
+    },
+    {
+      "name": "random_61_n2_t1",
+      "input": "2\nBIU 0\nEIOU 0\n1\nA\n",
+      "output": "false"
+    },
+    {
+      "name": "random_62_n0_t2",
+      "input": "0\n2\nOB\n",
+      "output": "false"
+    },
+    {
+      "name": "random_63_n5_t2",
+      "input": "5\nD 1\nDE 3\nABCD 1\nC 1\nABCE 0\n2\nBA\n",
+      "output": "true"
+    },
+    {
+      "name": "random_64_n5_t4",
+      "input": "5\nB 1\nBC 2\nAC 2\nAC 4\nB 4\n4\nCBBC\n",
+      "output": "false"
+    },
+    {
+      "name": "random_65_n9_t6",
+      "input": "9\nACE 2\nACE 1\nCG 8\nBDEG 2\nCDG 2\nC 3\nFG 8\nABCDEG 7\nBFG 7\n6\nGFCGFC\n",
+      "output": "false"
+    },
+    {
+      "name": "random_66_n3_t3",
+      "input": "3\nA 2\nC 1\nB 2\n3\nDDC\n",
+      "output": "false"
+    },
+    {
+      "name": "random_67_n0_t0",
+      "input": "0\n0\n",
+      "output": "true"
+    },
+    {
+      "name": "random_68_n7_t3",
+      "input": "7\nA 0\nB 1\nC 0\nB 2\nAB 4\nAB 0\nC 2\n3\nBAA\n",
+      "output": "true"
+    },
+    {
+      "name": "random_69_n0_t1",
+      "input": "0\n1\nF\n",
+      "output": "false"
+    },
+    {
+      "name": "random_70_n9_t9",
+      "input": "9\nABC 2\nABD 4\nAB 5\nC 2\nAD 2\nBCD 8\nD 6\nB 0\nA 5\n9\nADDCBBDCB\n",
+      "output": "false"
+    },
+    {
+      "name": "random_71_n3_t3",
+      "input": "3\nD 1\nABC 2\nD 2\n3\nADD\n",
+      "output": "false"
+    },
+    {
+      "name": "random_72_n7_t4",
+      "input": "7\nAEFG 3\nADE 2\nBDFG 6\nD 2\nBCFG 6\nBCEG 3\nCE 1\n4\nDFFC\n",
+      "output": "true"
+    },
+    {
+      "name": "random_73_n1_t3",
+      "input": "1\nAI 0\n3\nIII\n",
+      "output": "false"
+    },
+    {
+      "name": "random_74_n8_t2",
+      "input": "8\nBC 5\nAB 0\nBC 6\nC 5\nAB 2\nC 7\nBC 7\nAB 2\n2\nAB\n",
+      "output": "true"
+    },
+    {
+      "name": "random_75_n4_t4",
+      "input": "4\nAFG 0\nABDF 0\nABE 2\nBCDF 2\n4\nFDGC\n",
+      "output": "false"
+    },
+    {
+      "name": "random_76_n7_t8",
+      "input": "7\nCE 3\nC 5\nBD 3\nC 4\nD 6\nBE 3\nBE 4\n8\nACBCBABC\n",
+      "output": "false"
+    },
+    {
+      "name": "random_77_n5_t3",
+      "input": "5\nEF 0\nBC 4\nABCE 4\nABF 2\nBE 4\n3\nEDG\n",
+      "output": "false"
+    },
+    {
+      "name": "random_78_n1_t3",
+      "input": "1\nBEFG 0\n3\nECC\n",
+      "output": "false"
+    },
+    {
+      "name": "random_79_n5_t4",
+      "input": "5\nC 0\nABEFG 3\nABC 4\nABDF 3\nBCFG 1\n4\nGBBF\n",
+      "output": "false"
+    },
+    {
+      "name": "random_80_n1_t0",
+      "input": "1\nCE 0\n0\n",
+      "output": "true"
+    },
+    {
+      "name": "random_81_n6_t3",
+      "input": "6\nAC 3\nB 4\nBC 5\nBC 0\nA 0\nA 5\n3\nBCC\n",
+      "output": "true"
+    },
+    {
+      "name": "random_82_n7_t2",
+      "input": "7\nB 0\nC 3\nA 6\nB 6\nC 0\nA 4\nC 1\n2\nBB\n",
+      "output": "true"
+    },
+    {
+      "name": "random_83_n8_t8",
+      "input": "8\nBC 0\nB 3\nA 2\nBC 1\nBC 6\nAB 0\nB 3\nB 0\n8\nCABCAAAB\n",
+      "output": "false"
+    },
+    {
+      "name": "random_84_n5_t0",
+      "input": "5\nACD 0\nBCDE 3\nBC 1\nBCDE 1\nAB 4\n0\n",
+      "output": "true"
+    },
+    {
+      "name": "random_85_n7_t2",
+      "input": "7\nA 5\nC 3\nAB 3\nC 6\nAB 4\nAC 6\nAC 2\n2\nBB\n",
+      "output": "true"
+    },
+    {
+      "name": "random_86_n4_t3",
+      "input": "4\nABCE 3\nI 1\nBEO 0\nC 1\n3\nUCI\n",
+      "output": "false"
+    },
+    {
+      "name": "random_87_n7_t3",
+      "input": "7\nBCDEG 6\nD 5\nAE 5\nG 5\nABEF 1\nABCE 6\nBCF 0\n3\nDBC\n",
+      "output": "true"
+    },
+    {
+      "name": "random_88_n5_t4",
+      "input": "5\nDE 2\nADE 4\nB 0\nAB 1\nCD 1\n4\nACDC\n",
+      "output": "false"
+    },
+    {
+      "name": "random_89_n3_t4",
+      "input": "3\nACE 2\nD 0\nABC 0\n4\nAEEA\n",
+      "output": "false"
+    },
+    {
+      "name": "random_90_n3_t4",
+      "input": "3\nCD 1\nBC 2\nBC 1\n4\nDADD\n",
+      "output": "false"
+    },
+    {
+      "name": "random_91_n7_t0",
+      "input": "7\nIU 6\nCEO 1\nABU 6\nABIO 1\nCI 1\nOU 6\nI 6\n0\n",
+      "output": "true"
+    },
+    {
+      "name": "random_92_n0_t2",
+      "input": "0\n2\nDG\n",
+      "output": "false"
+    },
+    {
+      "name": "random_93_n3_t5",
+      "input": "3\nABDE 0\nAC 0\nACE 2\n5\nACAEC\n",
+      "output": "false"
+    },
+    {
+      "name": "random_94_n2_t3",
+      "input": "2\nAB 1\nC 0\n3\nBBB\n",
+      "output": "false"
+    },
+    {
+      "name": "random_95_n6_t5",
+      "input": "6\nABCE 3\nCDE 4\nFG 2\nBC 3\nCEG 2\nCEG 2\n5\nDADFG\n",
+      "output": "false"
+    },
+    {
+      "name": "random_96_n1_t3",
+      "input": "1\nCD 0\n3\nDCB\n",
+      "output": "false"
+    },
+    {
+      "name": "random_97_n0_t0",
+      "input": "0\n0\n",
+      "output": "true"
+    },
+    {
+      "name": "random_98_n3_t1",
+      "input": "3\nA 2\nAC 2\nA 1\n1\nB\n",
+      "output": "false"
+    },
+    {
+      "name": "random_99_n5_t7",
+      "input": "5\nAE 4\nBCDE 0\nAFG 3\nF 3\nABDG 1\n7\nGGGBFEB\n",
+      "output": "false"
+    },
+    {
+      "name": "random_100_n9_t8",
+      "input": "9\nBCDE 0\nBCDE 6\nAD 3\nE 5\nCD 2\nCD 6\nACE 4\nBE 3\nD 1\n8\nAABBBBDD\n",
+      "output": "false"
+    }
+  ]
+}

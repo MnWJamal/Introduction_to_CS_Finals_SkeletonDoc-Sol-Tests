@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "exam_hello_false",
+      "input": "5\nhello\n",
+      "output": "1"
+    },
+    {
+      "name": "exam_adrar_true",
+      "input": "5\nadrar\n",
+      "output": "1"
+    },
+    {
+      "name": "exam_ayay_true",
+      "input": "4\nayay\n",
+      "output": "1"
+    },
+    {
+      "name": "basic_empty_true",
+      "input": "0\n",
+      "output": "1"
+    }
+  ]
+}

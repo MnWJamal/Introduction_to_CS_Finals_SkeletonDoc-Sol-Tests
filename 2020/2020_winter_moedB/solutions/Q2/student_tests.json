@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "exam_example_found_10",
+      "input": "8\n1 10 50 10 16 32 70 81\n10\n",
+      "output": "1"
+    },
+    {
+      "name": "exam_example_missing_15",
+      "input": "8\n1 10 50 10 16 32 70 81\n15\n",
+      "output": "1"
+    },
+    {
+      "name": "exam_example_found_50",
+      "input": "8\n1 10 50 10 16 32 70 81\n50\n",
+      "output": "1"
+    }
+  ]
+}

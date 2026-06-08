@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "exam_example_k1",
+      "input": "0 1 2 3\n1 0 1 2\n3 1 0 1\n2 -1 1 0\n0 1 1 0\n1\n",
+      "output": "4"
+    },
+    {
+      "name": "exam_example_k0",
+      "input": "0 1 2 3\n1 0 1 2\n3 1 0 1\n2 -1 1 0\n0 1 1 0\n0\n",
+      "output": "-1"
+    },
+    {
+      "name": "exam_example_k2",
+      "input": "0 1 2 3\n1 0 1 2\n3 1 0 1\n2 -1 1 0\n0 1 1 0\n2\n",
+      "output": "3"
+    }
+  ]
+}

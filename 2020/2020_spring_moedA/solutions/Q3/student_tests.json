@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "exam_example_geeks",
+      "input": "24\ngeeks quiz practice code\n",
+      "output": "code practice quiz geeks"
+    },
+    {
+      "name": "exam_example_leading_space",
+      "input": "47\n getting good at coding needs a lot of practice\n",
+      "output": "practice of lot a needs coding at good getting "
+    },
+    {
+      "name": "single_word_public",
+      "input": "5\nhello\n",
+      "output": "hello"
+    }
+  ]
+}

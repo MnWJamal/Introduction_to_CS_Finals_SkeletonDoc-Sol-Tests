@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "example_hello_low",
+      "input": "5 3\nhello\nlow\n",
+      "output": "2"
+    },
+    {
+      "name": "example_hello_hole",
+      "input": "5 4\nhello\nhole\n",
+      "output": "0"
+    },
+    {
+      "name": "example_curious_coast",
+      "input": "7 5\ncurious\ncoast\n",
+      "output": "3"
+    }
+  ]
+}

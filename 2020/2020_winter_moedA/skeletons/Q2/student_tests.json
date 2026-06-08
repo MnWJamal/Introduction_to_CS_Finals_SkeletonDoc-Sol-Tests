@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "exam_example_valid_index_4",
+      "input": "8\n-3 1 4 -1 5 9 -2 -6\n",
+      "output": "1"
+    },
+    {
+      "name": "basic_no_index",
+      "input": "3\n1 2 3\n",
+      "output": "1"
+    },
+    {
+      "name": "basic_single_element",
+      "input": "1\n42\n",
+      "output": "1"
+    },
+    {
+      "name": "basic_all_zero_multiple_indices",
+      "input": "4\n0 0 0 0\n",
+      "output": "1"
+    }
+  ]
+}

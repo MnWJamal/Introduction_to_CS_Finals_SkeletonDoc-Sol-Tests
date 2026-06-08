@@ -1,0 +1,320 @@
+{
+  "tests": [
+    {
+      "name": "edge_empty_string",
+      "input": "0\n\n",
+      "output": ""
+    },
+    {
+      "name": "edge_single_word_a",
+      "input": "1\na\n",
+      "output": "a"
+    },
+    {
+      "name": "edge_single_long_word",
+      "input": "26\nabcdefghijklmnopqrstuvwxyz\n",
+      "output": "abcdefghijklmnopqrstuvwxyz"
+    },
+    {
+      "name": "edge_one_space",
+      "input": "1\n \n",
+      "output": " "
+    },
+    {
+      "name": "edge_many_spaces",
+      "input": "10\n          \n",
+      "output": "          "
+    },
+    {
+      "name": "edge_two_words_one_space",
+      "input": "11\nhello world\n",
+      "output": "world hello"
+    },
+    {
+      "name": "edge_two_words_many_spaces",
+      "input": "15\nhello     world\n",
+      "output": "world     hello"
+    },
+    {
+      "name": "edge_leading_space",
+      "input": "6\n hello\n",
+      "output": "hello "
+    },
+    {
+      "name": "edge_three_words",
+      "input": "8\na bb ccc\n",
+      "output": "ccc bb a"
+    },
+    {
+      "name": "edge_many_one_letter_words",
+      "input": "19\na b c d e f g h i j\n",
+      "output": "j i h g f e d c b a"
+    },
+    {
+      "name": "edge_irregular_spaces",
+      "input": "17\naa   b cccc  dd e\n",
+      "output": "e dd  cccc b   aa"
+    },
+    {
+      "name": "edge_exam_first",
+      "input": "24\ngeeks quiz practice code\n",
+      "output": "code practice quiz geeks"
+    },
+    {
+      "name": "edge_exam_second",
+      "input": "47\n getting good at coding needs a lot of practice\n",
+      "output": "practice of lot a needs coding at good getting "
+    },
+    {
+      "name": "edge_alternating_single_letters_spaces",
+      "input": "19\na  b   c    d     e\n",
+      "output": "e     d    c   b  a"
+    },
+    {
+      "name": "edge_long_words_many_spaces",
+      "input": "45\nalgorithm     data  structures      recursion\n",
+      "output": "recursion      structures  data     algorithm"
+    },
+    {
+      "name": "edge_palindrome_words_not_string",
+      "input": "21\none two three two one\n",
+      "output": "one two three two one"
+    },
+    {
+      "name": "edge_same_words",
+      "input": "11\naa aa aa aa\n",
+      "output": "aa aa aa aa"
+    },
+    {
+      "name": "edge_space_blocks_only",
+      "input": "3\n   \n",
+      "output": "   "
+    },
+    {
+      "name": "systematic_words_1_m2_sep2",
+      "input": "5\na  bb\n",
+      "output": "bb  a"
+    },
+    {
+      "name": "systematic_words_3_m3_sep3",
+      "input": "12\na   bb   ccc\n",
+      "output": "ccc   bb   a"
+    },
+    {
+      "name": "systematic_words_5_m4_sep4",
+      "input": "22\na    bb    ccc    dddd\n",
+      "output": "dddd    ccc    bb    a"
+    },
+    {
+      "name": "systematic_wrapped_6_m4",
+      "input": "25\n   a    bb    ccc    dddd\n",
+      "output": "dddd    ccc    bb    a   "
+    },
+    {
+      "name": "systematic_words_7_m5_sep5",
+      "input": "35\na     bb     ccc     dddd     eeeee\n",
+      "output": "eeeee     dddd     ccc     bb     a"
+    },
+    {
+      "name": "systematic_words_9_m6_sep1",
+      "input": "26\na bb ccc dddd eeeee ffffff\n",
+      "output": "ffffff eeeee dddd ccc bb a"
+    },
+    {
+      "name": "systematic_words_11_m7_sep2",
+      "input": "40\na  bb  ccc  dddd  eeeee  ffffff  ggggggg\n",
+      "output": "ggggggg  ffffff  eeeee  dddd  ccc  bb  a"
+    },
+    {
+      "name": "systematic_words_13_m8_sep3",
+      "input": "57\na   bb   ccc   dddd   eeeee   ffffff   ggggggg   hhhhhhhh\n",
+      "output": "hhhhhhhh   ggggggg   ffffff   eeeee   dddd   ccc   bb   a"
+    },
+    {
+      "name": "systematic_words_15_m9_sep4",
+      "input": "77\na    bb    ccc    dddd    eeeee    ffffff    ggggggg    hhhhhhhh    iiiiiiiii\n",
+      "output": "iiiiiiiii    hhhhhhhh    ggggggg    ffffff    eeeee    dddd    ccc    bb    a"
+    },
+    {
+      "name": "systematic_wrapped_16_m9",
+      "input": "77\na    bb    ccc    dddd    eeeee    ffffff    ggggggg    hhhhhhhh    iiiiiiiii\n",
+      "output": "iiiiiiiii    hhhhhhhh    ggggggg    ffffff    eeeee    dddd    ccc    bb    a"
+    },
+    {
+      "name": "systematic_words_17_m10_sep5",
+      "input": "100\na     bb     ccc     dddd     eeeee     ffffff     ggggggg     hhhhhhhh     iiiiiiiii     jjjjjjjjjj\n",
+      "output": "jjjjjjjjjj     iiiiiiiii     hhhhhhhh     ggggggg     ffffff     eeeee     dddd     ccc     bb     a"
+    },
+    {
+      "name": "systematic_words_19_m1_sep1",
+      "input": "1\na\n",
+      "output": "a"
+    },
+    {
+      "name": "systematic_words_21_m2_sep2",
+      "input": "5\na  bb\n",
+      "output": "bb  a"
+    },
+    {
+      "name": "systematic_words_23_m3_sep3",
+      "input": "12\na   bb   ccc\n",
+      "output": "ccc   bb   a"
+    },
+    {
+      "name": "systematic_words_25_m4_sep4",
+      "input": "22\na    bb    ccc    dddd\n",
+      "output": "dddd    ccc    bb    a"
+    },
+    {
+      "name": "systematic_wrapped_26_m4",
+      "input": "23\n a    bb    ccc    dddd\n",
+      "output": "dddd    ccc    bb    a "
+    },
+    {
+      "name": "systematic_words_27_m5_sep5",
+      "input": "35\na     bb     ccc     dddd     eeeee\n",
+      "output": "eeeee     dddd     ccc     bb     a"
+    },
+    {
+      "name": "systematic_words_29_m6_sep1",
+      "input": "26\na bb ccc dddd eeeee ffffff\n",
+      "output": "ffffff eeeee dddd ccc bb a"
+    },
+    {
+      "name": "systematic_words_31_m7_sep2",
+      "input": "40\na  bb  ccc  dddd  eeeee  ffffff  ggggggg\n",
+      "output": "ggggggg  ffffff  eeeee  dddd  ccc  bb  a"
+    },
+    {
+      "name": "systematic_words_33_m8_sep3",
+      "input": "57\na   bb   ccc   dddd   eeeee   ffffff   ggggggg   hhhhhhhh\n",
+      "output": "hhhhhhhh   ggggggg   ffffff   eeeee   dddd   ccc   bb   a"
+    },
+    {
+      "name": "systematic_words_35_m9_sep4",
+      "input": "77\na    bb    ccc    dddd    eeeee    ffffff    ggggggg    hhhhhhhh    iiiiiiiii\n",
+      "output": "iiiiiiiii    hhhhhhhh    ggggggg    ffffff    eeeee    dddd    ccc    bb    a"
+    },
+    {
+      "name": "systematic_wrapped_36_m9",
+      "input": "79\n  a    bb    ccc    dddd    eeeee    ffffff    ggggggg    hhhhhhhh    iiiiiiiii\n",
+      "output": "iiiiiiiii    hhhhhhhh    ggggggg    ffffff    eeeee    dddd    ccc    bb    a  "
+    },
+    {
+      "name": "systematic_words_37_m10_sep5",
+      "input": "100\na     bb     ccc     dddd     eeeee     ffffff     ggggggg     hhhhhhhh     iiiiiiiii     jjjjjjjjjj\n",
+      "output": "jjjjjjjjjj     iiiiiiiii     hhhhhhhh     ggggggg     ffffff     eeeee     dddd     ccc     bb     a"
+    },
+    {
+      "name": "systematic_words_39_m1_sep1",
+      "input": "1\na\n",
+      "output": "a"
+    },
+    {
+      "name": "systematic_words_41_m2_sep2",
+      "input": "5\na  bb\n",
+      "output": "bb  a"
+    },
+    {
+      "name": "systematic_words_43_m3_sep3",
+      "input": "12\na   bb   ccc\n",
+      "output": "ccc   bb   a"
+    },
+    {
+      "name": "systematic_words_45_m4_sep4",
+      "input": "22\na    bb    ccc    dddd\n",
+      "output": "dddd    ccc    bb    a"
+    },
+    {
+      "name": "systematic_wrapped_46_m4",
+      "input": "25\n   a    bb    ccc    dddd\n",
+      "output": "dddd    ccc    bb    a   "
+    },
+    {
+      "name": "systematic_words_47_m5_sep5",
+      "input": "35\na     bb     ccc     dddd     eeeee\n",
+      "output": "eeeee     dddd     ccc     bb     a"
+    },
+    {
+      "name": "systematic_words_49_m6_sep1",
+      "input": "26\na bb ccc dddd eeeee ffffff\n",
+      "output": "ffffff eeeee dddd ccc bb a"
+    },
+    {
+      "name": "systematic_words_51_m7_sep2",
+      "input": "40\na  bb  ccc  dddd  eeeee  ffffff  ggggggg\n",
+      "output": "ggggggg  ffffff  eeeee  dddd  ccc  bb  a"
+    },
+    {
+      "name": "systematic_words_53_m8_sep3",
+      "input": "57\na   bb   ccc   dddd   eeeee   ffffff   ggggggg   hhhhhhhh\n",
+      "output": "hhhhhhhh   ggggggg   ffffff   eeeee   dddd   ccc   bb   a"
+    },
+    {
+      "name": "systematic_words_55_m9_sep4",
+      "input": "77\na    bb    ccc    dddd    eeeee    ffffff    ggggggg    hhhhhhhh    iiiiiiiii\n",
+      "output": "iiiiiiiii    hhhhhhhh    ggggggg    ffffff    eeeee    dddd    ccc    bb    a"
+    },
+    {
+      "name": "systematic_wrapped_56_m9",
+      "input": "77\na    bb    ccc    dddd    eeeee    ffffff    ggggggg    hhhhhhhh    iiiiiiiii\n",
+      "output": "iiiiiiiii    hhhhhhhh    ggggggg    ffffff    eeeee    dddd    ccc    bb    a"
+    },
+    {
+      "name": "systematic_words_57_m10_sep5",
+      "input": "100\na     bb     ccc     dddd     eeeee     ffffff     ggggggg     hhhhhhhh     iiiiiiiii     jjjjjjjjjj\n",
+      "output": "jjjjjjjjjj     iiiiiiiii     hhhhhhhh     ggggggg     ffffff     eeeee     dddd     ccc     bb     a"
+    },
+    {
+      "name": "systematic_words_59_m1_sep1",
+      "input": "1\na\n",
+      "output": "a"
+    },
+    {
+      "name": "random_words_4_m1",
+      "input": "5\nkappa\n",
+      "output": "kappa"
+    },
+    {
+      "name": "random_words_5_m10",
+      "input": "99\n lambda    alpha   delta     iota       zeta zeta        beta         alpha     theta        lambda\n",
+      "output": "lambda        theta     alpha         beta        zeta zeta       iota     delta   alpha    lambda "
+    },
+    {
+      "name": "random_words_6_m6",
+      "input": "59\n   alpha         gamma  kappa   zeta     delta         beta\n",
+      "output": "beta         delta     zeta   kappa  gamma         alpha   "
+    },
+    {
+      "name": "random_words_8_m16",
+      "input": "158\n       mu  theta        lambda   mu      gamma  mu      zeta         eta       zeta         alpha     gamma         alpha  kappa   beta       zeta      lambda\n",
+      "output": "lambda      zeta       beta   kappa  alpha         gamma     alpha         zeta       eta         zeta      mu  gamma      mu   lambda        theta  mu       "
+    },
+    {
+      "name": "random_words_10_m11",
+      "input": "96\n     eta  gamma      beta beta     theta         eta  beta   mu    eta        kappa        alpha\n",
+      "output": "alpha        kappa        eta    mu   beta  eta         theta     beta beta      gamma  eta     "
+    },
+    {
+      "name": "random_words_15_m6",
+      "input": "64\n delta     zeta         alpha    delta        delta       lambda\n",
+      "output": "lambda       delta        delta    alpha         zeta     delta "
+    },
+  
+    {
+      "name": "random_words_110_m6",
+      "input": "45\ndelta    zeta   gamma   gamma     mu     zeta\n",
+      "output": "zeta     mu     gamma   gamma   zeta    delta"
+    },
+    {
+      "name": "long_pattern_7_m27",
+      "input": "182\n a bb  ccc   dddd    eeeee     ffffff ggggggg  h   ii    jjj     kkkk lllll  mmmmmm   nnnnnnn    o     pp qqq  rrrr   sssss    tttttt     uuuuuuu v  ww   xxx    yyyy     zzzzz aaaaaa\n",
+      "output": "aaaaaa zzzzz     yyyy    xxx   ww  v uuuuuuu     tttttt    sssss   rrrr  qqq pp     o    nnnnnnn   mmmmmm  lllll kkkk     jjj    ii   h  ggggggg ffffff     eeeee    dddd   ccc  bb a "
+    },
+    {
+      "name": "long_pattern_14_m34",
+      "input": "231\n  a bb  ccc   dddd    eeeee     ffffff ggggggg  h   ii    jjj     kkkk lllll  mmmmmm   nnnnnnn    o     pp qqq  rrrr   sssss    tttttt     uuuuuuu v  ww   xxx    yyyy     zzzzz aaaaaa  bbbbbbb   c    dd     eee ffff  ggggg   hhhhhh\n",
+      "output": "hhhhhh   ggggg  ffff eee     dd    c   bbbbbbb  aaaaaa zzzzz     yyyy    xxx   ww  v uuuuuuu     tttttt    sssss   rrrr  qqq pp     o    nnnnnnn   mmmmmm  lllll kkkk     jjj    ii   h  ggggggg ffffff     eeeee    dddd   ccc  bb a  "
+    }
+  ]
+}

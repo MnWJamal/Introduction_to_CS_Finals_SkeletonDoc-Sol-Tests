@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "exam_aabcaadefacebaa",
+      "input": "15\naabcaadefacebaa\n",
+      "output": "7"
+    },
+    {
+      "name": "example_collection",
+      "input": "10\ncollection\n",
+      "output": "7"
+    },
+    {
+      "name": "single_letter",
+      "input": "1\na\n",
+      "output": "1"
+    },
+    {
+      "name": "already_minimal_abc",
+      "input": "3\nabc\n",
+      "output": "3"
+    }
+  ]
+}
