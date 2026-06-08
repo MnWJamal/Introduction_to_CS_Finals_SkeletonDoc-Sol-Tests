@@ -1,0 +1,954 @@
+{
+  "tests": [
+    {
+      "name": "edge_one_char_a",
+      "input": "a\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_two_same",
+      "input": "aa\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_two_different",
+      "input": "az\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_all_same_long",
+      "input": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "edge_alphabet_once",
+      "input": "abcdefghijklmnopqrstuvwxyz\n",
+      "output": "26"
+    },
+    {
+      "name": "edge_alphabet_twice",
+      "input": "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz\n",
+      "output": "26"
+    },
+    {
+      "name": "edge_reverse_alphabet",
+      "input": "zyxwvutsrqponmlkjihgfedcba\n",
+      "output": "26"
+    },
+    {
+      "name": "edge_repeat_at_end",
+      "input": "abcdefghijklmnopqrstuvwxyza\n",
+      "output": "26"
+    },
+    {
+      "name": "edge_repeat_at_start",
+      "input": "aabcdefghijklmnopqrstuvwxyz\n",
+      "output": "26"
+    },
+    {
+      "name": "edge_alternating_ab",
+      "input": "abababababababababababababababababababababababababababababababababababababababababababababababababab\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_blocks_a_to_z",
+      "input": "aaaabbbbccccddddeeeeffffgggghhhh\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_word_special",
+      "input": "special\n",
+      "output": "7"
+    },
+    {
+      "name": "edge_word_stunning",
+      "input": "stunning\n",
+      "output": "4"
+    },
+    {
+      "name": "edge_word_noooot",
+      "input": "noooot\n",
+      "output": "2"
+    },
+    {
+      "name": "edge_word_well",
+      "input": "well\n",
+      "output": "3"
+    },
+    {
+      "name": "edge_sample_like",
+      "input": "abcaacb\n",
+      "output": "3"
+    },
+    {
+      "name": "edge_overlap_duplicate",
+      "input": "dvdf\n",
+      "output": "3"
+    },
+    {
+      "name": "edge_classic_pwwkew",
+      "input": "pwwkew\n",
+      "output": "3"
+    },
+    {
+      "name": "edge_long_unique_middle",
+      "input": "zzzzabcdefghijklmnopqrstuvwxyzzzzz\n",
+      "output": "26"
+    },
+    {
+      "name": "edge_repeating_windows",
+      "input": "abcadefaghijaklmn\n",
+      "output": "9"
+    },
+    {
+      "name": "systematic_unique_01_twice",
+      "input": "aa\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_unique_02_twice",
+      "input": "abab\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_unique_03_twice",
+      "input": "abcabc\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_unique_04_twice",
+      "input": "abcdabcd\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_unique_05_twice",
+      "input": "abcdeabcde\n",
+      "output": "5"
+    },
+    {
+      "name": "systematic_unique_06_twice",
+      "input": "abcdefabcdef\n",
+      "output": "6"
+    },
+    {
+      "name": "systematic_unique_07_twice",
+      "input": "abcdefgabcdefg\n",
+      "output": "7"
+    },
+    {
+      "name": "systematic_unique_08_twice",
+      "input": "abcdefghabcdefgh\n",
+      "output": "8"
+    },
+    {
+      "name": "systematic_unique_09_twice",
+      "input": "abcdefghiabcdefghi\n",
+      "output": "9"
+    },
+    {
+      "name": "systematic_unique_10_twice",
+      "input": "abcdefghijabcdefghij\n",
+      "output": "10"
+    },
+    {
+      "name": "systematic_unique_11_twice",
+      "input": "abcdefghijkabcdefghijk\n",
+      "output": "11"
+    },
+    {
+      "name": "systematic_unique_12_twice",
+      "input": "abcdefghijklabcdefghijkl\n",
+      "output": "12"
+    },
+    {
+      "name": "systematic_unique_13_twice",
+      "input": "abcdefghijklmabcdefghijklm\n",
+      "output": "13"
+    },
+    {
+      "name": "systematic_unique_14_twice",
+      "input": "abcdefghijklmnabcdefghijklmn\n",
+      "output": "14"
+    },
+    {
+      "name": "systematic_unique_15_twice",
+      "input": "abcdefghijklmnoabcdefghijklmno\n",
+      "output": "15"
+    },
+    {
+      "name": "systematic_unique_16_twice",
+      "input": "abcdefghijklmnopabcdefghijklmnop\n",
+      "output": "16"
+    },
+    {
+      "name": "systematic_unique_17_twice",
+      "input": "abcdefghijklmnopqabcdefghijklmnopq\n",
+      "output": "17"
+    },
+    {
+      "name": "systematic_unique_18_twice",
+      "input": "abcdefghijklmnopqrabcdefghijklmnopqr\n",
+      "output": "18"
+    },
+    {
+      "name": "systematic_unique_19_twice",
+      "input": "abcdefghijklmnopqrsabcdefghijklmnopqrs\n",
+      "output": "19"
+    },
+    {
+      "name": "systematic_unique_20_twice",
+      "input": "abcdefghijklmnopqrstabcdefghijklmnopqrst\n",
+      "output": "20"
+    },
+    {
+      "name": "systematic_unique_21_twice",
+      "input": "abcdefghijklmnopqrstuabcdefghijklmnopqrstu\n",
+      "output": "21"
+    },
+    {
+      "name": "systematic_unique_22_twice",
+      "input": "abcdefghijklmnopqrstuvabcdefghijklmnopqrstuv\n",
+      "output": "22"
+    },
+    {
+      "name": "systematic_unique_23_twice",
+      "input": "abcdefghijklmnopqrstuvwabcdefghijklmnopqrstuvw\n",
+      "output": "23"
+    },
+    {
+      "name": "systematic_unique_24_twice",
+      "input": "abcdefghijklmnopqrstuvwxabcdefghijklmnopqrstuvwx\n",
+      "output": "24"
+    },
+    {
+      "name": "systematic_unique_25_twice",
+      "input": "abcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxy\n",
+      "output": "25"
+    },
+    {
+      "name": "systematic_unique_26_twice",
+      "input": "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz\n",
+      "output": "26"
+    },
+    {
+      "name": "systematic_mod_pattern_02",
+      "input": "bababababa\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_mod_pattern_03",
+      "input": "abcabcabcabcabc\n",
+      "output": "3"
+    },
+    {
+      "name": "systematic_mod_pattern_04",
+      "input": "dcbadcbadcbadcbadcba\n",
+      "output": "4"
+    },
+    {
+      "name": "systematic_mod_pattern_05",
+      "input": "dacebdacebdacebdacebdaceb\n",
+      "output": "5"
+    },
+    {
+      "name": "systematic_mod_pattern_06",
+      "input": "defabcdefabcdefabcdefabcdefabc\n",
+      "output": "6"
+    },
+    {
+      "name": "systematic_mod_pattern_07",
+      "input": "ddddddddddddddddddddddddddddddddddd\n",
+      "output": "1"
+    },
+    {
+      "name": "systematic_mod_pattern_08",
+      "input": "dcbahgfedcbahgfedcbahgfedcbahgfedcbahgfe\n",
+      "output": "8"
+    },
+    {
+      "name": "systematic_mod_pattern_09",
+      "input": "dbigecahfdbigecahfdbigecahfdbigecahfdbigecahf\n",
+      "output": "9"
+    },
+    {
+      "name": "systematic_mod_pattern_10",
+      "input": "dahebifcjgdahebifcjgdahebifcjgdahebifcjgdahebifcjg\n",
+      "output": "10"
+    },
+    {
+      "name": "systematic_mod_pattern_11",
+      "input": "dkgcjfbieahdkgcjfbieahdkgcjfbieahdkgcjfbieahdkgcjfbieah\n",
+      "output": "11"
+    },
+    {
+      "name": "systematic_mod_pattern_12",
+      "input": "dkfahcjelgbidkfahcjelgbidkfahcjelgbidkfahcjelgbidkfahcjelgbi\n",
+      "output": "12"
+    },
+    {
+      "name": "systematic_mod_pattern_13",
+      "input": "dkelfmgahbicjdkelfmgahbicjdkelfmgahbicjdkelfmgahbicjdkelfmgahbicj\n",
+      "output": "13"
+    },
+    {
+      "name": "systematic_mod_pattern_14",
+      "input": "dkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdkdk\n",
+      "output": "2"
+    },
+    {
+      "name": "systematic_mod_pattern_15",
+      "input": "dkcjbiahognfmeldkcjbiahognfmeldkcjbiahognfmeldkcjbiahognfmeldkcjbiahognfmel\n",
+      "output": "15"
+    },
+    {
+      "name": "systematic_mod_pattern_16",
+      "input": "dkbipgnelcjahofmdkbipgnelcjahofmdkbipgnelcjahofmdkbipgnelcjahofmdkbipgnelcjahofm\n",
+      "output": "16"
+    },
+    {
+      "name": "systematic_mod_pattern_17",
+      "input": "dkahoelbipfmcjqgndkahoelbipfmcjqgndkahoelbipfmcjqgndkahoelbipfmcjqgndkahoelbipfmcjqgn\n",
+      "output": "17"
+    },
+    {
+      "name": "systematic_mod_pattern_18",
+      "input": "dkrgncjqfmbipelahodkrgncjqfmbipelahodkrgncjqfmbipelahodkrgncjqfmbipelahodkrgncjqfmbipelaho\n",
+      "output": "18"
+    },
+    {
+      "name": "systematic_mod_pattern_19",
+      "input": "dkrfmahocjqelsgnbipdkrfmahocjqelsgnbipdkrfmahocjqelsgnbipdkrfmahocjqelsgnbipdkrfmahocjqelsgnbip\n",
+      "output": "19"
+    },
+    {
+      "name": "systematic_mod_pattern_20",
+      "input": "dkrelsfmtgnahobipcjqdkrelsfmtgnahobipcjqdkrelsfmtgnahobipcjqdkrelsfmtgnahobipcjqdkrelsfmtgnahobipcjq\n",
+      "output": "20"
+    },
+    {
+      "name": "constructed_unique_middle_00",
+      "input": "aeeaddbadcbabedcecbavkigtczauroywzxvxzzwvwvvzyvzyyv\n",
+      "output": "13"
+    },
+    {
+      "name": "constructed_unique_middle_01",
+      "input": "aaabbaaebabacebdabecoqtzlwbrvzywyvzxxvyzvxwzzzvx\n",
+      "output": "11"
+    },
+    {
+      "name": "constructed_unique_middle_02",
+      "input": "deddbbebcccacaaeabaelofjxszpekwmuvayvvwxzvzxwyxyvzvvvxy\n",
+      "output": "16"
+    },
+    {
+      "name": "constructed_unique_middle_03",
+      "input": "aabcacccaeadacabbdbeybjmaeiprwvvzxyxzyxzxvzvyzxwz\n",
+      "output": "11"
+    },
+    {
+      "name": "constructed_unique_middle_04",
+      "input": "eddcedceacccabacdbbaqijrmubkzzwxwvyzvyyyyxyyyxwww\n",
+      "output": "10"
+    },
+    {
+      "name": "constructed_unique_middle_05",
+      "input": "edabcdedcccbbadbacablzkiashxpycfxyzwwwzzxzyyywwyzxvy\n",
+      "output": "13"
+    },
+    {
+      "name": "constructed_unique_middle_06",
+      "input": "bcadcbddadbaebecabdeetdharzgcbwjwxwwzwyxzwvzzwyxxzyy\n",
+      "output": "12"
+    },
+    {
+      "name": "constructed_unique_middle_07",
+      "input": "aeaddbeaabaabcabeacaufhwerzktigpqyxzzvwwxvzxvyxxyxzvy\n",
+      "output": "17"
+    },
+    {
+      "name": "constructed_unique_middle_08",
+      "input": "daeddabbdccebedbaccbqacdkmtsyzoerxwbfvvvyxyxyvwwvxwwzyyvv\n",
+      "output": "18"
+    },
+    {
+      "name": "constructed_unique_middle_09",
+      "input": "caaebcdbdebdbdcbeeeebstpejycmkgxzqvlofwhinvxxyzxywxxxvwwvxvvyz\n",
+      "output": "22"
+    },
+    {
+      "name": "constructed_unique_middle_10",
+      "input": "dacaedcbdddecedaecabntxgwvjdlpafkqsmbzuocryeihwywyyxwwyzywzyzvvvxz\n",
+      "output": "26"
+    },
+    {
+      "name": "constructed_unique_middle_11",
+      "input": "dcbddcaacceadeedaaddztdxkcjwqlphfsbegxxzzvvzvyxywwvwxwzzx\n",
+      "output": "17"
+    },
+    {
+      "name": "constructed_unique_middle_12",
+      "input": "adebaacacbacdcbbbacedsricagonfplkwheyxxyzzyywxwxyvzzzyzw\n",
+      "output": "18"
+    },
+    {
+      "name": "constructed_unique_middle_13",
+      "input": "ecadbcbbaaacbcdcebbevxuhqdbcarvywyxyyzwvwzyvwvwyzy\n",
+      "output": "12"
+    },
+    {
+      "name": "constructed_unique_middle_14",
+      "input": "adbaaebdabedebddbeadroedxbqyafxyyxvvyzzwyywzwxvzwy\n",
+      "output": "10"
+    },
+    {
+      "name": "constructed_unique_middle_15",
+      "input": "aaaaacaebeeacececbcecwduyekhipforxzvzxvzvxxvwzyxwxxwy\n",
+      "output": "16"
+    },
+    {
+      "name": "constructed_unique_middle_16",
+      "input": "cdddcebaadaccaabaeacwuvndeiakctpqhlxywxwwwzwyzzwwwywzyy\n",
+      "output": "17"
+    },
+    {
+      "name": "constructed_unique_middle_17",
+      "input": "ccaeceebcbbbbadccaedsqrbuwedjcxyvywxwxzwzwwyxyxwyw\n",
+      "output": "13"
+    },
+    {
+      "name": "constructed_unique_middle_18",
+      "input": "dbddbdacebaacabdcdcecavhmzgbkdwjopqxefirwzzwxzvxzyyzzvwwxyxx\n",
+      "output": "20"
+    },
+    {
+      "name": "constructed_unique_middle_19",
+      "input": "ecbadacbcdacaccddbedkpanojdftshwxzzvwyxwxywzxyxvvzz\n",
+      "output": "14"
+    },
+    {
+      "name": "random_lowercase_000_n_120",
+      "input": "chdfhdedgachdfhdhchbahhcddbeddgchfacfgeagebbegheeggcdcfhaggfafdegfeafbaaaccdfdfacaeafhgbgbdfdefbbaagfggddadgghfbcgchadfd\n",
+      "output": "6"
+    },
+    {
+      "name": "random_lowercase_001_n_120",
+      "input": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "random_lowercase_002_n_10",
+      "input": "abccbcbbcd\n",
+      "output": "3"
+    },
+    {
+      "name": "random_lowercase_003_n_15",
+      "input": "ddhgdbfggbfgcdg\n",
+      "output": "5"
+    },
+    {
+      "name": "random_lowercase_004_n_5",
+      "input": "dafbe\n",
+      "output": "5"
+    },
+    {
+      "name": "random_lowercase_005_n_6",
+      "input": "srvowl\n",
+      "output": "6"
+    },
+    {
+      "name": "random_lowercase_006_n_120",
+      "input": "aaaaaaabaaaaabaaaabaaabababaabaababbaabbababbbbbaababaaaabbabaaaabbbababbbababbbbabbbbaaabbbbbaaababbaabaabbaaaaabbabbbb\n",
+      "output": "2"
+    },
+    {
+      "name": "random_lowercase_007_n_6",
+      "input": "gmaimo\n",
+      "output": "4"
+    },
+    {
+      "name": "random_lowercase_008_n_120",
+      "input": "ccacccabbcccccbaccacaabcabaaabbccacbcabbcabacabcabcbbcacacbacbaaccccccbacacccacacabcaabacacacbbcababcacabbbcabcbabaacacc\n",
+      "output": "3"
+    },
+    {
+      "name": "random_lowercase_009_n_90",
+      "input": "hdhagccaeidcjhfeehefgiccacgfgdfbejdcajghcgffccfdajehdbejjheehaeifgbgffjchdaajgjhbhbbaaccgc\n",
+      "output": "8"
+    },
+    {
+      "name": "random_lowercase_010_n_7",
+      "input": "lkhakcc\n",
+      "output": "4"
+    },
+    {
+      "name": "random_lowercase_011_n_90",
+      "input": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "random_lowercase_012_n_120",
+      "input": "dpbqtqwjbazuyurhxesulkvodbylflpitggpdirjdldapanwxzuywjbebnjgyljhfgkofgqbfssukzvnotkppzrzuuhijumsgjpxvoxvxlgchndzzhhhgipz\n",
+      "output": "13"
+    },
+    {
+      "name": "random_lowercase_013_n_90",
+      "input": "bkiijbjjhbhjldhhgkallkjdgemaidfcjdbggkiimfdbkmmalkgihicjelejmaemlkmeahgfegfmdkcdgaajgidjbg\n",
+      "output": "9"
+    },
+    {
+      "name": "random_lowercase_014_n_40",
+      "input": "dccadcaeecbdeecdccbacdaebaddbbcbeeccbdcb\n",
+      "output": "5"
+    },
+    {
+      "name": "random_lowercase_015_n_15",
+      "input": "cjhhhbdfgieeedj\n",
+      "output": "7"
+    },
+    {
+      "name": "random_lowercase_016_n_3",
+      "input": "cdc\n",
+      "output": "2"
+    },
+    {
+      "name": "random_lowercase_017_n_60",
+      "input": "aaaabbaabbaabaabaababbbabbbbabaabaabbbaabbbbabbaabaaabaaaaba\n",
+      "output": "2"
+    },
+    {
+      "name": "random_lowercase_018_n_3",
+      "input": "dab\n",
+      "output": "3"
+    },
+    {
+      "name": "random_lowercase_019_n_180",
+      "input": "fadcgjghbbdiibjgfjihcbeeecicecjddeehbeajihhghaagdfjgfhhjgjhbidhcgbjheabcghacdjfjbjajfbahbciffahbjdhaahdiefgdedjdghbgahabafgjihhgfdfdbfefejjbdejidehifdahajccfhdfcaehjhiggebbaffedeac\n",
+      "output": "8"
+    },
+    {
+      "name": "random_lowercase_020_n_40",
+      "input": "dcdhdbdjbbhcbahahacfibdfahcfjcdibjaagiee\n",
+      "output": "7"
+    },
+    {
+      "name": "random_lowercase_021_n_5",
+      "input": "adaab\n",
+      "output": "2"
+    },
+    {
+      "name": "random_lowercase_022_n_40",
+      "input": "hijfdgjhbihhdbjiafeifjedfedeejgcfjgiffbh\n",
+      "output": "8"
+    },
+    {
+      "name": "random_lowercase_023_n_8",
+      "input": "cacccbbb\n",
+      "output": "2"
+    },
+    {
+      "name": "random_lowercase_024_n_4",
+      "input": "babb\n",
+      "output": "2"
+    },
+    {
+      "name": "random_lowercase_025_n_20",
+      "input": "bcadbcdceeacadbcaebd\n",
+      "output": "5"
+    },
+    {
+      "name": "random_lowercase_026_n_30",
+      "input": "ebdceacacaedcbcdccbcbeabdbeedd\n",
+      "output": "5"
+    },
+    {
+      "name": "random_lowercase_027_n_5",
+      "input": "abaff\n",
+      "output": "3"
+    },
+    {
+      "name": "random_lowercase_028_n_6",
+      "input": "egadie\n",
+      "output": "5"
+    },
+    {
+      "name": "random_lowercase_029_n_4",
+      "input": "bbac\n",
+      "output": "3"
+    },
+    {
+      "name": "random_lowercase_030_n_40",
+      "input": "aaaabbaababbaaaaaabaaababaaabbaabaaaaaab\n",
+      "output": "2"
+    },
+    {
+      "name": "random_lowercase_031_n_12",
+      "input": "aadhbdhdbeaj\n",
+      "output": "6"
+    },
+    {
+      "name": "random_lowercase_032_n_3",
+      "input": "amk\n",
+      "output": "3"
+    },
+    {
+      "name": "random_lowercase_033_n_8",
+      "input": "ilpdtqrr\n",
+      "output": "7"
+    },
+    {
+      "name": "random_lowercase_034_n_60",
+      "input": "elmfhgdmfeiacllabakccadaihejhjjhimaihijlaidahkdficaiijlcmhbd\n",
+      "output": "10"
+    },
+    {
+      "name": "random_lowercase_035_n_250",
+      "input": "pbajqgenscxnqnguglnytvnecshxmrwddogmfxohnvrqvsxyhilnxulzzgvflvfzuncnpkkzecrrxlgdtityxrnmashwmqbndxhcparvbhcoiuicjaitunrcynocjclqzngdssicymwxgdypbqglgmsxzlflvglbdtsbkesosxemuwwxyuwarbecvehswiquuwcxurnqvonjjhcchpktwmnlgzbctmjpiuzpbeujfqnjspltkzzbsidzss\n",
+      "output": "13"
+    },
+    {
+      "name": "random_lowercase_036_n_90",
+      "input": "rnzjskiniaixrfiluwejbzkvbzkbpqrlzrogwixsksbapmzaeabtdggzcsnraboddnpzgbsbfqgzymhgcnmblrkdkp\n",
+      "output": "13"
+    },
+    {
+      "name": "random_lowercase_037_n_3",
+      "input": "bfd\n",
+      "output": "3"
+    },
+    {
+      "name": "random_lowercase_038_n_7",
+      "input": "oobegjt\n",
+      "output": "6"
+    },
+    {
+      "name": "random_lowercase_039_n_20",
+      "input": "jinaaicscttorihtlpra\n",
+      "output": "7"
+    },
+    {
+      "name": "random_lowercase_040_n_10",
+      "input": "ebdgembbff\n",
+      "output": "5"
+    },
+    {
+      "name": "random_lowercase_041_n_10",
+      "input": "cabccaaaaa\n",
+      "output": "3"
+    },
+    {
+      "name": "random_lowercase_042_n_6",
+      "input": "bfedga\n",
+      "output": "6"
+    },
+    {
+      "name": "random_lowercase_043_n_25",
+      "input": "aaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "random_lowercase_044_n_15",
+      "input": "aehchecdfabdfhb\n",
+      "output": "7"
+    },
+    {
+      "name": "random_lowercase_045_n_20",
+      "input": "gjeeebidigbiebcfjghh\n",
+      "output": "8"
+    },
+    {
+      "name": "random_lowercase_046_n_10",
+      "input": "hdhahbfhib\n",
+      "output": "4"
+    },
+    {
+      "name": "random_lowercase_047_n_40",
+      "input": "babbabaccccbcabccbabbcbaacaccacacaabccbc\n",
+      "output": "3"
+    },
+    {
+      "name": "random_lowercase_048_n_6",
+      "input": "acdcaa\n",
+      "output": "3"
+    },
+    {
+      "name": "random_lowercase_049_n_250",
+      "input": "acabaedaeaaeccecbdbcadcabeadbcdeaedaabadebabdcbedeeebcdddaedbacdedabadcacbbeecedbababeaabddbacdceadabaedbdcedbcaedcccadecabbbadcbcaaeadbdadbcacadcadbabaecccdacbccadcbcdedceacbacdddcebdcaacceadcccbbaedbcabccaddeeddaebeceaaccacdeeeadeaccedbcbceceecdabc\n",
+      "output": "5"
+    },
+    {
+      "name": "random_lowercase_050_n_3",
+      "input": "aaa\n",
+      "output": "1"
+    },
+    {
+      "name": "random_lowercase_051_n_6",
+      "input": "cbcbca\n",
+      "output": "3"
+    },
+    {
+      "name": "random_lowercase_052_n_7",
+      "input": "ecebcee\n",
+      "output": "3"
+    },
+    {
+      "name": "random_lowercase_053_n_12",
+      "input": "gfclmlbllakc\n",
+      "output": "5"
+    },
+    {
+      "name": "random_lowercase_054_n_6",
+      "input": "aaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "random_lowercase_055_n_90",
+      "input": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "random_lowercase_056_n_5",
+      "input": "ghalp\n",
+      "output": "5"
+    },
+    {
+      "name": "random_lowercase_057_n_120",
+      "input": "fddedadclbiglmckkcmiiglhdicgldlgigdimkeagehegfgalghdlaieklmliaalhlfhcaagdacghclmdkefijmellbfiddmlekkmaimelahifbdkmfkaekj\n",
+      "output": "11"
+    },
+    {
+      "name": "random_lowercase_058_n_5",
+      "input": "dgcgf\n",
+      "output": "3"
+    },
+    {
+      "name": "random_lowercase_059_n_12",
+      "input": "yklhgqukxvyq\n",
+      "output": "9"
+    },
+    {
+      "name": "random_lowercase_060_n_20",
+      "input": "aaaaaaaaaaaaaaaaaaaa\n",
+      "output": "1"
+    },
+    {
+      "name": "random_lowercase_061_n_180",
+      "input": "bbbccaaadabacdaacabbbcccbcdcabcbdacdcacdddbbbbdddcccdcbcddbcccddcbcaabbccdbdabdaaaadcddccccddcbcbaacdbbdaaddbdddcbdaacdadbcacacbdcacbbadccadcbbdcbcaccbcdadbbbbbbdabcabddccbaabacbbd\n",
+      "output": "4"
+    },
+    {
+      "name": "random_lowercase_062_n_120",
+      "input": "babaaaaabbaabaaaaaaaaaabaaaabaabaaababaabbaabbbbbbaaabbbaababbbbbbbbbbbaabaabaabaababbaaaaabababaaaabbbabaaaabbbbbabbbbb\n",
+      "output": "2"
+    },
+    {
+      "name": "random_lowercase_063_n_60",
+      "input": "bebabdaecbacbcdccbececabeedacaadbacebbdebcacacbcabaddddccdad\n",
+      "output": "5"
+    },
+    {
+      "name": "random_lowercase_064_n_60",
+      "input": "gfbacahgacgdbbgcbhffddaeagadcgecfgdghaaabdfhddfhaaaehcfdhgha\n",
+      "output": "6"
+    },
+    {
+      "name": "random_lowercase_065_n_5",
+      "input": "edbbc\n",
+      "output": "3"
+    },
+    {
+      "name": "random_lowercase_066_n_120",
+      "input": "cdebecbbadcaabcaecdcadaeebadcbdeadeeeebaadaaaddeeccdcaadadcbeeabccbbeddeccccaaedbccecabdaeabadacbacdaddbacebeedcbaeddacd\n",
+      "output": "5"
+    },
+    {
+      "name": "random_lowercase_067_n_5",
+      "input": "cdjab\n",
+      "output": "5"
+    },
+    {
+      "name": "random_lowercase_068_n_180",
+      "input": "babeaededeeadecdedbbcdcadaaadceedbadabaaeecabaaeeebadcdeaabcaeeeceadaedbbeaaabbbacebbaeabcbbceabdbcecdbaebcdabdcccadbbdecbadbeecbbeacacdcbcdcdebeadcccddddeabebbcbbbddedbdaedececdec\n",
+      "output": "5"
+    },
+    {
+      "name": "random_lowercase_069_n_180",
+      "input": "aaababbbbabaabbbbbaababbbbabbbbbbbbaabbbbaabaaabbbabbbabbabaabaabbaaaabbbaaaabbbabbaaaaabbaabaabbbbbabbaabbbbbbbbbaabaaabaaabaabbabaaabbaaababababaabaaababaaaabaaabababababbbbaaaba\n",
+      "output": "2"
+    },
+    {
+      "name": "random_lowercase_070_n_8",
+      "input": "eidebdfa\n",
+      "output": "5"
+    },
+    {
+      "name": "random_lowercase_071_n_5",
+      "input": "bbabc\n",
+      "output": "3"
+    },
+    {
+      "name": "random_lowercase_072_n_30",
+      "input": "daimillfafmijmgicalcglmlhlmbid\n",
+      "output": "7"
+    },
+    {
+      "name": "random_lowercase_073_n_6",
+      "input": "ibacii\n",
+      "output": "4"
+    },
+    {
+      "name": "random_lowercase_074_n_25",
+      "input": "dbabdabcadbcbdadbaabbaaac\n",
+      "output": "4"
+    },
+    {
+      "name": "random_lowercase_075_n_7",
+      "input": "bbccacb\n",
+      "output": "3"
+    },
+    {
+      "name": "random_lowercase_076_n_12",
+      "input": "acbbccccbccb\n",
+      "output": "3"
+    },
+    {
+      "name": "random_lowercase_077_n_25",
+      "input": "weojqrvwrxkmfsddcvooegdva\n",
+      "output": "9"
+    },
+    {
+      "name": "random_lowercase_078_n_4",
+      "input": "gakh\n",
+      "output": "4"
+    },
+    {
+      "name": "random_lowercase_079_n_30",
+      "input": "aababbbbbaaaaaaababbabbabaaaaa\n",
+      "output": "2"
+    },
+    {
+      "name": "random_lowercase_080_n_15",
+      "input": "djbfglejlellccl\n",
+      "output": "7"
+    },
+    {
+      "name": "random_lowercase_081_n_8",
+      "input": "efcspeut\n",
+      "output": "7"
+    },
+    {
+      "name": "random_lowercase_082_n_180",
+      "input": "xuoyszdedjfitehfxkaoohenhsetjpovahqkkdnkztnbckiebhinfgdeateebekqmqodxoiijklmytprrklwcatpoilgnqtnmvvyztlgfoiuawealprebabtbiwvkmpoorphviyteeuqdknubslettcachnffccbbphrcgpztsfgbpvuxjko\n",
+      "output": "13"
+    },
+    {
+      "name": "random_lowercase_083_n_180",
+      "input": "acaaacabbccbacbacbaaaacbcbacaacaacbbbaacacabbcaaacbccbabababaacabaccccaccccbabcbcaccaacaccababbacaaacabaababbbbbbabccacacbbacbbcbaccaacbbcbacbbacaacccbbcacbcaaaccccbabacaaccbbbbaab\n",
+      "output": "3"
+    },
+    {
+      "name": "random_lowercase_084_n_7",
+      "input": "hheliek\n",
+      "output": "4"
+    },
+    {
+      "name": "random_lowercase_085_n_60",
+      "input": "deeabaedbbdddaaaaeacedbabaecedcddabcceceecccdcebdabcaccedbde\n",
+      "output": "5"
+    },
+    {
+      "name": "random_lowercase_086_n_60",
+      "input": "bababbaabaaaaabbbbbbaaaabbaababbbbbbbaabbbbbbabaabbaabaababa\n",
+      "output": "2"
+    },
+    {
+      "name": "random_lowercase_087_n_25",
+      "input": "ahdgfcbdgcfacfhbhddfabefg\n",
+      "output": "7"
+    },
+    {
+      "name": "random_lowercase_088_n_12",
+      "input": "aabbcbbabacc\n",
+      "output": "3"
+    },
+    {
+      "name": "random_lowercase_089_n_4",
+      "input": "geci\n",
+      "output": "4"
+    },
+    {
+      "name": "random_lowercase_090_n_120",
+      "input": "bababaaabaabaabbabaaaababbabbbbabbaabaaabbabbaabaaabbabbbabaaabababbbaababbbbababbaabababbbabaabbabbababaabbabbbbbbbaaba\n",
+      "output": "2"
+    },
+    {
+      "name": "random_lowercase_091_n_10",
+      "input": "gdfheaedea\n",
+      "output": "6"
+    },
+    {
+      "name": "random_lowercase_092_n_6",
+      "input": "cccbbc\n",
+      "output": "2"
+    },
+    {
+      "name": "random_lowercase_093_n_10",
+      "input": "uxknzapiss\n",
+      "output": "9"
+    },
+    {
+      "name": "random_lowercase_094_n_180",
+      "input": "adcdeacdbebbaeaeeaaccedebbcbaeabaebcdbedaededaedccdcddadbeacccdabebeceecbacacdabadabebceceadabdcccccabbdcaacdbceebbdcbaeeabaeadabaebebceadeaddcdadcdcdebcbabecddddbaddcabaceebbdbadd\n",
+      "output": "5"
+    },
+    {
+      "name": "random_lowercase_095_n_8",
+      "input": "cabbaacb\n",
+      "output": "3"
+    },
+    {
+      "name": "random_lowercase_096_n_60",
+      "input": "bhacjjhgeajiijidaigcgfiabfadigciebjfiaiedgbiahgachhebjhhjaca\n",
+      "output": "7"
+    },
+    {
+      "name": "random_lowercase_097_n_20",
+      "input": "becabegiccihcdgafiff\n",
+      "output": "7"
+    },
+    {
+      "name": "random_lowercase_098_n_15",
+      "input": "abaabbbabbaaaaa\n",
+      "output": "2"
+    },
+    {
+      "name": "random_lowercase_099_n_25",
+      "input": "ykuabutjtkjceyzcxvosqmgux\n",
+      "output": "12"
+    },
+    {
+      "name": "random_lowercase_100_n_40",
+      "input": "iuffcyoevdiztkcwitcdcipbgcffbohzmocqdqvb\n",
+      "output": "11"
+    },
+    {
+      "name": "random_lowercase_101_n_25",
+      "input": "fhafcljaeaedaadgkgjmhgdak\n",
+      "output": "7"
+    },
+    {
+      "name": "random_lowercase_102_n_3",
+      "input": "dbh\n",
+      "output": "3"
+    },
+    {
+      "name": "random_lowercase_103_n_60",
+      "input": "cccddbaddddbcbbbbdaddbcbcabcdaacdaccabcacbabaabbdddaacbccadc\n",
+      "output": "4"
+    },
+    {
+      "name": "random_lowercase_104_n_25",
+      "input": "abodoeaqosomadpkqtgksfeoc\n",
+      "output": "10"
+    }
+  ]
+}

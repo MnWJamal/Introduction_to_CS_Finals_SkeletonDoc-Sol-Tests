@@ -1,0 +1,1029 @@
+{
+  "tests": [
+    {
+      "name": "hand_001",
+      "input": "1\nA\nA\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_002",
+      "input": "1\nA\nB\n",
+      "output": "0"
+    },
+    {
+      "name": "hand_003",
+      "input": "1\nA\nAA\n",
+      "output": "0"
+    },
+    {
+      "name": "hand_004",
+      "input": "2\nA\nA\nAA\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_005",
+      "input": "2\nAB\nCD\nAC\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_006",
+      "input": "2\nAB\nCD\nAD\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_007",
+      "input": "2\nAB\nCD\nAA\n",
+      "output": "0"
+    },
+    {
+      "name": "hand_008",
+      "input": "3\nABC\nABC\nABC\nCBA\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_009",
+      "input": "2\nABC\nABC\nABCA\n",
+      "output": "0"
+    },
+    {
+      "name": "hand_010",
+      "input": "4\nABC\nAEI\nEOU\nLNRST\nBONE\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_011",
+      "input": "4\nABC\nAEI\nEOU\nLNRST\nBAT\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_012",
+      "input": "4\nABC\nAEI\nEOU\nLNRST\nCAT\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_013",
+      "input": "4\nABC\nAEI\nEOU\nLNRST\nBAIT\n",
+      "output": "0"
+    },
+    {
+      "name": "hand_014",
+      "input": "3\nAB\nAC\nAD\nAAA\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_015",
+      "input": "3\nAB\nBC\nCD\nABD\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_016",
+      "input": "3\nAB\nBC\nCD\nACD\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_017",
+      "input": "3\nA\nBC\nDEF\nFED\n",
+      "output": "0"
+    },
+    {
+      "name": "hand_018",
+      "input": "3\nA\nBC\nDEF\nFA\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_019",
+      "input": "4\nXYZ\nX\nY\nZ\nXXYZ\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_020",
+      "input": "3\nXYZ\nX\nY\nXXYZ\n",
+      "output": "0"
+    },
+    {
+      "name": "hand_021",
+      "input": "3\nQWERTY\nASDF\nZXCV\nQAZ\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_022",
+      "input": "3\nQWERTY\nASDF\nZXCV\nQQ\n",
+      "output": "0"
+    },
+    {
+      "name": "hand_023",
+      "input": "3\nAA\nBB\nCC\nABC\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_024",
+      "input": "3\nAA\nAB\nAC\nAAA\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_025",
+      "input": "3\nDOG\nCAT\nBIRD\nCOD\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_026",
+      "input": "3\nDOG\nCAT\nBIRD\nDODO\n",
+      "output": "0"
+    },
+    {
+      "name": "hand_027",
+      "input": "4\nMNO\nOPQ\nQRS\nSTU\nMOST\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_028",
+      "input": "4\nMNO\nOPQ\nQRS\nSTU\nMOOS\n",
+      "output": "0"
+    },
+    {
+      "name": "hand_029",
+      "input": "4\nL\nO\nO\nP\nLOOP\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_030",
+      "input": "3\nL\nO\nP\nLOOP\n",
+      "output": "0"
+    },
+    {
+      "name": "hand_031",
+      "input": "7\nABCD\nEFGH\nIJKL\nMNOP\nQRST\nUVWX\nYZ\nALWQZ\n",
+      "output": "1"
+    },
+    {
+      "name": "hand_032",
+      "input": "7\nABCD\nEFGH\nIJKL\nMNOP\nQRST\nUVWX\nYZ\nAAAA\n",
+      "output": "0"
+    },
+    {
+      "name": "random_true_033",
+      "input": "3\nO\nOXHC\nSJ\nOJ\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_034",
+      "input": "10\nVTQJ\nZI\nMWXFA\nFVQ\nTYEZAEW\nNJS\nUTT\nMDMZZWH\nMTHHPG\nKBV\nT\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_035",
+      "input": "10\nVPGFOGD\nDNYNQPR\nYAGXM\nNZWBFF\nNJVEBF\nUCT\nRHNPIVZP\nPVYFAP\nWCK\nXWSAQ\nPVOG\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_036",
+      "input": "5\nJGB\nLNYBSX\nJPWIJ\nSOTGFWN\nVEUP\nJPNJN\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_037",
+      "input": "7\nUJBUCY\nW\nPYAYTLSV\nJSQJXYFM\nBWJFC\nAES\nQVTZXQA\nWXMSAC\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_038",
+      "input": "6\nSPKAECUE\nUG\nVVPMYW\nJSEZW\nAYK\nVBFILE\nU\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_039",
+      "input": "3\nRJDDXFRU\nCPJNO\nMRKRUEX\nRP\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_040",
+      "input": "1\nRWWZAYU\nU\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_041",
+      "input": "1\nXAOLYQ\nQ\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_042",
+      "input": "8\nRPWENL\nHKKG\nNRKSZU\nAQFRAQ\nEQNQLG\nTADYMMLC\nGXMYNWYV\nKLII\nGKMK\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_043",
+      "input": "10\nQM\nWUW\nKPRQ\nLEDU\nDAXEBZ\nTIUNVOIZ\nQINIG\nNL\nAON\nNN\nDONEQIO\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_044",
+      "input": "4\nTEURRZOQ\nMKKAXK\nTFKIWPC\nD\nKIDZ\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_045",
+      "input": "9\nSIHW\nZIQMBIHG\nFVHJVUO\nKHGZJI\nNVUP\nFAEVKTYX\nYYRU\nYSMZRK\nO\nJRRVO\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_046",
+      "input": "10\nLJR\nKAUYHTGG\nGEWJMY\nJ\nEYJFY\nVY\nMCJODRJB\nLN\nDOLZ\nWPIPAJBC\nLYB\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_047",
+      "input": "7\nD\nRVVARNX\nSGP\nLUGWXXW\nQDIRBZ\nA\nFI\nFPAV\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_048",
+      "input": "8\nSH\nXOSNR\nLFHLV\nAF\nIORIIVE\nGBBMASWM\nOZFBKYH\nOMJXFR\nWSSFLFOV\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_049",
+      "input": "3\nR\nWEDQR\nG\nDG\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_050",
+      "input": "8\nOPDPUIP\nNAXEQ\nNFAZCEU\nQOBTGN\nXDS\nCASIC\nPN\nC\nCE\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_051",
+      "input": "6\nQB\nBTBTDD\nJJB\nJFCY\nLQMEHZ\nJHPABHOW\nZJHD\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_052",
+      "input": "8\nHXCQQM\nVB\nBQW\nL\nV\nECXOXU\nG\nQNPPKVXB\nWXGL\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_053",
+      "input": "6\nGTUTE\nXGQARQZF\nNFLOX\nVX\nRUD\nYCFIKL\nZ\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_054",
+      "input": "7\nKPYZBULR\nJ\nOYXUBMFO\nEBWPVQ\nBRWW\nC\nF\nWJCYBFB\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_055",
+      "input": "7\nAZFMJDW\nZZJADUT\nINLK\nXRMXEFMU\nOCMN\nAP\nS\nA\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_056",
+      "input": "3\nJ\nXKRACZ\nDIIYNQIX\nZ\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_057",
+      "input": "9\nY\nMENVNCMF\nEBGJIGYG\nUCVHNJV\nQSJ\nLUR\nAHZMADT\nC\nDUEF\nCEJMUYF\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_058",
+      "input": "5\nASR\nXY\nPZM\nPAPIYGKX\nJYW\nZR\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_059",
+      "input": "4\nWYYSAIKN\nJNJFYWH\nW\nFS\nFWNS\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_060",
+      "input": "2\nVPMAYE\nFPYIPAPT\nVI\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_061",
+      "input": "8\nVMVB\nMDT\nM\nNURUVLNU\nQJGAI\nUAXKVXR\nDLUEZNYZ\nGP\nD\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_062",
+      "input": "3\nXFDBYT\nDGDRWDV\nNMUOXT\nTBG\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_063",
+      "input": "3\nGUMEG\nU\nFMXKJLA\nG\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_064",
+      "input": "3\nUTZECU\nI\nHXAJSUWV\nI\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_065",
+      "input": "8\nN\nIAZFTSYE\nHF\nVWSI\nMURAGJ\nJOB\nGYHB\nIPKLKR\nIBJRFVTN\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_066",
+      "input": "10\nKJB\nTCTSPZYO\nWZQ\nKJKMLRZH\nZFKQQIV\nPLQWB\nKIEW\nLM\nLSVAPQRT\nZSWMM\nMK\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_067",
+      "input": "3\nV\nJD\nEUOAU\nV\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_068",
+      "input": "2\nQZWCDYO\nHMOIWMD\nO\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_069",
+      "input": "2\nILROILQL\nO\nOQ\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_070",
+      "input": "2\nAPARBTSF\nYGCTNVK\nB\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_071",
+      "input": "5\nTAASPB\nQNU\nGBOVE\nLETVJ\nWWJ\nWUPJG\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_072",
+      "input": "3\nRUPRH\nL\nSTCXVWE\nVLR\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_073",
+      "input": "3\nYZI\nHML\nKYQXMC\nX\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_074",
+      "input": "1\nGRBXXXDB\nD\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_075",
+      "input": "7\nUZNUDMG\nKZLRCSJH\nITIIF\nIFZD\nUR\nJIDR\nHGGLQK\nIRJGDD\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_076",
+      "input": "4\nZUECLWQ\nW\nG\nCWHNAFJM\nUWF\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_077",
+      "input": "9\nYSQKGL\nCGOP\nKDMUT\nYCCPF\nN\nKDISOMA\nK\nEVUKEIA\nHSD\nNQCKHPKKE\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_078",
+      "input": "4\nVP\nEYMU\nQPHTA\nHWGUTY\nAUV\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_079",
+      "input": "2\nTY\nDOG\nY\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_080",
+      "input": "3\nRNJXA\nXYX\nICG\nI\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_081",
+      "input": "10\nKYCVYBY\nJKFDQSE\nJDH\nZ\nGNBSXK\nIBMIG\nUTI\nPASEVXX\nRDVLU\nS\nT\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_082",
+      "input": "9\nQ\nHXTFOMX\nGY\nMQSZJ\nICLIGXD\nBSABV\nEYLRC\nXNTYDCDY\nGLKOHKCE\nOGQJYBG\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_083",
+      "input": "6\nK\nQDQPA\nVOFUWOI\nHXKADC\nWBHVXHJ\nFA\nKPOAJ\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_084",
+      "input": "3\nFMR\nXLMCNDKN\nHZSH\nNSM\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_085",
+      "input": "3\nCO\nNQNPW\nOBXI\nCI\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_086",
+      "input": "4\nC\nWBRXGFC\nGK\nBUT\nBCG\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_087",
+      "input": "8\nFWR\nXAFNUQX\nHKVRPCG\nRDYKAN\nPIBWOA\nVRAB\nSJDZWXP\nXRM\nRWR\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_088",
+      "input": "2\nLIRKJZZ\nFB\nF\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_089",
+      "input": "8\nHCZFHS\nGNMLKEGO\nFHXUSD\nZUMG\nPQVMTUVU\nTYPILB\nXXOZORZY\nWPZWRU\nGHXR\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_090",
+      "input": "7\nUPEPEZLU\nCUJRWBO\nAAZPS\nCZMP\nTDGW\nU\nNLODUYNX\nPT\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_091",
+      "input": "4\nYOIBZSMM\nFIC\nWXP\nMFP\nIFX\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_092",
+      "input": "1\nDLWB\nB\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_093",
+      "input": "2\nQH\nOKO\nQ\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_094",
+      "input": "8\nWCTJYF\nFCFF\nPRATWL\nNZGDG\nIC\nZMLOLSCH\nVQ\nPTEUXB\nTGLXZVIF\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_095",
+      "input": "4\nBW\nVKFAVY\nFK\nXLH\nLKB\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_096",
+      "input": "2\nFCO\nQXVNPZVH\nN\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_097",
+      "input": "5\nQ\nHDGV\nREWCPET\nXEBA\nTURACK\nRDE\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_098",
+      "input": "9\nHBCWYUHP\nHKOOZ\nQBCFZLGF\nGZFDD\nS\nCLY\nHWEUFXKS\nIASR\nMJ\nMCGCUIZ\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_099",
+      "input": "2\nH\nCVGEOU\nHO\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_100",
+      "input": "10\nZLPXR\nYYRI\nWWYH\nHJXFCGHF\nJGPD\nGGUWHX\nC\nS\nHKOSZH\nV\nIVSGCZKCD\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_101",
+      "input": "3\nJIYVO\nJGZN\nM\nM\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_102",
+      "input": "2\nONN\nWYP\nWN\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_103",
+      "input": "6\nOSSX\nFRQCXNO\nPLI\nPLOJJ\nL\nXOK\nFL\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_104",
+      "input": "3\nJI\nNAVJJOWP\nYVBGCFMM\nPCJ\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_105",
+      "input": "9\nJGDRRBU\nCWA\nILYHQGMZ\nW\nHDTX\nUFYW\nWHDXCQWY\nOKXOKLGS\nEHFZW\nWIFHA\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_106",
+      "input": "3\nYKSHIBXY\nPNIG\nTKDCGOA\nKHG\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_107",
+      "input": "2\nXTBPO\nDSGNIQC\nI\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_108",
+      "input": "5\nAHBQQUJG\nWYCN\nKNQP\nKKUJHHB\nJ\nC\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_109",
+      "input": "9\nQSLXQIN\nZIS\nV\nAEXZD\nDZALYPUF\nTZPDXAG\nLA\nXTKYFHF\nPLWMG\nXXGKVZ\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_110",
+      "input": "7\nY\nCMNKIHUR\nMLGNBUV\nQX\nBUQZYU\nNELN\nMLHXRBV\nYRG\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_111",
+      "input": "5\nQNOL\nZSAOV\nFFFT\nZJDLQN\nXFHYQUG\nZ\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_112",
+      "input": "7\nF\nF\nFXVECXZA\nEVILW\nPLGV\nQCQWYX\nAIPIZ\nFGZXFX\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_113",
+      "input": "5\nLKP\nCBDIDDZ\nH\nITSCNFM\nYYXT\nHIDLT\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_114",
+      "input": "3\nFIYKEIBR\nUUVE\nMYC\nC\n",
+      "output": "1"
+    },
+    {
+      "name": "random_true_115",
+      "input": "2\nQG\nMAQ\nQQ\n",
+      "output": "1"
+    },
+    {
+      "name": "random_false_116",
+      "input": "7\nUSJUM\nHLWWYUXP\nEMT\nOYZAYOY\nPX\nQESGYNN\nHCRETPT\nXMFPAQNZQC\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_117",
+      "input": "8\nOVSIX\nX\nWXYEBKY\nWAE\nQXY\nLUAEYLNR\nKZAMD\nBUUCTMI\nG\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_118",
+      "input": "7\nATDLGPH\nF\nHAMAVG\nOVCYBFIN\nHIV\nS\nOPMYK\nJ\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_119",
+      "input": "7\nO\nR\nSBJRAPYF\nSJH\nUJLG\nR\nLKOJW\nCJCDKIZDMO\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_120",
+      "input": "5\nASQOJNOK\nYLCM\nBWF\nYGLDFIDQ\nZIMLQFMM\nMRRDKAOBB\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_121",
+      "input": "2\nICKMBZAX\nZS\nJQQVGU\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_122",
+      "input": "6\nB\nFJ\nHOUDQTI\nT\nUK\nCA\nE\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_123",
+      "input": "1\nPBKRAXW\nODC\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_124",
+      "input": "1\nWZGXLL\nPO\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_125",
+      "input": "7\nSWJVHNO\nOMGEWAUV\nZR\nURYWOW\nEO\nXCGGZW\nWJUEQ\nB\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_126",
+      "input": "5\nTGRAYER\nF\nWTANRZH\nOP\nGOMT\nD\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_127",
+      "input": "6\nNX\nL\nRYOK\nZDJLBMSN\nOBJORJ\nDI\nABOFQFS\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_128",
+      "input": "9\nUCWBHZ\nJNEI\nCTH\nLC\nGNYKZ\nXRJ\nO\nACYXPWL\nX\nQ\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_129",
+      "input": "3\nIYVEOSKJ\nNFDDPEE\nTYOKVWF\nG\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_130",
+      "input": "5\nUEAAJC\nPVP\nOLEH\nK\nBL\nXAAFNY\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_131",
+      "input": "7\nCPHD\nHZ\nCLRYNST\nULKSBET\nHYLI\nB\nI\nG\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_132",
+      "input": "3\nHKRMNGMG\nBWRHK\nBKL\nMDDZTLI\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_133",
+      "input": "4\nFACMCFN\nWCOWUF\nVUBTTP\nVZCUMR\nD\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_134",
+      "input": "4\nZ\nVPWYWUJ\nNSK\nTFNOHUHY\nA\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_135",
+      "input": "8\nTG\nGKVS\nT\nEI\nEFM\nKMIHST\nTTPXLUZ\nJWQX\nWIUZJQTWPS\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_136",
+      "input": "2\nOMTHKMBF\nCBENOVYN\nXYCRFX\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_137",
+      "input": "5\nMUH\nJO\nZERWWIE\nYXKQWIY\nQV\nXBVBRL\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_138",
+      "input": "9\nINTOEJB\nDXECSJT\nWDGOIE\nQIE\nPL\nZYAWY\nDKUSMD\nSVUQPS\nHVQSWXMQ\nCOPGADKISJIR\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_139",
+      "input": "10\nPM\nNPI\nWIIX\nGXJI\nFTSIRGAR\nOVSLZMK\nA\nKDGEZSU\nBXOIXVNK\nXIZQHPZQ\nNFUJKKXQPUJ\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_140",
+      "input": "1\nLN\nA\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_141",
+      "input": "3\nZY\nRRPO\nZTLKOETH\nA\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_142",
+      "input": "8\nPS\nZBCUGVM\nCHAWG\nCZSLRFNN\nGFZIFVP\nDLLI\nZHZERRTW\nMNO\nJ\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_143",
+      "input": "3\nUD\nAIEDD\nYASJNQJY\nBNUKRD\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_144",
+      "input": "10\nH\nSXDT\nNHJZ\nRIGX\nVHVR\nZNCP\nXHIESQ\nJU\nNESAPDY\nYF\nB\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_145",
+      "input": "5\nZQXPUSO\nNABXXQG\nJNB\nAVTDGYSU\nDUND\nM\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_146",
+      "input": "5\nDLESSB\nTVQPLZM\nSKNIUP\nSBZPRUOC\nGEHXD\nGGKDHL\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_147",
+      "input": "9\nCDJMAA\nCMWQP\nTATS\nGXYFE\nL\nWF\nZID\nQU\nVEGQYY\nN\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_148",
+      "input": "7\nU\nDTDLAD\nAKAX\nTPQYUI\nNANWKB\nDLSIYLSW\nN\nR\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_149",
+      "input": "5\nCJ\nQMU\nRXQD\nKLACRFDN\nFFUXQL\nB\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_150",
+      "input": "8\nIMEVN\nHTNXYDX\nDDP\nXG\nBHRNFFV\nUNFIPVN\nOQN\nCADW\nL\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_151",
+      "input": "10\nGTHYMRV\nIND\nJ\nKNHA\nYSOW\nSSQUFQOD\nP\nSMZFQN\nWDKIWINB\nSMVWBDI\nC\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_152",
+      "input": "9\nNCEWK\nVJTUKYEV\nKIFVEN\nNJ\nZRJXB\nMPIT\nX\nEMWE\nLKGRPCKF\nDIWVVPFKKRT\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_153",
+      "input": "9\nSGI\nTHC\nVQTKI\nBBTG\nMWFJRU\nEPLD\nJ\nOQ\nDEFZNUC\nA\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_154",
+      "input": "3\nLNYUN\nBV\nSEMKNW\nX\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_155",
+      "input": "9\nI\nTXMUW\nXRU\nTYPOBYM\nYTRTOATY\nUZTDSW\nFMZZ\nXHTIHFSN\nB\nC\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_156",
+      "input": "9\nZAELS\nMNKPHWU\nYAT\nDVJWBTVA\nMEXSGAVU\nXWNJH\nOIB\nCINUZRIO\nISA\nF\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_157",
+      "input": "7\nM\nCVG\nXG\nVTMDIDT\nMLMKSQBA\nXZ\nPZWBN\nE\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_158",
+      "input": "5\nVWAPF\nZDXJGC\nXI\nDREDE\nTF\nB\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_159",
+      "input": "6\nGDI\nV\nYWT\nSP\nY\nQWACWAQV\nE\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_160",
+      "input": "2\nIQKEZGEN\nIC\nA\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_161",
+      "input": "3\nVM\nLJRIRTS\nCWYUKRCB\nA\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_162",
+      "input": "10\nNHC\nVP\nZWJICSG\nACA\nBRHWLD\nTJLGJ\nFXQWJCH\nILTY\nNLEDPEA\nMVHQ\nU\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_163",
+      "input": "10\nSARNI\nRDSUYEWJ\nK\nYNKZARU\nZPTMXT\nQ\nEEDJ\nVSQKMD\nZTSJ\nVOGWBHWG\nL\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_164",
+      "input": "6\nOOHRPLY\nUAGFJYA\nFFXKDJQ\nBPKZCZ\nXQN\nDKXLUP\nE\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_165",
+      "input": "1\nTZ\nJ\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_166",
+      "input": "8\nABHWBZD\nMG\nKHF\nUJSHTG\nXTTOBQ\nDEU\nXUMO\nXRXWXQFA\nDFCDNIPBEZV\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_167",
+      "input": "1\nODJVIVVK\nM\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_168",
+      "input": "2\nUXUDAXK\nQMVUSZU\nDCKIF\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_169",
+      "input": "9\nK\nWOYXR\nPWZQKK\nCSGXFP\nXEZRBJX\nRPYHGJU\nNX\nWCYOKM\nGQANQM\nD\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_170",
+      "input": "4\nNUVIOW\nMTYYWCDH\nAXPDO\nEGJRE\nPHDQX\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_171",
+      "input": "4\nO\nADHR\nA\nUMTTF\nB\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_172",
+      "input": "9\nIL\nT\nA\nSEWPFOXH\nSYRQDDY\nDCCG\nFFISHDHZ\nBHXUCFN\nHRJIVJY\nZPAVSHOYWTTEZ\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_173",
+      "input": "1\nIRDB\nYMU\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_174",
+      "input": "8\nTMAUYB\nNIYXMV\nDEGTPZ\nWZVOMH\nAORGE\nAS\nX\nJIAKA\nF\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_175",
+      "input": "10\nLW\nX\nQNAA\nOCSAZH\nCWCJ\nZ\nIKYZB\nJ\nV\nATOZJU\nG\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_176",
+      "input": "7\nPFZAPSIA\nBPFH\nWOJYVI\nK\nJ\nPAQJTNX\nIJC\nG\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_177",
+      "input": "8\nJ\nWZI\nOLUEXKJF\nACGJ\nSCH\nKJGRTWYO\nCVTAWQNZ\nHKE\nQGXQPOBWTDRH\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_178",
+      "input": "8\nLMWKEQH\nOXV\nTAHI\nYXPG\nJIYZ\nPTSAN\nXZLSULKD\nLMEEEX\nSXNJUJZSAE\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_179",
+      "input": "3\nMASJBL\nQFPE\nQDLTM\nG\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_180",
+      "input": "10\nLLBRW\nJJRJP\nJHPM\nUMXIYYY\nKTQAI\nMCZMKKC\nSQ\nO\nXSF\nJM\nICEIXQPJSBJZ\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_181",
+      "input": "10\nYKKZ\nTD\nWWLKO\nHLN\nULZKA\nSU\nTBW\nUSSICJ\nXI\nZCNKO\nG\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_182",
+      "input": "3\nDHRQ\nXKSBSPUG\nPDGVA\nO\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_183",
+      "input": "3\nNCRCJ\nUI\nZPBFOFS\nX\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_184",
+      "input": "5\nSLA\nH\nBDI\nYYPVUL\nFILIUSMG\nCAFEKFJIA\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_185",
+      "input": "8\nUQNBNLL\nZQHEL\nMAVOXZY\nWCUFO\nUVCNHWWR\nDOHLTW\nAR\nN\nDYHBHKTFM\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_186",
+      "input": "10\nXERZFIZ\nIYX\nGUAPUS\nMIDTPWPD\nL\nFNWIOZNK\nUHRZVI\nEVRP\nNUE\nPJGGFD\nQ\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_187",
+      "input": "6\nYEWB\nXSYHV\nPFIYQ\nBE\nIY\nHD\nR\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_188",
+      "input": "7\nN\nNK\nRMRWCCH\nZMGB\nHYEGIHKW\nJLODIFY\nHCMH\nV\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_189",
+      "input": "2\nDOKILBLZ\nOTMY\nA\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_190",
+      "input": "1\nHAHJ\nCUTB\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_191",
+      "input": "5\nFWQTYOR\nON\nGDHEG\nMOBARCBP\nNJB\nZ\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_192",
+      "input": "5\nZUTZ\nQMLNHCLE\nP\nBLZEIYVE\nN\nO\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_193",
+      "input": "7\nBRGYQ\nUMOLT\nZUED\nHCCQECC\nZWDZWUH\nIQOJJE\nZXGPELH\nCSWMIYYZJ\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_194",
+      "input": "3\nFT\nILERI\nOPMUFPE\nARAHICS\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_195",
+      "input": "5\nZVQZ\nWDBGC\nNPCJ\nPX\nYWNS\nA\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_196",
+      "input": "4\nHKT\nYHNO\nDYAU\nMTAONLC\nGSQKGB\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_197",
+      "input": "4\nZJOPAMF\nMKM\nCZAY\nMJSTAZA\nFZYVA\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_198",
+      "input": "7\nVXAL\nPQUMSUVI\nNDOXLT\nRQVHDK\nHGQMSB\nOKAANB\nCSJBAERU\nUBGFQFCSW\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_199",
+      "input": "2\nRQTYE\nMQEREART\nKUNRT\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_200",
+      "input": "8\nEAAS\nHRZIDNTR\nQEYMWJI\nMJXDZOX\nY\nNWQYYEP\nPM\nJYSII\nB\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_201",
+      "input": "1\nPQWAP\nM\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_202",
+      "input": "10\nADG\nDUXPTVVK\nCWJVKTEZ\nKCOQ\nADLJG\nNIRVBLUW\nTE\nJUNOQ\nPRP\nBQGSOXWQ\nY\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_203",
+      "input": "4\nGQS\nOF\nBCAUUKSO\nVZMB\nZWOUME\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_204",
+      "input": "1\nOBFAK\nJ\n",
+      "output": "0"
+    },
+    {
+      "name": "random_false_205",
+      "input": "1\nPRE\nO\n",
+      "output": "0"
+    }
+  ]
+}

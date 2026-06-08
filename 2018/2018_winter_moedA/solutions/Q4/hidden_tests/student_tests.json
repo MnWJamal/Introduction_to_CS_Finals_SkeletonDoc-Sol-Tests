@@ -1,0 +1,854 @@
+{
+  "tests": [
+    {
+      "name": "edge_n0_empty",
+      "input": "0\n",
+      "output": "0 1"
+    },
+    {
+      "name": "edge_n1_n",
+      "input": "1\nN\n",
+      "output": "0 1"
+    },
+    {
+      "name": "edge_n1_s",
+      "input": "1\nS\n",
+      "output": "0 1"
+    },
+    {
+      "name": "edge_n2_nn",
+      "input": "2\nN N\n",
+      "output": "1 1"
+    },
+    {
+      "name": "edge_n2_ss",
+      "input": "2\nS S\n",
+      "output": "1 1"
+    },
+    {
+      "name": "edge_n2_ns_no_bridge",
+      "input": "2\nN S\n",
+      "output": "0 1"
+    },
+    {
+      "name": "edge_n2_sn_no_bridge",
+      "input": "2\nS N\n",
+      "output": "0 1"
+    },
+    {
+      "name": "example_six_roads",
+      "input": "6\nN S S N N N\n",
+      "output": "3 1"
+    },
+    {
+      "name": "example_five_roads",
+      "input": "5\nN S S N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "example_alt_five_roads",
+      "input": "5\nN N S S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "edge_all_n_3",
+      "input": "3\nN N N\n",
+      "output": "1 1"
+    },
+    {
+      "name": "edge_all_s_3",
+      "input": "3\nS S S\n",
+      "output": "1 1"
+    },
+    {
+      "name": "edge_all_n_4",
+      "input": "4\nN N N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "edge_all_s_4",
+      "input": "4\nS S S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "edge_alternating_4_nsns",
+      "input": "4\nN S N S\n",
+      "output": "1 1"
+    },
+    {
+      "name": "edge_alternating_4_snsn",
+      "input": "4\nS N S N\n",
+      "output": "1 1"
+    },
+    {
+      "name": "edge_alternating_6",
+      "input": "6\nN S N S N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "edge_nested_possible",
+      "input": "4\nN S S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "edge_crossing_trap",
+      "input": "4\nN S N S\n",
+      "output": "1 1"
+    },
+    {
+      "name": "edge_two_blocks",
+      "input": "6\nN N N S S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "edge_three_blocks",
+      "input": "6\nN N S S N N\n",
+      "output": "3 1"
+    },
+    {
+      "name": "edge_palindrome",
+      "input": "6\nN S S N S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "edge_one_side_many",
+      "input": "6\nN N N N N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "edge_balanced_blocks",
+      "input": "8\nN N S S S S N N\n",
+      "output": "4 1"
+    },
+    {
+      "name": "exhaustive_n3_nnn",
+      "input": "3\nN N N\n",
+      "output": "1 1"
+    },
+    {
+      "name": "exhaustive_n3_nns",
+      "input": "3\nN N S\n",
+      "output": "1 1"
+    },
+    {
+      "name": "exhaustive_n3_nsn",
+      "input": "3\nN S N\n",
+      "output": "1 1"
+    },
+    {
+      "name": "exhaustive_n3_nss",
+      "input": "3\nN S S\n",
+      "output": "1 1"
+    },
+    {
+      "name": "exhaustive_n3_snn",
+      "input": "3\nS N N\n",
+      "output": "1 1"
+    },
+    {
+      "name": "exhaustive_n3_sns",
+      "input": "3\nS N S\n",
+      "output": "1 1"
+    },
+    {
+      "name": "exhaustive_n3_ssn",
+      "input": "3\nS S N\n",
+      "output": "1 1"
+    },
+    {
+      "name": "exhaustive_n3_sss",
+      "input": "3\nS S S\n",
+      "output": "1 1"
+    },
+    {
+      "name": "exhaustive_n4_nnnn",
+      "input": "4\nN N N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n4_nnns",
+      "input": "4\nN N N S\n",
+      "output": "1 1"
+    },
+    {
+      "name": "exhaustive_n4_nnsn",
+      "input": "4\nN N S N\n",
+      "output": "1 1"
+    },
+    {
+      "name": "exhaustive_n4_nnss",
+      "input": "4\nN N S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n4_nsnn",
+      "input": "4\nN S N N\n",
+      "output": "1 1"
+    },
+    {
+      "name": "exhaustive_n4_nsns",
+      "input": "4\nN S N S\n",
+      "output": "1 1"
+    },
+    {
+      "name": "exhaustive_n4_nssn",
+      "input": "4\nN S S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n4_nsss",
+      "input": "4\nN S S S\n",
+      "output": "1 1"
+    },
+    {
+      "name": "exhaustive_n4_snnn",
+      "input": "4\nS N N N\n",
+      "output": "1 1"
+    },
+    {
+      "name": "exhaustive_n4_snns",
+      "input": "4\nS N N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n4_snsn",
+      "input": "4\nS N S N\n",
+      "output": "1 1"
+    },
+    {
+      "name": "exhaustive_n4_snss",
+      "input": "4\nS N S S\n",
+      "output": "1 1"
+    },
+    {
+      "name": "exhaustive_n4_ssnn",
+      "input": "4\nS S N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n4_ssns",
+      "input": "4\nS S N S\n",
+      "output": "1 1"
+    },
+    {
+      "name": "exhaustive_n4_sssn",
+      "input": "4\nS S S N\n",
+      "output": "1 1"
+    },
+    {
+      "name": "exhaustive_n4_ssss",
+      "input": "4\nS S S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_nnnnn",
+      "input": "5\nN N N N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_nnnns",
+      "input": "5\nN N N N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_nnnsn",
+      "input": "5\nN N N S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_nnnss",
+      "input": "5\nN N N S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_nnsnn",
+      "input": "5\nN N S N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_nnsns",
+      "input": "5\nN N S N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_nnssn",
+      "input": "5\nN N S S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_nnsss",
+      "input": "5\nN N S S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_nsnnn",
+      "input": "5\nN S N N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_nsnns",
+      "input": "5\nN S N N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_nsnsn",
+      "input": "5\nN S N S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_nsnss",
+      "input": "5\nN S N S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_nssnn",
+      "input": "5\nN S S N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_nssns",
+      "input": "5\nN S S N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_nsssn",
+      "input": "5\nN S S S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_nssss",
+      "input": "5\nN S S S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_snnnn",
+      "input": "5\nS N N N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_snnns",
+      "input": "5\nS N N N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_snnsn",
+      "input": "5\nS N N S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_snnss",
+      "input": "5\nS N N S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_snsnn",
+      "input": "5\nS N S N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_snsns",
+      "input": "5\nS N S N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_snssn",
+      "input": "5\nS N S S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_snsss",
+      "input": "5\nS N S S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_ssnnn",
+      "input": "5\nS S N N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_ssnns",
+      "input": "5\nS S N N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_ssnsn",
+      "input": "5\nS S N S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_ssnss",
+      "input": "5\nS S N S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_sssnn",
+      "input": "5\nS S S N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_sssns",
+      "input": "5\nS S S N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_ssssn",
+      "input": "5\nS S S S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n5_sssss",
+      "input": "5\nS S S S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_nnnnnn",
+      "input": "6\nN N N N N N\n",
+      "output": "3 1"
+    },
+    {
+      "name": "exhaustive_n6_nnnnns",
+      "input": "6\nN N N N N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_nnnnsn",
+      "input": "6\nN N N N S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_nnnnss",
+      "input": "6\nN N N N S S\n",
+      "output": "3 1"
+    },
+    {
+      "name": "exhaustive_n6_nnnsnn",
+      "input": "6\nN N N S N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_nnnsns",
+      "input": "6\nN N N S N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_nnnssn",
+      "input": "6\nN N N S S N\n",
+      "output": "3 1"
+    },
+    {
+      "name": "exhaustive_n6_nnnsss",
+      "input": "6\nN N N S S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_nnsnnn",
+      "input": "6\nN N S N N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_nnsnns",
+      "input": "6\nN N S N N S\n",
+      "output": "3 1"
+    },
+    {
+      "name": "exhaustive_n6_nnsnsn",
+      "input": "6\nN N S N S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_nnsnss",
+      "input": "6\nN N S N S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_nnssnn",
+      "input": "6\nN N S S N N\n",
+      "output": "3 1"
+    },
+    {
+      "name": "exhaustive_n6_nnssns",
+      "input": "6\nN N S S N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_nnsssn",
+      "input": "6\nN N S S S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_nnssss",
+      "input": "6\nN N S S S S\n",
+      "output": "3 1"
+    },
+    {
+      "name": "exhaustive_n6_nsnnnn",
+      "input": "6\nN S N N N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_nsnnns",
+      "input": "6\nN S N N N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_nsnnsn",
+      "input": "6\nN S N N S N\n",
+      "output": "3 1"
+    },
+    {
+      "name": "exhaustive_n6_nsnnss",
+      "input": "6\nN S N N S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_nsnsnn",
+      "input": "6\nN S N S N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_nsnsns",
+      "input": "6\nN S N S N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_nsnssn",
+      "input": "6\nN S N S S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_nsnsss",
+      "input": "6\nN S N S S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_nssnnn",
+      "input": "6\nN S S N N N\n",
+      "output": "3 1"
+    },
+    {
+      "name": "exhaustive_n6_nssnns",
+      "input": "6\nN S S N N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_nssnsn",
+      "input": "6\nN S S N S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_nssnss",
+      "input": "6\nN S S N S S\n",
+      "output": "3 1"
+    },
+    {
+      "name": "exhaustive_n6_nsssnn",
+      "input": "6\nN S S S N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_nsssns",
+      "input": "6\nN S S S N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_nssssn",
+      "input": "6\nN S S S S N\n",
+      "output": "3 1"
+    },
+    {
+      "name": "exhaustive_n6_nsssss",
+      "input": "6\nN S S S S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_snnnnn",
+      "input": "6\nS N N N N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_snnnns",
+      "input": "6\nS N N N N S\n",
+      "output": "3 1"
+    },
+    {
+      "name": "exhaustive_n6_snnnsn",
+      "input": "6\nS N N N S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_snnnss",
+      "input": "6\nS N N N S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_snnsnn",
+      "input": "6\nS N N S N N\n",
+      "output": "3 1"
+    },
+    {
+      "name": "exhaustive_n6_snnsns",
+      "input": "6\nS N N S N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_snnssn",
+      "input": "6\nS N N S S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_snnsss",
+      "input": "6\nS N N S S S\n",
+      "output": "3 1"
+    },
+    {
+      "name": "exhaustive_n6_snsnnn",
+      "input": "6\nS N S N N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_snsnns",
+      "input": "6\nS N S N N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_snsnsn",
+      "input": "6\nS N S N S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_snsnss",
+      "input": "6\nS N S N S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_snssnn",
+      "input": "6\nS N S S N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_snssns",
+      "input": "6\nS N S S N S\n",
+      "output": "3 1"
+    },
+    {
+      "name": "exhaustive_n6_snsssn",
+      "input": "6\nS N S S S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_snssss",
+      "input": "6\nS N S S S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_ssnnnn",
+      "input": "6\nS S N N N N\n",
+      "output": "3 1"
+    },
+    {
+      "name": "exhaustive_n6_ssnnns",
+      "input": "6\nS S N N N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_ssnnsn",
+      "input": "6\nS S N N S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_ssnnss",
+      "input": "6\nS S N N S S\n",
+      "output": "3 1"
+    },
+    {
+      "name": "exhaustive_n6_ssnsnn",
+      "input": "6\nS S N S N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_ssnsns",
+      "input": "6\nS S N S N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_ssnssn",
+      "input": "6\nS S N S S N\n",
+      "output": "3 1"
+    },
+    {
+      "name": "exhaustive_n6_ssnsss",
+      "input": "6\nS S N S S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_sssnnn",
+      "input": "6\nS S S N N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_sssnns",
+      "input": "6\nS S S N N S\n",
+      "output": "3 1"
+    },
+    {
+      "name": "exhaustive_n6_sssnsn",
+      "input": "6\nS S S N S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_sssnss",
+      "input": "6\nS S S N S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_ssssnn",
+      "input": "6\nS S S S N N\n",
+      "output": "3 1"
+    },
+    {
+      "name": "exhaustive_n6_ssssns",
+      "input": "6\nS S S S N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_sssssn",
+      "input": "6\nS S S S S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "exhaustive_n6_ssssss",
+      "input": "6\nS S S S S S\n",
+      "output": "3 1"
+    },
+    {
+      "name": "random_1_n9_nnsnsnnns",
+      "input": "9\nN N S N S N N N S\n",
+      "output": "4 1"
+    },
+    {
+      "name": "random_2_n4_ssss",
+      "input": "4\nS S S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "random_3_n4_nnnn",
+      "input": "4\nN N N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "random_4_n5_nssss",
+      "input": "5\nN S S S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "random_5_n10_nsnsnsnsns",
+      "input": "10\nN S N S N S N S N S\n",
+      "output": "4 1"
+    },
+    {
+      "name": "random_6_n10_ssnsnnsnsn",
+      "input": "10\nS S N S N N S N S N\n",
+      "output": "4 1"
+    },
+    {
+      "name": "random_7_n9_nnsnnnsnn",
+      "input": "9\nN N S N N N S N N\n",
+      "output": "4 1"
+    },
+    {
+      "name": "random_8_n11_sssssssssss",
+      "input": "11\nS S S S S S S S S S S\n",
+      "output": "5 1"
+    },
+    {
+      "name": "random_9_n12_sssnsssnnnss",
+      "input": "12\nS S S N S S S N N N S S\n",
+      "output": "5 1"
+    },
+    {
+      "name": "random_10_n2_sn",
+      "input": "2\nS N\n",
+      "output": "0 1"
+    },
+    {
+      "name": "random_11_n4_ssss",
+      "input": "4\nS S S S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "random_12_n2_ss",
+      "input": "2\nS S\n",
+      "output": "1 1"
+    },
+    {
+      "name": "random_13_n9_ssssnssss",
+      "input": "9\nS S S S N S S S S\n",
+      "output": "4 1"
+    },
+    {
+      "name": "random_14_n10_nsssnnsssn",
+      "input": "10\nN S S S N N S S S N\n",
+      "output": "5 1"
+    },
+    {
+      "name": "random_15_n2_ss",
+      "input": "2\nS S\n",
+      "output": "1 1"
+    },
+    {
+      "name": "random_16_n8_nnnnnnnn",
+      "input": "8\nN N N N N N N N\n",
+      "output": "4 1"
+    },
+    {
+      "name": "random_17_n6_snsnsn",
+      "input": "6\nS N S N S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "random_18_n5_ssnns",
+      "input": "5\nS S N N S\n",
+      "output": "2 1"
+    },
+    {
+      "name": "random_19_n9_snsnsnsns",
+      "input": "9\nS N S N S N S N S\n",
+      "output": "4 1"
+    },
+    {
+      "name": "random_20_n4_nssn",
+      "input": "4\nN S S N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "random_21_n6_nnnnnn",
+      "input": "6\nN N N N N N\n",
+      "output": "3 1"
+    },
+    {
+      "name": "random_22_n5_nnnnn",
+      "input": "5\nN N N N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "random_23_n2_sn",
+      "input": "2\nS N\n",
+      "output": "0 1"
+    },
+    {
+      "name": "random_24_n3_nnn",
+      "input": "3\nN N N\n",
+      "output": "1 1"
+    },
+    {
+      "name": "random_25_n8_nsnsnsns",
+      "input": "8\nN S N S N S N S\n",
+      "output": "3 1"
+    },
+    {
+      "name": "random_26_n10_nnnnnnnnnn",
+      "input": "10\nN N N N N N N N N N\n",
+      "output": "5 1"
+    }
+  ]
+}

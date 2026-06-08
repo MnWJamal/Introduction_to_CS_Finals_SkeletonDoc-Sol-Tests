@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "sample_full_returns_5",
+      "input": "9 10\n19 19 16 15 15 15 15 13 -2\n0 12 13 14 14 15 15 19 42 57\n",
+      "output": "5"
+    },
+    {
+      "name": "sample_short_b_returns_minus_1",
+      "input": "9 5\n19 19 16 15 15 15 15 13 -2\n0 12 13 14 14\n",
+      "output": "-1"
+    },
+    {
+      "name": "sample_short_a_returns_minus_1",
+      "input": "3 8\n19 19 16\n0 12 13 14 14 15 15 19\n",
+      "output": "-1"
+    }
+  ]
+}

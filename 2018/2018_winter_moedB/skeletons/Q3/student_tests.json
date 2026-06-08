@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "sample_abcaacb",
+      "input": "abcaacb\n",
+      "output": "3"
+    },
+    {
+      "name": "sample_abcdef",
+      "input": "abcdef\n",
+      "output": "6"
+    },
+    {
+      "name": "sample_aaaaaa",
+      "input": "aaaaaa\n",
+      "output": "1"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "example_from_question",
+      "input": "8\n7 1 8 11 4 7 3 2\n",
+      "output": "7 8 4 3 1 11 7 2"
+    },
+    {
+      "name": "small_n2",
+      "input": "2\n5 9\n",
+      "output": "5 9"
+    },
+    {
+      "name": "small_n4_with_duplicates",
+      "input": "4\n2 2 3 3\n",
+      "output": "2 3 2 3"
+    }
+  ]
+}

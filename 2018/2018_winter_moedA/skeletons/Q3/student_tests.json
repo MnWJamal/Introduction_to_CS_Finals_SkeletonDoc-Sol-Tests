@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "visible_1_n8",
+      "input": "8\n5 2 8 1 9 0 3 7\n",
+      "output": "0\n0 1 2 3 5 7 8 9"
+    },
+    {
+      "name": "visible_2_n4",
+      "input": "4\n4 3 2 1\n",
+      "output": "0\n1 2 3 4"
+    },
+    {
+      "name": "visible_3_n8",
+      "input": "8\n2 2 -1 5 5 0 -1 8\n",
+      "output": "0\n-1 -1 0 2 2 5 5 8"
+    }
+  ]
+}

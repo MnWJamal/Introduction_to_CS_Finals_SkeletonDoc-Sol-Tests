@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "exam_six_roads",
+      "input": "6\nN S S N N N\n",
+      "output": "3 1"
+    },
+    {
+      "name": "exam_five_roads",
+      "input": "5\nN S S N N\n",
+      "output": "2 1"
+    },
+    {
+      "name": "visible_no_bridge",
+      "input": "2\nN S\n",
+      "output": "0 1"
+    }
+  ]
+}

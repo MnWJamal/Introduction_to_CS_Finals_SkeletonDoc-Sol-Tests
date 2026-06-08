@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "sample_1",
+      "input": "8509\n",
+      "output": "1"
+    },
+    {
+      "name": "sample_2",
+      "input": "6\n",
+      "output": "1"
+    },
+    {
+      "name": "sample_3",
+      "input": "1000730021\n",
+      "output": "1"
+    },
+    {
+      "name": "sample_4",
+      "input": "49\n",
+      "output": "1"
+    }
+  ]
+}

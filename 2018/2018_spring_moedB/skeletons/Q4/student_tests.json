@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "example_n3_possible",
+      "input": "3 1\n",
+      "output": "1"
+    },
+    {
+      "name": "example_n4_possible",
+      "input": "4 1\n",
+      "output": "1"
+    },
+    {
+      "name": "example_n2_impossible",
+      "input": "2 0\n",
+      "output": "1"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "sample_bone_true",
+      "input": "4\nABC\nAEI\nEOU\nLNRST\nBONE\n",
+      "output": "1"
+    },
+    {
+      "name": "sample_bat_true",
+      "input": "4\nABC\nAEI\nEOU\nLNRST\nBAT\n",
+      "output": "1"
+    },
+    {
+      "name": "sample_cat_true",
+      "input": "4\nABC\nAEI\nEOU\nLNRST\nCAT\n",
+      "output": "1"
+    },
+    {
+      "name": "sample_bait_false",
+      "input": "4\nABC\nAEI\nEOU\nLNRST\nBAIT\n",
+      "output": "0"
+    }
+  ]
+}

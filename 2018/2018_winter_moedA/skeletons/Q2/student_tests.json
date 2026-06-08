@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "exam_x0_once",
+      "input": "12 0\n-5 0 1 1 3 3 4 4 4 7 13 42\n",
+      "output": "1"
+    },
+    {
+      "name": "exam_x4_three_times",
+      "input": "12 4\n-5 0 1 1 3 3 4 4 4 7 13 42\n",
+      "output": "3"
+    },
+    {
+      "name": "exam_x8_absent",
+      "input": "12 8\n-5 0 1 1 3 3 4 4 4 7 13 42\n",
+      "output": "0"
+    }
+  ]
+}

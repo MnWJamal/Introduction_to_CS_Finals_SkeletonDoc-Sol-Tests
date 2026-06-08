@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "example_first_unique_z",
+      "input": "blazqnqbla\n",
+      "output": "z"
+    },
+    {
+      "name": "example_no_unique",
+      "input": "$$nanana\n",
+      "output": "\\0"
+    },
+    {
+      "name": "single_char",
+      "input": "a\n",
+      "output": "a"
+    }
+  ]
+}

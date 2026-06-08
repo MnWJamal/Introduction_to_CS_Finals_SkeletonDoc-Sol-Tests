@@ -1,0 +1,1029 @@
+{
+  "tests": [
+    {
+      "name": "mode1_001",
+      "input": "1\na\n",
+      "output": "97"
+    },
+    {
+      "name": "mode1_002",
+      "input": "1\naaaa\n",
+      "output": "97"
+    },
+    {
+      "name": "mode1_003",
+      "input": "1\nabcdd\n",
+      "output": "100"
+    },
+    {
+      "name": "mode1_004",
+      "input": "1\ndeadbeef\n",
+      "output": "101"
+    },
+    {
+      "name": "mode1_005",
+      "input": "1\nzzzzzyx\n",
+      "output": "122"
+    },
+    {
+      "name": "mode1_006",
+      "input": "1\n     a\n",
+      "output": "32"
+    },
+    {
+      "name": "mode1_007",
+      "input": "1\n!!!!??!\n",
+      "output": "33"
+    },
+    {
+      "name": "mode1_008",
+      "input": "1\n123331\n",
+      "output": "51"
+    },
+    {
+      "name": "mode1_009",
+      "input": "1\nmatata hakuna\n",
+      "output": "97"
+    },
+    {
+      "name": "mode1_010",
+      "input": "1\nhello world\n",
+      "output": "108"
+    },
+    {
+      "name": "mode1_011",
+      "input": "1\ntechnion\n",
+      "output": "110"
+    },
+    {
+      "name": "mode1_012",
+      "input": "1\ndata structures\n",
+      "output": "116"
+    },
+    {
+      "name": "mode1_013",
+      "input": "1\nthe quick brown fox\n",
+      "output": "32"
+    },
+    {
+      "name": "mode1_014",
+      "input": "1\nxyzzzzzz\n",
+      "output": "122"
+    },
+    {
+      "name": "mode1_015",
+      "input": "1\nabababac\n",
+      "output": "97"
+    },
+    {
+      "name": "mode1_016",
+      "input": "1\nlowercaseonlyyyyy\n",
+      "output": "121"
+    },
+    {
+      "name": "mode1_017",
+      "input": "1\ntabs\t\tandtext\n",
+      "output": "116"
+    },
+    {
+      "name": "mode1_018",
+      "input": "1\n0123456789999\n",
+      "output": "57"
+    },
+    {
+      "name": "mode1_019",
+      "input": "1\n%%%%%%%%%abc\n",
+      "output": "37"
+    },
+    {
+      "name": "mode1_020",
+      "input": "1\nunique? nooooo\n",
+      "output": "111"
+    },
+    {
+      "name": "mode1_021",
+      "input": "1\nedgecaseeeee\n",
+      "output": "101"
+    },
+    {
+      "name": "mode1_022",
+      "input": "1\na b c d e f a a\n",
+      "output": "32"
+    },
+    {
+      "name": "mode1_023",
+      "input": "1\nlastcharrrrr\n",
+      "output": "114"
+    },
+    {
+      "name": "mode1_024",
+      "input": "1\nfirstttttchar\n",
+      "output": "116"
+    },
+    {
+      "name": "mode1_025",
+      "input": "1\nmiddlemmmvalue\n",
+      "output": "109"
+    },
+    {
+      "name": "mode1_026",
+      "input": "1\nmix_underscore____\n",
+      "output": "95"
+    },
+    {
+      "name": "mode1_027",
+      "input": "1\nsemicolon;;;;;\n",
+      "output": "59"
+    },
+    {
+      "name": "mode1_028",
+      "input": "1\nquote''''text\n",
+      "output": "39"
+    },
+    {
+      "name": "mode1_029",
+      "input": "1\nbrackets[[[[abc\n",
+      "output": "91"
+    },
+    {
+      "name": "mode1_030",
+      "input": "1\nright]]]]bracket\n",
+      "output": "93"
+    },
+    {
+      "name": "mode1_031",
+      "input": "1\nplus+++++minus\n",
+      "output": "43"
+    },
+    {
+      "name": "mode1_032",
+      "input": "1\nhash###tag###\n",
+      "output": "35"
+    },
+    {
+      "name": "mode1_033",
+      "input": "1\nslash/////path\n",
+      "output": "47"
+    },
+    {
+      "name": "mode1_034",
+      "input": "1\ncolon::::value\n",
+      "output": "58"
+    },
+    {
+      "name": "mode1_035",
+      "input": "1\ncomma,,,,end\n",
+      "output": "44"
+    },
+    {
+      "name": "mode1_036",
+      "input": "1\ndot....dot.\n",
+      "output": "46"
+    },
+    {
+      "name": "mode1_037",
+      "input": "1\ntilde~~~~~\n",
+      "output": "126"
+    },
+    {
+      "name": "mode1_038",
+      "input": "1\nbacktick`````,\n",
+      "output": "96"
+    },
+    {
+      "name": "mode1_039",
+      "input": "1\none two two two\n",
+      "output": "111"
+    },
+    {
+      "name": "mode1_040",
+      "input": "1\naaaaaaaaabbbbbbbbccccccc\n",
+      "output": "97"
+    },
+    {
+      "name": "mode1_041",
+      "input": "1\nrareletterqqqq\n",
+      "output": "113"
+    },
+    {
+      "name": "mode1_042",
+      "input": "1\nlongppppppppppppppppppppabcde\n",
+      "output": "112"
+    },
+    {
+      "name": "mode1_043",
+      "input": "1\nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnabc\n",
+      "output": "110"
+    },
+    {
+      "name": "mode1_044",
+      "input": "1\nabcyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyz\n",
+      "output": "121"
+    },
+    {
+      "name": "mode1_045",
+      "input": "1\n01234444444444444444444444444\n",
+      "output": "52"
+    },
+    {
+      "name": "mode1_046",
+      "input": "1\nAAAAAAAAAAAAbcdef\n",
+      "output": "65"
+    },
+    {
+      "name": "mode1_047",
+      "input": "1\nlower and UPPER UPPER UPPER\n",
+      "output": "80"
+    },
+    {
+      "name": "mode1_048",
+      "input": "1\nspace at end     \n",
+      "output": "32"
+    },
+    {
+      "name": "mode1_049",
+      "input": "1\n   space at start\n",
+      "output": "32"
+    },
+    {
+      "name": "mode1_050",
+      "input": "1\npunctuation!!!!! yes\n",
+      "output": "33"
+    },
+    {
+      "name": "mode1_051",
+      "input": "1\nrepeat repeat repeat r\n",
+      "output": "101"
+    },
+    {
+      "name": "mode1_052",
+      "input": "1\nmango bananaaaaa\n",
+      "output": "97"
+    },
+    {
+      "name": "mode1_053",
+      "input": "1\nshortssss\n",
+      "output": "115"
+    },
+    {
+      "name": "mode1_054",
+      "input": "1\nccccccccc\n",
+      "output": "99"
+    },
+    {
+      "name": "mode1_055",
+      "input": "1\nxxyyyzzzzzz\n",
+      "output": "122"
+    },
+    {
+      "name": "mode1_056",
+      "input": "1\naabbccdddde\n",
+      "output": "100"
+    },
+    {
+      "name": "mode1_057",
+      "input": "1\nabcdefghijklmnopqrstuvwxyzz\n",
+      "output": "122"
+    },
+    {
+      "name": "mode1_058",
+      "input": "1\nqwertyuiopppp\n",
+      "output": "112"
+    },
+    {
+      "name": "mode1_059",
+      "input": "1\naaaaabbbbcccdde\n",
+      "output": "97"
+    },
+    {
+      "name": "mode1_060",
+      "input": "1\ncccccdddd\n",
+      "output": "99"
+    },
+    {
+      "name": "mode1_061",
+      "input": "1\neeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeabc\n",
+      "output": "101"
+    },
+    {
+      "name": "mode1_062",
+      "input": "1\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\n",
+      "output": "97"
+    },
+    {
+      "name": "mode1_063",
+      "input": "1\n123456789077777777777777777777\n",
+      "output": "55"
+    },
+    {
+      "name": "mode1_064",
+      "input": "1\nhello!!!!!\n",
+      "output": "33"
+    },
+    {
+      "name": "mode1_065",
+      "input": "1\nsingle space  \n",
+      "output": "32"
+    },
+    {
+      "name": "mode1_066",
+      "input": "1\nendswithxxxxxxxxxxx\n",
+      "output": "120"
+    },
+    {
+      "name": "mode1_067",
+      "input": "1\nbeginsbbbbbbbbb\n",
+      "output": "98"
+    },
+    {
+      "name": "mode1_068",
+      "input": "1\ncaseSensitiveSSSSS\n",
+      "output": "83"
+    },
+    {
+      "name": "mode1_069",
+      "input": "1\nall-but-one----------\n",
+      "output": "45"
+    },
+    {
+      "name": "mode1_070",
+      "input": "1\nname_with___underscores\n",
+      "output": "95"
+    },
+    {
+      "name": "mode1_071",
+      "input": "1\npipe|||||char\n",
+      "output": "124"
+    },
+    {
+      "name": "mode1_072",
+      "input": "1\namp&&&&&&ersand\n",
+      "output": "38"
+    },
+    {
+      "name": "mode1_073",
+      "input": "1\nequal======sign\n",
+      "output": "61"
+    },
+    {
+      "name": "mode1_074",
+      "input": "1\nquestion???????\n",
+      "output": "63"
+    },
+    {
+      "name": "mode1_075",
+      "input": "1\nparen((((((\n",
+      "output": "40"
+    },
+    {
+      "name": "mode1_076",
+      "input": "1\nclose))))))\n",
+      "output": "41"
+    },
+    {
+      "name": "mode1_077",
+      "input": "1\nangle<<<<<<<\n",
+      "output": "60"
+    },
+    {
+      "name": "mode1_078",
+      "input": "1\ngreater>>>>>>>\n",
+      "output": "62"
+    },
+    {
+      "name": "mode1_079",
+      "input": "1\nstar*******\n",
+      "output": "42"
+    },
+    {
+      "name": "mode1_080",
+      "input": "1\npercent%%%%%%\n",
+      "output": "37"
+    },
+    {
+      "name": "mode1_081",
+      "input": "1\ndollar$$$$$$\n",
+      "output": "36"
+    },
+    {
+      "name": "mode1_082",
+      "input": "1\nat@@@@@@@\n",
+      "output": "64"
+    },
+    {
+      "name": "mode1_083",
+      "input": "1\ncaret^^^^^^\n",
+      "output": "94"
+    },
+    {
+      "name": "mode1_084",
+      "input": "1\nletterslllllllll\n",
+      "output": "108"
+    },
+    {
+      "name": "mode1_085",
+      "input": "1\nnumeric00000000000\n",
+      "output": "48"
+    },
+    {
+      "name": "mode1_086",
+      "input": "1\nmixedMMMMMMMM\n",
+      "output": "77"
+    },
+    {
+      "name": "mode1_087",
+      "input": "1\nwordoooooo\n",
+      "output": "111"
+    },
+    {
+      "name": "mode1_088",
+      "input": "1\nfinalfffffff\n",
+      "output": "102"
+    },
+    {
+      "name": "mode1_random_089",
+      "input": "1\n0q0::0::0Rq0;:;0;RR;0;Rq;;0:;R;::;0:;0RR:;R0;:;R0R;::qR0:0:00;:0\n",
+      "output": "48"
+    },
+    {
+      "name": "mode1_random_090",
+      "input": "1\n*1g@|m cgMc}!Sd1}fX@!|rD||gN7*iX<D\"1ESN{r\"M)7cre@E)!eQg!{yi}iD@N1X)}c*!7XSD|?)rDX<*eN)QmQN@{DQSNfN7rX{)<i{@deyirr!}rdSgM!Md){cMM)1rm!){1gSe}m}yf)y|r\"}r}M{DfM|}}XNgfM1 QdiDgr M[drdSr!@!)!yS7y![miNcMgDMgmSN71Ny<mrf)DNS*Xm}e@Mg1mm1ymDg@m*<1ce@mM1EfNDM111*E)NegSi1QSN*?ecQ1SDf)}cdg}c{{*@dd!iM!?r\"\"!<Mgg@g@{iQyirri!S)DEc1e)Nrf7XDdcX{)!dc}f<X\n",
+      "output": "114"
+    },
+    {
+      "name": "mode1_random_091",
+      "input": "1\nvSv$1tEo>$tSE1\"BoStSE>DD1D1$tvvSDEvEtBS$Bo>$v>D}$$Dtt1S>S\"SoD>ot\"BB>\"}>o\"{$B>1$DSoB}D$>BQ}otESo>EB{B}DD11$$>>>E\">D$ESoBSSDoBDEo{BEotB}EQ$v\n",
+      "output": "62"
+    },
+    {
+      "name": "mode1_random_092",
+      "input": "1\nQQ~QQQ~QQQQ\n",
+      "output": "81"
+    },
+    {
+      "name": "mode1_random_093",
+      "input": "1\nkk%P0%kP0Pk0P00PP0k%P%0%k%.00PkP%%PP0%kP\n",
+      "output": "80"
+    },
+    {
+      "name": "mode1_random_094",
+      "input": "1\nC7`o`8+on==WC---CCCK7`7u77+KC7-KQWho-nnn+o=Q-=7oK)nuoK=^i8u`;=\n",
+      "output": "55"
+    },
+    {
+      "name": "mode1_random_095",
+      "input": "1\nkE``kFy5&FEENFFFF FH`ENH`F]ETHykFyFNENFNFNT`NypkkNky5y&yk`&E`EN``ENNN]`yFNy`N]E&\n",
+      "output": "78"
+    },
+    {
+      "name": "mode1_random_096",
+      "input": "1\n$$v$+v+d$+$vvv++$?$\n",
+      "output": "36"
+    },
+    {
+      "name": "mode1_random_097",
+      "input": "1\n3BQkIBQ33kW34WBI3xWkBYQ!4Q4Bk~WQ~k!kB!3YY!B?\\B\\QYWYk\\W3kB!I4k4Q!xxQ~!34kIW\\WxIWmBW!!kYImWm~IW!B\\k3m4kW?\\!~km~~\n",
+      "output": "107"
+    },
+    {
+      "name": "mode1_random_098",
+      "input": "1\na+=VW8a+++W+.e^+^Va=^_a>h+W8hJW+W#3>^>=en^3J=o3n>++J>=VeVV^3+8>=nh^b_+Vee83.^8_+3V+e_a=3V>a=>oox=h+an>.V3WbV8\n",
+      "output": "43"
+    },
+    {
+      "name": "mode1_random_099",
+      "input": "1\n,Idr_r3,0)7c-r)r0KdI))_-0_i:0-7i30cH_rI7)I$r0,7K7r-II[$-7-\n",
+      "output": "114"
+    },
+    {
+      "name": "mode1_random_100",
+      "input": "1\n^$d!7]d8~C]+85+*!31K\"'$]5^8`~K^'$dK~`$d~VVC~+8V1'K$3d_h+!`7VHVz38Vz3+*'z!7!]`$''VdK_H557Vd$1$H8!z~$8'd`1^K8]!^!5~++^C*]3`'+!_V^_V'HH8V8+`w5'5z7]\"V^^^~!$H8]5]~HH~whVV$^'^KdV]~!dC\"\"8V\"$'~V+\"]d~H\"d$_+\"*'*~$+]!!+!^8^K5+`1$5\n",
+      "output": "86"
+    },
+    {
+      "name": "mode1_random_101",
+      "input": "1\neeeeeeeeeeeeeeeeee\n",
+      "output": "101"
+    },
+    {
+      "name": "mode1_random_102",
+      "input": "1\nl4L44;L\\  4\\\"\"Z ;L\\\n",
+      "output": "52"
+    },
+    {
+      "name": "mode1_random_103",
+      "input": "1\n|j}?}nF6xFItnG}6A662j|F$+DQr|n>w>nI&DGG&efxADFtFjx}r+AfA+\n",
+      "output": "70"
+    },
+    {
+      "name": "mode1_random_104",
+      "input": "1\nnnn~=.s~..C\\7O2Jx?.=<7?7D`DS?`n{ CxnS Js?`U={J2DSO{nJ@~~9?2UhDn.?s~\\D2nUS=s@7\\s@~ <O97,<sD7D\\S=D,=7J~=\\SDxJ9x2@`S\\9OUJO2 -=LSO?9OU=-J<h<~{xD.2O{-. n`OJ\\\n",
+      "output": "68"
+    },
+    {
+      "name": "mode1_random_105",
+      "input": "1\n'yLy4'Y+_L+499}\"_4_y9B+]_]\"B_/9sLL\"'9}+_y/y4y/B9y4+y/'s994]4yy]Bs+L4_/B9+/'y9B4L_+/BB//L{]+9y'\"+}/4_'L'94+Y4]}'Y']]Bs4L}'sBsyiBy9]]}'B+94sy_'/'+]+/]_y'4''_\n",
+      "output": "39"
+    },
+    {
+      "name": "mode2_106",
+      "input": "2\n3\nhakuna matata\nnnnanana$$\n\n",
+      "output": "[hkun mtt]\n[aaa$$]\n[]"
+    },
+    {
+      "name": "mode2_107",
+      "input": "2\n1\na\n",
+      "output": "[]"
+    },
+    {
+      "name": "mode2_108",
+      "input": "2\n3\naaaaa\nbbbbbc\nccddeeeee\n",
+      "output": "[]\n[c]\n[ccdd]"
+    },
+    {
+      "name": "mode2_109",
+      "input": "2\n3\nabcdd\nzzzzzyx\nhello world\n",
+      "output": "[abc]\n[yx]\n[heo word]"
+    },
+    {
+      "name": "mode2_110",
+      "input": "2\n3\n     a\n!!!!??!\n123331\n",
+      "output": "[a]\n[??]\n[121]"
+    },
+    {
+      "name": "mode2_111",
+      "input": "2\n3\nxyzzzzzz\nabababac\nlowercaseonlyyyyy\n",
+      "output": "[xy]\n[bbbc]\n[lowercaseonl]"
+    },
+    {
+      "name": "mode2_112",
+      "input": "2\n2\ntabs\t\tandtext\n0123456789999\n",
+      "output": "[abs\t\tandex]\n[012345678]"
+    },
+    {
+      "name": "mode2_113",
+      "input": "2\n3\n%%%%%%%%%abc\nedgecaseeeee\nlastcharrrrr\n",
+      "output": "[abc]\n[dgcas]\n[lastcha]"
+    },
+    {
+      "name": "mode2_114",
+      "input": "2\n3\nmix_underscore____\nsemicolon;;;;;\nbrackets[[[[abc\n",
+      "output": "[mixunderscore]\n[semicolon]\n[bracketsabc]"
+    },
+    {
+      "name": "mode2_115",
+      "input": "2\n3\nplus+++++minus\nslash/////path\ncolon::::value\n",
+      "output": "[plusminus]\n[slashpath]\n[colonvalue]"
+    },
+    {
+      "name": "mode2_116",
+      "input": "2\n3\ncomma,,,,end\ntilde~~~~~\none two two two\n",
+      "output": "[commaend]\n[tilde]\n[ne tw tw tw]"
+    },
+    {
+      "name": "mode2_117",
+      "input": "2\n2\naaaaaaaaabbbbbbbbccccccc\nrareletterqqqq\n",
+      "output": "[bbbbbbbbccccccc]\n[rareletter]"
+    },
+    {
+      "name": "mode2_118",
+      "input": "2\n2\nlongppppppppppppppppppppabcde\nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnabc\n",
+      "output": "[longabcde]\n[abc]"
+    },
+    {
+      "name": "mode2_119",
+      "input": "2\n2\nabcyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyz\n01234444444444444444444444444\n",
+      "output": "[abcz]\n[0123]"
+    },
+    {
+      "name": "mode2_120",
+      "input": "2\n2\nAAAAAAAAAAAAbcdef\npunctuation!!!!! yes\n",
+      "output": "[bcdef]\n[punctuation yes]"
+    },
+    {
+      "name": "mode2_121",
+      "input": "2\n2\naabbccdddde\nabcdefghijklmnopqrstuvwxyzz\n",
+      "output": "[aabbcce]\n[abcdefghijklmnopqrstuvwxy]"
+    },
+    {
+      "name": "mode2_122",
+      "input": "2\n2\nqwertyuiopppp\naaaaabbbbcccdde\n",
+      "output": "[qwertyuio]\n[bbbbcccdde]"
+    },
+    {
+      "name": "mode2_123",
+      "input": "2\n2\neeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeabc\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\n",
+      "output": "[abc]\n[bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb]"
+    },
+    {
+      "name": "mode2_124",
+      "input": "2\n3\n123456789077777777777777777777\nendswithxxxxxxxxxxx\ncaseSensitiveSSSSS\n",
+      "output": "[123456890]\n[endswith]\n[caseensitive]"
+    },
+    {
+      "name": "mode2_125",
+      "input": "2\n2\nall-but-one----------\nname_with___underscores\n",
+      "output": "[allbutone]\n[namewithunderscores]"
+    },
+    {
+      "name": "mode2_126",
+      "input": "2\n3\npipe|||||char\namp&&&&&&ersand\nequal======sign\n",
+      "output": "[pipechar]\n[ampersand]\n[equalsign]"
+    },
+    {
+      "name": "mode2_127",
+      "input": "2\n3\nquestion???????\nparen((((((\nclose))))))\n",
+      "output": "[question]\n[paren]\n[close]"
+    },
+    {
+      "name": "mode2_128",
+      "input": "2\n3\nangle<<<<<<<\ngreater>>>>>>>\nstar*******\n",
+      "output": "[angle]\n[greater]\n[star]"
+    },
+    {
+      "name": "mode2_129",
+      "input": "2\n4\npercent%%%%%%\ndollar$$$$$$\nat@@@@@@@\ncaret^^^^^^\n",
+      "output": "[percent]\n[dollar]\n[at]\n[caret]"
+    },
+    {
+      "name": "mode2_130",
+      "input": "2\n4\n\na\nbbbc\nddddde\n",
+      "output": "[]\n[]\n[c]\n[e]"
+    },
+    {
+      "name": "mode2_random_131",
+      "input": "2\n3\nBBBBBBBBBB\n\nhnh`LSh`_`h``AThh`TS_LnnhL`_STnTLhn_nnnnnnTS\n",
+      "output": "[]\n[]\n[hh`LSh`_`h``AThh`TS_LhL`_STTLh_TS]"
+    },
+    {
+      "name": "mode2_random_132",
+      "input": "2\n1\nrr3r31333errD233yDyr3yDyeey213e22ye2e3yDr1DDy1e3riiDZDQQy211Z3ereyy1y323\n",
+      "output": "[rrr1errD2yDyryDyeey21e22ye2eyDr1DDy1eriiDZDQQy211Zereyy1y2]"
+    },
+    {
+      "name": "mode2_random_133",
+      "input": "2\n2\n\"\"\"\"ii\"i\"\"\nCCZRRCRCRRRC<}RRRlCRRR9}\n",
+      "output": "[iii]\n[CCZCCC<}lC9}]"
+    },
+    {
+      "name": "mode2_random_134",
+      "input": "2\n2\nHH;H;;;;;;HH;HH\nW77FF7W2W2FW222222727W2F227FW22\n",
+      "output": "[HHHHHHH]\n[W77FF7WWFW77WF7FW]"
+    },
+    {
+      "name": "mode2_random_135",
+      "input": "2\n7\n@@@F@@@@@\n55V]]L3to3VtmmVVgV]3VV3]5mt3t33LmgStm33tm3]mt3mg33ggV3otVVttVg\ncv+c&:^+y:v^SS&cSK+++yv^Sd^Sc+K^:y+::&:::Kv^v^&c^y+:vyK]\n.yy`y..j..&y&\n\n@t`@@``{S@S@S@{@t@@@@ISSSSSIIStS@tttSt\n^g#t_#0qx\n",
+      "output": "[F]\n[55V]]LtoVtmmVVgV]VV]5mttLmgStmtm]mtmgggVotVVttVg]\n[cv+c&^+yv^SS&cSK+++yv^Sd^Sc+K^y+&Kv^v^&c^y+vyK]]\n[yy`yj&y&]\n[]\n[t```{SSS{tISSSSSIIStStttSt]\n[^gt_0qx]"
+    },
+    {
+      "name": "mode2_random_136",
+      "input": "2\n6\n,z,n],,nnn],,,n,],],,],,n\nb<V2<I&o&2bI>2VI>2bIbI&&b22bb<b2&Io2&b&mo\n:c'-..:.\nw{xGp*{psx!p!%w{%w!{2w*!xxG{xG{Grx*G%'{!x{!w2G{x!!G{%%x%sw*w%xpG%*2w%*sGG%sp{\nEEE\n)bGY'b)b-)-Gb3')I'$)'b-YbGY'3G$3Y3''YG3)3)b'Y'G3Yb-G')bYb)bY3b3)III\n",
+      "output": "[zn]nnn]n]]]n]\n[<V2<I&o&2I>2VI>2II&&22<2&Io2&&mo]\n[:c'-:]\n[wxGp*psx!p!%w%w!2w*!xxGxGGrx*G%'!x!w2Gx!!G%%x%sw*w%xpG%*2w%*sGG%sp]\n[]\n[)GY')-)-G3')I'$)'-YGY'3G$3Y3''YG3)3)'Y'G3Y-G')Y)Y33)III]"
+    },
+    {
+      "name": "mode2_random_137",
+      "input": "2\n4\nPJPZ!PpZPZZg6pPppP!PZ!P6ZZpZpP!!!P6z!!Pp\n%,Y%%%%3,3,a333K3KK%%K\n&]&}YYY]xx}x]&Y]Y&YY&waxx&;w]&x&]xYxww&Y;Ya]&]Ywx\nv43Ntt{4tp4SNu3{{3Stu3pSu3tuSSvu4Sp3utSSS3Nutttp3tv\n",
+      "output": "[JZ!pZZZg6ppp!Z!6ZZpZp!!!6z!!p]\n[,Y3,3,a333K3KKK]\n[&]&}]xx}x]&]&&waxx&;w]&x&]xxww&;a]&]wx]\n[v43N{4p4SNu3{{3Su3pSu3uSSvu4Sp3uSSS3Nup3v]"
+    },
+    {
+      "name": "mode2_random_138",
+      "input": "2\n1\n774--4\\-\\c\\c\\\\c447c4c-7-----77cc4\\4-c\\4-Vcc-44-c7--\n",
+      "output": "[7744\\\\c\\c\\\\c447c4c777cc4\\4c\\4Vcc44c7]"
+    },
+    {
+      "name": "mode2_random_139",
+      "input": "2\n7\nHHHHHHHHHHH\nlOOH!?O=.=lzOl=ll6Hzz.lzzOLz?r!g!.HCOl?=?HO?L!.O!6r\nC]:q]C]q?C2?~]q22q]Tq]T~~?]:~:~2::]C]2:?T:q22?2~q:~?q\nLLLLLLLLLLLL\n:::\n\\q%]]%D%]D%\n?93\"&s^&^^q&^3y\"sq3sS?^99S3??q?q9s&^S3?^SS3\"3?-q\"9^s-s\"q--\"^e\n",
+      "output": "[]\n[lH!?=.=lzl=ll6Hzz.lzzLz?r!g!.HCl?=?H?L!.!6r]\n[C:qCq?C2?~q22qTqT~~?:~:~2::C2:?T:q22?2~q:~?q]\n[]\n[]\n[\\q]]D]D]\n[?93\"&s&q&3y\"sq3sS?99S3??q?q9s&S3?SS3\"3?-q\"9s-s\"q--\"e]"
+    },
+    {
+      "name": "mode2_random_140",
+      "input": "2\n8\nt.NG.``<ty.`+<`<G.++yN]<++G9t`.`<..+9+<<`+.+`\nAA,,,AP,,,PA,,AP,,P,AAA\noo*~oo*C~ooo~~~***~o*~C*Co\nggg8bgb8bbb.gbgg\nGGG$GG\nd__V2@<ydVdyOdV_@\nQjjjjFFj\nB~}~}Z-}l25~BlZ~~l2}l52^BB55^}5}l\n",
+      "output": "[t.NG.``<ty.`<`<G.yN]<G9t`.`<..9<<`.`]\n[AAAPPAAPPAAA]\n[*~*C~~~~***~*~C*C]\n[8bb8bbb.b]\n[$]\n[__V2@<yVyOV_@]\n[QFF]\n[B~~Z-l25~BlZ~~l2l52^BB55^5l]"
+    },
+    {
+      "name": "mode2_random_141",
+      "input": "2\n7\nm99mm9m9m99mm9m9999mm99m99\nU$#`x{SUS#{{$??`\nGGGGGGGGGGGGG\n]]<\\\\\\<\\\\\\\n,,,,,\nYVllVzr09YVr0Y09Y97WW9rVVWVYzW7YVr00lz0\n===============\n",
+      "output": "[mmmmmmmmmmm]\n[U$#`xSUS#$??`]\n[]\n[]]<<]\n[]\n[Yllzr09Yr0Y09Y97WW9rWYzW7Yr00lz0]\n[]"
+    },
+    {
+      "name": "mode2_random_142",
+      "input": "2\n6\nCYuuYC+Y++ChuhCC+\nmlmmmmmlZmmmmmlm8ZZmlmm\nR''\nVgg}*v}2})V*V}vgV2vv}g\nuuuCCuuuCuu\n,tybb==tfy=kf=b\n",
+      "output": "[YuuY+Y++huh+]\n[llZl8ZZl]\n[R]\n[Vgg*v2)V*VvgV2vvg]\n[CCC]\n[,tybbtfykfb]"
+    },
+    {
+      "name": "mode2_random_143",
+      "input": "2\n4\n6)66666)\n888888888888\n6?6@@6\"JJ@6%E%E\"6@J6@E%?%\"\"N\nffQ6f[qfqf66fq6Q[f[fffQ6qq6qRqfq[6[6f06[q6QfQ6fq=qf[\n",
+      "output": "[))]\n[]\n[?@@\"JJ@%E%E\"@J@E%?%\"\"N]\n[Q6[qq66q6Q[[Q6qq6qRqq[6[606[q6QQ6q=q[]"
+    },
+    {
+      "name": "mode2_random_144",
+      "input": "2\n8\nwwwwwwww\nADTAoTTbTTDAob\"NnobND\n\n777\"7\"\"\"\"\"\"7\"\"7\"\n\n@<.bIE@<E@@.!<I!.E<.b!I.b!bE.@&@@<<E<b@Eb!I<I&!E@b.!@<I.@&aE<EI!\n33]jJ3j3]333]<J3<]j3j!]<]33]j<]]|<<\n555555t5555t555\n",
+      "output": "[]\n[ADAobDAob\"NnobND]\n[]\n[777777]\n[]\n[<.bIE<E.!<I!.E<.b!I.b!bE.&<<E<bEb!I<I&!Eb.!<I.&aE<EI!]\n[]jJj]]<J<]jj!]<]]j<]]|<<]\n[tt]"
+    },
+    {
+      "name": "mode2_random_145",
+      "input": "2\n3\n$MM++MM+i(i[$i[+$.$$M$:M$:$$$i[i$+M[$ii(M:\n$6Rss}s6R}6s669tRd69t9}$9R$t66}RRRRs6dt6sR}s}\nV6[![\"\"6]6!]6[!!)]6]6]!6]7])!6V!!)]!!6)H!]6\n",
+      "output": "[MM++MM+i(i[i[+.M:M:i[i+M[ii(M:]\n[$Rss}sR}s9tRd9t9}$9R$t}RRRRsdtsR}s}]\n[V6[[\"\"6]6]6[)]6]6]6]7])6V)]6)H]6]"
+    },
+    {
+      "name": "mode2_random_146",
+      "input": "2\n8\nQA)C3CQA'C&'^Qh'A^h^^)^3^'')QCC)A^CACQ')3C^&Q&AAChA))AQh&CQhCQ'3hC\nqK,\\I!I!\\!\naxiaiU5xF2i5xxUa55x5axiixU12\nfuBu{BufffQBQBf{QfQff{{QfQ\na6N g0YgRMk\n(dg||g;W(q;q;d(q|g|q;g(qgWq(d;\ngKKwzKkS1w1kkwgS1wKzwS QkKg1 5 QKz5S1kg5gg KkzKgk 11g5K\naaaaaa\n",
+      "output": "[QA)3QA'&'^Qh'A^h^^)^3^'')Q)A^AQ')3^&Q&AAhA))AQh&QhQ'3h]\n[qK,\\II\\]\n[aiaiU5F2i5Ua555aiiU12]\n[uBu{BuQBQB{QQ{{QQ]\n[a6N 0YRMk]\n[(dg||g;W(;;d(|g|;g(gW(d;]\n[gwzkS1w1kkwgS1wzwS Qkg1 5 Qz5S1kg5gg kzgk 11g5]\n[]"
+    },
+    {
+      "name": "mode2_random_147",
+      "input": "2\n7\nV7B7BVB7VVV^^f77^BVB^v7^7VV77VBBV\n\nvvTU`v@@`T'v'`'`I`T`5'5v'``'T'TvUTU'TTTUT`v`'U''@`T``vvIU`I\nPa]'VV8E4]4VVaaPppaaaV]4PPE'V4pY8]P]]app_E4EV8848]_a__aVP8PpPa_48apVE]8\nss~s~!~!~!ss~s~~~~ss~ssss~s~!s\n]TEyT]]Q1yTAJQQyAE]J{eT?QJA]Je1A{eATeJ]T{]{A]yTyJeA]pJ?pa{aAQ?\n|qq|q||||qqqqq|qqqqqq|q\n",
+      "output": "[7B7BB7^^f77^BB^v7^777BB]\n[]\n[vvTUv@@T'v''IT5'5v''T'TvUTU'TTTUTv'U''@TvvIUI]\n[P]'VV8E4]4VVPppV]4PPE'V4pY8]P]]pp_E4EV8848]___VP8PpP_48pVE]8]\n[~~!~!~!~~~~~~~~!]\n[TEyTQ1yTAJQQyAEJ{eT?QJAJe1A{eATeJT{{AyTyJeApJ?pa{aAQ?]\n[||||||||]"
+    },
+    {
+      "name": "mode2_random_148",
+      "input": "2\n4\n  Kss ms&sKms?& \n134Y3~!1~3!1}31,)Y,}1~1YY,,,,11}4!,~33}Y41,!,})1~4}Y1!}~!\np000\nflDXfXfU(fD(UDCDXCU(XUDD'(C(U\n",
+      "output": "[  K m&Km?& ]\n[34Y3~!~3!}3,)Y,}~YY,,,,}4!,~33}Y4,!,})~4}Y!}~!]\n[p]\n[flXfXfU(f(UCXCU(XU'(C(U]"
+    },
+    {
+      "name": "mode2_random_149",
+      "input": "2\n1\n\n",
+      "output": "[]"
+    },
+    {
+      "name": "mode2_random_150",
+      "input": "2\n4\ndaaI{{aIIdxIe{{IeDa{CaDeDdDxdIdaxe{aaDedDaDDxxIDI{{{{xa{xaxIdexDx{\nXq6vv'FXFvz'YXX6vvzFqv'q|zYqzYq\nK_Ku*\nEE?U?E?aUEE?0U06E6Ui&E0?UE66??a?0?&U\n",
+      "output": "[daaIaIIdxIeIeDaCaDeDdDxdIdaxeaaDedDaDDxxIDIxaxaxIdexDx]\n[Xq6'FXFz'YXX6zFq'q|zYqzYq]\n[_u*]\n[EEUEaUEE0U06E6Ui&E0UE66a0&U]"
+    },
+    {
+      "name": "mode2_random_151",
+      "input": "2\n2\nIo@Ib\ncGc3dddp-dG---<(3p3G33Gpp\n",
+      "output": "[o@b]\n[cGcdddp-dG---<(pGGpp]"
+    },
+    {
+      "name": "mode2_random_152",
+      "input": "2\n6\np/M)IAIGIpppIGOOGI/A`pGpppGM`I4`4G4)MHA``GM/HM44ppMHG4``GHp`I44AG)HOI/pHG/H\nV666V666VVV6666VVV\n1<OOHO<H<H<O<HOH<<HOOOH<HH\"OH<OO<OO1H<\n9u&gVV9&&u5>#^u9uu9\n%;;;X;;X%XW;%W%W%%WWW%WWX%X%XX%;tWXW;%;WX%XWXXW%;X%%tW;\nLU[LL[@LU[@@UL[@L@L[[@LU[LUL@UULULUL[[@L[[\n",
+      "output": "[/M)IAIGIIGOOGI/A`GGM`I4`4G4)MHA``GM/HM44MHG4``GH`I44AG)HOI/HG/H]\n[VVVVVVVV]\n[1<H<H<H<<HH<<HH<HH\"H<<1H<]\n[9&gVV9&&5>#^99]\n[;;;X;;XXW;WWWWWWWXXXX;tWXW;;WXXWXXW;XtW;]\n[U[[@U[@@U[@@[[@U[U@UUUU[[@[[]"
+    },
+    {
+      "name": "mode2_random_153",
+      "input": "2\n5\nffLii^riiffVViiV^VL<^^VLVi^^f\n22222222222\nd..........ddd\nRkiin--ik),)R-ii,-?))Rn)i-,n)Ri-i-)Ri-,)k--,Rikn,,R)k)R-\nF=jj:jxj:.);:x;xqF$:q._w=):$.=$q)$Fxj=j$Xx;q.));\n",
+      "output": "[ffL^rffVVV^VL<^^VLV^^f]\n[]\n[dddd]\n[Rkiinik),)Rii,?))Rn)i,n)Rii)Ri,)k,Rikn,,R)k)R]\n[F=:x:.);:x;xqF$:q._w=):$.=$q)$Fx=$Xx;q.));]"
+    },
+    {
+      "name": "mode2_random_154",
+      "input": "2\n3\n[J![/J!UJUJQJ[QUQQQ[oQo[ooQ[!!U/Q!!UQo!![[o[UQoU!QQQQ!Qo[\nsC\\CF\\CFCCqCCq\\qCFCq\\C\\sq\\CF\\\\F\n5:[W::L[kWL\n",
+      "output": "[[J![/J!UJUJJ[U[oo[oo[!!U/!!Uo!![[o[UoU!!o[]\n[s\\F\\Fqq\\qFq\\\\sq\\F\\\\F]\n[5[WL[kWL]"
+    },
+    {
+      "name": "mode2_random_155",
+      "input": "2\n5\n::{{::{:{:::{:\npIfs__\nP|{ |y{|S+{P yy|y|Sy+y|+|++PyPP||  P+S{S+|S|++PP + |PSSy9P\nojbb%j%jbDjDo%%Dojoo%o]o&bbDb%D%boo%%bjbob%]&bD]Dj]o%]b]\n{{W\n",
+      "output": "[{{{{{]\n[pIfs]\n[P{ y{S+{P yyySy+y+++PyPP  P+S{S+S++PP + PSSy9P]\n[oj%j%jDjDo%%Dojoo%o]o&D%D%oo%%jo%]&D]Dj]o%]]]\n[W]"
+    },
+    {
+      "name": "mode2_random_156",
+      "input": "2\n4\nHHHHHH\nDp&RR&|RpDQD**&D00RQDQS0**p0\n&&7((&7_7&&__7&77(77&&_7&7_7_7___&&_(7((7_\n{{OO]{]Ok]{{k\n",
+      "output": "[]\n[p&RR&|RpQ**&00RQQS0**p0]\n[&&((&_&&__&(&&_&_____&&_(((_]\n[OO]]Ok]k]"
+    },
+    {
+      "name": "mode2_random_157",
+      "input": "2\n5\nD}}DD}DD}\n{{7;;{fE{{-{{;{;-{-f;7;{{----f;E{3E-f:;3;3:E:73fE{;-\n9jFFj999j?99jj9?9jjFj?9?9F9jFjF99?jj99\nPP7P7P77PP\n0~0~~0I~~G~~0~GI0GG0GGGI\n",
+      "output": "[}}}}]\n[7;;fE-;;--f;7;----f;E3E-f:;3;3:E:73fE;-]\n[jFFjj?jj?jjFj??FjFjF?jj]\n[7777]\n[000IG0GI0GG0GGGI]"
+    },
+    {
+      "name": "mode2_random_158",
+      "input": "2\n6\nCZ919##yWW##C1yWy1C9WC11W19Z1W9Wy919CC1yWWW\nI[I[[IIII[[[[\nhuu}}]hhutthu}u]}}]]]}hu}\n\nh>Nw!Y>NN!>!wYmN>hXNNX>YihwYwm\n\n",
+      "output": "[CZ919##y##C1yy1C9C1119Z19y919CC1y]\n[IIIIII]\n[huu]hhutthuu]]]]hu]\n[]\n[h>w!Y>!>!wYm>hXX>YihwYwm]\n[]"
+    },
+    {
+      "name": "mode2_random_159",
+      "input": "2\n6\nj@j@jjj@j\nmE::mm::mEEE::\n!v!n!;;UUvU!eeinkRRi;U!ennven3e5RU!e5;RRRR;\n\\@@C@\\\\@C\\C\\\\CC\n??????V?????V\nmygW{{xynxx:ynnPyP{{}Hn{\n",
+      "output": "[@@@]\n[mEmmmEEE]\n[!v!n!;;UUvU!eeinki;U!ennven3e5U!e5;;]\n[@@C@@CCCC]\n[VV]\n[mygWxynxx:ynnPyP}Hn]"
+    },
+    {
+      "name": "mode2_random_160",
+      "input": "2\n7\n\nXXXXXX\n8/nrn;*ru;a*n\nSSJShhJSShJSShSJSSSShhhJhJh\nwL([((L\nVer]TV]eTlSTeTmeTrm]r\n7Yz?HUH\n",
+      "output": "[]\n[]\n[8/r;*ru;a*]\n[JhhJhJhJhhhJhJh]\n[wL[L]\n[Ver]V]elSemerm]r]\n[7Yz?U]"
+    },
+    {
+      "name": "mode2_random_161",
+      "input": "2\n3\n ''V'\"''''VV'VV'\nRR0'R0R0'10R@,R'R@1R@@'0@'@@'@0R0\nQQQQQQQQQQ\n",
+      "output": "[ V\"VVVV]\n[0'00'10@,'@1@@'0@'@@'@00]\n[]"
+    },
+    {
+      "name": "mode2_random_162",
+      "input": "2\n1\n\n",
+      "output": "[]"
+    },
+    {
+      "name": "mode2_random_163",
+      "input": "2\n7\nPP\n>A+rA1Z\n\n\"u_llll[@[\"u[ \"[C@[[uj@lQQl[\"Hu[\"[[Q_@_Cu @\"\"_ll\"Cj@[l u_\"_Q@ lQ@l[@uu[[llj@Q\n_____h__hhh_h_hh_h___hh\nurR9RR*R9R$$\\*R**uurO$9R*uu*r9RRr;\n!!D\n",
+      "output": "[]\n[>+r1Z]\n[]\n[\"u_llll@\"u \"C@uj@lQQl\"Hu\"Q_@_Cu @\"\"_ll\"Cj@l u_\"_Q@ lQ@l@uullj@Q]\n[hhhhhhhhhh]\n[ur9*9$$\\***uurO$9*uu*r9r;]\n[D]"
+    },
+    {
+      "name": "mode2_random_164",
+      "input": "2\n1\n>#*X*\n",
+      "output": "[>#X]"
+    },
+    {
+      "name": "mode2_random_165",
+      "input": "2\n4\nh5;bhmZmhZ;ZhbZhcchmc;;cZm;h;bc/;5hhZ;;;mE;hbb5Z\n<0GX\"<4exxe\"0Gex\"\"xeH.<H4\"\"tH.4Ht0eHe\"HHxG<\"<eet<<<..\"<\"e.\"xX\".XeG<<0\"Ge.HG.e\"<xx..He\n~\\N~T\\TTNT~\\NT~TNT\nVEEEE)JE]VEE]EEJV]JVJ]EEEVVJJ)JV)))VEEV\n",
+      "output": "[h5bhmZmhZZhbZhcchmccZmhbc/5hhZmEhbb5Z]\n[<0GX<4exxe0GexxeH.<H4tH.4Ht0eHeHHxG<<eet<<<..<e.xX.XeG<<0Ge.HG.e<xx..He]\n[~\\N~\\N~\\N~N]\n[V)J]V]JV]JVJ]VVJJ)JV)))VV]"
+    },
+    {
+      "name": "mode2_random_166",
+      "input": "2\n8\nCCCCC\nxx\nm$Fm&w<___S>*m__&$_SwS$w>w<<wSN&S_N$w$m&*SN&f&_<*m&w&>**m>$*N*<S$$><F&>*_F<mFfS_N\ny^yM^hVVN^\n{3SAS{v53S5vV}A3v{{\nEEhEEErhE\noore|ln<l|er|N|rr< nv|r|vNlel< v< rvoll<ro<X<  |lvoN7 vXovv7<<r n\n|\"|GG\"G\"\"\"G\"\"G\"\"\n",
+      "output": "[]\n[]\n[m$Fm&w<S>*m&$SwS$w>w<<wSN&SN$w$m&*SN&f&<*m&w&>**m>$*N*<S$$><F&>*F<mFfSN]\n[yyMhVVN]\n[3SASv53S5vV}A3v]\n[hrh]\n[oore|lnl|er|N|rr nv|r|vNlel v rvollroX  |lvoN7 vXovv7r n]\n[||GGGGG]"
+    },
+    {
+      "name": "mode2_random_167",
+      "input": "2\n5\nWWWWWWWWWWWWWW\n\n\"\"\"\"\"\"\"\"\"\"\n39o3ooo9o99o39oo9o93399o399o33999o\nOOOUxxOxUOOOxUOOxOO\n",
+      "output": "[]\n[]\n[]\n[3o3ooooo3ooo33o3o33o]\n[UxxxUxUx]"
+    },
+    {
+      "name": "mode2_random_168",
+      "input": "2\n5\n5Yo5oo[YYYY5[[\nt?cM?&cMc&&|ttcM&&?M&Mctttc|r?M?&?c&&y?tMM?|t&M\n.<%O2.2%..]V.]2\nrYrYnrYLssLsLLrLsnssLYsYssLYYLs\nFF%oofko\n",
+      "output": "[5o5oo[5[[]\n[t?cM?cMc|ttcM?MMctttc|r?M??cy?tMM?|tM]\n[<%O22%]V]2]\n[rYrYnrYLLLLrLnLYYLYYL]\n[FF%fk]"
+    },
+    {
+      "name": "mode2_random_169",
+      "input": "2\n5\ndddgdQdd\n[^/|||||i['[i\nVQyVZV;aZQxyQ;xaV;V;xVx;rVV'Q';x';QQ'QQ;aa';y\n?TT%\n<<<.<<<<.\n",
+      "output": "[gQ]\n[[^/i['[i]\n[VQyVZVaZQxyQxaVVxVxrVV'Q'x'QQ'QQaa'y]\n[?%]\n[..]"
+    },
+    {
+      "name": "mode2_random_170",
+      "input": "2\n8\n/        \n`I\\ffL_Ijf`\\`IzIj\\e_\\\\IyfzIfeP\\yeffy_f`yez-f`LI_-`L\\tey\\\\Py_-`yj\\jLI\n^LED1D?%E%ECeL^^1?^^L?%CLL^CLD1%1iE^eE^L1C1CiD?EDLD^ELi^?1?e1?DDE?^eCDiC\nooooo=oooo=oo\n,~l,BBlj%l\nVW=lf=VlV=fWlfWVVW\nssHkL(`LLsL(G2HasG22kLH`&k2HH(GH2aGa2&Gs2saLG(22GkH2LHLL`sH`LH`G2((LL\nH;H; ;Q  HQ;HH;;H;Q ;H  H;\n",
+      "output": "[/]\n[`IffL_Ijf``IzIje_IyfzIfePyeffy_f`yez-f`LI_-`LteyPy_-`yjjLI]\n[LED1D?%E%ECeL1?L?%CLLCLD1%1iEeEL1C1CiD?EDLDELi?1?e1?DDE?eCDiC]\n[==]\n[,~,BBj%]\n[W=lf=l=fWlfWW]\n[ssHk(`s(G2HasG22kH`&k2HH(GH2aGa2&Gs2saG(22GkH2H`sH`H`G2((]\n[HH Q  HQHHHQ H  H]"
+    },
+    {
+      "name": "mode2_random_171",
+      "input": "2\n1\nj0LjL/|^W0L^r|yrWy/2yW/|r0rr0j2|y/Wj\n",
+      "output": "[j0LjL/|^W0L^|yWy/2yW/|00j2|y/Wj]"
+    },
+    {
+      "name": "mode2_random_172",
+      "input": "2\n4\nbbbbdddddddbddbbddddbdd\n5--!-v5!5--K5!5!!-!-K\ntrwPwDOD XtXwwwtDPOtgwOtOt OPgwgDwgXPOXOOrOO   PDXDXPOgt g11gwOXgX rtXDP rD gOgDXwD91rtgrPXgX gt1P]gP\n<;[<!\n",
+      "output": "[bbbbbbbb]\n[5!v5!5K5!5!!!K]\n[trwPwDOD XtXwwwtDPOtwOtOt OPwDwXPOXOOrOO   PDXDXPOt 11wOXX rtXDP rD ODXwD91rtrPXX t1P]P]\n[;[!]"
+    },
+    {
+      "name": "mode2_random_173",
+      "input": "2\n3\nii$N.Bi<C$B<\n,xi,nn,,nx,\\,onnnxox.xnnox%oxo.oi,\nYVVYVVYChhVV?22VY2VYY??2V?Y2VhhY?2CYYhhChYhY?Y2V\n",
+      "output": "[$N.B<C$B<]\n[,xi,,,x,\\,oxox.xox%oxo.oi,]\n[VVVVChhVV?22V2V??2V?2Vhh?2ChhChh?2V]"
+    },
+    {
+      "name": "mode2_random_174",
+      "input": "2\n4\nbjXL*Ujj-ULL*X*\\'-L\\U\\XbK'Kb-\n))))\n``````\na/uW|SS/y`a/`/a8S`|W|uSWy8Wu`Suy8uy/a|u8//E88Sy/u|8/Ju8a8uuya\n",
+      "output": "[bjX*Ujj-U*X*\\'-\\U\\XbK'Kb-]\n[]\n[]\n[a/W|SS/y`a/`/a8S`|W|SWy8W`Sy8y/a|8//E88Sy/|8/J8a8ya]"
+    },
+    {
+      "name": "mode2_random_175",
+      "input": "2\n6\nVxxyxy,,y,Vx,yyxVVyyVx,x,VVy,yVxyxyy,,V\nsz[zUzUss\"TUzUU[[s(UU\"z\"([\n.^^ss!^^^!usus`^^..`!...u^.u^!u\nC4x\"xS4CCx11qSSqSq44\"SxCSx\"CCC\"q\nk$zz-f-kfzkk$$kf$-\nYYYLYY\n",
+      "output": "[Vxxx,,,Vx,xVVVx,x,VV,Vxx,,V]\n[sz[zzss\"Tz[[s(\"z\"([]\n[.ss!!usus`..`!...u.u!u]\n[4x\"xS4x11qSSqSq44\"SxSx\"\"q]\n[$zz-f-fz$$f$-]\n[L]"
+    },
+    {
+      "name": "mode2_random_176",
+      "input": "2\n8\neSS3V3e3V3V0e#0See#S#\n==m=@===[@[\n@FfOBF=fcBVG=B=V=FOfOG5=O=@=BO5V5BOG5FGf55GV5OVc=f@VfBBF555\n\n6)6~~))~6r~)#!#!!!!)!C~)RRU)r)!)rrJNC96!!06N~R9)6NrU~UrN6)0!R6J~J~9!9~006U!r#\nV`555`VRLV`5`x55L`RT5RbRLL3VR3``LRTL`VRT5VTxVVRLbux5\n5555wBBBBwwBBw55Bw\nddddrdrjxxxjxjxxrjxrjdj\n",
+      "output": "[SS3V33V3V0#0S#S#]\n[m@[@[]\n[@FfOBF=fcBVG=B=V=FOfOG=O=@=BOVBOGFGfGVOVc=f@VfBBF]\n[]\n[6)6~~))~6r~)##)C~)RRU)r))rrJNC9606N~R9)6NrU~UrN6)0R6J~J~99~006Ur#]\n[V``VRLV``xL`RTRbRLL3VR3``LRTL`VRTVTxVVRLbux]\n[5555wwww55w]\n[ddddrdrjjjrjrjdj]"
+    },
+    {
+      "name": "mode2_random_177",
+      "input": "2\n4\n99_E6**S_;a__9E9S%S9*6*S6E6a\n0S0S0SSS0000S000S00000\ndbLVPub!V!V^ubbdEuPE^Pd^d!^!uELu^LV^P\nooooooXo\n",
+      "output": "[_E6**S_;a__ES%S*6*S6E6a]\n[SSSSSSS]\n[dbLVPub!V!VubbdEuPEPdd!!uELuLVP]\n[X]"
+    },
+    {
+      "name": "mode2_random_178",
+      "input": "2\n8\nX7`XXfr7XX\"&7X\"rC\n....b\n]]]]\ngtg9gvlll>9lgq>tlf(qqZg9>9Zgv\nZZZZZZZZZZZ\n((<a<(a((<(<<a(((aa\nAQj.ZQQQjZjR)QyyjQ\n{F{-HF-J?Y-HFFYb-HF\n",
+      "output": "[7`fr7\"&7\"rC]\n[b]\n[]\n[t9vlll>9lq>tlf(qqZ9>9Zv]\n[]\n[<a<a<<<aaa]\n[Aj.ZjZjR)yyj]\n[{{-H-J?Y-HYb-H]"
+    },
+    {
+      "name": "mode2_random_179",
+      "input": "2\n1\n\n",
+      "output": "[]"
+    },
+    {
+      "name": "mode2_random_180",
+      "input": "2\n6\n00N0NNZN0NNNNNZ00ZNNNN\n11LLYx8xx1x8c\nuR,u~',RT,hh]e]:\n,,,,,,,\nTxT=Tx\n\n",
+      "output": "[000Z0Z00Z]\n[11LLY818c]\n[uRu~'RThh]e]:]\n[]\n[x=x]\n[]"
+    },
+    {
+      "name": "mode2_random_181",
+      "input": "2\n4\n\nAARRAAAAKAARRKARKAKRRRRARKRR\n2~NNNZZ~NNf2~pppppN2pZN2N~~,g2NZ~~ppg\n\\SW\\AGA4G#9\\449S9S\\S9=GG44&GP#4SA==G4PAGAA=S9W=PGAAW9W9AP=\\SS9W34W3G9=9#3=&\\&\\A3SS\\#=9PGSA4#WS=S9#WS\\&W#4=\\4GWA9W94SG\n",
+      "output": "[]\n[AAAAAAKAAKAKAKAK]\n[2~ZZ~f2~ppppp2pZ2~~,g2Z~~ppg]\n[\\W\\AGA4G#9\\4499\\9=GG44&GP#4A==G4PAGAA=9W=PGAAW9W9AP=\\9W34W3G9=9#3=&\\&\\A3\\#=9PGA4#W=9#W\\&W#4=\\4GWA9W94G]"
+    },
+    {
+      "name": "mode2_random_182",
+      "input": "2\n2\nEl)/llRy/$/$,)l)/R))EE,E$$R`lE//)R/RR\njojEoojo\n",
+      "output": "[El)llRy$$,)l)R))EE,E$$R`lE)RRR]\n[jjEj]"
+    },
+    {
+      "name": "mode2_random_183",
+      "input": "2\n5\n##$0#I===#$##=\n/&^R/e&/A^//&e&cee/c--cec-cee&A^&e^\n....\nCg}gCCgggg}g}CC}}}}}}}ggCg}}C}CC}gC}gg\ntG''QG'tttGQtG'ttfffQ'G'IffftGfGGtGtfftGft'GtQff\n",
+      "output": "[$0I===$=]\n[/&^R/&/A^//&&c/c--cc-c&A^&^]\n[]\n[CggCCgggggCCggCgCCCgCgg]\n[G''QG'GQG'fffQ'G'IfffGfGGGffGf'GQff]"
+    },
+    {
+      "name": "mode2_random_184",
+      "input": "2\n4\n,,,,,,,,\n?~@e~e-\\@X\\..7.\\X~X-NNNb~@~\\NebN@X-bbNe@.@~-b~\n\n5TT:T:riiTTT:::i:T::i:T:5:i5\n",
+      "output": "[]\n[?@ee-\\@X\\..7.\\XX-NNNb@\\NebN@X-bbNe@.@-b]\n[]\n[5TTTriiTTTiTiT5i5]"
+    },
+    {
+      "name": "mode2_random_185",
+      "input": "2\n7\nESPSEPPEEESPPSEPEEPPEPP\nNxNxxNNxNNNxNNNNNNNN\n\nWWjkhW)MPMPkjPj~MPqkjMP~)qkWPjkWkjkPq~Mkhjjj~Wq~~Phhd~PhkWWq)P\n++]]]%+l]ll\n,..,)).,.,,))q,\n\n",
+      "output": "[ESSEEEESSEEEE]\n[xxxxx]\n[]\n[WWjkhW)MMkjj~MqkjM~)qkWjkWkjkq~Mkhjjj~Wq~~hhd~hkWWq)]\n[++%+lll]\n[..))..))q]\n[]"
+    },
+    {
+      "name": "mode2_random_186",
+      "input": "2\n3\n\n\\%%% \"E'%  '5%X''EE'E%\" 5E^%5\\E ^ %EE '\\%\n((2^2((((222(2((((\n",
+      "output": "[]\n[\\ \"E'  '5X''EE'E\" 5E^5\\E ^ EE '\\]\n[2^22222]"
+    },
+    {
+      "name": "mode2_random_187",
+      "input": "2\n7\na:aaaa:aaaaaaa:\nZ?WP0?H0?PW0P0HZPZHWZH?0?HHPP?WWW00W0WH?WP\nTT'']]'u'''TTu]''u]'\nAAAAAA\nLML+L.H+#HHL+JoMA+HOJo#MJMHHQM#LHLH+Q+OO+HH#L#oA#oo#QoLLM+.oHMoLo.AA++#+oMOA#OoHM+HM+#OM+O+ooHMoM#AJ##\n++LL++L++\n\n",
+      "output": "[:::]\n[Z?P0?H0?P0P0HZPZHZH?0?HHPP?000H?P]\n[TT]]uTTu]u]]\n[]\n[LMLL.H#HHLJoMAHOJo#MJMHHQM#LHLHQOOHH#L#oA#oo#QoLLM.oHMoLo.AA#oMOA#OoHMHM#OMOooHMoM#AJ##]\n[LLL]\n[]"
+    },
+    {
+      "name": "mode2_random_188",
+      "input": "2\n4\n\naaa0a0a0a0a00aa0a0a0a\n\\M33M@M\\@3\\\\\\3M@3@\\M@\\3M3M\\MM@@M\\3\\M@@M3M\\\\\nC]D#C3C##^CC3CDCT3D^D]4D43C]]]T##D4\n",
+      "output": "[]\n[000000000]\n[\\33@\\@3\\\\\\3@3@\\@\\33\\@@\\3\\@@3\\\\]\n[]D#3##^3DT3D^D]4D43]]]T##D4]"
+    },
+    {
+      "name": "mode2_random_189",
+      "input": "2\n1\n}}}9}-qv}9vv-UU-}vvUU9qU9U9Y-9U}UY9q-9qq-q9-U9-U}}U}qq-9vvUq\n",
+      "output": "[}}}9}-qv}9vv--}vv9q99Y-9}Y9q-9qq-q9-9-}}}qq-9vvq]"
+    },
+    {
+      "name": "mode2_random_190",
+      "input": "2\n6\nXXXXXX\n2$\\\\@@2nvB2?v@[n?$\\vB\\?vn?v=`\\n[?@?\\@vv[=n[?n=v2n=\\$2`\\=?\\2[2[v2[v2@??`n2@nv\\\n\nAqqnn#AqKWAqnKAnKnqqnWn#MAnWMqWn#A\nOO2y22\"22OX\"\"\"\"S\"\"OjXy22j2\"22jSOyXSjsSjbjy\"s\"\"Ojj22Sj2S2X\"2jjS\"\"j\nb I ; I;;b;aIB; ;B;aI;;B; ; II\n",
+      "output": "[]\n[2$\\\\@@2nB2?@[n?$\\B\\?n?=`\\n[?@?\\@[=n[?n=2n=\\$2`\\=?\\2[2[2[2@??`n2@n\\]\n[]\n[Aqq#AqKWAqKAKqqW#MAWMqW#A]\n[OOy\"OX\"\"\"\"S\"\"OjXyj\"jSOyXSjsSjbjy\"s\"\"OjjSjSX\"jjS\"\"j]\n[b I  IbaIB BaIB  II]"
+    },
+    {
+      "name": "mode2_random_191",
+      "input": "2\n7\n$p4#$44p p=4I=54pp pI:C  #I:I:$:5 $4:5$$p#I$ $5#:#5 =5p_=#5#4==#::pCI\na:TJqwqwTq:uw:wJwu:YaJ:JwqTTJTJwqJq::::qwuq:JT:YqwJTww::wuTJqJ:TJ\n,d7,,qq7X,7\n=o=ffo=ff==of{f\nE-E-?EE--?E--E-..-r.??.E?-..E--?.Er?\nPP_\n`[r`r`e`e[```r[`r[r`rS[`[`S[[[rr``[r[`\n",
+      "output": "[$4#$44 =4I=54 I:C  #I:I:$:5 $4:5$$#I$ $5#:#5 =5_=#5#4==#::CI]\n[aTJqwqwTquwwJwuYaJJwqTTJTJwqJqqwuqJTYqwJTwwwuTJqJTJ]\n[d7qq7X7]\n[=o=o===o{]\n[EE?EE?EE..r.??.E?..E?.Er?]\n[_]\n[[rree[r[r[rrS[[S[[[rr[r[]"
+    },
+    {
+      "name": "mode2_random_192",
+      "input": "2\n5\ndEd~~EEddd~EE~~~ddE~E~EEdEd\n\nYYIE#YHIY#IHHHY#\ng9#%1e##9F9ee%9e%1e##%1Fe%#Fe%e%F%%1eF%9F9e9%#1eFF%e#e9#9e99#%#%9e#FF\nKuKJJJcKJJucKJuJc\n",
+      "output": "[dd~~ddd~~~~dd~~dd]\n[]\n[IE#HI#IHHH#]\n[g9#%1##9F9%9%1##%1F%#F%%F%%1F%9F99%#1FF%#9#999#%#%9#FF]\n[KuKcKucKuc]"
+    },
+    {
+      "name": "mode2_random_193",
+      "input": "2\n7\nq^nqJn^qdnqq^^^n^q5^dJVnon5Jq1V^155qJ1Vqo5oqVq51^qW1qd5JJdqW5J1nd155^11odJdo1\nF@>-@}=7-=7=\n^SeSS^ISSeeII^^3e\n=h)=h-4=-h-4h-=4)-)))-444--h-)h-)h)h)=4)=h4-h)=)=4h\nUw GGw =w=w =}$=G}=G =wD\nb8dbd,h__55Eh>ddb,dd88hhh_,\nvv\n",
+      "output": "[^nJn^dn^^^n^5^dJVnon5J1V^155J1Vo5oV51^W1d5JJdW5J1nd155^11odJdo1]\n[F@>-@}7-7]\n[^e^IeeII^^3e]\n[=h=h-4=-h-4h-=4--444--h-h-hh=4=h4-h==4h]\n[Uw GGw ww }$G}G wD]\n[b8b,h__55Eh>b,88hhh_,]\n[]"
+    },
+    {
+      "name": "mode2_random_194",
+      "input": "2\n2\n={__/_ee_=({/h{h/={(_h{{==h/h(I{=h{A(=h_h==({_=A{({h=({/=(hh{(_h{A=\nM1111111MM\n",
+      "output": "[=__/_ee_=(/hh/=(_h==h/h(I=hA(=h_h==(_=A(h=(/=(hh(_hA=]\n[MMM]"
+    },
+    {
+      "name": "mode2_random_195",
+      "input": "2\n5\n6B]iiB&]<iUBi<&<]B6]&B<B6i<]&&B<]<U&i]<il<i]i<&&U<<\n              \nI______I___I_IIIII_\n\n))\n",
+      "output": "[6B]iiB&]iUBi&]B6]&BB6i]&&B]U&i]ili]i&&U]\n[]\n[IIIIIIII]\n[]\n[]"
+    },
+    {
+      "name": "mode2_random_196",
+      "input": "2\n2\nl0lul0l00000u0l0lllu0luu00lul00ull0\n\n",
+      "output": "[llullulllluluululull]\n[]"
+    },
+    {
+      "name": "mode2_random_197",
+      "input": "2\n7\n\n\na>a88aV1,8,8g81gVVg11V1Vgaa8a8\nP||51[G|1!G5\n\nnKhKnn`#nnK\nJ>;;F\n",
+      "output": "[]\n[]\n[a>aaV1,,g1gVVg11V1Vgaaa]\n[P51[G1!G5]\n[]\n[KhK`#K]\n[J>F]"
+    },
+    {
+      "name": "mode2_random_198",
+      "input": "2\n8\n66Z6666!6Z6Z\nYPAPYPAAAPYYAPYAAYAYYYPYAAYP\nnM++nEnMMEMnMMn+EMMMMM+\\\ni'iUKUipGK\nJz3JJ//||3zpJfzJZz|zZ/GZ3fZJ/3ppZZf3|3Zzzf//fzpJ\nRrrrk}kdOrrRdRddrkrOk}ddk}k}dd}d}RrdRkdrrO}Or}}Rkdddk}r\nBFFBFBFF\n\"\"{\"6z6Y\"6z\"\"}\n",
+      "output": "[Z!ZZ]\n[PAPPAAAPAPAAAPAAP]\n[n++nEnEnn+E+\\]\n['UKUpGK]\n[J3JJ//||3pJfJZ|Z/GZ3fZJ/3ppZZf3|3Zf//fpJ]\n[Rrrrk}kOrrRRrkrOk}k}k}}}RrRkrrO}Or}}Rkk}r]\n[BBB]\n[{6z6Y6z}]"
+    },
+    {
+      "name": "mode2_random_199",
+      "input": "2\n1\nkcSbWccWWb-Sgc\n",
+      "output": "[kSbWWWb-Sg]"
+    },
+    {
+      "name": "mode2_random_200",
+      "input": "2\n3\nqhohhfh4c4fonn4qcfc4hfnqnn4,ac,qnhqaqWachW,4onfnfh,f,faa4nfqcV4q$qno,,aoocao,a,af$W4f,$qn,aWq4oaa\nA*Be4BAw,**:B*:B:*eA:e:B:*BB,::eB*BBB4:,B:**ABA\n_``__>x>`_>``>_>``>>`>>>`>\n",
+      "output": "[qhohhfh4c4fonn4qcfc4hfnqnn4,c,qnhqqWchW,4onfnfh,f,f4nfqcV4q$qno,,ooco,,f$W4f,$qn,Wq4o]\n[A*e4Aw,**:*::*eA:e::*,::e*4:,:**AA]\n[_``__x`_``_````]"
+    },
+    {
+      "name": "mode2_random_201",
+      "input": "2\n8\n}}5O#\nZZZZZZZZZZZZZ\nKKKKKKKKK\n\nxxS[xS[[[S[xxS[[)xxSx[[)S)xSx[[[[Sxx[x\n\nTT|cccT|TTTc}TcxT6}cT|6Tl||}c|6cl||}}}6cx||6T}}c6|l}Tx||}l\np{bsbRKKa'zbRzapbs'CaRRKs'azspp'zRbsRbRs'b)sszbRRss{bbbss'p\n",
+      "output": "[5O#]\n[]\n[]\n[]\n[xxSxSSxxS)xxSx)S)xSxSxxx]\n[]\n[TTcccTTTTc}TcxT6}cT6Tl}c6cl}}}6cx6T}}c6l}Tx}l]\n[p{bbRKKa'zbRzapb'CaRRK'azpp'zRbRbR'b)zbRR{bbb'p]"
+    },
+    {
+      "name": "mode2_random_202",
+      "input": "2\n7\nUUUUUUUUUUUUUU\n{<1Nmm{mN<<R1E{{\n{{{{sss{s{vsv{{{ss{s{ss\n^^p>>>^>p>p^ppp>^>\n`````````````\n```````\nQ(QtDQ\n",
+      "output": "[]\n[<1NmmmN<<R1E]\n[ssssvsvsssss]\n[^^p^pp^ppp^]\n[]\n[]\n[(tD]"
+    },
+    {
+      "name": "mode2_random_203",
+      "input": "2\n5\nRRRRcRRRc\nY(##~:#3 Y\n~3FFI==ITI=8a~~p==TaT3OFFIp3TS~\n.(.....(.(((((.(((..((..(((\n22M2@b$M(Z|2Z$22b2 (b(bM(||$b$$b$$@M2b|ZZ$(@(( 2@ (|2(bZ\n",
+      "output": "[cc]\n[Y(~:3 Y]\n[~3FFIITI8a~~pTaT3OFFIp3TS~]\n[............]\n[M@b$M(Z|Z$b (b(bM(||$b$$b$$@Mb|ZZ$(@(( @ (|(bZ]"
+    },
+    {
+      "name": "mode2_random_204",
+      "input": "2\n6\np{{;aG3G+R-4a3pp{p3GGR6a3q;+GRpG3p3{aa33q34qaG4R3+pqR3pa3RRRp+pqqqqq;G;Rq3;qRR3;R4Gp\nIa{qm{\nNF\\!N{MF!{\\!M\\{!!{\\{M11N{G{\\\\GMM\\F!11G!NGF\\NGN1G!GM{NM{1!1GN{NGMN!NM\nB!anHBHMar!*!nrrHM!Ban\nL>JJ$L^$$$>LJJL$^+dJJJ$dJ++^${$LLJ^\n;Q3dQEd;OE3QQO3QQ3;Ed;d3OE;ddOd\n",
+      "output": "[p{{;aGG+R-4app{pGGR6aq;+GRpGp{aaq4qaG4R+pqRpaRRRp+pqqqqq;G;Rq;qRR;R4Gp]\n[Iaqm]\n[F\\!{MF!{\\!M\\{!!{\\{M11{G{\\\\GMM\\F!11G!GF\\G1G!GM{M{1!1G{GM!M]\n[BanHBHMar*nrrHMBan]\n[L>$L^$$$>LL$^+d$d++^${$LL^]\n[;Q3QE;OE3QQO3QQ3;E;3OE;O]"
+    },
+    {
+      "name": "mode2_random_205",
+      "input": "2\n8\n9-p99p-\n++P+++PPP$$+++++P$$+P$PP$PP\np!gg!!pggg!gg!p!\n1SSnxnbbn1SSbSSxnrbbriSxnnb1x\nXWk)))kkOkWPhPr)XWWPh)WOkPrWk)OWPhPOkXhOh)h)OPOPOrPkOO)>XO)h\n46Z6{{ZZ{Z\n_P,(\\P\nannIpabXIapppp\n",
+      "output": "[-pp-]\n[PPPP$$P$$P$PP$PP]\n[p!!!p!!p!]\n[1nxnbbn1bxnrbbrixnnb1x]\n[XWk)))kkkWPhPr)XWWPh)WkPrWk)WPhPkXhh)h)PPrPk)>X)h]\n[466{{{]\n[_,(\\]\n[annIabXIa]"
+    }
+  ]
+}

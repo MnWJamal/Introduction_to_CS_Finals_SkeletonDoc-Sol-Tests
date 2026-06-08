@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "sample_annoying_hakuna_matata",
+      "input": "1\nhakuna matata\n",
+      "output": "97"
+    },
+    {
+      "name": "edge_empty_string",
+      "input": "1\n\n",
+      "output": "0"
+    },
+    {
+      "name": "sample_unannoy_exam",
+      "input": "2\n3\nhakuna matata\nnnnanana$$\n\n",
+      "output": "[hkun mtt]\n[aaa$$]\n[]"
+    },
+    {
+      "name": "single_string_all_same",
+      "input": "2\n1\naaaaa\n",
+      "output": "[]"
+    }
+  ]
+}
